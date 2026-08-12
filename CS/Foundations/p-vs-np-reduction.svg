@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 14.5px; font-weight: 600; }
+    .lab   { font-size: 13px; font-weight: 600; }
+    .small { font-size: 11.5px; }
+    .note  { font-size: 12px; }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="28" class="title" text-anchor="middle">Reduction  —  solve A by translating it into B   (A &lt;=p B)</text>
+
+  <!-- A instance -->
+  <rect x="24" y="92" width="132" height="64" rx="9" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="90" y="118" class="lab" text-anchor="middle" fill="#2563eb">instance x</text>
+  <text x="90" y="138" class="small" text-anchor="middle" fill="#2563eb">of problem A</text>
+
+  <!-- B instance -->
+  <rect x="212" y="92" width="132" height="64" rx="9" fill="rgba(124,58,237,0.14)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="278" y="118" class="lab" text-anchor="middle" fill="#7c3aed">instance f(x)</text>
+  <text x="278" y="138" class="small" text-anchor="middle" fill="#7c3aed">of problem B</text>
+
+  <!-- B solver -->
+  <rect x="400" y="92" width="120" height="64" rx="9" fill="rgba(245,158,11,0.14)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="460" y="118" class="lab" text-anchor="middle" fill="#f59e0b">solver</text>
+  <text x="460" y="138" class="small" text-anchor="middle" fill="#f59e0b">for B</text>
+
+  <!-- answer -->
+  <rect x="568" y="92" width="96" height="64" rx="9" fill="rgba(5,150,105,0.16)" stroke="#059669" stroke-width="2"/>
+  <text x="616" y="124" class="lab" text-anchor="middle" fill="#059669">yes / no</text>
+  <text x="616" y="142" class="small" text-anchor="middle" fill="#059669">answer</text>
+
+  <!-- arrows -->
+  <line x1="158" y1="124" x2="210" y2="124" stroke="#888" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="184" y="86" class="small" text-anchor="middle">transform f</text>
+  <text x="184" y="148" class="small" text-anchor="middle" opacity="0.75">poly time</text>
+  <line x1="346" y1="124" x2="398" y2="124" stroke="#888" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="522" y1="124" x2="566" y2="124" stroke="#888" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- return path: the answer for B is the answer for A -->
+  <path d="M 616 156 L 616 196 L 90 196 L 90 158" fill="none" stroke="#888" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#ar)"/>
+  <text x="353" y="213" class="small" text-anchor="middle">the reduction preserves the answer:  yes for f(x) &lt;=&gt; yes for x</text>
+
+  <!-- captions -->
+  <text x="340" y="248" class="note" text-anchor="middle" fill="#059669">Easiness flows forward:  B easy  =&gt;  A easy.</text>
+  <text x="340" y="270" class="note" text-anchor="middle" fill="#dc2626">Hardness flows backward:  A hard  =&gt;  B hard.   To prove B is NP-hard, reduce a known-hard A into B.</text>
+</svg>

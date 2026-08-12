@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 12px; }
+    .label-bold { font-size: 12px; font-weight: 600; }
+    .small { font-size: 10px; }
+    .year { font-size: 11px; opacity: 0.8; }
+    .caption { font-size: 13px; font-style: italic; }
+    .wave-c { fill: #7c3aed; }
+    .particle-c { fill: #2563eb; }
+    .both-c { fill: #0891b2; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="28" class="title" text-anchor="middle">
+    Wave or Particle? The 350-Year Argument
+  </text>
+  <text x="450" y="48" class="small" text-anchor="middle" opacity="0.75">
+    Whose picture of light was "winning" — and how the question itself eventually dissolved.
+  </text>
+
+  <!-- Three reference rows (dashed) -->
+  <line x1="155" y1="115" x2="850" y2="115" stroke="#7c3aed" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,5"/>
+  <line x1="155" y1="195" x2="850" y2="195" stroke="#888" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,5"/>
+  <line x1="155" y1="275" x2="850" y2="275" stroke="#2563eb" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,5"/>
+
+  <!-- Row labels at left (no icons — kept labels clean) -->
+  <text x="145" y="119" class="label-bold wave-c" text-anchor="end">WAVE wins</text>
+  <text x="145" y="199" class="label" text-anchor="end" opacity="0.7">contested</text>
+  <text x="145" y="279" class="label-bold particle-c" text-anchor="end">PARTICLE wins</text>
+
+  <!-- The trajectory of "which theory was winning" -->
+  <path d="M 195,195
+           C 215,195 225,275 255,275
+           L 335,275
+           C 375,275 365,115 405,115
+           L 540,115
+           C 575,115 575,275 605,275
+           C 630,275 625,195 650,195
+           L 825,195"
+        fill="none" stroke="#888" stroke-width="2.8" opacity="0.85"/>
+
+  <!-- ===== 1672: SPLIT MOMENT ===== -->
+  <circle cx="195" cy="195" r="4.5" fill="#888"/>
+  <!-- Branch up to Hooke (waves) -->
+  <line x1="195" y1="190" x2="195" y2="121" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+  <circle cx="195" cy="115" r="4" fill="#7c3aed"/>
+  <text x="195" y="100" class="label-bold wave-c" text-anchor="middle">Hooke</text>
+  <text x="195" y="86" class="small wave-c" text-anchor="middle">Micrographia 1665</text>
+  <!-- Branch down to Newton (particles) -->
+  <line x1="195" y1="200" x2="195" y2="269" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+  <circle cx="195" cy="275" r="4" fill="#2563eb"/>
+  <text x="195" y="295" class="label-bold particle-c" text-anchor="middle">Newton</text>
+  <text x="195" y="309" class="small particle-c" text-anchor="middle">corpuscles 1672</text>
+
+  <!-- Newton's authority era annotation (between 1700-1800) -->
+  <text x="290" y="265" class="small particle-c" text-anchor="middle" opacity="0.75">
+    Newton's authority
+  </text>
+  <text x="290" y="294" class="small" text-anchor="middle" opacity="0.55">
+    ~100 years of particles
+  </text>
+
+  <!-- ===== 1801 Young's double slit (HIGHER stagger) ===== -->
+  <circle cx="425" cy="115" r="5.5" fill="#7c3aed"/>
+  <line x1="425" y1="109" x2="425" y2="86" stroke="#7c3aed" stroke-width="0.8" opacity="0.5"/>
+  <text x="425" y="78" class="label-bold wave-c" text-anchor="middle">Young (1801)</text>
+  <text x="425" y="64" class="small wave-c" text-anchor="middle">double-slit interference</text>
+
+  <!-- ===== 1864 Maxwell (LOWER stagger so labels don't collide with Young) ===== -->
+  <circle cx="525" cy="115" r="5.5" fill="#7c3aed"/>
+  <text x="525" y="103" class="label-bold wave-c" text-anchor="middle">Maxwell (1864)</text>
+  <text x="525" y="89" class="small wave-c" text-anchor="middle">light = EM wave</text>
+
+  <!-- ===== 1905 Einstein ===== -->
+  <circle cx="590" cy="275" r="5.5" fill="#2563eb"/>
+  <line x1="590" y1="281" x2="590" y2="298" stroke="#2563eb" stroke-width="0.8" opacity="0.5"/>
+  <text x="590" y="310" class="label-bold particle-c" text-anchor="middle">Einstein (1905)</text>
+  <text x="590" y="324" class="small particle-c" text-anchor="middle">photoelectric → photons</text>
+
+  <!-- ===== 1925 quantum synthesis ===== -->
+  <circle cx="660" cy="195" r="6" fill="#0891b2"/>
+  <line x1="666" y1="195" x2="688" y2="158" stroke="#0891b2" stroke-width="0.8" opacity="0.6"/>
+  <text x="695" y="148" class="label-bold both-c">QM (1925-26)</text>
+  <text x="695" y="162" class="small both-c">de Broglie + Born:</text>
+  <text x="695" y="176" class="small both-c">wave-particle duality</text>
+
+  <!-- ===== Today (modern view) — placed below the line to avoid overlap ===== -->
+  <circle cx="825" cy="195" r="5" fill="#0891b2"/>
+  <line x1="825" y1="201" x2="825" y2="226" stroke="#0891b2" stroke-width="0.8" opacity="0.5"/>
+  <text x="825" y="238" class="label-bold both-c" text-anchor="end">Today: complementarity</text>
+  <text x="825" y="252" class="small both-c" text-anchor="end">"wave" and "particle" are</text>
+  <text x="825" y="264" class="small both-c" text-anchor="end">classical projections of a</text>
+  <text x="825" y="276" class="small both-c" text-anchor="end">quantum object</text>
+
+  <!-- Year axis at bottom -->
+  <line x1="155" y1="350" x2="850" y2="350" stroke="#888" stroke-width="1"/>
+  <g opacity="0.7">
+    <line x1="195" y1="348" x2="195" y2="354" stroke="#888"/>
+    <text x="195" y="366" class="year" text-anchor="middle">1672</text>
+    <line x1="290" y1="348" x2="290" y2="354" stroke="#888"/>
+    <text x="290" y="366" class="year" text-anchor="middle">1700</text>
+    <line x1="425" y1="348" x2="425" y2="354" stroke="#888"/>
+    <text x="425" y="366" class="year" text-anchor="middle">1801</text>
+    <line x1="525" y1="348" x2="525" y2="354" stroke="#888"/>
+    <text x="525" y="366" class="year" text-anchor="middle">1864</text>
+    <line x1="590" y1="348" x2="590" y2="354" stroke="#888"/>
+    <text x="590" y="366" class="year" text-anchor="middle">1905</text>
+    <line x1="660" y1="348" x2="660" y2="354" stroke="#888"/>
+    <text x="660" y="366" class="year" text-anchor="middle">1925</text>
+    <line x1="825" y1="348" x2="825" y2="354" stroke="#888"/>
+    <text x="825" y="366" class="year" text-anchor="middle">2026</text>
+  </g>
+
+  <!-- Closing caption -->
+  <text x="450" y="397" class="caption" text-anchor="middle">
+    Both right, and both wrong — the question itself was wrong.
+  </text>
+</svg>

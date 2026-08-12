@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .io { font-size: 13px; font-weight: 700; fill: #2563eb; }
+    .box { font-size: 12px; font-weight: 600; fill: #7c3aed; }
+    .pin { font-size: 10px; font-weight: 700; }
+    .sum { font-size: 13px; font-weight: 700; fill: #059669; }
+    .carry { font-size: 13px; font-weight: 700; fill: #f59e0b; }
+    .wire { font-size: 10.5px; }
+    .maj { font-size: 11.5px; font-weight: 600; fill: #f59e0b; }
+    .eq { font-size: 11px; }
+  </style>
+
+  <text x="350" y="24" class="title" text-anchor="middle">The full adder = two half adders + one OR</text>
+
+  <!-- inputs -->
+  <text x="44" y="84" class="io" text-anchor="middle">A</text>
+  <text x="44" y="122" class="io" text-anchor="middle">B</text>
+  <text x="44" y="236" class="io" text-anchor="middle">Cin</text>
+
+  <!-- HA1 -->
+  <rect x="120" y="62" width="86" height="72" rx="9" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="163" y="94" class="box" text-anchor="middle">half</text>
+  <text x="163" y="110" class="box" text-anchor="middle">adder 1</text>
+  <line x1="56" y1="80" x2="120" y2="80" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="56" y1="116" x2="120" y2="116" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="214" y="83" class="pin" fill="#059669">S</text>
+  <text x="214" y="120" class="pin" fill="#f59e0b">C</text>
+
+  <!-- HA2 -->
+  <rect x="315" y="92" width="86" height="72" rx="9" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="358" y="124" class="box" text-anchor="middle">half</text>
+  <text x="358" y="140" class="box" text-anchor="middle">adder 2</text>
+  <text x="409" y="113" class="pin" fill="#059669">S</text>
+  <text x="409" y="150" class="pin" fill="#f59e0b">C</text>
+
+  <!-- s1: HA1 S -> HA2 top input -->
+  <line x1="206" y1="80" x2="260" y2="80" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="260" y1="80" x2="260" y2="110" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="260" y1="110" x2="315" y2="110" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="243" y="72" class="wire" text-anchor="middle">s1 = A XOR B</text>
+
+  <!-- Cin -> HA2 bottom input -->
+  <line x1="56" y1="232" x2="275" y2="232" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="275" y1="232" x2="275" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="275" y1="152" x2="315" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- Sum output -->
+  <line x1="401" y1="110" x2="520" y2="110" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="528" y="106" class="sum" text-anchor="start">Sum</text>
+  <text x="528" y="121" class="eq" text-anchor="start">A XOR B XOR Cin</text>
+
+  <!-- OR gate -->
+  <path d="M 470 196 Q 490 202 512 218 Q 490 234 470 240 Q 482 218 470 196 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="487" y="222" class="box" text-anchor="middle" font-size="10">OR</text>
+
+  <!-- c1: HA1 C -> OR top input -->
+  <line x1="206" y1="116" x2="205" y2="116" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="206" y1="116" x2="206" y2="207" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="206" y1="207" x2="470" y2="207" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="224" y="203" class="wire" text-anchor="start">c1</text>
+
+  <!-- c2: HA2 C -> OR bottom input -->
+  <line x1="401" y1="152" x2="422" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="422" y1="152" x2="422" y2="229" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="422" y1="229" x2="470" y2="229" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="432" y="225" class="wire" text-anchor="start">c2</text>
+
+  <!-- Cout -->
+  <line x1="512" y1="218" x2="600" y2="218" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="608" y="214" class="carry" text-anchor="start">Cout</text>
+  <text x="608" y="229" class="eq" text-anchor="start">carry-out</text>
+
+  <text x="350" y="278" class="maj" text-anchor="middle">Cout = AB + ACin + BCin = majority(A, B, Cin): carry when at least two of the three inputs are 1</text>
+</svg>

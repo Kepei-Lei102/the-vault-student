@@ -1,0 +1,80 @@
+<svg viewBox="0 0 940 300" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>IEEE 754 single precision layout: 1 sign bit, 8-bit biased exponent, 23-bit fraction with hidden leading 1, storing -6.5 as 1 10000001 10100000000000000000000.</title>
+
+  <text x="470" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">IEEE 754 single precision (32 bits):&#8195;sign + 8-bit exponent + 23-bit fraction&#8195;&#8212;&#8195;storing &#8722;6.5</text>
+
+  <!-- group labels -->
+  <text x="67"  y="62" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">SIGN</text>
+  <text x="190" y="62" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">EXPONENT (true exp + 127)</text>
+  <text x="599" y="62" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">FRACTION (the bits after the hidden &#8220;1.&#8221;, not stored)</text>
+
+  <!-- sign cell (amber) -->
+  <rect x="54" y="72" width="26" height="40" rx="3" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="67" y="98" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">1</text>
+
+  <!-- exponent cells (purple), bits 1 0 0 0 0 0 0 1 -->
+  <g>
+    <rect x="86"  y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="112" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="138" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="164" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="190" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="216" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="242" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    <rect x="268" y="72" width="26" height="40" rx="3" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">
+    <text x="99"  y="98">1</text><text x="125" y="98">0</text><text x="151" y="98">0</text><text x="177" y="98">0</text>
+    <text x="203" y="98">0</text><text x="229" y="98">0</text><text x="255" y="98">0</text><text x="281" y="98">1</text>
+  </g>
+
+  <!-- fraction cells (teal), bits 1 0 1 then twenty 0s -->
+  <g>
+    <rect x="300" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="326" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="352" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="378" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="404" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="430" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="456" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="482" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="508" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="534" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="560" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="586" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="612" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="638" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="664" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="690" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="716" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="742" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="768" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="794" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="820" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="846" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    <rect x="872" y="72" width="26" height="40" rx="3" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">
+    <text x="313" y="98">1</text><text x="339" y="98">0</text><text x="365" y="98">1</text><text x="391" y="98">0</text>
+    <text x="417" y="98">0</text><text x="443" y="98">0</text><text x="469" y="98">0</text><text x="495" y="98">0</text>
+    <text x="521" y="98">0</text><text x="547" y="98">0</text><text x="573" y="98">0</text><text x="599" y="98">0</text>
+    <text x="625" y="98">0</text><text x="651" y="98">0</text><text x="677" y="98">0</text><text x="703" y="98">0</text>
+    <text x="729" y="98">0</text><text x="755" y="98">0</text><text x="781" y="98">0</text><text x="807" y="98">0</text>
+    <text x="833" y="98">0</text><text x="859" y="98">0</text><text x="885" y="98">0</text>
+  </g>
+
+  <!-- per-field annotations -->
+  <text x="67"  y="136" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">1 = negative</text>
+  <text x="190" y="136" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">= 129;&#8194;129 &#8722; 127 (bias) = +2</text>
+  <text x="599" y="136" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">hidden 1 restored:&#8194;1.101&#8322; = 1 + 0.5 + 0.125 = 1.625</text>
+
+  <!-- decode line (coloured result split into its own element) -->
+  <text x="560" y="188" font-family="sans-serif" font-size="15" fill="#888" text-anchor="end">value = (&#8722;1)&#185; &#215; 1.101&#8322; &#215; 2&#178; = &#8722;1.625 &#215; 4 =</text>
+  <text x="568" y="188" font-family="sans-serif" font-size="15" fill="#dc2626" font-weight="bold" text-anchor="start">&#8722;6.5</text>
+
+  <!-- hex line -->
+  <text x="470" y="222" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">the same 32 bits in hexadecimal: C0 D0 00 00 &#8212; what a debugger shows you</text>
+
+  <!-- special patterns note -->
+  <text x="470" y="262" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle" opacity="0.9">exponent all 0s or all 1s is reserved: &#177;0 and subnormals (all 0s);&#8194;&#177;&#8734; and NaN (all 1s)</text>
+</svg>

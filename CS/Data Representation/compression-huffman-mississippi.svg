@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg">
+  <!-- frequency table -->
+  <text x="55" y="34" fill="#888" font-size="16" font-weight="bold">MISSISSIPPI</text>
+  <text x="55" y="56" fill="#888" font-size="13">11 letters</text>
+  <g fill="#888" font-size="14.5">
+    <text x="55" y="95">I × 4</text>
+    <text x="55" y="120">S × 4</text>
+    <text x="55" y="145">P × 2</text>
+    <text x="55" y="170">M × 1</text>
+  </g>
+  <text x="55" y="205" fill="#888" font-size="13">rarest two merge first,</text>
+  <text x="55" y="222" fill="#888" font-size="13">repeat upward — see</text>
+  <text x="55" y="239" fill="#888" font-size="13">Information Theory for</text>
+  <text x="55" y="256" fill="#888" font-size="13">why this is optimal</text>
+
+  <!-- tree -->
+  <g stroke="#888" stroke-width="1.8">
+    <line x1="470" y1="70"  x2="370" y2="150"/>
+    <line x1="470" y1="70"  x2="570" y2="150"/>
+    <line x1="570" y1="150" x2="490" y2="230"/>
+    <line x1="570" y1="150" x2="650" y2="230"/>
+    <line x1="650" y1="230" x2="590" y2="310"/>
+    <line x1="650" y1="230" x2="710" y2="310"/>
+  </g>
+  <!-- edge labels -->
+  <g fill="#f59e0b" font-size="14" font-weight="bold">
+    <text x="405" y="105">0</text>
+    <text x="530" y="105">1</text>
+    <text x="515" y="188">0</text>
+    <text x="622" y="188">1</text>
+    <text x="605" y="268">0</text>
+    <text x="692" y="268">1</text>
+  </g>
+  <!-- internal nodes -->
+  <circle cx="470" cy="70"  r="17" fill="none" stroke="#888" stroke-width="1.5"/>
+  <text x="470" y="75" fill="#888" font-size="13" text-anchor="middle">11</text>
+  <circle cx="570" cy="150" r="17" fill="none" stroke="#888" stroke-width="1.5"/>
+  <text x="570" y="155" fill="#888" font-size="13" text-anchor="middle">7</text>
+  <circle cx="650" cy="230" r="17" fill="none" stroke="#888" stroke-width="1.5"/>
+  <text x="650" y="235" fill="#888" font-size="13" text-anchor="middle">3</text>
+  <!-- leaves -->
+  <g stroke="#0891b2" stroke-width="1.8" fill="rgba(8,145,178,0.12)">
+    <rect x="340" y="150" width="60" height="34" rx="6"/>
+    <rect x="460" y="230" width="60" height="34" rx="6"/>
+    <rect x="560" y="310" width="60" height="34" rx="6"/>
+    <rect x="680" y="310" width="60" height="34" rx="6"/>
+  </g>
+  <g fill="#888" font-size="14.5" text-anchor="middle" font-weight="bold">
+    <text x="370" y="172">S ×4</text>
+    <text x="490" y="252">I ×4</text>
+    <text x="590" y="332">P ×2</text>
+    <text x="710" y="332">M ×1</text>
+  </g>
+  <!-- codes under leaves -->
+  <g fill="#0891b2" font-size="14" text-anchor="middle">
+    <text x="370" y="204">code 0</text>
+    <text x="490" y="284">code 10</text>
+    <text x="590" y="364">code 110</text>
+    <text x="710" y="364">code 111</text>
+  </g>
+
+  <!-- the arithmetic + bars -->
+  <text x="55" y="310" fill="#888" font-size="14.5">4(1) + 4(2) + 2(3) + 1(3)</text>
+  <text x="55" y="332" fill="#888" font-size="14.5">= <tspan font-weight="bold">21 bits</tspan></text>
+
+  <text x="55" y="392" fill="#888" font-size="13.5">ASCII: 11 × 8 = 88 bits</text>
+  <rect x="240" y="380" width="560" height="14" fill="rgba(136,136,136,0.35)"/>
+  <text x="55" y="416" fill="#059669" font-size="13.5">Huffman: 21 bits</text>
+  <rect x="240" y="404" width="134" height="14" fill="rgba(5,150,105,0.75)"/>
+  <text x="388" y="416" fill="#059669" font-size="13.5" font-weight="bold">76% saved</text>
+  <text x="530" y="416" fill="#888" font-size="12.5">(entropy floor: ≈ 20.1 bits — nothing lossless beats it)</text>
+</svg>

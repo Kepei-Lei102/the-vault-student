@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .plus  { font-size: 15px; font-weight: 800; fill: #dc2626; }
+    .minus { font-size: 15px; font-weight: 800; fill: #2563eb; }
+    .lab   { font-size: 13px; font-weight: 700; }
+    .field { font-size: 13px; font-weight: 700; fill: #7c3aed; }
+    .cap   { font-size: 12px; }
+    .diel  { font-size: 11px; fill: #0891b2; }
+  </style>
+
+  <text x="280" y="28" class="title" text-anchor="middle">The parallel-plate capacitor</text>
+  <text x="280" y="108" class="lab" text-anchor="middle">plate area A</text>
+
+  <!-- dielectric gap shading -->
+  <rect x="160" y="132" width="240" height="104" fill="rgba(8,145,178,0.10)"/>
+
+  <!-- top plate (+Q) -->
+  <rect x="160" y="120" width="240" height="12" rx="2" fill="#9ca3af"/>
+  <text x="150" y="132" class="plus" text-anchor="end">+Q</text>
+  <text x="205" y="148" class="plus" text-anchor="middle">+</text>
+  <text x="255" y="148" class="plus" text-anchor="middle">+</text>
+  <text x="305" y="148" class="plus" text-anchor="middle">+</text>
+  <text x="355" y="148" class="plus" text-anchor="middle">+</text>
+
+  <!-- bottom plate (-Q) -->
+  <rect x="160" y="236" width="240" height="12" rx="2" fill="#9ca3af"/>
+  <text x="150" y="248" class="minus" text-anchor="end">−Q</text>
+  <text x="205" y="230" class="minus" text-anchor="middle">−</text>
+  <text x="255" y="230" class="minus" text-anchor="middle">−</text>
+  <text x="305" y="230" class="minus" text-anchor="middle">−</text>
+  <text x="355" y="230" class="minus" text-anchor="middle">−</text>
+
+  <!-- field lines (down, + to -) -->
+  <g stroke="#7c3aed" stroke-width="1.6" fill="none">
+    <line x1="225" y1="156" x2="225" y2="224"/>
+    <line x1="280" y1="156" x2="280" y2="224"/>
+    <line x1="335" y1="156" x2="335" y2="224"/>
+  </g>
+  <path d="M221 216 L225 226 L229 216" fill="#7c3aed"/>
+  <path d="M276 216 L280 226 L284 216" fill="#7c3aed"/>
+  <path d="M331 216 L335 226 L339 216" fill="#7c3aed"/>
+  <text x="368" y="172" class="field" text-anchor="start">E</text>
+  <text x="368" y="214" class="diel" text-anchor="start">ε_r</text>
+
+  <!-- d dimension (left) -->
+  <line x1="132" y1="132" x2="132" y2="236" stroke="#888" stroke-width="1.2"/>
+  <path d="M128 138 L132 132 L136 138" fill="none" stroke="#888" stroke-width="1.2"/>
+  <path d="M128 230 L132 236 L136 230" fill="none" stroke="#888" stroke-width="1.2"/>
+  <text x="120" y="188" class="lab" text-anchor="end">d</text>
+
+  <!-- battery / p.d. (right) -->
+  <line x1="400" y1="126" x2="452" y2="126" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="452" y1="126" x2="452" y2="170" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="434" y1="170" x2="470" y2="170" stroke="#888" stroke-width="2.4"/>
+  <line x1="444" y1="180" x2="460" y2="180" stroke="#888" stroke-width="1.6"/>
+  <line x1="452" y1="180" x2="452" y2="242" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="452" y1="242" x2="400" y2="242" stroke="#9ca3af" stroke-width="1.6"/>
+  <text x="478" y="180" class="lab" text-anchor="start">V</text>
+
+  <text x="280" y="342" class="cap" text-anchor="middle">C = ε₀ε_r A / d  —  more area, smaller gap, higher-ε filler -&gt; more capacitance.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 960 448" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>The precision ladder: bit layouts of FP64, FP32, FP16, bfloat16, FP8 and INT4 drawn to scale, showing how the sign/exponent/fraction budget shrinks from science formats down to quantised AI weights.</title>
+
+  <text x="480" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">The precision ladder &#8212; the same trade-off, six different budgets (drawn to scale)</text>
+
+  <!-- legend -->
+  <rect x="130" y="42" width="14" height="14" rx="2" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="150" y="53" font-family="sans-serif" font-size="11" fill="#888">sign</text>
+  <rect x="205" y="42" width="14" height="14" rx="2" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <text x="225" y="53" font-family="sans-serif" font-size="11" fill="#888">exponent = range</text>
+  <rect x="350" y="42" width="14" height="14" rx="2" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="370" y="53" font-family="sans-serif" font-size="11" fill="#888">fraction = precision</text>
+
+  <!-- ===== FP64 ===== -->
+  <text x="118" y="89"  font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">FP64</text>
+  <text x="118" y="101" font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="end" opacity="0.85">double</text>
+  <rect x="130" y="78" width="11"  height="26" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="141" y="78" width="121" height="26" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <rect x="262" y="78" width="572" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="201" y="96" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">11</text>
+  <text x="548" y="96" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">52</text>
+  <text x="130" y="118" font-family="sans-serif" font-size="11" fill="#888">&#8776;16 significant digits, range 10&#177;&#179;&#8304;&#8312; &#8212; climate models, orbital mechanics, anything where error compounds</text>
+
+  <!-- ===== FP32 ===== -->
+  <text x="118" y="151" font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">FP32</text>
+  <text x="118" y="163" font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="end" opacity="0.85">single</text>
+  <rect x="130" y="140" width="11"  height="26" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="141" y="140" width="88"  height="26" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <rect x="229" y="140" width="253" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="185" y="158" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">8</text>
+  <text x="355" y="158" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">23</text>
+  <text x="130" y="180" font-family="sans-serif" font-size="11" fill="#888">&#8776;7 digits, range 10&#177;&#179;&#8312; &#8212; graphics, games, most everyday code</text>
+
+  <!-- ===== FP16 ===== -->
+  <text x="118" y="213" font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">FP16</text>
+  <text x="118" y="225" font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="end" opacity="0.85">half</text>
+  <rect x="130" y="202" width="11"  height="26" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="141" y="202" width="55"  height="26" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <rect x="196" y="202" width="110" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="168" y="220" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">5</text>
+  <text x="251" y="220" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">10</text>
+  <text x="130" y="242" font-family="sans-serif" font-size="11" fill="#888">&#8776;3 digits, max value 65 504 &#8212; early AI training; the cramped range makes gradients underflow</text>
+
+  <!-- ===== BF16 ===== -->
+  <text x="118" y="275" font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">BF16</text>
+  <text x="118" y="287" font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="end" opacity="0.85">bfloat16</text>
+  <rect x="130" y="264" width="11" height="26" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="141" y="264" width="88" height="26" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <rect x="229" y="264" width="77" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="185" y="282" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">8</text>
+  <text x="267" y="282" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">7</text>
+  <text x="130" y="304" font-family="sans-serif" font-size="11" fill="#888">keeps FP32&#8217;s whole exponent (full 10&#177;&#179;&#8312; range) but only &#8776;2&#8211;3 digits &#8212; AI training&#8217;s actual choice: range wins</text>
+
+  <!-- ===== FP8 ===== -->
+  <text x="118" y="337" font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">FP8</text>
+  <text x="118" y="349" font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="end" opacity="0.85">E4M3</text>
+  <rect x="130" y="326" width="11" height="26" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="141" y="326" width="44" height="26" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <rect x="185" y="326" width="33" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="163" y="344" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">4</text>
+  <text x="201" y="344" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">3</text>
+  <text x="130" y="366" font-family="sans-serif" font-size="11" fill="#888">&#8776;1 significant digit &#8212; AI inference on the newest accelerators (FP4 exists too)</text>
+
+  <!-- ===== INT4 ===== -->
+  <text x="118" y="399" font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="end">INT4</text>
+  <rect x="130" y="388" width="44" height="26" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="184" y="406" font-family="sans-serif" font-size="11" fill="#888" text-anchor="start">4-bit integer</text>
+  <text x="130" y="428" font-family="sans-serif" font-size="11" fill="#888">no exponent at all: just 16 levels per weight &#8212; the quantised weights of deployed chatbots</text>
+</svg>

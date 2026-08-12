@@ -1,0 +1,92 @@
+<svg width="100%" viewBox="0 0 630 265" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+
+  <!-- Title -->
+  <text x="330.0" y="16" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">Why Height ≠ Frequency for Unequal Class Widths</text>
+
+  <text x="175.0" y="36" text-anchor="middle" font-size="10" fill="#F44336" font-weight="bold">✗ WRONG — Height = Frequency</text>
+  <line x1="50" y1="210" x2="300" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="50" y1="50" x2="50" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="47" y1="210.0" x2="50" y2="210.0" stroke="#888" stroke-width="1"/>
+  <text x="45" y="213.0" text-anchor="end" font-size="8" fill="#888">0</text>
+  <line x1="47" y1="170.0" x2="50" y2="170.0" stroke="#888" stroke-width="1"/>
+  <text x="45" y="173.0" text-anchor="end" font-size="8" fill="#888">5</text>
+  <line x1="47" y1="130.0" x2="50" y2="130.0" stroke="#888" stroke-width="1"/>
+  <text x="45" y="133.0" text-anchor="end" font-size="8" fill="#888">10</text>
+  <line x1="47" y1="90.0" x2="50" y2="90.0" stroke="#888" stroke-width="1"/>
+  <text x="45" y="93.0" text-anchor="end" font-size="8" fill="#888">15</text>
+  <line x1="47" y1="50.0" x2="50" y2="50.0" stroke="#888" stroke-width="1"/>
+  <text x="45" y="53.0" text-anchor="end" font-size="8" fill="#888">20</text>
+  <text x="20" y="130.0" text-anchor="middle" font-size="9" fill="#888" transform="rotate(-90,20,130.0)">Frequency</text>
+  <line x1="50.0" y1="210" x2="50.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="50.0" y="224" text-anchor="middle" font-size="8" fill="#888">0</text>
+  <line x1="91.66666666666666" y1="210" x2="91.66666666666666" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="91.66666666666666" y="224" text-anchor="middle" font-size="8" fill="#888">10</text>
+  <line x1="133.33333333333331" y1="210" x2="133.33333333333331" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="133.33333333333331" y="224" text-anchor="middle" font-size="8" fill="#888">20</text>
+  <line x1="175.0" y1="210" x2="175.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="175.0" y="224" text-anchor="middle" font-size="8" fill="#888">30</text>
+  <line x1="216.66666666666666" y1="210" x2="216.66666666666666" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="216.66666666666666" y="224" text-anchor="middle" font-size="8" fill="#888">40</text>
+  <line x1="258.33333333333337" y1="210" x2="258.33333333333337" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="258.33333333333337" y="224" text-anchor="middle" font-size="8" fill="#888">50</text>
+  <line x1="300.0" y1="210" x2="300.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="300.0" y="224" text-anchor="middle" font-size="8" fill="#888">60</text>
+  <text x="175.0" y="237" text-anchor="middle" font-size="9" fill="#888">Time (min)</text>
+  <rect x="50.0" y="146.0" width="20.83333333333333" height="64.0" fill="#F44336" fill-opacity="0.2" stroke="#F44336" stroke-width="1"/>
+  <text x="60.416666666666664" y="143.0" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">8</text>
+  <rect x="70.83333333333333" y="90.0" width="20.83333333333333" height="120.0" fill="#F44336" fill-opacity="0.2" stroke="#F44336" stroke-width="1"/>
+  <text x="81.25" y="87.0" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">15</text>
+  <rect x="91.66666666666666" y="66.0" width="41.66666666666666" height="144.0" fill="#F44336" fill-opacity="0.2" stroke="#F44336" stroke-width="1"/>
+  <text x="112.49999999999999" y="63.0" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">18</text>
+  <rect x="133.33333333333331" y="162.0" width="83.33333333333334" height="48.0" fill="#F44336" fill-opacity="0.2" stroke="#F44336" stroke-width="1"/>
+  <text x="175.0" y="159.0" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">6</text>
+  <rect x="216.66666666666666" y="186.0" width="83.33333333333334" height="24.0" fill="#F44336" fill-opacity="0.2" stroke="#F44336" stroke-width="1"/>
+  <text x="258.3333333333333" y="183.0" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">3</text>
+  <text x="175.0" y="146.0" text-anchor="middle" font-size="7" fill="#888" opacity="0.7">Wide bar looks</text>
+  <text x="175.0" y="154.0" text-anchor="middle" font-size="7" fill="#888" opacity="0.7">equally important as [5,10)</text>
+
+  <text x="485.0" y="36" text-anchor="middle" font-size="10" fill="#4CAF50" font-weight="bold">✓ CORRECT — Height = Frequency Density</text>
+  <line x1="360" y1="210" x2="610" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="360" y1="50" x2="360" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="357" y1="210.0" x2="360" y2="210.0" stroke="#888" stroke-width="1"/>
+  <text x="355" y="213.0" text-anchor="end" font-size="8" fill="#888">0.0</text>
+  <line x1="357" y1="187.14285714285714" x2="360" y2="187.14285714285714" stroke="#888" stroke-width="1"/>
+  <text x="355" y="190.14285714285714" text-anchor="end" font-size="8" fill="#888">0.5</text>
+  <line x1="357" y1="164.28571428571428" x2="360" y2="164.28571428571428" stroke="#888" stroke-width="1"/>
+  <text x="355" y="167.28571428571428" text-anchor="end" font-size="8" fill="#888">1.0</text>
+  <line x1="357" y1="141.42857142857144" x2="360" y2="141.42857142857144" stroke="#888" stroke-width="1"/>
+  <text x="355" y="144.42857142857144" text-anchor="end" font-size="8" fill="#888">1.5</text>
+  <line x1="357" y1="118.57142857142858" x2="360" y2="118.57142857142858" stroke="#888" stroke-width="1"/>
+  <text x="355" y="121.57142857142858" text-anchor="end" font-size="8" fill="#888">2.0</text>
+  <line x1="357" y1="95.71428571428571" x2="360" y2="95.71428571428571" stroke="#888" stroke-width="1"/>
+  <text x="355" y="98.71428571428571" text-anchor="end" font-size="8" fill="#888">2.5</text>
+  <line x1="357" y1="72.85714285714286" x2="360" y2="72.85714285714286" stroke="#888" stroke-width="1"/>
+  <text x="355" y="75.85714285714286" text-anchor="end" font-size="8" fill="#888">3.0</text>
+  <text x="325" y="130.0" text-anchor="middle" font-size="9" fill="#888" transform="rotate(-90,325,130.0)">Freq. density</text>
+  <line x1="360.0" y1="210" x2="360.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="360.0" y="224" text-anchor="middle" font-size="8" fill="#888">0</text>
+  <line x1="401.6666666666667" y1="210" x2="401.6666666666667" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="401.6666666666667" y="224" text-anchor="middle" font-size="8" fill="#888">10</text>
+  <line x1="443.3333333333333" y1="210" x2="443.3333333333333" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="443.3333333333333" y="224" text-anchor="middle" font-size="8" fill="#888">20</text>
+  <line x1="485.0" y1="210" x2="485.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="485.0" y="224" text-anchor="middle" font-size="8" fill="#888">30</text>
+  <line x1="526.6666666666666" y1="210" x2="526.6666666666666" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="526.6666666666666" y="224" text-anchor="middle" font-size="8" fill="#888">40</text>
+  <line x1="568.3333333333334" y1="210" x2="568.3333333333334" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="568.3333333333334" y="224" text-anchor="middle" font-size="8" fill="#888">50</text>
+  <line x1="610.0" y1="210" x2="610.0" y2="214" stroke="#888" stroke-width="1"/>
+  <text x="610.0" y="224" text-anchor="middle" font-size="8" fill="#888">60</text>
+  <text x="485.0" y="237" text-anchor="middle" font-size="9" fill="#888">Time (min)</text>
+  <rect x="360.0" y="136.85714285714283" width="20.833333333333314" height="73.14285714285717" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="1"/>
+  <text x="370.41666666666663" y="133.85714285714283" text-anchor="middle" font-size="7" fill="#4CAF50">fd=1.6 → f=8</text>
+  <rect x="380.8333333333333" y="72.85714285714286" width="20.83333333333337" height="137.14285714285714" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="1"/>
+  <text x="391.25" y="69.85714285714286" text-anchor="middle" font-size="7" fill="#4CAF50">fd=3.0 → f=15</text>
+  <rect x="401.6666666666667" y="127.71428571428571" width="41.66666666666663" height="82.28571428571429" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="1"/>
+  <text x="422.5" y="124.71428571428571" text-anchor="middle" font-size="7" fill="#4CAF50">fd=1.8 → f=18</text>
+  <rect x="443.3333333333333" y="196.28571428571428" width="83.33333333333331" height="13.714285714285722" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="1"/>
+  <text x="485.0" y="193.28571428571428" text-anchor="middle" font-size="7" fill="#4CAF50">fd=0.3 → f=6</text>
+  <rect x="526.6666666666666" y="203.14285714285714" width="83.33333333333337" height="6.857142857142861" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="1"/>
+  <text x="568.3333333333333" y="200.14285714285714" text-anchor="middle" font-size="7" fill="#4CAF50">fd=0.1 → f=3</text>
+  <text x="330.0" y="255" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">Same data — left panel misleads because wide classes dominate visually. Right panel shows true density.</text>
+</svg>

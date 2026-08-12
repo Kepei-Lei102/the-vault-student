@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .label { font-size: 14px; }
+    .big-label { font-size: 18px; font-weight: 600; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .note { font-size: 12px; opacity: 0.6; }
+  </style>
+
+  <!-- === Top row: Function machine concept === -->
+  <!-- Input arrow -->
+  <line x1="40" y1="80" x2="140" y2="80" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="90" y="65" text-anchor="middle" class="label" fill="#2563eb">Input</text>
+  <text x="90" y="105" text-anchor="middle" class="math" font-size="20" fill="#2563eb">x</text>
+
+  <!-- Machine box -->
+  <rect x="150" y="45" width="200" height="70" rx="12" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="250" y="72" text-anchor="middle" class="big-label" fill="#7c3aed">Function</text>
+  <text x="250" y="98" text-anchor="middle" class="math" font-size="18" fill="#7c3aed">f</text>
+  <!-- Gear icons for "machine" feel -->
+  <circle cx="175" cy="56" r="6" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
+  <circle cx="325" cy="56" r="6" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
+
+  <!-- Output arrow -->
+  <line x1="360" y1="80" x2="460" y2="80" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="410" y="65" text-anchor="middle" class="label" fill="#059669">Output</text>
+  <text x="410" y="105" text-anchor="middle" class="math" font-size="20" fill="#059669">f(x)</text>
+
+  <!-- Annotation: exactly one output -->
+  <text x="250" y="145" text-anchor="middle" class="label" fill="#dc2626">Each input → exactly ONE output</text>
+
+  <!-- === Bottom row: Concrete example === -->
+  <!-- Input -->
+  <rect x="60" y="200" width="60" height="40" rx="8" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="90" y="226" text-anchor="middle" class="math" font-size="20" fill="#2563eb">5</text>
+  <line x1="130" y1="220" x2="210" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Machine with rule -->
+  <rect x="220" y="195" width="200" height="50" rx="10" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="320" y="226" text-anchor="middle" class="math" font-size="18" fill="#7c3aed">f(x) = 2x + 3</text>
+
+  <!-- Output -->
+  <line x1="430" y1="220" x2="510" y2="220" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="520" y="200" width="60" height="40" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/>
+  <text x="550" y="226" text-anchor="middle" class="math" font-size="20" fill="#059669">13</text>
+
+  <!-- Calculation note -->
+  <text x="320" y="275" text-anchor="middle" class="note">f(5) = 2(5) + 3 = 10 + 3 = 13</text>
+
+  <!-- === Right side: NOT a function === -->
+  <line x1="580" y1="20" x2="580" y2="320" stroke="#888" stroke-width="1" stroke-dasharray="6,4" opacity="0.2"/>
+
+  <text x="690" y="35" text-anchor="middle" class="big-label" fill="#dc2626">NOT a function</text>
+
+  <!-- One input, two outputs -->
+  <rect x="610" y="60" width="40" height="35" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="630" y="83" text-anchor="middle" class="math" font-size="16" fill="#2563eb">4</text>
+
+  <!-- Two output arrows from same input -->
+  <line x1="660" y1="70" x2="720" y2="60" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrowRed)"/>
+  <line x1="660" y1="85" x2="720" y2="95" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrowRed)"/>
+
+  <rect x="725" y="45" width="40" height="30" rx="6" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="745" y="65" text-anchor="middle" class="math" font-size="14" fill="#dc2626">2</text>
+  <rect x="725" y="80" width="40" height="30" rx="6" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="745" y="100" text-anchor="middle" class="math" font-size="14" fill="#dc2626">−2</text>
+
+  <text x="690" y="135" text-anchor="middle" class="note" fill="#dc2626" opacity="1">One input → two outputs</text>
+  <text x="690" y="152" text-anchor="middle" class="note" fill="#dc2626" opacity="1">(one-to-many)</text>
+  <text x="690" y="172" text-anchor="middle" class="note" fill="#7c3aed" opacity="1">e.g. y² = x at x = 4</text>
+
+  <!-- Valid examples below the line -->
+  <text x="690" y="210" text-anchor="middle" class="big-label" fill="#059669">IS a function</text>
+
+  <!-- Many-to-one example -->
+  <rect x="610" y="230" width="40" height="28" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="630" y="249" text-anchor="middle" class="math" font-size="14" fill="#2563eb">3</text>
+  <rect x="610" y="266" width="40" height="28" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="630" y="285" text-anchor="middle" class="math" font-size="14" fill="#2563eb">−3</text>
+
+  <line x1="660" y1="244" x2="720" y2="262" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="660" y1="280" x2="720" y2="262" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="725" y="248" width="40" height="28" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.2"/>
+  <text x="745" y="267" text-anchor="middle" class="math" font-size="14" fill="#059669">9</text>
+
+  <text x="690" y="312" text-anchor="middle" class="note" fill="#059669" opacity="1">Two inputs → same output: OK!</text>
+  <text x="690" y="329" text-anchor="middle" class="note" fill="#7c3aed" opacity="1">e.g. f(x) = x² (many-to-one)</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

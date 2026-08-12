@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .bigeq { font-size: 15px; font-weight: 600; font-style: italic; font-family: 'Times New Roman', serif; }
+    .note { font-size: 12px; opacity: 0.85; }
+    .num { font-style: italic; font-family: 'Times New Roman', serif; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Main title -->
+  <text x="360" y="25" class="title" text-anchor="middle">Scale factor laws (here k = 2)</text>
+
+  <!-- ============== LENGTH ROW (y ~ 60-130) ============== -->
+  <text x="30" y="70" class="title" fill="#2563eb">Length &#215; k</text>
+
+  <line x1="70" y1="100" x2="110" y2="100" stroke="#2563eb" stroke-width="3"/>
+  <text x="90" y="122" class="label" text-anchor="middle">length = 1</text>
+
+  <line x1="140" y1="100" x2="205" y2="100" stroke="#888" stroke-width="1.2"
+        stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="172" y="92" class="note" text-anchor="middle">&#215; k = 2</text>
+
+  <line x1="220" y1="100" x2="300" y2="100" stroke="#2563eb" stroke-width="3"/>
+  <text x="260" y="122" class="label" text-anchor="middle">length = 2</text>
+
+  <text x="500" y="105" class="bigeq" text-anchor="middle">lengths scale by k = 2</text>
+
+  <!-- ============== AREA ROW (y ~ 160-290) ============== -->
+  <text x="30" y="180" class="title" fill="#059669">Area &#215; k&#178;</text>
+
+  <!-- Unit square -->
+  <rect x="70" y="195" width="40" height="40"
+        fill="rgba(5, 150, 105, 0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="90" y="219" class="label num" text-anchor="middle" fill="#059669">1</text>
+  <text x="90" y="255" class="label" text-anchor="middle">area = 1</text>
+
+  <!-- Arrow -->
+  <line x1="140" y1="215" x2="205" y2="215" stroke="#888" stroke-width="1.2"
+        stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="172" y="207" class="note" text-anchor="middle">&#215; k&#178;</text>
+
+  <!-- 2x2 square, subdivided -->
+  <rect x="220" y="175" width="80" height="80"
+        fill="rgba(5, 150, 105, 0.15)" stroke="#059669" stroke-width="2"/>
+  <line x1="260" y1="175" x2="260" y2="255" stroke="#059669" stroke-width="1" opacity="0.6"/>
+  <line x1="220" y1="215" x2="300" y2="215" stroke="#059669" stroke-width="1" opacity="0.6"/>
+  <text x="240" y="200" class="label num" text-anchor="middle" fill="#059669">1</text>
+  <text x="280" y="200" class="label num" text-anchor="middle" fill="#059669">1</text>
+  <text x="240" y="240" class="label num" text-anchor="middle" fill="#059669">1</text>
+  <text x="280" y="240" class="label num" text-anchor="middle" fill="#059669">1</text>
+  <text x="260" y="275" class="label" text-anchor="middle">area = 4 = 2&#178;</text>
+
+  <text x="500" y="220" class="bigeq" text-anchor="middle">areas scale by k&#178; = 4</text>
+
+  <!-- ============== VOLUME ROW (y ~ 300-470) ============== -->
+  <text x="30" y="325" class="title" fill="#7c3aed">Volume &#215; k&#179;</text>
+
+  <!-- Unit cube, isometric. front at (70, 380)-(110, 420), top rises to y=360 -->
+  <rect x="70" y="380" width="35" height="35"
+        fill="rgba(124, 58, 237, 0.15)" stroke="#7c3aed" stroke-width="1.8"/>
+  <polygon points="70,380 105,380 125,360 90,360"
+           fill="rgba(124, 58, 237, 0.10)" stroke="#7c3aed" stroke-width="1.8"/>
+  <polygon points="105,380 125,360 125,395 105,415"
+           fill="rgba(124, 58, 237, 0.20)" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="97" y="445" class="label" text-anchor="middle">volume = 1</text>
+
+  <!-- Arrow -->
+  <line x1="150" y1="395" x2="205" y2="395" stroke="#888" stroke-width="1.2"
+        stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="178" y="387" class="note" text-anchor="middle">&#215; k&#179;</text>
+
+  <!-- 2x2x2 cube, isometric. front at (220, 345)-(290, 415), top rises to y=305 -->
+  <rect x="220" y="345" width="70" height="70"
+        fill="rgba(124, 58, 237, 0.15)" stroke="#7c3aed" stroke-width="1.8"/>
+  <polygon points="220,345 290,345 330,305 260,305"
+           fill="rgba(124, 58, 237, 0.10)" stroke="#7c3aed" stroke-width="1.8"/>
+  <polygon points="290,345 330,305 330,375 290,415"
+           fill="rgba(124, 58, 237, 0.20)" stroke="#7c3aed" stroke-width="1.8"/>
+
+  <!-- Subdivision grid -->
+  <line x1="255" y1="345" x2="255" y2="415" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+  <line x1="220" y1="380" x2="290" y2="380" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+  <line x1="255" y1="345" x2="295" y2="305" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+  <line x1="240" y1="325" x2="310" y2="325" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+  <line x1="290" y1="380" x2="330" y2="340" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+  <line x1="310" y1="325" x2="310" y2="395" stroke="#7c3aed" stroke-width="1" opacity="0.55"/>
+
+  <text x="275" y="445" class="label" text-anchor="middle">volume = 8 = 2&#179;</text>
+
+  <text x="500" y="395" class="bigeq" text-anchor="middle">volumes scale by k&#179; = 8</text>
+
+  <!-- Summary box -->
+  <rect x="410" y="440" width="280" height="50" rx="6"
+        fill="rgba(136, 136, 136, 0.06)" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="550" y="460" class="note" text-anchor="middle">dimension 1 &#8594; 1D length &#215;k, 2D area &#215;k&#178;,</text>
+  <text x="550" y="478" class="note" text-anchor="middle">3D volume &#215;k&#179; &#8212; exponent = dimension</text>
+</svg>

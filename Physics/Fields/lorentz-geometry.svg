@@ -1,0 +1,63 @@
+<svg width="100%" viewBox="0 0 960 430" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>The sideways law: F perpendicular to both v and B</title>
+  <defs>
+    <marker id="lgTeal" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#0891b2"/>
+    </marker>
+    <marker id="lgGreen" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#059669"/>
+    </marker>
+    <marker id="lgRed" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="28" text-anchor="middle" font-size="17" fill="#888" font-weight="bold">The sideways law: F perpendicular to both v and B</text>
+
+  <!-- ================= LEFT: positive charge ================= -->
+  <rect x="60" y="70" width="360" height="250" rx="10" fill="rgba(37,99,235,0.06)" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- B into page: circle + X grid -->
+  <g stroke="#2563eb" stroke-width="1.6" opacity="0.55">
+    <g transform="translate(110,110)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(370,110)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(110,290)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(240,290)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(370,290)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(110,200)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(370,200)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+  </g>
+  <text x="97" y="342" font-size="12" fill="#2563eb">B into the page</text>
+
+  <!-- charge + arrows -->
+  <circle cx="240" cy="200" r="14" fill="rgba(245,158,11,0.35)" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="240" y="205" text-anchor="middle" font-size="15" fill="#f59e0b" font-weight="bold">+</text>
+  <line x1="258" y1="200" x2="352" y2="200" stroke="#0891b2" stroke-width="3" marker-end="url(#lgTeal)"/>
+  <text x="315" y="188" font-size="15" fill="#0891b2" font-weight="bold">v</text>
+  <line x1="240" y1="182" x2="240" y2="112" stroke="#059669" stroke-width="3" marker-end="url(#lgGreen)"/>
+  <text x="252" y="140" font-size="15" fill="#059669" font-weight="bold">F</text>
+  <text x="240" y="368" text-anchor="middle" font-size="13" fill="#888">positive charge: the left hand answers directly</text>
+
+  <!-- ================= RIGHT: negative charge ================= -->
+  <rect x="540" y="70" width="360" height="250" rx="10" fill="rgba(37,99,235,0.06)" stroke="#2563eb" stroke-width="1.5"/>
+  <g stroke="#2563eb" stroke-width="1.6" opacity="0.55">
+    <g transform="translate(590,110)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(720,110)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(850,110)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(590,290)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(850,290)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(590,200)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+    <g transform="translate(850,200)"><circle r="9" fill="none"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/></g>
+  </g>
+  <text x="577" y="342" font-size="12" fill="#2563eb">same B, same v</text>
+
+  <circle cx="720" cy="200" r="14" fill="rgba(8,145,178,0.3)" stroke="#0891b2" stroke-width="2.5"/>
+  <text x="720" y="205" text-anchor="middle" font-size="17" fill="#0891b2" font-weight="bold">-</text>
+  <line x1="738" y1="200" x2="832" y2="200" stroke="#0891b2" stroke-width="3" marker-end="url(#lgTeal)"/>
+  <text x="795" y="188" font-size="15" fill="#0891b2" font-weight="bold">v</text>
+  <line x1="720" y1="218" x2="720" y2="288" stroke="#dc2626" stroke-width="3" marker-end="url(#lgRed)"/>
+  <text x="732" y="262" font-size="15" fill="#dc2626" font-weight="bold">F</text>
+  <text x="720" y="368" text-anchor="middle" font-size="13" fill="#888">negative charge: same rule, flipped answer</text>
+
+  <text x="480" y="404" text-anchor="middle" font-size="13" fill="#888" font-style="italic">Fleming's left hand: First finger = Field, seCond finger = Current, thuMb = Motion (the force)</text>
+  <text x="480" y="422" text-anchor="middle" font-size="12" fill="#888">for electrons, point the second finger along conventional current - opposite their motion</text>
+</svg>

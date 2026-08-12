@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .subtitle { font-size: 11px; opacity: 0.85; }
+    .frame-label { font-size: 13px; font-weight: 600; }
+    .frame-note { font-size: 11px; opacity: 0.85; }
+    .heading { font-size: 12px; font-weight: 600; opacity: 0.85; }
+    .small { font-size: 10.5px; opacity: 0.75; }
+    .desc { fill: #2563eb; }   /* descent: blue */
+    .asc  { fill: #059669; }   /* ascent: green */
+    .base { fill: #dc2626; }   /* base case: red */
+  </style>
+
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="26" class="title" text-anchor="middle">Call Stack Trace of factorial(4)</text>
+  <text x="360" y="44" class="subtitle" text-anchor="middle">
+    Descent (blue): each call pushes a frame.  Ascent (green): each return pops one.
+  </text>
+
+  <!-- Column headings -->
+  <text x="180" y="78" class="heading desc" text-anchor="middle">Descent — pushes</text>
+  <text x="540" y="78" class="heading asc" text-anchor="middle">Ascent — pops</text>
+
+  <!-- Vertical separator -->
+  <line x1="360" y1="90" x2="360" y2="490" stroke="#888" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,4"/>
+
+  <!-- Frames are stacked vertically. Each frame is a rounded rect with the call inside. -->
+  <!-- Y coordinates for the 5 levels: -->
+  <!-- factorial(4): y=100, factorial(3): y=160, factorial(2): y=220, factorial(1): y=280, factorial(0): y=340 -->
+
+  <!-- ============== LEFT COLUMN: DESCENT ============== -->
+  <!-- factorial(4) frame -->
+  <rect x="80" y="100" width="200" height="42" rx="6" ry="6"
+        fill="rgba(37, 99, 235, 0.10)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="123" class="math frame-label desc" text-anchor="middle">factorial(4)</text>
+  <text x="180" y="138" class="frame-note desc" text-anchor="middle">needs factorial(3)</text>
+
+  <!-- factorial(3) frame -->
+  <rect x="80" y="155" width="200" height="42" rx="6" ry="6"
+        fill="rgba(37, 99, 235, 0.10)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="178" class="math frame-label desc" text-anchor="middle">factorial(3)</text>
+  <text x="180" y="193" class="frame-note desc" text-anchor="middle">needs factorial(2)</text>
+
+  <!-- factorial(2) frame -->
+  <rect x="80" y="210" width="200" height="42" rx="6" ry="6"
+        fill="rgba(37, 99, 235, 0.10)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="233" class="math frame-label desc" text-anchor="middle">factorial(2)</text>
+  <text x="180" y="248" class="frame-note desc" text-anchor="middle">needs factorial(1)</text>
+
+  <!-- factorial(1) frame -->
+  <rect x="80" y="265" width="200" height="42" rx="6" ry="6"
+        fill="rgba(37, 99, 235, 0.10)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="288" class="math frame-label desc" text-anchor="middle">factorial(1)</text>
+  <text x="180" y="303" class="frame-note desc" text-anchor="middle">needs factorial(0)</text>
+
+  <!-- factorial(0) frame — BASE CASE, drawn in red -->
+  <rect x="80" y="320" width="200" height="42" rx="6" ry="6"
+        fill="rgba(220, 38, 38, 0.10)" stroke="#dc2626" stroke-width="2"/>
+  <text x="180" y="343" class="math frame-label base" text-anchor="middle">factorial(0)</text>
+  <text x="180" y="358" class="frame-note base" text-anchor="middle">BASE CASE — return 1</text>
+
+  <!-- Descent arrows on the left side -->
+  <line x1="50" y1="145" x2="50" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="200" x2="50" y2="210" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="255" x2="50" y2="265" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="310" x2="50" y2="320" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- Push labels on the left -->
+  <text x="30" y="153" class="small desc" text-anchor="end">push</text>
+  <text x="30" y="208" class="small desc" text-anchor="end">push</text>
+  <text x="30" y="263" class="small desc" text-anchor="end">push</text>
+  <text x="30" y="318" class="small desc" text-anchor="end">push</text>
+
+  <!-- ============== RIGHT COLUMN: ASCENT ============== -->
+  <!-- factorial(4) frame again (mirror position) -->
+  <rect x="440" y="100" width="200" height="42" rx="6" ry="6"
+        fill="rgba(5, 150, 105, 0.10)" stroke="#059669" stroke-width="1.5"/>
+  <text x="540" y="123" class="math frame-label asc" text-anchor="middle">factorial(4)</text>
+  <text x="540" y="138" class="frame-note asc" text-anchor="middle">returns 4 × 6 = 24</text>
+
+  <rect x="440" y="155" width="200" height="42" rx="6" ry="6"
+        fill="rgba(5, 150, 105, 0.10)" stroke="#059669" stroke-width="1.5"/>
+  <text x="540" y="178" class="math frame-label asc" text-anchor="middle">factorial(3)</text>
+  <text x="540" y="193" class="frame-note asc" text-anchor="middle">returns 3 × 2 = 6</text>
+
+  <rect x="440" y="210" width="200" height="42" rx="6" ry="6"
+        fill="rgba(5, 150, 105, 0.10)" stroke="#059669" stroke-width="1.5"/>
+  <text x="540" y="233" class="math frame-label asc" text-anchor="middle">factorial(2)</text>
+  <text x="540" y="248" class="frame-note asc" text-anchor="middle">returns 2 × 1 = 2</text>
+
+  <rect x="440" y="265" width="200" height="42" rx="6" ry="6"
+        fill="rgba(5, 150, 105, 0.10)" stroke="#059669" stroke-width="1.5"/>
+  <text x="540" y="288" class="math frame-label asc" text-anchor="middle">factorial(1)</text>
+  <text x="540" y="303" class="frame-note asc" text-anchor="middle">returns 1 × 1 = 1</text>
+
+  <rect x="440" y="320" width="200" height="42" rx="6" ry="6"
+        fill="rgba(220, 38, 38, 0.10)" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="343" class="math frame-label base" text-anchor="middle">factorial(0)</text>
+  <text x="540" y="358" class="frame-note base" text-anchor="middle">returns 1</text>
+
+  <!-- Ascent arrows on the right side (pointing UP from each frame to the one above) -->
+  <line x1="670" y1="320" x2="670" y2="307" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+  <line x1="670" y1="265" x2="670" y2="252" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+  <line x1="670" y1="210" x2="670" y2="197" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+  <line x1="670" y1="155" x2="670" y2="142" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- Pop labels on the right -->
+  <text x="688" y="318" class="small asc">pop</text>
+  <text x="688" y="263" class="small asc">pop</text>
+  <text x="688" y="208" class="small asc">pop</text>
+  <text x="688" y="153" class="small asc">pop</text>
+
+  <!-- Bridge between descent and ascent at the base case (curved arrow at the bottom) -->
+  <path d="M 280 341 Q 360 410 440 341" fill="none"
+        stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-green)"/>
+  <text x="360" y="408" class="small base" text-anchor="middle">base case reached → returns start flowing up</text>
+
+  <!-- Final result -->
+  <rect x="195" y="430" width="330" height="50" rx="8" ry="8"
+        fill="rgba(5, 150, 105, 0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="360" y="452" class="frame-label asc" text-anchor="middle">Final result: factorial(4) returns 24</text>
+  <text x="360" y="470" class="small" text-anchor="middle">Maximum stack depth was 5 frames.  Total work O(n).</text>
+</svg>

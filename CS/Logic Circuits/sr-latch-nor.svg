@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 270" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .io { font-size: 13px; font-weight: 700; fill: #2563eb; }
+    .g { font-size: 11px; font-weight: 600; fill: #7c3aed; }
+    .out { font-size: 13px; font-weight: 700; fill: #059669; }
+    .eq { font-size: 11px; }
+  </style>
+
+  <text x="310" y="24" class="title" text-anchor="middle">The SR flip-flop -- two cross-coupled NORs</text>
+
+  <!-- R input rail into top gate -->
+  <text x="66" y="79" class="io" text-anchor="end">R</text>
+  <text x="66" y="93" class="eq" text-anchor="end" font-size="9px">reset</text>
+  <line x1="74" y1="75" x2="196" y2="75" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- S input rail into bottom gate -->
+  <text x="66" y="204" class="io" text-anchor="end">S</text>
+  <text x="66" y="218" class="eq" text-anchor="end" font-size="9px">set</text>
+  <line x1="74" y1="200" x2="196" y2="200" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- top NOR gate, center y = 85 (shield 65..105) -->
+  <path d="M 190 65 Q 212 71 236 85 Q 212 99 190 105 Q 203 85 190 65 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <circle cx="241" cy="85" r="4" fill="none" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="211" y="89" class="g" text-anchor="middle">NOR</text>
+
+  <!-- bottom NOR gate, center y = 190 (shield 170..210) -->
+  <path d="M 190 170 Q 212 176 236 190 Q 212 204 190 210 Q 203 190 190 170 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <circle cx="241" cy="190" r="4" fill="none" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="211" y="194" class="g" text-anchor="middle">NOR</text>
+
+  <!-- outputs -->
+  <line x1="245" y1="85" x2="400" y2="85" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="245" y1="190" x2="400" y2="190" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="412" y="90" class="out" text-anchor="start">Q</text>
+  <text x="436" y="90" class="eq" text-anchor="start">the stored bit</text>
+  <text x="412" y="195" class="eq" text-anchor="start" font-weight="700" font-size="13px">Q</text>
+  <line x1="411" y1="182" x2="422" y2="182" stroke="#888" stroke-width="1.4"/>
+  <text x="436" y="195" class="eq" text-anchor="start">its complement</text>
+
+  <!-- cross-coupling: Q branch down to bottom gate's upper pin -->
+  <circle cx="330" cy="85" r="3" fill="#9ca3af"/>
+  <line x1="330" y1="85" x2="176" y2="180" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="176" y1="180" x2="196" y2="180" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- cross-coupling: Q-bar branch up to top gate's lower pin -->
+  <circle cx="330" cy="190" r="3" fill="#9ca3af"/>
+  <line x1="330" y1="190" x2="176" y2="95" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="176" y1="95" x2="196" y2="95" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <text x="310" y="245" class="eq" text-anchor="middle">S = R = 0: each NOR acts as a NOT of the fed-back wire -- the inverter loop, holding.</text>
+  <text x="310" y="261" class="eq" text-anchor="middle">Raise S to force Q = 1, raise R to force Q = 0. Never raise both.</text>
+</svg>

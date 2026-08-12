@@ -1,0 +1,60 @@
+<svg viewBox="0 0 660 300" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>16-bit floating-point layout: 8-bit two's-complement mantissa (point after the sign bit) + 8-bit two's-complement exponent, decoding 01101000 x 2^(00000011) = 6.5.</title>
+
+  <text x="330" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">A 16-bit float:&#8195;8-bit mantissa&#8195;+&#8195;8-bit exponent</text>
+
+  <!-- ===== MANTISSA ===== -->
+  <text x="90" y="58" font-family="sans-serif" font-size="12" fill="#888">MANTISSA&#8195;(two's complement; binary point after the sign bit)</text>
+  <g>
+    <!-- sign bit (amber) -->
+    <rect x="90" y="68" width="42" height="42" rx="4" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.6"/>
+    <text x="111" y="95" font-family="sans-serif" font-size="17" font-weight="bold" fill="#888" text-anchor="middle">0</text>
+    <!-- binary point marker -->
+    <circle cx="135" cy="104" r="2.6" fill="#888"/>
+    <!-- fraction bits (teal): 1 1 0 1 0 0 0 -->
+    <g fill="#0891b2">
+      <rect x="132" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="174" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="216" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="258" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="300" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="342" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+      <rect x="384" y="68" width="42" height="42" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+    </g>
+    <g font-family="sans-serif" font-size="17" font-weight="bold" fill="#888" text-anchor="middle">
+      <text x="153" y="95">1</text><text x="195" y="95">1</text><text x="237" y="95">0</text>
+      <text x="279" y="95">1</text><text x="321" y="95">0</text><text x="363" y="95">0</text><text x="405" y="95">0</text>
+    </g>
+    <!-- place values -->
+    <g font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle" opacity="0.9">
+      <text x="111" y="126">&#8722;2&#8304;</text>
+      <text x="153" y="126">2&#8315;&#185;</text><text x="195" y="126">2&#8315;&#178;</text><text x="237" y="126">2&#8315;&#179;</text>
+      <text x="279" y="126">2&#8315;&#8308;</text><text x="321" y="126">2&#8315;&#8309;</text><text x="363" y="126">2&#8315;&#8310;</text><text x="405" y="126">2&#8315;&#8311;</text>
+    </g>
+    <text x="446" y="95" font-family="sans-serif" font-size="13" fill="#888">= 0.8125</text>
+  </g>
+
+  <!-- ===== EXPONENT ===== -->
+  <text x="90" y="172" font-family="sans-serif" font-size="12" fill="#888">EXPONENT&#8195;(two's complement)</text>
+  <g>
+    <g>
+      <rect x="90"  y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="132" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="174" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="216" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="258" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="300" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="342" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+      <rect x="384" y="182" width="42" height="42" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+    </g>
+    <g font-family="sans-serif" font-size="17" font-weight="bold" fill="#888" text-anchor="middle">
+      <text x="111" y="209">0</text><text x="153" y="209">0</text><text x="195" y="209">0</text><text x="237" y="209">0</text>
+      <text x="279" y="209">0</text><text x="321" y="209">0</text><text x="363" y="209">1</text><text x="405" y="209">1</text>
+    </g>
+    <text x="446" y="209" font-family="sans-serif" font-size="13" fill="#888">= +3</text>
+  </g>
+
+  <!-- ===== decode line (split so the coloured result is its own element) ===== -->
+  <text x="384" y="266" font-family="sans-serif" font-size="15" fill="#888" text-anchor="end">value = 0.1101000&#8322; &#215; 2&#179; = 0.8125 &#215; 8 =</text>
+  <text x="392" y="266" font-family="sans-serif" font-size="15" fill="#059669" font-weight="bold" text-anchor="start">6.5</text>
+</svg>

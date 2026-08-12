@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 15px; font-weight: 700; }
+    .title { font-size: 16px; font-weight: 700; }
+    .col   { font-size: 13px; font-weight: 700; }
+    .t0    { font-size: 11px; font-weight: 700; fill: #0891b2; }
+    .t1    { font-size: 11px; font-weight: 700; fill: #f59e0b; }
+    .good  { font-size: 11px; font-weight: 700; fill: #059669; }
+    .cap   { font-size: 11px; }
+  </style>
+
+  <text x="360" y="28" class="title" text-anchor="middle">Reflect and prefix: building Gray code with a mirror</text>
+
+  <!-- ============ Column A: 1-bit ============ -->
+  <text x="110" y="70" class="col" text-anchor="middle">1-bit</text>
+  <text x="110" y="185" class="mono" text-anchor="middle">0</text>
+  <text x="110" y="215" class="mono" text-anchor="middle">1</text>
+
+  <!-- arrow A -> B -->
+  <line x1="150" y1="200" x2="230" y2="200" stroke="#9ca3af" stroke-width="1.6"/>
+  <path d="M224 195 L230 200 L224 205" fill="none" stroke="#9ca3af" stroke-width="1.6"/>
+
+  <!-- ============ Column B: 2-bit ============ -->
+  <text x="320" y="70" class="col" text-anchor="middle">2-bit</text>
+  <text x="252" y="118" class="t0" text-anchor="start">prefix 0</text>
+  <text x="320" y="118" class="mono" text-anchor="middle">00</text>
+  <text x="320" y="146" class="mono" text-anchor="middle">01</text>
+  <!-- mirror line -->
+  <line x1="288" y1="162" x2="352" y2="162" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="356" y="166" class="cap" text-anchor="start">mirror</text>
+  <text x="230" y="186" class="t1" text-anchor="start">reflect, prefix 1</text>
+  <text x="320" y="188" class="mono" text-anchor="middle">11</text>
+  <text x="320" y="216" class="mono" text-anchor="middle">10</text>
+
+  <!-- arrow B -> C -->
+  <line x1="390" y1="200" x2="470" y2="200" stroke="#9ca3af" stroke-width="1.6"/>
+  <path d="M464 195 L470 200 L464 205" fill="none" stroke="#9ca3af" stroke-width="1.6"/>
+
+  <!-- ============ Column C: 3-bit ============ -->
+  <text x="580" y="70" class="col" text-anchor="middle">3-bit</text>
+  <text x="500" y="100" class="t0" text-anchor="start">prefix 0</text>
+  <text x="580" y="100" class="mono" text-anchor="middle">000</text>
+  <text x="580" y="126" class="mono" text-anchor="middle">001</text>
+  <text x="580" y="152" class="mono" text-anchor="middle">011</text>
+  <text x="580" y="178" class="mono" text-anchor="middle">010</text>
+  <!-- mirror line + seam highlight -->
+  <line x1="544" y1="192" x2="616" y2="192" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <rect x="548" y="166" width="64" height="52" rx="6" fill="none" stroke="#059669" stroke-width="1.4"/>
+  <text x="626" y="196" class="good" text-anchor="start">these two differ</text>
+  <text x="626" y="210" class="good" text-anchor="start">in one bit</text>
+  <text x="486" y="238" class="t1" text-anchor="start">reflect,</text>
+  <text x="486" y="252" class="t1" text-anchor="start">prefix 1</text>
+  <text x="580" y="208" class="mono" text-anchor="middle">110</text>
+  <text x="580" y="234" class="mono" text-anchor="middle">111</text>
+  <text x="580" y="260" class="mono" text-anchor="middle">101</text>
+  <text x="580" y="286" class="mono" text-anchor="middle">100</text>
+
+  <text x="360" y="330" class="cap" text-anchor="middle">Each larger code = the smaller one (prefixed 0), then its mirror image (prefixed 1).</text>
+  <text x="360" y="350" class="cap" text-anchor="middle">The reflection puts identical strings back-to-back at the seam, so only the new leading bit changes there.</text>
+</svg>

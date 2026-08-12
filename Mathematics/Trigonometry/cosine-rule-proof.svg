@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .note { font-size: 12px; opacity: 0.7; }
+    .coord { font-size: 11px; }
+  </style>
+
+  <!-- Title -->
+  <text x="250" y="20" class="title" text-anchor="middle">Cosine Rule Proof — coordinate setup</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="260" x2="450" y2="260" stroke="#888" stroke-width="1"/>
+  <line x1="80" y1="290" x2="80" y2="40" stroke="#888" stroke-width="1"/>
+  <!-- Axis arrows -->
+  <polygon points="450,260 442,256 442,264" fill="#888"/>
+  <polygon points="80,40 76,48 84,48" fill="#888"/>
+  <text x="458" y="264" class="label math" fill="#888">x</text>
+  <text x="72" y="36" class="label math" fill="#888">y</text>
+
+  <!-- Triangle vertices:
+       B at origin (80, 260)
+       C at (a, 0) = (400, 260)
+       A at (c cos B, c sin B) ≈ (209, 97) for B ≈ 50°, c ≈ 200px -->
+  <polygon points="80,260 400,260 220,90" fill="none" stroke="#888" stroke-width="2"/>
+
+  <!-- Vertex B at origin — label to the LEFT of the axis, clear of everything -->
+  <circle cx="80" cy="260" r="4" fill="#cc0066"/>
+  <text x="68" y="278" class="label math" fill="#cc0066" font-weight="600" text-anchor="end">B (0, 0)</text>
+
+  <!-- Vertex C at (a, 0) -->
+  <circle cx="400" cy="260" r="4" fill="#cc0066"/>
+  <text x="408" y="254" class="label math" fill="#cc0066" font-weight="600">C</text>
+  <text x="408" y="270" class="coord" fill="#cc0066">(a, 0)</text>
+
+  <!-- Vertex A at (c cos B, c sin B) -->
+  <circle cx="220" cy="90" r="4" fill="#cc0066"/>
+  <text x="230" y="82" class="label math" fill="#cc0066" font-weight="600">A</text>
+  <text x="230" y="98" class="coord" fill="#cc0066">(c cos B,  c sin B)</text>
+
+  <!-- Side labels -->
+  <!-- a = BC (bottom) -->
+  <text x="240" y="282" class="label math" fill="#4678c8" text-anchor="middle">a</text>
+  <!-- b = AC (right side — the one we're deriving) -->
+  <text x="325" y="162" class="label math" fill="#059669" font-weight="600">b</text>
+  <!-- c = AB (left side) -->
+  <text x="130" y="162" class="label math" fill="#4678c8">c</text>
+
+  <!-- Dashed projection from A down to x-axis -->
+  <line x1="220" y1="90" x2="220" y2="260" stroke="#888" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Right angle marker -->
+  <polyline points="220,245 235,245 235,260" fill="none" stroke="#888" stroke-width="1" opacity="0.4"/>
+
+  <!-- x-coordinate brace label -->
+  <text x="150" y="250" class="coord" fill="#888">c cos B</text>
+
+  <!-- y-coordinate label (left of dashed line) -->
+  <text x="200" y="180" class="coord" fill="#888" text-anchor="end">c sin B</text>
+
+  <!-- Angle B arc -->
+  <path d="M 120,260 A 40 40 0 0 0 106,234" fill="none" stroke="#cc0066" stroke-width="1.5"/>
+  <text x="125" y="238" class="note" fill="#cc0066" font-weight="600">B</text>
+
+  <!-- Distance formula annotation -->
+  <text x="250" y="320" class="note" text-anchor="middle" fill="#059669" font-weight="600">
+    b² = (c cos B − a)² + (c sin B)²  =  a² + c² − 2ac cos B
+  </text>
+</svg>

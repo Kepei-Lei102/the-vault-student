@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .note { font-size: 12px; opacity: 0.7; }
+  </style>
+
+  <!-- Title -->
+  <text x="250" y="20" class="title" text-anchor="middle">Area = ½ab sin C — why sin C gives the height</text>
+
+  <!-- Triangle: B bottom-left, C bottom-right, A top
+       B = (60, 230), C = (390, 230), A = (260, 60) -->
+  <polygon points="60,230 390,230 260,60" fill="none" stroke="#888" stroke-width="2"/>
+
+  <!-- Vertex labels -->
+  <text x="40" y="228" class="label math" fill="#cc0066" font-weight="600">B</text>
+  <text x="400" y="228" class="label math" fill="#cc0066" font-weight="600">C</text>
+  <text x="264" y="48" class="label math" fill="#cc0066" font-weight="600">A</text>
+
+  <!-- Side a = BC (base) — highlighted -->
+  <line x1="60" y1="230" x2="390" y2="230" stroke="#4678c8" stroke-width="2.5"/>
+  <text x="225" y="256" class="label math" fill="#4678c8" font-weight="600" text-anchor="middle">a (base)</text>
+
+  <!-- Side b = AC -->
+  <text x="340" y="130" class="label math" fill="#4678c8">b</text>
+
+  <!-- Side c = AB -->
+  <text x="140" y="130" class="label math" fill="#4678c8">c</text>
+
+  <!-- Perpendicular height h from A to BC -->
+  <line x1="260" y1="60" x2="260" y2="230" stroke="#059669" stroke-width="2" stroke-dasharray="6,4"/>
+  <!-- Right angle marker at foot D -->
+  <polyline points="260,215 275,215 275,230" fill="none" stroke="#059669" stroke-width="1.2"/>
+  <!-- h label (left of the dashed line) -->
+  <text x="244" y="150" class="label math" fill="#059669" font-weight="600" text-anchor="end">h</text>
+  <!-- Foot label D (right of the foot, offset to avoid base label) -->
+  <text x="278" y="244" class="note" fill="#059669">D</text>
+
+  <!-- Angle C arc (no separate label — vertex C already labelled) -->
+  <path d="M 360,230 A 30 30 0 0 1 378,210" fill="none" stroke="#cc0066" stroke-width="1.5"/>
+
+  <!-- Key equation chain (inside the triangle, right side) -->
+  <text x="340" y="160" class="note" fill="#059669">In △ACD:</text>
+  <text x="340" y="176" class="note" fill="#059669">sin C = h / b</text>
+  <text x="340" y="192" class="note" fill="#059669" font-weight="600">∴ h = b sin C</text>
+
+  <!-- Final formula at bottom -->
+  <text x="250" y="288" class="note" text-anchor="middle" fill="#059669" font-weight="600">
+    Area = ½ × base × height = ½ × a × b sin C = ½ab sin C
+  </text>
+</svg>

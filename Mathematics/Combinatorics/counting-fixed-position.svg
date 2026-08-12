@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="100%">
+  <!-- Title -->
+  <text x="280" y="24" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">Type 3: Fixed position — place the constrained item first</text>
+
+  <!-- 5 seats -->
+  <rect x="80" y="50" width="44" height="36" rx="4" fill="rgba(200,200,200,0.15)" stroke="#888" stroke-width="1.5"/>
+  <text x="102" y="74" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">?</text>
+  <text x="102" y="100" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Seat 1</text>
+
+  <rect x="144" y="50" width="44" height="36" rx="4" fill="rgba(200,200,200,0.15)" stroke="#888" stroke-width="1.5"/>
+  <text x="166" y="74" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">?</text>
+  <text x="166" y="100" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Seat 2</text>
+
+  <!-- Middle seat — fixed, highlighted -->
+  <rect x="208" y="47" width="50" height="42" rx="4" fill="rgba(234,67,53,0.15)" stroke="#EA4335" stroke-width="2.5"/>
+  <text x="233" y="74" font-family="sans-serif" font-size="15" fill="#EA4335" text-anchor="middle" font-weight="bold">A</text>
+  <text x="233" y="100" font-family="sans-serif" font-size="11" fill="#EA4335" text-anchor="middle" font-weight="bold">Seat 3</text>
+  <!-- Lock icon text -->
+  <text x="233" y="44" font-family="sans-serif" font-size="11" fill="#EA4335" text-anchor="middle">fixed: 1 way</text>
+
+  <rect x="278" y="50" width="44" height="36" rx="4" fill="rgba(200,200,200,0.15)" stroke="#888" stroke-width="1.5"/>
+  <text x="300" y="74" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">?</text>
+  <text x="300" y="100" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Seat 4</text>
+
+  <rect x="342" y="50" width="44" height="36" rx="4" fill="rgba(200,200,200,0.15)" stroke="#888" stroke-width="1.5"/>
+  <text x="364" y="74" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">?</text>
+  <text x="364" y="100" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Seat 5</text>
+
+  <!-- Calculation -->
+  <text x="280" y="130" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">Remaining 4 people fill 4 seats: 4! = 24</text>
+  <text x="280" y="152" font-family="sans-serif" font-size="13" fill="#9C27B0" text-anchor="middle" font-weight="bold">Total = 1 × 4! = 24</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; opacity: 0.85; }
+    .anno { font-size: 12px; font-style: italic; opacity: 0.9; }
+    .pe-tag { font-size: 13px; font-weight: 600; }
+  </style>
+
+  <defs>
+    <marker id="arrowend" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="320" y="26" class="title" text-anchor="middle">The Force–Extension Graph</text>
+  <text x="320" y="44" class="small" text-anchor="middle">Hooke's Law is the linear region. Past the elastic limit, the metal remembers.</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="360" x2="600" y2="360" stroke="#888" stroke-width="1.5" marker-end="url(#arrowend)"/>
+  <line x1="70" y1="360" x2="70" y2="70" stroke="#888" stroke-width="1.5" marker-end="url(#arrowend)"/>
+  <text x="605" y="378" class="math label">x</text>
+  <text x="610" y="372" class="small">(extension)</text>
+  <text x="60" y="68" class="math label" text-anchor="end">F</text>
+  <text x="62" y="82" class="small" text-anchor="end">(force)</text>
+  <text x="68" y="376" class="small" text-anchor="end">0</text>
+
+  <!-- Elastic PE triangle (shaded) -->
+  <path d="M 70 360 L 320 360 L 320 150 Z"
+        fill="rgba(37, 99, 235, 0.15)" stroke="none"/>
+
+  <!-- Linear elastic region -->
+  <line x1="70" y1="360" x2="320" y2="150" stroke="#2563eb" stroke-width="2.5"/>
+
+  <!-- Plastic region (curving over) -->
+  <path d="M 320 150 C 360 125, 410 110, 470 105"
+        fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+
+  <!-- Breaking point: red X -->
+  <line x1="463" y1="98" x2="477" y2="112" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="477" y1="98" x2="463" y2="112" stroke="#dc2626" stroke-width="2.5"/>
+
+  <!-- Vertical dashed line at elastic limit -->
+  <line x1="320" y1="360" x2="320" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- Marker dots -->
+  <circle cx="320" cy="150" r="3.5" fill="#2563eb"/>
+  <circle cx="70" cy="360" r="3" fill="#888"/>
+
+  <!-- Triangle PE label -->
+  <text x="190" y="295" class="pe-tag" text-anchor="middle" fill="#2563eb">
+    <tspan class="math">½kx²</tspan>
+  </text>
+  <text x="190" y="312" class="small" text-anchor="middle" fill="#2563eb">elastic PE = area</text>
+
+  <!-- F = kx along the linear line -->
+  <text x="155" y="232" class="math label" fill="#2563eb" transform="rotate(-40 155 232)">F = kx</text>
+
+  <!-- Elastic limit annotation -->
+  <text x="320" y="138" class="anno" text-anchor="middle" fill="#f59e0b">elastic limit</text>
+  <line x1="320" y1="142" x2="320" y2="150" stroke="#f59e0b" stroke-width="1"/>
+
+  <!-- Elastic region label -->
+  <text x="195" y="378" class="small" text-anchor="middle">elastic region</text>
+
+  <!-- Plastic region label -->
+  <text x="395" y="378" class="small" text-anchor="middle" fill="#f59e0b">plastic region</text>
+
+  <!-- Break label -->
+  <text x="498" y="106" class="anno" fill="#dc2626">break</text>
+  <line x1="488" y1="104" x2="478" y2="105" stroke="#dc2626" stroke-width="1"/>
+
+  <!-- Side caption: triangle math -->
+  <text x="380" y="225" class="small" fill="#888">Area of triangle =</text>
+  <text x="380" y="242" class="small" fill="#888">  <tspan class="math">½ · x · (kx) = ½kx²</tspan></text>
+  <text x="380" y="259" class="small" opacity="0.7">(average force × distance)</text>
+
+  <!-- Bottom caption -->
+  <text x="320" y="405" class="small" text-anchor="middle" opacity="0.75">
+    Gradient of the line = <tspan class="math">k</tspan> (spring constant) · Area under the line = elastic potential energy
+  </text>
+</svg>

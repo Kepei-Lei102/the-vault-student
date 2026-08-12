@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<!-- Locus 1 — points at fixed distance from a point — animated locus reveal.
+     12-second loop, vault palette. The locus emerges from accumulating test points
+     that satisfy the geometric rule, emphasising "set of points" over "path of motion". -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="100%">
+  <defs>
+    <style>
+      text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        fill: #888888;
+      }
+    </style>
+  </defs>
+
+  <text x="300" y="26" text-anchor="middle" font-size="16" font-weight="bold">Locus 1 — points at fixed distance from a point</text>
+  <text x="300" y="46" text-anchor="middle" font-size="12">Every point at distance d from A satisfies the rule. Their integral is a circle.</text>
+
+<line x1="300.00" y1="250.00" x2="300.00" y2="250.00"
+      stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"
+      stroke-dasharray="0.0" stroke-dashoffset="0.0">
+  <animate attributeName="stroke-dashoffset"
+           values="0.0;0.0;0;0;0.0"
+           keyTimes="0;0.05;0.06;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<circle cx="300.00" cy="250.00" r="5" fill="#2563eb" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.05;0.075;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<text x="286.00" y="255.00" font-size="18" font-weight="bold"
+      fill="#2563eb" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.06;0.085;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  A
+</text>
+<line x1="300.00" y1="250.00" x2="430.00" y2="250.00"
+      stroke="#888888" stroke-width="1.2" stroke-dasharray="4 3" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;0.8;0.8;0;0"
+           keyTimes="0;0.1;0.125;0.17;0.195;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<circle cx="430.00" cy="250.00" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.1;0.125;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<line x1="300.00" y1="250.00" x2="420.10" y2="299.75"
+      stroke="#888888" stroke-width="1.2" stroke-dasharray="4 3" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;0.8;0.8;0;0"
+           keyTimes="0;0.128125;0.153125;0.198125;0.223125;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<circle cx="420.10" cy="299.75" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.128125;0.153125;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<line x1="300.00" y1="250.00" x2="391.92" y2="341.92"
+      stroke="#888888" stroke-width="1.2" stroke-dasharray="4 3" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;0.8;0.8;0;0"
+           keyTimes="0;0.15625;0.18125;0.22625;0.25125;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<circle cx="391.92" cy="341.92" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.15625;0.18125;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="349.75" cy="370.10" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.184375;0.209375;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="300.00" cy="380.00" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.2125;0.2375;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="250.25" cy="370.10" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.240625;0.265625;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="208.08" cy="341.92" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.26875;0.29375;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="179.90" cy="299.75" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.296875;0.321875;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="170.00" cy="250.00" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.325;0.35;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="179.90" cy="200.25" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.353125;0.378125;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="208.08" cy="158.08" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.38125;0.40625;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="250.25" cy="129.90" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.409375;0.434375;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="300.00" cy="120.00" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.4375;0.4625;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="349.75" cy="129.90" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.465625;0.490625;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="391.92" cy="158.08" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.49375;0.51875;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="420.10" cy="200.25" r="5" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.521875;0.546875;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<text x="365.00" y="242.00" font-size="13" fill="#888888" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0;0"
+           keyTimes="0;0.10;0.13;0.20;0.22;1"
+           dur="12s" repeatCount="indefinite"/>
+  d
+</text>
+<path d="M 430.00 250.00 A 130 130 0 0 1 170.00 250.00 A 130 130 0 0 1 430.00 250.00" stroke="#059669" stroke-width="3" fill="none"
+      stroke-linecap="round"
+      stroke-dasharray="816.8" stroke-dashoffset="816.8">
+  <animate attributeName="stroke-dashoffset"
+           values="816.8;816.8;0;0;816.8"
+           keyTimes="0;0.6;0.78;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</path>
+<text x="300.00" y="440.00" font-size="13" font-weight="normal"
+      fill="#888888" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.82;0.845;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  Locus = circle of radius d centred at A.
+</text>
+</svg>

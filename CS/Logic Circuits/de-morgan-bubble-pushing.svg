@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 470" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .gate { font-size: 13px; font-weight: 600; fill: #7c3aed; }
+    .io { font-size: 13px; font-weight: 600; fill: #2563eb; }
+    .eq { font-size: 26px; font-weight: 700; fill: #059669; }
+    .note { font-size: 11.5px; }
+    .push { font-size: 12px; font-weight: 600; fill: #f59e0b; }
+    .cap { font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="amb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="330" y="30" class="title" text-anchor="middle">De Morgan's laws, drawn as circuits</text>
+
+  <!-- ============ ROW 1 : NAND  =  OR with inverted inputs ============ -->
+  <!-- LEFT: AND + output bubble = NAND -->
+  <text x="62" y="132" class="io" text-anchor="middle">A</text>
+  <text x="62" y="156" class="io" text-anchor="middle">B</text>
+  <line x1="72" y1="128" x2="130" y2="128" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="72" y1="152" x2="130" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+  <path d="M 130 118 L 158 118 A 22 22 0 0 1 158 162 L 130 162 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <circle cx="185" cy="140" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="190" y1="140" x2="232" y2="140" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="156" y="185" class="gate" text-anchor="middle">NAND</text>
+
+  <text x="300" y="149" class="eq" text-anchor="middle">=</text>
+
+  <!-- RIGHT: OR with two input bubbles -->
+  <text x="332" y="132" class="io" text-anchor="middle">A</text>
+  <text x="332" y="156" class="io" text-anchor="middle">B</text>
+  <line x1="342" y1="128" x2="392" y2="128" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="342" y1="152" x2="392" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+  <circle cx="397" cy="128" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="397" cy="152" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="402" y1="128" x2="416" y2="128" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="402" y1="152" x2="416" y2="152" stroke="#9ca3af" stroke-width="1.4"/>
+  <path d="M 412 118 Q 438 124 464 140 Q 438 156 412 162 Q 426 140 412 118 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <line x1="464" y1="140" x2="506" y2="140" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="440" y="185" class="gate" text-anchor="middle">OR, inputs inverted</text>
+
+  <!-- the migrating bubble -->
+  <path d="M 190 130 Q 300 84 393 120" fill="none" stroke="#f59e0b" stroke-width="1.8"
+        stroke-dasharray="5,4" marker-end="url(#amb)"/>
+  <text x="300" y="76" class="push" text-anchor="middle">push the output bubble back -&gt; it splits onto the inputs, and the gate flips</text>
+
+  <!-- ============ ROW 2 : NOR  =  AND with inverted inputs ============ -->
+  <!-- LEFT: OR + output bubble = NOR -->
+  <text x="62" y="292" class="io" text-anchor="middle">A</text>
+  <text x="62" y="316" class="io" text-anchor="middle">B</text>
+  <line x1="72" y1="288" x2="134" y2="288" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="72" y1="312" x2="134" y2="312" stroke="#9ca3af" stroke-width="1.4"/>
+  <path d="M 130 278 Q 156 284 182 300 Q 156 316 130 322 Q 144 300 130 278 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <circle cx="187" cy="300" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="192" y1="300" x2="232" y2="300" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="156" y="345" class="gate" text-anchor="middle">NOR</text>
+
+  <text x="300" y="309" class="eq" text-anchor="middle">=</text>
+
+  <!-- RIGHT: AND with two input bubbles -->
+  <text x="332" y="292" class="io" text-anchor="middle">A</text>
+  <text x="332" y="316" class="io" text-anchor="middle">B</text>
+  <line x1="342" y1="288" x2="392" y2="288" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="342" y1="312" x2="392" y2="312" stroke="#9ca3af" stroke-width="1.4"/>
+  <circle cx="397" cy="288" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="397" cy="312" r="5" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="402" y1="288" x2="414" y2="288" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="402" y1="312" x2="414" y2="312" stroke="#9ca3af" stroke-width="1.4"/>
+  <path d="M 414 278 L 442 278 A 22 22 0 0 1 442 322 L 414 322 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <line x1="464" y1="300" x2="506" y2="300" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="440" y="345" class="gate" text-anchor="middle">AND, inputs inverted</text>
+
+  <text x="300" y="392" class="note" text-anchor="middle">same move, dual: NOR's output bubble pushes back -&gt; AND with inverted inputs (gate flips OR -&gt; AND)</text>
+
+  <!-- caption -->
+  <line x1="70" y1="420" x2="590" y2="420" stroke="#888" stroke-width="0.6" opacity="0.25"/>
+  <text x="330" y="443" class="cap" text-anchor="middle">A bubble on a gate's output can be pushed back onto its inputs, and the gate flips kind (AND &lt;-&gt; OR).</text>
+  <text x="330" y="461" class="cap" text-anchor="middle">NAND = OR of inverted inputs.   NOR = AND of inverted inputs.   That flip is exactly De Morgan.</text>
+</svg>

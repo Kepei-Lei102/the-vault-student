@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <!-- Background rectangle (universal set) -->
+  <rect x="10" y="10" width="480" height="380" rx="8" fill="none" stroke="#888" stroke-width="2"/>
+  <text x="25" y="35" font-family="serif" font-style="italic" font-size="18" fill="#888">ξ</text>
+
+  <!-- Circle A (top-left) -->
+  <circle cx="200" cy="175" r="110" fill="rgba(66,133,244,0.12)" stroke="#4285F4" stroke-width="2"/>
+  <text x="130" y="110" font-family="serif" font-style="italic" font-size="20" fill="#4285F4">A</text>
+
+  <!-- Circle B (top-right) -->
+  <circle cx="300" cy="175" r="110" fill="rgba(234,67,53,0.12)" stroke="#EA4335" stroke-width="2"/>
+  <text x="360" y="110" font-family="serif" font-style="italic" font-size="20" fill="#EA4335">B</text>
+
+  <!-- Circle C (bottom-center) -->
+  <circle cx="250" cy="265" r="110" fill="rgba(52,168,83,0.12)" stroke="#34A853" stroke-width="2"/>
+  <text x="245" y="370" font-family="serif" font-style="italic" font-size="20" fill="#34A853" text-anchor="middle">C</text>
+
+  <!-- Region labels (8 regions) -->
+  <!-- 1: A only -->
+  <text x="148" y="165" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">①</text>
+  <!-- 2: A ∩ B only -->
+  <text x="250" y="143" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">②</text>
+  <!-- 3: B only -->
+  <text x="352" y="165" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">③</text>
+  <!-- 4: A ∩ C only -->
+  <text x="193" y="250" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">④</text>
+  <!-- 5: A ∩ B ∩ C (centre) -->
+  <text x="250" y="218" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">⑤</text>
+  <!-- 6: B ∩ C only -->
+  <text x="307" y="250" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">⑥</text>
+  <!-- 7: C only -->
+  <text x="250" y="315" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">⑦</text>
+  <!-- 8: Outside -->
+  <text x="445" y="375" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">⑧</text>
+</svg>

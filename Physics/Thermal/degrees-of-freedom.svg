@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .note { font-size: 11px; opacity: 0.65; }
+    .big { font-size: 18px; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- divider -->
+  <line x1="340" y1="55" x2="340" y2="330" stroke="#888" stroke-width="1" stroke-dasharray="3,5" opacity="0.3"/>
+
+  <!-- ============ LEFT: monatomic ============ -->
+  <text x="175" y="30" class="title" text-anchor="middle">Monatomic gas — He</text>
+
+  <!-- translation arrows (drawn first, atom on top) -->
+  <line x1="175" y1="145" x2="244" y2="145" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="175" y1="145" x2="175" y2="78"  stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="175" y1="145" x2="123" y2="190" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+  <circle cx="175" cy="145" r="24" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="2"/>
+  <text x="252" y="149" class="math label" fill="#2563eb">x</text>
+  <text x="175" y="70"  class="math label" fill="#2563eb" text-anchor="middle">y</text>
+  <text x="112" y="200" class="math label" fill="#2563eb" text-anchor="end">z</text>
+
+  <text x="175" y="245" class="label" text-anchor="middle" fill="#2563eb">translation: 3 ways</text>
+  <text x="175" y="282" class="big math" text-anchor="middle">f = 3</text>
+  <text x="137" y="307" class="label math">C<tspan baseline-shift="sub" font-size="9">V</tspan> = 3/2 R</text>
+  <text x="175" y="328" class="note" text-anchor="middle">(a point has nothing to rotate or vibrate)</text>
+
+  <!-- ============ RIGHT: diatomic ============ -->
+  <text x="505" y="30" class="title" text-anchor="middle">Diatomic gas — N&#8322;, O&#8322;</text>
+  <text x="505" y="49" class="note" text-anchor="middle">(also translates 3 ways, like the atom on the left)</text>
+
+  <!-- molecule: bond + two atoms -->
+  <line x1="481" y1="140" x2="529" y2="140" stroke="#888" stroke-width="5"/>
+  <circle cx="481" cy="140" r="17" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="529" cy="140" r="17" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- rotation arc over the top -->
+  <path d="M 470 112 A 42 30 0 0 1 540 112" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#ap)"/>
+  <!-- rotation arc underneath (second axis) -->
+  <path d="M 540 168 A 42 30 0 0 1 470 168" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#ap)"/>
+
+  <text x="505" y="240" class="label" text-anchor="middle" fill="#7c3aed">rotation: 2 more ways</text>
+  <text x="505" y="277" class="big math" text-anchor="middle">f = 3 + 2 = 5</text>
+  <text x="467" y="302" class="label math">C<tspan baseline-shift="sub" font-size="9">V</tspan> = 5/2 R</text>
+  <text x="505" y="326" class="note" text-anchor="middle">(the bond can also stretch — but that vibration is frozen at room T)</text>
+
+  <!-- bottom caption -->
+  <text x="340" y="362" class="label" text-anchor="middle">Each degree of freedom stores &#189;kT of energy (equipartition) — more pockets, bigger heat capacity.</text>
+</svg>

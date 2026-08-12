@@ -1,0 +1,88 @@
+<svg width="100%" viewBox="0 0 760 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="pbiAmber" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="28" font-size="15" fill="#888" text-anchor="middle">the two pillars — and the two ways to lose one</text>
+
+  <!-- ============ ROW 1: both pillars ============ -->
+  <text x="40" y="62" font-size="13" fill="#888">1 · pushed, and each knocks the next: everything falls</text>
+
+  <!-- push arrow -->
+  <line x1="78" y1="98" x2="112" y2="112" stroke="#f59e0b" stroke-width="2.4" marker-end="url(#pbiAmber)"/>
+  <text x="80" y="90" font-size="11" fill="#f59e0b">base</text>
+
+  <!-- dominoes: fallen (green, rotated about bottom-right) then standing -->
+  <g stroke-width="2">
+    <rect x="120" y="114" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(74, 133, 166)"/>
+    <rect x="164" y="114" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(64, 177, 166)"/>
+    <rect x="208" y="114" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(50, 221, 166)"/>
+    <rect x="252" y="114" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(32, 265, 166)"/>
+    <rect x="296" y="114" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(12, 309, 166)"/>
+    <rect x="340" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="384" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="428" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="472" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="516" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="560" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="604" y="114" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+  </g>
+  <g font-size="10.5" fill="#888" text-anchor="middle">
+    <text x="126" y="184">P(1)</text><text x="170" y="184">P(2)</text>
+    <text x="214" y="184">P(3)</text><text x="258" y="184">P(4)</text>
+    <text x="302" y="184">P(5)</text><text x="500" y="184">…</text>
+    <text x="610" y="184">P(n)</text>
+  </g>
+  <text x="655" y="146" font-size="11" fill="#059669">all of them,</text>
+  <text x="655" y="160" font-size="11" fill="#059669">in time</text>
+
+  <!-- ============ ROW 2: no base case ============ -->
+  <text x="40" y="222" font-size="13" fill="#888">2 · a flawless relay, but nobody pushes: nothing ever falls</text>
+
+  <text x="106" y="264" font-size="11" fill="#888" text-anchor="end">(no push)</text>
+  <g stroke-width="2">
+    <rect x="120" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="164" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="208" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="252" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="296" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="340" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="384" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="428" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="472" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="516" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="560" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="604" y="274" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+  </g>
+  <text x="655" y="300" font-size="11" fill="#888">"n = n+1":</text>
+  <text x="655" y="314" font-size="11" fill="#888">perfect spacing,</text>
+  <text x="655" y="328" font-size="11" fill="#888">standing forever</text>
+
+  <!-- ============ ROW 3: one broken step ============ -->
+  <text x="40" y="382" font-size="13" fill="#888">3 · one broken relay: truth falls only up to the gap</text>
+
+  <line x1="78" y1="418" x2="112" y2="432" stroke="#f59e0b" stroke-width="2.4" marker-end="url(#pbiAmber)"/>
+  <text x="80" y="410" font-size="11" fill="#f59e0b">base</text>
+
+  <g stroke-width="2">
+    <rect x="120" y="434" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(74, 133, 486)"/>
+    <rect x="164" y="434" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(64, 177, 486)"/>
+    <rect x="208" y="434" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(52, 221, 486)"/>
+    <rect x="252" y="434" width="13" height="52" rx="2" fill="rgba(5,150,105,0.18)" stroke="#059669" transform="rotate(86, 265, 486)"/>
+    <!-- the gap, then the survivors -->
+    <rect x="382" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="426" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="470" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="514" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="558" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+    <rect x="602" y="434" width="13" height="52" rx="2" fill="none" stroke="#888"/>
+  </g>
+  <!-- the gap brace -->
+  <path d="M 322 492 L 322 497 L 376 497 L 376 492" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="349" y="478" font-size="10.5" fill="#dc2626" text-anchor="middle">the gap</text>
+  <text x="655" y="452" font-size="11" fill="#888">the step fails at</text>
+  <text x="655" y="466" font-size="11" fill="#888">one k — all beyond</text>
+  <text x="655" y="480" font-size="11" fill="#888">it stays unproven</text>
+</svg>

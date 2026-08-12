@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .panel { font-size: 14px; font-weight: 600; }
+    .gexpr { font-size: 12px; }
+    .pin { font-size: 11px; opacity: 0.85; }
+    .small { font-size: 11px; opacity: 0.75; }
+  </style>
+
+  <!-- A small NAND gate symbol we reuse via <use> -->
+  <defs>
+    <g id="nand-gate">
+      <path d="M -22 -18 L 0 -18 A 18 18 0 0 1 0 18 L -22 18 Z"
+            fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="1.8"/>
+      <circle cx="21" cy="0" r="3" fill="none" stroke="#888" stroke-width="1.8"/>
+    </g>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="26" class="title" text-anchor="middle">NAND is Universal — Build Any Gate from NAND Alone</text>
+  <text x="360" y="44" class="small" text-anchor="middle">Tying an input to itself flips it. Two NANDs make AND. Three NANDs (with De Morgan) make OR.</text>
+
+  <!-- ============================= -->
+  <!-- Panel 1: NOT from one NAND -->
+  <!-- ============================= -->
+  <text x="120" y="84" class="panel" text-anchor="middle">NOT from 1 NAND</text>
+  <text x="120" y="102" class="small" text-anchor="middle">tie both inputs together</text>
+
+  <g transform="translate(120 160)">
+    <!-- Input line splits to both NAND inputs -->
+    <line x1="-90" y1="0" x2="-55" y2="0" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Vertical fork -->
+    <line x1="-55" y1="-12" x2="-55" y2="12" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="-55" cy="0" r="2.5" fill="#2563eb"/>
+    <!-- Top input to NAND top pin -->
+    <line x1="-55" y1="-12" x2="-22" y2="-12" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Bottom input to NAND bottom pin -->
+    <line x1="-55" y1="12" x2="-22" y2="12" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- NAND -->
+    <use href="#nand-gate"/>
+    <!-- Output line -->
+    <line x1="24" y1="0" x2="65" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <!-- Labels -->
+    <text x="-95" y="3" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="70" y="3" class="math pin" fill="#059669">A̅</text>
+  </g>
+  <text x="120" y="220" class="math gexpr" text-anchor="middle">NAND(A, A) = A · A = A̅</text>
+
+  <!-- Divider -->
+  <line x1="240" y1="70" x2="240" y2="240" stroke="#888" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ============================= -->
+  <!-- Panel 2: AND from two NANDs -->
+  <!-- ============================= -->
+  <text x="370" y="84" class="panel" text-anchor="middle">AND from 2 NANDs</text>
+  <text x="370" y="102" class="small" text-anchor="middle">NAND, then NOT</text>
+
+  <g transform="translate(370 160)">
+    <!-- Two inputs -->
+    <line x1="-130" y1="-12" x2="-82" y2="-12" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-130" y1="12" x2="-82" y2="12" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- First NAND at (-60, 0) -->
+    <use href="#nand-gate" transform="translate(-60 0)"/>
+    <!-- Wire from first NAND output to fork -->
+    <line x1="-36" y1="0" x2="-5" y2="0" stroke="#888" stroke-width="1.5"/>
+    <!-- Fork to both inputs of second NAND -->
+    <line x1="-5" y1="-12" x2="-5" y2="12" stroke="#888" stroke-width="1.5"/>
+    <circle cx="-5" cy="0" r="2.5" fill="#888"/>
+    <line x1="-5" y1="-12" x2="28" y2="-12" stroke="#888" stroke-width="1.5"/>
+    <line x1="-5" y1="12" x2="28" y2="12" stroke="#888" stroke-width="1.5"/>
+    <!-- Second NAND at (50, 0) -->
+    <use href="#nand-gate" transform="translate(50 0)"/>
+    <!-- Output -->
+    <line x1="74" y1="0" x2="115" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <!-- Labels -->
+    <text x="-135" y="-9" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-135" y="15" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="120" y="3" class="math pin" fill="#059669">A · B</text>
+  </g>
+  <text x="370" y="220" class="math gexpr" text-anchor="middle">NAND(NAND(A, B), NAND(A, B)) = A · B</text>
+
+  <!-- Divider -->
+  <line x1="500" y1="70" x2="500" y2="240" stroke="#888" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ============================= -->
+  <!-- Panel 3 header only — OR drawing is the full bottom row -->
+  <!-- ============================= -->
+  <text x="610" y="84" class="panel" text-anchor="middle">OR from 3 NANDs</text>
+  <text x="610" y="102" class="small" text-anchor="middle">via De Morgan ↓</text>
+
+  <text x="610" y="160" class="math gexpr" text-anchor="middle">A + B</text>
+  <text x="610" y="180" class="math gexpr" text-anchor="middle">= A̅ · B̅</text>
+  <text x="610" y="200" class="math gexpr" text-anchor="middle">(De Morgan)</text>
+
+  <!-- ============================= -->
+  <!-- Bottom: full OR-from-3-NAND circuit -->
+  <!-- ============================= -->
+  <text x="360" y="282" class="panel" text-anchor="middle">OR from 3 NANDs — the full circuit</text>
+
+  <g transform="translate(360 370)">
+    <!-- Two inputs at far left -->
+    <!-- A line and split for top NAND -->
+    <line x1="-280" y1="-50" x2="-180" y2="-50" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Vertical fork for top NAND -->
+    <line x1="-180" y1="-62" x2="-180" y2="-38" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="-180" cy="-50" r="2.5" fill="#2563eb"/>
+    <line x1="-180" y1="-62" x2="-152" y2="-62" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-180" y1="-38" x2="-152" y2="-38" stroke="#2563eb" stroke-width="1.5"/>
+
+    <!-- B line and split for bottom NAND -->
+    <line x1="-280" y1="50" x2="-180" y2="50" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-180" y1="38" x2="-180" y2="62" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="-180" cy="50" r="2.5" fill="#2563eb"/>
+    <line x1="-180" y1="38" x2="-152" y2="38" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-180" y1="62" x2="-152" y2="62" stroke="#2563eb" stroke-width="1.5"/>
+
+    <!-- Top NAND (the NOT for A) at (-130, -50) -->
+    <use href="#nand-gate" transform="translate(-130 -50)"/>
+    <!-- Bottom NAND (the NOT for B) at (-130, 50) -->
+    <use href="#nand-gate" transform="translate(-130 50)"/>
+
+    <!-- Wires from those two NANDs to the third NAND's inputs -->
+    <line x1="-106" y1="-50" x2="-20" y2="-50" stroke="#888" stroke-width="1.5"/>
+    <line x1="-20" y1="-50" x2="-20" y2="-12" stroke="#888" stroke-width="1.5"/>
+    <line x1="-20" y1="-12" x2="18" y2="-12" stroke="#888" stroke-width="1.5"/>
+
+    <line x1="-106" y1="50" x2="-20" y2="50" stroke="#888" stroke-width="1.5"/>
+    <line x1="-20" y1="50" x2="-20" y2="12" stroke="#888" stroke-width="1.5"/>
+    <line x1="-20" y1="12" x2="18" y2="12" stroke="#888" stroke-width="1.5"/>
+
+    <!-- Third NAND (the OR's heart) at (40, 0) -->
+    <use href="#nand-gate" transform="translate(40 0)"/>
+
+    <!-- Output -->
+    <line x1="64" y1="0" x2="140" y2="0" stroke="#059669" stroke-width="1.5"/>
+
+    <!-- Labels -->
+    <text x="-285" y="-46" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-285" y="54" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+
+    <text x="-85" y="-58" class="small" text-anchor="middle">A̅</text>
+    <text x="-85" y="42" class="small" text-anchor="middle">B̅</text>
+
+    <text x="145" y="3" class="math pin" fill="#059669">A + B</text>
+  </g>
+
+  <text x="360" y="465" class="small" text-anchor="middle">
+    Two NANDs invert A and B (the "NOT trick"). The third NAND combines them. De Morgan does the rest.
+  </text>
+</svg>

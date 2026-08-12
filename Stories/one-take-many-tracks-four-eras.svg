@@ -1,0 +1,88 @@
+<svg width="100%" viewBox="0 0 960 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ============ Panel 1: WAX ============ -->
+  <rect x="8" y="30" width="215" height="230" rx="10" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="115" y="56" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">1902 &#183; WAX</text>
+  <text x="115" y="74" text-anchor="middle" font-size="12.5" fill="#888">write-once</text>
+  <circle cx="115" cy="142" r="48" fill="none" stroke="#dc2626" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="115" cy="142" r="38" fill="none" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/>
+  <circle cx="115" cy="142" r="28" fill="none" stroke="#dc2626" stroke-opacity="0.35" stroke-width="1.5"/>
+  <circle cx="115" cy="142" r="18" fill="none" stroke="#dc2626" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="115" cy="142" r="5" fill="rgba(220,38,38,0.25)" stroke="#dc2626" stroke-width="1"/>
+  <text x="115" y="214" text-anchor="middle" font-size="12" fill="#888">one room, one chance</text>
+  <text x="115" y="231" text-anchor="middle" font-size="12" fill="#888">a mistake = shave the wax,</text>
+  <text x="115" y="248" text-anchor="middle" font-size="12" fill="#888">perform it all again</text>
+
+  <!-- arrow 1 -->
+  <line x1="226" y1="145" x2="238" y2="145" stroke="#888" stroke-width="1.5"/>
+  <polygon points="244,145 236,141 236,149" fill="#888"/>
+
+  <!-- ============ Panel 2: TAPE ============ -->
+  <rect x="245" y="30" width="215" height="230" rx="10" fill="rgba(8,145,178,0.10)" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="352" y="56" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">1947 &#183; TAPE</text>
+  <text x="352" y="74" text-anchor="middle" font-size="12.5" fill="#888">sequential + splice</text>
+  <circle cx="303" cy="124" r="26" fill="none" stroke="#0891b2" stroke-width="2"/>
+  <circle cx="303" cy="124" r="7" fill="rgba(8,145,178,0.25)" stroke="#0891b2" stroke-width="1"/>
+  <circle cx="403" cy="124" r="26" fill="none" stroke="#0891b2" stroke-width="2"/>
+  <circle cx="403" cy="124" r="7" fill="rgba(8,145,178,0.25)" stroke="#0891b2" stroke-width="1"/>
+  <line x1="303" y1="158" x2="343" y2="158" stroke="#0891b2" stroke-width="3"/>
+  <line x1="363" y1="158" x2="403" y2="158" stroke="#0891b2" stroke-width="3"/>
+  <!-- the splice: two cut ends + amber joining tape -->
+  <line x1="343" y1="158" x2="349" y2="150" stroke="#0891b2" stroke-width="2"/>
+  <line x1="363" y1="158" x2="357" y2="150" stroke="#0891b2" stroke-width="2"/>
+  <rect x="345" y="153" width="16" height="10" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="353" y="184" text-anchor="middle" font-size="11" fill="#888">splice</text>
+  <text x="352" y="214" text-anchor="middle" font-size="12" fill="#888">the razor blade = first undo</text>
+  <text x="352" y="231" text-anchor="middle" font-size="12" fill="#888">cut, move, rejoin time</text>
+  <text x="352" y="248" text-anchor="middle" font-size="12" fill="#888">(but an edit is surgery)</text>
+
+  <!-- arrow 2 -->
+  <line x1="463" y1="145" x2="475" y2="145" stroke="#888" stroke-width="1.5"/>
+  <polygon points="481,145 473,141 473,149" fill="#888"/>
+
+  <!-- ============ Panel 3: MULTITRACK ============ -->
+  <rect x="482" y="30" width="215" height="230" rx="10" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="589" y="56" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">1957 &#183; MULTITRACK</text>
+  <text x="589" y="74" text-anchor="middle" font-size="12.5" fill="#888">parallel tracks</text>
+  <line x1="500" y1="96"  x2="679" y2="96"  stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="109" x2="679" y2="109" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="122" x2="679" y2="122" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="135" x2="679" y2="135" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="148" x2="679" y2="148" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="161" x2="679" y2="161" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="174" x2="679" y2="174" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <line x1="500" y1="187" x2="679" y2="187" stroke="#7c3aed" stroke-opacity="0.45" stroke-width="4"/>
+  <!-- punch-in on track 5 -->
+  <line x1="558" y1="148" x2="622" y2="148" stroke="#f59e0b" stroke-width="6"/>
+  <line x1="558" y1="141" x2="558" y2="155" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="622" y1="141" x2="622" y2="155" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="589" y="214" text-anchor="middle" font-size="12" fill="#888">8 parallel tracks, one tape</text>
+  <text x="589" y="231" text-anchor="middle" font-size="12" fill="#888">re-record one track alone;</text>
+  <text x="589" y="248" text-anchor="middle" font-size="12" fill="#888">nothing else moves</text>
+
+  <!-- arrow 3 -->
+  <line x1="700" y1="145" x2="712" y2="145" stroke="#888" stroke-width="1.5"/>
+  <polygon points="718,145 710,141 710,149" fill="#888"/>
+
+  <!-- ============ Panel 4: DIGITAL ============ -->
+  <rect x="719" y="30" width="215" height="230" rx="10" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/>
+  <text x="826" y="56" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">1991 &#183; DIGITAL</text>
+  <text x="826" y="74" text-anchor="middle" font-size="12.5" fill="#888">random access</text>
+  <!-- lanes of regions (pointer blocks) -->
+  <rect x="737" y="96"  width="52" height="15" rx="3" fill="rgba(37,99,235,0.20)"  stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="797" y="96"  width="80" height="15" rx="3" fill="rgba(37,99,235,0.20)"  stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="753" y="122" width="90" height="15" rx="3" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="851" y="122" width="52" height="15" rx="3" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="737" y="148" width="64" height="15" rx="3" fill="rgba(8,145,178,0.20)"  stroke="#0891b2" stroke-width="1.5"/>
+  <rect x="815" y="148" width="48" height="15" rx="3" fill="rgba(8,145,178,0.20)"  stroke="#0891b2" stroke-width="1.5"/>
+  <rect x="769" y="174" width="106" height="15" rx="3" fill="rgba(245,158,11,0.20)" stroke="#f59e0b" stroke-width="1.5"/>
+  <!-- playhead -->
+  <line x1="833" y1="90" x2="833" y2="195" stroke="#059669" stroke-width="2"/>
+  <polygon points="833,90 828,83 838,83" fill="#059669"/>
+  <text x="826" y="214" text-anchor="middle" font-size="12" fill="#888">regions = pointers into files</text>
+  <text x="826" y="231" text-anchor="middle" font-size="12" fill="#888">every edit reversible;</text>
+  <text x="826" y="248" text-anchor="middle" font-size="12" fill="#888">no take is ever final</text>
+
+  <!-- ============ Thesis line ============ -->
+  <text x="480" y="298" text-anchor="middle" font-size="14.5" font-style="italic" fill="#888">the history of recording = the history of gaining random access to time</text>
+</svg>

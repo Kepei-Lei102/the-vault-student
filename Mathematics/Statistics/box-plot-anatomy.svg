@@ -1,0 +1,104 @@
+<svg width="100%" viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <text x="280" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#888">Box Plot — Anatomy and Comparison</text>
+
+  <!-- === PANEL 1: Labeled anatomy (top) === -->
+  <text x="280" y="32" text-anchor="middle" font-size="10" fill="#888" opacity="0.6">Class A — Test Scores</text>
+  <line x1="50" y1="120" x2="530" y2="120" stroke="#888" stroke-width="1"/>
+  <line x1="50" y1="120" x2="50" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="50" y="137" text-anchor="middle" font-size="9" fill="#888">20</text>
+  <line x1="110" y1="120" x2="110" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="110" y="137" text-anchor="middle" font-size="9" fill="#888">30</text>
+  <line x1="170" y1="120" x2="170" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="170" y="137" text-anchor="middle" font-size="9" fill="#888">40</text>
+  <line x1="230" y1="120" x2="230" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="230" y="137" text-anchor="middle" font-size="9" fill="#888">50</text>
+  <line x1="290" y1="120" x2="290" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="290" y="137" text-anchor="middle" font-size="9" fill="#888">60</text>
+  <line x1="350" y1="120" x2="350" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="350" y="137" text-anchor="middle" font-size="9" fill="#888">70</text>
+  <line x1="410" y1="120" x2="410" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="410" y="137" text-anchor="middle" font-size="9" fill="#888">80</text>
+  <line x1="470" y1="120" x2="470" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="470" y="137" text-anchor="middle" font-size="9" fill="#888">90</text>
+  <line x1="530" y1="120" x2="530" y2="126" stroke="#888" stroke-width="1"/>
+  <text x="530" y="137" text-anchor="middle" font-size="9" fill="#888">100</text>
+  <text x="280" y="152" text-anchor="middle" font-size="10" fill="#888">Score</text>
+  <line x1="158" y1="90" x2="278" y2="90" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="374" y1="90" x2="458" y2="90" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="158" y1="82" x2="158" y2="98" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="458" y1="82" x2="458" y2="98" stroke="#2196F3" stroke-width="1.5"/>
+  <rect x="278" y="76" width="96" height="28" fill="#2196F3" fill-opacity="0.2" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="326" y1="76" x2="326" y2="104" stroke="#2196F3" stroke-width="2.5"/>
+  <circle cx="80" cy="90" r="4" fill="none" stroke="#F44336" stroke-width="1.5"/>
+  <line x1="80" y1="76" x2="80" y2="65" stroke="#F44336" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="80" y="62" text-anchor="middle" font-size="8" fill="#F44336" font-weight="bold">Outlier (25)</text>
+  <line x1="158" y1="104" x2="158" y2="109" stroke="#2196F3" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="158" y="118" text-anchor="middle" font-size="8" fill="#2196F3" font-weight="bold">Min*</text>
+  <line x1="278" y1="76" x2="278" y2="65" stroke="#2196F3" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="278" y="62" text-anchor="middle" font-size="8" fill="#2196F3" font-weight="bold">Q₁ (58)</text>
+  <line x1="326" y1="104" x2="326" y2="109" stroke="#2196F3" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="326" y="118" text-anchor="middle" font-size="8" fill="#2196F3" font-weight="bold">Median (66)</text>
+  <line x1="374" y1="76" x2="374" y2="65" stroke="#2196F3" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="374" y="62" text-anchor="middle" font-size="8" fill="#2196F3" font-weight="bold">Q₃ (74)</text>
+  <line x1="458" y1="104" x2="458" y2="109" stroke="#2196F3" stroke-width="0.7" stroke-dasharray="2,2"/>
+  <text x="458" y="118" text-anchor="middle" font-size="8" fill="#2196F3" font-weight="bold">Max (88)</text>
+  <text x="158" y="127" text-anchor="middle" font-size="7" fill="#2196F3" opacity="0.7">*lowest non-outlier</text>
+  <line x1="278" y1="50" x2="374" y2="50" stroke="#9C27B0" stroke-width="1"/>
+  <line x1="278" y1="53" x2="278" y2="47" stroke="#9C27B0" stroke-width="1"/>
+  <line x1="374" y1="53" x2="374" y2="47" stroke="#9C27B0" stroke-width="1"/>
+  <text x="326.0" y="45" text-anchor="middle" font-size="8" fill="#9C27B0">IQR = 74 − 58 = 16</text>
+  <text x="80" y="50" text-anchor="middle" font-size="7" fill="#F44336">25 &lt; fence (34)</text>
+  <text x="218.0" y="136" text-anchor="middle" font-size="7" fill="#888" opacity="0.4">whisker</text>
+  <text x="416.0" y="136" text-anchor="middle" font-size="7" fill="#888" opacity="0.4">whisker</text>
+  <text x="326.0" y="136" text-anchor="middle" font-size="7" fill="#888" opacity="0.4">box (middle 50%)</text>
+
+  <!-- === PANEL 2: Comparison === -->
+  <text x="280" y="182" text-anchor="middle" font-size="10" fill="#888" opacity="0.6">Comparing Two Classes</text>
+  <line x1="50" y1="290" x2="530" y2="290" stroke="#888" stroke-width="1"/>
+  <line x1="50" y1="290" x2="50" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="50" y="307" text-anchor="middle" font-size="9" fill="#888">20</text>
+  <line x1="110" y1="290" x2="110" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="110" y="307" text-anchor="middle" font-size="9" fill="#888">30</text>
+  <line x1="170" y1="290" x2="170" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="170" y="307" text-anchor="middle" font-size="9" fill="#888">40</text>
+  <line x1="230" y1="290" x2="230" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="230" y="307" text-anchor="middle" font-size="9" fill="#888">50</text>
+  <line x1="290" y1="290" x2="290" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="290" y="307" text-anchor="middle" font-size="9" fill="#888">60</text>
+  <line x1="350" y1="290" x2="350" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="350" y="307" text-anchor="middle" font-size="9" fill="#888">70</text>
+  <line x1="410" y1="290" x2="410" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="410" y="307" text-anchor="middle" font-size="9" fill="#888">80</text>
+  <line x1="470" y1="290" x2="470" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="470" y="307" text-anchor="middle" font-size="9" fill="#888">90</text>
+  <line x1="530" y1="290" x2="530" y2="296" stroke="#888" stroke-width="1"/>
+  <text x="530" y="307" text-anchor="middle" font-size="9" fill="#888">100</text>
+  <text x="280" y="322" text-anchor="middle" font-size="10" fill="#888">Score</text>
+  <g stroke="#888" stroke-width="0.3" opacity="0.15">
+    <line x1="50" y1="195" x2="50" y2="290"/>
+    <line x1="110" y1="195" x2="110" y2="290"/>
+    <line x1="170" y1="195" x2="170" y2="290"/>
+    <line x1="230" y1="195" x2="230" y2="290"/>
+    <line x1="290" y1="195" x2="290" y2="290"/>
+    <line x1="350" y1="195" x2="350" y2="290"/>
+    <line x1="410" y1="195" x2="410" y2="290"/>
+    <line x1="470" y1="195" x2="470" y2="290"/>
+    <line x1="530" y1="195" x2="530" y2="290"/>
+  </g>
+  <line x1="158" y1="220" x2="278" y2="220" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="374" y1="220" x2="458" y2="220" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="158" y1="212" x2="158" y2="228" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="458" y1="212" x2="458" y2="228" stroke="#2196F3" stroke-width="1.5"/>
+  <rect x="278" y="208" width="96" height="24" fill="#2196F3" fill-opacity="0.2" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="326" y1="208" x2="326" y2="232" stroke="#2196F3" stroke-width="2.5"/>
+  <circle cx="80" cy="220" r="3.5" fill="none" stroke="#F44336" stroke-width="1.2"/>
+  <text x="38" y="224" text-anchor="end" font-size="9" fill="#2196F3" font-weight="bold">A</text>
+  <line x1="200" y1="260" x2="266" y2="260" stroke="#FF9800" stroke-width="1.5"/>
+  <line x1="368" y1="260" x2="440" y2="260" stroke="#FF9800" stroke-width="1.5"/>
+  <line x1="200" y1="252" x2="200" y2="268" stroke="#FF9800" stroke-width="1.5"/>
+  <line x1="440" y1="252" x2="440" y2="268" stroke="#FF9800" stroke-width="1.5"/>
+  <rect x="266" y="248" width="102" height="24" fill="#FF9800" fill-opacity="0.2" stroke="#FF9800" stroke-width="1.5"/>
+  <line x1="320" y1="248" x2="320" y2="272" stroke="#FF9800" stroke-width="2.5"/>
+  <text x="38" y="264" text-anchor="end" font-size="9" fill="#FF9800" font-weight="bold">B</text>
+  <text x="280" y="336" text-anchor="middle" font-size="8" fill="#888" opacity="0.5">Similar medians, but A has wider IQR (less consistent) and an outlier. B is more tightly grouped.</text>
+</svg>

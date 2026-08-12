@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">
+  <!-- ========== LEFT: 45-45-90 ========== -->
+  <!-- Vertices: A=(60,280), B=(260,280), C=(260,80). Legs=200, hyp=200√2 -->
+  <polygon points="60,280 260,280 260,80" fill="rgba(120,200,150,0.15)" stroke="#888" stroke-width="2"/>
+  <!-- Right angle -->
+  <polyline points="245,280 245,265 260,265" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Angle arcs -->
+  <path d="M 95 280 A 35 35 0 0 0 87.5 255.3" fill="none" stroke="#c06" stroke-width="1.8"/>
+  <text x="100" y="272" fill="#c06" font-size="14">45°</text>
+
+  <path d="M 260 115 A 35 35 0 0 0 235.3 107.5" fill="none" stroke="#c06" stroke-width="1.8"/>
+  <text x="225" y="125" fill="#c06" font-size="14" text-anchor="end">45°</text>
+
+  <!-- Side labels -->
+  <text x="160" y="302" fill="#888" text-anchor="middle">1</text>
+  <text x="275" y="185" fill="#888">1</text>
+  <text x="135" y="165" fill="#888" transform="rotate(-45 135 165)">√2</text>
+
+  <text x="160" y="330" fill="#888" font-size="14" text-anchor="middle" font-weight="600">45°–45°–90°</text>
+
+  <!-- ========== RIGHT: 30-60-90 ========== -->
+  <!-- Vertices: A=(360,280) has 60°, B=(560,280) right, C=(560,80) has 30° -->
+  <!-- opposite 60° (BC) = √3, opposite 30° (AB) = 1, hyp (AC) = 2 -->
+  <!-- Scale legs: BC=200 (the √3 side), so AB = 200/√3 ≈ 115.47 -->
+  <!-- Better: set AB = 115 (short leg, opposite 30°), BC = 115*√3 ≈ 199, hyp = 230 -->
+  <!-- Use: A=(360,280), B=(475,280), C=(475,81). Legs: 115 horizontal, 199 vertical -->
+  <polygon points="360,280 475,280 475,81" fill="rgba(220,150,200,0.15)" stroke="#888" stroke-width="2"/>
+  <!-- Right angle -->
+  <polyline points="460,280 460,265 475,265" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- 60° at A -->
+  <path d="M 395 280 A 35 35 0 0 0 377.5 249.7" fill="none" stroke="#c06" stroke-width="1.8"/>
+  <text x="400" y="272" fill="#c06" font-size="14">60°</text>
+
+  <!-- 30° at C -->
+  <path d="M 475 116 A 35 35 0 0 0 444.7 133.5" fill="none" stroke="#c06" stroke-width="1.8"/>
+  <text x="440" y="128" fill="#c06" font-size="14" text-anchor="end">30°</text>
+
+  <!-- Labels -->
+  <text x="417" y="302" fill="#888" text-anchor="middle">1</text>
+  <text x="490" y="185" fill="#888">√3</text>
+  <text x="395" y="170" fill="#888" transform="rotate(-60 395 170)">2</text>
+
+  <text x="418" y="330" fill="#888" font-size="14" text-anchor="middle" font-weight="600">30°–60°–90°</text>
+</svg>

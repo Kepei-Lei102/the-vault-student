@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Argand diagram: z = 3+4i with modulus, argument, conjugate (left panel)
+     + multiplication by i as 90° rotation (right panel) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="100%">
+  <style>
+    text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #888; font-size: 14px; }
+    .math { font-style: italic; }
+    .axis-label { font-size: 13px; fill: #888; }
+    .tick-label { font-size: 11px; fill: #888; opacity: 0.85; }
+    .panel-title { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 13px; fill: #888; opacity: 0.9; }
+    .blue { fill: #2563eb; }
+    .blue-stroke { stroke: #2563eb; }
+    .purple { fill: #7c3aed; }
+    .purple-stroke { stroke: #7c3aed; }
+    .green { fill: #059669; }
+    .amber { fill: #f59e0b; }
+    .amber-stroke { stroke: #f59e0b; }
+    .red { fill: #dc2626; }
+    .red-stroke { stroke: #dc2626; }
+    .strong { font-weight: 600; }
+  </style>
+
+  <defs>
+    <marker id="arrow888" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrowblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ========================================================== -->
+  <!-- LEFT PANEL — Argand diagram with z = 3 + 4i                 -->
+  <!-- ========================================================== -->
+  <g transform="translate(0, 0)">
+    <text x="250" y="25" text-anchor="middle" class="panel-title math strong">Argand diagram:  z = 3 + 4i</text>
+
+    <!-- Real axis (horizontal) -->
+    <line x1="40" y1="320" x2="500" y2="320" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="495" y="345" class="axis-label" text-anchor="end">Real axis (Re)</text>
+
+    <!-- Imaginary axis (vertical) -->
+    <line x1="160" y1="540" x2="160" y2="40" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="175" y="50" class="axis-label">Imaginary axis (Im)</text>
+
+    <!-- Tick marks on real axis: -1, 1, 2, 3, 4, 5  (origin at x=160, scale = 50 px/unit) -->
+    <g stroke="#888" stroke-width="1" opacity="0.5">
+      <line x1="110" y1="316" x2="110" y2="324"/>
+      <line x1="210" y1="316" x2="210" y2="324"/>
+      <line x1="260" y1="316" x2="260" y2="324"/>
+      <line x1="310" y1="316" x2="310" y2="324"/>
+      <line x1="360" y1="316" x2="360" y2="324"/>
+      <line x1="410" y1="316" x2="410" y2="324"/>
+      <line x1="460" y1="316" x2="460" y2="324"/>
+    </g>
+    <text x="110" y="338" class="tick-label" text-anchor="middle">−1</text>
+    <text x="210" y="338" class="tick-label" text-anchor="middle">1</text>
+    <text x="260" y="338" class="tick-label" text-anchor="middle">2</text>
+    <text x="310" y="338" class="tick-label" text-anchor="middle">3</text>
+    <text x="360" y="338" class="tick-label" text-anchor="middle">4</text>
+    <text x="410" y="338" class="tick-label" text-anchor="middle">5</text>
+
+    <!-- Tick marks on imaginary axis: -4, -3, -2, -1, 1, 2, 3, 4  (origin at y=320, scale = 50 px/unit) -->
+    <g stroke="#888" stroke-width="1" opacity="0.5">
+      <line x1="156" y1="120" x2="164" y2="120"/>
+      <line x1="156" y1="170" x2="164" y2="170"/>
+      <line x1="156" y1="220" x2="164" y2="220"/>
+      <line x1="156" y1="270" x2="164" y2="270"/>
+      <line x1="156" y1="370" x2="164" y2="370"/>
+      <line x1="156" y1="420" x2="164" y2="420"/>
+      <line x1="156" y1="470" x2="164" y2="470"/>
+      <line x1="156" y1="520" x2="164" y2="520"/>
+    </g>
+    <text x="148" y="124" class="tick-label" text-anchor="end">4i</text>
+    <text x="148" y="174" class="tick-label" text-anchor="end">3i</text>
+    <text x="148" y="224" class="tick-label" text-anchor="end">2i</text>
+    <text x="148" y="274" class="tick-label" text-anchor="end">i</text>
+    <text x="148" y="374" class="tick-label" text-anchor="end">−i</text>
+    <text x="148" y="424" class="tick-label" text-anchor="end">−2i</text>
+    <text x="148" y="474" class="tick-label" text-anchor="end">−3i</text>
+    <text x="148" y="524" class="tick-label" text-anchor="end">−4i</text>
+
+    <!-- Origin label -->
+    <text x="148" y="338" class="tick-label" text-anchor="end">0</text>
+
+    <!-- Argument arc (angle from positive real axis to z-vector) -->
+    <!-- Centred at origin (160, 320), radius 40, from angle 0 to angle arctan(4/3) ≈ 53.13°
+         End point: 160 + 40*cos(53.13°) = 160 + 24 = 184; 320 - 40*sin(53.13°) = 320 - 32 = 288 -->
+    <path d="M 200 320 A 40 40 0 0 0 184 288" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="218" y="305" class="amber strong" font-size="13px">θ</text>
+
+    <!-- Dashed dropdown lines: real component + imaginary component -->
+    <line x1="310" y1="320" x2="310" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3" opacity="0.55"/>
+    <line x1="160" y1="120" x2="310" y2="120" stroke="#888" stroke-width="1" stroke-dasharray="4,3" opacity="0.55"/>
+
+    <!-- Component labels along the dropdown lines -->
+    <text x="240" y="115" class="tick-label" text-anchor="middle">Re(z) = 3</text>
+    <text x="320" y="225" class="tick-label">Im(z) = 4</text>
+
+    <!-- z-vector from origin to (3, 4i) -->
+    <line x1="160" y1="320" x2="305" y2="125" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowblue)"/>
+
+    <!-- z-point dot -->
+    <circle cx="310" cy="120" r="5" fill="#2563eb"/>
+
+    <!-- z label, slightly above-right of point -->
+    <text x="320" y="113" class="math blue strong" font-size="16px">z = 3 + 4i</text>
+
+    <!-- Modulus label along the vector (midpoint of vector) -->
+    <text x="220" y="230" class="amber strong" font-size="13px" transform="rotate(-53.13 220 230)">|z| = 5</text>
+
+    <!-- Conjugate point z-bar = 3 - 4i, reflected across real axis -->
+    <circle cx="310" cy="520" r="5" class="purple" opacity="0.85"/>
+    <text x="320" y="528" class="math purple strong" font-size="14px">z̄ = 3 − 4i</text>
+
+    <!-- Light dashed line between z and z-bar to emphasise reflection -->
+    <line x1="310" y1="120" x2="310" y2="520" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+    <text x="320" y="328" class="purple tick-label" font-size="11px" opacity="0.85">reflection across real axis</text>
+  </g>
+
+  <!-- ========================================================== -->
+  <!-- RIGHT PANEL — Multiplication by i is 90° rotation           -->
+  <!-- ========================================================== -->
+  <g transform="translate(560, 0)">
+    <text x="240" y="25" text-anchor="middle" class="panel-title math">Multiplication by  i  rotates by 90°</text>
+
+    <!-- Real axis -->
+    <line x1="40" y1="280" x2="460" y2="280" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="455" y="305" class="axis-label" text-anchor="end">Re</text>
+
+    <!-- Imaginary axis -->
+    <line x1="240" y1="500" x2="240" y2="50" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="252" y="62" class="axis-label">Im</text>
+
+    <!-- Unit circle (centre 240, 280; radius 130) -->
+    <circle cx="240" cy="280" r="130" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Four cardinal points on unit circle: 1, i, -1, -i -->
+    <!-- 1 at (370, 280) -->
+    <circle cx="370" cy="280" r="6" fill="#2563eb"/>
+    <text x="378" y="298" class="math blue strong" font-size="16px">1</text>
+
+    <!-- i at (240, 150) -->
+    <circle cx="240" cy="150" r="6" fill="#7c3aed"/>
+    <text x="252" y="143" class="math purple strong" font-size="16px">i</text>
+
+    <!-- -1 at (110, 280) -->
+    <circle cx="110" cy="280" r="6" fill="#059669"/>
+    <text x="80" y="298" class="math green strong" font-size="16px">−1</text>
+
+    <!-- -i at (240, 410) -->
+    <circle cx="240" cy="410" r="6" fill="#dc2626"/>
+    <text x="252" y="424" class="math red strong" font-size="16px">−i</text>
+
+    <!-- Curved arrows showing the 90° rotation: 1 → i → -1 → -i → 1 -->
+    <!-- Each arc spans 90° on the unit circle, using path arc command -->
+    <!-- Arc 1 → i:  from (370, 280) to (240, 150) — sweeping counter-clockwise (sweep-flag = 0) -->
+    <path d="M 360 275 A 120 120 0 0 0 245 160" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowamber)"/>
+    <!-- Arc i → -1 -->
+    <path d="M 235 160 A 120 120 0 0 0 120 275" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowamber)"/>
+    <!-- Arc -1 → -i -->
+    <path d="M 120 285 A 120 120 0 0 0 235 400" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowamber)"/>
+    <!-- Arc -i → 1 -->
+    <path d="M 245 400 A 120 120 0 0 0 360 285" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowamber)"/>
+
+    <!-- "× i" labels at the arc midpoints (each arc midpoint is at 45° from the start, on a circle slightly outside the original) -->
+    <!-- Arc 1 → i  midpoint: angle 45°, radius 145 from origin -->
+    <text x="350" y="190" class="amber strong" font-size="13px" text-anchor="middle">× i</text>
+    <text x="130" y="190" class="amber strong" font-size="13px" text-anchor="middle">× i</text>
+    <text x="130" y="380" class="amber strong" font-size="13px" text-anchor="middle">× i</text>
+    <text x="350" y="380" class="amber strong" font-size="13px" text-anchor="middle">× i</text>
+
+    <!-- Caption summarising the cycle -->
+    <text x="240" y="540" text-anchor="middle" class="panel-title math" font-size="12px">Four 90° rotations: 1 → i → −1 → −i → 1.   So  i² = −1  ✓</text>
+  </g>
+</svg>

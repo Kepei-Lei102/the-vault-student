@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 14.5px; font-weight: 600; }
+    .reg   { font-size: 14px; font-weight: 600; }
+    .small { font-size: 12px; }
+    .note  { font-size: 11.5px; opacity: 0.8; }
+  </style>
+
+  <!-- divider -->
+  <line x1="360" y1="50" x2="360" y2="430" stroke="#888" stroke-width="1" stroke-dasharray="4,5" opacity="0.5"/>
+
+  <!-- ===================== LEFT: P != NP ===================== -->
+  <text x="180" y="28" class="title" text-anchor="middle">If P &#8800; NP  &#8212;  the believed world</text>
+
+  <!-- NP-hard (upper) -->
+  <ellipse cx="180" cy="150" rx="140" ry="92" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="2"/>
+  <!-- NP (lower) -->
+  <ellipse cx="180" cy="278" rx="150" ry="122" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="2"/>
+  <!-- NP-complete (in the overlap) -->
+  <ellipse cx="180" cy="200" rx="90" ry="33" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+  <!-- P (inside NP, lower) -->
+  <ellipse cx="180" cy="332" rx="84" ry="46" fill="rgba(5,150,105,0.20)" stroke="#059669" stroke-width="2"/>
+
+  <text x="180" y="108" class="reg" text-anchor="middle" fill="#dc2626">NP-hard</text>
+  <text x="180" y="205" class="small" text-anchor="middle" fill="#7c3aed">NP-complete</text>
+  <text x="180" y="338" class="reg" text-anchor="middle" fill="#059669">P</text>
+  <text x="180" y="262" class="small" text-anchor="middle" fill="#2563eb">NP-intermediate</text>
+  <text x="64" y="300" class="reg" text-anchor="middle" fill="#2563eb">NP</text>
+
+  <!-- ===================== RIGHT: P = NP ===================== -->
+  <text x="540" y="28" class="title" text-anchor="middle">If P = NP  &#8212;  the collapse</text>
+
+  <!-- NP-hard (upper) -->
+  <ellipse cx="540" cy="150" rx="140" ry="92" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="2"/>
+  <!-- merged P = NP = NP-complete -->
+  <ellipse cx="540" cy="290" rx="150" ry="115" fill="rgba(5,150,105,0.16)" stroke="#059669" stroke-width="2.4"/>
+
+  <text x="540" y="108" class="reg" text-anchor="middle" fill="#dc2626">NP-hard</text>
+  <text x="540" y="296" class="reg" text-anchor="middle" fill="#059669">P = NP</text>
+  <text x="540" y="318" class="small" text-anchor="middle" fill="#7c3aed">= NP-complete</text>
+  <text x="540" y="392" class="note" text-anchor="middle">every checkable problem is now solvable</text>
+</svg>

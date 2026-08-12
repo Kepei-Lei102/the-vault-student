@@ -1,0 +1,52 @@
+<svg width="100%" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <!-- Background transparent for theme compatibility -->
+
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Favourite Sport — Bar Chart</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="290" x2="460" y2="290" stroke="#888" stroke-width="1.5"/>
+  <line x1="80" y1="290" x2="80" y2="40" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Y-axis labels and gridlines -->
+  <text x="70" y="294" text-anchor="end" font-size="11" fill="#888">0</text>
+
+  <line x1="80" y1="240" x2="460" y2="240" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <text x="70" y="244" text-anchor="end" font-size="11" fill="#888">5</text>
+
+  <line x1="80" y1="190" x2="460" y2="190" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <text x="70" y="194" text-anchor="end" font-size="11" fill="#888">10</text>
+
+  <line x1="80" y1="140" x2="460" y2="140" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <text x="70" y="144" text-anchor="end" font-size="11" fill="#888">15</text>
+
+  <line x1="80" y1="90" x2="460" y2="90" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <text x="70" y="94" text-anchor="end" font-size="11" fill="#888">20</text>
+
+  <!-- Y-axis title -->
+  <text x="20" y="170" text-anchor="middle" font-size="12" fill="#888" transform="rotate(-90, 20, 170)">Frequency</text>
+
+  <!-- Bars with gaps (discrete/categorical data) -->
+  <!-- Football: 20 students, height = 200px -->
+  <rect x="105" y="90" width="60" height="200" fill="none" stroke="#2196F3" stroke-width="2" rx="1"/>
+  <rect x="105" y="90" width="60" height="200" fill="#2196F3" opacity="0.25" rx="1"/>
+  <text x="135" y="308" text-anchor="middle" font-size="11" fill="#888">Football</text>
+
+  <!-- Tennis: 15 students, height = 150px -->
+  <rect x="195" y="140" width="60" height="150" fill="none" stroke="#4CAF50" stroke-width="2" rx="1"/>
+  <rect x="195" y="140" width="60" height="150" fill="#4CAF50" opacity="0.25" rx="1"/>
+  <text x="225" y="308" text-anchor="middle" font-size="11" fill="#888">Tennis</text>
+
+  <!-- Swimming: 10 students, height = 100px -->
+  <rect x="285" y="190" width="60" height="100" fill="none" stroke="#FF9800" stroke-width="2" rx="1"/>
+  <rect x="285" y="190" width="60" height="100" fill="#FF9800" opacity="0.25" rx="1"/>
+  <text x="315" y="308" text-anchor="middle" font-size="11" fill="#888">Swimming</text>
+
+  <!-- Basketball: 15 students, height = 150px -->
+  <rect x="375" y="140" width="60" height="150" fill="none" stroke="#9C27B0" stroke-width="2" rx="1"/>
+  <rect x="375" y="140" width="60" height="150" fill="#9C27B0" opacity="0.25" rx="1"/>
+  <text x="405" y="308" text-anchor="middle" font-size="11" fill="#888">Basketball</text>
+
+  <!-- Annotation: gaps between bars -->
+  <text x="250" y="335" text-anchor="middle" font-size="10" fill="#888" opacity="0.6">Gaps between bars → categorical / discrete data</text>
+</svg>

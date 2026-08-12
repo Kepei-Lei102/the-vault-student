@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#888">One wash cycle, as the machine sees it</text>
+
+  <!-- the ring -->
+  <circle cx="380" cy="220" r="160" fill="none" stroke="rgba(136,136,136,0.35)" stroke-width="1.6" stroke-dasharray="5 5"/>
+
+  <!-- clockwise flow arrowheads on the ring -->
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(449,76) rotate(25.7)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(536,184) rotate(77.1)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(505,320) rotate(128.6)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(380,398) rotate(180)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(255,320) rotate(231.4)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(224,184) rotate(283)"/>
+  <path d="M-6,-4 L6,0 L-6,4 z" fill="#888" transform="translate(310,76) rotate(-25.7)"/>
+
+  <!-- the circulating pulse (invisible in static renders) -->
+  <circle r="6" fill="#f59e0b" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.3s" fill="freeze"/>
+    <animateMotion dur="14s" repeatCount="indefinite" path="M 380,60 A 160,160 0 1 1 379.9,60"/>
+  </circle>
+
+  <!-- centre: the MCU -->
+  <rect x="305" y="193" width="150" height="54" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">MCU</text>
+  <text x="380" y="233" text-anchor="middle" font-size="10" fill="#888">one program, forever</text>
+
+  <!-- 1 LOCK (380,60) -->
+  <rect x="321" y="32" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="380" y="49" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">1 · LOCK</text>
+  <text x="380" y="64" text-anchor="middle" font-size="9" fill="#059669">latch solenoid</text>
+  <text x="380" y="79" text-anchor="middle" font-size="9" fill="#2563eb">door switch confirms</text>
+
+  <!-- 2 FILL (505,121) -->
+  <rect x="446" y="93" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="505" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">2 · FILL</text>
+  <text x="505" y="125" text-anchor="middle" font-size="9" fill="#059669">water valve open</text>
+  <text x="505" y="140" text-anchor="middle" font-size="9" fill="#2563eb">level sensor watches</text>
+
+  <!-- 3 HEAT (536,256) -->
+  <rect x="477" y="228" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="536" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">3 · HEAT</text>
+  <text x="536" y="260" text-anchor="middle" font-size="9" fill="#059669">heater on</text>
+  <text x="536" y="275" text-anchor="middle" font-size="9" fill="#2563eb">temp sensor, in a band</text>
+
+  <!-- 4 WASH (449,364) -->
+  <rect x="390" y="336" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="449" y="353" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">4 · WASH</text>
+  <text x="449" y="368" text-anchor="middle" font-size="9" fill="#059669">motor tumbles</text>
+  <text x="449" y="383" text-anchor="middle" font-size="9" fill="#888">timer paces the pattern</text>
+
+  <!-- 5 DRAIN (311,364) -->
+  <rect x="252" y="336" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="311" y="353" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">5 · DRAIN</text>
+  <text x="311" y="368" text-anchor="middle" font-size="9" fill="#059669">pump out</text>
+  <text x="311" y="383" text-anchor="middle" font-size="9" fill="#2563eb">level sensor confirms</text>
+
+  <!-- 6 SPIN (224,256) -->
+  <rect x="165" y="228" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="224" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">6 · SPIN</text>
+  <text x="224" y="260" text-anchor="middle" font-size="9" fill="#059669">motor, full speed</text>
+  <text x="224" y="275" text-anchor="middle" font-size="9" fill="#2563eb">interlock: door still locked?</text>
+
+  <!-- 7 BEEP (255,121) -->
+  <rect x="196" y="93" width="118" height="56" rx="7" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1.3"/>
+  <text x="255" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">7 · BEEP</text>
+  <text x="255" y="125" text-anchor="middle" font-size="9" fill="#059669">buzzer</text>
+  <text x="255" y="140" text-anchor="middle" font-size="9" fill="#888">the one output for a human</text>
+
+  <!-- caption -->
+  <text x="380" y="432" text-anchor="middle" font-size="12" fill="#888">Every stage is the same grammar: compare a sensor reading with a stored value, throw an actuator,</text>
+  <text x="380" y="450" text-anchor="middle" font-size="12" fill="#888">wait for the world to answer. The control ring — sealed in a box, running with nobody watching.</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="pia" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" font-size="15" fill="#888" text-anchor="middle" font-weight="bold">how does the CPU learn a device is ready?</text>
+
+  <!-- ===== POLLING (top) ===== -->
+  <text x="60" y="72" font-size="14" fill="#888" font-weight="bold">POLLING</text>
+  <text x="60" y="90" font-size="11.5" fill="#888">the CPU keeps asking</text>
+
+  <!-- CPU time bar, mostly wasted checks -->
+  <line x1="230" y1="80" x2="710" y2="80" stroke="#888" stroke-width="1.5"/>
+  <text x="230" y="66" font-size="11" fill="#888">CPU time</text>
+  <!-- repeated "ready?" checks as amber ticks -->
+  <g>
+    <rect x="240" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="272" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="304" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="336" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="368" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="400" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="432" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="464" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="496" y="72" width="20" height="16" rx="2" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1"/>
+    <!-- the one where it's finally ready -->
+    <rect x="528" y="72" width="20" height="16" rx="2" fill="rgba(5,150,105,0.6)" stroke="#059669" stroke-width="1.2"/>
+  </g>
+  <text x="380" y="112" font-size="11" fill="#f59e0b" text-anchor="middle">"ready? ready? ready? ready? ..."  every check is a wasted cycle (busy-waiting)</text>
+  <text x="538" y="112" font-size="10.5" fill="#059669" text-anchor="middle" font-weight="bold"></text>
+  <line x1="538" y1="94" x2="538" y2="104" stroke="#059669" stroke-width="1"/>
+  <text x="600" y="128" font-size="10.5" fill="#059669">finally ready</text>
+
+  <!-- divider -->
+  <line x1="60" y1="150" x2="710" y2="150" stroke="#888" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- ===== INTERRUPT (bottom) ===== -->
+  <text x="60" y="192" font-size="14" fill="#888" font-weight="bold">INTERRUPT</text>
+  <text x="60" y="210" font-size="11.5" fill="#888">the device taps the CPU</text>
+
+  <line x1="230" y1="200" x2="710" y2="200" stroke="#888" stroke-width="1.5"/>
+  <text x="230" y="186" font-size="11" fill="#888">CPU time</text>
+  <!-- CPU doing useful work (purple), then a gap for ISR, then resume -->
+  <rect x="240" y="192" width="230" height="16" rx="2" fill="rgba(124,58,237,0.35)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="355" y="204" font-size="10.5" fill="#7c3aed" text-anchor="middle">useful work</text>
+  <!-- ISR block -->
+  <rect x="490" y="192" width="70" height="16" rx="2" fill="rgba(220,38,38,0.3)" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="525" y="204" font-size="10" fill="#dc2626" text-anchor="middle">ISR</text>
+  <!-- resume -->
+  <rect x="580" y="192" width="130" height="16" rx="2" fill="rgba(124,58,237,0.35)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="645" y="204" font-size="10.5" fill="#7c3aed" text-anchor="middle">resumes exactly</text>
+
+  <!-- device raises interrupt line -->
+  <rect x="470" y="250" width="110" height="30" rx="5" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="525" y="269" font-size="11" fill="#0891b2" text-anchor="middle">device: "I'm ready!"</text>
+  <line x1="525" y1="250" x2="525" y2="212" stroke="#dc2626" stroke-width="2" marker-end="url(#pia)"/>
+  <text x="595" y="238" font-size="10" fill="#dc2626">interrupt line</text>
+
+  <!-- the sequence -->
+  <text x="380" y="238" font-size="10.5" fill="#888" text-anchor="middle">save state, jump to ISR, restore state, resume</text>
+
+  <!-- footer punchline -->
+  <rect x="120" y="310" width="520" height="52" rx="8" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="380" y="332" font-size="12" fill="#888" text-anchor="middle" font-weight="bold">interrupts are why a computer does many things "at once"</text>
+  <text x="380" y="351" font-size="11.5" fill="#888" text-anchor="middle">keyboard, disk, network, clock — each taps the CPU only when it truly needs it</text>
+</svg>

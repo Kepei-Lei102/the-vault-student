@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 800" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .lbl  { font-size: 13.5px; }
+    .yn   { font-size: 12px; font-weight: 600; }
+    .cap  { font-size: 12px; }
+  </style>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- ============ nodes ============ -->
+  <rect x="195" y="18" width="140" height="40" rx="20"
+        fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="2"/>
+  <text x="265" y="43" class="lbl" text-anchor="middle">START</text>
+
+  <path d="M 172 131 L 190 85 L 358 85 L 340 131 Z"
+        fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+  <text x="265" y="113" class="lbl" text-anchor="middle">Display the price</text>
+
+  <rect x="160" y="155" width="210" height="46" rx="2"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="265" y="184" class="lbl" text-anchor="middle">inserted = 0</text>
+
+  <path d="M 172 271 L 190 225 L 358 225 L 340 271 Z"
+        fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+  <text x="265" y="253" class="lbl" text-anchor="middle">Accept a coin</text>
+
+  <rect x="140" y="295" width="250" height="46" rx="2"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="265" y="324" class="lbl" text-anchor="middle">inserted = inserted + coin</text>
+
+  <path d="M 265 372 L 375 415 L 265 458 L 155 415 Z"
+        fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="265" y="420" class="lbl" text-anchor="middle">inserted &#8805; price ?</text>
+
+  <rect x="150" y="492" width="230" height="48" rx="2"
+        fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <line x1="161" y1="492" x2="161" y2="540" stroke="#0891b2" stroke-width="2"/>
+  <line x1="369" y1="492" x2="369" y2="540" stroke="#0891b2" stroke-width="2"/>
+  <text x="265" y="522" class="lbl" text-anchor="middle">DispenseDrink(slot)</text>
+
+  <path d="M 265 578 L 375 621 L 265 664 L 155 621 Z"
+        fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="265" y="626" class="lbl" text-anchor="middle">inserted &gt; price ?</text>
+
+  <rect x="428" y="597" width="240" height="48" rx="2"
+        fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <line x1="439" y1="597" x2="439" y2="645" stroke="#0891b2" stroke-width="2"/>
+  <line x1="657" y1="597" x2="657" y2="645" stroke="#0891b2" stroke-width="2"/>
+  <text x="548" y="627" class="lbl" text-anchor="middle">GiveChange(inserted &#8722; price)</text>
+
+  <rect x="195" y="726" width="140" height="40" rx="20"
+        fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="2"/>
+  <text x="265" y="751" class="lbl" text-anchor="middle">STOP</text>
+
+  <!-- ============ flow lines ============ -->
+  <line x1="265" y1="58" x2="265" y2="79" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="265" y1="131" x2="265" y2="149" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="265" y1="201" x2="265" y2="219" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="265" y1="271" x2="265" y2="289" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="265" y1="341" x2="265" y2="366" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- decision 1: No loops back up to "Accept a coin" -->
+  <polyline points="155,415 78,415 78,248 166,248" fill="none"
+            stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <text x="120" y="405" class="yn" text-anchor="middle">No</text>
+
+  <!-- decision 1: Yes continues down -->
+  <line x1="265" y1="458" x2="265" y2="486" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <text x="286" y="478" class="yn">Yes</text>
+
+  <line x1="265" y1="540" x2="265" y2="572" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- decision 2: Yes goes right into GiveChange -->
+  <line x1="375" y1="621" x2="422" y2="621" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <text x="398" y="611" class="yn" text-anchor="middle">Yes</text>
+
+  <!-- GiveChange rejoins the trunk -->
+  <polyline points="548,645 548,698 265,698" fill="none"
+            stroke="#888" stroke-width="2"/>
+
+  <!-- decision 2: No continues straight down -->
+  <line x1="265" y1="664" x2="265" y2="720" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+  <text x="286" y="686" class="yn">No</text>
+
+  <circle cx="265" cy="698" r="3.5" fill="#888"/>
+
+  <!-- ============ margin notes ============ -->
+  <text x="92" y="180" class="cap" text-anchor="middle">the loop</text>
+  <text x="92" y="197" class="cap" text-anchor="middle">is a branch</text>
+  <text x="92" y="214" class="cap" text-anchor="middle">that goes back</text>
+
+  <text x="548" y="560" class="cap" text-anchor="middle">a subroutine hides a whole</text>
+  <text x="548" y="577" class="cap" text-anchor="middle">chart behind one name</text>
+</svg>

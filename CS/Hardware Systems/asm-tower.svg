@@ -1,0 +1,55 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tw" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#888" stroke-width="1.7"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The tower — and where the one-to-one rule lives</text>
+
+  <!-- Python floor -->
+  <rect x="120" y="48" width="520" height="56" rx="8" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="140" y="72" font-size="12" font-weight="bold" fill="#2563eb">high-level (Python, C…)</text>
+  <text x="140" y="92" font-size="13" fill="#888" font-family="Menlo, monospace">total = price * qty + tax</text>
+  <text x="600" y="82" text-anchor="end" font-size="10" fill="#888">one line — any number</text>
+
+  <!-- compiler arrow -->
+  <line x1="380" y1="106" x2="380" y2="140" stroke="#888" stroke-width="1.8" marker-end="url(#tw)"/>
+  <text x="394" y="122" font-size="10.5" fill="#7c3aed" font-weight="bold">COMPILER — designs the instructions,</text>
+  <text x="394" y="136" font-size="10.5" fill="#7c3aed">one line becomes many (its choice)</text>
+
+  <!-- assembly floor -->
+  <rect x="120" y="146" width="520" height="98" rx="8" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="140" y="168" font-size="12" font-weight="bold" fill="#7c3aed">assembly language</text>
+  <text x="140" y="190" font-size="12.5" fill="#888" font-family="Menlo, monospace">LDD 20</text>
+  <text x="140" y="210" font-size="12.5" fill="#888" font-family="Menlo, monospace">ADD 21</text>
+  <text x="140" y="230" font-size="12.5" fill="#888" font-family="Menlo, monospace">STO 22</text>
+
+  <!-- 1:1 arrows -->
+  <line x1="240" y1="186" x2="420" y2="186" stroke="#059669" stroke-width="1.7" marker-end="url(#tw)"/>
+  <line x1="240" y1="206" x2="420" y2="206" stroke="#059669" stroke-width="1.7" marker-end="url(#tw)"/>
+  <line x1="240" y1="226" x2="420" y2="226" stroke="#059669" stroke-width="1.7" marker-end="url(#tw)"/>
+  <text x="330" y="176" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#059669">one line = one instruction</text>
+
+  <!-- machine code inside the same floor -->
+  <text x="440" y="190" font-size="12.5" fill="#888" font-family="Menlo, monospace">0x1E14</text>
+  <text x="440" y="210" font-size="12.5" fill="#888" font-family="Menlo, monospace">0x2115</text>
+  <text x="440" y="230" font-size="12.5" fill="#888" font-family="Menlo, monospace">0x0F16</text>
+  <text x="560" y="190" font-size="10" fill="#888">machine code —</text>
+  <text x="560" y="204" font-size="10" fill="#888">the same thing,</text>
+  <text x="560" y="218" font-size="10" fill="#888">numbers instead</text>
+  <text x="560" y="232" font-size="10" fill="#888">of names</text>
+
+  <!-- assembler arrow -->
+  <line x1="380" y1="246" x2="380" y2="280" stroke="#888" stroke-width="1.8" marker-end="url(#tw)"/>
+  <text x="394" y="262" font-size="10.5" fill="#059669" font-weight="bold">ASSEMBLER — transcribes, never designs:</text>
+  <text x="394" y="276" font-size="10.5" fill="#059669">a renaming, not a translation-with-choices</text>
+
+  <!-- CPU floor -->
+  <rect x="120" y="286" width="520" height="56" rx="8" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="1.8"/>
+  <text x="140" y="310" font-size="12" font-weight="bold" fill="#888">the CPU</text>
+  <text x="140" y="330" font-size="11.5" fill="#888">fetch, decode, execute, check — numbers only; it has never seen a letter</text>
+
+  <text x="380" y="374" text-anchor="middle" font-size="11.5" fill="#888">Assembly is machine code with names on. The compiler makes choices; the assembler keeps a promise:</text>
+  <text x="380" y="391" text-anchor="middle" font-size="11.5" fill="#888">what you write is exactly what runs.</text>
+</svg>

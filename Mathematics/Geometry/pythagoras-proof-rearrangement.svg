@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 720 360">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .note { font-size: 12px; opacity: 0.7; }
+    .eq { font-size: 14px; font-family: 'Times New Roman', serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="24" text-anchor="middle" class="title">Proof 2 — Rearrangement (c² square)</text>
+
+  <!-- === LEFT: Square of side c=200 with 4 right triangles inside === -->
+  <!-- a=120, b=160, c=200 (3-4-5 × 40) -->
+  <!-- Each hypotenuse lies along one edge of the c-square. -->
+  <!-- Right-angle vertices point inward. -->
+  <!-- Inner gap = (b-a)² = 40² square -->
+  <!--
+    Bottom hyp (0,200)→(200,200): right-angle vertex at (128, 104)
+    Right hyp (200,200)→(200,0): right-angle vertex at (104, 72)
+    Top hyp (200,0)→(0,0): right-angle vertex at (72, 96)
+    Left hyp (0,0)→(0,200): right-angle vertex at (96, 128)
+    Inner square: (128,104) (104,72) (72,96) (96,128) — side 40 = b-a
+  -->
+  <g transform="translate(60, 52)">
+    <!-- Outer square (side c) -->
+    <rect x="0" y="0" width="200" height="200" fill="none" stroke="#888" stroke-width="1.5"/>
+
+    <!-- Four right-angled triangles -->
+    <!-- Bottom: hyp along bottom edge -->
+    <polygon points="0,200 200,200 128,104" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Right: hyp along right edge -->
+    <polygon points="200,200 200,0 104,72" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Top: hyp along top edge -->
+    <polygon points="200,0 0,0 72,96" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Left: hyp along left edge -->
+    <polygon points="0,0 0,200 96,128" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+
+    <!-- Inner (b-a)² square -->
+    <polygon points="128,104 104,72 72,96 96,128" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+    <!-- Edge labels: c on bottom and right -->
+    <text x="100" y="218" text-anchor="middle" class="label math" fill="#888">c</text>
+    <text x="216" y="100" text-anchor="start" class="label math" fill="#888">c</text>
+
+    <!-- Inner square label -->
+    <text x="100" y="104" text-anchor="middle" class="label math" fill="#059669">(b−a)²</text>
+
+    <!-- Leg labels on bottom triangle -->
+    <!-- From (0,200) to (128,104): this is leg b=160. Label near midpoint (64, 152) -->
+    <text x="50" y="158" text-anchor="end" class="label math" fill="#2563eb">b</text>
+    <!-- From (200,200) to (128,104): this is leg a=120. Label near midpoint (164, 152) -->
+    <text x="174" y="144" text-anchor="start" class="label math" fill="#888">a</text>
+
+    <!-- Caption -->
+    <text x="100" y="248" text-anchor="middle" class="note">Square of side c</text>
+  </g>
+
+  <!-- === EQUALS === -->
+  <text x="310" y="172" text-anchor="middle" class="label" fill="#888" font-size="20">=</text>
+
+  <!-- === RIGHT: 4 triangles + (b-a)² === -->
+  <g transform="translate(355, 80)">
+    <!-- One representative triangle -->
+    <polygon points="0,150 130,150 83,67" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="30" y="118" text-anchor="end" class="label math" fill="#2563eb">b</text>
+    <text x="116" y="104" text-anchor="start" class="label math" fill="#888">a</text>
+    <text x="65" y="168" text-anchor="middle" class="label math" fill="#888">c</text>
+
+    <!-- ½ab and ×4 labels -->
+    <text x="58" y="128" text-anchor="middle" class="label" fill="#2563eb">½ab</text>
+    <text x="148" y="128" text-anchor="start" class="label" fill="#888">× 4</text>
+
+    <!-- Plus -->
+    <text x="210" y="128" text-anchor="middle" class="label" fill="#888">+</text>
+
+    <!-- (b-a)² square -->
+    <rect x="235" y="98" width="60" height="60" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="265" y="134" text-anchor="middle" class="label math" fill="#059669">(b−a)²</text>
+  </g>
+
+  <!-- === Bottom: algebra === -->
+  <g transform="translate(360, 330)">
+    <text x="0" y="0" text-anchor="middle" class="eq">c² = 4 · ½ab + (b − a)²  =  2ab + b² − 2ab + a²  =  a² + b²  □</text>
+  </g>
+</svg>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<!-- Animated walkthrough of polynomial long division -->
+<!-- §3 example: (2x³ − 3x² + 4x − 5) ÷ (x² + x − 1) -->
+<!-- 16-second loop, schoolbook tableau, two iterations, colour-coded by step -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%">
+  <style>
+    text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #888; font-size: 19px; }
+    .math { font-style: italic; }
+    .iter1 { fill: #2563eb; }
+    .iter2 { fill: #7c3aed; }
+    .remainder { fill: #059669; }
+    .strong { font-weight: 600; }
+    .caption { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 14px; opacity: 0.9; }
+    .legend { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 11.5px; opacity: 0.7; }
+  </style>
+
+  <!-- ============================== SETUP ============================== -->
+
+  <!-- Divisor x² + x − 1 (plain Unicode superscript, end-anchored) -->
+  <text x="200" y="115" text-anchor="end" class="math" opacity="0">x² + x − 1
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.02;0.04;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Long-division bracket: ")" curve + horizontal top bar -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.04;0.06;0.93;1" dur="16s" repeatCount="indefinite"/>
+    <path d="M 208 100 Q 218 115 208 130" fill="none" stroke="#888" stroke-width="2"/>
+    <line x1="218" y1="80" x2="600" y2="80" stroke="#888" stroke-width="2"/>
+  </g>
+
+  <!-- Dividend 2x³ − 3x² + 4x − 5  (column-aligned by power) -->
+  <text x="290" y="115" text-anchor="end" class="math" opacity="0">2x³
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.06;0.08;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="380" y="115" text-anchor="end" class="math" opacity="0">− 3x²
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.07;0.09;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="470" y="115" text-anchor="end" class="math" opacity="0">+ 4x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.08;0.10;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="555" y="115" text-anchor="end" class="math" opacity="0">− 5
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.09;0.11;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- =========================== ITERATION 1 =========================== -->
+
+  <!-- Quotient term 1: 2x  (above the x¹ column) -->
+  <text x="470" y="55" text-anchor="end" class="math iter1 strong" opacity="0">2x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.13;0.15;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtraction "−" sign for iter-1 multiply-back row -->
+  <text x="220" y="155" text-anchor="middle" class="iter1 strong" opacity="0">−
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.17;0.19;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Multiply-back row 1:  2x · (x² + x − 1) = 2x³ + 2x² − 2x -->
+  <text x="290" y="155" text-anchor="end" class="math iter1" opacity="0">2x³
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.18;0.20;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="380" y="155" text-anchor="end" class="math iter1" opacity="0">+ 2x²
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.20;0.22;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="470" y="155" text-anchor="end" class="math iter1" opacity="0">− 2x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.22;0.24;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtraction underbar 1 (drawn left-to-right) -->
+  <line x1="240" y1="170" x2="600" y2="170"
+        stroke="#2563eb" stroke-width="1.6"
+        stroke-dasharray="360" stroke-dashoffset="360">
+    <animate attributeName="stroke-dashoffset"
+             values="360;360;0;0;360"
+             keyTimes="0;0.25;0.30;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Running dividend after iter 1: −5x² + 6x − 5 -->
+  <text x="380" y="200" text-anchor="end" class="math" opacity="0">− 5x²
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.31;0.33;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="470" y="200" text-anchor="end" class="math" opacity="0">+ 6x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.33;0.35;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="555" y="200" text-anchor="end" class="math" opacity="0">− 5
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.35;0.37;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- =========================== ITERATION 2 =========================== -->
+
+  <!-- Quotient term 2: − 5  (above the constant column) -->
+  <text x="555" y="55" text-anchor="end" class="math iter2 strong" opacity="0">− 5
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.43;0.45;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtraction "−" sign for iter-2 multiply-back row -->
+  <text x="310" y="240" text-anchor="middle" class="iter2 strong" opacity="0">−
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.46;0.48;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Multiply-back row 2:  −5 · (x² + x − 1) = −5x² − 5x + 5 -->
+  <text x="380" y="240" text-anchor="end" class="math iter2" opacity="0">− 5x²
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.47;0.49;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="470" y="240" text-anchor="end" class="math iter2" opacity="0">− 5x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.49;0.51;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="555" y="240" text-anchor="end" class="math iter2" opacity="0">+ 5
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.51;0.53;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtraction underbar 2 -->
+  <line x1="330" y1="255" x2="600" y2="255"
+        stroke="#7c3aed" stroke-width="1.6"
+        stroke-dasharray="270" stroke-dashoffset="270">
+    <animate attributeName="stroke-dashoffset"
+             values="270;270;0;0;270"
+             keyTimes="0;0.54;0.58;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Final remainder: 11x − 10 -->
+  <text x="470" y="285" text-anchor="end" class="math remainder strong" opacity="0">11x
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.59;0.61;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+  <text x="555" y="285" text-anchor="end" class="math remainder strong" opacity="0">− 10
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.61;0.63;0.93;1" dur="16s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- =========================== STOPPING CAPTION =========================== -->
+  <!-- Split into separate text elements with explicit x positions (no nested coloured tspans) -->
+
+  <!-- Line 1: stopping rule — assembled from grey + green pieces -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.66;0.70;0.93;1" dur="16s" repeatCount="indefinite"/>
+    <text x="120" y="325" text-anchor="start" class="caption">deg(</text>
+    <text x="155" y="325" text-anchor="start" class="caption math remainder strong">11x − 10</text>
+    <text x="240" y="325" text-anchor="start" class="caption">) = 1   &lt;   deg(</text>
+    <text x="370" y="325" text-anchor="start" class="caption math">x² + x − 1</text>
+    <text x="450" y="325" text-anchor="start" class="caption">) = 2   →   stop</text>
+  </g>
+
+  <!-- Line 2: final answer Q(x), R(x) — assembled from grey + iter colours -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.66;0.70;0.93;1" dur="16s" repeatCount="indefinite"/>
+    <text x="180" y="358" text-anchor="start" class="caption math">Q(x)</text>
+    <text x="226" y="358" text-anchor="start" class="caption">=</text>
+    <text x="246" y="358" text-anchor="start" class="caption math iter1 strong">2x</text>
+    <text x="276" y="358" text-anchor="start" class="caption math iter2 strong">− 5</text>
+    <text x="324" y="358" text-anchor="start" class="caption">,</text>
+    <text x="346" y="358" text-anchor="start" class="caption math">R(x)</text>
+    <text x="392" y="358" text-anchor="start" class="caption">=</text>
+    <text x="412" y="358" text-anchor="start" class="caption math remainder strong">11x − 10</text>
+  </g>
+
+  <!-- =========================== LEGEND (always-on, dim) =========================== -->
+
+  <g transform="translate(620, 100)">
+    <rect x="-4" y="-14" width="14" height="3" fill="#2563eb"/>
+    <text x="14" y="-10" class="legend">iteration 1</text>
+    <rect x="-4" y="6" width="14" height="3" fill="#7c3aed"/>
+    <text x="14" y="10" class="legend">iteration 2</text>
+    <rect x="-4" y="26" width="14" height="3" fill="#059669"/>
+    <text x="14" y="30" class="legend">remainder</text>
+  </g>
+</svg>

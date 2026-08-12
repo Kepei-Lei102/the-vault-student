@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SSS construction — animated ruler-and-compass demo.
+     Light/dark-mode safe: all strokes use vault palette (#888, #2563eb, #dc2626, #059669, #f59e0b).
+     12-second loop. Plays automatically in any SMIL-capable SVG viewer (Obsidian, Chrome, Safari, Firefox).
+
+     Timeline (in seconds, repeats every 12s):
+       0.0 – 0.6   initial pause (everything hidden)
+       0.6 – 2.2   baseline AB draws in; A and B labels appear
+       2.2 – 3.2   pause on the baseline
+       3.2 – 5.5   arc of radius b swept around A (red) — shows set of possible C's from A
+       5.7 – 8.0   arc of radius a swept around B (green) — shows set of possible C's from B
+       8.0 – 8.6   intersection point C pulses into view (amber)
+       8.6 – 9.8   segments CA and CB draw in to finish the triangle
+       10.0 – 11.1 caption: "only one triangle fits"
+       11.4 – 12   everything rewinds cleanly to empty baseline, loop restarts
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <style>
+      text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        fill: #888888;
+      }
+    </style>
+  </defs>
+
+  <!-- ===== Title (always visible) ===== -->
+  <text x="300" y="28" text-anchor="middle" font-size="16" font-weight="bold">
+    SSS construction — the unique triangle from three sides
+  </text>
+
+  <!-- ===== Given-info subtitle ===== -->
+  <text x="300" y="48" text-anchor="middle" font-size="12">
+    Given three lengths: baseline c = AB, then b = CA (red) and a = CB (green).
+  </text>
+
+  <!-- ===== Baseline AB ===== -->
+  <line x1="100" y1="300" x2="400" y2="300"
+        stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="300" stroke-dashoffset="300">
+    <animate attributeName="stroke-dashoffset"
+             values="300;300;0;0;300"
+             keyTimes="0;0.05;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- A point + label -->
+  <circle cx="100" cy="300" r="5" fill="#2563eb">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.05;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="85" y="322" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.05;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    A
+  </text>
+
+  <!-- B point + label -->
+  <circle cx="400" cy="300" r="5" fill="#2563eb">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.14;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="415" y="322" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.14;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    B
+  </text>
+
+  <!-- baseline length label -->
+  <text x="250" y="320" font-size="11" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.15;0.22;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    c = AB
+  </text>
+
+  <!-- ===== Arc around A, radius b = 220, from angle 0 to -70 (visually up-right) ===== -->
+  <!-- Arc path length = 220 * 70 * pi / 180 ≈ 268.8  -->
+  <path d="M 320 300 A 220 220 0 0 0 175.24 93.27"
+        stroke="#dc2626" stroke-width="2" fill="none" stroke-linecap="round"
+        stroke-dasharray="269" stroke-dashoffset="269">
+    <animate attributeName="stroke-dashoffset"
+             values="269;269;0;0;269"
+             keyTimes="0;0.267;0.458;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Compass radius line rotating around A -->
+  <g transform="translate(100,300)">
+    <line x1="0" y1="0" x2="220" y2="0"
+          stroke="#888" stroke-width="1.2" stroke-dasharray="5 3">
+      <animate attributeName="opacity"
+               values="0;0;0.7;0.7;0;0"
+               keyTimes="0;0.267;0.300;0.458;0.483;1"
+               dur="12s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0;0;-70;-70;0"
+                        keyTimes="0;0.267;0.458;0.95;1"
+                        dur="12s" repeatCount="indefinite"/>
+    </line>
+    <!-- A small circle representing the pencil tip of the compass -->
+    <circle cx="220" cy="0" r="3" fill="#dc2626">
+      <animate attributeName="opacity"
+               values="0;0;0.9;0.9;0;0"
+               keyTimes="0;0.267;0.300;0.458;0.483;1"
+               dur="12s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0;0;-70;-70;0"
+                        keyTimes="0;0.267;0.458;0.95;1"
+                        dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Caption for arc A -->
+  <text x="330" y="175" font-size="11" fill="#dc2626">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.29;0.34;0.55;0.60;1"
+             dur="12s" repeatCount="indefinite"/>
+    radius b = CA
+  </text>
+
+  <!-- ===== Arc around B, radius a = 180, from angle 180 to 250 (visually up-left) ===== -->
+  <!-- Arc path length = 180 * 70 * pi / 180 ≈ 219.9 -->
+  <path d="M 220 300 A 180 180 0 0 1 338.43 130.86"
+        stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round"
+        stroke-dasharray="220" stroke-dashoffset="220">
+    <animate attributeName="stroke-dashoffset"
+             values="220;220;0;0;220"
+             keyTimes="0;0.483;0.667;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Compass radius line rotating around B -->
+  <g transform="translate(400,300)">
+    <line x1="0" y1="0" x2="180" y2="0"
+          stroke="#888" stroke-width="1.2" stroke-dasharray="5 3">
+      <animate attributeName="opacity"
+               values="0;0;0.7;0.7;0;0"
+               keyTimes="0;0.483;0.517;0.667;0.692;1"
+               dur="12s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="180;180;250;250;0"
+                        keyTimes="0;0.483;0.667;0.95;1"
+                        dur="12s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="180" cy="0" r="3" fill="#059669">
+      <animate attributeName="opacity"
+               values="0;0;0.9;0.9;0;0"
+               keyTimes="0;0.483;0.517;0.667;0.692;1"
+               dur="12s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="180;180;250;250;0"
+                        keyTimes="0;0.483;0.667;0.95;1"
+                        dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Caption for arc B -->
+  <text x="180" y="200" font-size="11" fill="#059669">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.50;0.55;0.70;0.76;1"
+             dur="12s" repeatCount="indefinite"/>
+    radius a = CB
+  </text>
+
+  <!-- ===== Intersection point C (pulses on appearance) ===== -->
+  <circle cx="276.67" cy="168.89" r="5" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5">
+    <animate attributeName="r"
+             values="0;0;10;5;5;0"
+             keyTimes="0;0.667;0.700;0.720;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.667;0.700;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="276" y="150" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.700;0.720;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    C
+  </text>
+
+  <!-- ===== Final sides CA and CB (drawn in after C is found) ===== -->
+  <!-- Length CA = 220 -->
+  <line x1="100" y1="300" x2="276.67" y2="168.89"
+        stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="220" stroke-dashoffset="220">
+    <animate attributeName="stroke-dashoffset"
+             values="220;220;0;0;220"
+             keyTimes="0;0.720;0.800;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Length CB = 180 -->
+  <line x1="400" y1="300" x2="276.67" y2="168.89"
+        stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="180" stroke-dashoffset="180">
+    <animate attributeName="stroke-dashoffset"
+             values="180;180;0;0;180"
+             keyTimes="0;0.800;0.860;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ===== Caption ===== -->
+  <text x="300" y="400" text-anchor="middle" font-size="13" font-weight="bold">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.860;0.900;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    Two circles intersect at one point above AB — the triangle is unique.
+  </text>
+</svg>

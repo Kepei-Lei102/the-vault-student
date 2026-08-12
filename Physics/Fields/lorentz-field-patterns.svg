@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 960 370" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>Field patterns due to currents: wire, flat coil, solenoid</title>
+  <defs>
+    <marker id="fpBlue" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="26" text-anchor="middle" font-size="16" fill="#888" font-weight="bold">Three drawings, one grip rule</text>
+
+  <!-- ============ A: long straight wire ============ -->
+  <text x="170" y="58" text-anchor="middle" font-size="13.5" fill="#888" font-weight="bold">long straight wire</text>
+  <circle cx="170" cy="185" r="42" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.85"/>
+  <circle cx="170" cy="185" r="78" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.55"/>
+  <circle cx="170" cy="185" r="118" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.35"/>
+  <path d="M178,143 L164,139 L178,135 Z" fill="#2563eb" opacity="0.9"/>
+  <path d="M178,107 L164,103 L178,99 Z" fill="#2563eb" opacity="0.65"/>
+  <path d="M178,67 L164,63 L178,59 Z" fill="#2563eb" opacity="0.45"/>
+  <circle cx="170" cy="185" r="10" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="170" cy="185" r="3" fill="#f59e0b"/>
+  <text x="170" y="330" text-anchor="middle" font-size="12" fill="#888">current out of the page:</text>
+  <text x="170" y="346" text-anchor="middle" font-size="12" fill="#888">circles, spacing out with distance</text>
+
+  <!-- ============ B: flat coil, edge-on ============ -->
+  <text x="480" y="58" text-anchor="middle" font-size="13.5" fill="#888" font-weight="bold">flat coil (edge-on)</text>
+  <ellipse cx="410" cy="185" rx="46" ry="60" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.5"/>
+  <ellipse cx="550" cy="185" rx="46" ry="60" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.5"/>
+  <path d="M418,125 L404,121 L418,117 Z" fill="#2563eb" opacity="0.7"/>
+  <path d="M542,117 L556,121 L542,125 Z" fill="#2563eb" opacity="0.7"/>
+  <line x1="480" y1="255" x2="480" y2="115" stroke="#2563eb" stroke-width="2.5" marker-end="url(#fpBlue)"/>
+  <circle cx="410" cy="185" r="10" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="410" cy="185" r="3" fill="#f59e0b"/>
+  <g stroke="#f59e0b" stroke-width="2.5">
+    <circle cx="550" cy="185" r="10" fill="none"/>
+    <line x1="544" y1="179" x2="556" y2="191"/>
+    <line x1="544" y1="191" x2="556" y2="179"/>
+  </g>
+  <text x="480" y="330" text-anchor="middle" font-size="12" fill="#888">field threads through the middle,</text>
+  <text x="480" y="346" text-anchor="middle" font-size="12" fill="#888">loops around outside</text>
+
+  <!-- ============ C: solenoid ============ -->
+  <text x="790" y="58" text-anchor="middle" font-size="13.5" fill="#888" font-weight="bold">solenoid</text>
+  <!-- top row: current out -->
+  <g stroke="#f59e0b" stroke-width="2">
+    <circle cx="700" cy="140" r="8" fill="none"/><circle cx="700" cy="140" r="2.5" fill="#f59e0b" stroke="none"/>
+    <circle cx="745" cy="140" r="8" fill="none"/><circle cx="745" cy="140" r="2.5" fill="#f59e0b" stroke="none"/>
+    <circle cx="790" cy="140" r="8" fill="none"/><circle cx="790" cy="140" r="2.5" fill="#f59e0b" stroke="none"/>
+    <circle cx="835" cy="140" r="8" fill="none"/><circle cx="835" cy="140" r="2.5" fill="#f59e0b" stroke="none"/>
+    <circle cx="880" cy="140" r="8" fill="none"/><circle cx="880" cy="140" r="2.5" fill="#f59e0b" stroke="none"/>
+  </g>
+  <!-- bottom row: current in -->
+  <g stroke="#f59e0b" stroke-width="2">
+    <circle cx="700" cy="230" r="8" fill="none"/><line x1="695" y1="225" x2="705" y2="235"/><line x1="695" y1="235" x2="705" y2="225"/>
+    <circle cx="745" cy="230" r="8" fill="none"/><line x1="740" y1="225" x2="750" y2="235"/><line x1="740" y1="235" x2="750" y2="225"/>
+    <circle cx="790" cy="230" r="8" fill="none"/><line x1="785" y1="225" x2="795" y2="235"/><line x1="785" y1="235" x2="795" y2="225"/>
+    <circle cx="835" cy="230" r="8" fill="none"/><line x1="830" y1="225" x2="840" y2="235"/><line x1="830" y1="235" x2="840" y2="225"/>
+    <circle cx="880" cy="230" r="8" fill="none"/><line x1="875" y1="225" x2="885" y2="235"/><line x1="875" y1="235" x2="885" y2="225"/>
+  </g>
+  <!-- inside field -->
+  <line x1="678" y1="167" x2="902" y2="167" stroke="#2563eb" stroke-width="2" marker-end="url(#fpBlue)"/>
+  <line x1="678" y1="185" x2="902" y2="185" stroke="#2563eb" stroke-width="2" marker-end="url(#fpBlue)"/>
+  <line x1="678" y1="203" x2="902" y2="203" stroke="#2563eb" stroke-width="2" marker-end="url(#fpBlue)"/>
+  <!-- outside return hint -->
+  <path d="M898,118 C 858,72 722,72 682,118" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.6"/>
+  <path d="M690,110 L678,122 L694,124 Z" fill="#2563eb" opacity="0.6"/>
+  <text x="922" y="191" font-size="15" fill="#f59e0b" font-weight="bold">N</text>
+  <text x="652" y="191" text-anchor="end" font-size="15" fill="#0891b2" font-weight="bold">S</text>
+  <text x="790" y="330" text-anchor="middle" font-size="12" fill="#888">a bar magnet made of wire;</text>
+  <text x="790" y="346" text-anchor="middle" font-size="12" fill="#888">add an iron core: the electromagnet</text>
+
+  <text x="480" y="368" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">right-hand grip: thumb along the current, fingers curl along the field</text>
+</svg>

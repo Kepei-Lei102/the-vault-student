@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 432" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 14px; font-weight: 600; }
+    .lab   { font-size: 13.5px; font-weight: 600; }
+    .small { font-size: 12px; }
+    .note  { font-size: 11.5px; opacity: 0.8; }
+  </style>
+
+  <text x="36" y="26" class="note">all statements of arithmetic</text>
+
+  <!-- TRUE set -->
+  <ellipse cx="300" cy="215" rx="244" ry="155" fill="rgba(37,99,235,0.08)" stroke="#2563eb" stroke-width="2"/>
+  <text x="300" y="92" class="title" text-anchor="middle" fill="#2563eb">TRUE statements</text>
+
+  <!-- PROVABLE set, strictly inside TRUE -->
+  <ellipse cx="248" cy="245" rx="140" ry="94" fill="rgba(5,150,105,0.14)" stroke="#059669" stroke-width="2"/>
+  <text x="248" y="241" class="lab" text-anchor="middle" fill="#059669">PROVABLE in F</text>
+  <text x="248" y="261" class="note" text-anchor="middle">what F can reach</text>
+
+  <!-- G: true but unprovable -->
+  <circle cx="452" cy="174" r="6" fill="#f59e0b" stroke="#f59e0b"/>
+  <text x="466" y="170" class="small" fill="#f59e0b">G</text>
+  <text x="466" y="187" class="note">true, but unprovable</text>
+
+  <!-- not-G: false, also unprovable (outside TRUE) -->
+  <circle cx="560" cy="320" r="6" fill="#dc2626" stroke="#dc2626"/>
+  <text x="560" y="342" class="small" text-anchor="middle" fill="#dc2626">not-G</text>
+  <text x="560" y="358" class="note" text-anchor="middle">(false, unprovable)</text>
+
+  <!-- caption -->
+  <text x="300" y="404" class="note" text-anchor="middle">A sound system proves only truths -- but not all of them.</text>
+  <text x="300" y="420" class="note" text-anchor="middle">So PROVABLE sits strictly inside TRUE, and G falls in the gap.</text>
+</svg>

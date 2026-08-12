@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="cvG" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#888" stroke-width="1.7"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The convergence: a RISC engine in a CISC trench coat</text>
+
+  <!-- x86 path -->
+  <text x="120" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">x86 program</text>
+  <rect x="48" y="82" width="144" height="46" rx="7" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="120" y="102" text-anchor="middle" font-size="10.5" fill="#888">variable-length CISC</text>
+  <text x="120" y="118" text-anchor="middle" font-size="10.5" fill="#888">instructions (1978 contract)</text>
+
+  <line x1="196" y1="105" x2="248" y2="105" stroke="#888" stroke-width="1.8" marker-end="url(#cvG)"/>
+
+  <rect x="252" y="76" width="150" height="58" rx="7" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="327" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#888">DECODER</text>
+  <text x="327" y="114" text-anchor="middle" font-size="9.5" fill="#888">slices each fat instruction</text>
+  <text x="327" y="127" text-anchor="middle" font-size="9.5" fill="#888">into uniform micro-ops</text>
+  <text x="327" y="152" text-anchor="middle" font-size="9" fill="#dc2626">the decode tax lives here</text>
+
+  <line x1="406" y1="105" x2="470" y2="140" stroke="#888" stroke-width="1.8" marker-end="url(#cvG)"/>
+
+  <!-- ARM path -->
+  <text x="120" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">ARM / RISC-V program</text>
+  <rect x="48" y="222" width="144" height="46" rx="7" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.8"/>
+  <text x="120" y="242" text-anchor="middle" font-size="10.5" fill="#888">fixed-length RISC</text>
+  <text x="120" y="258" text-anchor="middle" font-size="10.5" fill="#888">instructions</text>
+
+  <line x1="196" y1="245" x2="470" y2="196" stroke="#888" stroke-width="1.8" marker-end="url(#cvG)"/>
+  <text x="290" y="262" font-size="9.5" fill="#059669">nearly straight through — cheap, WIDE decode</text>
+
+  <!-- common engine -->
+  <rect x="474" y="118" width="246" height="120" rx="10" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="2.2"/>
+  <text x="597" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">the same engine inside</text>
+  <text x="597" y="164" text-anchor="middle" font-size="10" fill="#888">wide, out-of-order, deeply pipelined,</text>
+  <text x="597" y="180" text-anchor="middle" font-size="10" fill="#888">register-rich core — the machine</text>
+  <text x="597" y="196" text-anchor="middle" font-size="10" fill="#888">RISC pioneered, now under everyone</text>
+  <text x="597" y="222" text-anchor="middle" font-size="9.5" fill="#7c3aed">(Pentium Pro 1995 onward for x86)</text>
+
+  <!-- verdict strip -->
+  <text x="380" y="296" text-anchor="middle" font-size="11.5" fill="#888">The ISA is a compatibility CONTRACT, not an engine blueprint. What still differs is the contract's cost:</text>
+  <text x="380" y="314" text-anchor="middle" font-size="11.5" fill="#888">x86 pays a permanent decode tax; fixed-length RISC decodes wide and cheap — one key to phone-class efficiency.</text>
+  <text x="380" y="342" text-anchor="middle" font-size="11" fill="#888">No winner — niches: the legacy-software mountain on x86; everything battery-powered on RISC.</text>
+</svg>

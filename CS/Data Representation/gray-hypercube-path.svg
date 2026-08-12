@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .code  { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; font-weight: 700; }
+    .good  { font-size: 12px; font-weight: 700; fill: #059669; }
+    .cap   { font-size: 11px; }
+  </style>
+
+  <text x="280" y="30" class="title" text-anchor="middle">A Gray code is a walk through every corner of the cube</text>
+
+  <!-- ===== cube edges (grey) ===== -->
+  <g stroke="#9ca3af" stroke-width="1.4" fill="none">
+    <line x1="120" y1="320" x2="270" y2="320"/> <!-- 000-001 -->
+    <line x1="120" y1="320" x2="120" y2="170"/> <!-- 000-010 -->
+    <line x1="120" y1="320" x2="195" y2="265"/> <!-- 000-100 -->
+    <line x1="270" y1="320" x2="270" y2="170"/> <!-- 001-011 -->
+    <line x1="270" y1="320" x2="345" y2="265"/> <!-- 001-101 -->
+    <line x1="120" y1="170" x2="270" y2="170"/> <!-- 010-011 -->
+    <line x1="120" y1="170" x2="195" y2="115"/> <!-- 010-110 -->
+    <line x1="195" y1="265" x2="345" y2="265"/> <!-- 100-101 -->
+    <line x1="195" y1="265" x2="195" y2="115"/> <!-- 100-110 -->
+    <line x1="270" y1="170" x2="345" y2="115"/> <!-- 011-111 -->
+    <line x1="345" y1="265" x2="345" y2="115"/> <!-- 101-111 -->
+    <line x1="195" y1="115" x2="345" y2="115"/> <!-- 110-111 -->
+  </g>
+
+  <!-- ===== Gray walk (green solid path) ===== -->
+  <polyline points="120,320 270,320 270,170 120,170 195,115 345,115 345,265 195,265"
+            fill="none" stroke="#059669" stroke-width="2.6"/>
+  <!-- wrap edge (dashed) -->
+  <line x1="195" y1="265" x2="120" y2="320" stroke="#059669" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- direction arrowheads along the path -->
+  <path d="M205 320 l-9 -4 l0 8 z" fill="#059669"/>            <!-- 000->001 -->
+  <path d="M270 250 l-5 8 l10 0 z" fill="#059669"/>            <!-- 001->011 upward on right-front edge -->
+  <path d="M275 115 l-9 -4 l0 8 z" fill="#059669"/>            <!-- 110->111 rightward along top edge -->
+  <path d="M345 200 l-5 -8 l10 0 z" fill="#059669"/>           <!-- 111->101 downward on right edge -->
+
+  <!-- ===== vertices ===== -->
+  <g fill="#0891b2">
+    <circle cx="120" cy="320" r="5"/>
+    <circle cx="270" cy="320" r="5"/>
+    <circle cx="120" cy="170" r="5"/>
+    <circle cx="270" cy="170" r="5"/>
+    <circle cx="195" cy="265" r="5"/>
+    <circle cx="345" cy="265" r="5"/>
+    <circle cx="195" cy="115" r="5"/>
+    <circle cx="345" cy="115" r="5"/>
+  </g>
+
+  <!-- vertex labels -->
+  <text x="112" y="342" class="code" text-anchor="end">000</text>
+  <text x="278" y="342" class="code" text-anchor="start">001</text>
+  <text x="112" y="166" class="code" text-anchor="end">010</text>
+  <text x="278" y="166" class="code" text-anchor="start">011</text>
+  <text x="182" y="285" class="code" text-anchor="end">100</text>
+  <text x="356" y="270" class="code" text-anchor="start">101</text>
+  <text x="188" y="106" class="code" text-anchor="end">110</text>
+  <text x="356" y="112" class="code" text-anchor="start">111</text>
+
+  <!-- start tag -->
+  <text x="120" y="360" class="good" text-anchor="middle">start</text>
+
+  <text x="280" y="384" class="cap" text-anchor="middle">Each step flips one bit = a move along one edge. Binary counting instead leaps across the cube's diagonals.</text>
+</svg>

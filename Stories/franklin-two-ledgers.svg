@@ -1,0 +1,80 @@
+<svg width="100%" viewBox="0 0 960 470" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>Franklin's ledger vs nature's ledger: same labels, opposite arrow</title>
+  <defs>
+    <marker id="ftAmber" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="ftTeal" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="26" text-anchor="middle" font-size="16" fill="#888" font-weight="bold">Two ledgers, one observation - and the arrow that flipped</text>
+
+  <!-- ============ LEFT: Franklin's picture ============ -->
+  <text x="245" y="60" text-anchor="middle" font-size="13.5" fill="#f59e0b" font-weight="bold">what Franklin pictured (1747)</text>
+
+  <rect x="80" y="95" width="200" height="38" rx="10" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="119" text-anchor="middle" font-size="12.5" fill="#888">glass rod</text>
+  <text x="180" y="88" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">ends up + (surplus)</text>
+
+  <path d="M300,170 q 20,-12 40,0 q 20,12 40,0 q 20,-12 30,-2 L410,205 q -20,12 -40,0 q -20,-12 -40,0 q -20,12 -30,2 Z"
+        fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <text x="355" y="235" text-anchor="middle" font-size="12.5" fill="#888">silk</text>
+  <text x="355" y="253" text-anchor="middle" font-size="13" fill="#0891b2" font-weight="bold">ends up - (deficit)</text>
+
+  <path d="M330,165 C 300,140 260,132 288,127" fill="none" stroke="#f59e0b" stroke-width="3.5" marker-end="url(#ftAmber)"/>
+  <text x="352" y="120" text-anchor="middle" font-size="12.5" fill="#f59e0b">"the electrical fire</text>
+  <text x="352" y="136" text-anchor="middle" font-size="12.5" fill="#f59e0b">flows IN"</text>
+
+  <text x="245" y="292" text-anchor="middle" font-size="12" fill="#888" font-style="italic">an invisible fluid, credited to the glass</text>
+
+  <!-- ============ RIGHT: nature's picture ============ -->
+  <text x="715" y="60" text-anchor="middle" font-size="13.5" fill="#0891b2" font-weight="bold">what nature does (found 1897)</text>
+
+  <rect x="550" y="95" width="200" height="38" rx="10" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="2"/>
+  <text x="650" y="119" text-anchor="middle" font-size="12.5" fill="#888">glass rod</text>
+  <text x="650" y="88" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">still called + (electron deficit)</text>
+
+  <path d="M770,170 q 20,-12 40,0 q 20,12 40,0 q 20,-12 30,-2 L880,205 q -20,12 -40,0 q -20,-12 -40,0 q -20,12 -30,2 Z"
+        fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <text x="825" y="235" text-anchor="middle" font-size="12.5" fill="#888">silk</text>
+  <text x="825" y="253" text-anchor="middle" font-size="13" fill="#0891b2" font-weight="bold">- (electron surplus)</text>
+
+  <path d="M700,127 C 740,132 780,145 800,166" fill="none" stroke="#0891b2" stroke-width="3.5" marker-end="url(#ftTeal)"/>
+  <text x="712" y="155" text-anchor="middle" font-size="12.5" fill="#0891b2">electrons LEAVE</text>
+  <text x="712" y="171" text-anchor="middle" font-size="12.5" fill="#0891b2">the glass</text>
+  <circle cx="716" cy="140" r="5" fill="#0891b2"/>
+  <text x="716" y="144" text-anchor="middle" font-size="9" fill="#1a1a1a" font-weight="bold">-</text>
+
+  <text x="715" y="292" text-anchor="middle" font-size="12" fill="#888" font-style="italic">real particles, debited from the glass - same labels, opposite arrow</text>
+
+  <!-- ============ TIMELINE ============ -->
+  <rect x="137" y="356" width="715" height="28" fill="rgba(245,158,11,0.10)"/>
+  <text x="494" y="336" text-anchor="middle" font-size="12" fill="#f59e0b" font-style="italic">the coin stays in the air: 150 years unfalsifiable</text>
+
+  <line x1="70" y1="370" x2="905" y2="370" stroke="#888" stroke-width="2"/>
+
+  <circle cx="70" cy="370" r="5" fill="#888"/>
+  <text x="70" y="404" text-anchor="middle" font-size="10.5" fill="#888">1733: du Fay,</text>
+  <text x="70" y="417" text-anchor="middle" font-size="10.5" fill="#888">two fluids</text>
+
+  <circle cx="137" cy="370" r="7" fill="#f59e0b"/>
+  <text x="137" y="349" text-anchor="middle" font-size="10.5" fill="#f59e0b" font-weight="bold">1747: the guess</text>
+
+  <circle cx="163" cy="370" r="5" fill="#888"/>
+  <text x="176" y="404" text-anchor="middle" font-size="10.5" fill="#888">1752-53: lightning tamed;</text>
+  <text x="176" y="417" text-anchor="middle" font-size="10.5" fill="#888">Richmann killed</text>
+
+  <circle cx="242" cy="370" r="5" fill="#888"/>
+  <text x="242" y="349" text-anchor="middle" font-size="10.5" fill="#888">1769: Brescia</text>
+
+  <circle cx="852" cy="370" r="7" fill="#0891b2"/>
+  <text x="835" y="349" text-anchor="middle" font-size="10.5" fill="#0891b2" font-weight="bold">1897: Thomson -</text>
+  <text x="835" y="362" text-anchor="middle" font-size="10.5" fill="#0891b2" font-weight="bold">the carrier is negative</text>
+
+  <text x="852" y="404" text-anchor="middle" font-size="10.5" fill="#888">today: two arrows on</text>
+  <text x="852" y="417" text-anchor="middle" font-size="10.5" fill="#888">every circuit diagram</text>
+
+  <text x="480" y="452" text-anchor="middle" font-size="13" fill="#888" font-style="italic">the guess was arbitrary; the insight - conservation, and charge as signed arithmetic - was not</text>
+</svg>

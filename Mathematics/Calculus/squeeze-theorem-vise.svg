@@ -1,0 +1,116 @@
+<!-- stack: SMIL -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .caption { font-size: 14px; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; }
+    .reveal { font-size: 14px; font-weight: 600; }
+  </style>
+
+  <!-- Caption -->
+  <text x="300" y="22" class="caption math" text-anchor="middle" xml:space="preserve">g(x) ≤ f(x) ≤ h(x),   g, h → L</text>
+
+  <!-- Number line -->
+  <line x1="40" y1="140" x2="560" y2="140" stroke="#888" stroke-width="1.5"/>
+  <text x="560" y="158" class="math label" text-anchor="end">x</text>
+
+  <!-- L tick + label at center (fades out during the reveal so the bubble tail has room) -->
+  <g>
+    <animate attributeName="opacity"
+             values="1; 1; 0; 0; 1; 1"
+             keyTimes="0; 0.82; 0.86; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <line x1="300" y1="135" x2="300" y2="145" stroke="#888" stroke-width="1.5"/>
+    <line x1="300" y1="145" x2="300" y2="175" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <text x="300" y="190" class="math label" text-anchor="middle">L</text>
+  </g>
+
+  <!-- Allowed region (the gap that gets squeezed) -->
+  <rect x="80" y="100" width="440" height="80"
+        fill="rgba(124, 58, 237, 0.10)" stroke="none">
+    <animate attributeName="x"
+             values="80; 80; 300; 300; 300; 80"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="width"
+             values="440; 440; 0; 0; 0; 440"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0; 1; 1; 1; 0; 0"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Left bound (blue, bracket [) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0,0; 0,0; 220,0; 220,0; 220,0; 0,0"
+                      keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+                      dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0; 1; 1; 1; 0; 0"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <line x1="80" y1="100" x2="80" y2="180" stroke="#2563eb" stroke-width="3"/>
+    <line x1="80" y1="100" x2="94" y2="100" stroke="#2563eb" stroke-width="3"/>
+    <line x1="80" y1="180" x2="94" y2="180" stroke="#2563eb" stroke-width="3"/>
+    <text x="80" y="92" class="math label" text-anchor="middle" fill="#2563eb">g(x)</text>
+  </g>
+
+  <!-- Right bound (green, bracket ]) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0,0; 0,0; -220,0; -220,0; -220,0; 0,0"
+                      keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+                      dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0; 1; 1; 1; 0; 0"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <line x1="520" y1="100" x2="520" y2="180" stroke="#059669" stroke-width="3"/>
+    <line x1="520" y1="100" x2="506" y2="100" stroke="#059669" stroke-width="3"/>
+    <line x1="520" y1="180" x2="506" y2="180" stroke="#059669" stroke-width="3"/>
+    <text x="520" y="92" class="math label" text-anchor="middle" fill="#059669">h(x)</text>
+  </g>
+
+  <!-- The particle f(x) — bounces inside the closing gap -->
+  <g>
+    <animate attributeName="opacity"
+             values="0; 1; 1; 1; 0; 0"
+             keyTimes="0; 0.07; 0.79; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <circle cx="476" cy="140" r="7" fill="#7c3aed">
+      <animate attributeName="cx"
+               values="476; 476; 132.8; 458.4; 150.4; 440.8; 168; 423.2; 185.6; 405.6; 203.2; 388; 220.8; 370.4; 238.4; 352.8; 256; 335.2; 273.6; 317.6; 291.2; 300; 300; 476"
+               keyTimes="0; 0.07; 0.106; 0.142; 0.178; 0.214; 0.250; 0.286; 0.322; 0.358; 0.394; 0.430; 0.466; 0.502; 0.538; 0.574; 0.610; 0.646; 0.682; 0.718; 0.754; 0.790; 0.97; 1"
+               dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <text x="476" y="125" class="math small" text-anchor="middle" fill="#7c3aed">
+      f(x)
+      <animate attributeName="x"
+               values="476; 476; 132.8; 458.4; 150.4; 440.8; 168; 423.2; 185.6; 405.6; 203.2; 388; 220.8; 370.4; 238.4; 352.8; 256; 335.2; 273.6; 317.6; 291.2; 300; 300; 476"
+               keyTimes="0; 0.07; 0.106; 0.142; 0.178; 0.214; 0.250; 0.286; 0.322; 0.358; 0.394; 0.430; 0.466; 0.502; 0.538; 0.574; 0.610; 0.646; 0.682; 0.718; 0.754; 0.790; 0.97; 1"
+               dur="7s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Speech bubble (appears during hold phase, tail points up at converged bracket) -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+             values="0; 0; 0; 1; 1; 0; 0"
+             keyTimes="0; 0.79; 0.82; 0.86; 0.93; 0.97; 1"
+             dur="7s" repeatCount="indefinite"/>
+    <!-- Bubble body with upward tail at center -->
+    <path d="M 186 210 L 290 210 L 300 192 L 310 210 L 414 210 Q 420 210 420 216 L 420 244 Q 420 250 414 250 L 186 250 Q 180 250 180 244 L 180 216 Q 180 210 186 210 Z"
+          fill="rgba(124, 58, 237, 0.16)" stroke="#7c3aed" stroke-width="1.2"/>
+    <text x="300" y="228" class="reveal" text-anchor="middle" fill="#7c3aed">
+      Left = Right.
+    </text>
+    <text x="300" y="244" class="small" text-anchor="middle" fill="#7c3aed">
+      Particle, you ARE the boundary.
+    </text>
+  </g>
+</svg>

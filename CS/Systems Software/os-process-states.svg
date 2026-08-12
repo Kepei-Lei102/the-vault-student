@@ -1,0 +1,56 @@
+<svg width="100%" viewBox="0 0 700 430" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="psP" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#7c3aed" stroke-width="1.7"/>
+    </marker>
+    <marker id="psB" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#2563eb" stroke-width="1.7"/>
+    </marker>
+    <marker id="psA" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#f59e0b" stroke-width="1.7"/>
+    </marker>
+    <marker id="psG" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#059669" stroke-width="1.7"/>
+    </marker>
+  </defs>
+
+  <text x="350" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The three lives of a process</text>
+
+  <!-- RUNNING top center -->
+  <rect x="270" y="52" width="160" height="54" rx="9" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2.2"/>
+  <text x="350" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c3aed">RUNNING</text>
+  <text x="350" y="93" text-anchor="middle" font-size="9.5" fill="#888">on the CPU (one per core)</text>
+
+  <!-- READY bottom left -->
+  <rect x="60" y="290" width="170" height="54" rx="9" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="2.2"/>
+  <text x="145" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">READY</text>
+  <text x="145" y="331" text-anchor="middle" font-size="9.5" fill="#888">could run — waiting for a turn</text>
+
+  <!-- BLOCKED bottom right -->
+  <rect x="470" y="290" width="170" height="54" rx="9" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2.2"/>
+  <text x="555" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">BLOCKED</text>
+  <text x="555" y="331" text-anchor="middle" font-size="9.5" fill="#888">waiting for I/O — can't use the CPU</text>
+
+  <!-- ready -> running (up the left, outer lane) -->
+  <path d="M 120,288 L 120,80 L 262,80" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#psB)"/>
+  <text x="128" y="150" font-size="10" fill="#2563eb">scheduler dispatches:</text>
+  <text x="128" y="163" font-size="10" fill="#2563eb">your turn (a time slice)</text>
+
+  <!-- running -> ready (inner lane down) -->
+  <path d="M 292,110 L 292,225 L 180,225 L 180,286" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#psP)"/>
+  <text x="300" y="150" font-size="10" fill="#7c3aed">time slice expires</text>
+  <text x="300" y="163" font-size="10" fill="#7c3aed">(the timer interrupt)</text>
+
+  <!-- running -> blocked (right side down) -->
+  <path d="M 408,110 L 408,225 L 520,225 L 520,286" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#psP)"/>
+  <text x="416" y="150" font-size="10" fill="#7c3aed">asks for I/O —</text>
+  <text x="416" y="163" font-size="10" fill="#7c3aed">must wait for it</text>
+
+  <!-- blocked -> ready (bottom lane) -->
+  <path d="M 468,332 L 240,332" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#psG)"/>
+  <text x="354" y="322" text-anchor="middle" font-size="10" fill="#059669">the I/O completes (device interrupt)</text>
+
+  <!-- the forbidden shortcut note -->
+  <text x="350" y="382" text-anchor="middle" font-size="10.5" fill="#dc2626">no arrow from BLOCKED straight to RUNNING: finished I/O earns you the queue, not the CPU</text>
+  <text x="350" y="408" text-anchor="middle" font-size="10.5" fill="#888">every arrow is an event — two are interrupts, one is a request, one is the scheduler's choice</text>
+</svg>

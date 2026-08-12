@@ -1,0 +1,62 @@
+<svg width="100%" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Height Distribution — Frequency Polygon</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="280" x2="470" y2="280" stroke="#888" stroke-width="1.5"/>
+  <line x1="70" y1="280" x2="70" y2="40" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Y-axis labels -->
+  <text x="60" y="284" text-anchor="end" font-size="11" fill="#888">0</text>
+  <text x="60" y="264" text-anchor="end" font-size="11" fill="#888">2</text>
+  <text x="60" y="244" text-anchor="end" font-size="11" fill="#888">4</text>
+  <text x="60" y="224" text-anchor="end" font-size="11" fill="#888">6</text>
+  <text x="60" y="204" text-anchor="end" font-size="11" fill="#888">8</text>
+  <text x="60" y="184" text-anchor="end" font-size="11" fill="#888">10</text>
+  <text x="60" y="164" text-anchor="end" font-size="11" fill="#888">12</text>
+
+  <!-- Y gridlines -->
+  <line x1="70" y1="260" x2="470" y2="260" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <line x1="70" y1="240" x2="470" y2="240" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <line x1="70" y1="220" x2="470" y2="220" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <line x1="70" y1="200" x2="470" y2="200" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <line x1="70" y1="180" x2="470" y2="180" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+  <line x1="70" y1="160" x2="470" y2="160" stroke="#888" stroke-width="0.3" stroke-dasharray="4,4"/>
+
+  <!-- X-axis labels (midpoints) -->
+  <text x="130" y="298" text-anchor="middle" font-size="11" fill="#888">135</text>
+  <text x="210" y="298" text-anchor="middle" font-size="11" fill="#888">145</text>
+  <text x="290" y="298" text-anchor="middle" font-size="11" fill="#888">155</text>
+  <text x="370" y="298" text-anchor="middle" font-size="11" fill="#888">165</text>
+  <text x="450" y="298" text-anchor="middle" font-size="11" fill="#888">175</text>
+
+  <!-- Axis labels -->
+  <text x="270" y="320" text-anchor="middle" font-size="12" fill="#888">Height (cm) — midpoints</text>
+  <text x="18" y="165" text-anchor="middle" font-size="12" fill="#888" transform="rotate(-90, 18, 165)">Frequency</text>
+
+  <!-- Frequency polygon line -->
+  <!-- Points: (135,0), (145,4), (155,9), (165,12), (175,5), (185,0) -->
+  <!-- Mapped: x: 135→130, 145→210, 155→290, 165→370, 175→450 -->
+  <!-- y: 0→280, 4→240, 9→190, 12→160, 5→230 -->
+  <!-- Extended endpoints at midpoints of empty classes -->
+  <polyline points="130,280 210,240 290,190 370,160 450,230"
+            fill="none" stroke="#2196F3" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Extended to axis -->
+  <polyline points="130,280 210,240" fill="none" stroke="#2196F3" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Data points -->
+  <circle cx="210" cy="240" r="5" fill="#2196F3" stroke="#2196F3" stroke-width="1.5"/>
+  <circle cx="290" cy="190" r="5" fill="#2196F3" stroke="#2196F3" stroke-width="1.5"/>
+  <circle cx="370" cy="160" r="5" fill="#2196F3" stroke="#2196F3" stroke-width="1.5"/>
+  <circle cx="450" cy="230" r="5" fill="#2196F3" stroke="#2196F3" stroke-width="1.5"/>
+
+  <!-- Data labels -->
+  <text x="210" y="233" text-anchor="middle" font-size="10" fill="#2196F3">(145, 4)</text>
+  <text x="290" y="183" text-anchor="middle" font-size="10" fill="#2196F3">(155, 9)</text>
+  <text x="370" y="153" text-anchor="middle" font-size="10" fill="#2196F3">(165, 12)</text>
+  <text x="450" y="223" text-anchor="middle" font-size="10" fill="#2196F3">(175, 5)</text>
+
+  <!-- Annotation -->
+  <text x="250" y="335" text-anchor="middle" font-size="10" fill="#888" opacity="0.6">Points plotted at class midpoints — joined with straight lines</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="frT" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L9,4.5 L1.5,8" fill="none" stroke="#0891b2" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The iron ring — 29 August 1831</text>
+
+  <!-- the ring -->
+  <circle cx="380" cy="160" r="74" fill="none" stroke="rgba(136,136,136,0.35)" stroke-width="30"/>
+  <text x="380" y="164" text-anchor="middle" font-size="11" fill="#888">soft iron ring</text>
+
+  <!-- flux arcs circulating the ring -->
+  <path d="M 380,90 A 70 70 0 0 1 448,155" fill="none" stroke="#0891b2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#frT)"/>
+  <path d="M 380,230 A 70 70 0 0 1 312,165" fill="none" stroke="#0891b2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#frT)"/>
+  <text x="380" y="248" text-anchor="middle" font-size="10" fill="#0891b2">changing flux, guided by the ring</text>
+
+  <!-- coil A (left limb, blue) -->
+  <ellipse cx="306" cy="120" rx="20" ry="8" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <ellipse cx="306" cy="140" rx="20" ry="8" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <ellipse cx="306" cy="160" rx="20" ry="8" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <ellipse cx="306" cy="180" rx="20" ry="8" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="288" y="98" text-anchor="end" font-size="11" font-weight="bold" fill="#2563eb">coil A</text>
+
+  <!-- left circuit: battery + switch -->
+  <line x1="286" y1="120" x2="170" y2="120" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="170" y1="120" x2="170" y2="180" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="286" y1="180" x2="240" y2="180" stroke="#2563eb" stroke-width="1.8"/>
+  <!-- battery -->
+  <line x1="160" y1="180" x2="180" y2="180" stroke="#2563eb" stroke-width="1.6"/>
+  <line x1="170" y1="180" x2="170" y2="180" stroke="#2563eb" stroke-width="1.6"/>
+  <line x1="158" y1="188" x2="182" y2="188" stroke="#2563eb" stroke-width="3.4"/>
+  <line x1="165" y1="196" x2="175" y2="196" stroke="#2563eb" stroke-width="2"/>
+  <line x1="170" y1="196" x2="170" y2="212" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="170" y1="212" x2="196" y2="212" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="140" y="196" text-anchor="end" font-size="10" fill="#888">battery</text>
+  <!-- switch (open lever) -->
+  <circle cx="200" cy="212" r="3" fill="#2563eb"/>
+  <line x1="200" y1="212" x2="226" y2="196" stroke="#2563eb" stroke-width="2.4"/>
+  <circle cx="230" cy="212" r="3" fill="#2563eb"/>
+  <line x1="230" y1="212" x2="240" y2="212" stroke="#2563eb" stroke-width="1.8"/>
+  <line x1="240" y1="212" x2="240" y2="180" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="215" y="234" text-anchor="middle" font-size="10" fill="#888">the switch</text>
+
+  <!-- coil B (right limb, green) -->
+  <ellipse cx="454" cy="120" rx="20" ry="8" fill="none" stroke="#059669" stroke-width="3"/>
+  <ellipse cx="454" cy="140" rx="20" ry="8" fill="none" stroke="#059669" stroke-width="3"/>
+  <ellipse cx="454" cy="160" rx="20" ry="8" fill="none" stroke="#059669" stroke-width="3"/>
+  <ellipse cx="454" cy="180" rx="20" ry="8" fill="none" stroke="#059669" stroke-width="3"/>
+  <text x="474" y="98" font-size="11" font-weight="bold" fill="#059669">coil B</text>
+
+  <!-- right circuit: galvanometer -->
+  <line x1="474" y1="120" x2="590" y2="120" stroke="#059669" stroke-width="1.8"/>
+  <line x1="590" y1="120" x2="590" y2="132" stroke="#059669" stroke-width="1.8"/>
+  <line x1="474" y1="180" x2="590" y2="180" stroke="#059669" stroke-width="1.8"/>
+  <line x1="590" y1="180" x2="590" y2="168" stroke="#059669" stroke-width="1.8"/>
+  <circle cx="590" cy="150" r="19" fill="none" stroke="#888" stroke-width="2"/>
+  <line x1="590" y1="150" x2="601" y2="139" stroke="#dc2626" stroke-width="2.4"/>
+  <text x="590" y="184" text-anchor="middle" font-size="9" fill="#888"> </text>
+  <text x="622" y="155" font-size="11" fill="#888">G</text>
+  <text x="648" y="128" font-size="10" fill="#888">no wire joins</text>
+  <text x="648" y="142" font-size="10" fill="#888">the two coils</text>
+
+  <!-- the three states -->
+  <circle cx="230" cy="322" r="17" fill="none" stroke="#888" stroke-width="1.8"/>
+  <line x1="230" y1="322" x2="242" y2="312" stroke="#dc2626" stroke-width="2.4"/>
+  <text x="230" y="356" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#059669">switch CLOSES</text>
+  <text x="230" y="370" text-anchor="middle" font-size="10" fill="#888">the needle kicks</text>
+
+  <circle cx="380" cy="322" r="17" fill="none" stroke="#888" stroke-width="1.8"/>
+  <line x1="380" y1="322" x2="380" y2="306" stroke="#dc2626" stroke-width="2.4"/>
+  <text x="380" y="356" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#888">HELD closed</text>
+  <text x="380" y="370" text-anchor="middle" font-size="10" fill="#888">nothing — steady flux is silent</text>
+
+  <circle cx="530" cy="322" r="17" fill="none" stroke="#888" stroke-width="1.8"/>
+  <line x1="530" y1="322" x2="518" y2="312" stroke="#dc2626" stroke-width="2.4"/>
+  <text x="530" y="356" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#f59e0b">switch OPENS</text>
+  <text x="530" y="370" text-anchor="middle" font-size="10" fill="#888">reverse kick</text>
+
+  <text x="380" y="394" text-anchor="middle" font-size="11.5" fill="#888">Ten years of hunting a steady effect — answered by the two moments everyone had walked past.</text>
+</svg>

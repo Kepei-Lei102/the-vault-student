@@ -1,0 +1,131 @@
+<svg width="100%" viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="llArrAmber" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ============ TOP: the logical list ============ -->
+  <text x="380" y="34" font-size="15" fill="#888" text-anchor="middle">the story the pointers tell — the logical list</text>
+  <text x="146" y="64" font-size="11" fill="#888" text-anchor="middle">data</text>
+  <text x="187" y="64" font-size="11" fill="#888" text-anchor="middle">next</text>
+
+  <text x="52" y="111" font-size="15" fill="#f59e0b">head</text>
+  <line x1="88" y1="106" x2="112" y2="106" stroke="#f59e0b" stroke-width="2.2" marker-end="url(#llArrAmber)"/>
+
+  <!-- nodes: [data | next] -->
+  <g stroke="#888" stroke-width="1.5">
+    <rect x="120" y="76" width="52" height="60" fill="rgba(8,145,178,0.18)"/><rect x="172" y="76" width="30" height="60" fill="none"/>
+    <rect x="270" y="76" width="52" height="60" fill="rgba(8,145,178,0.18)"/><rect x="322" y="76" width="30" height="60" fill="none"/>
+    <rect x="420" y="76" width="52" height="60" fill="rgba(8,145,178,0.18)"/><rect x="472" y="76" width="30" height="60" fill="none"/>
+    <rect x="570" y="76" width="52" height="60" fill="rgba(8,145,178,0.18)"/><rect x="622" y="76" width="30" height="60" fill="none"/>
+  </g>
+  <g font-size="20" fill="#0891b2" text-anchor="middle">
+    <text x="146" y="113">A</text><text x="296" y="113">B</text>
+    <text x="446" y="113">C</text><text x="596" y="113">D</text>
+  </g>
+  <g stroke="#f59e0b" stroke-width="2.2">
+    <line x1="187" y1="106" x2="263" y2="106" marker-end="url(#llArrAmber)"/>
+    <line x1="337" y1="106" x2="413" y2="106" marker-end="url(#llArrAmber)"/>
+    <line x1="487" y1="106" x2="563" y2="106" marker-end="url(#llArrAmber)"/>
+  </g>
+  <line x1="626" y1="132" x2="648" y2="80" stroke="#888" stroke-width="1.8"/>
+  <text x="637" y="158" font-size="11" fill="#888" text-anchor="middle">null: the chain ends</text>
+
+  <!-- ============ BOTTOM: the physical sea ============ -->
+  <text x="380" y="192" font-size="15" fill="#888" text-anchor="middle">where the nodes actually live — the sea of cells</text>
+
+  <!-- the memory strip, addresses 0..9 -->
+  <g stroke="#888" stroke-width="1.5">
+    <rect x="60"  y="250" width="64" height="60" fill="none"/>
+    <rect x="124" y="250" width="64" height="60" fill="rgba(8,145,178,0.18)"/>
+    <rect x="188" y="250" width="64" height="60" fill="none"/>
+    <rect x="252" y="250" width="64" height="60" fill="rgba(8,145,178,0.18)"/>
+    <rect x="316" y="250" width="64" height="60" fill="none"/>
+    <rect x="380" y="250" width="64" height="60" fill="none"/>
+    <rect x="444" y="250" width="64" height="60" fill="rgba(8,145,178,0.18)"/>
+    <rect x="508" y="250" width="64" height="60" fill="none"/>
+    <rect x="572" y="250" width="64" height="60" fill="rgba(8,145,178,0.18)"/>
+    <rect x="636" y="250" width="64" height="60" fill="none"/>
+  </g>
+  <!-- tiny addresses, top-left corners -->
+  <g font-size="10" fill="#888" opacity="0.8">
+    <text x="65" y="262">0</text><text x="129" y="262">1</text><text x="193" y="262">2</text>
+    <text x="257" y="262">3</text><text x="321" y="262">4</text><text x="385" y="262">5</text>
+    <text x="449" y="262">6</text><text x="513" y="262">7</text><text x="577" y="262">8</text>
+    <text x="641" y="262">9</text>
+  </g>
+  <!-- occupants: A@3 next 8 · B@8 next 1 · C@1 next 6 · D@6 null -->
+  <g font-size="20" fill="#0891b2" text-anchor="middle">
+    <text x="284" y="287">A</text><text x="604" y="287">B</text>
+    <text x="156" y="287">C</text><text x="476" y="287">D</text>
+  </g>
+  <g font-size="11" fill="#f59e0b" text-anchor="end">
+    <text x="312" y="304">8</text><text x="632" y="304">1</text>
+    <text x="184" y="304">6</text><text x="504" y="304">–1</text>
+  </g>
+
+  <text x="284" y="356" font-size="15" fill="#f59e0b" text-anchor="middle">head = 3</text>
+  <line x1="284" y1="340" x2="284" y2="314" stroke="#f59e0b" stroke-width="2.2" marker-end="url(#llArrAmber)"/>
+
+  <text x="380" y="404" font-size="15" fill="#888" text-anchor="middle">same list, two truths — the order lives in the pointers, not in the geography</text>
+
+  <!-- the walk: read the next value, jump, land (12s loop) -->
+  <g opacity="1">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.92;0.96;1" dur="12s" repeatCount="indefinite"/>
+    <path d="M 284 246 Q 444 210 600 246" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="321" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="321;321;0;0" keyTimes="0;0.19;0.27;1" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="603.9,246.9 592.2,248.8 594.2,240.0" fill="#f59e0b" opacity="1">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.27;0.29;1" dur="12s" repeatCount="indefinite"/>
+    </polygon>
+    <path d="M 604 244 Q 380 196 160 244" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="450" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="450;450;0;0" keyTimes="0;0.42;0.5;1" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="156.1,244.9 165.9,238.1 167.8,246.9" fill="#f59e0b" opacity="1">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.5;0.52;1" dur="12s" repeatCount="indefinite"/>
+    </polygon>
+    <path d="M 156 246 Q 313 228 470 246" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="317" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="317;317;0;0" keyTimes="0;0.65;0.73;1" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="474.0,246.5 462.5,249.7 463.6,240.7" fill="#f59e0b" opacity="1">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.73;0.75;1" dur="12s" repeatCount="indefinite"/>
+    </polygon>
+    <rect x="252" y="250" width="64" height="60" rx="2" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.05;0.07;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="118" y="74" width="86" height="64" rx="3" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.05;0.07;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="572" y="250" width="64" height="60" rx="2" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.29;0.31;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="268" y="74" width="86" height="64" rx="3" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.29;0.31;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="124" y="250" width="64" height="60" rx="2" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.52;0.54;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="418" y="74" width="86" height="64" rx="3" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.52;0.54;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="444" y="250" width="64" height="60" rx="2" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.75;0.77;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="568" y="74" width="86" height="64" rx="3" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.75;0.77;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="294" y="292" width="22" height="16" rx="2" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.15;0.17;0.27;0.3;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="614" y="292" width="22" height="16" rx="2" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.38;0.4;0.48;0.51;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="166" y="292" width="22" height="16" rx="2" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.61;0.63;0.71;0.74;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="482" y="292" width="26" height="16" rx="2" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.84;0.86;1" dur="12s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

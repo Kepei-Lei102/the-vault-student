@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 220" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .io { font-size: 13px; font-weight: 700; fill: #2563eb; }
+    .g { font-size: 11px; font-weight: 600; fill: #7c3aed; }
+    .sum { font-size: 13px; font-weight: 700; fill: #059669; }
+    .carry { font-size: 13px; font-weight: 700; fill: #f59e0b; }
+    .eq { font-size: 11px; }
+  </style>
+
+  <text x="235" y="24" class="title" text-anchor="middle">The half adder</text>
+
+  <!-- input labels -->
+  <text x="44" y="87" class="io" text-anchor="middle">A</text>
+  <text x="44" y="105" class="io" text-anchor="middle">B</text>
+
+  <!-- A rail: to XOR top pin + branch down to AND top pin -->
+  <line x1="56" y1="83" x2="183" y2="83" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="112" y1="83" x2="112" y2="159" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="112" y1="159" x2="175" y2="159" stroke="#9ca3af" stroke-width="1.4"/>
+  <circle cx="112" cy="83" r="3" fill="#9ca3af"/>
+
+  <!-- B rail: to XOR bottom pin + branch down to AND bottom pin -->
+  <line x1="56" y1="101" x2="183" y2="101" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="134" y1="101" x2="134" y2="181" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="134" y1="181" x2="175" y2="181" stroke="#9ca3af" stroke-width="1.4"/>
+  <circle cx="134" cy="101" r="3" fill="#9ca3af"/>
+
+  <!-- XOR gate -->
+  <path d="M 168 72 Q 181 92 168 112" fill="none" stroke="#7c3aed" stroke-width="1.6"/>
+  <path d="M 175 72 Q 195 78 217 92 Q 195 106 175 112 Q 187 92 175 72 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="198" y="96" class="g" text-anchor="middle">XOR</text>
+  <line x1="217" y1="92" x2="320" y2="92" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- AND gate -->
+  <path d="M 175 150 L 195 150 A 20 20 0 0 1 195 190 L 175 190 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="190" y="174" class="g" text-anchor="middle">AND</text>
+  <line x1="215" y1="170" x2="320" y2="170" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- outputs -->
+  <text x="328" y="88" class="sum" text-anchor="start">Sum</text>
+  <text x="328" y="103" class="eq" text-anchor="start">= A XOR B</text>
+  <text x="328" y="166" class="carry" text-anchor="start">Carry</text>
+  <text x="328" y="181" class="eq" text-anchor="start">= A AND B</text>
+
+  <text x="235" y="212" class="eq" text-anchor="middle">two inputs, no carry-in -- good only for the rightmost column of a sum</text>
+</svg>

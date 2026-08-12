@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">
+  <!-- Triangle vertices: A (bottom-left, angle θ), B (bottom-right, right angle), C (top) -->
+  <!-- A = (60, 280), B = (440, 280), C = (440, 80) -->
+
+  <!-- Triangle fill -->
+  <polygon points="60,280 440,280 440,80" fill="rgba(100,150,220,0.12)" stroke="#888" stroke-width="2"/>
+
+  <!-- Right angle square at B -->
+  <polyline points="420,280 420,260 440,260" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Angle arc at A (θ) -->
+  <path d="M 110 280 A 50 50 0 0 0 105.8 253.7" fill="none" stroke="#c06" stroke-width="2"/>
+  <text x="120" y="268" fill="#c06" font-size="18" font-style="italic">θ</text>
+
+  <!-- Side labels -->
+  <!-- Opposite (BC), right side -->
+  <text x="455" y="185" fill="#888" font-style="italic">opposite</text>
+  <text x="455" y="205" fill="#888" font-size="13">(to θ)</text>
+
+  <!-- Adjacent (AB), bottom -->
+  <text x="250" y="305" fill="#888" font-style="italic" text-anchor="middle">adjacent (to θ)</text>
+
+  <!-- Hypotenuse (AC), slanted -->
+  <text x="200" y="170" fill="#888" font-style="italic" transform="rotate(-28 200 170)">hypotenuse</text>
+
+  <!-- Vertex labels -->
+  <text x="45" y="290" fill="#888" font-size="14">A</text>
+  <text x="446" y="295" fill="#888" font-size="14">B</text>
+  <text x="446" y="75" fill="#888" font-size="14">C</text>
+
+  <!-- Formula panel below -->
+  <text x="60" y="325" fill="#888" font-size="15">sin θ = opp/hyp &#160;&#160;&#160; cos θ = adj/hyp &#160;&#160;&#160; tan θ = opp/adj</text>
+</svg>

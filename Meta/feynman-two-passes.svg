@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 352" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .sub   { font-size: 12px; }
+    .head  { font-size: 15px; font-weight: 700; }
+    .body  { font-size: 12.5px; }
+    .note  { font-size: 12px; font-style: italic; }
+  </style>
+
+  <text x="380" y="30" class="title" text-anchor="middle">Three kinds of "knowing"</text>
+  <text x="380" y="52" class="sub" text-anchor="middle">every concept φ can be COPIED (recited) or INTERPRETED (rebuilt) — or both</text>
+
+  <!-- box 1: copy only -> inert -->
+  <rect x="24" y="84" width="224" height="156" rx="9" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="136" y="116" class="head" text-anchor="middle" fill="#f59e0b">COPY only</text>
+  <text x="136" y="150" class="body" text-anchor="middle">-&gt; inert knowledge</text>
+  <text x="136" y="186" class="body" text-anchor="middle">you can recite it</text>
+  <text x="136" y="206" class="body" text-anchor="middle">— but can't use it</text>
+
+  <!-- box 2: interpret only -> sterile -->
+  <rect x="268" y="84" width="224" height="156" rx="9" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="116" class="head" text-anchor="middle" fill="#2563eb">INTERPRET only</text>
+  <text x="380" y="150" class="body" text-anchor="middle">-&gt; sterile knowledge</text>
+  <text x="380" y="186" class="body" text-anchor="middle">you understand it</text>
+  <text x="380" y="206" class="body" text-anchor="middle">— but can't explain it</text>
+
+  <!-- box 3: both -> self-replicating (the goal) -->
+  <rect x="512" y="84" width="224" height="156" rx="9" fill="rgba(5,150,105,0.14)" stroke="#059669" stroke-width="3.5"/>
+  <text x="624" y="116" class="head" text-anchor="middle" fill="#059669">INTERPRET + COPY</text>
+  <text x="624" y="148" class="body" text-anchor="middle" fill="#059669">-&gt; self-replicating</text>
+  <text x="624" y="166" class="body" text-anchor="middle" fill="#059669">knowledge</text>
+  <text x="624" y="196" class="body" text-anchor="middle">build it AND hand it on</text>
+  <text x="624" y="224" class="note" text-anchor="middle" fill="#059669">the goal</text>
+
+  <text x="380" y="296" class="note" text-anchor="middle">"What I cannot create, I do not understand."  — Feynman</text>
+  <text x="380" y="324" class="sub" text-anchor="middle">Understanding is the interpret pass; mastery is being able to copy it on, too.</text>
+</svg>

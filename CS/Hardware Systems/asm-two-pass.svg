@@ -1,0 +1,75 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tpG" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#059669" stroke-width="1.8"/>
+    </marker>
+    <marker id="tpA" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#f59e0b" stroke-width="1.8"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The two-pass assembler — because of one forward reference</text>
+
+  <!-- source listing -->
+  <text x="130" y="58" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#888">source</text>
+  <rect x="40" y="66" width="180" height="180" rx="8" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.4"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#888">
+    <text x="54" y="90">100        LDD 60</text>
+    <text x="54" y="112">101        CMP #0</text>
+    <text x="54" y="134" fill="#dc2626">102        JPE DONE ?</text>
+    <text x="54" y="156">103        DEC ACC</text>
+    <text x="54" y="178">104        JMP 100</text>
+    <text x="54" y="200" fill="#0891b2">105 DONE:  OUT</text>
+    <text x="54" y="222">106        END</text>
+  </g>
+  <text x="130" y="268" text-anchor="middle" font-size="10" fill="#dc2626">line 102 uses DONE before</text>
+  <text x="130" y="282" text-anchor="middle" font-size="10" fill="#dc2626">line 105 defines it — one pass fails</text>
+
+  <!-- pass 1 -->
+  <line x1="228" y1="120" x2="312" y2="120" stroke="#059669" stroke-width="2" marker-end="url(#tpG)"/>
+  <text x="270" y="106" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#059669">PASS 1</text>
+  <text x="270" y="136" text-anchor="middle" font-size="9.5" fill="#059669">count addresses,</text>
+  <text x="270" y="149" text-anchor="middle" font-size="9.5" fill="#059669">collect labels only</text>
+
+  <!-- symbol table -->
+  <text x="392" y="58" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#059669">symbol table</text>
+  <rect x="320" y="66" width="145" height="72" rx="8" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.6"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#888">
+    <text x="334" y="94">label   addr</text>
+    <text x="334" y="120">DONE  :  105</text>
+  </g>
+
+  <!-- pass 2 -->
+  <line x1="392" y1="146" x2="392" y2="180" stroke="#f59e0b" stroke-width="2" marker-end="url(#tpA)"/>
+  <line x1="228" y1="200" x2="312" y2="200" stroke="#f59e0b" stroke-width="2" marker-end="url(#tpA)"/>
+  <text x="270" y="186" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#f59e0b">PASS 2</text>
+  <text x="270" y="216" text-anchor="middle" font-size="9.5" fill="#f59e0b">translate everything,</text>
+  <text x="270" y="229" text-anchor="middle" font-size="9.5" fill="#f59e0b">table in hand</text>
+
+  <!-- machine code output -->
+  <text x="392" y="200" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#f59e0b">machine code</text>
+  <rect x="320" y="208" width="145" height="160" rx="8" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" stroke-width="1.6"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#888">
+    <text x="334" y="232">100  1E 3C</text>
+    <text x="334" y="254">101  30 00</text>
+    <text x="334" y="276" fill="#f59e0b">102  41 69</text>
+    <text x="334" y="298">103  0D 00</text>
+    <text x="334" y="320">104  40 64</text>
+    <text x="334" y="342">105  0B 00</text>
+  </g>
+
+  <!-- explanation column -->
+  <text x="510" y="94" font-size="11" fill="#888">Pass 1 never translates —</text>
+  <text x="510" y="110" font-size="11" fill="#888">it walks the source with an</text>
+  <text x="510" y="126" font-size="11" fill="#888">address counter, noting where</text>
+  <text x="510" y="142" font-size="11" fill="#888">each label will live.</text>
+
+  <text x="510" y="250" font-size="11" fill="#888">Pass 2 substitutes: mnemonics</text>
+  <text x="510" y="266" font-size="11" fill="#888">via the fixed opcode table,</text>
+  <text x="510" y="282" font-size="11" fill="#888">labels via the symbol table —</text>
+  <text x="510" y="298" font-size="11" fill="#f59e0b">JPE DONE becomes JPE 105 (69</text>
+  <text x="510" y="314" font-size="11" fill="#f59e0b">in hex) — the forward reference</text>
+  <text x="510" y="330" font-size="11" fill="#f59e0b">resolves painlessly.</text>
+
+  <text x="380" y="392" text-anchor="middle" font-size="11.5" fill="#888">Why two passes? Because a jump may name a label defined later — read once to learn the names, once more to use them.</text>
+</svg>

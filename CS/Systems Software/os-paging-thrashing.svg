@@ -1,0 +1,59 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="pgB" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+    </marker>
+    <marker id="pgR" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Paging — the illusion of one tidy memory, built from scattered pieces</text>
+
+  <!-- process's logical view -->
+  <text x="120" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">what the process sees</text>
+  <text x="120" y="76" text-anchor="middle" font-size="9" fill="#888">its own tidy memory, in fixed pages</text>
+  <g font-size="10">
+    <rect x="70" y="86"  width="100" height="30" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/><text x="120" y="105" text-anchor="middle" fill="#888">page 0</text>
+    <rect x="70" y="116" width="100" height="30" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/><text x="120" y="135" text-anchor="middle" fill="#888">page 1</text>
+    <rect x="70" y="146" width="100" height="30" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/><text x="120" y="165" text-anchor="middle" fill="#888">page 2</text>
+    <rect x="70" y="176" width="100" height="30" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/><text x="120" y="195" text-anchor="middle" fill="#888">page 3</text>
+    <rect x="70" y="206" width="100" height="30" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/><text x="120" y="225" text-anchor="middle" fill="#888">page 4</text>
+  </g>
+
+  <!-- physical RAM -->
+  <text x="390" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#059669">real RAM frames</text>
+  <text x="390" y="76" text-anchor="middle" font-size="9" fill="#888">any page fits any free frame — order scrambled</text>
+  <g font-size="10">
+    <rect x="340" y="86"  width="100" height="30" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="390" y="105" text-anchor="middle" fill="#888">page 2</text>
+    <rect x="340" y="116" width="100" height="30" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="1.2"/><text x="390" y="135" text-anchor="middle" fill="#888">(other process)</text>
+    <rect x="340" y="146" width="100" height="30" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="390" y="165" text-anchor="middle" fill="#888">page 0</text>
+    <rect x="340" y="176" width="100" height="30" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="1.2"/><text x="390" y="195" text-anchor="middle" fill="#888">(other process)</text>
+    <rect x="340" y="206" width="100" height="30" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="390" y="225" text-anchor="middle" fill="#888">page 1</text>
+  </g>
+
+  <!-- disk -->
+  <text x="633" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">disk (swap space)</text>
+  <g font-size="10">
+    <rect x="583" y="130" width="100" height="30" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="633" y="149" text-anchor="middle" fill="#888">page 3</text>
+    <rect x="583" y="160" width="100" height="30" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="633" y="179" text-anchor="middle" fill="#888">page 4</text>
+  </g>
+  <text x="633" y="210" text-anchor="middle" font-size="9" fill="#888">rarely-used pages parked here —</text>
+  <text x="633" y="222" text-anchor="middle" font-size="9" fill="#888">thousands of times slower than RAM</text>
+
+  <!-- mapping arrows: page -> frame -->
+  <line x1="172" y1="101" x2="332" y2="161" stroke="#2563eb" stroke-width="1.5" marker-end="url(#pgB)"/>
+  <line x1="172" y1="131" x2="332" y2="221" stroke="#2563eb" stroke-width="1.5" marker-end="url(#pgB)"/>
+  <line x1="172" y1="161" x2="332" y2="101" stroke="#2563eb" stroke-width="1.5" marker-end="url(#pgB)"/>
+  <path d="M 172,191 L 250,191 L 250,256 L 498,256 L 498,148 L 573,148" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#pgB)"/>
+  <path d="M 172,221 L 242,221 L 242,264 L 506,264 L 506,178 L 573,178" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#pgB)"/>
+
+  <!-- page fault -->
+  <text x="255" y="292" font-size="10.5" font-weight="bold" fill="#dc2626">the page fault:</text>
+  <text x="255" y="306" font-size="10" fill="#dc2626">touch page 3 — it's on disk. The OS must fetch it,</text>
+  <text x="255" y="320" font-size="10" fill="#dc2626">evicting some RAM page to make room.</text>
+
+  <text x="380" y="346" text-anchor="middle" font-size="10.5" fill="#888">virtual memory = RAM as a cache for a bigger pretend memory; locality keeps the pretence cheap.</text>
+  <text x="380" y="364" text-anchor="middle" font-size="10.5" fill="#dc2626">THRASHING: too many processes, every fetch evicts a page someone needs next — all swap, no work.</text>
+  <text x="380" y="382" text-anchor="middle" font-size="10.5" fill="#888">(segmentation slices by the program's logic instead — variable-size code / stack / data segments)</text>
+</svg>

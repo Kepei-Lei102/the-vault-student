@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 210" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .name { font-size: 14px; font-weight: 600; }
+    .note { font-size: 11.5px; }
+    .in   { font-size: 12px; }
+  </style>
+
+  <defs>
+    <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- 1 — Terminator -->
+  <rect x="20" y="30" width="118" height="44" rx="22"
+        fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="2"/>
+  <text x="79" y="57" class="in" text-anchor="middle">START / STOP</text>
+  <text x="79" y="103" class="name" text-anchor="middle">Terminator</text>
+  <text x="79" y="122" class="note" text-anchor="middle">where it begins</text>
+  <text x="79" y="138" class="note" text-anchor="middle">and ends</text>
+
+  <!-- 2 — Process -->
+  <rect x="176" y="30" width="118" height="44" rx="2"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="235" y="57" class="in" text-anchor="middle">total = 0</text>
+  <text x="235" y="103" class="name" text-anchor="middle">Process</text>
+  <text x="235" y="122" class="note" text-anchor="middle">something is</text>
+  <text x="235" y="138" class="note" text-anchor="middle">done or changed</text>
+
+  <!-- 3 — Input / Output -->
+  <path d="M 344 74 L 364 30 L 462 30 L 442 74 Z"
+        fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+  <text x="403" y="57" class="in" text-anchor="middle">INPUT age</text>
+  <text x="403" y="103" class="name" text-anchor="middle">Input / Output</text>
+  <text x="403" y="122" class="note" text-anchor="middle">something crosses</text>
+  <text x="403" y="138" class="note" text-anchor="middle">the boundary</text>
+
+  <!-- 4 — Decision -->
+  <path d="M 571 22 L 639 52 L 571 82 L 503 52 Z"
+        fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="571" y="57" class="in" text-anchor="middle">age &#8805; 18 ?</text>
+  <text x="571" y="103" class="name" text-anchor="middle">Decision</text>
+  <text x="571" y="122" class="note" text-anchor="middle">two ways out —</text>
+  <text x="571" y="138" class="note" text-anchor="middle">and only two</text>
+
+  <!-- 5 — Subroutine -->
+  <rect x="680" y="30" width="130" height="44" rx="2"
+        fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <line x1="691" y1="30" x2="691" y2="74" stroke="#0891b2" stroke-width="2"/>
+  <line x1="799" y1="30" x2="799" y2="74" stroke="#0891b2" stroke-width="2"/>
+  <text x="745" y="57" class="in" text-anchor="middle">Validate()</text>
+  <text x="745" y="103" class="name" text-anchor="middle">Subroutine</text>
+  <text x="745" y="122" class="note" text-anchor="middle">a call to a chart</text>
+  <text x="745" y="138" class="note" text-anchor="middle">drawn elsewhere</text>
+
+  <!-- 6 — Flow line -->
+  <line x1="855" y1="52" x2="920" y2="52" stroke="#888" stroke-width="2"
+        marker-end="url(#fa)"/>
+  <text x="888" y="103" class="name" text-anchor="middle">Flow line</text>
+  <text x="888" y="122" class="note" text-anchor="middle">control passes</text>
+  <text x="888" y="138" class="note" text-anchor="middle">this way</text>
+
+  <line x1="20" y1="168" x2="920" y2="168" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="470" y="192" class="note" text-anchor="middle">Six shapes, and the shape itself is a claim about what the step does. A rectangle that asks a question is a marked error, not a stylistic choice.</text>
+</svg>

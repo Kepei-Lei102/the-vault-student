@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .form { font-size: 17px; font-weight: 600; }
+    .sub  { font-size: 12.5px; }
+    .val  { font-size: 14px; }
+    .idx  { font-size: 12.5px; font-weight: 600; }
+    .addr { font-size: 11px; opacity: 0.75; }
+    .note { font-size: 12.5px; }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7.5" markerHeight="7.5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="440" y="46" class="form" text-anchor="middle">address(7)  =  5000  +  (7 &#8722; 1) &#215; 4  =  5024</text>
+  <text x="440" y="70" class="sub" text-anchor="middle">base + (index &#8722; lower bound) &#215; size of one element</text>
+
+  <line x1="562" y1="86" x2="562" y2="144" stroke="#f59e0b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- index row -->
+  <text x="106" y="136" class="idx" text-anchor="middle" fill="#0891b2">1</text>
+  <text x="178" y="136" class="idx" text-anchor="middle" fill="#0891b2">2</text>
+  <text x="250" y="136" class="idx" text-anchor="middle" fill="#0891b2">3</text>
+  <text x="322" y="136" class="idx" text-anchor="middle" fill="#0891b2">4</text>
+  <text x="394" y="136" class="idx" text-anchor="middle" fill="#0891b2">5</text>
+  <text x="466" y="136" class="idx" text-anchor="middle" fill="#0891b2">6</text>
+  <text x="538" y="136" class="idx" text-anchor="middle" fill="#f59e0b">7</text>
+  <text x="610" y="136" class="idx" text-anchor="middle" fill="#0891b2">8</text>
+  <text x="682" y="136" class="idx" text-anchor="middle" fill="#0891b2">9</text>
+  <text x="754" y="136" class="idx" text-anchor="middle" fill="#0891b2">10</text>
+
+  <!-- cells -->
+  <rect x="70"  y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="142" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="214" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="286" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="358" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="430" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="502" y="150" width="72" height="56" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="2.4"/>
+  <rect x="574" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="646" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="718" y="150" width="72" height="56" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+
+  <!-- values -->
+  <text x="106" y="184" class="val" text-anchor="middle">74</text>
+  <text x="178" y="184" class="val" text-anchor="middle">68</text>
+  <text x="250" y="184" class="val" text-anchor="middle">91</text>
+  <text x="322" y="184" class="val" text-anchor="middle">55</text>
+  <text x="394" y="184" class="val" text-anchor="middle">83</text>
+  <text x="466" y="184" class="val" text-anchor="middle">70</text>
+  <text x="538" y="184" class="val" text-anchor="middle">62</text>
+  <text x="610" y="184" class="val" text-anchor="middle">79</text>
+  <text x="682" y="184" class="val" text-anchor="middle">88</text>
+  <text x="754" y="184" class="val" text-anchor="middle">45</text>
+
+  <!-- addresses -->
+  <text x="106" y="224" class="addr" text-anchor="middle">5000</text>
+  <text x="178" y="224" class="addr" text-anchor="middle">5004</text>
+  <text x="250" y="224" class="addr" text-anchor="middle">5008</text>
+  <text x="322" y="224" class="addr" text-anchor="middle">5012</text>
+  <text x="394" y="224" class="addr" text-anchor="middle">5016</text>
+  <text x="466" y="224" class="addr" text-anchor="middle">5020</text>
+  <text x="538" y="224" class="addr" text-anchor="middle">5024</text>
+  <text x="610" y="224" class="addr" text-anchor="middle">5028</text>
+  <text x="682" y="224" class="addr" text-anchor="middle">5032</text>
+  <text x="754" y="224" class="addr" text-anchor="middle">5036</text>
+
+  <!-- size bracket between two cells -->
+  <line x1="106" y1="244" x2="178" y2="244" stroke="#059669" stroke-width="1.6"/>
+  <line x1="106" y1="238" x2="106" y2="250" stroke="#059669" stroke-width="1.6"/>
+  <line x1="178" y1="238" x2="178" y2="250" stroke="#059669" stroke-width="1.6"/>
+  <text x="196" y="248" class="note" fill="#059669">size = 4 bytes, the same for every element</text>
+
+  <line x1="70" y1="286" x2="810" y2="286" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="440" y="308" class="note" text-anchor="middle">The array never searches. It computes the address and goes straight there &#8212; one multiply, one add.</text>
+  <text x="440" y="330" class="note" text-anchor="middle">No other element is read, so reaching the millionth costs exactly what reaching the first costs.</text>
+  <text x="440" y="352" class="note" text-anchor="middle">Equal spacing is what makes the multiplication legal, which is why every element must be the same type.</text>
+</svg>

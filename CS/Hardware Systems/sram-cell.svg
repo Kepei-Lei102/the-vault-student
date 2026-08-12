@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .note { font-size: 11.5px; opacity: 0.8; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; font-size: 14px; }
+  </style>
+
+  <text x="270" y="26" class="title" text-anchor="middle">SRAM cell — a bit that holds itself</text>
+  <text x="270" y="46" class="note" text-anchor="middle">two inverters in a loop -&gt; two stable states (no refresh)</text>
+
+  <!-- word line -->
+  <line x1="120" y1="72" x2="420" y2="72" stroke="#888" stroke-width="1.8"/>
+  <text x="120" y="64" class="label" text-anchor="start">word line (row select)</text>
+
+  <!-- left bit line + access transistor -->
+  <line x1="132" y1="140" x2="132" y2="220" stroke="#888" stroke-width="1.8"/>
+  <text x="132" y="236" class="note" text-anchor="middle">bit line</text>
+  <line x1="132" y1="180" x2="164" y2="180" stroke="#888" stroke-width="1.8"/>
+  <rect x="164" y="169" width="24" height="22" rx="3" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="176" y="185" class="math" text-anchor="middle" fill="#7c3aed">T</text>
+  <line x1="176" y1="169" x2="176" y2="72" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="188" y1="180" x2="228" y2="180" stroke="#888" stroke-width="1.8"/>
+
+  <!-- right bit line + access transistor -->
+  <line x1="408" y1="140" x2="408" y2="220" stroke="#888" stroke-width="1.8"/>
+  <text x="408" y="236" class="note" text-anchor="middle">bit line</text>
+  <line x1="376" y1="180" x2="408" y2="180" stroke="#888" stroke-width="1.8"/>
+  <rect x="352" y="169" width="24" height="22" rx="3" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="364" y="185" class="math" text-anchor="middle" fill="#7c3aed">T</text>
+  <line x1="364" y1="169" x2="364" y2="72" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="312" y1="180" x2="352" y2="180" stroke="#888" stroke-width="1.8"/>
+
+  <!-- inverter A (top, points right) -->
+  <polygon points="243,128 243,172 298,150" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="259" y="154" class="note" text-anchor="middle" fill="#7c3aed">NOT</text>
+  <!-- inverter B (bottom, points left) -->
+  <polygon points="298,188 298,232 243,210" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="281" y="214" class="note" text-anchor="middle" fill="#7c3aed">NOT</text>
+
+  <!-- left loop wire = Q-bar -->
+  <polyline points="243,150 228,150 228,210 243,210" fill="none" stroke="#888" stroke-width="1.8"/>
+  <text x="222" y="158" class="math" text-anchor="end">Q</text>
+  <line x1="209" y1="146" x2="222" y2="146" stroke="#888" stroke-width="1.2"/>
+
+  <!-- right loop wire = Q -->
+  <polyline points="298,150 312,150 312,210 298,210" fill="none" stroke="#059669" stroke-width="1.8"/>
+  <text x="318" y="158" class="math" text-anchor="start" fill="#059669">Q</text>
+
+  <text x="270" y="286" class="note" text-anchor="middle">each NOT drives the other -&gt; the loop locks into 0 or 1</text>
+  <text x="270" y="310" class="label" text-anchor="middle" fill="#7c3aed">6 transistors = 1 bit  ·  holds itself  ·  no refresh</text>
+  <text x="270" y="328" class="note" text-anchor="middle">right node = Q  ·  left node = Q&#772; (NOT Q)  ·  the two are always opposite</text>
+</svg>

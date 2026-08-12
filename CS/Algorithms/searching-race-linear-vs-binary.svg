@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724 292" width="100%">
+<!-- stack: SMIL -->
+<style>
+  text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+  .val { font-size: 15px; }
+  .idx { font-size: 10px; opacity: 0.55; }
+  .row { font-size: 14px; font-weight: 600; }
+  .tally { font-size: 13px; font-weight: 600; }
+  .cap { font-size: 12.5px; }
+  .target { font-size: 14px; font-weight: 600; }
+</style>
+<text x="362" y="22" text-anchor="middle" class="target">searching a sorted list for target = 57 — it lives at index 12</text>
+<text x="12" y="44" class="row">Linear search<tspan class="cap" font-weight="400"> — check every cell in turn</tspan></text>
+<rect x="12" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="32" y="77" text-anchor="middle" class="val">3</text>
+<text x="32" y="106" text-anchor="middle" class="idx">0</text>
+<rect x="56" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="76" y="77" text-anchor="middle" class="val">7</text>
+<text x="76" y="106" text-anchor="middle" class="idx">1</text>
+<rect x="100" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="120" y="77" text-anchor="middle" class="val">12</text>
+<text x="120" y="106" text-anchor="middle" class="idx">2</text>
+<rect x="144" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="164" y="77" text-anchor="middle" class="val">18</text>
+<text x="164" y="106" text-anchor="middle" class="idx">3</text>
+<rect x="188" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="208" y="77" text-anchor="middle" class="val">21</text>
+<text x="208" y="106" text-anchor="middle" class="idx">4</text>
+<rect x="232" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="252" y="77" text-anchor="middle" class="val">26</text>
+<text x="252" y="106" text-anchor="middle" class="idx">5</text>
+<rect x="276" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="296" y="77" text-anchor="middle" class="val">30</text>
+<text x="296" y="106" text-anchor="middle" class="idx">6</text>
+<rect x="320" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="340" y="77" text-anchor="middle" class="val">34</text>
+<text x="340" y="106" text-anchor="middle" class="idx">7</text>
+<rect x="364" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="384" y="77" text-anchor="middle" class="val">39</text>
+<text x="384" y="106" text-anchor="middle" class="idx">8</text>
+<rect x="408" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="428" y="77" text-anchor="middle" class="val">45</text>
+<text x="428" y="106" text-anchor="middle" class="idx">9</text>
+<rect x="452" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="472" y="77" text-anchor="middle" class="val">48</text>
+<text x="472" y="106" text-anchor="middle" class="idx">10</text>
+<rect x="496" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="516" y="77" text-anchor="middle" class="val">52</text>
+<text x="516" y="106" text-anchor="middle" class="idx">11</text>
+<rect x="540" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="560" y="77" text-anchor="middle" class="val">57</text>
+<text x="560" y="106" text-anchor="middle" class="idx">12</text>
+<rect x="584" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="604" y="77" text-anchor="middle" class="val">61</text>
+<text x="604" y="106" text-anchor="middle" class="idx">13</text>
+<rect x="628" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="648" y="77" text-anchor="middle" class="val">66</text>
+<text x="648" y="106" text-anchor="middle" class="idx">14</text>
+<rect x="672" y="52" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="692" y="77" text-anchor="middle" class="val">70</text>
+<text x="692" y="106" text-anchor="middle" class="idx">15</text>
+<rect x="12" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.06011;0.06011;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="56" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.12022;0.12022;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="100" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.18033;0.18033;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="144" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.24044;0.24044;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="188" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.30055;0.30055;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="232" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.36066;0.36066;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="276" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.42077;0.42077;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="320" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.48087;0.48087;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="364" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.54098;0.54098;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="408" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.60109;0.60109;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="452" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.6612;0.6612;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="496" y="52" width="40" height="40" rx="5" fill="rgba(37,99,235,0.2)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.72131;0.72131;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="540" y="52" width="40" height="40" rx="5" fill="rgba(5,150,105,0.3)" stroke="rgb(5,150,105)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.78142;0.78142;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect y="49" width="46" height="46" rx="6" fill="none" stroke="#7c3aed" stroke-width="3" x="-3" transform="translate(9,0)"><animateTransform attributeName="transform" type="translate" calcMode="discrete" dur="9.15s" repeatCount="indefinite" keyTimes="0.0;0.06011;0.12022;0.18033;0.24044;0.30055;0.36066;0.42077;0.48087;0.54098;0.60109;0.6612;0.72131;1.0" values="9,0;53,0;97,0;141,0;185,0;229,0;273,0;317,0;361,0;405,0;449,0;493,0;537,0;537,0"/></rect>
+<rect x="12" y="116" width="572" height="12" rx="3" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="0.8"/>
+<rect x="12" y="116" height="12" rx="3" fill="rgba(245,158,11,0.30)" stroke="rgb(245,158,11)" stroke-width="1" width="0"><animate attributeName="width" calcMode="discrete" dur="9.15s" repeatCount="indefinite" keyTimes="0.0;0.06011;0.12022;0.18033;0.24044;0.30055;0.36066;0.42077;0.48087;0.54098;0.60109;0.6612;0.72131;0.78142;1.0" values="0;44;88;132;176;220;264;308;352;396;440;484;528;572;572"/></rect>
+<text x="712" y="44" text-anchor="end" class="tally" fill="#f59e0b" opacity="0">13 comparisons<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.78142;0.78142;1" values="0;0;1;1" calcMode="discrete"/></text>
+<text x="12" y="158" class="row">Binary search<tspan class="cap" font-weight="400"> — halve the window each look (needs sorted data)</tspan></text>
+<rect x="12" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="32" y="191" text-anchor="middle" class="val">3</text>
+<text x="32" y="220" text-anchor="middle" class="idx">0</text>
+<rect x="56" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="76" y="191" text-anchor="middle" class="val">7</text>
+<text x="76" y="220" text-anchor="middle" class="idx">1</text>
+<rect x="100" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="120" y="191" text-anchor="middle" class="val">12</text>
+<text x="120" y="220" text-anchor="middle" class="idx">2</text>
+<rect x="144" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="164" y="191" text-anchor="middle" class="val">18</text>
+<text x="164" y="220" text-anchor="middle" class="idx">3</text>
+<rect x="188" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="208" y="191" text-anchor="middle" class="val">21</text>
+<text x="208" y="220" text-anchor="middle" class="idx">4</text>
+<rect x="232" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="252" y="191" text-anchor="middle" class="val">26</text>
+<text x="252" y="220" text-anchor="middle" class="idx">5</text>
+<rect x="276" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="296" y="191" text-anchor="middle" class="val">30</text>
+<text x="296" y="220" text-anchor="middle" class="idx">6</text>
+<rect x="320" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="340" y="191" text-anchor="middle" class="val">34</text>
+<text x="340" y="220" text-anchor="middle" class="idx">7</text>
+<rect x="364" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="384" y="191" text-anchor="middle" class="val">39</text>
+<text x="384" y="220" text-anchor="middle" class="idx">8</text>
+<rect x="408" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="428" y="191" text-anchor="middle" class="val">45</text>
+<text x="428" y="220" text-anchor="middle" class="idx">9</text>
+<rect x="452" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="472" y="191" text-anchor="middle" class="val">48</text>
+<text x="472" y="220" text-anchor="middle" class="idx">10</text>
+<rect x="496" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="516" y="191" text-anchor="middle" class="val">52</text>
+<text x="516" y="220" text-anchor="middle" class="idx">11</text>
+<rect x="540" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="560" y="191" text-anchor="middle" class="val">57</text>
+<text x="560" y="220" text-anchor="middle" class="idx">12</text>
+<rect x="584" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="604" y="191" text-anchor="middle" class="val">61</text>
+<text x="604" y="220" text-anchor="middle" class="idx">13</text>
+<rect x="628" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="648" y="191" text-anchor="middle" class="val">66</text>
+<text x="648" y="220" text-anchor="middle" class="idx">14</text>
+<rect x="672" y="166" width="40" height="40" rx="5" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+<text x="692" y="191" text-anchor="middle" class="val">70</text>
+<text x="692" y="220" text-anchor="middle" class="idx">15</text>
+<rect x="12" y="163" width="352" height="46" rx="5" fill="rgba(136,136,136,0.34)" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.06011;0.06011;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="12" y="163" width="528" height="46" rx="5" fill="rgba(136,136,136,0.34)" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.12022;0.12022;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="584" y="163" width="128" height="46" rx="5" fill="rgba(136,136,136,0.34)" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.18033;0.18033;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<rect x="320" y="166" width="40" height="40" rx="5" fill="rgba(37,99,235,0.22)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.06011;0.06011;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<text x="340" y="191" text-anchor="middle" class="val">34<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.06011;0.06011;1" values="0;0;1;1" calcMode="discrete"/></text>
+<rect x="496" y="166" width="40" height="40" rx="5" fill="rgba(37,99,235,0.22)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.12022;0.12022;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<text x="516" y="191" text-anchor="middle" class="val">52<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.12022;0.12022;1" values="0;0;1;1" calcMode="discrete"/></text>
+<rect x="584" y="166" width="40" height="40" rx="5" fill="rgba(37,99,235,0.22)" stroke="rgb(37,99,235)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.18033;0.18033;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<text x="604" y="191" text-anchor="middle" class="val">61<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.18033;0.18033;1" values="0;0;1;1" calcMode="discrete"/></text>
+<rect x="540" y="166" width="40" height="40" rx="5" fill="rgba(5,150,105,0.32)" stroke="rgb(5,150,105)" stroke-width="2" opacity="0"><animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.24044;0.24044;1" values="0;0;1;1" calcMode="discrete"/></rect>
+<text x="560" y="191" text-anchor="middle" class="val">57<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.24044;0.24044;1" values="0;0;1;1" calcMode="discrete"/></text>
+<rect y="163" width="46" height="46" rx="6" fill="none" stroke="#7c3aed" stroke-width="3" x="-3" transform="translate(317,0)"><animateTransform attributeName="transform" type="translate" calcMode="discrete" dur="9.15s" repeatCount="indefinite" keyTimes="0.0;0.06011;0.12022;0.18033;1.0" values="317,0;493,0;581,0;537,0;537,0"/></rect>
+<rect x="12" y="230" width="176" height="12" rx="3" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="0.8"/>
+<rect x="12" y="230" height="12" rx="3" fill="rgba(5,150,105,0.30)" stroke="rgb(5,150,105)" stroke-width="1" width="0"><animate attributeName="width" calcMode="discrete" dur="9.15s" repeatCount="indefinite" keyTimes="0.0;0.06011;0.12022;0.18033;0.24044;1.0" values="0;44;88;132;176;176"/></rect>
+<text x="712" y="158" text-anchor="end" class="tally" fill="#059669" opacity="0">✓ 4 comparisons<animate attributeName="opacity" dur="9.15s" repeatCount="indefinite" keyTimes="0;0.24044;0.24044;1" values="0;0;1;1" calcMode="discrete"/></text>
+<text x="362" y="260" text-anchor="middle" class="cap">Same time per look — but binary finishes in 4 looks while linear grinds on to 13.</text>
+<text x="362" y="280" text-anchor="middle" class="cap">Double the list: linear doubles its work; binary adds just one more look.</text>
+</svg>

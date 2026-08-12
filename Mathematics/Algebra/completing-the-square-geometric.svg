@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" font-family="Georgia, serif" font-size="14">
+  <!-- Completing the square: geometric construction (al-Khwarizmi) -->
+  <!-- Three panels: (1) x² + bx, (2) split and rearrange into L-shape, (3) complete with (b/2)² corner -->
+  <!-- Units: x = 120, b/2 = 40, so b = 80, full side = 160 -->
+
+  <!-- ============ Panel 1: x² + bx ============ -->
+  <!-- x² square -->
+  <rect x="50" y="40" width="120" height="120" fill="rgba(100, 150, 220, 0.25)" stroke="#888" stroke-width="1.5"/>
+  <!-- bx rectangle -->
+  <rect x="170" y="40" width="80" height="120" fill="rgba(220, 150, 100, 0.3)" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Inner labels -->
+  <text x="110" y="107" text-anchor="middle" fill="#555" font-style="italic">x²</text>
+  <text x="210" y="107" text-anchor="middle" fill="#555" font-style="italic">bx</text>
+
+  <!-- Dimension labels: Panel 1 -->
+  <text x="110" y="180" text-anchor="middle" fill="#888" font-style="italic">x</text>
+  <text x="35" y="105" text-anchor="middle" fill="#888" font-style="italic">x</text>
+  <text x="210" y="30" text-anchor="middle" fill="#888" font-style="italic">b</text>
+
+  <!-- Panel title -->
+  <text x="150" y="225" text-anchor="middle" fill="#555" font-size="15">Start: x² + bx</text>
+
+  <!-- ============ Panel 2: split and rearrange ============ -->
+  <!-- x² square -->
+  <rect x="320" y="30" width="120" height="120" fill="rgba(100, 150, 220, 0.25)" stroke="#888" stroke-width="1.5"/>
+  <!-- Right strip (half of bx) -->
+  <rect x="440" y="30" width="40" height="120" fill="rgba(220, 150, 100, 0.3)" stroke="#888" stroke-width="1.5"/>
+  <!-- Bottom strip (other half of bx) -->
+  <rect x="320" y="150" width="120" height="40" fill="rgba(220, 150, 100, 0.3)" stroke="#888" stroke-width="1.5"/>
+  <!-- Missing corner (dashed outline) -->
+  <rect x="440" y="150" width="40" height="40" fill="none" stroke="#c44" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Inner labels -->
+  <text x="380" y="97" text-anchor="middle" fill="#555" font-style="italic">x²</text>
+  <text x="460" y="97" text-anchor="middle" fill="#555" font-size="12">b/2·x</text>
+  <text x="380" y="177" text-anchor="middle" fill="#555" font-size="12">b/2·x</text>
+  <text x="460" y="175" text-anchor="middle" fill="#c44" font-size="11">?</text>
+
+  <!-- Dimension labels: Panel 2 -->
+  <text x="460" y="20" text-anchor="middle" fill="#888" font-size="12" font-style="italic">b/2</text>
+  <text x="305" y="175" text-anchor="middle" fill="#888" font-size="12" font-style="italic">b/2</text>
+
+  <!-- Panel title -->
+  <text x="400" y="225" text-anchor="middle" fill="#555" font-size="15">Split bx in half, rearrange</text>
+
+  <!-- ============ Panel 3: complete the square ============ -->
+  <!-- x² square -->
+  <rect x="580" y="30" width="120" height="120" fill="rgba(100, 150, 220, 0.25)" stroke="#888" stroke-width="1.5"/>
+  <!-- Right strip -->
+  <rect x="700" y="30" width="40" height="120" fill="rgba(220, 150, 100, 0.3)" stroke="#888" stroke-width="1.5"/>
+  <!-- Bottom strip -->
+  <rect x="580" y="150" width="120" height="40" fill="rgba(220, 150, 100, 0.3)" stroke="#888" stroke-width="1.5"/>
+  <!-- Added corner (highlighted in red) -->
+  <rect x="700" y="150" width="40" height="40" fill="rgba(220, 80, 80, 0.4)" stroke="#c44" stroke-width="1.5"/>
+
+  <!-- Outer square outline emphasising completion -->
+  <rect x="580" y="30" width="160" height="160" fill="none" stroke="#444" stroke-width="2.5"/>
+
+  <!-- Inner labels -->
+  <text x="640" y="97" text-anchor="middle" fill="#555" font-style="italic">x²</text>
+  <text x="720" y="97" text-anchor="middle" fill="#555" font-size="12">b/2·x</text>
+  <text x="640" y="177" text-anchor="middle" fill="#555" font-size="12">b/2·x</text>
+  <text x="720" y="175" text-anchor="middle" fill="#c44" font-size="11">(b/2)²</text>
+
+  <!-- Panel title -->
+  <text x="660" y="225" text-anchor="middle" fill="#555" font-size="15">Add (b/2)² — complete!</text>
+
+  <!-- Arrows between panels -->
+  <path d="M 260 100 L 310 100" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 100 L 570 100" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Footer identity -->
+  <text x="400" y="275" text-anchor="middle" fill="#555" font-size="14" font-style="italic">
+    x² + bx + (b/2)²  =  (x + b/2)²
+  </text>
+</svg>

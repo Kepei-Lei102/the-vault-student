@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">One hundred and seventeen years to a name</text>
+
+  <!-- axis -->
+  <line x1="40" y1="150" x2="720" y2="150" stroke="#888" stroke-width="1.8"/>
+
+  <!-- 1801 Ceres (amber, above tier 1) -->
+  <line x1="40" y1="144" x2="40" y2="156" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="40" y1="144" x2="40" y2="112" stroke="rgba(245,158,11,0.5)" stroke-width="1"/>
+  <text x="36" y="90" font-size="11" fill="#f59e0b">1801 · Ceres: found, lost —</text>
+  <text x="36" y="104" font-size="11" fill="#f59e0b">found again where Gauss said</text>
+
+  <!-- 1805 Legendre (amber, below tier 1) -->
+  <line x1="63" y1="144" x2="63" y2="156" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="63" y1="156" x2="63" y2="188" stroke="rgba(245,158,11,0.5)" stroke-width="1"/>
+  <text x="58" y="202" font-size="11" fill="#f59e0b">1805 · Legendre publishes and names least squares</text>
+
+  <!-- 1809-10 Gauss/Laplace (amber, above tier 2) -->
+  <line x1="88" y1="144" x2="88" y2="156" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="88" y1="144" x2="88" y2="72" stroke="rgba(245,158,11,0.5)" stroke-width="1"/>
+  <text x="84" y="64" font-size="11" fill="#f59e0b">1809–10 · Gauss and Laplace: why errors follow the bell</text>
+
+  <!-- the nameless century bracket -->
+  <line x1="105" y1="242" x2="495" y2="242" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="300" y="260" text-anchor="middle" font-size="10.5" font-style="italic" fill="#888">the nameless century — the quantity works, unchristened</text>
+
+  <!-- 1880s Galton (green, below tier 1) -->
+  <line x1="508" y1="144" x2="508" y2="156" stroke="#059669" stroke-width="2.5"/>
+  <line x1="508" y1="156" x2="508" y2="188" stroke="rgba(5,150,105,0.5)" stroke-width="1"/>
+  <text x="508" y="202" text-anchor="middle" font-size="11" fill="#059669">1880s · Galton: from stars to people</text>
+  <text x="508" y="216" text-anchor="middle" font-size="10" fill="#059669">(the eugenics shadow)</text>
+
+  <!-- 1893 Pearson (purple, above tier 1) -->
+  <line x1="559" y1="144" x2="559" y2="156" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="559" y1="144" x2="559" y2="112" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+  <text x="559" y="104" text-anchor="middle" font-size="11" fill="#7c3aed">1893 · Pearson: the standard deviation</text>
+
+  <!-- 1908 Student (purple, below tier 2) -->
+  <line x1="643" y1="144" x2="643" y2="156" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="643" y1="156" x2="643" y2="218" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+  <text x="643" y="232" text-anchor="middle" font-size="11" fill="#7c3aed">1908 · "Student" of Guinness: the t</text>
+
+  <!-- 1918 Fisher (purple, above tier 2) -->
+  <line x1="700" y1="144" x2="700" y2="156" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="700" y1="144" x2="700" y2="72" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+  <text x="720" y="64" text-anchor="end" font-size="11" font-weight="bold" fill="#7c3aed">1918 · Fisher finally names it: VARIANCE</text>
+</svg>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<!-- Constructing 60° (equilateral triangle method) — animated ruler-and-compass construction.
+     12-second loop, vault palette (#2563eb / #dc2626 / #059669 / #f59e0b / #888).
+     Renders in any SMIL-capable viewer (Obsidian preview, Chrome, Safari, Firefox). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="100%">
+  <defs>
+    <style>
+      text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        fill: #888888;
+      }
+    </style>
+  </defs>
+
+  <text x="300" y="26" text-anchor="middle" font-size="16" font-weight="bold">Constructing 60° (equilateral triangle method)</text>
+  <text x="300" y="46" text-anchor="middle" font-size="12">Two arcs of radius AB from A and B intersect at C — triangle ABC is equilateral.</text>
+
+<line x1="200.00" y1="320.00" x2="400.00" y2="320.00"
+      stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="200.0" stroke-dashoffset="200.0">
+  <animate attributeName="stroke-dashoffset"
+           values="200.0;200.0;0;0;200.0"
+           keyTimes="0;0.05;0.18;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<circle cx="200.00" cy="320.00" r="5" fill="#2563eb" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.18;0.22;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<circle cx="400.00" cy="320.00" r="5" fill="#2563eb" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.18;0.22;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<text x="182.00" y="326.00" font-size="18" font-weight="bold"
+      fill="#2563eb" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.18;0.22;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  A
+</text>
+<text x="418.00" y="326.00" font-size="18" font-weight="bold"
+      fill="#2563eb" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.18;0.22;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  B
+</text>
+<text x="300.00" y="342.00" font-size="13" font-weight="normal"
+      fill="#2563eb" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.2;0.24;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  AB
+</text>
+<path d="M 300.00 146.79 A 200 200 0 0 1 400.00 320.00"
+      stroke="#dc2626" stroke-width="2" fill="none" stroke-linecap="round"
+      stroke-dasharray="209.4" stroke-dashoffset="209.4">
+  <animate attributeName="stroke-dashoffset"
+           values="209.4;209.4;0;0;209.4"
+           keyTimes="0;0.25;0.42;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</path>
+<g opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;0.85;0.85;0;0"
+           keyTimes="0;0.25;0.27;0.42;0.44;1"
+           dur="12s" repeatCount="indefinite"/>
+  <line x1="200.00" y1="320.00" x2="400.00" y2="320.00"
+        stroke="#888888" stroke-width="1.2" stroke-dasharray="5 3">
+    <animateTransform attributeName="transform" type="rotate"
+                      values="0 200.00 320.00;
+                              0 200.00 320.00;
+                              -60 200.00 320.00;
+                              -60 200.00 320.00;
+                              0 200.00 320.00"
+                      keyTimes="0;0.25;0.42;0.95;1"
+                      dur="12s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="400.00" cy="320.00" r="3" fill="#dc2626">
+    <animateTransform attributeName="transform" type="rotate"
+                      values="0 200.00 320.00;
+                              0 200.00 320.00;
+                              -60 200.00 320.00;
+                              -60 200.00 320.00;
+                              0 200.00 320.00"
+                      keyTimes="0;0.25;0.42;0.95;1"
+                      dur="12s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<path d="M 200.00 320.00 A 200 200 0 0 1 300.00 146.79"
+      stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round"
+      stroke-dasharray="209.4" stroke-dashoffset="209.4">
+  <animate attributeName="stroke-dashoffset"
+           values="209.4;209.4;0;0;209.4"
+           keyTimes="0;0.45;0.62;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</path>
+<g opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;0.85;0.85;0;0"
+           keyTimes="0;0.45;0.47;0.62;0.64;1"
+           dur="12s" repeatCount="indefinite"/>
+  <line x1="400.00" y1="320.00" x2="600.00" y2="320.00"
+        stroke="#888888" stroke-width="1.2" stroke-dasharray="5 3">
+    <animateTransform attributeName="transform" type="rotate"
+                      values="180 400.00 320.00;
+                              180 400.00 320.00;
+                              240 400.00 320.00;
+                              240 400.00 320.00;
+                              180 400.00 320.00"
+                      keyTimes="0;0.45;0.62;0.95;1"
+                      dur="12s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="600.00" cy="320.00" r="3" fill="#059669">
+    <animateTransform attributeName="transform" type="rotate"
+                      values="180 400.00 320.00;
+                              180 400.00 320.00;
+                              240 400.00 320.00;
+                              240 400.00 320.00;
+                              180 400.00 320.00"
+                      keyTimes="0;0.45;0.62;0.95;1"
+                      dur="12s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<circle cx="300.00" cy="146.79" r="6" fill="#f59e0b" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.63;0.67;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</circle>
+<text x="300.00" y="134.79" font-size="18" font-weight="bold"
+      fill="#f59e0b" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.66;0.7;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  C
+</text>
+<line x1="200.00" y1="320.00" x2="300.00" y2="146.79"
+      stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="200.0" stroke-dashoffset="200.0">
+  <animate attributeName="stroke-dashoffset"
+           values="200.0;200.0;0;0;200.0"
+           keyTimes="0;0.7;0.8;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<line x1="400.00" y1="320.00" x2="300.00" y2="146.79"
+      stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="200.0" stroke-dashoffset="200.0">
+  <animate attributeName="stroke-dashoffset"
+           values="200.0;200.0;0;0;200.0"
+           keyTimes="0;0.8;0.9;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</line>
+<path d="M 236.00 320.00 A 36 36 0 0 0 218.00 288.82"
+      fill="none" stroke="#f59e0b" stroke-width="1.8" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.90;0.92;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+</path>
+<text x="248.00" y="302.00" font-size="13"
+      fill="#f59e0b" font-weight="bold" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.92;0.94;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  60°
+</text>
+<text x="300.00" y="440.00" font-size="13" font-weight="normal"
+      fill="#888888" text-anchor="middle" opacity="0">
+  <animate attributeName="opacity"
+           values="0;0;1;1;0"
+           keyTimes="0;0.94;0.98;0.95;1"
+           dur="12s" repeatCount="indefinite"/>
+  AB = AC = BC (all radii equal) → triangle is equilateral → every angle is 60°.
+</text>
+</svg>

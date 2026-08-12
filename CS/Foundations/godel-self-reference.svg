@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .lab   { font-size: 13px; }
+    .bold  { font-size: 13.5px; font-weight: 600; }
+    .small { font-size: 11.5px; }
+    .note  { font-size: 11.5px; opacity: 0.8; }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- G sentence box -->
+  <rect x="150" y="34" width="344" height="70" rx="10" fill="rgba(124,58,237,0.14)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="322" y="62" class="bold" text-anchor="middle" fill="#7c3aed">G :  "the sentence numbered #G</text>
+  <text x="322" y="84" class="bold" text-anchor="middle" fill="#7c3aed">is not provable in F"</text>
+
+  <!-- self-reference loop -->
+  <path d="M 494 55 C 560 40, 560 98, 494 83" fill="none" stroke="#888" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="566" y="64" class="note">G talks</text>
+  <text x="566" y="78" class="note">about its</text>
+  <text x="566" y="92" class="note">own number</text>
+
+  <!-- fork question -->
+  <text x="322" y="132" class="lab" text-anchor="middle">Is G provable in F ?</text>
+  <line x1="270" y1="106" x2="180" y2="176" stroke="#888" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="374" y1="106" x2="466" y2="176" stroke="#888" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- left branch: the impossible case -->
+  <rect x="24" y="180" width="278" height="150" rx="10" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="2"/>
+  <text x="163" y="205" class="bold" text-anchor="middle" fill="#dc2626">Suppose F proves G</text>
+  <text x="163" y="230" class="small" text-anchor="middle">-&gt; then G is provable,</text>
+  <text x="163" y="250" class="small" text-anchor="middle">but G asserts it is NOT</text>
+  <text x="163" y="270" class="small" text-anchor="middle">-&gt; F has proved a falsehood</text>
+  <text x="163" y="300" class="bold" text-anchor="middle" fill="#dc2626">F is inconsistent</text>
+  <text x="163" y="320" class="note" text-anchor="middle">(ruled out -- F is consistent)</text>
+
+  <!-- right branch: the forced conclusion -->
+  <rect x="338" y="180" width="278" height="150" rx="10" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="2"/>
+  <text x="477" y="205" class="bold" text-anchor="middle" fill="#059669">So if F is consistent</text>
+  <text x="477" y="230" class="small" text-anchor="middle">-&gt; F cannot prove G</text>
+  <text x="477" y="250" class="small" text-anchor="middle">-&gt; so what G asserts holds</text>
+  <text x="477" y="270" class="small" text-anchor="middle">-&gt; G is true ...</text>
+  <text x="477" y="300" class="bold" text-anchor="middle" fill="#059669">G is TRUE but UNPROVABLE</text>
+
+  <!-- connective -->
+  <path d="M 302 305 C 320 305, 320 305, 338 305" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="320" y="372" class="note" text-anchor="middle">consistency forbids the left case, so the right case is forced: truth outruns proof</text>
+</svg>

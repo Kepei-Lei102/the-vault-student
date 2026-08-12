@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .sub   { font-size: 12px; }
+    .lab   { font-size: 13px; font-weight: 600; }
+    .small { font-size: 11.5px; }
+  </style>
+
+  <defs>
+    <marker id="bus" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <!-- divider -->
+  <line x1="380" y1="48" x2="380" y2="334" stroke="#888" stroke-width="1" stroke-dasharray="5,5" opacity="0.4"/>
+
+  <!-- ===================== PANEL 1 — von Neumann ===================== -->
+  <text x="190" y="30" class="title" text-anchor="middle">von Neumann</text>
+  <text x="190" y="48" class="sub" text-anchor="middle">one memory for program + data</text>
+
+  <!-- CPU -->
+  <rect x="110" y="66" width="160" height="52" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="190" y="98" class="lab" text-anchor="middle" fill="#7c3aed">CPU</text>
+
+  <!-- bottleneck bus (hourglass) -->
+  <polygon points="174,120 206,120 197,162 206,204 174,204 183,162"
+           fill="rgba(220,38,38,0.16)" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="232" y="152" class="small" text-anchor="start" fill="#dc2626">one shared bus</text>
+  <text x="232" y="169" class="small" text-anchor="start" fill="#dc2626">= bottleneck</text>
+
+  <!-- memory (mixed) -->
+  <rect x="90" y="206" width="200" height="96" rx="8" fill="rgba(8,145,178,0.10)" stroke="#0891b2" stroke-width="2"/>
+  <text x="190" y="225" class="lab" text-anchor="middle" fill="#0891b2">MEMORY</text>
+  <rect x="106" y="236" width="168" height="22" rx="3" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="190" y="251" class="small" text-anchor="middle">instructions</text>
+  <rect x="106" y="264" width="168" height="22" rx="3" fill="rgba(8,145,178,0.20)" stroke="#0891b2" stroke-width="1"/>
+  <text x="190" y="279" class="small" text-anchor="middle">data</text>
+
+  <text x="190" y="324" class="small" text-anchor="middle">flexible &amp; cheap — but code and data wait their turn</text>
+
+  <!-- ===================== PANEL 2 — Harvard ===================== -->
+  <text x="570" y="30" class="title" text-anchor="middle">Harvard</text>
+  <text x="570" y="48" class="sub" text-anchor="middle">separate code + data memories</text>
+
+  <!-- CPU -->
+  <rect x="490" y="66" width="160" height="52" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="570" y="98" class="lab" text-anchor="middle" fill="#7c3aed">CPU</text>
+
+  <!-- two buses -->
+  <line x1="538" y1="120" x2="492" y2="202" stroke="#0891b2" stroke-width="4" opacity="0.85"
+        marker-start="url(#bus)" marker-end="url(#bus)"/>
+  <line x1="602" y1="120" x2="648" y2="202" stroke="#0891b2" stroke-width="4" opacity="0.85"
+        marker-start="url(#bus)" marker-end="url(#bus)"/>
+  <text x="570" y="150" class="small" text-anchor="middle" fill="#0891b2">two buses:</text>
+  <text x="570" y="166" class="small" text-anchor="middle" fill="#0891b2">code + data</text>
+  <text x="570" y="182" class="small" text-anchor="middle" fill="#0891b2">at once</text>
+
+  <!-- instruction memory -->
+  <rect x="418" y="206" width="134" height="80" rx="8" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="485" y="240" class="small" text-anchor="middle">instruction</text>
+  <text x="485" y="256" class="small" text-anchor="middle">memory</text>
+
+  <!-- data memory -->
+  <rect x="588" y="206" width="134" height="80" rx="8" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="2"/>
+  <text x="655" y="240" class="small" text-anchor="middle">data</text>
+  <text x="655" y="256" class="small" text-anchor="middle">memory</text>
+
+  <text x="570" y="324" class="small" text-anchor="middle">faster (no contention) — but rigid</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="100%">
+  <!-- Title -->
+  <text x="250" y="28" font-family="sans-serif" font-size="15" fill="#888" text-anchor="middle">Finding P(T | C) — "zoom in" to circle C</text>
+
+  <!-- Background rectangle (universal set) — faded -->
+  <rect x="10" y="40" width="480" height="290" rx="8" fill="none" stroke="#888" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+  <text x="25" y="65" font-family="serif" font-style="italic" font-size="16" fill="#888" opacity="0.5">S</text>
+
+  <!-- Circle T — faded (not the condition) -->
+  <circle cx="185" cy="190" r="105" fill="rgba(66,133,244,0.06)" stroke="#4285F4" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="68" y="105" font-family="serif" font-style="italic" font-size="20" fill="rgba(66,133,244,0.4)">T</text>
+
+  <!-- Circle C — highlighted (the condition, our "new universe") -->
+  <circle cx="310" cy="190" r="105" fill="rgba(234,67,53,0.08)" stroke="#EA4335" stroke-width="3"/>
+  <text x="425" y="105" font-family="serif" font-style="italic" font-size="20" fill="#EA4335" font-weight="bold">C</text>
+
+  <!-- Highlight the overlap region with stronger fill -->
+  <clipPath id="clipT">
+    <circle cx="185" cy="190" r="105"/>
+  </clipPath>
+  <circle cx="310" cy="190" r="105" fill="rgba(156,39,176,0.2)" stroke="none" clip-path="url(#clipT)"/>
+
+  <!-- Region values -->
+  <!-- T only: 12 (faded) -->
+  <text x="128" y="198" font-family="sans-serif" font-size="22" fill="rgba(66,133,244,0.35)" text-anchor="middle" font-weight="bold">12</text>
+  <!-- T ∩ C: 8 (highlighted - numerator) -->
+  <text x="248" y="192" font-family="sans-serif" font-size="26" fill="#9C27B0" text-anchor="middle" font-weight="bold">8</text>
+  <!-- C only: 17 (visible - part of denominator) -->
+  <text x="365" y="198" font-family="sans-serif" font-size="22" fill="#EA4335" text-anchor="middle" font-weight="bold">17</text>
+  <!-- Outside: 13 (faded) -->
+  <text x="450" y="305" font-family="sans-serif" font-size="16" fill="#888" opacity="0.5" text-anchor="middle">13</text>
+
+  <!-- Annotation: denominator bracket under C -->
+  <path d="M 205,306 Q 205,322 248,322 L 310,322 Q 372,322 372,322 L 415,322 Q 415,306 415,306" fill="none" stroke="#EA4335" stroke-width="1.5"/>
+  <line x1="205" y1="302" x2="205" y2="310" stroke="#EA4335" stroke-width="1.5"/>
+  <line x1="415" y1="302" x2="415" y2="310" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- White knockout behind red text so it doesn't clash with dashed lines -->
+  <rect x="180" y="326" width="260" height="16" rx="3" fill="rgba(128,128,128,0.08)" stroke="none"/>
+  <text x="310" y="338" font-family="sans-serif" font-size="13" fill="#EA4335" text-anchor="middle">C has 8 + 17 = 25 people (denominator)</text>
+
+  <!-- Annotation: numerator label -->
+  <line x1="248" y1="168" x2="248" y2="130" stroke="#9C27B0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="248" y="122" font-family="sans-serif" font-size="12" fill="#9C27B0" text-anchor="middle">overlap = 8 (numerator)</text>
+
+  <!-- Result -->
+  <text x="250" y="55" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">P(T | C) = 8 / 25 = 0.32</text>
+</svg>

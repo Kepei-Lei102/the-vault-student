@@ -1,0 +1,75 @@
+<svg width="100%" viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="amB" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#059669" stroke-width="1.8"/>
+    </marker>
+    <marker id="amP" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+    </marker>
+    <marker id="amA" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#f59e0b" stroke-width="1.8"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Addressing modes: count the hops</text>
+
+  <!-- memory strip (shared, right side) -->
+  <text x="618" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#888">memory</text>
+  <g font-family="Menlo, monospace" font-size="12">
+    <rect x="560" y="72"  width="116" height="34" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="552" y="94" text-anchor="end" fill="#888" font-size="10">addr 5</text>
+    <text x="618" y="94" text-anchor="middle" fill="#888">12</text>
+    <rect x="560" y="112" width="116" height="34" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="552" y="134" text-anchor="end" fill="#888" font-size="10">addr 6</text>
+    <text x="618" y="134" text-anchor="middle" fill="#888">40</text>
+    <rect x="560" y="152" width="116" height="34" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="552" y="174" text-anchor="end" fill="#888" font-size="10">addr 7</text>
+    <text x="618" y="174" text-anchor="middle" fill="#888">99</text>
+    <rect x="560" y="192" width="116" height="34" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="552" y="214" text-anchor="end" fill="#888" font-size="10">…</text>
+    <rect x="560" y="232" width="116" height="34" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="552" y="254" text-anchor="end" fill="#888" font-size="10">addr 12</text>
+    <text x="618" y="254" text-anchor="middle" fill="#888">77</text>
+  </g>
+
+  <!-- IMMEDIATE -->
+  <text x="40" y="80" font-size="12.5" font-weight="bold" fill="#2563eb" font-family="Menlo, monospace">LDM #5</text>
+  <text x="40" y="97" font-size="10.5" fill="#888">immediate — zero hops:</text>
+  <text x="40" y="111" font-size="10.5" fill="#888">the operand IS the data</text>
+  <rect x="238" y="70" width="98" height="30" rx="6" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="287" y="90" text-anchor="middle" font-size="11.5" fill="#888">ACC = 5</text>
+
+  <!-- DIRECT -->
+  <text x="40" y="150" font-size="12.5" font-weight="bold" fill="#7c3aed" font-family="Menlo, monospace">LDD 5</text>
+  <text x="40" y="167" font-size="10.5" fill="#888">direct — one hop:</text>
+  <text x="40" y="181" font-size="10.5" fill="#888">go to cell 5, take what's there</text>
+  <path d="M 340,155 L 466,155 L 466,90 L 505,90" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#amP)"/>
+  <rect x="238" y="140" width="98" height="30" rx="6" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="287" y="160" text-anchor="middle" font-size="11.5" fill="#888">ACC = 12</text>
+
+  <!-- INDIRECT -->
+  <text x="40" y="228" font-size="12.5" font-weight="bold" fill="#f59e0b" font-family="Menlo, monospace">LDI 5</text>
+  <text x="40" y="245" font-size="10.5" fill="#888">indirect — two hops: cell 5</text>
+  <text x="40" y="259" font-size="10.5" fill="#888">says "12" — go to cell 12</text>
+  <path d="M 340,233 L 488,233 L 488,101 L 505,101" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#amA)"/>
+  <path d="M 676,90 C 720,110 720,230 682,248" fill="none" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#amA)"/>
+  <text x="712" y="172" font-size="9.5" fill="#f59e0b">"12" is an</text>
+  <text x="712" y="185" font-size="9.5" fill="#f59e0b">address!</text>
+  <rect x="238" y="218" width="98" height="30" rx="6" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="287" y="238" text-anchor="middle" font-size="11.5" fill="#888">ACC = 77</text>
+
+  <!-- INDEXED -->
+  <text x="40" y="302" font-size="12.5" font-weight="bold" fill="#059669" font-family="Menlo, monospace">LDX 5</text>
+  <text x="40" y="319" font-size="10.5" fill="#888">indexed — one hop plus IX:</text>
+  <text x="40" y="333" font-size="10.5" fill="#888">address 5 + IX; with IX = 2, cell 7</text>
+  <rect x="238" y="292" width="98" height="30" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.6"/>
+  <text x="287" y="312" text-anchor="middle" font-size="11.5" fill="#888">ACC = 99</text>
+  <path d="M 340,307 L 494,307 L 494,170 L 508,170" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#amB)"/>
+  <text x="240" y="283" font-size="9.5" fill="#059669">5 + IX(2) = 7 — bump IX to walk the array</text>
+
+  <!-- RELATIVE note -->
+  <text x="40" y="374" font-size="12.5" font-weight="bold" fill="#0891b2" font-family="Menlo, monospace">JMP +3</text>
+  <text x="150" y="374" font-size="10.5" fill="#888">relative — measured from HERE (the PC), not from zero: the code works wherever it is loaded</text>
+
+  <text x="380" y="406" text-anchor="middle" font-size="11.5" fill="#888">Immediate 0 hops · direct 1 · indirect 2 · indexed 1 + IX · relative counts from the PC. Say the hops, take the marks.</text>
+</svg>

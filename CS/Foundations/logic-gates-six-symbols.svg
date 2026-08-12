@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .gname { font-size: 14px; font-weight: 600; }
+    .gexpr { font-size: 13px; }
+    .pin { font-size: 11px; opacity: 0.85; }
+    .small { font-size: 11px; opacity: 0.75; }
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="26" class="title" text-anchor="middle">The Six Standard Logic Gates (ANSI/IEEE distinctive shapes)</text>
+  <text x="360" y="44" class="small" text-anchor="middle">Inputs on the left, output on the right. The bubble (small circle) means "negate".</text>
+
+  <!-- ===== Row 1: AND, OR, NOT ===== -->
+
+  <!-- AND gate centred at (130, 130) -->
+  <g transform="translate(130 130)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">AND</text>
+    <line x1="-55" y1="-15" x2="-30" y2="-15" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-55" y1="15" x2="-30" y2="15" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -30 -25 L 0 -25 A 25 25 0 0 1 0 25 L -30 25 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <line x1="25" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="-12" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-62" y="18" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A · B</text>
+  </g>
+
+  <!-- OR gate centred at (370, 130) -->
+  <g transform="translate(370 130)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">OR</text>
+    <line x1="-55" y1="-15" x2="-23" y2="-15" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-55" y1="15" x2="-23" y2="15" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -30 -25 C -10 -10 -10 10 -30 25 L -10 25 Q 15 25 25 0 Q 15 -25 -10 -25 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <line x1="25" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="-12" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-62" y="18" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A + B</text>
+  </g>
+
+  <!-- NOT gate centred at (610, 130) -->
+  <g transform="translate(610 130)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">NOT</text>
+    <line x1="-55" y1="0" x2="-25" y2="0" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -25 -22 L 20 0 L -25 22 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <circle cx="24" cy="0" r="4" fill="none" stroke="#888" stroke-width="2"/>
+    <line x1="28" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="3" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A̅</text>
+  </g>
+
+  <!-- ===== Row 2: NAND, NOR, XOR ===== -->
+
+  <!-- NAND gate centred at (130, 310) -->
+  <g transform="translate(130 310)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">NAND</text>
+    <line x1="-55" y1="-15" x2="-30" y2="-15" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-55" y1="15" x2="-30" y2="15" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -30 -25 L 0 -25 A 25 25 0 0 1 0 25 L -30 25 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <circle cx="29" cy="0" r="4" fill="none" stroke="#888" stroke-width="2"/>
+    <line x1="33" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="-12" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-62" y="18" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A · B</text>
+    <line x1="-22" y1="48" x2="22" y2="48" stroke="#888" stroke-width="1"/>
+  </g>
+
+  <!-- NOR gate centred at (370, 310) -->
+  <g transform="translate(370 310)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">NOR</text>
+    <line x1="-55" y1="-15" x2="-23" y2="-15" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-55" y1="15" x2="-23" y2="15" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M -30 -25 C -10 -10 -10 10 -30 25 L -10 25 Q 15 25 25 0 Q 15 -25 -10 -25 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <circle cx="29" cy="0" r="4" fill="none" stroke="#888" stroke-width="2"/>
+    <line x1="33" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="-12" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-62" y="18" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A + B</text>
+    <line x1="-26" y1="48" x2="26" y2="48" stroke="#888" stroke-width="1"/>
+  </g>
+
+  <!-- XOR gate centred at (610, 310) -->
+  <g transform="translate(610 310)">
+    <text x="0" y="-60" class="gname" text-anchor="middle">XOR</text>
+    <line x1="-55" y1="-15" x2="-23" y2="-15" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="-55" y1="15" x2="-23" y2="15" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Inner curve (same as OR) -->
+    <path d="M -30 -25 C -10 -10 -10 10 -30 25 L -10 25 Q 15 25 25 0 Q 15 -25 -10 -25 Z"
+          fill="rgba(136, 136, 136, 0.08)" stroke="#888" stroke-width="2"/>
+    <!-- Extra back curve -->
+    <path d="M -38 -25 C -18 -10 -18 10 -38 25"
+          fill="none" stroke="#888" stroke-width="2"/>
+    <line x1="25" y1="0" x2="55" y2="0" stroke="#059669" stroke-width="1.5"/>
+    <text x="-62" y="-12" class="math pin" text-anchor="end" fill="#2563eb">A</text>
+    <text x="-62" y="18" class="math pin" text-anchor="end" fill="#2563eb">B</text>
+    <text x="62" y="3" class="math pin" fill="#059669">F</text>
+    <text x="0" y="56" class="math gexpr" text-anchor="middle">F = A ⊕ B</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="360" y="420" class="small" text-anchor="middle">
+    Bubble = negation · A̅ means "not A" · NAND = AND + bubble · NOR = OR + bubble · XOR = OR with extra back curve
+  </text>
+</svg>

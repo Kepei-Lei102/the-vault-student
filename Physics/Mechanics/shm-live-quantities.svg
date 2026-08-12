@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .panel-h { font-size: 13px; font-weight: 600; opacity: 0.95; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; opacity: 0.85; }
+    .formula { font-size: 11px; opacity: 0.75; }
+    .x-c { fill: #2563eb; }
+    .a-c { fill: #f59e0b; }
+    .ke-c { fill: #059669; }
+    .pe-c { fill: #7c3aed; }
+    .ref-c { fill: #888; }
+  </style>
+
+  <!-- Title -->
+  <text x="440.0" y="28" class="title" text-anchor="middle">Live SHM — oscillation and its real-time quantities</text>
+  <text x="440.0" y="48" class="small" text-anchor="middle">
+    Period <tspan class="math">T = 4 s</tspan>. Watch <tspan class="math ke-c">KE</tspan> and <tspan class="math pe-c">PE</tspan> exchange while <tspan class="math ref-c">A</tspan> stays put.
+  </text>
+
+  <!-- ===================== LEFT PANEL ===================== -->
+  <text x="220" y="100" class="panel-h" text-anchor="middle">Oscillator</text>
+
+  <!-- Track line -->
+  <line x1="110" y1="280"
+        x2="330" y2="280"
+        stroke="#888" stroke-width="1.5"/>
+
+  <!-- End marks: -A and +A -->
+  <line x1="130" y1="266"
+        x2="130" y2="294"
+        stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="310" y1="266"
+        x2="310" y2="294"
+        stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- Equilibrium tick -->
+  <line x1="220" y1="272"
+        x2="220" y2="288"
+        stroke="#888" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Position labels -->
+  <text x="130" y="316" class="math label" text-anchor="middle">−A</text>
+  <text x="220" y="316" class="math label" text-anchor="middle">0</text>
+  <text x="310" y="316" class="math label" text-anchor="middle">+A</text>
+
+  <!-- Mass (animated) -->
+  <rect width="28" height="28" y="266.0"
+        fill="rgba(37, 99, 235, 0.7)" stroke="#2563eb" stroke-width="2" rx="4">
+    <animate attributeName="x"
+             values="296.000;295.230;292.933;289.149;283.942;277.402;269.640;260.789;251.000;240.442;229.294;217.747;206.000;194.253;182.706;171.558;161.000;151.211;142.360;134.598;128.058;122.851;119.067;116.770;116.000;116.770;119.067;122.851;128.058;134.598;142.360;151.211;161.000;171.558;182.706;194.253;206.000;217.747;229.294;240.442;251.000;260.789;269.640;277.402;283.942;289.149;292.933;295.230;296.000"
+             keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- A static "spring" suggestion: zigzag from left wall to the mass — visual flair (optional, skipped for clarity) -->
+
+  <!-- Phase indicator below the track -->
+  <text x="220" y="350" class="small" text-anchor="middle">
+    <tspan class="math x-c">x(t) = A cos(ωt)</tspan>
+  </text>
+  <text x="220" y="372" class="small" text-anchor="middle" opacity="0.7">
+    one full period loops every <tspan class="math">T = 4 s</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="430" y1="80" x2="430" y2="480" stroke="#888" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- ===================== RIGHT PANEL ===================== -->
+  <text x="610.0" y="100" class="panel-h" text-anchor="middle">Live quantities</text>
+
+  <!-- ===== A reference (static) ===== -->
+  <text x="460" y="135" class="math label ref-c" text-anchor="end">A</text>
+  <rect x="470" y="119.0" width="280" height="22"
+        fill="rgba(136, 136, 136, 0.18)" stroke="#888" stroke-width="1.2"/>
+  <text x="762" y="135" class="math small ref-c">amplitude (constant)</text>
+  <text x="460" y="154" class="formula" text-anchor="end" opacity="0.6">always full</text>
+
+  <!-- ===== x (bipolar) ===== -->
+  <text x="460" y="191" class="math label x-c" text-anchor="end">x</text>
+  <!-- bipolar track outline -->
+  <rect x="470" y="175.0" width="280" height="22"
+        fill="none" stroke="#888" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.45"/>
+  <!-- centre line -->
+  <line x1="610.0" y1="172.0"
+        x2="610.0" y2="200.0"
+        stroke="#888" stroke-width="1"/>
+  <!-- animated bar -->
+  <rect y="175.0" height="22"
+        fill="rgba(37, 99, 235, 0.55)" stroke="#2563eb" stroke-width="1.5">
+    <animate attributeName="x" values="610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;591.726;573.765;556.424;540.000;524.773;511.005;498.931;488.756;480.657;474.770;471.198;470.000;471.198;474.770;480.657;488.756;498.931;511.005;524.773;540.000;556.424;573.765;591.726;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="140.000;138.802;135.230;129.343;121.244;111.069;98.995;85.227;70.000;53.576;36.235;18.274;0.000;18.274;36.235;53.576;70.000;85.227;98.995;111.069;121.244;129.343;135.230;138.802;140.000;138.802;135.230;129.343;121.244;111.069;98.995;85.227;70.000;53.576;36.235;18.274;0.000;18.274;36.235;53.576;70.000;85.227;98.995;111.069;121.244;129.343;135.230;138.802;140.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="762" y="191" class="math small x-c">A cos(ωt)</text>
+  <text x="460" y="210" class="formula x-c" text-anchor="end" opacity="0.7">displacement</text>
+
+  <!-- ===== a (bipolar, opposite) ===== -->
+  <text x="460" y="247" class="math label a-c" text-anchor="end">a</text>
+  <rect x="470" y="231.0" width="280" height="22"
+        fill="none" stroke="#888" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.45"/>
+  <line x1="610.0" y1="228.0"
+        x2="610.0" y2="256.0"
+        stroke="#888" stroke-width="1"/>
+  <rect y="231.0" height="22"
+        fill="rgba(245, 158, 11, 0.55)" stroke="#f59e0b" stroke-width="1.5">
+    <animate attributeName="x" values="470.000;471.198;474.770;480.657;488.756;498.931;511.005;524.773;540.000;556.424;573.765;591.726;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;610.000;591.726;573.765;556.424;540.000;524.773;511.005;498.931;488.756;480.657;474.770;471.198;470.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="140.000;138.802;135.230;129.343;121.244;111.069;98.995;85.227;70.000;53.576;36.235;18.274;0.000;18.274;36.235;53.576;70.000;85.227;98.995;111.069;121.244;129.343;135.230;138.802;140.000;138.802;135.230;129.343;121.244;111.069;98.995;85.227;70.000;53.576;36.235;18.274;0.000;18.274;36.235;53.576;70.000;85.227;98.995;111.069;121.244;129.343;135.230;138.802;140.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="762" y="247" class="math small a-c">−ω²·A cos(ωt)</text>
+  <text x="460" y="266" class="formula a-c" text-anchor="end" opacity="0.7">acceleration (opposite sign)</text>
+
+  <!-- ===== KE (unipolar, grows from left) ===== -->
+  <text x="460" y="303" class="math label ke-c" text-anchor="end">KE</text>
+  <rect x="470" y="287.0" width="280" height="22"
+        fill="none" stroke="#888" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.45"/>
+  <rect x="470" y="287.0" height="22"
+        fill="rgba(5, 150, 105, 0.55)" stroke="#059669" stroke-width="1.5">
+    <animate attributeName="width" values="0.000;4.770;18.756;41.005;70.000;103.765;140.000;176.235;210.000;238.995;261.244;275.230;280.000;275.230;261.244;238.995;210.000;176.235;140.000;103.765;70.000;41.005;18.756;4.770;0.000;4.770;18.756;41.005;70.000;103.765;140.000;176.235;210.000;238.995;261.244;275.230;280.000;275.230;261.244;238.995;210.000;176.235;140.000;103.765;70.000;41.005;18.756;4.770;0.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="762" y="303" class="math small ke-c">½kA² sin²(ωt)</text>
+  <text x="460" y="322" class="formula ke-c" text-anchor="end" opacity="0.7">kinetic energy</text>
+
+  <!-- ===== PE (unipolar, grows from left) ===== -->
+  <text x="460" y="359" class="math label pe-c" text-anchor="end">PE</text>
+  <rect x="470" y="343.0" width="280" height="22"
+        fill="none" stroke="#888" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.45"/>
+  <rect x="470" y="343.0" height="22"
+        fill="rgba(124, 58, 237, 0.55)" stroke="#7c3aed" stroke-width="1.5">
+    <animate attributeName="width" values="280.000;275.230;261.244;238.995;210.000;176.235;140.000;103.765;70.000;41.005;18.756;4.770;0.000;4.770;18.756;41.005;70.000;103.765;140.000;176.235;210.000;238.995;261.244;275.230;280.000;275.230;261.244;238.995;210.000;176.235;140.000;103.765;70.000;41.005;18.756;4.770;0.000;4.770;18.756;41.005;70.000;103.765;140.000;176.235;210.000;238.995;261.244;275.230;280.000" keyTimes="0.0000;0.0208;0.0417;0.0625;0.0833;0.1042;0.1250;0.1458;0.1667;0.1875;0.2083;0.2292;0.2500;0.2708;0.2917;0.3125;0.3333;0.3542;0.3750;0.3958;0.4167;0.4375;0.4583;0.4792;0.5000;0.5208;0.5417;0.5625;0.5833;0.6042;0.6250;0.6458;0.6667;0.6875;0.7083;0.7292;0.7500;0.7708;0.7917;0.8125;0.8333;0.8542;0.8750;0.8958;0.9167;0.9375;0.9583;0.9792;1.0000"
+             dur="4.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="762" y="359" class="math small pe-c">½kA² cos²(ωt)</text>
+  <text x="460" y="378" class="formula pe-c" text-anchor="end" opacity="0.7">elastic potential energy</text>
+
+  <!-- Bottom caption -->
+  <text x="440.0" y="502" class="small" text-anchor="middle" opacity="0.85">
+    <tspan class="math ke-c">KE</tspan> + <tspan class="math pe-c">PE</tspan> is constant at every instant. <tspan class="math x-c">x</tspan> and <tspan class="math a-c">a</tspan> mirror each other through zero.
+  </text>
+</svg>

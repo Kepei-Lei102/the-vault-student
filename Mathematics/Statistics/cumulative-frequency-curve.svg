@@ -1,0 +1,105 @@
+<svg width="100%" viewBox="0 0 570 390" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <text x="295" y="18" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Cumulative Frequency Curve — Heights of 80 Students</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="330" x2="530" y2="330" stroke="#888" stroke-width="1.2"/>
+  <line x1="70" y1="330" x2="70" y2="25" stroke="#888" stroke-width="1.2"/>
+
+  <!-- Axis labels -->
+  <text x="300" y="370" text-anchor="middle" font-size="11" fill="#888">Height (cm)</text>
+  <text x="22" y="178" text-anchor="middle" font-size="11" fill="#888" transform="rotate(-90, 22, 178)">Cumulative frequency</text>
+
+  <!-- X-axis ticks and labels -->
+  <line x1="70" y1="330" x2="70" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="70" y="348" text-anchor="middle" font-size="9" fill="#888">140</text>
+  <line x1="145" y1="330" x2="145" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="145" y="348" text-anchor="middle" font-size="9" fill="#888">150</text>
+  <line x1="220" y1="330" x2="220" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="220" y="348" text-anchor="middle" font-size="9" fill="#888">160</text>
+  <line x1="295" y1="330" x2="295" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="295" y="348" text-anchor="middle" font-size="9" fill="#888">170</text>
+  <line x1="370" y1="330" x2="370" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="370" y="348" text-anchor="middle" font-size="9" fill="#888">180</text>
+  <line x1="445" y1="330" x2="445" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="445" y="348" text-anchor="middle" font-size="9" fill="#888">190</text>
+  <line x1="520" y1="330" x2="520" y2="335" stroke="#888" stroke-width="1"/>
+  <text x="520" y="348" text-anchor="middle" font-size="9" fill="#888">200</text>
+
+  <!-- Y-axis ticks and labels -->
+  <line x1="65" y1="330" x2="70" y2="330" stroke="#888" stroke-width="1"/>
+  <text x="60" y="334" text-anchor="end" font-size="9" fill="#888">0</text>
+  <line x1="65" y1="292.5" x2="70" y2="292.5" stroke="#888" stroke-width="1"/>
+  <text x="60" y="296" text-anchor="end" font-size="9" fill="#888">10</text>
+  <line x1="65" y1="255" x2="70" y2="255" stroke="#888" stroke-width="1"/>
+  <text x="60" y="259" text-anchor="end" font-size="9" fill="#888">20</text>
+  <line x1="65" y1="217.5" x2="70" y2="217.5" stroke="#888" stroke-width="1"/>
+  <text x="60" y="221" text-anchor="end" font-size="9" fill="#888">30</text>
+  <line x1="65" y1="180" x2="70" y2="180" stroke="#888" stroke-width="1"/>
+  <text x="60" y="184" text-anchor="end" font-size="9" fill="#888">40</text>
+  <line x1="65" y1="142.5" x2="70" y2="142.5" stroke="#888" stroke-width="1"/>
+  <text x="60" y="146" text-anchor="end" font-size="9" fill="#888">50</text>
+  <line x1="65" y1="105" x2="70" y2="105" stroke="#888" stroke-width="1"/>
+  <text x="60" y="109" text-anchor="end" font-size="9" fill="#888">60</text>
+  <line x1="65" y1="67.5" x2="70" y2="67.5" stroke="#888" stroke-width="1"/>
+  <text x="60" y="71" text-anchor="end" font-size="9" fill="#888">70</text>
+  <line x1="65" y1="30" x2="70" y2="30" stroke="#888" stroke-width="1"/>
+  <text x="60" y="34" text-anchor="end" font-size="9" fill="#888">80</text>
+
+  <!-- Light gridlines -->
+  <g stroke="#888" stroke-width="0.3" opacity="0.2">
+    <line x1="70" y1="292.5" x2="520" y2="292.5"/>
+    <line x1="70" y1="255" x2="520" y2="255"/>
+    <line x1="70" y1="217.5" x2="520" y2="217.5"/>
+    <line x1="70" y1="180" x2="520" y2="180"/>
+    <line x1="70" y1="142.5" x2="520" y2="142.5"/>
+    <line x1="70" y1="105" x2="520" y2="105"/>
+    <line x1="70" y1="67.5" x2="520" y2="67.5"/>
+    <line x1="70" y1="30" x2="520" y2="30"/>
+    <line x1="145" y1="30" x2="145" y2="330"/>
+    <line x1="220" y1="30" x2="220" y2="330"/>
+    <line x1="295" y1="30" x2="295" y2="330"/>
+    <line x1="370" y1="30" x2="370" y2="330"/>
+    <line x1="445" y1="30" x2="445" y2="330"/>
+    <line x1="520" y1="30" x2="520" y2="330"/>
+  </g>
+
+  <!-- S-curve (smooth monotone cubic interpolation) -->
+  <path d="M 70.0,330.0 L 73.8,328.9 L 77.5,327.8 L 81.2,326.8 L 85.0,325.8 L 88.8,324.8 L 92.5,323.8 L 96.2,322.8 L 100.0,321.9 L 103.8,320.9 L 107.5,319.9 L 111.2,318.9 L 115.0,317.8 L 118.8,316.7 L 122.5,315.6 L 126.2,314.4 L 130.0,313.2 L 133.8,311.9 L 137.5,310.5 L 141.2,309.0 L 145.0,307.5 L 148.8,305.9 L 152.5,304.1 L 156.2,302.2 L 160.0,300.1 L 163.8,298.0 L 167.5,295.7 L 171.2,293.3 L 175.0,290.9 L 178.8,288.3 L 182.5,285.6 L 186.2,282.8 L 190.0,280.0 L 193.8,277.1 L 197.5,274.1 L 201.2,271.1 L 205.0,267.9 L 208.8,264.8 L 212.5,261.6 L 216.2,258.3 L 220.0,255.0 L 223.8,251.6 L 227.5,247.9 L 231.2,244.0 L 235.0,239.9 L 238.8,235.6 L 242.5,231.2 L 246.2,226.7 L 250.0,222.0 L 253.8,217.3 L 257.5,212.5 L 261.2,207.6 L 265.0,202.7 L 268.8,197.8 L 272.5,192.9 L 276.2,188.1 L 280.0,183.3 L 283.8,178.5 L 287.5,173.9 L 291.2,169.4 L 295.0,165.0 L 298.8,160.6 L 302.5,156.2 L 306.2,151.6 L 310.0,147.1 L 313.8,142.4 L 317.5,137.8 L 321.2,133.1 L 325.0,128.5 L 328.8,123.9 L 332.5,119.4 L 336.2,115.0 L 340.0,110.7 L 343.8,106.5 L 347.5,102.5 L 351.2,98.6 L 355.0,94.9 L 358.8,91.5 L 362.5,88.2 L 366.2,85.2 L 370.0,82.5 L 373.8,80.0 L 377.5,77.5 L 381.2,75.0 L 385.0,72.7 L 388.8,70.4 L 392.5,68.2 L 396.2,66.0 L 400.0,63.9 L 403.8,61.9 L 407.5,60.0 L 411.2,58.1 L 415.0,56.3 L 418.8,54.6 L 422.5,53.0 L 426.2,51.5 L 430.0,50.0 L 433.8,48.6 L 437.5,47.3 L 441.2,46.1 L 445.0,45.0 L 448.8,44.0 L 452.5,43.0 L 456.2,42.1 L 460.0,41.2 L 463.8,40.3 L 467.5,39.6 L 471.2,38.8 L 475.0,38.1 L 478.8,37.4 L 482.5,36.7 L 486.2,36.0 L 490.0,35.4 L 493.8,34.7 L 497.5,34.1 L 501.2,33.4 L 505.0,32.8 L 508.8,32.1 L 512.5,31.4 L 516.2,30.7 L 520.0,30.0" fill="none" stroke="#2196F3" stroke-width="2.5"/>
+
+  <!-- Data points (plotted at upper class boundaries) -->
+  <circle cx="70.0" cy="330.0" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="145.0" cy="307.5" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="220.0" cy="255.0" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="295.0" cy="165.0" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="370.0" cy="82.5" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="445.0" cy="45.0" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+  <circle cx="520.0" cy="30.0" r="4" fill="#2196F3" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Construction lines: Q1 (cf=20) -->
+  <line x1="70" y1="255" x2="220" y2="255" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="220" y1="255" x2="220" y2="330" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="220" y="358" text-anchor="middle" font-size="8" font-weight="bold" fill="#4CAF50">Q₁ ≈ 160</text>
+
+  <!-- Construction lines: Median (cf=40) -->
+  <line x1="70" y1="180" x2="283" y2="180" stroke="#F44336" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="283" y1="180" x2="283" y2="330" stroke="#F44336" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="283" y="358" text-anchor="middle" font-size="8" font-weight="bold" fill="#F44336">Median ≈ 168</text>
+
+  <!-- Construction lines: Q3 (cf=60) -->
+  <line x1="70" y1="105" x2="350" y2="105" stroke="#FF9800" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="350" y1="105" x2="350" y2="330" stroke="#FF9800" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="350" y="358" text-anchor="middle" font-size="8" font-weight="bold" fill="#FF9800">Q₃ ≈ 177</text>
+
+  <!-- cf-axis annotations -->
+  <text x="44" y="259" text-anchor="end" font-size="8" fill="#4CAF50">n/4 →</text>
+  <text x="44" y="184" text-anchor="end" font-size="8" fill="#F44336">n/2 →</text>
+  <text x="44" y="109" text-anchor="end" font-size="8" fill="#FF9800">3n/4 →</text>
+
+  <!-- (annotation removed for readability) -->
+
+  <!-- IQR bracket annotation -->
+  <line x1="220" y1="383" x2="350" y2="383" stroke="#9C27B0" stroke-width="1.5"/>
+  <line x1="220" y1="379" x2="220" y2="387" stroke="#9C27B0" stroke-width="1.5"/>
+  <line x1="350" y1="379" x2="350" y2="387" stroke="#9C27B0" stroke-width="1.5"/>
+  <text x="285" y="382" text-anchor="middle" font-size="8" font-weight="bold" fill="#9C27B0">IQR ≈ 17</text>
+</svg>

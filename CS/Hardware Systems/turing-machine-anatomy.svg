@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .small { font-size: 12px; }
+    .sym { font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 26px; }
+    .mono { font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 13px; }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Finite control -->
+  <rect x="262" y="18" width="236" height="78" rx="10"
+        fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="42" class="title" text-anchor="middle" fill="#7c3aed">Finite control</text>
+  <text x="380" y="64" class="label" text-anchor="middle">current state: B &#8212; one of finitely many "moods"</text>
+  <text x="380" y="84" class="small" text-anchor="middle">Q = { A, B, HALT }   holds the rule-book &#948;</text>
+
+  <!-- connector control -> head -->
+  <line x1="380" y1="96" x2="325" y2="150" stroke="#7c3aed" stroke-width="1.6"
+        stroke-dasharray="5,4" marker-end="url(#ar)"/>
+
+  <!-- head carriage -->
+  <rect x="296" y="150" width="58" height="34" rx="7"
+        fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="325" y="172" class="label" text-anchor="middle" fill="#f59e0b">head</text>
+  <!-- pointer from head down to its cell -->
+  <path d="M 318 184 L 332 184 L 325 198 z" fill="#f59e0b"/>
+
+  <!-- TAPE -->
+  <!-- ellipses -->
+  <text x="58" y="240" class="sym" text-anchor="middle">&#8230;</text>
+  <text x="588" y="240" class="sym" text-anchor="middle">&#8230;</text>
+
+  <!-- cells: x = 80,150,220,290,360,430,500  width 70  y 200..260 -->
+  <rect x="80"  y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+  <rect x="150" y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+  <rect x="220" y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+  <!-- highlighted cell under the head (x=290) -->
+  <rect x="290" y="200" width="70" height="60" fill="rgba(245,158,11,0.16)" stroke="#f59e0b" stroke-width="2.4"/>
+  <rect x="360" y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+  <rect x="430" y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+  <rect x="500" y="200" width="70" height="60" fill="none" stroke="#888" stroke-width="1.4"/>
+
+  <!-- symbols -->
+  <text x="115" y="240" class="sym" text-anchor="middle" opacity="0.5">_</text>
+  <text x="185" y="240" class="sym" text-anchor="middle" fill="#0891b2">1</text>
+  <text x="255" y="240" class="sym" text-anchor="middle" fill="#0891b2">0</text>
+  <text x="325" y="240" class="sym" text-anchor="middle" fill="#0891b2">1</text>
+  <text x="395" y="240" class="sym" text-anchor="middle" fill="#0891b2">1</text>
+  <text x="465" y="240" class="sym" text-anchor="middle" opacity="0.5">_</text>
+  <text x="535" y="240" class="sym" text-anchor="middle" opacity="0.5">_</text>
+
+  <!-- tape caption -->
+  <text x="325" y="282" class="small" text-anchor="middle">tape &#8212; unbounded; one symbol per cell (the entire memory)</text>
+
+  <!-- move arrows -->
+  <line x1="312" y1="306" x2="232" y2="306" stroke="#888" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="338" y1="306" x2="418" y2="306" stroke="#888" stroke-width="1.4" marker-end="url(#ar)"/>
+  <text x="222" y="311" class="label" text-anchor="end" fill="#2563eb">L</text>
+  <text x="428" y="311" class="label" text-anchor="start" fill="#2563eb">R</text>
+  <text x="325" y="311" class="small" text-anchor="middle">step</text>
+
+  <!-- transition rule -->
+  <text x="380" y="344" class="mono" text-anchor="middle">one rule:  &#948;(state, symbol) = (write, move, next state)</text>
+  <text x="380" y="366" class="small" text-anchor="middle">e.g. &#948;(B, 1) = (0, L, B): in mood B reading 1, write 0, step left, stay in B</text>
+</svg>

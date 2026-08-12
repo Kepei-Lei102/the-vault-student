@@ -1,0 +1,121 @@
+<svg width="100%" viewBox="0 0 960 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>How a buffer works: fast bursts in, steady trickle out</title>
+
+  <text x="480" y="30" text-anchor="middle" font-size="17" fill="#888" font-weight="bold">The buffer: a waiting room that decouples fast from slow</text>
+
+  <!-- direction guides (visible even as a still) -->
+  <path d="M218,175 C300,175 380,105 425,95" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.5"/>
+  <path d="M535,290 C620,290 680,178 750,175" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.5"/>
+  <text x="315" y="120" text-anchor="middle" font-size="12.5" fill="#0891b2">in: fast bursts</text>
+  <text x="648" y="250" text-anchor="middle" font-size="12.5" fill="#059669">out: steady trickle</text>
+
+  <!-- CPU -->
+  <rect x="60" y="130" width="150" height="90" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="135" y="182" text-anchor="middle" font-size="20" fill="#7c3aed" font-weight="bold">CPU</text>
+  <text x="135" y="245" text-anchor="middle" font-size="13" fill="#f59e0b" opacity="1">dumping the document...
+    <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.19;0.22;1"/>
+  </text>
+  <text x="135" y="245" text-anchor="middle" font-size="13" fill="#059669" opacity="0">free - computing
+    <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1" keyTimes="0;0.21;0.24;1"/>
+  </text>
+  <text x="135" y="265" text-anchor="middle" font-size="11.5" fill="#888">nanosecond world</text>
+
+  <!-- buffer tank -->
+  <rect x="430" y="70" width="100" height="240" fill="none" stroke="#888" stroke-width="2.5"/>
+  <rect x="434" y="294" width="92" height="12" fill="rgba(245,158,11,0.35)" stroke="#f59e0b" stroke-width="1.5">
+    <animate attributeName="y"      dur="12s" repeatCount="indefinite" values="294;86;294;294" keyTimes="0;0.21;0.92;1"/>
+    <animate attributeName="height" dur="12s" repeatCount="indefinite" values="12;220;12;12"  keyTimes="0;0.21;0.92;1"/>
+  </rect>
+  <text x="480" y="335" text-anchor="middle" font-size="13" fill="#888">buffer - a queue in memory</text>
+
+  <!-- burst packets: CPU -> buffer -->
+  <g fill="#0891b2">
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.010;0.060;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.010;0.018;0.052;0.060;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.031;0.081;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.031;0.039;0.073;0.081;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.052;0.102;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.052;0.060;0.094;0.102;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.073;0.123;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.073;0.081;0.115;0.123;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.094;0.144;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.094;0.102;0.136;0.144;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.115;0.165;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.115;0.123;0.157;0.165;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.136;0.186;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.136;0.144;0.178;0.186;1"/>
+    </circle>
+    <circle r="7" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M218,175 C300,175 380,105 478,95" keyPoints="0;0;1;1" keyTimes="0;0.157;0.207;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.157;0.165;0.199;0.207;1"/>
+    </circle>
+  </g>
+
+  <!-- drain packets: buffer -> printer -->
+  <g fill="#0891b2">
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.14;0.20;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.14;0.15;0.19;0.20;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.245;0.305;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.245;0.255;0.295;0.305;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.35;0.41;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.35;0.36;0.40;0.41;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.455;0.515;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.455;0.465;0.505;0.515;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.56;0.62;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.56;0.57;0.61;0.62;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.665;0.725;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.665;0.675;0.715;0.725;1"/>
+    </circle>
+    <circle r="6" opacity="0">
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" path="M535,290 C620,290 680,178 752,175" keyPoints="0;0;1;1" keyTimes="0;0.77;0.83;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.77;0.78;0.82;0.83;1"/>
+    </circle>
+  </g>
+
+  <!-- printer -->
+  <rect x="750" y="130" width="150" height="90" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2.5"/>
+  <text x="825" y="182" text-anchor="middle" font-size="18" fill="#059669" font-weight="bold">printer</text>
+  <text x="825" y="265" text-anchor="middle" font-size="11.5" fill="#888">seconds-per-page world</text>
+
+  <!-- pages emerging -->
+  <g fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="1.5">
+    <rect x="788" y="222" width="74" height="24" rx="2" opacity="0">
+      <animate attributeName="y" dur="12s" repeatCount="indefinite" values="222;222;252;252" keyTimes="0;0.30;0.40;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.30;0.32;0.38;0.40;1"/>
+    </rect>
+    <rect x="788" y="222" width="74" height="24" rx="2" opacity="0">
+      <animate attributeName="y" dur="12s" repeatCount="indefinite" values="222;222;252;252" keyTimes="0;0.55;0.65;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.55;0.57;0.63;0.65;1"/>
+    </rect>
+    <rect x="788" y="222" width="74" height="24" rx="2" opacity="0">
+      <animate attributeName="y" dur="12s" repeatCount="indefinite" values="222;222;252;252" keyTimes="0;0.80;0.90;1"/>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.80;0.82;0.88;0.90;1"/>
+    </rect>
+  </g>
+
+  <text x="480" y="368" text-anchor="middle" font-size="13.5" fill="#888" font-style="italic">the CPU leaves in milliseconds; the printer chews for minutes - and neither ever waits for the other</text>
+</svg>

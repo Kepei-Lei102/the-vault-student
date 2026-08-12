@@ -1,0 +1,93 @@
+<svg width="100%" viewBox="0 0 750 260" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <text x="375" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Underfitting vs Proper Fit vs Overfitting</text>
+
+  <!-- === Panel 1: Underfit === -->
+  <text x="120" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#F44336">Underfit (欠拟合)</text>
+  <text x="120" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">Too simple — misses the pattern</text>
+
+  <!-- Axes -->
+  <line x1="30" y1="220" x2="210" y2="220" stroke="#888" stroke-width="1"/>
+  <line x1="30" y1="220" x2="30" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Points (arch-shaped data) -->
+  <circle cx="42" cy="185" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="55" cy="168" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="68" cy="148" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="81" cy="120" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="94" cy="110" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="107" cy="95" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="120" cy="86" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="133" cy="82" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="146" cy="90" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="159" cy="108" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="172" cy="130" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="185" cy="158" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="198" cy="180" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+
+  <!-- Underfit: straight line (nearly flat — misses the curve entirely) -->
+  <line x1="35" y1="132" x2="205" y2="128" stroke="#F44336" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Red X marks showing poor fit -->
+  <text x="120" y="210" text-anchor="middle" font-size="20" fill="#F44336" opacity="0.6">✗</text>
+
+  <!-- === Panel 2: Proper fit === -->
+  <text x="375" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#4CAF50">Proper Fit (适当拟合)</text>
+  <text x="375" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">Captures the trend, ignores the noise</text>
+
+  <!-- Axes -->
+  <line x1="280" y1="220" x2="460" y2="220" stroke="#888" stroke-width="1"/>
+  <line x1="280" y1="220" x2="280" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Same points -->
+  <circle cx="292" cy="185" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="305" cy="168" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="318" cy="148" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="331" cy="120" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="344" cy="110" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="357" cy="95" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="370" cy="86" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="383" cy="82" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="396" cy="90" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="409" cy="108" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="422" cy="130" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="435" cy="158" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="448" cy="180" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+
+  <!-- Proper fit: smooth quadratic curve (polyline from least-squares quadratic) -->
+  <path d="M 286.0,212.9 L 289.4,203.5 L 292.7,194.5 L 296.1,185.8 L 299.4,177.6 L 302.8,169.7 L 306.2,162.1 L 309.5,155.0 L 312.9,148.2 L 316.2,141.7 L 319.6,135.7 L 323.0,130.0 L 326.3,124.7 L 329.7,119.7 L 333.0,115.1 L 336.4,110.9 L 339.8,107.1 L 343.1,103.6 L 346.5,100.5 L 349.8,97.7 L 353.2,95.4 L 356.6,93.4 L 359.9,91.7 L 363.3,90.5 L 366.6,89.6 L 370.0,89.0 L 373.4,88.9 L 376.7,89.1 L 380.1,89.7 L 383.4,90.6 L 386.8,91.9 L 390.2,93.6 L 393.5,95.7 L 396.9,98.1 L 400.2,100.9 L 403.6,104.1 L 407.0,107.6 L 410.3,111.5 L 413.7,115.8 L 417.0,120.4 L 420.4,125.4 L 423.8,130.8 L 427.1,136.5 L 430.5,142.6 L 433.8,149.1 L 437.2,156.0 L 440.6,163.2 L 443.9,170.8 L 447.3,178.7 L 450.6,187.1 L 454.0,195.8" fill="none" stroke="#4CAF50" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Green check -->
+  <text x="375" y="210" text-anchor="middle" font-size="20" fill="#4CAF50" opacity="0.6">✓</text>
+
+  <!-- === Panel 3: Overfit === -->
+  <text x="625" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#FF9800">Overfit (过拟合)</text>
+  <text x="625" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">Too complex — memorises the noise</text>
+
+  <!-- Axes -->
+  <line x1="530" y1="220" x2="710" y2="220" stroke="#888" stroke-width="1"/>
+  <line x1="530" y1="220" x2="530" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Same points -->
+  <circle cx="542" cy="185" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="555" cy="168" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="568" cy="148" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="581" cy="120" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="594" cy="110" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="607" cy="95" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="620" cy="86" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="633" cy="82" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="646" cy="90" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="659" cy="108" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="672" cy="130" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="685" cy="158" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+  <circle cx="698" cy="180" r="3.5" fill="#888" fill-opacity="0.4" stroke="#888" stroke-opacity="0.6" stroke-width="0.8"/>
+
+  <!-- Overfit: wiggly curve that passes through every point -->
+  <path d="M 542,185 C 545,175 550,168 555,168 C 558,168 563,150 568,148 C 572,146 577,122 581,120 C 584,118 590,112 594,110 C 597,109 601,97 607,95 C 612,93 615,88 620,86 C 624,84 629,82 633,82 C 637,82 641,88 646,90 C 650,92 654,106 659,108 C 663,110 668,128 672,130 C 676,132 680,155 685,158 C 689,160 694,178 698,180" fill="none" stroke="#FF9800" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Orange X -->
+  <text x="625" y="210" text-anchor="middle" font-size="20" fill="#FF9800" opacity="0.6">✗</text>
+
+  <!-- Bottom annotation -->
+  <text x="375" y="248" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">Same data, three models. The proper fit captures the trend without chasing every data point.</text>
+</svg>

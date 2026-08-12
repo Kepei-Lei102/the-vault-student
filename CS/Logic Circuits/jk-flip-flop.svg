@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .io { font-size: 13px; font-weight: 700; fill: #2563eb; }
+    .clk { font-size: 13px; font-weight: 700; fill: #f59e0b; }
+    .g { font-size: 11px; font-weight: 600; fill: #7c3aed; }
+    .out { font-size: 13px; font-weight: 700; fill: #059669; }
+    .fb { font-size: 10px; font-weight: 600; fill: #0891b2; }
+    .eq { font-size: 11px; }
+  </style>
+
+  <text x="350" y="24" class="title" text-anchor="middle">The JK flip-flop -- a clocked SR core, chaperoned by its own outputs</text>
+
+  <!-- ===== input rails ===== -->
+  <text x="52" y="79" class="io" text-anchor="end">J</text>
+  <line x1="60" y1="75" x2="186" y2="75" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <text x="52" y="149" class="clk" text-anchor="end">clk</text>
+  <line x1="60" y1="145" x2="120" y2="145" stroke="#f59e0b" stroke-width="1.4"/>
+  <!-- clk branches to both AND middle pins -->
+  <line x1="120" y1="145" x2="120" y2="87"  stroke="#f59e0b" stroke-width="1.4"/>
+  <line x1="120" y1="87"  x2="186" y2="87"  stroke="#f59e0b" stroke-width="1.4"/>
+  <line x1="120" y1="145" x2="120" y2="203" stroke="#f59e0b" stroke-width="1.4"/>
+  <line x1="120" y1="203" x2="186" y2="203" stroke="#f59e0b" stroke-width="1.4"/>
+  <circle cx="120" cy="145" r="3" fill="#f59e0b"/>
+
+  <text x="52" y="219" class="io" text-anchor="end">K</text>
+  <line x1="60" y1="215" x2="186" y2="215" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- ===== top AND (3-input), center y = 87, body 67..107 ===== -->
+  <path d="M 186 67 L 206 67 A 20 20 0 0 1 206 107 L 186 107 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="201" y="91" class="g" text-anchor="middle">AND</text>
+  <!-- output = internal S -->
+  <line x1="226" y1="87" x2="300" y2="87" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="262" y="79" class="eq" text-anchor="middle">S</text>
+
+  <!-- ===== bottom AND (3-input), center y = 203, body 183..223 ===== -->
+  <path d="M 186 183 L 206 183 A 20 20 0 0 1 206 223 L 186 223 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="201" y="207" class="g" text-anchor="middle">AND</text>
+  <!-- output = internal R -->
+  <line x1="226" y1="203" x2="300" y2="203" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="262" y="195" class="eq" text-anchor="middle">R</text>
+
+  <!-- ===== SR core box ===== -->
+  <rect x="300" y="60" width="150" height="170" rx="8"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="375" y="138" class="g" text-anchor="middle" font-size="12px">SR flip-flop</text>
+  <text x="375" y="156" class="eq" text-anchor="middle" font-size="10px">(the cross-coupled NOR pair)</text>
+
+  <!-- core outputs -->
+  <line x1="450" y1="87" x2="560" y2="87" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="572" y="92" class="out" text-anchor="start">Q</text>
+  <line x1="450" y1="203" x2="560" y2="203" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="572" y="208" class="eq" text-anchor="start" font-weight="700" font-size="13px">Q</text>
+  <line x1="571" y1="195" x2="582" y2="195" stroke="#888" stroke-width="1.4"/>
+
+  <!-- ===== feedback: Q-bar up-and-around to top AND's bottom pin ===== -->
+  <circle cx="520" cy="203" r="3" fill="#0891b2"/>
+  <line x1="520" y1="203" x2="520" y2="252" stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="520" y1="252" x2="160" y2="252" stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="160" y1="252" x2="160" y2="99"  stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="160" y1="99"  x2="186" y2="99"  stroke="#0891b2" stroke-width="1.4"/>
+  <text x="340" y="266" class="fb" text-anchor="middle">Q-bar feeds back: the set path opens only while Q = 0</text>
+
+  <!-- ===== feedback: Q down-and-around to bottom AND's top pin ===== -->
+  <circle cx="490" cy="87" r="3" fill="#0891b2"/>
+  <line x1="490" y1="87" x2="490" y2="40" stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="490" y1="40" x2="140" y2="40" stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="140" y1="40" x2="140" y2="191" stroke="#0891b2" stroke-width="1.4"/>
+  <line x1="140" y1="191" x2="186" y2="191" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="315" y="52" class="fb" text-anchor="middle">Q feeds back: the reset path opens only while Q = 1</text>
+
+  <text x="350" y="296" class="eq" text-anchor="middle">At most one path is ever open, so the core never sees S = R = 1. With J = K = 1, the open path is the one that flips the state: toggle.</text>
+</svg>

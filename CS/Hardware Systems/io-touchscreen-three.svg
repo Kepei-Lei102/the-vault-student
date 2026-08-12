@@ -1,0 +1,86 @@
+<svg width="100%" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tsa" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" font-size="15" fill="#888" text-anchor="middle" font-weight="bold">three ways to sense a touch — same job, different physics</text>
+
+  <!-- ===== RESISTIVE ===== -->
+  <text x="128" y="58" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">resistive</text>
+  <text x="128" y="76" font-size="11.5" fill="#888" text-anchor="middle">two layers pressed together</text>
+  <!-- two layers -->
+  <rect x="40" y="120" width="176" height="8" fill="rgba(37,99,235,0.35)" stroke="#2563eb" stroke-width="1"/>
+  <rect x="40" y="150" width="176" height="8" fill="rgba(37,99,235,0.35)" stroke="#2563eb" stroke-width="1"/>
+  <text x="228" y="127" font-size="10.5" fill="#888">top</text>
+  <text x="228" y="157" font-size="10.5" fill="#888">bottom</text>
+  <!-- gap dots -->
+  <g fill="#888">
+    <circle cx="70" cy="139" r="2"/><circle cx="110" cy="139" r="2"/><circle cx="150" cy="139" r="2"/><circle cx="190" cy="139" r="2"/>
+  </g>
+  <!-- finger pressing -->
+  <path d="M120 95 q10 0 10 14 l0 20" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+  <line x1="125" y1="98" x2="125" y2="118" stroke="#dc2626" stroke-width="2.2" marker-end="url(#tsa)"/>
+  <!-- contact spark -->
+  <circle cx="125" cy="145" r="7" fill="rgba(220,38,38,0.3)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="128" y="190" font-size="11" fill="#dc2626" text-anchor="middle">pressure shorts the layers</text>
+  <text x="128" y="208" font-size="11" fill="#dc2626" text-anchor="middle">voltage gives coordinates</text>
+  <!-- pros/cons -->
+  <text x="128" y="238" font-size="11" fill="#059669" text-anchor="middle">+ any object (glove, stylus)</text>
+  <text x="128" y="256" font-size="11" fill="#888" text-anchor="middle">- dimmer, single-touch, wears</text>
+
+  <!-- ===== CAPACITIVE ===== -->
+  <text x="380" y="58" font-size="14" fill="#7c3aed" text-anchor="middle" font-weight="bold">capacitive</text>
+  <text x="380" y="76" font-size="11.5" fill="#888" text-anchor="middle">finger draws charge away</text>
+  <!-- single glass layer with field dots -->
+  <rect x="292" y="135" width="176" height="10" fill="rgba(124,58,237,0.25)" stroke="#7c3aed" stroke-width="1.2"/>
+  <g fill="#7c3aed" opacity="0.7">
+    <circle cx="312" cy="128" r="2"/><circle cx="340" cy="128" r="2"/><circle cx="368" cy="128" r="2"/><circle cx="396" cy="128" r="2"/><circle cx="424" cy="128" r="2"/><circle cx="448" cy="128" r="2"/>
+  </g>
+  <text x="480" y="142" font-size="10.5" fill="#888">glass</text>
+  <!-- finger -->
+  <path d="M375 92 q10 0 10 14 l0 18" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+  <!-- charge being pulled up to finger -->
+  <g stroke="#dc2626" stroke-width="1.6">
+    <line x1="380" y1="126" x2="382" y2="112" marker-end="url(#tsa)"/>
+    <line x1="392" y1="126" x2="388" y2="112" marker-end="url(#tsa)"/>
+    <line x1="368" y1="126" x2="374" y2="112" marker-end="url(#tsa)"/>
+  </g>
+  <text x="380" y="190" font-size="11" fill="#dc2626" text-anchor="middle">controller reads the dip</text>
+  <text x="380" y="208" font-size="11" fill="#dc2626" text-anchor="middle">at the screen's corners</text>
+  <text x="380" y="238" font-size="11" fill="#059669" text-anchor="middle">+ sharp, durable, multi-touch</text>
+  <text x="380" y="256" font-size="11" fill="#888" text-anchor="middle">- needs a conductive touch</text>
+
+  <!-- ===== INFRA-RED ===== -->
+  <text x="632" y="58" font-size="14" fill="#0891b2" text-anchor="middle" font-weight="bold">infra-red</text>
+  <text x="632" y="76" font-size="11.5" fill="#888" text-anchor="middle">a touch breaks the beams</text>
+  <!-- beam grid frame -->
+  <rect x="556" y="100" width="152" height="72" rx="3" fill="none" stroke="#0891b2" stroke-width="1.5"/>
+  <!-- horizontal beams -->
+  <g stroke="#0891b2" stroke-width="1" opacity="0.55">
+    <line x1="556" y1="116" x2="708" y2="116"/>
+    <line x1="556" y1="136" x2="708" y2="136"/>
+    <line x1="556" y1="156" x2="708" y2="156"/>
+  </g>
+  <!-- vertical beams -->
+  <g stroke="#0891b2" stroke-width="1" opacity="0.55">
+    <line x1="588" y1="100" x2="588" y2="172"/>
+    <line x1="620" y1="100" x2="620" y2="172"/>
+    <line x1="652" y1="100" x2="652" y2="172"/>
+    <line x1="684" y1="100" x2="684" y2="172"/>
+  </g>
+  <!-- broken beams at a touch point (652,136) drawn red-dashed -->
+  <line x1="556" y1="136" x2="708" y2="136" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="4,3"/>
+  <line x1="652" y1="100" x2="652" y2="172" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="4,3"/>
+  <circle cx="652" cy="136" r="8" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="632" y="190" font-size="11" fill="#dc2626" text-anchor="middle">broken row + column</text>
+  <text x="632" y="208" font-size="11" fill="#dc2626" text-anchor="middle">= the coordinates</text>
+  <text x="632" y="238" font-size="11" fill="#059669" text-anchor="middle">+ any object, huge sizes</text>
+  <text x="632" y="256" font-size="11" fill="#888" text-anchor="middle">- bulky frame, dust/sun fool it</text>
+
+  <!-- footer -->
+  <rect x="120" y="292" width="520" height="58" rx="8" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="380" y="316" font-size="12" fill="#888" text-anchor="middle" font-weight="bold">the exam question is always: which axis does the context stress?</text>
+  <text x="380" y="337" font-size="11.5" fill="#888" text-anchor="middle">gloved hand: resistive or infra-red · pinch-to-zoom: capacitive · giant whiteboard: infra-red</text>
+</svg>

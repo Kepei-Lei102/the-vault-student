@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<!-- Newton-Raphson tangent-line iteration animations.
+     Left:  f(x) = x² - 2, x₀ = 2 → √2 in 4 steps (quadratic convergence — digits double).
+     Right: f(x) = x³ - 2x + 2, x₀ = 0 → cycles between 0 and 1 forever. Pathological case. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 640" width="100%">
+  <style>
+    text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #888; font-size: 14px; }
+    .title { font-family: system-ui, -apple-system, sans-serif; font-size: 14.5px; font-weight: 600; fill: #888; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-size: 12.5px; font-style: italic; fill: #888; opacity: 0.8; }
+    .label { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: #888; }
+    .tick { font-family: system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #888; opacity: 0.7; }
+    .caption { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; fill: #888; opacity: 0.9; }
+    .green { stroke: #059669; fill: #059669; }
+    .red { stroke: #dc2626; fill: #dc2626; }
+    .amber { stroke: #f59e0b; fill: #f59e0b; }
+  </style>
+
+  <!-- ============== LEFT PANEL: CONVERGENT ============== -->
+  <text x="310" y="30" text-anchor="middle" class="title green">CONVERGENT:  f(x) = x² − 2,  finding √2</text>
+  <text x="310" y="50" text-anchor="middle" class="subtitle">x₀ = 2 → √2 ≈ 1.4142 in 4 steps (quadratic convergence)</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="350.0" x2="550" y2="350.0" stroke="#888" stroke-width="1"/>
+  <line x1="70" y1="70" x2="70" y2="550" stroke="#888" stroke-width="1"/>
+  <text x="550" y="372" text-anchor="end" class="label">x</text>
+  <text x="78" y="82" class="label">y</text>
+
+  <line x1="211.2" y1="347.0" x2="211.2" y2="353.0" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="211.2" y="366.0" text-anchor="middle" class="tick">1</text>
+  <line x1="328.1" y1="347.0" x2="328.1" y2="353.0" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="328.1" y="366.0" text-anchor="middle" class="tick">√2</text>
+  <line x1="493.5" y1="347.0" x2="493.5" y2="353.0" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="493.5" y="366.0" text-anchor="middle" class="tick">2</text>
+  <path d="M 84.1 485.8 L 86.4 485.1 L 88.7 484.4 L 90.9 483.6 L 93.2 482.9 L 95.5 482.1 L 97.7 481.4 L 100.0 480.6 L 102.3 479.8 L 104.5 479.0 L 106.8 478.2 L 109.1 477.4 L 111.4 476.6 L 113.6 475.7 L 115.9 474.9 L 118.2 474.0 L 120.4 473.2 L 122.7 472.3 L 125.0 471.4 L 127.3 470.5 L 129.5 469.6 L 131.8 468.7 L 134.1 467.7 L 136.3 466.8 L 138.6 465.8 L 140.9 464.9 L 143.1 463.9 L 145.4 462.9 L 147.7 461.9 L 150.0 460.9 L 152.2 459.9 L 154.5 458.9 L 156.8 457.9 L 159.0 456.8 L 161.3 455.8 L 163.6 454.7 L 165.8 453.6 L 168.1 452.5 L 170.4 451.4 L 172.7 450.3 L 174.9 449.2 L 177.2 448.1 L 179.5 447.0 L 181.7 445.8 L 184.0 444.7 L 186.3 443.5 L 188.5 442.3 L 190.8 441.1 L 193.1 439.9 L 195.4 438.7 L 197.6 437.5 L 199.9 436.3 L 202.2 435.0 L 204.4 433.8 L 206.7 432.5 L 209.0 431.2 L 211.2 430.0 L 213.5 428.7 L 215.8 427.4 L 218.1 426.1 L 220.3 424.7 L 222.6 423.4 L 224.9 422.1 L 227.1 420.7 L 229.4 419.3 L 231.7 418.0 L 233.9 416.6 L 236.2 415.2 L 238.5 413.8 L 240.8 412.4 L 243.0 410.9 L 245.3 409.5 L 247.6 408.0 L 249.8 406.6 L 252.1 405.1 L 254.4 403.6 L 256.7 402.2 L 258.9 400.7 L 261.2 399.1 L 263.5 397.6 L 265.7 396.1 L 268.0 394.6 L 270.3 393.0 L 272.5 391.4 L 274.8 389.9 L 277.1 388.3 L 279.4 386.7 L 281.6 385.1 L 283.9 383.5 L 286.2 381.9 L 288.4 380.2 L 290.7 378.6 L 293.0 376.9 L 295.2 375.3 L 297.5 373.6 L 299.8 371.9 L 302.1 370.2 L 304.3 368.5 L 306.6 366.8 L 308.9 365.1 L 311.1 363.3 L 313.4 361.6 L 315.7 359.8 L 317.9 358.1 L 320.2 356.3 L 322.5 354.5 L 324.8 352.7 L 327.0 350.9 L 329.3 349.1 L 331.6 347.2 L 333.8 345.4 L 336.1 343.5 L 338.4 341.7 L 340.6 339.8 L 342.9 337.9 L 345.2 336.0 L 347.5 334.1 L 349.7 332.2 L 352.0 330.3 L 354.3 328.4 L 356.5 326.4 L 358.8 324.5 L 361.1 322.5 L 363.3 320.5 L 365.6 318.5 L 367.9 316.6 L 370.2 314.5 L 372.4 312.5 L 374.7 310.5 L 377.0 308.5 L 379.2 306.4 L 381.5 304.4 L 383.8 302.3 L 386.1 300.2 L 388.3 298.1 L 390.6 296.0 L 392.9 293.9 L 395.1 291.8 L 397.4 289.7 L 399.7 287.5 L 401.9 285.4 L 404.2 283.2 L 406.5 281.0 L 408.8 278.9 L 411.0 276.7 L 413.3 274.5 L 415.6 272.3 L 417.8 270.0 L 420.1 267.8 L 422.4 265.6 L 424.6 263.3 L 426.9 261.0 L 429.2 258.8 L 431.5 256.5 L 433.7 254.2 L 436.0 251.9 L 438.3 249.6 L 440.5 247.2 L 442.8 244.9 L 445.1 242.6 L 447.3 240.2 L 449.6 237.8 L 451.9 235.5 L 454.2 233.1 L 456.4 230.7 L 458.7 228.3 L 461.0 225.8 L 463.2 223.4 L 465.5 221.0 L 467.8 218.5 L 470.0 216.1 L 472.3 213.6 L 474.6 211.1 L 476.9 208.6 L 479.1 206.1 L 481.4 203.6 L 483.7 201.1 L 485.9 198.5 L 488.2 196.0 L 490.5 193.4 L 492.7 190.9 L 495.0 188.3 L 497.3 185.7 L 499.6 183.1 L 501.8 180.5 L 504.1 177.9 L 506.4 175.3 L 508.6 172.6 L 510.9 170.0 L 513.2 167.3 L 515.5 164.7 L 517.7 162.0 L 520.0 159.3 L 522.3 156.6 L 524.5 153.9 L 526.8 151.2 L 529.1 148.5 L 531.3 145.7 L 533.6 143.0 L 535.9 140.2" fill="none" stroke="#059669" stroke-width="2.2"/>
+  <text x="494" y="182" class="label green" font-weight="600">y = x² − 2</text>
+
+  <!-- Root marker at √2 -->
+  <circle cx="328.1" cy="350.0" r="4.5" class="green" opacity="0.8"/>
+
+  <!-- Step 0: x_0 = 2.0000 -->
+  <!-- x_0 dot on x-axis -->
+  <circle cx="493.5" cy="350.0" r="5" class="green" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.13999999999999999;0.15;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="493.5" y="368.0" text-anchor="middle" class="label" opacity="0">x_0=2.0000
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.13999999999999999;0.15;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <!-- Vertical drop from curve to x-axis -->
+  <line x1="493.5" y1="190.0" x2="493.5" y2="350.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.15;0.16999999999999998;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <!-- Tangent line from (x_n, f(x_n)) to (x_1, 0), drawn left-to-right via stroke-dashoffset -->
+  <line x1="437.1" y1="254.0" x2="352.4" y2="350.0" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="128" stroke-dashoffset="128">
+    <animate attributeName="stroke-dashoffset" values="128;128;0;0;128"
+             keyTimes="0;0.16999999999999998;0.19999999999999998;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 1: x_1 = 1.5000 -->
+  <!-- x_1 dot on x-axis -->
+  <circle cx="352.4" cy="350.0" r="5" class="green" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.31499999999999995;0.32499999999999996;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="352.4" y="368.0" text-anchor="middle" class="label" opacity="0">x_1=1.5000
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.31499999999999995;0.32499999999999996;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <!-- Vertical drop from curve to x-axis -->
+  <line x1="352.4" y1="330.0" x2="352.4" y2="350.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.32499999999999996;0.345;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <!-- Tangent line from (x_n, f(x_n)) to (x_2, 0), drawn left-to-right via stroke-dashoffset -->
+  <line x1="295.9" y1="378.0" x2="328.8" y2="350.0" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="43" stroke-dashoffset="43">
+    <animate attributeName="stroke-dashoffset" values="43;43;0;0;43"
+             keyTimes="0;0.345;0.375;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 2: x_2 = 1.4167 -->
+  <!-- x_2 dot on x-axis -->
+  <circle cx="328.8" cy="350.0" r="5" class="green" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.49;0.5;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="328.8" y="368.0" text-anchor="middle" class="label" opacity="0">x_2=1.4167
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.49;0.5;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <!-- Vertical drop from curve to x-axis -->
+  <line x1="328.8" y1="349.4" x2="328.8" y2="350.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.5;0.52;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <!-- Tangent line from (x_n, f(x_n)) to (x_3, 0), drawn left-to-right via stroke-dashoffset -->
+  <line x1="272.4" y1="394.8" x2="328.1" y2="350.0" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="72" stroke-dashoffset="72">
+    <animate attributeName="stroke-dashoffset" values="72;72;0;0;72"
+             keyTimes="0;0.52;0.55;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 3: x_3 = 1.4142 -->
+  <!-- x_3 dot on x-axis -->
+  <circle cx="328.1" cy="350.0" r="5" class="green" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.6649999999999999;0.6749999999999999;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="328.1" y="368.0" text-anchor="middle" class="label" opacity="0">x_3=1.4142
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.6649999999999999;0.6749999999999999;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <!-- Vertical drop from curve to x-axis -->
+  <line x1="328.1" y1="350.0" x2="328.1" y2="350.0" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.6749999999999999;0.695;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <!-- Tangent line from (x_n, f(x_n)) to (x_4, 0), drawn left-to-right via stroke-dashoffset -->
+  <line x1="271.7" y1="395.3" x2="328.1" y2="350.0" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="72" stroke-dashoffset="72">
+    <animate attributeName="stroke-dashoffset" values="72;72;0;0;72"
+             keyTimes="0;0.695;0.725;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <!-- Final converged iterate -->
+  <circle cx="328.1" cy="350.0" r="6" class="green" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.7349999999999999;0.7549999999999999;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="336.1" y="342.0" class="label green" font-weight="600" opacity="0">x_4 = √2  ✓
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.7349999999999999;0.7549999999999999;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+
+
+  <!-- ============== RIGHT PANEL: PATHOLOGICAL CYCLE ============== -->
+  <text x="860" y="30" text-anchor="middle" class="title red">CYCLES:  f(x) = x³ − 2x + 2,  x₀ = 0</text>
+  <text x="860" y="50" text-anchor="middle" class="subtitle">Iterates 0 → 1 → 0 → 1 → ... forever, never approaching the true root</text>
+
+  <line x1="620" y1="344.3" x2="1100" y2="344.3" stroke="#888" stroke-width="1"/>
+  <line x1="886.7" y1="70" x2="886.7" y2="550" stroke="#888" stroke-width="1"/>
+  <text x="1100" y="366" text-anchor="end" class="label">x</text>
+  <text x="894.7" y="82" class="label">y</text>
+
+  <line x1="673.3" y1="341.3" x2="673.3" y2="347.3" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="673.3" y="360.3" text-anchor="middle" class="tick">−2</text>
+  <line x1="780.0" y1="341.3" x2="780.0" y2="347.3" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="780.0" y="360.3" text-anchor="middle" class="tick">−1</text>
+  <line x1="993.3" y1="341.3" x2="993.3" y2="347.3" stroke="#888" stroke-width="1" opacity="0.7"/>
+  <text x="993.3" y="360.3" text-anchor="middle" class="tick">1</text>
+  <path d="M 625.3 879.6 L 626.9 863.5 L 628.5 847.7 L 630.0 832.1 L 631.6 816.7 L 633.2 801.5 L 634.8 786.5 L 636.3 771.8 L 637.9 757.2 L 639.5 742.9 L 641.0 728.7 L 642.6 714.8 L 644.2 701.1 L 645.7 687.5 L 647.3 674.2 L 648.9 661.1 L 650.4 648.2 L 652.0 635.4 L 653.6 622.9 L 655.2 610.6 L 656.7 598.4 L 658.3 586.5 L 659.9 574.7 L 661.4 563.1 L 663.0 551.7 L 664.6 540.5 L 666.1 529.5 L 667.7 518.7 L 669.3 508.1 L 670.9 497.6 L 672.4 487.3 L 674.0 477.2 L 675.6 467.3 L 677.1 457.5 L 678.7 447.9 L 680.3 438.5 L 681.8 429.3 L 683.4 420.3 L 685.0 411.4 L 686.6 402.6 L 688.1 394.1 L 689.7 385.7 L 691.3 377.5 L 692.8 369.4 L 694.4 361.5 L 696.0 353.8 L 697.5 346.2 L 699.1 338.8 L 700.7 331.5 L 702.2 324.4 L 703.8 317.5 L 705.4 310.7 L 707.0 304.0 L 708.5 297.5 L 710.1 291.2 L 711.7 285.0 L 713.2 278.9 L 714.8 273.0 L 716.4 267.2 L 717.9 261.6 L 719.5 256.1 L 721.1 250.8 L 722.7 245.6 L 724.2 240.5 L 725.8 235.5 L 727.4 230.7 L 728.9 226.1 L 730.5 221.5 L 732.1 217.1 L 733.6 212.9 L 735.2 208.7 L 736.8 204.7 L 738.4 200.8 L 739.9 197.0 L 741.5 193.4 L 743.1 189.8 L 744.6 186.4 L 746.2 183.1 L 747.8 180.0 L 749.3 176.9 L 750.9 174.0 L 752.5 171.1 L 754.0 168.4 L 755.6 165.8 L 757.2 163.3 L 758.8 160.9 L 760.3 158.6 L 761.9 156.5 L 763.5 154.4 L 765.0 152.4 L 766.6 150.6 L 768.2 148.8 L 769.7 147.1 L 771.3 145.6 L 772.9 144.1 L 774.5 142.7 L 776.0 141.4 L 777.6 140.2 L 779.2 139.1 L 780.7 138.1 L 782.3 137.2 L 783.9 136.4 L 785.4 135.6 L 787.0 134.9 L 788.6 134.4 L 790.1 133.9 L 791.7 133.4 L 793.3 133.1 L 794.9 132.8 L 796.4 132.6 L 798.0 132.5 L 799.6 132.5 L 801.1 132.5 L 802.7 132.6 L 804.3 132.8 L 805.8 133.1 L 807.4 133.4 L 809.0 133.8 L 810.6 134.2 L 812.1 134.7 L 813.7 135.3 L 815.3 135.9 L 816.8 136.6 L 818.4 137.3 L 820.0 138.2 L 821.5 139.0 L 823.1 139.9 L 824.7 140.9 L 826.3 141.9 L 827.8 143.0 L 829.4 144.1 L 831.0 145.3 L 832.5 146.5 L 834.1 147.8 L 835.7 149.1 L 837.2 150.4 L 838.8 151.8 L 840.4 153.2 L 841.9 154.7 L 843.5 156.2 L 845.1 157.7 L 846.7 159.3 L 848.2 160.9 L 849.8 162.6 L 851.4 164.2 L 852.9 165.9 L 854.5 167.7 L 856.1 169.4 L 857.6 171.2 L 859.2 173.0 L 860.8 174.8 L 862.4 176.7 L 863.9 178.6 L 865.5 180.5 L 867.1 182.4 L 868.6 184.3 L 870.2 186.2 L 871.8 188.2 L 873.3 190.1 L 874.9 192.1 L 876.5 194.1 L 878.1 196.1 L 879.6 198.1 L 881.2 200.1 L 882.8 202.1 L 884.3 204.1 L 885.9 206.2 L 887.5 208.2 L 889.0 210.2 L 890.6 212.2 L 892.2 214.2 L 893.7 216.2 L 895.3 218.2 L 896.9 220.2 L 898.5 222.2 L 900.0 224.2 L 901.6 226.2 L 903.2 228.1 L 904.7 230.0 L 906.3 232.0 L 907.9 233.9 L 909.4 235.8 L 911.0 237.6 L 912.6 239.5 L 914.2 241.3 L 915.7 243.1 L 917.3 244.9 L 918.9 246.7 L 920.4 248.4 L 922.0 250.1 L 923.6 251.8 L 925.1 253.4 L 926.7 255.0 L 928.3 256.6 L 929.9 258.1 L 931.4 259.6 L 933.0 261.1 L 934.6 262.5 L 936.1 263.9 L 937.7 265.2 L 939.3 266.6 L 940.8 267.8 L 942.4 269.0 L 944.0 270.2 L 945.5 271.3 L 947.1 272.4 L 948.7 273.4 L 950.3 274.4 L 951.8 275.3 L 953.4 276.1 L 955.0 277.0 L 956.5 277.7 L 958.1 278.4 L 959.7 279.0 L 961.2 279.6 L 962.8 280.1 L 964.4 280.5 L 966.0 280.9 L 967.5 281.2 L 969.1 281.5 L 970.7 281.7 L 972.2 281.8 L 973.8 281.8 L 975.4 281.8 L 976.9 281.6 L 978.5 281.5 L 980.1 281.2 L 981.6 280.8 L 983.2 280.4 L 984.8 279.9 L 986.4 279.3 L 987.9 278.7 L 989.5 277.9 L 991.1 277.1 L 992.6 276.2 L 994.2 275.1 L 995.8 274.0 L 997.3 272.8 L 998.9 271.6 L 1000.5 270.2 L 1002.1 268.7 L 1003.6 267.1 L 1005.2 265.5 L 1006.8 263.7 L 1008.3 261.8 L 1009.9 259.8 L 1011.5 257.8 L 1013.0 255.6 L 1014.6 253.3 L 1016.2 250.9 L 1017.8 248.4 L 1019.3 245.8 L 1020.9 243.1 L 1022.5 240.3 L 1024.0 237.3 L 1025.6 234.2 L 1027.2 231.1 L 1028.7 227.8 L 1030.3 224.4 L 1031.9 220.8 L 1033.4 217.2 L 1035.0 213.4 L 1036.6 209.5 L 1038.2 205.5 L 1039.7 201.3 L 1041.3 197.1 L 1042.9 192.6 L 1044.4 188.1 L 1046.0 183.4 L 1047.6 178.6 L 1049.1 173.7 L 1050.7 168.6 L 1052.3 163.4 L 1053.9 158.1 L 1055.4 152.6 L 1057.0 146.9 L 1058.6 141.2 L 1060.1 135.2 L 1061.7 129.2 L 1063.3 123.0 L 1064.8 116.6 L 1066.4 110.1 L 1068.0 103.5 L 1069.6 96.7 L 1071.1 89.7 L 1072.7 82.6 L 1074.3 75.3 L 1075.8 67.9 L 1077.4 60.3 L 1079.0 52.6 L 1080.5 44.7 L 1082.1 36.6 L 1083.7 28.4 L 1085.2 20.0 L 1086.8 11.4 L 1088.4 2.7 L 1090.0 -6.2 L 1091.5 -15.2 L 1093.1 -24.5 L 1094.7 -33.9" fill="none" stroke="#dc2626" stroke-width="2.2"/>
+  <text x="1068" y="95" class="label red" font-weight="600">y = x³ − 2x + 2</text>
+
+  <!-- True root marker -->
+  <circle cx="697.9" cy="344.3" r="4.5" class="red" opacity="0.8"/>
+  <text x="687.9" y="362.3" text-anchor="end" class="label red" font-weight="600">true root ≈ -1.769</text>
+
+  <!-- Step 0: x_0 = 0.0 -->
+  <circle cx="886.7" cy="344.3" r="5" class="red" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.13999999999999999;0.15;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="886.7" y="362.3" text-anchor="middle" class="label" opacity="0">x_0=0
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.13999999999999999;0.15;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <line x1="886.7" y1="207.1" x2="886.7" y2="344.3" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.15;0.16999999999999998;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="908.0" y1="234.6" x2="993.3" y2="344.3" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="139" stroke-dashoffset="139">
+    <animate attributeName="stroke-dashoffset" values="139;139;0;0;139"
+             keyTimes="0;0.16999999999999998;0.19999999999999998;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 1: x_1 = 1.0 -->
+  <circle cx="993.3" cy="344.3" r="5" class="red" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.27999999999999997;0.29;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="993.3" y="362.3" text-anchor="middle" class="label" opacity="0">x_1=1
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.27999999999999997;0.29;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <line x1="993.3" y1="275.7" x2="993.3" y2="344.3" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.29;0.31;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="972.0" y1="289.4" x2="886.7" y2="344.3" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="101" stroke-dashoffset="101">
+    <animate attributeName="stroke-dashoffset" values="101;101;0;0;101"
+             keyTimes="0;0.31;0.33999999999999997;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 2: x_2 = 0.0 -->
+  <circle cx="886.7" cy="344.3" r="5" class="red" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.41999999999999993;0.42999999999999994;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="886.7" y="362.3" text-anchor="middle" class="label" opacity="0">x_2=0
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.41999999999999993;0.42999999999999994;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <line x1="886.7" y1="207.1" x2="886.7" y2="344.3" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.42999999999999994;0.44999999999999996;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="908.0" y1="234.6" x2="993.3" y2="344.3" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="139" stroke-dashoffset="139">
+    <animate attributeName="stroke-dashoffset" values="139;139;0;0;139"
+             keyTimes="0;0.44999999999999996;0.48;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Step 3: x_3 = 1.0 -->
+  <circle cx="993.3" cy="344.3" r="5" class="red" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5599999999999999;0.57;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <text x="993.3" y="362.3" text-anchor="middle" class="label" opacity="0">x_3=1
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5599999999999999;0.57;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <line x1="993.3" y1="275.7" x2="993.3" y2="344.3" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.57;0.59;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="972.0" y1="289.4" x2="886.7" y2="344.3" stroke="#f59e0b" stroke-width="2"
+        stroke-dasharray="101" stroke-dashoffset="101">
+    <animate attributeName="stroke-dashoffset" values="101;101;0;0;101"
+             keyTimes="0;0.59;0.62;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Cycle annotation -->
+  <text x="860" y="540" text-anchor="middle" class="label red" font-weight="600" opacity="0">2-cycle: 0 → 1 → 0 → 1 → ...
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.75;0.80;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+  <text x="860" y="558" text-anchor="middle" class="label red" font-size="11.5px" opacity="0">Newton-Raphson without bracketing can fall into a periodic orbit.
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.77;0.82;0.92;1" dur="14s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Bottom takeaway -->
+  <line x1="60" y1="595" x2="1080" y2="595" stroke="#888" stroke-width="0.8" opacity="0.4"/>
+  <text x="570" y="615" text-anchor="middle" class="caption" font-weight="600">Newton-Raphson is fast when the tangent line points toward a root —</text>
+  <text x="570" y="632" text-anchor="middle" class="caption">and dangerous when it doesn't.  Always bracket first.</text>
+</svg>

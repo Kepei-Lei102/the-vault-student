@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 760 445" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#059669"/>
+    </marker>
+    <marker id="arrAmber" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#dc2626"/>
+    </marker>
+    <g id="cross">
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0891b2" stroke-width="1.6" opacity="0.7"/>
+      <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0891b2" stroke-width="1.6" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <!-- ============ PANEL A: LEFT HAND / MOTOR ============ -->
+  <text x="195" y="40" font-size="16" fill="#888" text-anchor="middle">Fleming's LEFT hand — the motor effect</text>
+  <rect x="40" y="60" width="310" height="245" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-dasharray="6,5" opacity="0.6"/>
+  <use href="#cross" x="65" y="85"/><use href="#cross" x="110" y="85"/><use href="#cross" x="65" y="130"/>
+  <use href="#cross" x="285" y="85"/><use href="#cross" x="330" y="85"/><use href="#cross" x="330" y="130"/>
+  <use href="#cross" x="65" y="250"/><use href="#cross" x="110" y="265"/><use href="#cross" x="65" y="265"/>
+  <use href="#cross" x="330" y="250"/><use href="#cross" x="285" y="265"/><use href="#cross" x="330" y="265"/>
+  <text x="195" y="296" font-size="13" fill="#0891b2" text-anchor="middle" opacity="0.9">B into the page</text>
+
+  <line x1="45" y1="197" x2="345" y2="197" stroke="#888" stroke-width="5"/>
+  <line x1="120" y1="197" x2="240" y2="197" stroke="#2563eb" stroke-width="4" marker-end="url(#arrBlue)"/>
+  <text x="165" y="226" font-size="14" fill="#2563eb">current I — you supply it</text>
+  <line x1="195" y1="180" x2="195" y2="108" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrAmber)"/>
+  <text x="195" y="95" font-size="14" fill="#f59e0b" text-anchor="middle">force F — the answer</text>
+
+  <!-- ============ PANEL B: RIGHT HAND / GENERATOR ============ -->
+  <text x="565" y="40" font-size="16" fill="#888" text-anchor="middle">Fleming's RIGHT hand — the generator effect</text>
+  <rect x="410" y="60" width="310" height="245" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-dasharray="6,5" opacity="0.6"/>
+  <use href="#cross" x="435" y="85"/><use href="#cross" x="480" y="85"/><use href="#cross" x="435" y="130"/>
+  <use href="#cross" x="655" y="85"/><use href="#cross" x="700" y="85"/><use href="#cross" x="700" y="130"/>
+  <use href="#cross" x="435" y="250"/><use href="#cross" x="480" y="265"/><use href="#cross" x="435" y="265"/>
+  <use href="#cross" x="700" y="250"/><use href="#cross" x="655" y="265"/><use href="#cross" x="700" y="265"/>
+  <text x="660" y="296" font-size="13" fill="#0891b2" text-anchor="middle" opacity="0.9">B into the page</text>
+
+  <line x1="415" y1="197" x2="715" y2="197" stroke="#888" stroke-width="5"/>
+  <line x1="565" y1="180" x2="565" y2="108" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrAmber)"/>
+  <text x="565" y="95" font-size="14" fill="#f59e0b" text-anchor="middle">motion v — you supply it</text>
+  <line x1="640" y1="197" x2="520" y2="197" stroke="#059669" stroke-width="4" marker-end="url(#arrGreen)"/>
+  <text x="537" y="226" font-size="14" fill="#059669">induced I — the answer</text>
+  <line x1="462" y1="212" x2="462" y2="266" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <text x="462" y="285" font-size="12.5" fill="#dc2626" text-anchor="middle">Lenz: its force fights your push</text>
+
+  <!-- ============ the agreement ============ -->
+  <text x="380" y="345" font-size="14" fill="#888" text-anchor="middle">The fingers, on both hands:  First finger = Field · seCond finger = Current · thuMb = Motion</text>
+  <text x="380" y="370" font-size="14" fill="#888" text-anchor="middle">Same wire, same field. Left: drive the current right — the wire is pushed up.</text>
+  <text x="380" y="393" font-size="14" fill="#888" text-anchor="middle">Right: push the wire up — the induced current comes out to the LEFT, opposite the left panel's.</text>
+  <text x="380" y="416" font-size="14" fill="#888" text-anchor="middle">Feed it to the left hand: its force points down, against your push — the flip is Lenz's law.</text>
+</svg>

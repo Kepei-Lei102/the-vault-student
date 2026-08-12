@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .sub   { font-size: 13px; font-weight: 700; }
+    .bad   { font-size: 12px; font-weight: 700; fill: #dc2626; }
+    .good  { font-size: 12px; font-weight: 700; fill: #059669; }
+    .in    { font-size: 12px; font-weight: 700; fill: #2563eb; }
+    .blk   { font-size: 12px; font-weight: 700; fill: #7c3aed; }
+    .clk   { font-size: 11px; font-weight: 700; fill: #f59e0b; }
+    .cap   { font-size: 11px; }
+  </style>
+
+  <text x="360" y="26" class="title" text-anchor="middle">Metastability, and the synchronizer that tames it</text>
+
+  <!-- ================= LEFT: ball on the ridge ================= -->
+  <text x="185" y="58" class="sub" text-anchor="middle">A bistable has two valleys and a ridge</text>
+
+  <!-- double-well curve -->
+  <path d="M40 120 C 70 120 78 235 120 235 C 150 235 160 110 185 110 C 210 110 220 235 250 235 C 292 235 300 120 330 120"
+        fill="none" stroke="#9ca3af" stroke-width="2"/>
+
+  <!-- valley balls -->
+  <circle cx="120" cy="223" r="10" fill="rgba(5,150,105,0.25)" stroke="#059669" stroke-width="1.6"/>
+  <text x="120" y="258" class="good" text-anchor="middle">stable 0</text>
+  <circle cx="250" cy="223" r="10" fill="rgba(5,150,105,0.25)" stroke="#059669" stroke-width="1.6"/>
+  <text x="250" y="258" class="good" text-anchor="middle">stable 1</text>
+
+  <!-- ball on the ridge -->
+  <circle cx="185" cy="98" r="11" fill="rgba(220,38,38,0.22)" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="185" y="82" class="bad" text-anchor="middle">?</text>
+  <!-- wobble arrows -->
+  <path d="M150 98 L163 98 M158 94 L163 98 L158 102" fill="none" stroke="#dc2626" stroke-width="1.4"/>
+  <path d="M220 98 L207 98 M212 94 L207 98 L212 102" fill="none" stroke="#dc2626" stroke-width="1.4"/>
+  <text x="185" y="290" class="cap" text-anchor="middle">caught on the ridge, it hangs --</text>
+  <text x="185" y="305" class="cap" text-anchor="middle">then topples to 0 or 1 at random,</text>
+  <text x="185" y="320" class="cap" text-anchor="middle">after an unbounded delay.</text>
+
+  <!-- divider -->
+  <line x1="370" y1="50" x2="370" y2="340" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+
+  <!-- ================= RIGHT: two-flip-flop synchronizer ================= -->
+  <text x="545" y="58" class="sub" text-anchor="middle">Two flip-flops buy settling time</text>
+
+  <!-- async input -->
+  <text x="398" y="150" class="in" text-anchor="start">async in</text>
+  <line x1="400" y1="160" x2="455" y2="160" stroke="#9ca3af" stroke-width="1.6"/>
+
+  <!-- FF1 -->
+  <rect x="455" y="130" width="60" height="60" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.7"/>
+  <text x="485" y="158" class="blk" text-anchor="middle">FF1</text>
+  <path d="M455 178 l10 -6 l-10 -6" fill="none" stroke="#f59e0b" stroke-width="1.4"/>
+
+  <!-- metastable middle wire (red wobble) -->
+  <polyline points="515,160 524,160 528,152 534,168 540,152 546,168 550,160 560,160"
+            fill="none" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="537" y="127" class="bad" text-anchor="middle">may be metastable</text>
+
+  <!-- FF2 -->
+  <rect x="560" y="130" width="60" height="60" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.7"/>
+  <text x="590" y="158" class="blk" text-anchor="middle">FF2</text>
+  <path d="M560 178 l10 -6 l-10 -6" fill="none" stroke="#f59e0b" stroke-width="1.4"/>
+
+  <!-- clean output -->
+  <line x1="620" y1="160" x2="685" y2="160" stroke="#059669" stroke-width="1.8"/>
+  <text x="655" y="150" class="good" text-anchor="middle">clean out</text>
+
+  <!-- clock rail -->
+  <line x1="485" y1="230" x2="590" y2="230" stroke="#f59e0b" stroke-width="1.6"/>
+  <line x1="485" y1="190" x2="485" y2="230" stroke="#f59e0b" stroke-width="1.6"/>
+  <line x1="590" y1="190" x2="590" y2="230" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="537" y="248" class="clk" text-anchor="middle">receiving clock</text>
+
+  <!-- settle bracket -->
+  <line x1="515" y1="112" x2="560" y2="112" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="515" y1="106" x2="515" y2="112" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="560" y1="106" x2="560" y2="112" stroke="#9ca3af" stroke-width="1.2"/>
+
+  <text x="545" y="300" class="cap" text-anchor="middle">FF1 may go metastable; it gets one full</text>
+  <text x="545" y="315" class="cap" text-anchor="middle">clock period to settle before FF2 reads it.</text>
+  <text x="545" y="330" class="cap" text-anchor="middle">Failure probability -&gt; astronomically small, never zero.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .axis  { font-size: 13px; font-weight: 700; }
+    .res   { font-size: 15px; font-weight: 800; fill: #059669; }
+    .cap   { font-size: 12px; }
+    .note  { font-size: 11px; }
+  </style>
+
+  <text x="260" y="28" class="title" text-anchor="middle">Why the energy is ½QV, not QV</text>
+
+  <!-- axes -->
+  <line x1="70" y1="300" x2="450" y2="300" stroke="#888" stroke-width="1.6"/>
+  <line x1="70" y1="300" x2="70" y2="60" stroke="#888" stroke-width="1.6"/>
+  <path d="M444 296 L452 300 L444 304" fill="none" stroke="#888" stroke-width="1.6"/>
+  <path d="M66 68 L70 60 L74 68" fill="none" stroke="#888" stroke-width="1.6"/>
+  <text x="452" y="322" class="axis" text-anchor="end">charge  Q</text>
+  <text x="60" y="70" class="axis" text-anchor="end">p.d.  V</text>
+
+  <!-- energy triangle (area under the line) -->
+  <path d="M70 300 L400 100 L400 300 Z" fill="rgba(245,158,11,0.16)"/>
+
+  <!-- the linear V = Q/C line -->
+  <line x1="70" y1="300" x2="400" y2="100" stroke="#7c3aed" stroke-width="2.4"/>
+  <text x="250" y="182" class="note" text-anchor="middle" fill="#7c3aed" transform="rotate(-31 250 182)">V = Q / C   (slope 1/C)</text>
+
+  <!-- dashed projections to the point (Q, V) -->
+  <line x1="400" y1="100" x2="400" y2="300" stroke="#888" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <line x1="400" y1="100" x2="70" y2="100" stroke="#888" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <circle cx="400" cy="100" r="3.5" fill="#7c3aed"/>
+  <text x="400" y="318" class="axis" text-anchor="middle">Q</text>
+  <text x="60" y="104" class="axis" text-anchor="end">V</text>
+
+  <!-- the result inside the triangle -->
+  <text x="300" y="250" class="res" text-anchor="middle">W = ½QV</text>
+
+  <text x="260" y="342" class="cap" text-anchor="middle">Charge and voltage climb together, so you pay the average ½V — just as a spring stores ½kx².</text>
+</svg>

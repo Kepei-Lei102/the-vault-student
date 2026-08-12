@@ -1,0 +1,42 @@
+<svg width="100%" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="fB" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L9,4.5 L1.5,8" fill="none" stroke="#0891b2" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Flux: how many field threads pass through the window?</text>
+
+  <!-- field lines run left to right across all three panels -->
+  <!-- panel 1: face-on -->
+  <text x="140" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">face-on (θ = 0)</text>
+  <line x1="40" y1="95"  x2="240" y2="95"  stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="40" y1="130" x2="240" y2="130" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="40" y1="165" x2="240" y2="165" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="40" y1="200" x2="240" y2="200" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <ellipse cx="140" cy="147" rx="26" ry="72" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="140" y="248" text-anchor="middle" font-size="12" fill="#7c3aed">Φ = BA</text>
+  <text x="140" y="266" text-anchor="middle" font-size="10" fill="#888">every thread caught</text>
+
+  <!-- panel 2: tilted -->
+  <text x="380" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">tilted (angle θ)</text>
+  <line x1="280" y1="95"  x2="480" y2="95"  stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="280" y1="130" x2="480" y2="130" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="280" y1="165" x2="480" y2="165" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="280" y1="200" x2="480" y2="200" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <ellipse cx="380" cy="147" rx="26" ry="72" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="2.5" transform="rotate(38 380 147)"/>
+  <text x="380" y="248" text-anchor="middle" font-size="12" fill="#7c3aed">Φ = BA cos θ</text>
+  <text x="380" y="266" text-anchor="middle" font-size="10" fill="#888">a slimmer window to the field</text>
+
+  <!-- panel 3: edge-on -->
+  <text x="620" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">edge-on (θ = 90°)</text>
+  <line x1="520" y1="95"  x2="720" y2="95"  stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="520" y1="130" x2="720" y2="130" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="520" y1="165" x2="720" y2="165" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="520" y1="200" x2="720" y2="200" stroke="#0891b2" stroke-width="1.5" marker-end="url(#fB)"/>
+  <line x1="620" y1="75" x2="620" y2="219" stroke="#7c3aed" stroke-width="3.5"/>
+  <text x="620" y="248" text-anchor="middle" font-size="12" fill="#7c3aed">Φ = 0</text>
+  <text x="620" y="266" text-anchor="middle" font-size="10" fill="#888">the threads slide past the frame</text>
+
+  <text x="380" y="292" text-anchor="middle" font-size="11.5" fill="#888">A coil of N turns is N windows in series — the law's currency is the flux linkage NΦ.</text>
+</svg>

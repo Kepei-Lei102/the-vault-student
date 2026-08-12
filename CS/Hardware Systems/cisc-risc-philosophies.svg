@@ -1,0 +1,56 @@
+<svg width="100%" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">One sentence — or four syllables</text>
+
+  <!-- cycle ruler -->
+  <g stroke="rgba(136,136,136,0.4)" stroke-width="1">
+    <line x1="150" y1="60" x2="150" y2="300"/>
+    <line x1="290" y1="60" x2="290" y2="300"/>
+    <line x1="430" y1="60" x2="430" y2="300"/>
+    <line x1="570" y1="60" x2="570" y2="300"/>
+    <line x1="710" y1="60" x2="710" y2="300"/>
+  </g>
+  <g font-size="10" fill="#888">
+    <text x="220" y="52" text-anchor="middle">cycle 1</text>
+    <text x="360" y="52" text-anchor="middle">cycle 2</text>
+    <text x="500" y="52" text-anchor="middle">cycle 3</text>
+    <text x="640" y="52" text-anchor="middle">cycle 4</text>
+  </g>
+
+  <!-- CISC row -->
+  <text x="20" y="105" font-size="12" font-weight="bold" fill="#f59e0b">CISC</text>
+  <text x="20" y="120" font-size="9.5" fill="#888">one sentence</text>
+  <rect x="150" y="78" width="560" height="70" rx="8" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="2.2"/>
+  <text x="430" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#888" font-family="Menlo, monospace">MULT  A, B</text>
+  <!-- microcode sub-steps -->
+  <g font-size="9.5" fill="#f59e0b">
+    <rect x="162" y="112" width="124" height="24" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="224" y="128" text-anchor="middle">fetch A from memory</text>
+    <rect x="302" y="112" width="124" height="24" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="364" y="128" text-anchor="middle">fetch B from memory</text>
+    <rect x="442" y="112" width="124" height="24" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="504" y="128" text-anchor="middle">multiply</text>
+    <rect x="582" y="112" width="124" height="24" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="644" y="128" text-anchor="middle">store result</text>
+  </g>
+  <text x="430" y="166" text-anchor="middle" font-size="10" fill="#888">one instruction, many cycles — unrolled internally by MICROCODE; memory touched mid-instruction</text>
+
+  <!-- RISC row -->
+  <text x="20" y="230" font-size="12" font-weight="bold" fill="#059669">RISC</text>
+  <text x="20" y="245" font-size="9.5" fill="#888">four syllables</text>
+  <g font-family="Menlo, monospace" font-size="11.5">
+    <rect x="150" y="200" width="132" height="42" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.8"/>
+    <text x="216" y="226" text-anchor="middle" fill="#888">LDR R1, A</text>
+    <rect x="290" y="200" width="132" height="42" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.8"/>
+    <text x="356" y="226" text-anchor="middle" fill="#888">LDR R2, B</text>
+    <rect x="430" y="200" width="132" height="42" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.8"/>
+    <text x="496" y="226" text-anchor="middle" fill="#888">MUL R3,R1,R2</text>
+    <rect x="570" y="200" width="132" height="42" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.8"/>
+    <text x="636" y="226" text-anchor="middle" fill="#888">STR R3, C</text>
+  </g>
+  <text x="430" y="266" text-anchor="middle" font-size="10" fill="#888">four instructions, one tick each, same shape — only LDR/STR touch memory; MUL is register-to-register</text>
+
+  <text x="430" y="296" text-anchor="middle" font-size="10" fill="#059669">uniform pieces = pipeline food: while one decodes, the next fetches — the factory never waits</text>
+
+  <text x="380" y="336" text-anchor="middle" font-size="11.5" fill="#888">Same work, two philosophies: CISC lets the hardware be clever inside one grand instruction;</text>
+  <text x="380" y="353" text-anchor="middle" font-size="11.5" fill="#888">RISC keeps every piece small and identical, and lets the compiler be clever instead.</text>
+</svg>

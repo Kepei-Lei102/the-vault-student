@@ -1,0 +1,71 @@
+<svg viewBox="0 0 860 250" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>The structure of the 128-slot ASCII table: control characters 0-31, digits 48-57, uppercase 65-90, lowercase 97-122 - and the single-bit (bit 5) gap between the two letter cases.</title>
+
+  <text x="430" y="24" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">ASCII&#8217;s 128 slots &#8212; engineered, not alphabetical accident</text>
+
+  <!-- bar: 128 codes, 5.5 px each, from x=54 -->
+  <!-- control 0-31 (red) -->
+  <rect x="54" y="46" width="176" height="34" fill="#dc2626" fill-opacity="0.12" stroke="#dc2626" stroke-width="1.4"/>
+  <!-- symbols 32-47 (grey) -->
+  <rect x="230" y="46" width="88" height="34" fill="#888888" fill-opacity="0.10" stroke="#888" stroke-width="1"/>
+  <!-- digits 48-57 (teal) -->
+  <rect x="318" y="46" width="55" height="34" fill="#0891b2" fill-opacity="0.14" stroke="#0891b2" stroke-width="1.4"/>
+  <!-- symbols 58-64 -->
+  <rect x="373" y="46" width="38.5" height="34" fill="#888888" fill-opacity="0.10" stroke="#888" stroke-width="1"/>
+  <!-- A-Z 65-90 (blue) -->
+  <rect x="411.5" y="46" width="143" height="34" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="1.4"/>
+  <!-- symbols 91-96 -->
+  <rect x="554.5" y="46" width="33" height="34" fill="#888888" fill-opacity="0.10" stroke="#888" stroke-width="1"/>
+  <!-- a-z 97-122 (green) -->
+  <rect x="587.5" y="46" width="143" height="34" fill="#059669" fill-opacity="0.12" stroke="#059669" stroke-width="1.4"/>
+  <!-- symbols 123-127 -->
+  <rect x="730.5" y="46" width="27.5" height="34" fill="#888888" fill-opacity="0.10" stroke="#888" stroke-width="1"/>
+
+  <!-- segment labels inside/near bar -->
+  <g font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">
+    <text x="142" y="67">control</text>
+    <text x="345.5" y="67">0&#8211;9</text>
+    <text x="483" y="67">A&#8211;Z</text>
+    <text x="659" y="67">a&#8211;z</text>
+  </g>
+  <!-- code numbers under bar -->
+  <g font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="middle" opacity="0.85">
+    <text x="54" y="96">0</text>
+    <text x="230" y="96">32</text>
+    <text x="318" y="96">48</text>
+    <text x="373" y="96">58</text>
+    <text x="411.5" y="96">65</text>
+    <text x="554.5" y="96">91</text>
+    <text x="587.5" y="96">97</text>
+    <text x="730.5" y="96">123</text>
+    <text x="758" y="96">127</text>
+  </g>
+  <g font-family="sans-serif" font-size="9.5" fill="#888" text-anchor="middle" opacity="0.85">
+    <text x="142" y="110">\n tab BEL &#8212; teletype ghosts</text>
+    <text x="345.5" y="110">low nibble = value</text>
+  </g>
+
+  <!-- bit-5 callout: A vs a -->
+  <text x="430" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888" text-anchor="middle">the two letter blocks sit exactly 32 apart &#8212; case is a single bit</text>
+
+  <!-- A = 0100 0001 -->
+  <text x="330" y="184" font-family="sans-serif" font-size="14" fill="#888" text-anchor="end">A&#8194;=&#8194;65&#8194;=</text>
+  <g font-family="monospace" font-size="16" font-weight="bold" fill="#888">
+    <text x="344" y="184">0</text><text x="362" y="184">1</text>
+    <text x="384" y="184">0</text>
+    <text x="402" y="184">0</text><text x="420" y="184">0</text><text x="438" y="184">0</text><text x="456" y="184">0</text><text x="474" y="184">1</text>
+  </g>
+  <rect x="378" y="169" width="18" height="20" rx="3" fill="none" stroke="#f59e0b" stroke-width="2"/>
+
+  <!-- a = 0110 0001 -->
+  <text x="330" y="216" font-family="sans-serif" font-size="14" fill="#888" text-anchor="end">a&#8194;=&#8194;97&#8194;=</text>
+  <g font-family="monospace" font-size="16" font-weight="bold" fill="#888">
+    <text x="344" y="216">0</text><text x="362" y="216">1</text>
+    <text x="384" y="216">1</text>
+    <text x="402" y="216">0</text><text x="420" y="216">0</text><text x="438" y="216">0</text><text x="456" y="216">0</text><text x="474" y="216">1</text>
+  </g>
+  <rect x="378" y="201" width="18" height="20" rx="3" fill="none" stroke="#f59e0b" stroke-width="2"/>
+
+  <text x="510" y="202" font-family="sans-serif" font-size="12" fill="#f59e0b" font-weight="bold">bit 5</text>
+  <text x="552" y="202" font-family="sans-serif" font-size="12" fill="#888">&#8212; one flip toggles the case</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .sub { font-size: 12px; }
+    .blk { font-size: 13px; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .cap { font-size: 11.5px; }
+    .note { font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M5 0 L10 10 L0 10 z" fill="#888"/>
+    </marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- ===================== LEFT: MATHEMATICS ===================== -->
+  <text x="195" y="34" class="title" text-anchor="middle">MATHEMATICS</text>
+  <text x="195" y="55" class="sub" text-anchor="middle">deductive — proven, never expires</text>
+
+  <rect x="80" y="205" width="230" height="40" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="195" y="230" class="blk math" text-anchor="middle">theorem</text>
+  <rect x="80" y="251" width="230" height="40" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="195" y="276" class="blk math" text-anchor="middle">theorem</text>
+  <rect x="80" y="297" width="230" height="40" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="195" y="322" class="blk math" text-anchor="middle">theorem</text>
+
+  <rect x="62" y="351" width="266" height="50" rx="6" fill="rgba(124,58,237,0.18)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="195" y="372" class="blk" text-anchor="middle" style="font-weight:600">AXIOMS</text>
+  <text x="195" y="390" class="note" text-anchor="middle">chosen, not proven</text>
+
+  <line x1="46" y1="398" x2="46" y2="211" stroke="#888" stroke-width="1.6" marker-end="url(#up)"/>
+  <text x="36" y="305" class="note" text-anchor="middle" transform="rotate(-90 36 305)">proof builds up</text>
+
+  <text x="195" y="430" class="cap" text-anchor="middle">Every theorem follows from the axioms —</text>
+  <text x="195" y="447" class="cap" text-anchor="middle">permanent, given them.</text>
+
+  <!-- divider -->
+  <line x1="390" y1="72" x2="390" y2="455" stroke="#888" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+
+  <!-- ===================== RIGHT: PHYSICS ===================== -->
+  <text x="575" y="34" class="title" text-anchor="middle">PHYSICS</text>
+  <text x="575" y="55" class="sub" text-anchor="middle">empirical root + deductive superstructure</text>
+
+  <!-- falsification note, kept up top-right, clear of blocks -->
+  <text x="730" y="252" class="note" text-anchor="end" fill="#dc2626">an experiment</text>
+  <text x="730" y="266" class="note" text-anchor="end" fill="#dc2626">can falsify</text>
+  <text x="730" y="280" class="note" text-anchor="end" fill="#dc2626">the law</text>
+  <line x1="708" y1="300" x2="700" y2="354" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="2,3" marker-end="url(#red)"/>
+
+  <!-- deduced superstructure (green) -->
+  <rect x="460" y="205" width="230" height="40" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="575" y="230" class="blk" text-anchor="middle">conservation of <tspan class="math">L</tspan></text>
+  <rect x="460" y="251" width="230" height="40" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="575" y="276" class="blk math" text-anchor="middle">L = I ω</text>
+  <rect x="460" y="297" width="230" height="40" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="575" y="322" class="blk math" text-anchor="middle">τ = I α</text>
+
+  <!-- the LAW (promoted observation, amber) -->
+  <rect x="448" y="351" width="254" height="50" rx="6" fill="rgba(245,158,11,0.22)" stroke="#f59e0b" stroke-width="2.2"/>
+  <text x="575" y="372" class="blk" text-anchor="middle"><tspan style="font-weight:600">LAW</tspan>&#8195;<tspan class="math">F = m a</tspan></text>
+  <text x="575" y="390" class="note" text-anchor="middle">a promoted observation</text>
+
+  <!-- observations ground -->
+  <rect x="448" y="409" width="254" height="28" rx="4" fill="rgba(136,136,136,0.14)" stroke="#888" stroke-width="1.2"/>
+  <text x="575" y="427" class="note" text-anchor="middle">OBSERVATIONS — the world</text>
+
+  <line x1="432" y1="403" x2="432" y2="211" stroke="#888" stroke-width="1.6" marker-end="url(#up)"/>
+  <text x="422" y="305" class="note" text-anchor="middle" transform="rotate(-90 422 305)">deduce</text>
+
+  <text x="575" y="452" class="cap" text-anchor="middle">A law holds until an experiment falsifies it —</text>
+  <text x="575" y="469" class="cap" text-anchor="middle">then <tspan fill="#dc2626" style="font-weight:600">demoted</tspan>, not erased.</text>
+</svg>

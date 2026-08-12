@@ -1,0 +1,101 @@
+<svg width="100%" viewBox="0 0 960 470" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="kbArrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10"
+            refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#888"/>
+    </marker>
+    <marker id="kbArrowAmber" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10"
+            refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="28" text-anchor="middle" font-size="17" fill="#888" font-weight="bold">A keyboard is a small computer that scans a grid</text>
+
+  <!-- ===================== Panel 1: one key = one switch ===================== -->
+  <text x="140" y="58" text-anchor="middle" font-size="14" fill="#2563eb" font-weight="bold">1. one key = one switch</text>
+
+  <!-- press arrow -->
+  <line x1="140" y1="72" x2="140" y2="96" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#kbArrowAmber)"/>
+  <text x="158" y="86" font-size="12" fill="#888">press</text>
+
+  <!-- keycap -->
+  <rect x="75" y="102" width="130" height="32" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="123" text-anchor="middle" font-size="13" fill="#888">keycap</text>
+  <!-- stem -->
+  <rect x="130" y="134" width="20" height="22" fill="rgba(136,136,136,0.25)" stroke="#888" stroke-width="1.5"/>
+  <!-- rubber dome -->
+  <path d="M95,186 Q140,140 185,186" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="222" y="172" font-size="12" fill="#888">rubber dome</text>
+  <!-- PCB -->
+  <rect x="60" y="192" width="160" height="12" fill="rgba(136,136,136,0.2)" stroke="#888" stroke-width="1.5"/>
+  <!-- contacts -->
+  <rect x="118" y="184" width="16" height="8" fill="rgba(8,145,178,0.6)" stroke="#0891b2" stroke-width="1.5"/>
+  <rect x="146" y="184" width="16" height="8" fill="rgba(8,145,178,0.6)" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="140" y="228" text-anchor="middle" font-size="12.5" fill="#888">the dome collapses, the two</text>
+  <text x="140" y="245" text-anchor="middle" font-size="12.5" fill="#888">contacts short: a switch closes</text>
+
+  <!-- ===================== Panel 2: the matrix ===================== -->
+  <text x="452" y="58" text-anchor="middle" font-size="14" fill="#7c3aed" font-weight="bold">2. keys sit on a shared grid</text>
+
+  <!-- row lines (blue) -->
+  <line x1="330" y1="95"  x2="590" y2="95"  stroke="#2563eb" stroke-width="1.5" opacity="0.5"/>
+  <line x1="330" y1="145" x2="590" y2="145" stroke="#2563eb" stroke-width="3.5"/>
+  <line x1="330" y1="195" x2="590" y2="195" stroke="#2563eb" stroke-width="1.5" opacity="0.5"/>
+  <line x1="330" y1="245" x2="590" y2="245" stroke="#2563eb" stroke-width="1.5" opacity="0.5"/>
+  <!-- col lines (teal) -->
+  <line x1="360" y1="75" x2="360" y2="265" stroke="#0891b2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="425" y1="75" x2="425" y2="265" stroke="#0891b2" stroke-width="3.5"/>
+  <line x1="490" y1="75" x2="490" y2="265" stroke="#0891b2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="555" y1="75" x2="555" y2="265" stroke="#0891b2" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- switches at intersections -->
+  <g stroke="#888" stroke-width="1.5" fill="none" opacity="0.7">
+    <circle cx="360" cy="95" r="7"/><circle cx="490" cy="95" r="7"/><circle cx="555" cy="95" r="7"/><circle cx="425" cy="95" r="7"/>
+    <circle cx="360" cy="145" r="7"/><circle cx="490" cy="145" r="7"/><circle cx="555" cy="145" r="7"/>
+    <circle cx="360" cy="195" r="7"/><circle cx="425" cy="195" r="7"/><circle cx="490" cy="195" r="7"/><circle cx="555" cy="195" r="7"/>
+    <circle cx="360" cy="245" r="7"/><circle cx="425" cy="245" r="7"/><circle cx="490" cy="245" r="7"/><circle cx="555" cy="245" r="7"/>
+  </g>
+  <!-- the pressed key -->
+  <circle cx="425" cy="145" r="10" fill="rgba(245,158,11,0.5)" stroke="#f59e0b" stroke-width="2.5"/>
+
+  <!-- scan labels -->
+  <text x="596" y="149" font-size="11.5" fill="#2563eb">drive row 1</text>
+  <text x="425" y="288" text-anchor="middle" font-size="11.5" fill="#0891b2">column 2 answers</text>
+
+  <!-- controller chip -->
+  <rect x="382" y="308" width="140" height="42" rx="6" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="452" y="334" text-anchor="middle" font-size="12.5" fill="#7c3aed">controller chip</text>
+  <line x1="452" y1="308" x2="452" y2="296" stroke="#888" stroke-width="1.5"/>
+
+  <text x="452" y="382" text-anchor="middle" font-size="12.5" fill="#888">~100 keys on ~20 wires: the chip drives</text>
+  <text x="452" y="399" text-anchor="middle" font-size="12.5" fill="#888">each row in turn, reads which column answers</text>
+
+  <!-- ===================== Panel 3: press to letter ===================== -->
+  <text x="795" y="58" text-anchor="middle" font-size="14" fill="#059669" font-weight="bold">3. from press to letter</text>
+
+  <rect x="672" y="72" width="250" height="34" rx="6" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="797" y="94" text-anchor="middle" font-size="12.5" fill="#888">switch closes at (row 1, col 2)</text>
+  <line x1="797" y1="106" x2="797" y2="126" stroke="#888" stroke-width="1.8" marker-end="url(#kbArrow)"/>
+
+  <rect x="672" y="129" width="250" height="34" rx="6" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.8"/>
+  <text x="797" y="151" text-anchor="middle" font-size="12.5" fill="#888">scan code 0x14 sent over USB</text>
+  <line x1="797" y1="163" x2="797" y2="183" stroke="#888" stroke-width="1.8" marker-end="url(#kbArrow)"/>
+
+  <rect x="672" y="186" width="250" height="34" rx="6" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="797" y="208" text-anchor="middle" font-size="12.5" fill="#888">interrupt: the CPU reads the code</text>
+  <line x1="797" y1="220" x2="797" y2="240" stroke="#888" stroke-width="1.8" marker-end="url(#kbArrow)"/>
+
+  <rect x="672" y="243" width="250" height="34" rx="6" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="797" y="265" text-anchor="middle" font-size="12.5" fill="#888">OS key map: 0x14 means "t"</text>
+  <line x1="797" y1="277" x2="797" y2="297" stroke="#888" stroke-width="1.8" marker-end="url(#kbArrow)"/>
+
+  <rect x="672" y="300" width="250" height="42" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="797" y="327" text-anchor="middle" font-size="16" fill="#059669" font-weight="bold">t</text>
+
+  <text x="797" y="374" text-anchor="middle" font-size="12.5" fill="#888">the keycap never decides the letter:</text>
+  <text x="797" y="391" text-anchor="middle" font-size="12.5" fill="#888">software does, at the very last step</text>
+
+  <!-- footer -->
+  <text x="480" y="446" text-anchor="middle" font-size="13" fill="#888" font-style="italic">the keyboard sends a number, never a letter - that is why one keyboard can type twenty languages</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">
+  <!-- Axes -->
+  <line x1="20" y1="260" x2="500" y2="260" stroke="#888" stroke-width="1.2"/>
+  <line x1="260" y1="500" x2="260" y2="20" stroke="#888" stroke-width="1.2"/>
+  <polygon points="500,260 492,256 492,264" fill="#888"/>
+  <polygon points="260,20 256,28 264,28" fill="#888"/>
+  <text x="505" y="264" fill="#888" font-size="14" font-style="italic">x</text>
+  <text x="264" y="16" fill="#888" font-size="14" font-style="italic">y</text>
+
+  <!-- Unit circle -->
+  <circle cx="260" cy="260" r="200" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Vertical tangent line at x = 1 (x = 460 in SVG) -->
+  <line x1="460" y1="40" x2="460" y2="480" stroke="rgba(200,100,50,0.4)" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="470" y="50" fill="rgba(200,100,50,0.7)" font-size="12">x = 1</text>
+
+  <!-- Point P at θ ≈ 50° -->
+  <!-- cos50 ≈ 0.643, sin50 ≈ 0.766 -->
+  <!-- P = (260 + 200*0.643, 260 - 200*0.766) = (388.6, 106.8) -->
+  <circle cx="389" cy="107" r="5" fill="#c06"/>
+  <text x="396" y="98" fill="#c06" font-size="13" font-weight="600">P</text>
+
+  <!-- Radius line from O through P, extended to hit the tangent line x=460 -->
+  <!-- Slope from O(260,260) to P(389,107): dy/dx = (107-260)/(389-260) = -153/129 = -1.186 -->
+  <!-- At x=460: y = 260 + (-1.186)*(460-260) = 260 - 237.2 = 22.8 -->
+  <!-- So T = (460, 23) -->
+  <line x1="260" y1="260" x2="460" y2="23" stroke="#c06" stroke-width="1.8"/>
+
+  <!-- Point T where radius meets the tangent line -->
+  <circle cx="460" cy="23" r="4" fill="rgba(200,100,50,0.9)"/>
+  <text x="468" y="20" fill="rgba(200,100,50,0.9)" font-size="13" font-weight="600">T</text>
+
+  <!-- Foot of tangent on x-axis at (460, 260) = point F -->
+  <circle cx="460" cy="260" r="3" fill="#888"/>
+  <text x="468" y="275" fill="#888" font-size="12">F(1, 0)</text>
+
+  <!-- Right angle at F -->
+  <polyline points="445,260 445,245 460,245" fill="none" stroke="#888" stroke-width="1.2"/>
+
+  <!-- tan θ segment: from F(460,260) up to T(460,23) -->
+  <line x1="460" y1="260" x2="460" y2="23" stroke="rgba(220,80,80,0.8)" stroke-width="3"/>
+  <text x="480" y="145" fill="rgba(200,50,50,1)" font-size="16" font-weight="600">tan θ</text>
+
+  <!-- Angle arc at O -->
+  <path d="M 310 260 A 50 50 0 0 0 292.2 220.7" fill="none" stroke="#c06" stroke-width="2"/>
+  <text x="315" y="242" fill="#c06" font-size="16" font-style="italic">θ</text>
+
+  <!-- cos θ on x-axis -->
+  <line x1="260" y1="262" x2="389" y2="262" stroke="rgba(100,150,220,0.7)" stroke-width="2"/>
+  <text x="324" y="278" fill="rgba(70,120,200,0.8)" font-size="12" text-anchor="middle">cos θ</text>
+
+  <!-- sin θ vertical -->
+  <line x1="391" y1="260" x2="391" y2="107" stroke="rgba(100,180,100,0.7)" stroke-width="2"/>
+  <text x="403" y="188" fill="rgba(60,150,60,0.8)" font-size="12">sin θ</text>
+
+  <!-- Origin label -->
+  <text x="248" y="278" fill="#888" font-size="12" text-anchor="end">O</text>
+</svg>

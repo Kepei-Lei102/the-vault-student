@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 410" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .role-title { font-size: 14px; font-weight: 700; }
+    .label { font-size: 12px; }
+    .small { font-size: 11px; }
+    .tiny { font-size: 10px; }
+    .note { font-size: 11px; opacity: 0.75; font-style: italic; }
+  </style>
+
+  <defs>
+    <marker id="redarrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="22" class="title" text-anchor="middle">The 1712 Verdict — Newton's three hats</text>
+  <text x="350" y="40" class="small" text-anchor="middle" font-style="italic">When Leibniz formally complained to the Royal Society about plagiarism accusations…</text>
+
+  <!-- ============================================ -->
+  <!-- ROLE 1 (TOP): Directs the investigation     -->
+  <!-- ============================================ -->
+
+  <rect x="180" y="70" width="340" height="60" rx="8"
+        fill="rgba(220, 38, 38, 0.10)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="350" y="92" class="role-title" text-anchor="middle" fill="#dc2626">① Directs the investigation</text>
+  <text x="350" y="111" class="small" text-anchor="middle">As President of the Royal Society,</text>
+  <text x="350" y="124" class="small" text-anchor="middle">convenes the "neutral international" committee.</text>
+
+  <!-- Arrow from Newton to Role 1 -->
+  <line x1="350" y1="195" x2="350" y2="135"
+        stroke="#dc2626" stroke-width="1.5" marker-end="url(#redarrow)"/>
+
+  <!-- ============================================ -->
+  <!-- NEWTON (CENTER)                              -->
+  <!-- ============================================ -->
+
+  <rect x="245" y="195" width="210" height="64" rx="8"
+        fill="rgba(220, 38, 38, 0.20)" stroke="#dc2626" stroke-width="2"/>
+  <text x="350" y="220" class="role-title" text-anchor="middle" fill="#dc2626" font-size="16">Isaac Newton</text>
+  <text x="350" y="238" class="small" text-anchor="middle">President of the Royal Society</text>
+  <text x="350" y="251" class="tiny" text-anchor="middle" opacity="0.75">1703 – 1727</text>
+
+  <!-- Arrow from Newton to Role 2 (bottom-left) -->
+  <line x1="280" y1="259" x2="190" y2="320"
+        stroke="#dc2626" stroke-width="1.5" marker-end="url(#redarrow)"/>
+
+  <!-- Arrow from Newton to Role 3 (bottom-right) -->
+  <line x1="420" y1="259" x2="510" y2="320"
+        stroke="#dc2626" stroke-width="1.5" marker-end="url(#redarrow)"/>
+
+  <!-- ============================================ -->
+  <!-- ROLE 2 (BOTTOM-LEFT): Writes the report      -->
+  <!-- ============================================ -->
+
+  <rect x="30" y="320" width="290" height="70" rx="8"
+        fill="rgba(220, 38, 38, 0.10)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="175" y="343" class="role-title" text-anchor="middle" fill="#dc2626">② Writes the verdict</text>
+  <text x="175" y="361" class="small" text-anchor="middle">Anonymously authors the committee's report</text>
+  <text x="175" y="374" class="small" text-anchor="middle" font-style="italic">Commercium Epistolicum (1712)</text>
+  <text x="175" y="386" class="tiny" text-anchor="middle" opacity="0.7">Verdict: Leibniz plagiarised. Newton wins.</text>
+
+  <!-- ============================================ -->
+  <!-- ROLE 3 (BOTTOM-RIGHT): Reviews own report   -->
+  <!-- ============================================ -->
+
+  <rect x="380" y="320" width="290" height="70" rx="8"
+        fill="rgba(220, 38, 38, 0.10)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="525" y="343" class="role-title" text-anchor="middle" fill="#dc2626">③ Reviews his own report</text>
+  <text x="525" y="361" class="small" text-anchor="middle">Anonymously writes a glowing review</text>
+  <text x="525" y="374" class="small" text-anchor="middle" font-style="italic">Phil. Trans. (1715)</text>
+  <text x="525" y="386" class="tiny" text-anchor="middle" opacity="0.7">"Second inventor counts for nothing."</text>
+
+  <!-- ============================================ -->
+  <!-- ENCLOSING NOTE                              -->
+  <!-- ============================================ -->
+
+  <!-- Dashed enclosure: rounded rectangle, doesn't cross any text -->
+  <rect x="10" y="55" width="680" height="340" rx="14"
+        fill="none" stroke="#dc2626" stroke-width="1" stroke-dasharray="6,4" opacity="0.35"/>
+
+  <text x="350" y="408" class="note" text-anchor="middle" fill="#dc2626">All three hats worn anonymously. The public read "Royal Society verdict" and never knew Newton wrote every word.</text>
+
+</svg>

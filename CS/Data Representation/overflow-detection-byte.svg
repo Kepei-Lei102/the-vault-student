@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 332" width="100%">
+<style>
+ text{font-family:system-ui,-apple-system,sans-serif;fill:#888;}
+ .rl{font-size:13px;font-weight:600;} .bit{font-size:19px;font-weight:700;} .cy{font-size:13px;font-weight:600;}
+ .verdict{font-size:13px;font-weight:700;} .note{font-size:11px;} .foot{font-size:11px;}
+</style>
+<text x="173" y="34" text-anchor="middle" class="note" fill="#dc2626">carry OUT of sign bit = 0 (lost off the top)</text>
+<line x1="173" y1="40" x2="173" y2="58" stroke="#dc2626" stroke-width="1.2"/>
+<rect x="146" y="60" width="54" height="170" rx="6" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="132" y="83" text-anchor="end" class="rl">carries in</text>
+<text x="132" y="124" text-anchor="end" class="rl">127</text>
+<text x="132" y="164" text-anchor="end" class="rl">+  1</text>
+<text x="132" y="216" text-anchor="end" class="rl">= −128</text>
+<text x="551" y="83" text-anchor="middle" class="cy" fill="#888">0</text>
+<text x="497" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="443" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="389" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="335" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="281" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="227" y="83" text-anchor="middle" class="cy" fill="#888">1</text>
+<text x="173" y="83" text-anchor="middle" class="cy" fill="#dc2626">1</text>
+<text x="551" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="497" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="443" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="389" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="335" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="281" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="227" y="124" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="173" y="124" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="551" y="164" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<text x="497" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="443" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="389" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="335" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="281" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="227" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<text x="173" y="164" text-anchor="middle" class="bit" fill="#2563eb">0</text>
+<line x1="144" y1="176" x2="576" y2="176" stroke="#888" stroke-width="1.2"/>
+<text x="551" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="497" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="443" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="389" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="335" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="281" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="227" y="216" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="173" y="216" text-anchor="middle" class="bit" fill="#dc2626">1</text>
+<text x="173" y="248" text-anchor="middle" class="note" fill="#dc2626">↑ sign bit · carry IN = 1</text>
+<text x="320" y="288" text-anchor="middle" class="verdict" fill="#dc2626">carry IN (1) ≠ carry OUT (0)  →  OVERFLOW</text>
+<text x="320" y="306" text-anchor="middle" class="note">result reads −128; the true answer +128 needs a 9th bit the byte hasn’t got</text>
+<text x="320" y="324" text-anchor="middle" class="foot" fill="#059669">compare 64 + 1: carry in = carry out = 0  →  no overflow</text>
+</svg>

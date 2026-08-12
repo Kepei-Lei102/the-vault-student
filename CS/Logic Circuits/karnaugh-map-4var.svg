@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 430" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .axis { font-size: 13px; font-weight: 700; fill: #0891b2; }
+    .hdr { font-size: 12px; font-weight: 600; fill: #0891b2; }
+    .one { font-size: 16px; font-weight: 700; fill: #059669; }
+    .zero { font-size: 15px; fill: #888; opacity: 0.5; }
+    .la { font-size: 13px; font-weight: 700; fill: #2563eb; }
+    .lc { font-size: 13px; font-weight: 700; fill: #f59e0b; }
+    .res { font-size: 15px; font-weight: 700; }
+    .note { font-size: 11.5px; }
+    .wrap { font-size: 11px; font-weight: 600; fill: #f59e0b; }
+  </style>
+  <defs>
+    <marker id="amb2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="26" class="title" text-anchor="middle">A 4-variable map: bigger loops, wrapping edges</text>
+
+  <!-- axis super-labels -->
+  <text x="274" y="86" class="axis" text-anchor="middle">CD</text>
+  <text x="116" y="118" class="axis" text-anchor="middle">AB</text>
+
+  <!-- column headers CD (Gray) -->
+  <text x="181" y="106" class="hdr" text-anchor="middle">00</text>
+  <text x="243" y="106" class="hdr" text-anchor="middle">01</text>
+  <text x="305" y="106" class="hdr" text-anchor="middle">11</text>
+  <text x="367" y="106" class="hdr" text-anchor="middle">10</text>
+  <!-- row headers AB (Gray) -->
+  <text x="132" y="151" class="hdr" text-anchor="middle">00</text>
+  <text x="132" y="205" class="hdr" text-anchor="middle">01</text>
+  <text x="132" y="259" class="hdr" text-anchor="middle">11</text>
+  <text x="132" y="313" class="hdr" text-anchor="middle">10</text>
+
+  <!-- grid 4x4 : x 150..398 (col 62), y 120..336 (row 54) -->
+  <rect x="150" y="120" width="248" height="216" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="212" y1="120" x2="212" y2="336" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="274" y1="120" x2="274" y2="336" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="336" y1="120" x2="336" y2="336" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="150" y1="174" x2="398" y2="174" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="150" y1="228" x2="398" y2="228" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="150" y1="282" x2="398" y2="282" stroke="#9ca3af" stroke-width="1"/>
+
+  <!-- group of 8: A = 1 (bottom two rows) -->
+  <rect x="155" y="232" width="238" height="99" rx="15" fill="rgba(37,99,235,0.06)" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- group of 4 corners: B'D' (wrap) -->
+  <rect x="156" y="126" width="50" height="42" rx="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="342" y="126" width="50" height="42" rx="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="156" y="288" width="50" height="42" rx="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="342" y="288" width="50" height="42" rx="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
+
+  <!-- wrap arrows showing the corners are one group -->
+  <path d="M 142 150 L 142 306" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-start="url(#amb2)" marker-end="url(#amb2)"/>
+  <path d="M 181 112 L 367 112" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-start="url(#amb2)" marker-end="url(#amb2)"/>
+
+  <!-- cell values : 1s = bottom 8 (rows AB=11,10) + top corners (AB=00, CD=00 & CD=10) -->
+  <!-- row AB=00 (y151) -->
+  <text x="181" y="157" class="one"  text-anchor="middle">1</text>
+  <text x="243" y="157" class="zero" text-anchor="middle">0</text>
+  <text x="305" y="157" class="zero" text-anchor="middle">0</text>
+  <text x="367" y="157" class="one"  text-anchor="middle">1</text>
+  <!-- row AB=01 (y205) -->
+  <text x="181" y="211" class="zero" text-anchor="middle">0</text>
+  <text x="243" y="211" class="zero" text-anchor="middle">0</text>
+  <text x="305" y="211" class="zero" text-anchor="middle">0</text>
+  <text x="367" y="211" class="zero" text-anchor="middle">0</text>
+  <!-- row AB=11 (y259) -->
+  <text x="181" y="265" class="one" text-anchor="middle">1</text>
+  <text x="243" y="265" class="one" text-anchor="middle">1</text>
+  <text x="305" y="265" class="one" text-anchor="middle">1</text>
+  <text x="367" y="265" class="one" text-anchor="middle">1</text>
+  <!-- row AB=10 (y313) -->
+  <text x="181" y="319" class="one" text-anchor="middle">1</text>
+  <text x="243" y="319" class="one" text-anchor="middle">1</text>
+  <text x="305" y="319" class="one" text-anchor="middle">1</text>
+  <text x="367" y="319" class="one" text-anchor="middle">1</text>
+
+  <!-- loop labels -->
+  <text x="405" y="286" class="la" text-anchor="start">A</text>
+  <text x="405" y="302" class="note" text-anchor="start">8 cells</text>
+  <text x="405" y="316" class="note" text-anchor="start">-&gt; 1 literal</text>
+  <text x="300" y="380" class="wrap" text-anchor="middle">the 4 corners are one group of 4 (edges wrap both ways)  =  B'D'</text>
+
+  <!-- result -->
+  <text x="205" y="406" class="res" text-anchor="start" fill="#888">F  =</text>
+  <text x="252" y="406" class="la" text-anchor="middle">A</text>
+  <text x="274" y="406" class="res" text-anchor="middle" fill="#888">+</text>
+  <text x="304" y="406" class="lc" text-anchor="middle">B'D'</text>
+</svg>

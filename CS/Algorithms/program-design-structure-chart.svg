@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .box  { font-size: 14px; font-weight: 600; }
+    .par  { font-size: 12px; }
+    .note { font-size: 12px; }
+    .key  { font-size: 12.5px; }
+  </style>
+
+  <defs>
+    <marker id="dn" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0891b2"/>
+    </marker>
+    <marker id="up" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- parent -->
+  <rect x="335" y="24" width="210" height="54" rx="3"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="57" class="box" text-anchor="middle">VendDrink</text>
+
+  <!-- orthogonal hierarchy routing -->
+  <line x1="440" y1="78" x2="440" y2="126" stroke="#888" stroke-width="1.8"/>
+  <line x1="150" y1="126" x2="730" y2="126" stroke="#888" stroke-width="1.8"/>
+  <line x1="150" y1="126" x2="150" y2="278" stroke="#888" stroke-width="1.8"/>
+  <line x1="440" y1="126" x2="440" y2="278" stroke="#888" stroke-width="1.8"/>
+  <line x1="730" y1="126" x2="730" y2="278" stroke="#888" stroke-width="1.8"/>
+
+  <!-- children -->
+  <rect x="50" y="278" width="200" height="54" rx="3"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="311" class="box" text-anchor="middle">GetPayment</text>
+
+  <rect x="340" y="278" width="200" height="54" rx="3"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="311" class="box" text-anchor="middle">DispenseDrink</text>
+
+  <rect x="630" y="278" width="200" height="54" rx="3"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="730" y="311" class="box" text-anchor="middle">GiveChange</text>
+
+  <!-- GetPayment: price in, inserted out -->
+  <circle cx="172" cy="162" r="4.5" fill="none" stroke="#0891b2" stroke-width="1.8"/>
+  <line x1="172" y1="167" x2="172" y2="250" stroke="#0891b2" stroke-width="1.8"
+        marker-end="url(#dn)"/>
+  <text x="185" y="212" class="par" fill="#0891b2">price</text>
+
+  <circle cx="128" cy="250" r="4.5" fill="none" stroke="#059669" stroke-width="1.8"/>
+  <line x1="128" y1="245" x2="128" y2="162" stroke="#059669" stroke-width="1.8"
+        marker-end="url(#up)"/>
+  <text x="115" y="212" class="par" fill="#059669" text-anchor="end">inserted</text>
+
+  <!-- DispenseDrink: slot in -->
+  <circle cx="462" cy="162" r="4.5" fill="none" stroke="#0891b2" stroke-width="1.8"/>
+  <line x1="462" y1="167" x2="462" y2="250" stroke="#0891b2" stroke-width="1.8"
+        marker-end="url(#dn)"/>
+  <text x="475" y="212" class="par" fill="#0891b2">slot</text>
+
+  <!-- GiveChange: change amount in -->
+  <circle cx="752" cy="162" r="4.5" fill="none" stroke="#0891b2" stroke-width="1.8"/>
+  <line x1="752" y1="167" x2="752" y2="250" stroke="#0891b2" stroke-width="1.8"
+        marker-end="url(#dn)"/>
+  <text x="765" y="212" class="par" fill="#0891b2">inserted &#8722; price</text>
+
+  <text x="440" y="366" class="note" text-anchor="middle">The boxes are the decomposition. The arrows are the interfaces &#8212; and the arrows are where the marks are.</text>
+
+  <!-- key -->
+  <line x1="50" y1="386" x2="830" y2="386" stroke="#888" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="66" cy="406" r="4.5" fill="none" stroke="#0891b2" stroke-width="1.8"/>
+  <line x1="66" y1="411" x2="66" y2="424" stroke="#0891b2" stroke-width="1.8"
+        marker-end="url(#dn)"/>
+  <text x="84" y="420" class="key">arrow down &#8212; a value passed <tspan font-weight="600">into</tspan> the sub-task</text>
+
+  <circle cx="470" cy="424" r="4.5" fill="none" stroke="#059669" stroke-width="1.8"/>
+  <line x1="470" y1="419" x2="470" y2="406" stroke="#059669" stroke-width="1.8"
+        marker-end="url(#up)"/>
+  <text x="488" y="420" class="key">arrow up &#8212; a value handed back <tspan font-weight="600">out</tspan></text>
+</svg>

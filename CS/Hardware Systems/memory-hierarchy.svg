@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .name { font-size: 13px; font-weight: 600; }
+    .note { font-size: 11.5px; opacity: 0.85; }
+  </style>
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="5" refY="1" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 9 L 5 1 L 10 9 z" fill="#888"/>
+    </marker>
+    <marker id="dn" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 1 L 5 9 L 10 1 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="250" y="24" class="title" text-anchor="middle">The memory hierarchy</text>
+  <text x="250" y="44" class="note" text-anchor="middle">one trade-off, stacked: fast-small-dear on top, big-slow-cheap below</text>
+
+  <!-- bands -->
+  <polygon points="190,56 310,56 332.1,94 167.9,94" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="1.4"/>
+  <polygon points="167.9,94 332.1,94 354.3,132 145.7,132" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="1.4"/>
+  <polygon points="145.7,132 354.3,132 376.4,170 123.6,170" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="1.4"/>
+  <polygon points="123.6,170 376.4,170 398.6,208 101.4,208" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="1.4"/>
+  <polygon points="101.4,208 398.6,208 420.7,246 79.3,246" fill="rgba(8,145,178,0.18)" stroke="#0891b2" stroke-width="1.6"/>
+  <polygon points="79.3,246 420.7,246 442.9,284 57.1,284" fill="rgba(245,158,11,0.16)" stroke="#f59e0b" stroke-width="1.4"/>
+  <polygon points="57.1,284 442.9,284 465,322 35,322" fill="rgba(245,158,11,0.16)" stroke="#f59e0b" stroke-width="1.4"/>
+
+  <!-- names -->
+  <text x="250" y="79" class="name" text-anchor="middle">Registers</text>
+  <text x="250" y="117" class="name" text-anchor="middle">L1 cache</text>
+  <text x="250" y="155" class="name" text-anchor="middle">L2 cache</text>
+  <text x="250" y="193" class="name" text-anchor="middle">L3 cache</text>
+  <text x="250" y="231" class="name" text-anchor="middle">Main memory — DRAM</text>
+  <text x="250" y="269" class="name" text-anchor="middle">SSD</text>
+  <text x="250" y="307" class="name" text-anchor="middle">HDD</text>
+
+  <!-- detail connectors + text -->
+  <line x1="321" y1="75" x2="472" y2="75" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="79" class="note" text-anchor="start">~1 KB · &lt;1 ns</text>
+  <line x1="343" y1="113" x2="472" y2="113" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="117" class="note" text-anchor="start">~64 KB · ~1 ns</text>
+  <line x1="365" y1="151" x2="472" y2="151" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="155" class="note" text-anchor="start">~1 MB · ~4 ns</text>
+  <line x1="387" y1="189" x2="472" y2="189" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="193" class="note" text-anchor="start">~32 MB · ~15 ns</text>
+  <line x1="410" y1="227" x2="472" y2="227" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="231" class="note" text-anchor="start">~16 GB · ~70 ns</text>
+  <line x1="432" y1="265" x2="472" y2="265" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="269" class="note" text-anchor="start">~1 TB · ~50 µs</text>
+  <line x1="454" y1="303" x2="472" y2="303" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+  <text x="478" y="307" class="note" text-anchor="start">~4 TB · ~5 ms</text>
+
+  <!-- direction arrow -->
+  <line x1="26" y1="312" x2="26" y2="66" stroke="#888" stroke-width="1.4" marker-end="url(#up)" marker-start="url(#dn)"/>
+
+  <!-- captions -->
+  <text x="250" y="348" class="label" text-anchor="middle">up: smaller · faster · costlier per bit</text>
+  <text x="250" y="366" class="label" text-anchor="middle">down: bigger · slower · cheaper per bit</text>
+
+  <!-- legend -->
+  <rect x="120" y="382" width="12" height="12" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="137" y="392" class="note" text-anchor="start">SRAM</text>
+  <rect x="210" y="382" width="12" height="12" fill="rgba(8,145,178,0.18)" stroke="#0891b2" stroke-width="1.2"/>
+  <text x="227" y="392" class="note" text-anchor="start">DRAM</text>
+  <rect x="300" y="382" width="12" height="12" fill="rgba(245,158,11,0.16)" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="317" y="392" class="note" text-anchor="start">non-volatile</text>
+</svg>

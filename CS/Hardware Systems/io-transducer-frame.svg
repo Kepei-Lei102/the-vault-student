@@ -1,0 +1,60 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tin" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="tout" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 Z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="28" font-size="15" fill="#888" text-anchor="middle" font-weight="bold">every peripheral is a transducer across one boundary</text>
+
+  <!-- central digital interior -->
+  <rect x="300" y="150" width="160" height="110" rx="10" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="380" y="196" font-size="16" fill="#7c3aed" text-anchor="middle" font-weight="bold">the digital</text>
+  <text x="380" y="218" font-size="16" fill="#7c3aed" text-anchor="middle" font-weight="bold">interior</text>
+  <text x="380" y="242" font-size="12" fill="#888" text-anchor="middle">CPU + memory: only bits</text>
+
+  <!-- LEFT: inputs (physical -> digital), blue -->
+  <text x="164" y="70" font-size="13.5" fill="#2563eb" text-anchor="middle" font-weight="bold">INPUT — physical becomes number</text>
+  <g font-size="12.5" fill="#888">
+    <text x="40" y="110">keyboard / mouse</text>
+    <text x="40" y="142">touchscreen</text>
+    <text x="40" y="174">scanner (barcode / QR)</text>
+    <text x="40" y="206">camera</text>
+    <text x="40" y="238">microphone</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8">
+    <line x1="175" y1="106" x2="296" y2="168" marker-end="url(#tin)"/>
+    <line x1="145" y1="138" x2="296" y2="180" marker-end="url(#tin)"/>
+    <line x1="185" y1="170" x2="296" y2="192" marker-end="url(#tin)"/>
+    <line x1="120" y1="202" x2="296" y2="205" marker-end="url(#tin)"/>
+    <line x1="130" y1="234" x2="296" y2="220" marker-end="url(#tin)"/>
+  </g>
+
+  <!-- RIGHT: outputs (digital -> physical), green -->
+  <text x="596" y="70" font-size="13.5" fill="#059669" text-anchor="middle" font-weight="bold">OUTPUT — number becomes physical</text>
+  <g font-size="12.5" fill="#888">
+    <text x="560" y="110">inkjet / laser printer</text>
+    <text x="560" y="142">3D printer</text>
+    <text x="560" y="174">LCD / LED / OLED screen</text>
+    <text x="560" y="206">DLP / LCD projector</text>
+    <text x="560" y="238">speaker</text>
+  </g>
+  <g stroke="#059669" stroke-width="1.8">
+    <line x1="464" y1="168" x2="552" y2="106" marker-end="url(#tout)"/>
+    <line x1="464" y1="180" x2="552" y2="138" marker-end="url(#tout)"/>
+    <line x1="464" y1="192" x2="552" y2="170" marker-end="url(#tout)"/>
+    <line x1="464" y1="205" x2="552" y2="202" marker-end="url(#tout)"/>
+    <line x1="464" y1="220" x2="552" y2="234" marker-end="url(#tout)"/>
+  </g>
+
+  <!-- boundary line hint -->
+  <text x="380" y="300" font-size="12.5" fill="#888" text-anchor="middle" font-style="italic">reading in: measure a physical quantity into a number.</text>
+  <text x="380" y="320" font-size="12.5" fill="#888" text-anchor="middle" font-style="italic">writing out: push a number back into a physical quantity.</text>
+
+  <!-- the pairs note -->
+  <rect x="150" y="345" width="460" height="40" rx="8" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="380" y="370" font-size="12.5" fill="#888" text-anchor="middle">every transducer has a partner running backwards: microphone &amp; speaker, camera &amp; screen</text>
+</svg>

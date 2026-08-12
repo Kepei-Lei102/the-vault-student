@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .clk { font-size: 12px; font-weight: 700; fill: #f59e0b; }
+    .io { font-size: 12px; font-weight: 700; fill: #2563eb; }
+    .out { font-size: 12px; font-weight: 700; fill: #059669; }
+    .eq { font-size: 11px; }
+  </style>
+
+  <text x="350" y="24" class="title" text-anchor="middle">J = K = 1: the output toggles at half the clock frequency</text>
+
+  <!-- rising-edge guide lines -->
+  <line x1="140" y1="46" x2="140" y2="196" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/>
+  <line x1="260" y1="46" x2="260" y2="196" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/>
+  <line x1="380" y1="46" x2="380" y2="196" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/>
+  <line x1="500" y1="46" x2="500" y2="196" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3 4" opacity="0.6"/>
+
+  <!-- CLK: 4 periods of 120px, high 50 / low 80, rising edges at 140,260,380,500 -->
+  <text x="108" y="70" class="clk" text-anchor="end">clk</text>
+  <polyline fill="none" stroke="#f59e0b" stroke-width="1.8" points="
+    120,80 140,80 140,50 200,50 200,80
+    260,80 260,50 320,50 320,80
+    380,80 380,50 440,50 440,80
+    500,80 500,50 560,50 560,80 620,80"/>
+
+  <!-- J = K = 1: flat high -->
+  <text x="108" y="122" class="io" text-anchor="end">J = K</text>
+  <line x1="120" y1="112" x2="620" y2="112" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="632" y="116" class="eq" text-anchor="start">1</text>
+
+  <!-- Q: toggles on each rising edge, high 160 / low 190 -->
+  <text x="108" y="180" class="out" text-anchor="end">Q</text>
+  <polyline fill="none" stroke="#059669" stroke-width="1.8" points="
+    120,190 140,190 140,160 260,160 260,190
+    380,190 380,160 500,160 500,190 620,190"/>
+
+  <!-- one-Q-cycle bracket: 140 to 380 -->
+  <line x1="140" y1="212" x2="380" y2="212" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="140" y1="206" x2="140" y2="218" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="380" y1="206" x2="380" y2="218" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="260" y="232" class="eq" text-anchor="middle">one full cycle of Q = two clock cycles -- a divide-by-two stage</text>
+  <text x="350" y="252" class="eq" text-anchor="middle">chain these and the stages count in binary: 1/2, 1/4, 1/8, ... of the clock</text>
+</svg>

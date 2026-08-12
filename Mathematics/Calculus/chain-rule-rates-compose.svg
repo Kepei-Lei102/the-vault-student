@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .big { font-size: 22px; }
+    .rate { font-size: 14px; }
+    .note { font-size: 12px; opacity: 0.7; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="32" class="title" text-anchor="middle">Rates compose: x → u → y</text>
+
+  <!-- ===== Node x (input) ===== -->
+  <circle cx="80" cy="130" r="30"
+          fill="rgba(37, 99, 235, 0.15)" stroke="#2563eb" stroke-width="2"/>
+  <text x="80" y="138" class="math big" text-anchor="middle" fill="#2563eb">x</text>
+  <text x="80" y="180" class="note" text-anchor="middle">input</text>
+
+  <!-- Pipe 1: x → g → u -->
+  <line x1="115" y1="130" x2="220" y2="130"
+        stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Function box g -->
+  <rect x="225" y="100" width="80" height="60" rx="6"
+        fill="rgba(124, 58, 237, 0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="265" y="138" class="math big" text-anchor="middle" fill="#7c3aed">g</text>
+
+  <!-- Pipe 2: g → u -->
+  <line x1="310" y1="130" x2="395" y2="130"
+        stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Rate label on first stage -->
+  <text x="262" y="80" class="math rate" text-anchor="middle" fill="#7c3aed">
+    du/dx
+  </text>
+  <text x="262" y="200" class="note" text-anchor="middle">first stage</text>
+
+  <!-- ===== Node u (intermediate) ===== -->
+  <circle cx="430" cy="130" r="30"
+          fill="rgba(8, 145, 178, 0.15)" stroke="#0891b2" stroke-width="2"/>
+  <text x="430" y="138" class="math big" text-anchor="middle" fill="#0891b2">u</text>
+  <text x="430" y="180" class="note" text-anchor="middle">intermediate</text>
+
+  <!-- Pipe 3: u → f -->
+  <line x1="465" y1="130" x2="525" y2="130"
+        stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Function box f -->
+  <rect x="530" y="100" width="55" height="60" rx="6"
+        fill="rgba(124, 58, 237, 0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="557" y="138" class="math big" text-anchor="middle" fill="#7c3aed">f</text>
+
+  <!-- Pipe 4: f → y -->
+  <line x1="590" y1="130" x2="640" y2="130"
+        stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Rate label on second stage -->
+  <text x="555" y="80" class="math rate" text-anchor="middle" fill="#7c3aed">
+    dy/du
+  </text>
+  <text x="555" y="200" class="note" text-anchor="middle">second stage</text>
+
+  <!-- ===== Node y (output) ===== -->
+  <circle cx="675" cy="130" r="30"
+          fill="rgba(5, 150, 105, 0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="675" y="138" class="math big" text-anchor="middle" fill="#059669">y</text>
+  <text x="675" y="180" class="note" text-anchor="middle">output</text>
+
+  <!-- ===== Conclusion banner ===== -->
+  <line x1="60" y1="240" x2="660" y2="240"
+        stroke="#888" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <text x="360" y="275" class="label" text-anchor="middle">
+    <tspan>overall rate  </tspan>
+    <tspan class="math" fill="#059669">dy</tspan><tspan> / </tspan><tspan class="math" fill="#2563eb">dx</tspan>
+    <tspan>   =   </tspan>
+    <tspan class="math" fill="#059669">dy</tspan><tspan> / </tspan><tspan class="math" fill="#0891b2">du</tspan>
+    <tspan>   ×   </tspan>
+    <tspan class="math" fill="#0891b2">du</tspan><tspan> / </tspan><tspan class="math" fill="#2563eb">dx</tspan>
+  </text>
+
+  <text x="360" y="300" class="note" text-anchor="middle">
+    multiply the local rates — that is the chain rule
+  </text>
+</svg>

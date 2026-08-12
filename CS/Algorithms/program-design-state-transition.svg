@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 396" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .st   { font-size: 14.5px; font-weight: 600; }
+    .ev   { font-size: 12px; }
+    .note { font-size: 12px; }
+  </style>
+
+  <defs>
+    <marker id="e" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7.5" markerHeight="7.5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- states -->
+  <rect x="60" y="88" width="176" height="60" rx="30"
+        fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+  <text x="148" y="124" class="st" text-anchor="middle">Idle</text>
+
+  <rect x="352" y="88" width="176" height="60" rx="30"
+        fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="124" class="st" text-anchor="middle">Collecting</text>
+
+  <rect x="644" y="88" width="176" height="60" rx="30"
+        fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="732" y="124" class="st" text-anchor="middle">Ready</text>
+
+  <rect x="352" y="256" width="176" height="60" rx="30"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="292" class="st" text-anchor="middle">Dispensing</text>
+
+  <!-- initial marker -->
+  <circle cx="26" cy="118" r="7" fill="#888"/>
+  <line x1="33" y1="118" x2="54" y2="118" stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+
+  <!-- Idle -> Collecting -->
+  <line x1="236" y1="108" x2="346" y2="108" stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="291" y="98" class="ev" text-anchor="middle">coin inserted</text>
+
+  <!-- Collecting self-loop -->
+  <path d="M 400 88 C 392 34, 488 34, 480 88" fill="none"
+        stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="440" y="34" class="ev" text-anchor="middle">another coin inserted</text>
+
+  <!-- Collecting -> Ready -->
+  <line x1="528" y1="108" x2="638" y2="108" stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="583" y="98" class="ev" text-anchor="middle">total &#8805; price</text>
+
+  <!-- Collecting -> Idle (refund) -->
+  <line x1="346" y1="132" x2="242" y2="132" stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="294" y="152" class="ev" text-anchor="middle">refund pressed</text>
+
+  <!-- Ready -> Dispensing -->
+  <polyline points="732,148 732,286 534,286" fill="none"
+            stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="640" y="276" class="ev" text-anchor="middle">button pressed</text>
+
+  <!-- Dispensing -> Idle -->
+  <polyline points="346,286 148,286 148,154" fill="none"
+            stroke="#888" stroke-width="2" marker-end="url(#e)"/>
+  <text x="247" y="276" class="ev" text-anchor="middle">drink delivered</text>
+
+  <line x1="60" y1="340" x2="820" y2="340" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="440" y="362" class="note" text-anchor="middle">Boxes are what the machine can BE; arrows are what happens TO it.</text>
+  <text x="440" y="380" class="note" text-anchor="middle">A missing arrow means that transition cannot happen &#8212; which is most of what the diagram is for.</text>
+</svg>

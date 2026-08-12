@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <style>
+      text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        fill: #888888;
+      }
+    </style>
+  </defs>
+
+  <text x="300" y="28" text-anchor="middle" font-size="16" font-weight="bold">SAS construction — side, included angle, side</text>
+  <text x="300" y="48" text-anchor="middle" font-size="12">Given side a = VB, included angle &#952; at V, side b = VC.</text>
+
+  <line x1="100" y1="300" x2="350" y2="300"
+        stroke="#dc2626" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="250.00" stroke-dashoffset="250.00">
+    <animate attributeName="stroke-dashoffset"
+             values="250.00;250.00;0;0;250.00"
+             keyTimes="0;0.05;0.18;0.95;1.0"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="100" cy="300" r="5" fill="#2563eb">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.175;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="85" y="322" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.16999999999999998;0.18;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    V
+  </text>
+  <circle cx="350" cy="300" r="5" fill="#2563eb">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.175;0.18;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="365" y="322" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.16999999999999998;0.18;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    B
+  </text>
+  <text x="225.0" y="320" font-size="11" font-weight="normal" fill="#dc2626" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.19;0.2;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    side a
+  </text>
+  <path d="M 160 300 A 60 60 0 0 0 134.41 250.85"
+        stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round"
+        stroke-dasharray="57.60" stroke-dashoffset="57.60">
+    <animate attributeName="stroke-dashoffset"
+             values="57.60;57.60;0;0;57.60"
+             keyTimes="0;0.27;0.4;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </path>
+  <text x="172" y="278" font-size="11" font-weight="normal" fill="#7c3aed" text-anchor="start">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.29;0.3;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    &#952; (included)
+  </text>
+  <line x1="100" y1="300" x2="214.71528727020922" y2="136.16959114220165"
+        stroke="#059669" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="200.00" stroke-dashoffset="200.00">
+    <animate attributeName="stroke-dashoffset"
+             values="200.00;200.00;0;0;200.00"
+             keyTimes="0;0.43;0.62;0.95;1.0"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+  <text x="129.3576436351046" y="210.0847955711008" font-size="11" font-weight="normal" fill="#059669" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.49;0.5;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    side b
+  </text>
+  <circle cx="214.72" cy="136.17" r="5" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5">
+    <animate attributeName="r"
+             values="0;0;10;5;5;0"
+             keyTimes="0;0.60;0.65;0.68;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.60;0.65;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="214.71528727020922" y="124.16959114220165" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.65;0.66;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    C
+  </text>
+  <line x1="350" y1="300" x2="214.71528727020922" y2="136.16959114220165"
+        stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="212.47" stroke-dashoffset="212.47">
+    <animate attributeName="stroke-dashoffset"
+             values="212.47;212.47;0;0;212.47"
+             keyTimes="0;0.7;0.82;0.95;1.0"
+             dur="12s" repeatCount="indefinite"/>
+  </line>
+  <text x="304.35764363510464" y="213.0847955711008" font-size="11" font-weight="normal" fill="#2563eb" text-anchor="start">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.77;0.78;0.95;0.99;1"
+             dur="12s" repeatCount="indefinite"/>
+    BC is forced
+  </text>
+  <text x="300" y="400" text-anchor="middle" font-size="13" font-weight="bold">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.82;0.84;0.95;1"
+             dur="12s" repeatCount="indefinite"/>
+    Side &#8594; angle &#8594; side fixes both endpoints — only one triangle fits.
+  </text></svg>

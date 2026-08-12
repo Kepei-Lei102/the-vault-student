@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .blk   { font-size: 12px; font-weight: 700; fill: #7c3aed; }
+    .io    { font-size: 13px; font-weight: 800; }
+    .wire  { font-size: 11px; }
+    .eqn   { font-size: 14px; font-weight: 700; }
+    .hi    { font-size: 12px; font-weight: 700; fill: #b45309; }
+  </style>
+
+  <text x="360" y="28" class="title" text-anchor="middle">The PLL multiplies by dividing in its feedback</text>
+
+  <!-- f_ref input -->
+  <text x="40" y="118" class="io" text-anchor="start" fill="#2563eb">f_ref</text>
+  <text x="40" y="134" class="wire" text-anchor="start">100 MHz</text>
+  <line x1="90" y1="125" x2="150" y2="125" stroke="#9ca3af" stroke-width="1.6"/>
+
+  <!-- Phase detector -->
+  <rect x="150" y="105" width="95" height="70" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.7"/>
+  <text x="197" y="135" class="blk" text-anchor="middle">Phase</text>
+  <text x="197" y="150" class="blk" text-anchor="middle">detector</text>
+
+  <!-- Loop filter -->
+  <line x1="245" y1="140" x2="290" y2="140" stroke="#9ca3af" stroke-width="1.6"/>
+  <rect x="290" y="120" width="90" height="40" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.7"/>
+  <text x="335" y="145" class="blk" text-anchor="middle">Loop filter</text>
+
+  <!-- VCO -->
+  <line x1="380" y1="140" x2="425" y2="140" stroke="#9ca3af" stroke-width="1.6"/>
+  <rect x="425" y="118" width="95" height="44" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.7"/>
+  <text x="472" y="138" class="blk" text-anchor="middle">VCO</text>
+  <text x="472" y="153" class="wire" text-anchor="middle">oscillator</text>
+
+  <!-- f_out output -->
+  <line x1="520" y1="140" x2="660" y2="140" stroke="#9ca3af" stroke-width="1.6"/>
+  <text x="628" y="128" class="io" text-anchor="middle" fill="#059669">f_out</text>
+  <text x="628" y="118" class="wire" text-anchor="middle">4.5 GHz</text>
+
+  <!-- feedback tap -->
+  <circle cx="590" cy="140" r="3.5" fill="#9ca3af"/>
+  <line x1="590" y1="140" x2="590" y2="255" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="590" y1="255" x2="440" y2="255" stroke="#9ca3af" stroke-width="1.6"/>
+
+  <!-- divide-by-N (highlighted) -->
+  <rect x="330" y="230" width="110" height="50" rx="8" fill="rgba(245,158,11,0.14)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="385" y="252" class="hi" text-anchor="middle">divide by N</text>
+  <text x="385" y="268" class="wire" text-anchor="middle">(flip-flops)</text>
+
+  <!-- feedback return to phase detector lower input -->
+  <line x1="330" y1="255" x2="120" y2="255" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="120" y1="255" x2="120" y2="160" stroke="#9ca3af" stroke-width="1.6"/>
+  <line x1="120" y1="160" x2="150" y2="160" stroke="#9ca3af" stroke-width="1.6"/>
+  <text x="250" y="248" class="wire" text-anchor="middle">f_out / N</text>
+
+  <!-- equation -->
+  <text x="360" y="322" class="eqn" text-anchor="middle" fill="#059669">at lock:  f_out / N = f_ref   -&gt;   f_out = N x f_ref</text>
+  <text x="360" y="344" class="wire" text-anchor="middle">N (the feedback divide ratio) is exactly the CPU "multiplier"</text>
+</svg>

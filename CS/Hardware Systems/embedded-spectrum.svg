@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrL" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="2" refY="5" orient="auto">
+      <path d="M10,1 L2,5 L10,9" fill="none" stroke="#888" stroke-width="1.6"/>
+    </marker>
+    <marker id="arrR" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#888" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <!-- the question -->
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#888">Can the user change what it does?</text>
+
+  <!-- zone shading -->
+  <rect x="40" y="105" width="290" height="70" fill="rgba(37,99,235,0.10)"/>
+  <rect x="330" y="105" width="100" height="70" fill="rgba(245,158,11,0.15)"/>
+  <rect x="430" y="105" width="290" height="70" fill="rgba(5,150,105,0.10)"/>
+
+  <!-- axis -->
+  <line x1="52" y1="140" x2="708" y2="140" stroke="#888" stroke-width="1.6" marker-start="url(#arrL)" marker-end="url(#arrR)"/>
+
+  <!-- zone answers -->
+  <text x="185" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">YES — install anything</text>
+  <text x="185" y="84" text-anchor="middle" font-size="12" fill="#2563eb">general-purpose computer</text>
+  <text x="575" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">NO — one function, fixed</text>
+  <text x="575" y="84" text-anchor="middle" font-size="12" fill="#059669">embedded system</text>
+  <text x="380" y="196" text-anchor="middle" font-size="11" fill="#f59e0b">the boundary</text>
+
+  <!-- general-purpose devices (labels above axis, ticks on axis) -->
+  <circle cx="90" cy="140" r="5" fill="#2563eb"/>
+  <text x="90" y="124" text-anchor="middle" font-size="11" fill="#888">server</text>
+  <circle cx="165" cy="140" r="5" fill="#2563eb"/>
+  <text x="165" y="162" text-anchor="middle" font-size="11" fill="#888">desktop</text>
+  <circle cx="240" cy="140" r="5" fill="#2563eb"/>
+  <text x="240" y="124" text-anchor="middle" font-size="11" fill="#888">laptop</text>
+
+  <!-- boundary cases -->
+  <circle cx="350" cy="140" r="5" fill="#f59e0b"/>
+  <text x="350" y="124" text-anchor="middle" font-size="11" fill="#888">smartphone</text>
+  <circle cx="408" cy="140" r="5" fill="#f59e0b"/>
+  <text x="408" y="162" text-anchor="middle" font-size="11" fill="#888">smart TV</text>
+
+  <!-- embedded devices -->
+  <circle cx="470" cy="140" r="5" fill="#059669"/>
+  <text x="470" y="124" text-anchor="middle" font-size="11" fill="#888">washing machine</text>
+  <circle cx="540" cy="140" r="5" fill="#059669"/>
+  <text x="540" y="162" text-anchor="middle" font-size="11" fill="#888">vending machine</text>
+  <circle cx="605" cy="140" r="5" fill="#059669"/>
+  <text x="605" y="124" text-anchor="middle" font-size="11" fill="#888">car ECU</text>
+  <circle cx="660" cy="140" r="5" fill="#059669"/>
+  <text x="660" y="162" text-anchor="middle" font-size="11" fill="#888">bank card</text>
+  <circle cx="694" cy="140" r="5" fill="#059669"/>
+  <text x="692" y="124" text-anchor="middle" font-size="11" fill="#888">USB charger</text>
+
+  <!-- caption -->
+  <text x="380" y="228" text-anchor="middle" font-size="12" fill="#888">Visibility is not the test — changeability is. The rack-mounted server is general-purpose;</text>
+  <text x="380" y="244" text-anchor="middle" font-size="12" fill="#888">the phone crossed the line the day it could install apps; the charger never will.</text>
+</svg>

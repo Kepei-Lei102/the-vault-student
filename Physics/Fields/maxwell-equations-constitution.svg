@@ -1,0 +1,78 @@
+<svg width="100%" viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="mxE" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+    </marker>
+    <marker id="mxB" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7" fill="none" stroke="#0891b2" stroke-width="1.5"/>
+    </marker>
+    <marker id="mxI" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">The constitution of the field — four sentences</text>
+
+  <!-- ================= Q1: Gauss E ================= -->
+  <text x="30" y="56" font-size="12" font-weight="bold" fill="#2563eb">1 · Gauss's law for E</text>
+  <circle cx="150" cy="150" r="75" fill="none" stroke="#888" stroke-width="1.3" stroke-dasharray="6,5"/>
+  <text x="216" y="100" font-size="9.5" fill="#888">the bag</text>
+  <circle cx="150" cy="150" r="11" fill="rgba(220,38,38,0.2)" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="150" y="154.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">+</text>
+  <line x1="165" y1="150" x2="212" y2="150" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="135" y1="150" x2="88"  y2="150" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="150" y1="135" x2="150" y2="88"  stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="150" y1="165" x2="150" y2="212" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="161" y1="139" x2="194" y2="106" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="139" y1="139" x2="106" y2="106" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="161" y1="161" x2="194" y2="194" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <line x1="139" y1="161" x2="106" y2="194" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mxE)"/>
+  <text x="150" y="250" text-anchor="middle" font-size="10.5" fill="#888">E-lines are born on charge:</text>
+  <text x="150" y="264" text-anchor="middle" font-size="10.5" fill="#888">the bag-count of E equals the charge inside</text>
+
+  <!-- ================= Q2: Gauss B ================= -->
+  <text x="410" y="56" font-size="12" font-weight="bold" fill="#0891b2">2 · Gauss's law for B</text>
+  <rect x="520" y="138" width="120" height="26" rx="4" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.6"/>
+  <text x="545" y="155.5" text-anchor="middle" font-size="11" font-weight="bold" fill="#888">N</text>
+  <text x="615" y="155.5" text-anchor="middle" font-size="11" font-weight="bold" fill="#888">S</text>
+  <ellipse cx="580" cy="151" rx="95" ry="52" fill="none" stroke="#0891b2" stroke-width="1.6"/>
+  <ellipse cx="580" cy="151" rx="135" ry="82" fill="none" stroke="#0891b2" stroke-width="1.3" opacity="0.65"/>
+  <path d="M 578,99 L 585,99" stroke="#0891b2" stroke-width="1.6" marker-end="url(#mxB)"/>
+  <path d="M 578,69 L 585,69" stroke="#0891b2" stroke-width="1.3" opacity="0.65" marker-end="url(#mxB)"/>
+  <text x="580" y="250" text-anchor="middle" font-size="10.5" fill="#888">B-lines never begin or end, only loop:</text>
+  <text x="580" y="264" text-anchor="middle" font-size="10.5" fill="#888">every bag-count of B is zero (no magnetic charge)</text>
+
+  <!-- ================= Q3: Faraday ================= -->
+  <text x="30" y="316" font-size="12" font-weight="bold" fill="#2563eb">3 · Faraday's law</text>
+  <circle cx="150" cy="420" r="42" fill="rgba(8,145,178,0.12)" stroke="none"/>
+  <g fill="#0891b2" font-size="12" font-weight="bold" text-anchor="middle">
+    <text x="136" y="412">x</text><text x="164" y="412">x</text>
+    <text x="136" y="438">x</text><text x="164" y="438">x</text>
+    <text x="150" y="425">x</text>
+  </g>
+  <text x="150" y="514" text-anchor="middle" font-size="9.5" fill="#0891b2">B into the page, growing</text>
+  <path d="M 150,345 A 75,75 0 1 1 149,345" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#mxE)"/>
+  <text x="243" y="368" font-size="9.5" fill="#2563eb">E circulates</text>
+  <text x="150" y="532" text-anchor="middle" font-size="10.5" fill="#888">changing B-flux stirs E into loops</text>
+  <text x="150" y="546" text-anchor="middle" font-size="10.5" fill="#888">(the minus sign is Lenz: it fights the change)</text>
+
+  <!-- ================= Q4: Ampere-Maxwell ================= -->
+  <text x="410" y="316" font-size="12" font-weight="bold" fill="#0891b2">4 · Ampère–Maxwell law</text>
+  <!-- left: wire with current -->
+  <line x1="490" y1="470" x2="490" y2="352" stroke="#dc2626" stroke-width="3" marker-end="url(#mxI)"/>
+  <text x="481" y="344" font-size="10.5" font-weight="bold" fill="#dc2626">I</text>
+  <ellipse cx="490" cy="416" rx="34" ry="12" fill="none" stroke="#0891b2" stroke-width="1.7"/>
+  <path d="M 522,414 L 525,418" stroke="#0891b2" stroke-width="1.7" marker-end="url(#mxB)"/>
+  <text x="490" y="486" text-anchor="middle" font-size="9.5" fill="#0891b2">B wraps the current</text>
+  <!-- right: capacitor gap with growing E -->
+  <line x1="600" y1="380" x2="600" y2="452" stroke="#888" stroke-width="3"/>
+  <line x1="650" y1="380" x2="650" y2="452" stroke="#888" stroke-width="3"/>
+  <line x1="606" y1="400" x2="642" y2="400" stroke="#2563eb" stroke-width="1.7" marker-end="url(#mxE)"/>
+  <line x1="606" y1="416" x2="642" y2="416" stroke="#2563eb" stroke-width="1.7" marker-end="url(#mxE)"/>
+  <line x1="606" y1="432" x2="642" y2="432" stroke="#2563eb" stroke-width="1.7" marker-end="url(#mxE)"/>
+  <ellipse cx="625" cy="416" rx="46" ry="14" fill="none" stroke="#0891b2" stroke-width="1.7" stroke-dasharray="5,4"/>
+  <text x="625" y="374" text-anchor="middle" font-size="9.5" fill="#2563eb">E growing in a gap</text>
+  <text x="568" y="472" text-anchor="middle" font-size="9.5" fill="#0891b2">B wraps this too</text>
+  <text x="570" y="516" text-anchor="middle" font-size="10.5" fill="#888">currents wrap B around themselves —</text>
+  <text x="570" y="530" text-anchor="middle" font-size="10.5" fill="#888">and so does a changing E-flux (Maxwell's patch)</text>
+</svg>

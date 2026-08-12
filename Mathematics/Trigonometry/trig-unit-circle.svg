@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">
+  <!-- Axes -->
+  <line x1="20" y1="260" x2="500" y2="260" stroke="#888" stroke-width="1.2"/>
+  <line x1="260" y1="500" x2="260" y2="20" stroke="#888" stroke-width="1.2"/>
+  <polygon points="500,260 492,256 492,264" fill="#888"/>
+  <polygon points="260,20 256,28 264,28" fill="#888"/>
+  <text x="505" y="264" fill="#888" font-size="15" font-style="italic">x</text>
+  <text x="264" y="16" fill="#888" font-size="15" font-style="italic">y</text>
+
+  <!-- Unit circle -->
+  <circle cx="260" cy="260" r="200" fill="none" stroke="#888" stroke-width="1.8"/>
+
+  <!-- Tick marks at 1 and -1 -->
+  <line x1="460" y1="255" x2="460" y2="265" stroke="#888" stroke-width="1.2"/>
+  <text x="460" y="280" fill="#888" text-anchor="middle" font-size="13">1</text>
+  <line x1="60" y1="255" x2="60" y2="265" stroke="#888" stroke-width="1.2"/>
+  <text x="60" y="280" fill="#888" text-anchor="middle" font-size="13">−1</text>
+  <line x1="255" y1="60" x2="265" y2="60" stroke="#888" stroke-width="1.2"/>
+  <text x="248" y="58" fill="#888" text-anchor="end" font-size="13">1</text>
+  <line x1="255" y1="460" x2="265" y2="460" stroke="#888" stroke-width="1.2"/>
+  <text x="248" y="463" fill="#888" text-anchor="end" font-size="13">−1</text>
+
+  <!-- Point P at θ ≈ 40° -->
+  <!-- cos40° ≈ 0.766, sin40° ≈ 0.643 -->
+  <!-- P = (260 + 200*0.766, 260 - 200*0.643) = (413.2, 131.4) -->
+  <circle cx="413" cy="131" r="5" fill="#c06"/>
+
+  <!-- Radius line from origin to P -->
+  <line x1="260" y1="260" x2="413" y2="131" stroke="#c06" stroke-width="2"/>
+
+  <!-- Dashed projections -->
+  <line x1="413" y1="131" x2="413" y2="260" stroke="rgba(100,150,220,0.7)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="413" y1="131" x2="260" y2="131" stroke="rgba(100,180,100,0.7)" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- cos θ (horizontal, on x-axis) -->
+  <line x1="260" y1="260" x2="413" y2="260" stroke="rgba(100,150,220,0.9)" stroke-width="3"/>
+  <text x="336" y="252" fill="rgba(70,120,200,1)" font-size="15" text-anchor="middle" font-weight="600">cos θ = x</text>
+
+  <!-- sin θ (vertical, right side) -->
+  <line x1="413" y1="260" x2="413" y2="131" stroke="rgba(100,180,100,0.9)" stroke-width="3"/>
+  <text x="448" y="200" fill="rgba(60,150,60,1)" font-size="15" font-weight="600">sin θ = y</text>
+
+  <!-- Angle arc -->
+  <path d="M 310 260 A 50 50 0 0 0 298.3 227.9" fill="none" stroke="#c06" stroke-width="2"/>
+  <text x="318" y="244" fill="#c06" font-size="16" font-style="italic">θ</text>
+
+  <!-- Label P -->
+  <text x="420" y="122" fill="#c06" font-size="14" font-weight="600">P(cos θ, sin θ)</text>
+
+  <!-- radius = 1 label -->
+  <text x="320" y="185" fill="#c06" font-size="13" font-style="italic" transform="rotate(-33 320 185)">r = 1</text>
+
+  <!-- Quadrant labels (just Roman numerals, no CAST) -->
+  <text x="370" y="55" fill="rgba(136,136,136,0.45)" font-size="20" text-anchor="middle">I</text>
+  <text x="140" y="55" fill="rgba(136,136,136,0.45)" font-size="20" text-anchor="middle">II</text>
+  <text x="140" y="475" fill="rgba(136,136,136,0.45)" font-size="20" text-anchor="middle">III</text>
+  <text x="370" y="475" fill="rgba(136,136,136,0.45)" font-size="20" text-anchor="middle">IV</text>
+
+  <!-- Sign annotations per quadrant -->
+  <text x="370" y="75" fill="rgba(136,136,136,0.4)" font-size="12" text-anchor="middle">x &gt; 0, y &gt; 0</text>
+  <text x="140" y="75" fill="rgba(136,136,136,0.4)" font-size="12" text-anchor="middle">x &lt; 0, y &gt; 0</text>
+  <text x="140" y="490" fill="rgba(136,136,136,0.4)" font-size="12" text-anchor="middle">x &lt; 0, y &lt; 0</text>
+  <text x="370" y="490" fill="rgba(136,136,136,0.4)" font-size="12" text-anchor="middle">x &gt; 0, y &lt; 0</text>
+</svg>

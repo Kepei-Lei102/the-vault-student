@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="100%">
+  <style>
+    text{font-family:system-ui,-apple-system,sans-serif;fill:#888;}
+    .title{font-size:15px;font-weight:600;}
+    .lab{font-size:13px;font-weight:600;}
+    .sm{font-size:11px;} .reg{font-size:12px;font-weight:600;} .tiny{font-size:10px;}
+  </style>
+<defs>
+<marker id="aR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888"/></marker>
+</defs>
+<text x="390.0" y="24" class="title" fill="#888" text-anchor="middle">The von Neumann architecture — one memory holds both program and data</text>
+<rect x="24" y="48" width="400" height="356" rx="8" fill="rgba(124,58,237,0.05)" stroke="#7c3aed" stroke-width="2"/>
+<text x="40" y="70" class="lab" fill="#7c3aed" text-anchor="start">CPU  (central processing unit)</text>
+<rect x="48" y="86" width="150" height="58" rx="8" fill="rgba(124,58,237,0.16)" stroke="#7c3aed" stroke-width="2"/>
+<text x="123" y="110" class="reg" fill="#7c3aed" text-anchor="middle">Control Unit</text>
+<text x="123" y="128" class="tiny" fill="#888" text-anchor="middle">(CU) — decodes + signals</text>
+<rect x="48" y="250" width="150" height="72" rx="8" fill="rgba(5,150,105,0.16)" stroke="#059669" stroke-width="2"/>
+<text x="123" y="282" class="reg" fill="#059669" text-anchor="middle">ALU</text>
+<text x="123" y="300" class="tiny" fill="#888" text-anchor="middle">arithmetic + logic</text>
+<text x="123" y="315" class="tiny" fill="#888" text-anchor="middle">(built from logic gates)</text>
+<rect x="230" y="86" width="176" height="236" rx="8" fill="rgba(37,99,235,0.07)" stroke="#2563eb" stroke-width="2"/>
+<text x="318" y="106" class="reg" fill="#2563eb" text-anchor="middle">Registers</text>
+<rect x="278" y="122" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="139" class="reg" fill="#2563eb" text-anchor="middle">PC</text>
+<rect x="278" y="153" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="170" class="reg" fill="#2563eb" text-anchor="middle">MAR</text>
+<rect x="278" y="184" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="201" class="reg" fill="#2563eb" text-anchor="middle">MDR</text>
+<rect x="278" y="215" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="232" class="reg" fill="#2563eb" text-anchor="middle">CIR</text>
+<rect x="278" y="246" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="263" class="reg" fill="#2563eb" text-anchor="middle">ACC</text>
+<rect x="278" y="277" width="80" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="318" y="294" class="reg" fill="#2563eb" text-anchor="middle">SR</text>
+<text x="318" y="318" class="tiny" fill="#888" text-anchor="middle">(purposes: see card table)</text>
+<line x1="198" y1="115" x2="276" y2="132" stroke="#888888" stroke-width="1.2" opacity="0.5" marker-end="url(#aR)"/>
+<line x1="198" y1="284" x2="276" y2="262" stroke="#888888" stroke-width="1.2" opacity="0.5" marker-end="url(#aR)"/>
+<rect x="560" y="110" width="196" height="232" rx="8" fill="rgba(8,145,178,0.08)" stroke="#0891b2" stroke-width="2"/>
+<text x="658" y="134" class="lab" fill="#0891b2" text-anchor="middle">Main Memory (RAM)</text>
+<text x="658" y="154" class="tiny" fill="#888" text-anchor="middle">ONE store, two kinds of content:</text>
+<rect x="578" y="166" width="160" height="28" rx="4" fill="rgba(124,58,237,0.14)" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="658" y="184" class="tiny" fill="#7c3aed" text-anchor="middle">instructions (the program)</text>
+<rect x="578" y="200" width="160" height="28" rx="4" fill="rgba(5,150,105,0.14)" stroke="#059669" stroke-width="1.2"/>
+<text x="658" y="218" class="tiny" fill="#059669" text-anchor="middle">data (the values)</text>
+<text x="584" y="259" class="tiny" fill="#888" text-anchor="start">50:</text>
+<rect x="612" y="244" width="108" height="22" rx="3" fill="rgba(8,145,178,0.1)" stroke="#0891b2" stroke-width="1"/>
+<text x="666" y="259" class="tiny" fill="#888" text-anchor="middle">5</text>
+<text x="584" y="289" class="tiny" fill="#888" text-anchor="start">51:</text>
+<rect x="612" y="274" width="108" height="22" rx="3" fill="rgba(8,145,178,0.1)" stroke="#0891b2" stroke-width="1"/>
+<text x="666" y="289" class="tiny" fill="#888" text-anchor="middle">3</text>
+<text x="584" y="319" class="tiny" fill="#888" text-anchor="start">52:</text>
+<rect x="612" y="304" width="108" height="22" rx="3" fill="rgba(8,145,178,0.1)" stroke="#0891b2" stroke-width="1"/>
+<text x="666" y="319" class="tiny" fill="#888" text-anchor="middle"></text>
+<text x="658" y="338" class="tiny" fill="#888" text-anchor="middle">addresses -> contents</text>
+<line x1="424" y1="168" x2="556" y2="168" stroke="#2563eb" stroke-width="3" marker-end="url(#aR)"/>
+<text x="490" y="160" class="sm" fill="#2563eb" text-anchor="middle">address bus  (one-way ->)</text>
+<line x1="424" y1="230" x2="556" y2="230" stroke="#0891b2" stroke-width="3" marker-end="url(#aR)"/>
+<line x1="556" y1="230" x2="424" y2="230" stroke="#0891b2" stroke-width="3" marker-end="url(#aR)"/>
+<text x="490" y="222" class="sm" fill="#0891b2" text-anchor="middle">data bus  (two-way)</text>
+<line x1="424" y1="292" x2="556" y2="292" stroke="#f59e0b" stroke-width="3" marker-end="url(#aR)"/>
+<line x1="556" y1="292" x2="424" y2="292" stroke="#f59e0b" stroke-width="3" marker-end="url(#aR)"/>
+<text x="490" y="284" class="sm" fill="#f59e0b" text-anchor="middle">control bus  (read/write, clock)</text>
+<text x="428" y="372" class="tiny" fill="#888" text-anchor="middle">n address lines -> 2^n memory locations</text>
+</svg>

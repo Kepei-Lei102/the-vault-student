@@ -1,0 +1,84 @@
+<svg width="100%" viewBox="0 0 750 240" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <text x="375" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Types of Regression</text>
+
+  <!-- === Panel 1: Linear === -->
+  <text x="120" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#2196F3">Linear</text>
+  <text x="120" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">y = a + bx</text>
+
+  <!-- Axes -->
+  <line x1="30" y1="210" x2="200" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="30" y1="210" x2="30" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Points -->
+  <circle cx="42" cy="199" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="54" cy="189" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="66" cy="179" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="78" cy="165" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="90" cy="158" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="102" cy="148" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="114" cy="136" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="126" cy="126" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="138" cy="115" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="150" cy="106" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="162" cy="94" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="174" cy="82" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+  <circle cx="186" cy="75" r="3.5" fill="#2196F3" fill-opacity="0.5" stroke="#2196F3" stroke-width="0.8"/>
+
+  <!-- Linear fit line -->
+  <line x1="35" y1="204" x2="192" y2="68" stroke="#2196F3" stroke-width="2" opacity="0.8"/>
+
+  <!-- === Panel 2: Quadratic === -->
+  <text x="375" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#FF9800">Quadratic</text>
+  <text x="375" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">y = a + bx + cx²</text>
+
+  <!-- Axes -->
+  <line x1="280" y1="210" x2="460" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="280" y1="210" x2="280" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Points (U-shaped data) -->
+  <circle cx="295" cy="88" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="308" cy="108" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="321" cy="130" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="334" cy="152" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="347" cy="172" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="360" cy="185" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="373" cy="193" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="386" cy="188" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="399" cy="176" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="412" cy="156" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="425" cy="128" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="438" cy="100" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+  <circle cx="451" cy="82" r="3.5" fill="#FF9800" fill-opacity="0.5" stroke="#FF9800" stroke-width="0.8"/>
+
+  <!-- Quadratic fit curve (polyline from least-squares quadratic) -->
+  <path d="M 290.0,64.5 L 293.3,74.0 L 296.6,83.1 L 299.9,91.8 L 303.2,100.1 L 306.5,108.0 L 309.8,115.5 L 313.1,122.7 L 316.4,129.5 L 319.7,135.8 L 323.0,141.8 L 326.3,147.4 L 329.6,152.6 L 332.9,157.5 L 336.2,161.9 L 339.5,165.9 L 342.8,169.6 L 346.1,172.9 L 349.4,175.8 L 352.7,178.3 L 356.0,180.4 L 359.3,182.1 L 362.6,183.4 L 365.9,184.4 L 369.2,184.9 L 372.5,185.1 L 375.8,184.9 L 379.1,184.2 L 382.4,183.3 L 385.7,181.9 L 389.0,180.1 L 392.3,177.9 L 395.6,175.4 L 398.9,172.5 L 402.2,169.1 L 405.5,165.4 L 408.8,161.3 L 412.1,156.8 L 415.4,152.0 L 418.7,146.7 L 422.0,141.0 L 425.3,135.0 L 428.6,128.6 L 431.9,121.8 L 435.2,114.5 L 438.5,107.0 L 441.8,99.0 L 445.1,90.6 L 448.4,81.9 L 451.7,72.7 L 455.0,63.2" fill="none" stroke="#FF9800" stroke-width="2" opacity="0.8"/>
+
+  <!-- === Panel 3: Exponential === -->
+  <text x="625" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#9C27B0">Exponential</text>
+  <text x="625" y="54" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">y = ae^(bx)</text>
+
+  <!-- Axes -->
+  <line x1="530" y1="210" x2="710" y2="210" stroke="#888" stroke-width="1"/>
+  <line x1="530" y1="210" x2="530" y2="60" stroke="#888" stroke-width="1"/>
+
+  <!-- Points (exponential growth data) -->
+  <circle cx="542" cy="196" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="554" cy="194" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="566" cy="190" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="578" cy="192" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="590" cy="186" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="602" cy="180" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="614" cy="175" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="626" cy="168" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="638" cy="157" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="650" cy="142" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="662" cy="128" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="674" cy="108" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+  <circle cx="698" cy="72" r="3.5" fill="#9C27B0" fill-opacity="0.5" stroke="#9C27B0" stroke-width="0.8"/>
+
+  <!-- Exponential fit curve (polyline from log-linear regression) -->
+  <path d="M 535.0,198.8 L 538.3,198.2 L 541.6,197.6 L 544.9,197.0 L 548.2,196.3 L 551.5,195.6 L 554.8,194.8 L 558.1,194.0 L 561.4,193.2 L 564.7,192.4 L 568.0,191.4 L 571.3,190.5 L 574.6,189.5 L 577.9,188.4 L 581.2,187.3 L 584.5,186.1 L 587.8,184.9 L 591.1,183.6 L 594.4,182.2 L 597.7,180.7 L 601.0,179.2 L 604.3,177.6 L 607.6,176.0 L 610.9,174.2 L 614.2,172.3 L 617.5,170.4 L 620.8,168.3 L 624.1,166.2 L 627.4,163.9 L 630.7,161.5 L 634.0,159.0 L 637.3,156.3 L 640.6,153.6 L 643.9,150.6 L 647.2,147.6 L 650.5,144.3 L 653.8,140.9 L 657.1,137.3 L 660.4,133.6 L 663.7,129.6 L 667.0,125.4 L 670.3,121.0 L 673.6,116.4 L 676.9,111.6 L 680.2,106.5 L 683.5,101.1 L 686.8,95.5 L 690.1,89.5 L 693.4,83.3 L 696.7,76.7 L 700.0,69.8" fill="none" stroke="#9C27B0" stroke-width="2" opacity="0.8"/>
+
+  <!-- Annotation -->
+  <text x="375" y="232" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">Choosing the right model depends on the shape of the data — not every relationship is a straight line</text>
+</svg>

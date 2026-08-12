@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .phase { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
+    .yr { font-size: 12px; font-weight: 600; }
+    .ev { font-size: 11px; }
+    .note { font-size: 10px; font-style: italic; opacity: 0.85; }
+  </style>
+
+  <!-- phase bands -->
+  <rect x="48"  y="78" width="212" height="150" rx="8" fill="rgba(37,99,235,0.10)"/>
+  <rect x="318" y="78" width="140" height="150" rx="8" fill="rgba(220,38,38,0.12)"/>
+  <rect x="540" y="78" width="214" height="150" rx="8" fill="rgba(5,150,105,0.11)"/>
+
+  <!-- phase labels -->
+  <text x="154" y="68" text-anchor="middle" class="phase" fill="#2563eb">TRIUMPH — in secret</text>
+  <text x="388" y="68" text-anchor="middle" class="phase" fill="#dc2626">PERSECUTION</text>
+  <text x="647" y="68" text-anchor="middle" class="phase" fill="#059669">VINDICATION — too late</text>
+
+  <!-- axis -->
+  <line x1="44" y1="165" x2="756" y2="165" stroke="#888" stroke-width="1.6"/>
+  <!-- secrecy gap (dashed) between 1954 and 2009 -->
+  <line x1="438" y1="165" x2="558" y2="165" stroke="#888" stroke-width="1.6" stroke-dasharray="5,5" opacity="0.6"/>
+  <text x="498" y="139" text-anchor="middle" class="note">kept secret</text>
+  <text x="498" y="152" text-anchor="middle" class="note">until 1974</text>
+
+  <!-- Bletchley span (thick blue) -->
+  <rect x="138" y="160" width="92" height="10" rx="5" fill="#2563eb"/>
+
+  <!-- 1936 (UP) -->
+  <circle cx="86" cy="165" r="6" fill="#2563eb"/>
+  <text x="86" y="152" text-anchor="middle" class="yr">1936</text>
+  <text x="86" y="121" text-anchor="middle" class="ev"><tspan x="86">Universal</tspan><tspan x="86" dy="13">machine</tspan></text>
+
+  <!-- 1939–45 (UP) -->
+  <text x="184" y="152" text-anchor="middle" class="yr">1939–45</text>
+  <text x="184" y="121" text-anchor="middle" class="ev"><tspan x="184">Bletchley · the Bombe</tspan><tspan x="184" dy="13">Enigma broken (secret)</tspan></text>
+
+  <!-- 1950 (DOWN) -->
+  <circle cx="296" cy="165" r="6" fill="#2563eb"/>
+  <text x="296" y="183" text-anchor="middle" class="yr">1950</text>
+  <text x="296" y="201" text-anchor="middle" class="ev">Turing Test</text>
+
+  <!-- 1952 (UP) -->
+  <circle cx="360" cy="165" r="6" fill="#dc2626"/>
+  <text x="360" y="152" text-anchor="middle" class="yr">1952</text>
+  <text x="360" y="121" text-anchor="middle" class="ev"><tspan x="360">Convicted;</tspan><tspan x="360" dy="13">chem. castration</tspan></text>
+
+  <!-- 1954 (DOWN) -->
+  <circle cx="424" cy="165" r="7" fill="#dc2626" stroke="#888" stroke-width="1"/>
+  <text x="424" y="183" text-anchor="middle" class="yr">1954</text>
+  <text x="424" y="201" text-anchor="middle" class="ev">Death, age 41</text>
+
+  <!-- 2009 (UP) -->
+  <circle cx="576" cy="165" r="6" fill="#059669"/>
+  <text x="576" y="152" text-anchor="middle" class="yr">2009</text>
+  <text x="576" y="121" text-anchor="middle" class="ev"><tspan x="576">Government</tspan><tspan x="576" dy="13">apology</tspan></text>
+
+  <!-- 2013 (DOWN) -->
+  <circle cx="646" cy="165" r="6" fill="#059669"/>
+  <text x="646" y="183" text-anchor="middle" class="yr">2013</text>
+  <text x="646" y="201" text-anchor="middle" class="ev">Royal pardon</text>
+
+  <!-- 2021 (UP) -->
+  <circle cx="716" cy="165" r="6" fill="#059669"/>
+  <text x="716" y="152" text-anchor="middle" class="yr">2021</text>
+  <text x="716" y="121" text-anchor="middle" class="ev"><tspan x="716">£50</tspan><tspan x="716" dy="13">banknote</tspan></text>
+</svg>

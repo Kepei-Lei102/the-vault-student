@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 16px; font-weight: 700; }
+    .hdr { font-size: 12.5px; font-weight: 600; }
+    .io { font-size: 12.5px; font-weight: 600; fill: #2563eb; }
+    .out { font-size: 13px; font-weight: 700; fill: #059669; }
+    .step { font-size: 12px; font-weight: 600; fill: #f59e0b; }
+    .sub { font-size: 11px; }
+    .cap { font-size: 11.5px; }
+    .badbig { font-size: 11.5px; font-weight: 600; fill: #dc2626; }
+    .badgood { font-size: 12.5px; font-weight: 700; fill: #059669; }
+  </style>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="330" y="28" class="title" text-anchor="middle">Minimisation: same function, fewer gates</text>
+
+  <!-- ================= BEFORE : bloated DNF ================= -->
+  <text x="150" y="54" class="hdr" text-anchor="middle" fill="#dc2626">DNF, straight from the truth table</text>
+
+  <!-- five 3-input AND gates -->
+  <g stroke="#9ca3af" stroke-width="1.2">
+    <line x1="74" y1="86" x2="92" y2="86"/><line x1="74" y1="91" x2="92" y2="91"/><line x1="74" y1="96" x2="92" y2="96"/>
+    <line x1="74" y1="116" x2="92" y2="116"/><line x1="74" y1="121" x2="92" y2="121"/><line x1="74" y1="126" x2="92" y2="126"/>
+    <line x1="74" y1="146" x2="92" y2="146"/><line x1="74" y1="151" x2="92" y2="151"/><line x1="74" y1="156" x2="92" y2="156"/>
+    <line x1="74" y1="176" x2="92" y2="176"/><line x1="74" y1="181" x2="92" y2="181"/><line x1="74" y1="186" x2="92" y2="186"/>
+    <line x1="74" y1="206" x2="92" y2="206"/><line x1="74" y1="211" x2="92" y2="211"/><line x1="74" y1="216" x2="92" y2="216"/>
+  </g>
+  <g fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.4">
+    <path d="M 92 82 L 103 82 A 9 9 0 0 1 103 100 L 92 100 Z"/>
+    <path d="M 92 112 L 103 112 A 9 9 0 0 1 103 130 L 92 130 Z"/>
+    <path d="M 92 142 L 103 142 A 9 9 0 0 1 103 160 L 92 160 Z"/>
+    <path d="M 92 172 L 103 172 A 9 9 0 0 1 103 190 L 92 190 Z"/>
+    <path d="M 92 202 L 103 202 A 9 9 0 0 1 103 220 L 92 220 Z"/>
+  </g>
+  <!-- fan-in wires to the big OR -->
+  <g stroke="#9ca3af" stroke-width="1.2">
+    <line x1="112" y1="91" x2="152" y2="91"/>
+    <line x1="112" y1="121" x2="152" y2="121"/>
+    <line x1="112" y1="151" x2="155" y2="151"/>
+    <line x1="112" y1="181" x2="152" y2="181"/>
+    <line x1="112" y1="211" x2="152" y2="211"/>
+  </g>
+  <!-- big OR -->
+  <path d="M 150 90 Q 176 118 196 151 Q 176 194 150 212 Q 166 151 150 90 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <line x1="196" y1="151" x2="238" y2="151" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="250" y="155" class="sub" text-anchor="start">alarm</text>
+
+  <rect x="42" y="244" width="216" height="26" rx="5" fill="rgba(220,38,38,0.09)" stroke="#dc2626" stroke-width="1"/>
+  <text x="150" y="261" class="badbig" text-anchor="middle">5 ANDs + 1 OR + inverters  ~  a dozen+ gates</text>
+
+  <!-- ================= the transformation ================= -->
+  <line x1="292" y1="151" x2="372" y2="151" stroke="#f59e0b" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="332" y="132" class="step" text-anchor="middle">Boolean algebra</text>
+  <text x="332" y="176" class="sub" text-anchor="middle">factor P,</text>
+  <text x="332" y="190" class="sub" text-anchor="middle">complement,</text>
+  <text x="332" y="204" class="sub" text-anchor="middle">absorption</text>
+
+  <!-- ================= AFTER : clean 2-gate circuit ================= -->
+  <text x="512" y="54" class="hdr" text-anchor="middle" fill="#059669">after simplifying:  alarm = WM + P</text>
+
+  <text x="404" y="119" class="io" text-anchor="middle">W</text>
+  <text x="404" y="143" class="io" text-anchor="middle">M</text>
+  <text x="404" y="191" class="io" text-anchor="middle">P</text>
+
+  <!-- AND(W, M) -->
+  <line x1="414" y1="115" x2="440" y2="115" stroke="#9ca3af" stroke-width="1.4"/>
+  <line x1="414" y1="139" x2="440" y2="139" stroke="#9ca3af" stroke-width="1.4"/>
+  <path d="M 440 105 L 468 105 A 22 22 0 0 1 468 149 L 440 149 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="460" y="131" class="sub" text-anchor="middle" fill="#7c3aed">AND</text>
+  <line x1="490" y1="127" x2="524" y2="127" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- P feeds the OR -->
+  <line x1="414" y1="187" x2="524" y2="187" stroke="#9ca3af" stroke-width="1.4"/>
+
+  <!-- OR(AND, P) -->
+  <path d="M 522 110 Q 548 135 568 157 Q 548 179 522 202 Q 538 157 522 110 Z"
+        fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="540" y="161" class="sub" text-anchor="middle" fill="#7c3aed">OR</text>
+  <line x1="568" y1="157" x2="602" y2="157" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="612" y="161" class="out" text-anchor="start">alarm</text>
+
+  <rect x="440" y="244" width="150" height="26" rx="5" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1"/>
+  <text x="515" y="261" class="badgood" text-anchor="middle">just 2 gates</text>
+
+  <!-- caption -->
+  <line x1="70" y1="300" x2="590" y2="300" stroke="#888" stroke-width="0.6" opacity="0.25"/>
+  <text x="330" y="322" class="cap" text-anchor="middle">Both circuits have the identical truth table on all 8 rows of (W, M, P).</text>
+  <text x="330" y="340" class="cap" text-anchor="middle">Every gate you delete is less silicon area, less propagation delay, and less power.</text>
+</svg>

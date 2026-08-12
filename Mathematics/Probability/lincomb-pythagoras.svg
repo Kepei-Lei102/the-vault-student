@@ -1,0 +1,52 @@
+<svg width="100%" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="aG" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#888" stroke-width="1.7"/>
+    </marker>
+    <marker id="aB" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    </marker>
+    <marker id="aT" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#0891b2" stroke-width="1.8"/>
+    </marker>
+    <marker id="aP" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M2,1 L10,5 L2,9" fill="none" stroke="#7c3aed" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <text x="190" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#888">Means add along a line</text>
+  <text x="570" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#888">Independent noises add at right angles</text>
+
+  <!-- left: means tip to tail on a number line -->
+  <line x1="40" y1="180" x2="345" y2="180" stroke="rgba(136,136,136,0.5)" stroke-width="1.3"/>
+  <line x1="60" y1="174" x2="60" y2="186" stroke="#888" stroke-width="1.3"/>
+  <text x="60" y="204" text-anchor="middle" font-size="11" fill="#888">0</text>
+
+  <line x1="60" y1="150" x2="185" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="122" y="138" text-anchor="middle" font-size="12" fill="#2563eb">μ_X</text>
+  <line x1="185" y1="150" x2="285" y2="150" stroke="#0891b2" stroke-width="2.5" marker-end="url(#aT)"/>
+  <text x="235" y="138" text-anchor="middle" font-size="12" fill="#0891b2">μ_Y</text>
+
+  <line x1="60" y1="110" x2="285" y2="110" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="172" y="98" text-anchor="middle" font-size="12" fill="#7c3aed">μ_X + μ_Y</text>
+
+  <text x="190" y="245" text-anchor="middle" font-size="11" fill="#888">ordinary arithmetic — tip to tail,</text>
+  <text x="190" y="261" text-anchor="middle" font-size="11" fill="#888">no conditions needed</text>
+
+  <!-- right: the 3-4-5 noise triangle (true proportions: 120 x 160 x 200) -->
+  <polygon points="495,230 615,230 615,70" fill="rgba(124,58,237,0.08)" stroke="none"/>
+  <line x1="495" y1="230" x2="615" y2="230" stroke="#2563eb" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="555" y="252" text-anchor="middle" font-size="12" fill="#2563eb">σ_X = 3</text>
+  <line x1="615" y1="230" x2="615" y2="70" stroke="#0891b2" stroke-width="2.5" marker-end="url(#aT)"/>
+  <text x="648" y="154" text-anchor="middle" font-size="12" fill="#0891b2">σ_Y = 4</text>
+  <line x1="495" y1="230" x2="615" y2="70" stroke="#7c3aed" stroke-width="2.8" marker-end="url(#aP)"/>
+  <text x="510" y="140" text-anchor="middle" font-size="12" fill="#7c3aed">σ_X+Y = 5</text>
+
+  <!-- right angle mark -->
+  <polyline points="601,230 601,216 615,216" fill="none" stroke="#888" stroke-width="1.3"/>
+
+  <text x="565" y="272" text-anchor="middle" font-size="11" fill="#888">Var adds, so σ combines as √(9 + 16) = 5 — never 7</text>
+
+  <!-- bottom caption -->
+  <text x="380" y="292" text-anchor="middle" font-size="11.5" fill="#888">The two exchange rules of randomness: the mean is a length, the noise is a perpendicular arrow.</text>
+</svg>

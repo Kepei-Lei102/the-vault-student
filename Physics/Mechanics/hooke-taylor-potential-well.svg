@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; opacity: 0.85; }
+    .caption-l { font-size: 12px; }
+  </style>
+
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="26" class="title" text-anchor="middle">Why Every Oscillation is Hooke-Like Near Equilibrium</text>
+  <text x="360" y="46" class="small" text-anchor="middle">The Taylor expansion turns any smooth potential well into a parabola at the bottom.</text>
+
+  <!-- Curve labels above plot area (in the safe top strip) -->
+  <text x="125" y="86" class="label" fill="#059669">U(x) — true potential</text>
+  <text x="565" y="86" class="label" fill="#7c3aed" text-anchor="middle">
+    <tspan class="math">½k(x − x₀)²</tspan>
+  </text>
+  <text x="565" y="102" class="small" fill="#7c3aed" text-anchor="middle">Hooke approximation (dashed)</text>
+
+  <!-- Leader lines from labels to curves -->
+  <line x1="160" y1="92" x2="155" y2="148" stroke="#059669" stroke-width="1" opacity="0.55"/>
+  <line x1="565" y1="108" x2="495" y2="165" stroke="#7c3aed" stroke-width="1" stroke-dasharray="2,3" opacity="0.55"/>
+
+  <!-- Axes (moved down to make room for labels above) -->
+  <line x1="70" y1="400" x2="690" y2="400" stroke="#888" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="70" y1="400" x2="70" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <text x="695" y="418" class="math label">x</text>
+  <text x="60" y="118" class="math label" text-anchor="end">U(x)</text>
+
+  <!-- True potential U(x): asymmetric well (Morse / Lennard-Jones flavour) -->
+  <!-- Start steep upper-left (110, 140), dip to minimum at (370, 343), rise gently to (685, 250) -->
+  <path d="M 110 140
+           C 150 175, 200 230, 250 280
+           C 295 320, 340 343, 370 343
+           C 405 343, 460 325, 510 300
+           C 570 270, 625 255, 685 250"
+        fill="none" stroke="#059669" stroke-width="2.5"/>
+
+  <!-- Hooke parabolic approximation: matches at minimum (370, 343); symmetric -->
+  <path d="M 230 130
+           C 270 205, 310 280, 370 343
+           C 430 280, 470 205, 510 130"
+        fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Marker at minimum -->
+  <circle cx="370" cy="343" r="4" fill="#059669"/>
+  <line x1="370" y1="400" x2="370" y2="343" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.55"/>
+  <text x="370" y="418" class="math small" text-anchor="middle">x₀</text>
+
+  <!-- Linear regime bracket below x-axis -->
+  <path d="M 320 432 L 320 442 L 420 442 L 420 432"
+        fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.65"/>
+  <text x="370" y="458" class="small" text-anchor="middle" fill="#7c3aed">linear regime (where Hooke is good)</text>
+
+  <!-- Bottom caption (carries the verbal story so the curves stay clean) -->
+  <text x="360" y="476" class="caption-l" text-anchor="middle" opacity="0.85">
+    Curves agree near <tspan class="math">x₀</tspan> (Taylor cubic still small) · diverge far from <tspan class="math">x₀</tspan> · identify <tspan class="math">k = U″(x₀)</tspan>
+  </text>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 940 220" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>The message "hi ni hao rocket" encoded in UTF-8: ASCII letters cost 1 byte each, each Chinese character costs 3 bytes, the emoji costs 4 - seven characters, fourteen bytes.</title>
+
+  <text x="470" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">One message, three prices &#8212; UTF-8</text>
+
+  <!-- character row -->
+  <g font-family="sans-serif" font-size="20" fill="#888" text-anchor="middle">
+    <text x="82" y="66">h</text>
+    <text x="146" y="66">i</text>
+    <text x="210" y="66" font-size="10" opacity="0.8">(space)</text>
+    <text x="330" y="66">&#20320;</text>
+    <text x="506" y="66">&#22909;</text>
+    <text x="626" y="66" font-size="10" opacity="0.8">(space)</text>
+    <text x="774" y="66">&#128640;</text>
+  </g>
+
+  <!-- byte boxes: 1-byte teal, 3-byte purple, 4-byte amber -->
+  <!-- h -->
+  <rect x="54" y="80" width="56" height="36" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+  <!-- i -->
+  <rect x="118" y="80" width="56" height="36" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+  <!-- space -->
+  <rect x="182" y="80" width="56" height="36" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+  <!-- ni (3 bytes) -->
+  <rect x="246" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <rect x="302" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <rect x="358" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <!-- hao (3 bytes) -->
+  <rect x="422" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <rect x="478" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <rect x="534" y="80" width="56" height="36" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.6"/>
+  <!-- space -->
+  <rect x="598" y="80" width="56" height="36" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.6"/>
+  <!-- rocket (4 bytes) -->
+  <rect x="662" y="80" width="56" height="36" rx="4" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="1.6"/>
+  <rect x="718" y="80" width="56" height="36" rx="4" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="1.6"/>
+  <rect x="774" y="80" width="56" height="36" rx="4" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="1.6"/>
+  <rect x="830" y="80" width="56" height="36" rx="4" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="1.6"/>
+
+  <!-- byte hex values -->
+  <g font-family="sans-serif" font-size="13" font-weight="bold" fill="#888" text-anchor="middle">
+    <text x="82" y="103">68</text>
+    <text x="146" y="103">69</text>
+    <text x="210" y="103">20</text>
+    <text x="274" y="103">E4</text><text x="330" y="103">BD</text><text x="386" y="103">A0</text>
+    <text x="450" y="103">E5</text><text x="506" y="103">A5</text><text x="562" y="103">BD</text>
+    <text x="626" y="103">20</text>
+    <text x="690" y="103">F0</text><text x="746" y="103">9F</text><text x="802" y="103">9A</text><text x="858" y="103">80</text>
+  </g>
+
+  <!-- per-cluster costs -->
+  <g font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle" opacity="0.9">
+    <text x="146" y="138">1 byte each</text>
+    <text x="330" y="138">3 bytes</text>
+    <text x="506" y="138">3 bytes</text>
+    <text x="774" y="138">4 bytes</text>
+  </g>
+
+  <!-- legend + total -->
+  <rect x="200" y="168" width="12" height="12" rx="2" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="218" y="178" font-family="sans-serif" font-size="11" fill="#888">ASCII &#8212; 1 byte</text>
+  <rect x="340" y="168" width="12" height="12" rx="2" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.4"/>
+  <text x="358" y="178" font-family="sans-serif" font-size="11" fill="#888">CJK &#8212; 3 bytes</text>
+  <rect x="474" y="168" width="12" height="12" rx="2" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="492" y="178" font-family="sans-serif" font-size="11" fill="#888">emoji &#8212; 4 bytes</text>
+  <text x="640" y="178" font-family="sans-serif" font-size="12" font-weight="bold" fill="#888">7 characters &#183; 14 bytes</text>
+</svg>

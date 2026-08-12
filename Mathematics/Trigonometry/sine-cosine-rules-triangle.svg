@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .label { font-size: 16px; }
+    .side-label { font-size: 15px; font-style: italic; }
+    .note { font-size: 12px; opacity: 0.7; }
+  </style>
+
+  <!-- Triangle ABC: A at top-left, B at bottom-left, C at bottom-right -->
+  <!-- A = (130, 50), B = (50, 270), C = (450, 270) -->
+  <polygon points="130,50 50,270 450,270" fill="none" stroke="#888" stroke-width="2"/>
+
+  <!-- Vertex labels -->
+  <text x="125" y="38" class="label math" fill="#cc0066" font-weight="600" text-anchor="middle">A</text>
+  <text x="35" y="288" class="label math" fill="#cc0066" font-weight="600" text-anchor="middle">B</text>
+  <text x="465" y="288" class="label math" fill="#cc0066" font-weight="600" text-anchor="middle">C</text>
+
+  <!-- Side labels: a opposite A (= BC), b opposite B (= AC), c opposite C (= AB) -->
+  <!-- a = BC (bottom) -->
+  <text x="250" y="296" class="side-label" fill="#4678c8" text-anchor="middle">a</text>
+  <!-- b = AC (right side) -->
+  <text x="305" y="148" class="side-label" fill="#4678c8" text-anchor="middle">b</text>
+  <!-- c = AB (left side) -->
+  <text x="72" y="148" class="side-label" fill="#4678c8" text-anchor="middle">c</text>
+
+  <!-- Perpendicular height h from A to BC -->
+  <line x1="130" y1="50" x2="130" y2="270" stroke="#059669" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Right angle marker at foot -->
+  <polyline points="130,255 145,255 145,270" fill="none" stroke="#059669" stroke-width="1.2"/>
+  <!-- h label -->
+  <text x="142" y="165" class="side-label" fill="#059669">h</text>
+  <!-- Foot label D -->
+  <text x="130" y="288" class="note" fill="#059669" text-anchor="middle">D</text>
+
+  <!-- Angle arcs -->
+  <!-- Angle A (at vertex A = 130,50) -->
+  <path d="M 115,76 A 30 30 0 0 1 150,72" fill="none" stroke="#cc0066" stroke-width="1.5"/>
+
+  <!-- Angle B (at vertex B = 50,270) -->
+  <path d="M 75,255 A 30 30 0 0 0 58,245" fill="none" stroke="#cc0066" stroke-width="1.5"/>
+
+  <!-- Angle C (at vertex C = 450,270) -->
+  <path d="M 425,270 A 30 30 0 0 1 440,255" fill="none" stroke="#cc0066" stroke-width="1.5"/>
+
+  <!-- Convention note -->
+  <text x="260" y="18" class="note" text-anchor="middle">Convention: side a is opposite angle A, side b opposite B, side c opposite C</text>
+</svg>

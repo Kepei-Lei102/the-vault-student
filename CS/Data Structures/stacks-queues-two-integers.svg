@@ -1,0 +1,86 @@
+<svg width="100%" viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="sqArrBlue" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="sqArrGreen" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#059669"/>
+    </marker>
+    <marker id="sqArrAmber" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ================= STACK PANEL ================= -->
+  <text x="180" y="34" font-size="16" fill="#888" text-anchor="middle">the stack — an array and ONE integer</text>
+
+  <!-- traffic at the single mouth -->
+  <text x="130" y="52" font-size="14" fill="#2563eb" text-anchor="middle">push</text>
+  <line x1="130" y1="58" x2="130" y2="82" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sqArrBlue)"/>
+  <text x="172" y="52" font-size="14" fill="#059669" text-anchor="middle">pop</text>
+  <line x1="172" y1="82" x2="172" y2="58" stroke="#059669" stroke-width="2.5" marker-end="url(#sqArrGreen)"/>
+
+  <!-- cells, index 0 at the bottom -->
+  <g stroke="#888" stroke-width="1.5">
+    <rect x="105" y="310" width="90" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="105" y="266" width="90" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="105" y="222" width="90" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="105" y="178" width="90" height="44" fill="none"/>
+    <rect x="105" y="134" width="90" height="44" fill="none"/>
+    <rect x="105" y="90"  width="90" height="44" fill="none"/>
+  </g>
+  <g font-size="17" fill="#888" text-anchor="middle">
+    <text x="150" y="338">8</text>
+    <text x="150" y="294">3</text>
+    <text x="150" y="250">5</text>
+  </g>
+  <g font-size="12" fill="#888" text-anchor="end">
+    <text x="97" y="337">0</text><text x="97" y="293">1</text><text x="97" y="249">2</text>
+    <text x="97" y="205">3</text><text x="97" y="161">4</text><text x="97" y="117">5</text>
+  </g>
+
+  <!-- the one integer -->
+  <line x1="266" y1="244" x2="203" y2="244" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#sqArrAmber)"/>
+  <text x="272" y="249" font-size="15" fill="#f59e0b">Top = 2</text>
+  <text x="272" y="270" font-size="12" fill="#888">(starts at −1:</text>
+  <text x="272" y="286" font-size="12" fill="#888">0 is a real cell)</text>
+
+  <text x="180" y="384" font-size="14" fill="#888" text-anchor="middle">one open end — last in, first out</text>
+
+  <!-- ================= QUEUE PANEL ================= -->
+  <text x="580" y="34" font-size="16" fill="#888" text-anchor="middle">the queue — an array and TWO integers</text>
+
+  <!-- traffic through opposite doors -->
+  <text x="429" y="160" font-size="14" fill="#059669" text-anchor="middle">dequeue</text>
+  <line x1="449" y1="192" x2="411" y2="192" stroke="#059669" stroke-width="2.5" marker-end="url(#sqArrGreen)"/>
+  <text x="726" y="160" font-size="14" fill="#2563eb" text-anchor="middle">enqueue</text>
+  <line x1="753" y1="192" x2="715" y2="192" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sqArrBlue)"/>
+
+  <!-- cells, index 0 at the left -->
+  <g stroke="#888" stroke-width="1.5">
+    <rect x="455" y="170" width="42" height="44" fill="none"/>
+    <rect x="497" y="170" width="42" height="44" fill="none"/>
+    <rect x="539" y="170" width="42" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="581" y="170" width="42" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="623" y="170" width="42" height="44" fill="rgba(8,145,178,0.18)"/>
+    <rect x="665" y="170" width="42" height="44" fill="none"/>
+  </g>
+  <g font-size="17" fill="#888" text-anchor="middle">
+    <text x="560" y="198">7</text>
+    <text x="602" y="198">4</text>
+    <text x="644" y="198">6</text>
+  </g>
+  <g font-size="12" fill="#888" text-anchor="middle">
+    <text x="476" y="163">0</text><text x="518" y="163">1</text><text x="560" y="163">2</text>
+    <text x="602" y="163">3</text><text x="644" y="163">4</text><text x="686" y="163">5</text>
+  </g>
+
+  <!-- the two integers -->
+  <line x1="560" y1="258" x2="560" y2="220" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#sqArrAmber)"/>
+  <text x="560" y="276" font-size="14" fill="#f59e0b" text-anchor="middle">HeadPointer = 2</text>
+  <line x1="644" y1="300" x2="644" y2="220" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#sqArrAmber)"/>
+  <text x="644" y="318" font-size="14" fill="#f59e0b" text-anchor="middle">TailPointer = 4</text>
+  <text x="580" y="345" font-size="12" fill="#888" text-anchor="middle">items leave at the head, join at the tail — nobody overtakes</text>
+
+  <text x="580" y="384" font-size="14" fill="#888" text-anchor="middle">two doors, opposite ends — first in, first out</text>
+</svg>

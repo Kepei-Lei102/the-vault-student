@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 336" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .sub   { font-size: 13.5px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .small { font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="aT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker>
+  </defs>
+
+  <text x="350" y="25" class="title" text-anchor="middle">Equipartition: each degree of freedom holds ½kT</text>
+
+  <!-- divider -->
+  <line x1="350" y1="44" x2="350" y2="300" stroke="#888" stroke-width="1" stroke-dasharray="4,5" opacity="0.4"/>
+
+  <!-- ================= Panel A — monatomic ================= -->
+  <text x="175" y="62" class="sub" text-anchor="middle">Monatomic — He, Ar</text>
+
+  <!-- translational tripod -->
+  <line x1="175" y1="120" x2="175" y2="90"  stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+  <line x1="175" y1="120" x2="143" y2="150" stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+  <line x1="175" y1="120" x2="207" y2="150" stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+  <text x="180" y="88"  class="small math">y</text>
+  <text x="132" y="158" class="small math">x</text>
+  <text x="212" y="158" class="small math">z</text>
+  <!-- atom -->
+  <circle cx="175" cy="120" r="17" fill="rgba(136,136,136,0.22)" stroke="#888" stroke-width="1.4"/>
+
+  <text x="175" y="190" class="small" text-anchor="middle">3 translational</text>
+
+  <!-- energy blocks: 3 x 1/2 kT -->
+  <rect x="110" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="141" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="172" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <text x="210" y="221" class="label" text-anchor="start">= 3/2 kT</text>
+
+  <text x="175" y="270" class="label" text-anchor="middle" style="font-size:15px">U = 3/2 nRT</text>
+
+  <!-- ================= Panel B — diatomic ================= -->
+  <text x="525" y="62" class="sub" text-anchor="middle">Diatomic — N₂, O₂ (room T)</text>
+
+  <!-- rotation arcs (green) -->
+  <path d="M495,108 C 502,84 548,84 555,108" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#aR)"/>
+  <path d="M583,106 A 14 14 0 1 1 569,120" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="600" y="100" class="small" text-anchor="start" fill="#059669">spin</text>
+
+  <!-- translational tripod -->
+  <line x1="525" y1="122" x2="525" y2="92"  stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+  <line x1="525" y1="122" x2="491" y2="152" stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+  <line x1="525" y1="122" x2="555" y2="152" stroke="#2563eb" stroke-width="2" marker-end="url(#aT)"/>
+
+  <!-- dumbbell -->
+  <line x1="510" y1="122" x2="540" y2="122" stroke="#888" stroke-width="5"/>
+  <circle cx="508" cy="122" r="13" fill="rgba(136,136,136,0.22)" stroke="#888" stroke-width="1.4"/>
+  <circle cx="542" cy="122" r="13" fill="rgba(136,136,136,0.22)" stroke="#888" stroke-width="1.4"/>
+
+  <text x="525" y="190" class="small" text-anchor="middle">3 translational + 2 rotational</text>
+
+  <!-- energy blocks: 3 blue + 2 green -->
+  <rect x="430" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="461" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="492" y="206" width="26" height="20" rx="3" fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="523" y="206" width="26" height="20" rx="3" fill="rgba(5,150,105,0.20)" stroke="#059669" stroke-width="1.3"/>
+  <rect x="554" y="206" width="26" height="20" rx="3" fill="rgba(5,150,105,0.20)" stroke="#059669" stroke-width="1.3"/>
+  <text x="592" y="221" class="label" text-anchor="start">= 5/2 kT</text>
+
+  <text x="525" y="270" class="label" text-anchor="middle" style="font-size:15px">U = 5/2 nRT</text>
+
+  <!-- footer note -->
+  <text x="350" y="318" class="small" text-anchor="middle">High T unlocks bond vibration (2 more, giving 7/2 kT); cooling freezes rotation, then vibration out — a quantum effect.</text>
+</svg>

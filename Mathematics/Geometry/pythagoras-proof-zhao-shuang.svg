@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 720 360">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .note { font-size: 12px; opacity: 0.7; }
+    .eq { font-size: 14px; font-family: 'Times New Roman', serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="24" text-anchor="middle" class="title">Proof 1 — 赵爽弦图 (Zhào Shuǎng's Diagram)</text>
+
+  <!-- === LEFT: Large square (a+b)=240, with a=96 b=144 === -->
+  <!-- Triangles: legs a=96, b=144. Each edge splits into b then a (or a then b). -->
+  <!-- Inner tilted square vertices: (144,240) (240,96) (96,0) (0,144) — side c -->
+  <g transform="translate(55, 44)">
+    <!-- Large square outline -->
+    <rect x="0" y="0" width="240" height="240" fill="none" stroke="#888" stroke-width="1.5"/>
+
+    <!-- Four right-angled triangles (legs a=96, b=144) -->
+    <!-- Bottom-left: right angle at (0,240), horiz leg b=144, vert leg a=96 -->
+    <polygon points="0,240 144,240 0,144" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Bottom-right: right angle at (240,240), vert leg b=144, horiz leg a=96 -->
+    <polygon points="240,240 240,96 144,240" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Top-right: right angle at (240,0), horiz leg b=144, vert leg a=96 -->
+    <polygon points="240,0 96,0 240,96" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <!-- Top-left: right angle at (0,0), vert leg b=144, horiz leg a=96 -->
+    <polygon points="0,0 0,144 96,0" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+
+    <!-- Inner tilted square (c²) -->
+    <polygon points="96,0 240,96 144,240 0,144" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1.5"/>
+
+    <!-- Edge labels — each edge: first segment b, then a (or vice versa) -->
+    <!-- Bottom edge: 0→144 = b, 144→240 = a -->
+    <text x="72" y="260" text-anchor="middle" class="label math" fill="#2563eb">b</text>
+    <text x="192" y="260" text-anchor="middle" class="label math" fill="#888">a</text>
+    <!-- Right edge: 0→96 = a, 96→240 = b -->
+    <text x="256" y="48" text-anchor="start" class="label math" fill="#888">a</text>
+    <text x="256" y="168" text-anchor="start" class="label math" fill="#2563eb">b</text>
+    <!-- Top edge: 0→96 = a, 96→240 = b -->
+    <text x="48" y="-8" text-anchor="middle" class="label math" fill="#888">a</text>
+    <text x="168" y="-8" text-anchor="middle" class="label math" fill="#2563eb">b</text>
+    <!-- Left edge: 0→144 = b, 144→240 = a -->
+    <text x="-12" y="72" text-anchor="end" class="label math" fill="#2563eb">b</text>
+    <text x="-12" y="192" text-anchor="end" class="label math" fill="#888">a</text>
+
+    <!-- c label on one hypotenuse (midpoint of top-right hyp: (96,0)→(240,96) ≈ (168,48)) -->
+    <text x="178" y="38" text-anchor="start" class="label math" fill="#dc2626">c</text>
+
+    <!-- c² label at inner square centre (120, 120) -->
+    <text x="120" y="126" text-anchor="middle" class="label math" fill="#dc2626" font-size="16">c²</text>
+
+    <!-- Caption below -->
+    <text x="120" y="284" text-anchor="middle" class="note">Large square = (a + b)²</text>
+  </g>
+
+  <!-- === EQUALS SIGN === -->
+  <text x="340" y="180" text-anchor="middle" class="label" fill="#888" font-size="20">=</text>
+
+  <!-- === RIGHT: Decomposition showing 4 triangles + c² === -->
+  <g transform="translate(385, 80)">
+    <!-- One representative triangle (legs a=60, b=90 scaled down) -->
+    <polygon points="0,150 120,150 0,70" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="60" y="170" text-anchor="middle" class="label math" fill="#2563eb">b</text>
+    <text x="-14" y="116" text-anchor="end" class="label math" fill="#888">a</text>
+
+    <!-- ½ab and ×4 labels -->
+    <text x="30" y="122" text-anchor="middle" class="label" fill="#2563eb">½ab</text>
+    <text x="135" y="122" text-anchor="middle" class="label" fill="#888">× 4</text>
+
+    <!-- Plus sign -->
+    <text x="185" y="122" text-anchor="middle" class="label" fill="#888">+</text>
+
+    <!-- Small c² square -->
+    <rect x="210" y="82" width="80" height="80" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="250" y="128" text-anchor="middle" class="label math" fill="#dc2626">c²</text>
+  </g>
+
+  <!-- === Bottom: algebra === -->
+  <g transform="translate(360, 340)">
+    <text x="0" y="0" text-anchor="middle" class="eq">(a + b)² = 4 · ½ab + c²   →   a² + 2ab + b² = 2ab + c²   →   a² + b² = c²  □</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg width="100%" viewBox="0 0 960 430" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>Monitoring (open chain) vs control (closed ring)</title>
+  <defs>
+    <marker id="clArrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="28" text-anchor="middle" font-size="17" fill="#888" font-weight="bold">Monitoring vs control: the open chain and the closed ring</text>
+
+  <!-- ================= LEFT: MONITORING ================= -->
+  <text x="230" y="52" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">MONITORING - the open chain</text>
+
+  <rect x="60" y="65" width="140" height="46" rx="8" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <text x="130" y="93" text-anchor="middle" font-size="13" fill="#0891b2">the river</text>
+
+  <rect x="60" y="152" width="140" height="46" rx="8" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="180" text-anchor="middle" font-size="13" fill="#888">pH sensor</text>
+
+  <rect x="95" y="239" width="70" height="46" rx="8" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="267" text-anchor="middle" font-size="13" fill="#888">ADC</text>
+
+  <rect x="250" y="239" width="150" height="46" rx="8" fill="rgba(124,58,237,0.13)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="325" y="267" text-anchor="middle" font-size="13" fill="#888">processor</text>
+
+  <rect x="250" y="152" width="150" height="46" rx="8" fill="rgba(245,158,11,0.13)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="325" y="180" text-anchor="middle" font-size="13" fill="#888">alarm + log</text>
+
+  <rect x="250" y="65" width="150" height="46" rx="8" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="325" y="93" text-anchor="middle" font-size="13" fill="#888">a person acts</text>
+
+  <line x1="130" y1="111" x2="130" y2="147" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="130" y1="198" x2="130" y2="234" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="165" y1="262" x2="245" y2="262" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="325" y1="239" x2="325" y2="203" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="325" y1="152" x2="325" y2="116" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <!-- the dashed, outside-the-system closure -->
+  <line x1="245" y1="88" x2="205" y2="88" stroke="#888" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#clArrow)" opacity="0.7"/>
+
+  <!-- pulse that dies at the human -->
+  <circle r="6" fill="#0891b2" opacity="0">
+    <animateMotion dur="6s" repeatCount="indefinite" calcMode="linear"
+      path="M130,95 L130,262 L325,262 L325,95"
+      keyPoints="0;1;1" keyTimes="0;0.75;1"/>
+    <animate attributeName="opacity" dur="6s" repeatCount="indefinite"
+      values="0;1;1;0;0" keyTimes="0;0.05;0.70;0.78;1"/>
+  </circle>
+
+  <text x="230" y="330" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">measures and tells - the system never</text>
+  <text x="230" y="347" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">touches the river; the pulse stops at a person</text>
+
+  <!-- ================= RIGHT: CONTROL ================= -->
+  <text x="730" y="52" text-anchor="middle" font-size="14" fill="#059669" font-weight="bold">CONTROL - the closed ring</text>
+
+  <rect x="650" y="65" width="160" height="46" rx="8" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+  <text x="730" y="93" text-anchor="middle" font-size="13" fill="#0891b2">the greenhouse</text>
+
+  <rect x="790" y="152" width="150" height="46" rx="8" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="865" y="180" text-anchor="middle" font-size="13" fill="#888">temperature sensor</text>
+
+  <rect x="830" y="239" width="70" height="46" rx="8" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="865" y="267" text-anchor="middle" font-size="13" fill="#888">ADC</text>
+
+  <rect x="620" y="307" width="200" height="56" rx="8" fill="rgba(124,58,237,0.13)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="720" y="330" text-anchor="middle" font-size="13" fill="#888">processor</text>
+  <text x="720" y="349" text-anchor="middle" font-size="11.5" fill="#7c3aed">compare with setpoint 20-25</text>
+
+  <rect x="510" y="152" width="130" height="46" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2"/>
+  <text x="575" y="174" text-anchor="middle" font-size="13" fill="#059669">heater</text>
+  <text x="575" y="190" text-anchor="middle" font-size="11" fill="#888">(actuator)</text>
+
+  <line x1="812" y1="111" x2="856" y2="147" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="865" y1="198" x2="865" y2="234" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="858" y1="285" x2="826" y2="305" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="620" y1="330" x2="581" y2="203" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+  <line x1="583" y1="147" x2="648" y2="103" stroke="#888" stroke-width="2" marker-end="url(#clArrow)"/>
+
+  <!-- pulse that loops forever -->
+  <circle r="6" fill="#059669" opacity="0">
+    <animateMotion dur="6s" repeatCount="indefinite" calcMode="linear"
+      path="M812,111 L862,150 L862,283 L824,307 L624,328 L580,200 L580,150 L650,101 L812,111"/>
+    <animate attributeName="opacity" dur="6s" repeatCount="indefinite"
+      values="0;0.95;0.95" keyTimes="0;0.02;1"/>
+  </circle>
+
+  <text x="730" y="395" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">measures, compares, acts - and its own act</text>
+  <text x="730" y="412" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">returns in the next reading: feedback</text>
+
+  <text x="230" y="412" text-anchor="middle" font-size="12.5" fill="#888">the loop closes outside the system, if at all</text>
+</svg>

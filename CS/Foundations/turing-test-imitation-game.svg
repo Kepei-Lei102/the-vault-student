@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 14px; }
+    .sub   { font-size: 12px; }
+    .note  { font-size: 11.5px; opacity: 0.75; }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- title -->
+  <text x="310" y="26" class="title" text-anchor="middle">The Imitation Game</text>
+
+  <!-- curtain -->
+  <line x1="312" y1="48" x2="312" y2="338" stroke="#888" stroke-width="1.4" stroke-dasharray="5,5" opacity="0.8"/>
+  <text x="312" y="352" class="note" text-anchor="middle">the curtain</text>
+
+  <!-- communication channels (drawn first so boxes sit on top) -->
+  <line x1="168" y1="168" x2="446" y2="118" stroke="#888" stroke-width="1.6" marker-start="url(#ar)" marker-end="url(#ar)"/>
+  <line x1="168" y1="196" x2="446" y2="270" stroke="#888" stroke-width="1.6" marker-start="url(#ar)" marker-end="url(#ar)"/>
+  <text x="312" y="190" class="note" text-anchor="middle">typed messages only</text>
+  <text x="312" y="206" class="note" text-anchor="middle">no voice, no face, no body</text>
+
+  <!-- judge (left) -->
+  <g>
+    <rect x="36" y="138" width="130" height="86" rx="10" fill="rgba(245,158,11,0.14)" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="101" cy="166" r="13" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <path d="M 80 200 q 21 -22 42 0" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <text x="101" y="245" class="label" text-anchor="middle" fill="#f59e0b">Interrogator C</text>
+    <text x="101" y="263" class="sub" text-anchor="middle">the judge</text>
+  </g>
+  <text x="101" y="300" class="sub" text-anchor="middle" fill="#f59e0b">"Which one is</text>
+  <text x="101" y="316" class="sub" text-anchor="middle" fill="#f59e0b">the machine?"</text>
+
+  <!-- machine A (top right) -->
+  <g>
+    <rect x="448" y="74" width="140" height="84" rx="10" fill="rgba(124,58,237,0.14)" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="492" y="92" width="52" height="36" rx="4" fill="none" stroke="#7c3aed" stroke-width="2"/>
+    <line x1="500" y1="104" x2="536" y2="104" stroke="#7c3aed" stroke-width="1.6"/>
+    <line x1="500" y1="114" x2="536" y2="114" stroke="#7c3aed" stroke-width="1.6"/>
+    <text x="518" y="148" class="label" text-anchor="middle" fill="#7c3aed">Player A</text>
+  </g>
+  <text x="518" y="173" class="sub" text-anchor="middle" fill="#7c3aed">the machine</text>
+
+  <!-- human B (bottom right) -->
+  <g>
+    <rect x="448" y="236" width="140" height="84" rx="10" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="518" cy="262" r="13" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <path d="M 497 296 q 21 -22 42 0" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <text x="518" y="334" class="sub" text-anchor="middle" fill="#2563eb">Player B  ·  the human</text>
+  </g>
+</svg>

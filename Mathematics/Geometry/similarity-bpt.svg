@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 14px; font-family: 'Times New Roman', serif; font-style: italic; }
+    .vertex { font-size: 16px; font-weight: 600; font-family: 'Times New Roman', serif; font-style: italic; }
+    .note { font-size: 12px; opacity: 0.85; }
+  </style>
+
+  <!-- Title -->
+  <text x="250" y="25" class="title" text-anchor="middle">Basic Proportionality Theorem</text>
+  <!-- Hypothesis — sans-serif so parallel/implies/colon render -->
+  <text x="250" y="48" class="note" text-anchor="middle">If DE &#8741; BC, then AD/DB = AE/EC</text>
+
+  <!-- Triangle ABC -->
+  <!-- A = (250, 85), B = (60, 355), C = (440, 355) -->
+  <polygon points="250,85 60,355 440,355"
+           fill="rgba(37, 99, 235, 0.10)" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Segment DE parallel to BC -->
+  <!-- D = 40% along AB from A: (174, 193), E = 40% along AC from A: (326, 193) -->
+  <line x1="174" y1="193" x2="326" y2="193"
+        stroke="#7c3aed" stroke-width="2.5"/>
+
+  <!-- Parallel-line arrow marks (single arrow notation) -->
+  <!-- On DE, midpoint (250, 193) -->
+  <polyline points="244,186 252,193 244,200" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <!-- On BC, midpoint (250, 355) -->
+  <polyline points="244,348 252,355 244,362" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+
+  <!-- 2 ticks on AD (A(250,85) to D(174,193)) at 30% and 60% -->
+  <g stroke="#888" stroke-width="1.5">
+    <line x1="223" y1="111" x2="231" y2="124"/>
+    <line x1="200" y1="144" x2="208" y2="157"/>
+  </g>
+
+  <!-- 3 ticks on DB (D(174,193) to B(60,355)) at 25%, 50%, 75% -->
+  <g stroke="#888" stroke-width="1.5">
+    <line x1="141" y1="227" x2="149" y2="240"/>
+    <line x1="113" y1="268" x2="121" y2="281"/>
+    <line x1="85" y1="308" x2="93" y2="321"/>
+  </g>
+
+  <!-- 2 ticks on AE (A(250,85) to E(326,193)) at 30% and 60% -->
+  <g stroke="#888" stroke-width="1.5">
+    <line x1="269" y1="111" x2="277" y2="124"/>
+    <line x1="292" y1="144" x2="300" y2="157"/>
+  </g>
+
+  <!-- 3 ticks on EC (E(326,193) to C(440,355)) at 25%, 50%, 75% -->
+  <g stroke="#888" stroke-width="1.5">
+    <line x1="351" y1="227" x2="359" y2="240"/>
+    <line x1="379" y1="268" x2="387" y2="281"/>
+    <line x1="407" y1="308" x2="415" y2="321"/>
+  </g>
+
+  <!-- Vertex dots -->
+  <circle cx="250" cy="85" r="3" fill="#2563eb"/>
+  <circle cx="60" cy="355" r="3" fill="#2563eb"/>
+  <circle cx="440" cy="355" r="3" fill="#2563eb"/>
+  <circle cx="174" cy="193" r="3" fill="#7c3aed"/>
+  <circle cx="326" cy="193" r="3" fill="#7c3aed"/>
+
+  <!-- Vertex labels -->
+  <text x="250" y="77" class="vertex" text-anchor="middle">A</text>
+  <text x="50" y="370" class="vertex" text-anchor="middle">B</text>
+  <text x="450" y="370" class="vertex" text-anchor="middle">C</text>
+  <text x="162" y="187" class="vertex" text-anchor="end">D</text>
+  <text x="338" y="187" class="vertex" text-anchor="start">E</text>
+
+  <!-- Segment labels -->
+  <text x="188" y="137" class="label" text-anchor="end">AD</text>
+  <text x="93" y="275" class="label" text-anchor="end">DB</text>
+  <text x="312" y="137" class="label" text-anchor="start">AE</text>
+  <text x="407" y="275" class="label" text-anchor="start">EC</text>
+
+  <!-- Ratio note at bottom — sans-serif so colons render -->
+  <text x="250" y="400" class="note" text-anchor="middle">Here AD : DB = 2 : 3 = AE : EC</text>
+</svg>

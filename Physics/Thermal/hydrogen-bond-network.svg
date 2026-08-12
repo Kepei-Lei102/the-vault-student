@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 446" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 16px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .note { font-size: 11px; opacity: 0.7; }
+    .atom { font-size: 12px; font-weight: 600; }
+  </style>
+
+  <text x="300" y="28" class="title" text-anchor="middle">Water's hydrogen-bond network</text>
+
+  <!-- ===== hydrogen bonds (amber dashed) drawn first, behind atoms ===== -->
+  <g stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5,4" fill="none">
+    <line x1="300" y1="166" x2="300" y2="103"/>   <!-- centre H_up  ...  O_top -->
+    <line x1="334" y1="200" x2="449" y2="200"/>   <!-- centre H_right ... O_right -->
+    <line x1="168" y1="200" x2="283" y2="200"/>   <!-- O_left donates H ... O_centre -->
+    <line x1="300" y1="280" x2="300" y2="217"/>   <!-- O_bottom donates H ... O_centre -->
+  </g>
+
+  <!-- ===== covalent O–H bonds (solid grey) ===== -->
+  <g stroke="#888" stroke-width="3">
+    <!-- central -->
+    <line x1="300" y1="200" x2="300" y2="166"/>
+    <line x1="300" y1="200" x2="334" y2="200"/>
+    <!-- top neighbour -->
+    <line x1="300" y1="86" x2="272" y2="64"/>
+    <line x1="300" y1="86" x2="328" y2="64"/>
+    <!-- right neighbour -->
+    <line x1="466" y1="200" x2="488" y2="178"/>
+    <line x1="466" y1="200" x2="488" y2="222"/>
+    <!-- left neighbour -->
+    <line x1="134" y1="200" x2="168" y2="200"/>
+    <line x1="134" y1="200" x2="112" y2="178"/>
+    <!-- bottom neighbour -->
+    <line x1="300" y1="314" x2="300" y2="280"/>
+    <line x1="300" y1="314" x2="328" y2="336"/>
+  </g>
+
+  <!-- ===== oxygen atoms (purple) ===== -->
+  <g>
+    <circle cx="300" cy="200" r="17" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="300" cy="86"  r="17" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="466" cy="200" r="17" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="134" cy="200" r="17" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="300" cy="314" r="17" fill="rgba(124,58,237,0.20)" stroke="#7c3aed" stroke-width="2"/>
+  </g>
+  <g class="atom" fill="#888" text-anchor="middle">
+    <text x="300" y="205">O</text>
+    <text x="300" y="91">O</text>
+    <text x="466" y="205">O</text>
+    <text x="134" y="205">O</text>
+    <text x="300" y="319">O</text>
+  </g>
+
+  <!-- ===== hydrogen atoms (blue) ===== -->
+  <g fill="rgba(37,99,235,0.20)" stroke="#2563eb" stroke-width="1.5">
+    <circle cx="300" cy="166" r="9"/>
+    <circle cx="334" cy="200" r="9"/>
+    <circle cx="272" cy="64"  r="9"/>
+    <circle cx="328" cy="64"  r="9"/>
+    <circle cx="488" cy="178" r="9"/>
+    <circle cx="488" cy="222" r="9"/>
+    <circle cx="168" cy="200" r="9"/>
+    <circle cx="112" cy="178" r="9"/>
+    <circle cx="300" cy="280" r="9"/>
+    <circle cx="328" cy="336" r="9"/>
+  </g>
+
+  <!-- partial charges on the central molecule -->
+  <text x="278" y="196" class="note" fill="#7c3aed">&#948;&#8722;</text>
+  <text x="346" y="190" class="note" fill="#2563eb">&#948;+</text>
+
+  <!-- ===== legend ===== -->
+  <g transform="translate(40,372)">
+    <line x1="0" y1="0" x2="34" y2="0" stroke="#888" stroke-width="3"/>
+    <text x="42" y="4" class="label">covalent O&#8211;H bond</text>
+    <line x1="210" y1="0" x2="244" y2="0" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5,4"/>
+    <text x="252" y="4" class="label" fill="#f59e0b">hydrogen bond</text>
+  </g>
+
+  <text x="300" y="414" class="note" text-anchor="middle">Heat must agitate and partly break this whole web — energy that never speeds</text>
+  <text x="300" y="431" class="note" text-anchor="middle">the molecules up. That hidden cost is water's enormous specific heat.</text>
+</svg>

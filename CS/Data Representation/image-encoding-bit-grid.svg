@@ -1,0 +1,87 @@
+<svg viewBox="0 0 780 360" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>Eight bytes drawn as an 8x8 one-bit bitmap: the binary rows on the left are the file, the rendered heart on the right is the picture - the numbers are the picture.</title>
+  <text x="390" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">One bit per pixel &#8212; the numbers are the picture</text>
+  <text x="150" y="56" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">the file: 8 bytes</text>
+  <text x="458" y="56" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">the picture: 8 &#215; 8 pixels</text>
+  <text x="70" y="92" font-family="monospace" font-size="16" font-weight="bold" fill="#888">00000000</text>
+  <text x="240" y="92" font-family="monospace" font-size="12" fill="#888" opacity="0.75">00</text>
+  <text x="70" y="122" font-family="monospace" font-size="16" font-weight="bold" fill="#888">01100110</text>
+  <text x="240" y="122" font-family="monospace" font-size="12" fill="#888" opacity="0.75">66</text>
+  <text x="70" y="152" font-family="monospace" font-size="16" font-weight="bold" fill="#888">11111111</text>
+  <text x="240" y="152" font-family="monospace" font-size="12" fill="#888" opacity="0.75">FF</text>
+  <text x="70" y="182" font-family="monospace" font-size="16" font-weight="bold" fill="#888">11111111</text>
+  <text x="240" y="182" font-family="monospace" font-size="12" fill="#888" opacity="0.75">FF</text>
+  <text x="70" y="212" font-family="monospace" font-size="16" font-weight="bold" fill="#888">01111110</text>
+  <text x="240" y="212" font-family="monospace" font-size="12" fill="#888" opacity="0.75">7E</text>
+  <text x="70" y="242" font-family="monospace" font-size="16" font-weight="bold" fill="#888">00111100</text>
+  <text x="240" y="242" font-family="monospace" font-size="12" fill="#888" opacity="0.75">3C</text>
+  <text x="70" y="272" font-family="monospace" font-size="16" font-weight="bold" fill="#888">00011000</text>
+  <text x="240" y="272" font-family="monospace" font-size="12" fill="#888" opacity="0.75">18</text>
+  <text x="70" y="302" font-family="monospace" font-size="16" font-weight="bold" fill="#888">00000000</text>
+  <text x="240" y="302" font-family="monospace" font-size="12" fill="#888" opacity="0.75">00</text>
+  <rect x="330" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="394" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="426" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="458" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="490" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="522" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="554" y="66" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="330" y="98" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="98" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="394" y="98" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="426" y="98" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="458" y="98" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="490" y="98" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="522" y="98" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="554" y="98" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="330" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="362" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="394" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="426" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="458" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="490" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="522" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="554" y="130" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="330" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="362" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="394" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="426" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="458" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="490" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="522" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="554" y="162" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="330" y="194" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="394" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="426" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="458" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="490" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="522" y="194" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="554" y="194" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="330" y="226" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="226" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="394" y="226" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="426" y="226" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="458" y="226" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="490" y="226" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="522" y="226" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="554" y="226" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="330" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="394" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="426" y="258" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="458" y="258" width="32" height="32" fill="#0891b2" fill-opacity="0.75" stroke="#0891b2" stroke-width="1"/>
+  <rect x="490" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="522" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="554" y="258" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="330" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="362" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="394" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="426" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="458" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="490" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="522" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="554" y="290" width="32" height="32" fill="none" stroke="#888" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="390" y="352" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">8 bytes = 64 bits = one picture&#8194;&#8212;&#8194;resolution 8 &#215; 8, colour depth 1 bit</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 620 258" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>Lagrange's theorem in action: S3 splits into two equal cosets of the rotation subgroup, so 6 = 2 x 3.</title>
+
+  <text x="310" y="28" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle">Lagrange in action:&#8195;G = S&#8323; (order 6),&#8195;H = the 3 rotations</text>
+
+  <!-- ===== Block A: the subgroup H (rotations), teal ===== -->
+  <rect x="40" y="66" width="252" height="120" rx="10" fill="#0891b2" fill-opacity="0.09" stroke="#0891b2" stroke-width="1.8"/>
+  <text x="166" y="90" font-family="sans-serif" font-size="12.5" fill="#888" text-anchor="middle">H  (the rotations)&#8195;&#8226;&#8195;|H| = 3</text>
+  <g font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">
+    <rect x="66"  y="108" width="60" height="48" rx="7" fill="#0891b2" fill-opacity="0.16" stroke="#0891b2" stroke-width="1.3"/>
+    <text x="96"  y="138">e</text>
+    <rect x="136" y="108" width="60" height="48" rx="7" fill="#0891b2" fill-opacity="0.16" stroke="#0891b2" stroke-width="1.3"/>
+    <text x="166" y="138">r</text>
+    <rect x="206" y="108" width="60" height="48" rx="7" fill="#0891b2" fill-opacity="0.16" stroke="#0891b2" stroke-width="1.3"/>
+    <text x="236" y="138">r&#178;</text>
+  </g>
+
+  <!-- ===== Block B: the other coset (reflections), amber ===== -->
+  <rect x="328" y="66" width="252" height="120" rx="10" fill="#f59e0b" fill-opacity="0.09" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="454" y="90" font-family="sans-serif" font-size="12.5" fill="#888" text-anchor="middle">the other coset (reflections)&#8195;&#8226;&#8195;3</text>
+  <g font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">
+    <rect x="352" y="108" width="66" height="48" rx="7" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="385" y="137">(1&#8202;2)</text>
+    <rect x="424" y="108" width="66" height="48" rx="7" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="457" y="137">(1&#8202;3)</text>
+    <rect x="496" y="108" width="66" height="48" rx="7" fill="#f59e0b" fill-opacity="0.16" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="529" y="137">(2&#8202;3)</text>
+  </g>
+
+  <!-- caption -->
+  <text x="310" y="214" font-family="sans-serif" font-size="12.5" fill="#888" text-anchor="middle">Two cosets tile all 6 elements with no overlap:&#8195;6 = 2 &#215; 3.</text>
+  <text x="310" y="234" font-family="sans-serif" font-size="12.5" fill="#888" text-anchor="middle">So |H| = 3 divides |G| = 6&#8195;(index [G : H] = 2).</text>
+</svg>

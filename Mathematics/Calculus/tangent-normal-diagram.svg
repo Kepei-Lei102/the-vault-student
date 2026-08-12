@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .note { font-size: 11px; opacity: 0.6; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+  </style>
+
+  <!-- Title -->
+  <text x="280" y="22" text-anchor="middle" class="title">Tangent and Normal at a Point on a Curve</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="300" x2="520" y2="300" stroke="#888" stroke-width="1.2"/>
+  <line x1="80" y1="320" x2="80" y2="30" stroke="#888" stroke-width="1.2"/>
+  <!-- Arrow tips -->
+  <polygon points="520,300 514,297 514,303" fill="#888"/>
+  <polygon points="80,30 77,36 83,36" fill="#888"/>
+  <text x="530" y="304" class="label math">x</text>
+  <text x="72" y="26" class="label math">y</text>
+
+  <!-- Curve: roughly y = 0.008(x-150)(x-300)(x-450) + 180, scaled for SVG -->
+  <!-- Plotted as a smooth path representing a cubic -->
+  <path d="M 90,260 C 130,310 170,320 210,280 C 250,240 280,160 310,130 C 340,100 370,90 400,100 C 430,110 460,150 500,200"
+        fill="none" stroke="#888" stroke-width="2.5" opacity="0.7"/>
+
+  <!-- Point P on curve (approximately at x=310, y=130) -->
+  <circle cx="310" cy="130" r="5" fill="#2563eb"/>
+  <text x="322" y="122" class="label" fill="#2563eb" font-weight="600">P(a, f(a))</text>
+
+  <!-- Tangent line through P — gradient roughly -0.8, extended -->
+  <line x1="160" y1="250" x2="470" y2="2" stroke="#059669" stroke-width="2" opacity="0.85"/>
+  <text x="465" y="25" class="label" fill="#059669" font-weight="600">Tangent</text>
+  <text x="465" y="40" class="note" fill="#059669">gradient = f'(a)</text>
+
+  <!-- Normal line through P — perpendicular, gradient roughly 1.25 -->
+  <line x1="220" y1="18" x2="400" y2="243" stroke="#dc2626" stroke-width="2" opacity="0.85"/>
+  <text x="395" y="260" class="label" fill="#dc2626" font-weight="600">Normal</text>
+  <text x="395" y="275" class="note" fill="#dc2626">gradient = −1/f'(a)</text>
+
+  <!-- Right angle marker at P -->
+  <path d="M 302,138 L 294,130 L 302,122" fill="none" stroke="#888" stroke-width="1.2"/>
+
+  <!-- Curve label -->
+  <text x="490" y="215" class="label math" opacity="0.7">y = f(x)</text>
+
+  <!-- Annotation: perpendicular relationship -->
+  <rect x="100" y="318" width="360" height="30" rx="6" fill="rgba(128,128,128,0.06)" stroke="#888" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="280" y="338" text-anchor="middle" font-size="12" fill="#888">
+    m<tspan class="math" font-size="10" dy="-4">T</tspan><tspan dy="4"> × m</tspan><tspan class="math" font-size="10" dy="-4">N</tspan><tspan dy="4"> = −1      (perpendicular gradient rule)</tspan>
+  </text>
+</svg>

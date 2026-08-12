@@ -1,0 +1,76 @@
+<svg width="100%" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>The helix, and the aurora it draws</title>
+  <defs>
+    <marker id="haBlue" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="haTeal" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="26" text-anchor="middle" font-size="16" fill="#888" font-weight="bold">Circle across the field + glide along it = a helix</text>
+
+  <!-- ============ LEFT: the helix ============ -->
+  <line x1="55" y1="130" x2="430" y2="130" stroke="#2563eb" stroke-width="1.8" opacity="0.5" marker-end="url(#haBlue)"/>
+  <line x1="55" y1="195" x2="430" y2="195" stroke="#2563eb" stroke-width="1.8" opacity="0.8" marker-end="url(#haBlue)"/>
+  <line x1="55" y1="260" x2="430" y2="260" stroke="#2563eb" stroke-width="1.8" opacity="0.5" marker-end="url(#haBlue)"/>
+  <text x="443" y="199" font-size="13" fill="#2563eb" font-weight="bold">B</text>
+
+  <!-- the coil: overlapping ellipses along the middle field line -->
+  <g fill="none" stroke="#f59e0b" stroke-width="2.2">
+    <ellipse cx="115" cy="195" rx="17" ry="40"/>
+    <ellipse cx="165" cy="195" rx="17" ry="40"/>
+    <ellipse cx="215" cy="195" rx="17" ry="40"/>
+    <ellipse cx="265" cy="195" rx="17" ry="40"/>
+    <ellipse cx="315" cy="195" rx="17" ry="40"/>
+    <ellipse cx="365" cy="195" rx="17" ry="40"/>
+  </g>
+  <circle cx="382" cy="195" r="6" fill="#f59e0b"/>
+
+  <!-- decomposition arrows -->
+  <line x1="95" y1="305" x2="185" y2="305" stroke="#0891b2" stroke-width="2.5" marker-end="url(#haTeal)"/>
+  <text x="140" y="325" text-anchor="middle" font-size="12" fill="#0891b2">v along B: untouched glide</text>
+  <circle cx="290" cy="305" r="20" fill="none" stroke="#0891b2" stroke-width="2.5"/>
+  <path d="M304,291 L312,285 L310,296 Z" fill="#0891b2"/>
+  <text x="290" y="345" text-anchor="middle" font-size="12" fill="#0891b2">v across B: circle</text>
+
+  <!-- ============ RIGHT: Earth and the aurora ============ -->
+  <!-- solar wind -->
+  <circle cx="520" cy="80" r="34" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="520" y="45" text-anchor="middle" font-size="11.5" fill="#f59e0b">the Sun</text>
+  <line x1="552" y1="98" x2="612" y2="132" stroke="#f59e0b" stroke-width="1.8" opacity="0.7"/>
+  <line x1="546" y1="112" x2="600" y2="152" stroke="#f59e0b" stroke-width="1.8" opacity="0.5"/>
+
+  <!-- Earth -->
+  <circle cx="740" cy="235" r="46" fill="rgba(8,145,178,0.18)" stroke="#0891b2" stroke-width="2.5"/>
+  <text x="740" y="240" text-anchor="middle" font-size="12" fill="#0891b2">Earth</text>
+
+  <!-- dipole field lines: loops pole to pole -->
+  <g fill="none" stroke="#2563eb" stroke-width="1.6" opacity="0.65">
+    <path d="M727,191 C 640,110 610,300 727,280"/>
+    <path d="M753,191 C 840,110 870,300 753,280"/>
+    <path d="M723,193 C 570,60 540,350 723,278"/>
+    <path d="M757,193 C 910,60 940,350 757,278"/>
+  </g>
+
+  <!-- spiraling particle along the left outer field line -->
+  <g fill="none" stroke="#f59e0b" stroke-width="1.8">
+    <ellipse cx="612" cy="120" rx="8" ry="16" transform="rotate(-38 612 120)"/>
+    <ellipse cx="640" cy="140" rx="8" ry="16" transform="rotate(-30 640 140)"/>
+    <ellipse cx="668" cy="162" rx="8" ry="16" transform="rotate(-24 668 162)"/>
+    <ellipse cx="696" cy="180" rx="8" ry="16" transform="rotate(-18 696 180)"/>
+  </g>
+  <circle cx="715" cy="190" r="4.5" fill="#f59e0b"/>
+
+  <!-- aurora arcs at the poles -->
+  <path d="M712,182 C 725,168 755,168 768,182" fill="none" stroke="#059669" stroke-width="6" opacity="0.55" stroke-linecap="round"/>
+  <path d="M716,175 C 728,163 752,163 764,175" fill="none" stroke="#059669" stroke-width="3.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M712,288 C 725,302 755,302 768,288" fill="none" stroke="#059669" stroke-width="6" opacity="0.4" stroke-linecap="round"/>
+  <text x="800" y="168" font-size="12" fill="#059669" font-weight="bold">aurora</text>
+
+  <text x="740" y="360" text-anchor="middle" font-size="12.5" fill="#888">solar-wind charges spiral along the field lines</text>
+  <text x="740" y="377" text-anchor="middle" font-size="12.5" fill="#888">and funnel into the poles</text>
+
+  <text x="242" y="377" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">the along-component never feels a force - the across-component circles forever</text>
+</svg>

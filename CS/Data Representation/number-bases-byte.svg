@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="100%">
+<style>
+ text{font-family:system-ui,-apple-system,sans-serif;fill:#888;}
+ .pv{font-size:13px;} .bit{font-size:22px;font-weight:700;} .contrib{font-size:13px;font-weight:600;fill:#059669;}
+ .res{font-size:15px;font-weight:700;} .hexd{font-size:18px;font-weight:700;fill:#7c3aed;} .lab{font-size:12px;}
+</style>
+<text x="380" y="24" text-anchor="middle" class="res">One byte, three ways</text>
+<text x="69" y="52" text-anchor="middle" class="pv">128</text>
+<text x="135" y="52" text-anchor="middle" class="pv">64</text>
+<text x="201" y="52" text-anchor="middle" class="pv">32</text>
+<text x="267" y="52" text-anchor="middle" class="pv">16</text>
+<text x="333" y="52" text-anchor="middle" class="pv">8</text>
+<text x="399" y="52" text-anchor="middle" class="pv">4</text>
+<text x="465" y="52" text-anchor="middle" class="pv">2</text>
+<text x="531" y="52" text-anchor="middle" class="pv">1</text>
+<rect x="40" y="60" width="58" height="46" rx="5" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.8"/>
+<text x="69" y="92" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<rect x="106" y="60" width="58" height="46" rx="5" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.8"/>
+<text x="135" y="92" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<rect x="172" y="60" width="58" height="46" rx="5" fill="rgba(136,136,136,0.05)" stroke="#888" stroke-width="1"/>
+<text x="201" y="92" text-anchor="middle" class="bit" fill="#888">0</text>
+<rect x="238" y="60" width="58" height="46" rx="5" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.8"/>
+<text x="267" y="92" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<rect x="304" y="60" width="58" height="46" rx="5" fill="rgba(136,136,136,0.05)" stroke="#888" stroke-width="1"/>
+<text x="333" y="92" text-anchor="middle" class="bit" fill="#888">0</text>
+<rect x="370" y="60" width="58" height="46" rx="5" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.8"/>
+<text x="399" y="92" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<rect x="436" y="60" width="58" height="46" rx="5" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.8"/>
+<text x="465" y="92" text-anchor="middle" class="bit" fill="#2563eb">1</text>
+<rect x="502" y="60" width="58" height="46" rx="5" fill="rgba(136,136,136,0.05)" stroke="#888" stroke-width="1"/>
+<text x="531" y="92" text-anchor="middle" class="bit" fill="#888">0</text>
+<text x="69" y="132" text-anchor="middle" class="contrib">128</text>
+<text x="135" y="132" text-anchor="middle" class="contrib">64</text>
+<text x="201" y="132" text-anchor="middle" class="lab">·</text>
+<text x="267" y="132" text-anchor="middle" class="contrib">16</text>
+<text x="333" y="132" text-anchor="middle" class="lab">·</text>
+<text x="399" y="132" text-anchor="middle" class="contrib">4</text>
+<text x="465" y="132" text-anchor="middle" class="contrib">2</text>
+<text x="531" y="132" text-anchor="middle" class="lab">·</text>
+<text x="564" y="132" class="res">= 214  (denary)</text>
+<path d="M 40 160 L 40 168 L 296 168 L 296 160" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="168" y="188" text-anchor="middle" class="lab">1101</text>
+<text x="168" y="208" text-anchor="middle" class="hexd">D</text>
+<path d="M 304 160 L 304 168 L 560 168 L 560 160" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="432" y="188" text-anchor="middle" class="lab">0110</text>
+<text x="432" y="208" text-anchor="middle" class="hexd">6</text>
+<text x="380" y="252" text-anchor="middle" class="res">binary 1101 0110   =   denary 214   =   hex 0xD6</text>
+</svg>

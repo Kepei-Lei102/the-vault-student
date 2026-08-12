@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%">
+  <!-- Title -->
+  <text x="300" y="24" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">Type 5: Digit problems — handle the constrained position first</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="46" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">4-digit number ≥ 5000 from {1, 3, 5, 7, 9}, no repetition</text>
+
+  <!-- 4 digit boxes -->
+  <!-- Box 1 — constrained, highlighted -->
+  <rect x="120" y="62" width="70" height="55" rx="6" fill="rgba(234,67,53,0.1)" stroke="#EA4335" stroke-width="2.5"/>
+  <text x="155" y="88" font-family="sans-serif" font-size="20" fill="#EA4335" text-anchor="middle" font-weight="bold">5, 7, 9</text>
+  <text x="155" y="108" font-family="sans-serif" font-size="12" fill="#EA4335" text-anchor="middle">3 choices</text>
+  <text x="155" y="56" font-family="sans-serif" font-size="11" fill="#EA4335" text-anchor="middle" font-weight="bold">① FIRST</text>
+
+  <!-- Box 2 -->
+  <rect x="205" y="62" width="70" height="55" rx="6" fill="rgba(200,200,200,0.1)" stroke="#888" stroke-width="1.5"/>
+  <text x="240" y="88" font-family="sans-serif" font-size="20" fill="#888" opacity="0.5" text-anchor="middle">?</text>
+  <text x="240" y="108" font-family="sans-serif" font-size="12" fill="#888" opacity="0.5" text-anchor="middle">4 left</text>
+
+  <!-- Box 3 -->
+  <rect x="290" y="62" width="70" height="55" rx="6" fill="rgba(200,200,200,0.1)" stroke="#888" stroke-width="1.5"/>
+  <text x="325" y="88" font-family="sans-serif" font-size="20" fill="#888" opacity="0.5" text-anchor="middle">?</text>
+  <text x="325" y="108" font-family="sans-serif" font-size="12" fill="#888" opacity="0.5" text-anchor="middle">3 left</text>
+
+  <!-- Box 4 -->
+  <rect x="375" y="62" width="70" height="55" rx="6" fill="rgba(200,200,200,0.1)" stroke="#888" stroke-width="1.5"/>
+  <text x="410" y="88" font-family="sans-serif" font-size="20" fill="#888" opacity="0.5" text-anchor="middle">?</text>
+  <text x="410" y="108" font-family="sans-serif" font-size="12" fill="#888" opacity="0.5" text-anchor="middle">2 left</text>
+
+  <!-- Multiplication signs -->
+  <text x="195" y="92" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">×</text>
+  <text x="280" y="92" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">×</text>
+  <text x="365" y="92" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">×</text>
+
+  <!-- Position labels -->
+  <text x="155" y="132" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Thousands</text>
+  <text x="240" y="132" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Hundreds</text>
+  <text x="325" y="132" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Tens</text>
+  <text x="410" y="132" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Units</text>
+
+  <!-- Calculation -->
+  <text x="300" y="162" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">3 × 4 × 3 × 2 = 72</text>
+  <text x="300" y="182" font-family="sans-serif" font-size="12" fill="#9C27B0" text-anchor="middle">Reduction: the constraint shrinks the first position to 3 choices.</text>
+  <text x="300" y="197" font-family="sans-serif" font-size="12" fill="#9C27B0" text-anchor="middle">Each subsequent position has one fewer choice — independent stages.</text>
+</svg>

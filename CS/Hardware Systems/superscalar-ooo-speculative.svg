@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 300" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .ptitle { font-size: 14px; font-weight: 600; }
+    .label { font-size: 12px; }
+    .small { font-size: 11px; }
+    .tiny  { font-size: 10px; }
+    .cell  { font-size: 11px; font-weight: 600; }
+  </style>
+
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888"/></marker></defs>
+<line x1="258" y1="26" x2="258" y2="280" stroke="#888" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.35"/>
+<line x1="516" y1="26" x2="516" y2="280" stroke="#888" stroke-width="0.8" stroke-dasharray="3,4" opacity="0.35"/>
+<text x="128" y="24" class="ptitle" text-anchor="middle" fill="#7c3aed">Superscalar</text>
+<text x="128" y="40" class="small" text-anchor="middle">several instructions issued per cycle</text>
+<rect x="48" y="54" width="160" height="26" rx="4" fill="rgba(124,58,237,0.18)" stroke="#7c3aed" stroke-width="1.3"/>
+<text x="128.0" y="71.0" class="label" text-anchor="middle" fill="#7c3aed">dispatch / issue</text>
+<line x1="64.0" y1="80.0" x2="34.0" y2="118.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="14.0" y="120" width="40" height="30" rx="4" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.3"/>
+<text x="34.0" y="139.0" class="cell" text-anchor="middle" fill="#059669">ALU</text>
+<line x1="96.0" y1="80.0" x2="81.0" y2="118.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="61.0" y="120" width="40" height="30" rx="4" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.3"/>
+<text x="81.0" y="139.0" class="cell" text-anchor="middle" fill="#059669">ALU</text>
+<line x1="128.0" y1="80.0" x2="128.0" y2="118.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="108.0" y="120" width="40" height="30" rx="4" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.3"/>
+<text x="128.0" y="139.0" class="cell" text-anchor="middle" fill="#f59e0b">FPU</text>
+<line x1="160.0" y1="80.0" x2="175.0" y2="118.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="155.0" y="120" width="40" height="30" rx="4" fill="rgba(8,145,178,0.18)" stroke="#0891b2" stroke-width="1.3"/>
+<text x="175.0" y="139.0" class="cell" text-anchor="middle" fill="#0891b2">Ld/St</text>
+<line x1="192.0" y1="80.0" x2="222.0" y2="118.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="202.0" y="120" width="40" height="30" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.3"/>
+<text x="222.0" y="139.0" class="cell" text-anchor="middle" fill="#2563eb">Br</text>
+<text x="128" y="172" class="tiny" text-anchor="middle">many parallel execution units</text>
+<text x="128" y="206" class="small" text-anchor="middle">Real cores issue 4-8 per cycle into</text>
+<text x="128" y="221" class="small" text-anchor="middle">8-10+ units -- the textbook's lone</text>
+<text x="128" y="236" class="small" text-anchor="middle">ALU, multiplied.</text>
+<text x="128" y="256" class="label" text-anchor="middle" fill="#059669">IPC &gt; 1</text>
+<text x="387" y="24" class="ptitle" text-anchor="middle" fill="#0891b2">Out-of-order</text>
+<text x="387" y="40" class="small" text-anchor="middle">execute whatever is ready</text>
+<text x="311.0" y="54" class="tiny" text-anchor="middle">1</text>
+<text x="333.0" y="54" class="tiny" text-anchor="middle">2</text>
+<text x="355.0" y="54" class="tiny" text-anchor="middle">3</text>
+<text x="377.0" y="54" class="tiny" text-anchor="middle">4</text>
+<text x="399.0" y="54" class="tiny" text-anchor="middle">5</text>
+<text x="421.0" y="54" class="tiny" text-anchor="middle">6</text>
+<text x="443.0" y="54" class="tiny" text-anchor="middle">7</text>
+<text x="270" y="54" class="tiny">cyc</text>
+<text x="292" y="70.5" class="tiny" text-anchor="end">I1</text>
+<rect x="300" y="58" width="22" height="17" rx="4" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.3"/>
+<text x="311.0" y="70.5" class="cell" text-anchor="middle" fill="#059669">E</text>
+<text x="292" y="90.5" class="tiny" text-anchor="end">I2</text>
+<rect x="322" y="78" width="22" height="17" rx="4" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.3"/>
+<text x="333.0" y="90.5" class="cell" text-anchor="middle" fill="#059669">E</text>
+<text x="292" y="110.5" class="tiny" text-anchor="end">I3</text>
+<rect x="344" y="98" width="88" height="17" rx="3" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="388.0" y="110.5" class="tiny" text-anchor="middle" fill="#dc2626">waits on load</text>
+<rect x="432" y="98" width="22" height="17" rx="4" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.3"/>
+<text x="443.0" y="110.5" class="cell" text-anchor="middle" fill="#059669">E</text>
+<text x="292" y="130.5" class="tiny" text-anchor="end">I4</text>
+<rect x="344" y="118" width="22" height="17" rx="4" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.3"/>
+<text x="355.0" y="130.5" class="cell" text-anchor="middle" fill="#f59e0b">E</text>
+<text x="292" y="150.5" class="tiny" text-anchor="end">I5</text>
+<rect x="366" y="138" width="22" height="17" rx="4" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.3"/>
+<text x="377.0" y="150.5" class="cell" text-anchor="middle" fill="#f59e0b">E</text>
+<text x="387" y="220" class="small" text-anchor="middle">I4, I5 run while I3 waits on a load;</text>
+<text x="387" y="235" class="small" text-anchor="middle">results still commit in program order</text>
+<text x="387" y="250" class="small" text-anchor="middle">-- the stall is hidden.</text>
+<text x="642" y="24" class="ptitle" text-anchor="middle" fill="#f59e0b">Speculative</text>
+<text x="642" y="40" class="small" text-anchor="middle">run past a branch on a guess</text>
+<rect x="590" y="54" width="104" height="26" rx="4" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="1.3"/>
+<text x="642.0" y="71.0" class="label" text-anchor="middle" fill="#2563eb">branch?</text>
+<line x1="642.0" y1="80.0" x2="642.0" y2="98.0" stroke="#f59e0b" stroke-width="1.4" marker-end="url(#ar)"/>
+<text x="648" y="94" class="tiny" fill="#f59e0b">predicted (~99%)</text>
+<rect x="596" y="100" width="92" height="20" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.3" stroke-dasharray="4,3"/>
+<text x="642.0" y="114.0" class="tiny" text-anchor="middle" fill="#f59e0b">spec instr 1</text>
+<rect x="596" y="124" width="92" height="20" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.3" stroke-dasharray="4,3"/>
+<text x="642.0" y="138.0" class="tiny" text-anchor="middle" fill="#f59e0b">spec instr 2</text>
+<rect x="596" y="148" width="92" height="20" rx="4" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.3" stroke-dasharray="4,3"/>
+<text x="642.0" y="162.0" class="tiny" text-anchor="middle" fill="#f59e0b">spec instr 3</text>
+<line x1="642.0" y1="170.0" x2="642.0" y2="180.0" stroke="#888" stroke-width="1.0" marker-end="url(#ar)"/>
+<rect x="564" y="182" width="150" height="24" rx="4" fill="rgba(5,150,105,0.16)" stroke="#059669" stroke-width="1.3"/>
+<text x="639.0" y="198.0" class="small" text-anchor="middle" fill="#059669">right -> commit</text>
+<rect x="564" y="210" width="150" height="24" rx="4" fill="rgba(220,38,38,0.14)" stroke="#dc2626" stroke-width="1.3"/>
+<text x="639.0" y="226.0" class="small" text-anchor="middle" fill="#dc2626">wrong -> squash (discard)</text>
+<text x="642" y="252" class="tiny" text-anchor="middle">kept if right, thrown away if wrong</text>
+<text x="385.0" y="288" class="small" text-anchor="middle" fill="#059669">All three chase one prize: find independent work to keep every unit busy.</text>
+</svg>

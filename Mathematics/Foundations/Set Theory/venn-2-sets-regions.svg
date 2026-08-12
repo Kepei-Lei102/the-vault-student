@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
+  <!-- Background rectangle (universal set) -->
+  <rect x="10" y="10" width="480" height="300" rx="8" fill="none" stroke="#888" stroke-width="2"/>
+  <text x="25" y="35" font-family="serif" font-style="italic" font-size="18" fill="#888">ξ</text>
+
+  <!-- Circle A -->
+  <circle cx="185" cy="165" r="110" fill="rgba(66,133,244,0.15)" stroke="#4285F4" stroke-width="2"/>
+  <text x="115" y="100" font-family="serif" font-style="italic" font-size="20" fill="#4285F4">A</text>
+
+  <!-- Circle B -->
+  <circle cx="315" cy="165" r="110" fill="rgba(234,67,53,0.15)" stroke="#EA4335" stroke-width="2"/>
+  <text x="370" y="100" font-family="serif" font-style="italic" font-size="20" fill="#EA4335">B</text>
+
+  <!-- Region labels -->
+  <!-- Region 1: A only -->
+  <text x="130" y="175" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">A ∩ B'</text>
+  <!-- Region 2: A ∩ B -->
+  <text x="250" y="165" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">A ∩ B</text>
+  <!-- Region 3: B only -->
+  <text x="370" y="175" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">A' ∩ B</text>
+  <!-- Region 4: Outside -->
+  <text x="445" y="290" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">(A ∪ B)'</text>
+</svg>

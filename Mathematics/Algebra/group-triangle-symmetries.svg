@@ -1,0 +1,64 @@
+<svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <title>The six symmetries of an equilateral triangle (D3 = S3): three rotations animate; three reflections are the dashed axes.</title>
+
+  <!-- ===== title ===== -->
+  <text x="310" y="26" font-family="sans-serif" font-size="14" font-weight="bold" fill="#888" text-anchor="middle" letter-spacing="0.5">The six symmetries of a triangle&#8195;D&#8323; = S&#8323;</text>
+
+  <!-- ===== static faint reference triangle (the shape the rotations land back onto) ===== -->
+  <polygon points="310,80 206,260 414,260" fill="none" stroke="#888" stroke-width="1.4" opacity="0.22"/>
+
+  <!-- ===== three static reflection axes (dashed teal) ===== -->
+  <g stroke="#0891b2" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8">
+    <line x1="310" y1="58" x2="310" y2="282"/>            <!-- s1 through top vertex -->
+    <line x1="186" y1="272" x2="382" y2="158"/>           <!-- s2 through bottom-left vertex -->
+    <line x1="434" y1="272" x2="238" y2="158"/>           <!-- s3 through bottom-right vertex -->
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="#0891b2">
+    <text x="318" y="278">s&#8321;</text>
+    <text x="388" y="150">s&#8322;</text>
+    <text x="222" y="150">s&#8323;</text>
+  </g>
+
+  <!-- ===== the rotating triangle with colour-coded corners ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+       values="0 310 190; 0 310 190; 120 310 190; 120 310 190; 240 310 190; 240 310 190; 360 310 190"
+       keyTimes="0; 0.13; 0.28; 0.46; 0.61; 0.79; 1"
+       dur="6s" repeatCount="indefinite" calcMode="linear"/>
+
+    <polygon points="310,80 206,260 414,260" fill="#7c3aed" fill-opacity="0.07" stroke="#7c3aed" stroke-width="2.5"/>
+
+    <!-- corner 1 (blue), top -->
+    <circle cx="310" cy="80" r="15" fill="#2563eb" fill-opacity="0.22" stroke="#2563eb" stroke-width="2"/>
+    <text x="310" y="85" font-family="sans-serif" font-size="15" font-weight="bold" fill="#888" text-anchor="middle">1</text>
+    <!-- corner 2 (green), bottom-left -->
+    <circle cx="206" cy="260" r="15" fill="#059669" fill-opacity="0.22" stroke="#059669" stroke-width="2"/>
+    <text x="206" y="265" font-family="sans-serif" font-size="15" font-weight="bold" fill="#888" text-anchor="middle">2</text>
+    <!-- corner 3 (amber), bottom-right -->
+    <circle cx="414" cy="260" r="15" fill="#f59e0b" fill-opacity="0.22" stroke="#f59e0b" stroke-width="2"/>
+    <text x="414" y="265" font-family="sans-serif" font-size="15" font-weight="bold" fill="#888" text-anchor="middle">3</text>
+  </g>
+
+  <!-- centroid pivot dot -->
+  <circle cx="310" cy="190" r="2.5" fill="#888"/>
+
+  <!-- ===== cycling captions (one visible per rotation hold) ===== -->
+  <g font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle" font-weight="bold">
+    <text x="310" y="322">identity&#8195;(e)
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite"
+               keyTimes="0; 0.13; 0.17; 1" values="1; 1; 0; 0"/>
+    </text>
+    <text x="310" y="322" opacity="0">rotate 120&#176;&#8195;(r)
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite"
+               keyTimes="0; 0.27; 0.30; 0.46; 0.49; 1" values="0; 0; 1; 1; 0; 0"/>
+    </text>
+    <text x="310" y="322" opacity="0">rotate 240&#176;&#8195;(r&#178;)
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite"
+               keyTimes="0; 0.60; 0.63; 0.79; 0.82; 1" values="0; 0; 1; 1; 0; 0"/>
+    </text>
+  </g>
+
+  <!-- ===== static footer ===== -->
+  <text x="310" y="356" font-family="sans-serif" font-size="12.5" fill="#888" text-anchor="middle">3 rotations (animating) + 3 reflections (flip across each dashed axis) = order 6</text>
+  <text x="310" y="376" font-family="sans-serif" font-size="12.5" fill="#dc2626" text-anchor="middle" font-weight="bold">non-abelian:&#8195;r s &#8800; s r</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 332" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 13.5px; font-weight: 700; }
+    .sz { font-size: 13px; }
+    .eqn { font-size: 14px; font-weight: 700; fill: #059669; }
+    .lvl { font-size: 13px; font-weight: 700; fill: #7c3aed; }
+    .cap { font-size: 13px; }
+    .res { font-size: 16px; font-weight: 700; fill: #059669; }
+    .dots { font-size: 18px; }
+  </style>
+
+  <text x="284" y="26" text-anchor="middle" class="title">Merge sort: every level does n work — and there are log&#8322; n levels</text>
+
+  <!-- Level 0: 1 piece of size n -->
+  <rect x="48" y="48" width="472" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="284" y="68" text-anchor="middle" class="sz">n</text>
+  <text x="536" y="68" class="eqn">= n</text>
+
+  <!-- Level 1: 2 pieces of size n/2 -->
+  <rect x="48"  y="92" width="232" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="288" y="92" width="232" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="164" y="112" text-anchor="middle" class="sz">n/2</text>
+  <text x="404" y="112" text-anchor="middle" class="sz">n/2</text>
+  <text x="536" y="112" class="eqn">= n</text>
+
+  <!-- Level 2: 4 pieces of size n/4 -->
+  <rect x="48"  y="136" width="113" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="167" y="136" width="113" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="286" y="136" width="113" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="405" y="136" width="113" height="30" rx="4" fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="104" y="156" text-anchor="middle" class="sz">n/4</text>
+  <text x="536" y="156" class="eqn">= n</text>
+
+  <!-- Level 3: 8 pieces of size n/8 -->
+  <g fill="rgba(37,99,235,0.16)" stroke="#2563eb" stroke-width="1.5">
+    <rect x="48"  y="180" width="55" height="30" rx="3"/>
+    <rect x="107" y="180" width="55" height="30" rx="3"/>
+    <rect x="166" y="180" width="55" height="30" rx="3"/>
+    <rect x="225" y="180" width="55" height="30" rx="3"/>
+    <rect x="284" y="180" width="55" height="30" rx="3"/>
+    <rect x="343" y="180" width="55" height="30" rx="3"/>
+    <rect x="402" y="180" width="55" height="30" rx="3"/>
+    <rect x="461" y="180" width="55" height="30" rx="3"/>
+  </g>
+  <text x="536" y="200" class="eqn">= n</text>
+
+  <!-- continue -->
+  <text x="120" y="234" class="dots">⋮</text>
+  <text x="250" y="234" class="dots">⋮</text>
+  <text x="380" y="234" class="dots">⋮</text>
+  <text x="490" y="234" class="dots">⋮</text>
+  <text x="284" y="252" text-anchor="middle" class="cap" font-style="italic">keep halving until every piece is size 1</text>
+
+  <!-- bracket spanning the levels -->
+  <path d="M 588 46 L 580 46 L 580 232 L 588 232" fill="none" stroke="#7c3aed" stroke-width="1.6"/>
+  <path d="M 580 139 L 590 139" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="598" y="133" class="lvl">log&#8322; n</text>
+  <text x="598" y="151" class="lvl">levels</text>
+
+  <!-- result -->
+  <text x="284" y="288" text-anchor="middle" class="cap">n work per level  ×  log&#8322; n levels</text>
+  <rect x="196" y="300" width="176" height="28" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.4"/>
+  <text x="284" y="319" text-anchor="middle" class="res">= O(n log n)</text>
+</svg>

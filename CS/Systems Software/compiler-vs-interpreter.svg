@@ -1,0 +1,67 @@
+<svg width="100%" viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="cvA" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#888" stroke-width="1.7"/>
+    </marker>
+    <marker id="cvL" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1.5,1 L8,4.5 L1.5,8" fill="none" stroke="#f59e0b" stroke-width="1.7"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Translate the book once — or interpret live</text>
+
+  <!-- ============ compiler lane ============ -->
+  <text x="190" y="58" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7c3aed">COMPILER</text>
+  <rect x="115" y="72" width="150" height="46" rx="7" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="190" y="92" text-anchor="middle" font-size="10.5" fill="#888">source code</text>
+  <text x="190" y="107" text-anchor="middle" font-size="9.5" fill="#2563eb">the whole program</text>
+
+  <line x1="190" y1="118" x2="190" y2="146" stroke="#888" stroke-width="1.8" marker-end="url(#cvA)"/>
+
+  <rect x="115" y="150" width="150" height="46" rx="7" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="190" y="170" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7c3aed">compile — ONCE</text>
+  <text x="190" y="185" text-anchor="middle" font-size="9.5" fill="#888">check all, translate all</text>
+
+  <line x1="190" y1="196" x2="190" y2="224" stroke="#888" stroke-width="1.8" marker-end="url(#cvA)"/>
+
+  <rect x="115" y="228" width="150" height="50" rx="7" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.8"/>
+  <text x="190" y="248" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#059669">executable</text>
+  <text x="190" y="263" text-anchor="middle" font-size="9.5" fill="#888">machine code, saved to disk</text>
+
+  <line x1="190" y1="278" x2="190" y2="306" stroke="#888" stroke-width="1.8" marker-end="url(#cvA)"/>
+
+  <rect x="92" y="310" width="196" height="46" rx="7" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="1.6"/>
+  <text x="190" y="330" text-anchor="middle" font-size="10.5" fill="#888">run, run, run again</text>
+  <text x="190" y="345" text-anchor="middle" font-size="9.5" fill="#059669">native speed — no translator present</text>
+
+  <text x="190" y="388" text-anchor="middle" font-size="10" fill="#888">errors: reported all together, before anything runs</text>
+  <text x="190" y="402" text-anchor="middle" font-size="10" fill="#888">ship the executable — source stays private</text>
+
+  <!-- ============ interpreter lane ============ -->
+  <text x="570" y="58" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#f59e0b">INTERPRETER</text>
+  <rect x="495" y="72" width="150" height="46" rx="7" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="570" y="92" text-anchor="middle" font-size="10.5" fill="#888">source code</text>
+  <text x="570" y="107" text-anchor="middle" font-size="9.5" fill="#2563eb">one statement at a time</text>
+
+  <line x1="570" y1="118" x2="570" y2="146" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#cvL)"/>
+
+  <!-- the live loop -->
+  <rect x="470" y="150" width="200" height="128" rx="10" fill="rgba(245,158,11,0.07)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="172" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#f59e0b">the live loop — EVERY run</text>
+  <text x="570" y="196" text-anchor="middle" font-size="10" fill="#888">read the next statement</text>
+  <text x="570" y="216" text-anchor="middle" font-size="10" fill="#888">check it — stop here if faulty</text>
+  <text x="570" y="236" text-anchor="middle" font-size="10" fill="#0891b2">EXECUTE it now, via the</text>
+  <text x="570" y="250" text-anchor="middle" font-size="10" fill="#0891b2">interpreter's own routines</text>
+  <path d="M 660,258 L 682,258 L 682,186 L 662,186" fill="none" stroke="#f59e0b" stroke-width="1.6" marker-end="url(#cvL)"/>
+  <text x="700" y="226" font-size="9" fill="#f59e0b">next</text>
+  <text x="700" y="238" font-size="9" fill="#f59e0b">line</text>
+
+  <line x1="570" y1="278" x2="570" y2="306" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#cvL)"/>
+
+  <rect x="468" y="310" width="204" height="46" rx="7" fill="rgba(136,136,136,0.10)" stroke="#888" stroke-width="1.6"/>
+  <text x="570" y="330" text-anchor="middle" font-size="10.5" fill="#888">effects happen directly</text>
+  <text x="570" y="345" text-anchor="middle" font-size="9.5" fill="#dc2626">NOTHING SAVED — no translated version</text>
+
+  <text x="570" y="388" text-anchor="middle" font-size="10" fill="#888">starts instantly; stops at the first faulty line</text>
+  <text x="570" y="402" text-anchor="middle" font-size="10" fill="#888">every run pays the translation tax again</text>
+</svg>

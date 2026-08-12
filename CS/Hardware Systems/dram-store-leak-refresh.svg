@@ -1,0 +1,76 @@
+<!-- stack: SMIL -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 400" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 13px; }
+    .note { font-size: 11.5px; opacity: 0.8; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="ref-arrow" viewBox="0 0 10 10" refX="5" refY="1" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 9 L 5 1 L 10 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- phase labels (cross-faded) -->
+  <text x="330" y="34" class="title" text-anchor="middle" fill="#0891b2">
+    leaking — charge drains away
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.79;0.81;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+  <text x="330" y="34" class="title" text-anchor="middle" fill="#f59e0b" opacity="0">
+    REFRESH — sense the cell, then rewrite to full
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.79;0.81;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- word line + transistor + bit line -->
+  <line x1="150" y1="90" x2="430" y2="90" stroke="#888" stroke-width="1.6"/>
+  <text x="150" y="82" class="note" text-anchor="start">word line</text>
+  <line x1="340" y1="126" x2="372" y2="126" stroke="#888" stroke-width="1.6"/>
+  <rect x="372" y="114" width="30" height="24" rx="3" fill="rgba(124,58,237,0.14)" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="387" y="131" class="math" text-anchor="middle" fill="#7c3aed">T</text>
+  <line x1="387" y1="114" x2="387" y2="90" stroke="#7c3aed" stroke-width="1.2"/>
+  <line x1="402" y1="126" x2="430" y2="126" stroke="#888" stroke-width="1.6"/>
+  <line x1="430" y1="126" x2="430" y2="322" stroke="#888" stroke-width="1.6"/>
+  <text x="430" y="112" class="note" text-anchor="middle">bit line</text>
+
+  <!-- the capacitor as a charge tank -->
+  <line x1="258" y1="120" x2="342" y2="120" stroke="#888" stroke-width="3"/>
+  <line x1="258" y1="300" x2="342" y2="300" stroke="#888" stroke-width="3"/>
+  <line x1="260" y1="120" x2="260" y2="300" stroke="#888" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,3"/>
+  <line x1="340" y1="120" x2="340" y2="300" stroke="#888" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,3"/>
+  <text x="300" y="322" class="label" text-anchor="middle" fill="#0891b2">capacitor</text>
+  <text x="300" y="337" class="note" text-anchor="middle">the bit = how full</text>
+
+  <!-- animated charge fill -->
+  <rect x="262" width="76" fill="rgba(8,145,178,0.38)" y="124" height="176">
+    <animate attributeName="y" values="124;232;124" keyTimes="0;0.8;1" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="height" values="176;68;176" keyTimes="0;0.8;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- sense threshold -->
+  <line x1="248" y1="240" x2="352" y2="240" stroke="#9ca3af" stroke-width="1.3" stroke-dasharray="6,4"/>
+  <text x="356" y="237" class="note" text-anchor="start" fill="#9ca3af">reads as 1</text>
+  <text x="356" y="253" class="note" text-anchor="start" fill="#9ca3af">reads as 0</text>
+  <text x="244" y="243" class="note" text-anchor="end">sense threshold</text>
+
+  <!-- refresh arrow (only during refresh) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.79;0.81;1" dur="8s" repeatCount="indefinite"/>
+    <line x1="210" y1="296" x2="210" y2="150" stroke="#f59e0b" stroke-width="2.2" marker-end="url(#ref-arrow)"/>
+    <text x="205" y="150" class="label" text-anchor="end" fill="#f59e0b">refill</text>
+  </g>
+
+  <!-- sense amplifier (lights green during refresh = the read) -->
+  <path d="M 408 322 L 452 322 L 430 358 Z" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.6">
+    <animate attributeName="fill" values="rgba(5,150,105,0.12);rgba(5,150,105,0.12);rgba(5,150,105,0.5);rgba(5,150,105,0.5)" keyTimes="0;0.79;0.81;1" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <text x="430" y="376" class="note" text-anchor="middle" fill="#059669">sense amplifier</text>
+  <text x="430" y="340" class="label" text-anchor="middle" fill="#059669" opacity="0">
+    1
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.79;0.81;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- static caption -->
+  <text x="330" y="394" class="note" text-anchor="middle">between refreshes the charge leaks; each refresh reads the cell and rewrites it to full — thousands of times a second</text>
+</svg>

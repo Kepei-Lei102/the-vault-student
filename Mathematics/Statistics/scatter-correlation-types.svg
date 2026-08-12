@@ -1,0 +1,88 @@
+<svg width="100%" viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Segoe UI', Arial, sans-serif;">
+  <!-- Title -->
+  <text x="375" y="22" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Types of Correlation</text>
+
+  <!-- === Panel 1: Positive Correlation === -->
+  <text x="125" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2196F3">Positive</text>
+
+  <!-- Axes -->
+  <line x1="30" y1="240" x2="230" y2="240" stroke="#888" stroke-width="1.2"/>
+  <line x1="30" y1="240" x2="30" y2="60" stroke="#888" stroke-width="1.2"/>
+  <text x="130" y="260" text-anchor="middle" font-size="10" fill="#888">x</text>
+  <text x="16" y="150" text-anchor="middle" font-size="10" fill="#888" transform="rotate(-90, 16, 150)">y</text>
+
+  <!-- Points — strong positive correlation -->
+  <circle cx="45" cy="225" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="60" cy="210" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="72" cy="200" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="88" cy="185" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="100" cy="175" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="115" cy="158" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="130" cy="148" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="148" cy="130" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="160" cy="118" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="175" cy="105" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="190" cy="90" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+  <circle cx="210" cy="75" r="4" fill="#2196F3" fill-opacity="0.6" stroke="#2196F3" stroke-width="1"/>
+
+  <!-- Line of best fit -->
+  <line x1="35" y1="232" x2="220" y2="70" stroke="#2196F3" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.7"/>
+
+  <!-- As x↑, y↑ -->
+  <text x="125" y="272" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">As x increases, y increases</text>
+
+  <!-- === Panel 2: Negative Correlation === -->
+  <text x="375" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#F44336">Negative</text>
+
+  <!-- Axes -->
+  <line x1="280" y1="240" x2="480" y2="240" stroke="#888" stroke-width="1.2"/>
+  <line x1="280" y1="240" x2="280" y2="60" stroke="#888" stroke-width="1.2"/>
+  <text x="380" y="260" text-anchor="middle" font-size="10" fill="#888">x</text>
+  <text x="266" y="150" text-anchor="middle" font-size="10" fill="#888" transform="rotate(-90, 266, 150)">y</text>
+
+  <!-- Points — strong negative correlation -->
+  <circle cx="295" cy="78" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="310" cy="92" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="325" cy="105" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="340" cy="118" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="358" cy="135" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="375" cy="148" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="395" cy="162" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="410" cy="178" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="428" cy="192" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="445" cy="205" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="458" cy="218" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+  <circle cx="470" cy="228" r="4" fill="#F44336" fill-opacity="0.6" stroke="#F44336" stroke-width="1"/>
+
+  <!-- Line of best fit -->
+  <line x1="285" y1="72" x2="475" y2="232" stroke="#F44336" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.7"/>
+
+  <!-- As x↑, y↓ -->
+  <text x="375" y="272" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">As x increases, y decreases</text>
+
+  <!-- === Panel 3: No Correlation === -->
+  <text x="625" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#9E9E9E">No Correlation</text>
+
+  <!-- Axes -->
+  <line x1="530" y1="240" x2="730" y2="240" stroke="#888" stroke-width="1.2"/>
+  <line x1="530" y1="240" x2="530" y2="60" stroke="#888" stroke-width="1.2"/>
+  <text x="630" y="260" text-anchor="middle" font-size="10" fill="#888">x</text>
+  <text x="516" y="150" text-anchor="middle" font-size="10" fill="#888" transform="rotate(-90, 516, 150)">y</text>
+
+  <!-- Points — random scatter -->
+  <circle cx="550" cy="130" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="570" cy="200" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="585" cy="85" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="600" cy="165" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="620" cy="220" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="635" cy="100" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="650" cy="180" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="665" cy="75" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="680" cy="150" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="695" cy="210" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="710" cy="120" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+  <circle cx="560" cy="225" r="4" fill="#9E9E9E" fill-opacity="0.6" stroke="#9E9E9E" stroke-width="1"/>
+
+  <!-- No line -->
+  <text x="625" y="272" text-anchor="middle" font-size="9" fill="#888" opacity="0.6">No pattern — no trend line</text>
+</svg>

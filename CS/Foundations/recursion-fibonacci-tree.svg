@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 15px; font-weight: 600; }
+    .subtitle { font-size: 11px; opacity: 0.85; }
+    .node-label { font-size: 12px; font-weight: 600; }
+    .small { font-size: 11px; opacity: 0.85; }
+    .tag { font-size: 11px; opacity: 0.85; font-weight: 600; }
+    .root-c { fill: #2563eb; }   /* blue: top */
+    .mid-c  { fill: #7c3aed; }   /* purple: mid layers */
+    .leaf-c { fill: #059669; }   /* green: base cases (leaves) */
+    .red-c  { fill: #dc2626; }   /* red highlight: redundant duplicates */
+    .arrow  { stroke: #888; stroke-width: 1; opacity: 0.55; }
+  </style>
+
+  <!-- Title -->
+  <text x="380" y="26" class="title" text-anchor="middle">Recursion Tree for fib(5) — Why Naive Fibonacci is Exponential</text>
+  <text x="380" y="44" class="subtitle" text-anchor="middle">
+    Every subproblem in red is recomputed multiple times.  Total calls: 15.  For fib(40), about 331 million.
+  </text>
+
+  <!-- ============== TREE STRUCTURE ============== -->
+  <!--
+    Level 0 (y=85):  fib(5)                                                                 — 1 node
+    Level 1 (y=160): fib(4)         fib(3)                                                  — 2 nodes
+    Level 2 (y=235): fib(3) fib(2)  fib(2) fib(1)                                           — 4 nodes
+    Level 3 (y=310): fib(2) fib(1) fib(1) fib(0)  fib(1) fib(0)                             — 6 nodes
+    Level 4 (y=385): fib(1) fib(0)                                                          — 2 nodes
+  -->
+
+  <!-- All connecting lines drawn first (so they sit under the circles) -->
+  <!-- Level 0 -> 1 -->
+  <line x1="380" y1="98" x2="220" y2="147" class="arrow"/>
+  <line x1="380" y1="98" x2="540" y2="147" class="arrow"/>
+  <!-- Level 1 -> 2 -->
+  <line x1="220" y1="173" x2="120" y2="222" class="arrow"/>
+  <line x1="220" y1="173" x2="300" y2="222" class="arrow"/>
+  <line x1="540" y1="173" x2="460" y2="222" class="arrow"/>
+  <line x1="540" y1="173" x2="640" y2="222" class="arrow"/>
+  <!-- Level 2 -> 3 -->
+  <line x1="120" y1="248" x2="60"  y2="297" class="arrow"/>
+  <line x1="120" y1="248" x2="180" y2="297" class="arrow"/>
+  <line x1="300" y1="248" x2="260" y2="297" class="arrow"/>
+  <line x1="300" y1="248" x2="340" y2="297" class="arrow"/>
+  <line x1="460" y1="248" x2="420" y2="297" class="arrow"/>
+  <line x1="460" y1="248" x2="500" y2="297" class="arrow"/>
+  <!-- (fib(1) at 640 is a leaf — no children) -->
+  <!-- Level 3 -> 4 (only fib(2) at x=60 has children) -->
+  <line x1="60" y1="323" x2="35"  y2="372" class="arrow"/>
+  <line x1="60" y1="323" x2="85"  y2="372" class="arrow"/>
+
+  <!-- ============== NODES ============== -->
+
+  <!-- Level 0: fib(5) -->
+  <circle cx="380" cy="85" r="22" fill="rgba(37, 99, 235, 0.20)" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="89" class="math node-label root-c" text-anchor="middle">fib(5)</text>
+
+  <!-- Level 1: fib(4), fib(3) -->
+  <circle cx="220" cy="160" r="22" fill="rgba(124, 58, 237, 0.18)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="220" y="164" class="math node-label mid-c" text-anchor="middle">fib(4)</text>
+
+  <!-- fib(3) (first copy, highlighted red — this whole subtree is duplicated below) -->
+  <circle cx="540" cy="160" r="22" fill="rgba(220, 38, 38, 0.18)" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="164" class="math node-label red-c" text-anchor="middle">fib(3)</text>
+
+  <!-- Level 2: fib(3) (left), fib(2), fib(2), fib(1) -->
+  <!-- fib(3) (second copy — appears here under fib(4); marked red as duplicate) -->
+  <circle cx="120" cy="235" r="22" fill="rgba(220, 38, 38, 0.18)" stroke="#dc2626" stroke-width="2"/>
+  <text x="120" y="239" class="math node-label red-c" text-anchor="middle">fib(3)</text>
+
+  <circle cx="300" cy="235" r="22" fill="rgba(245, 158, 11, 0.20)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="239" class="math node-label" text-anchor="middle" fill="#f59e0b">fib(2)</text>
+
+  <circle cx="460" cy="235" r="22" fill="rgba(245, 158, 11, 0.20)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="460" y="239" class="math node-label" text-anchor="middle" fill="#f59e0b">fib(2)</text>
+
+  <circle cx="640" cy="235" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="640" y="239" class="math node-label leaf-c" text-anchor="middle">fib(1)</text>
+
+  <!-- Level 3 -->
+  <!-- fib(2) at x=60 (under fib(3) at 120) — third copy of fib(2) -->
+  <circle cx="60" cy="310" r="22" fill="rgba(245, 158, 11, 0.20)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="314" class="math node-label" text-anchor="middle" fill="#f59e0b">fib(2)</text>
+
+  <!-- fib(1) at x=180 -->
+  <circle cx="180" cy="310" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="180" y="314" class="math node-label leaf-c" text-anchor="middle">fib(1)</text>
+
+  <!-- fib(1) at x=260 -->
+  <circle cx="260" cy="310" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="260" y="314" class="math node-label leaf-c" text-anchor="middle">fib(1)</text>
+
+  <!-- fib(0) at x=340 -->
+  <circle cx="340" cy="310" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="340" y="314" class="math node-label leaf-c" text-anchor="middle">fib(0)</text>
+
+  <!-- fib(1) at x=420 -->
+  <circle cx="420" cy="310" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="420" y="314" class="math node-label leaf-c" text-anchor="middle">fib(1)</text>
+
+  <!-- fib(0) at x=500 -->
+  <circle cx="500" cy="310" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="500" y="314" class="math node-label leaf-c" text-anchor="middle">fib(0)</text>
+
+  <!-- Level 4 (children of fib(2) at x=60) -->
+  <circle cx="35" cy="385" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="35" y="389" class="math node-label leaf-c" text-anchor="middle">fib(1)</text>
+  <circle cx="85" cy="385" r="20" fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1.8"/>
+  <text x="85" y="389" class="math node-label leaf-c" text-anchor="middle">fib(0)</text>
+
+  <!-- ============== REDUNDANCY TALLY (right column) ============== -->
+  <text x="680" y="395" class="tag" text-anchor="end" opacity="0.9">Subproblem count</text>
+  <text x="680" y="412" class="small" text-anchor="end" fill="#7c3aed">fib(4) — computed 1 time</text>
+  <text x="680" y="427" class="small" text-anchor="end" fill="#dc2626">fib(3) — computed 2 times (duplicate)</text>
+  <text x="680" y="442" class="small" text-anchor="end" fill="#f59e0b">fib(2) — computed 3 times</text>
+  <text x="680" y="457" class="small" text-anchor="end" fill="#059669">fib(1) — computed 5 times (base)</text>
+  <text x="680" y="472" class="small" text-anchor="end" fill="#059669">fib(0) — computed 3 times (base)</text>
+  <text x="680" y="490" class="tag" text-anchor="end">Total calls: 15</text>
+
+  <!-- Legend at the bottom-left -->
+  <g transform="translate(40, 425)">
+    <text x="0" y="0" class="tag" opacity="0.9">Legend</text>
+    <circle cx="10" cy="18" r="6" fill="rgba(37, 99, 235, 0.25)" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="22" y="22" class="small">root call</text>
+    <circle cx="10" cy="36" r="6" fill="rgba(220, 38, 38, 0.20)" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="22" y="40" class="small">duplicated subtree (red)</text>
+    <circle cx="10" cy="54" r="6" fill="rgba(245, 158, 11, 0.25)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="22" y="58" class="small">recomputed intermediate (amber)</text>
+    <circle cx="10" cy="72" r="6" fill="rgba(5, 150, 105, 0.25)" stroke="#059669" stroke-width="1.5"/>
+    <text x="22" y="76" class="small">base case leaf (green)</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <text x="380" y="525" class="small" text-anchor="middle" opacity="0.85">
+    Memoisation removes the redundancy: each subproblem computed once → fib(40) drops from 331 million calls to 41 calls.
+  </text>
+</svg>
