@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 410" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .display { font-family: 'Times New Roman', serif; font-style: italic; font-size: 17px; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 12px; }
+    .small { font-size: 11px; }
+    .tiny { font-size: 10px; opacity: 0.75; }
+    .note { font-size: 11px; opacity: 0.85; font-style: italic; }
+  </style>
+
+  <!-- Title -->
+  <text x="350" y="22" class="title" text-anchor="middle">The rescaling trick — same area, sliding right</text>
+  <text x="350" y="40" class="small" text-anchor="middle" font-style="italic">x → cx: width × c, height × 1/c, area unchanged</text>
+
+  <!-- ============================================ -->
+  <!-- Axes                                         -->
+  <!-- ============================================ -->
+  <line x1="50" y1="350" x2="690" y2="350" stroke="#888" stroke-width="1"/>
+  <line x1="60" y1="60" x2="60" y2="358" stroke="#888" stroke-width="1"/>
+  <polygon points="690,350 683,346 683,354" fill="#888"/>
+  <polygon points="60,55 56,62 64,62" fill="#888"/>
+  <text x="685" y="367" class="small" text-anchor="end">x</text>
+  <text x="55" y="60" class="small" text-anchor="end">y</text>
+
+  <!-- ============================================ -->
+  <!-- Animated shaded strip                        -->
+  <!-- 9 keyframes: c = 1.0 → 1.25 → 1.5 → 1.75 → 2.0 → 1.75 → 1.5 → 1.25 → 1.0 -->
+  <!-- Strip width = 2c (from x=c to x=3c)          -->
+  <!-- Each path: M (top-left) + 8 L's along curve + L (bottom-right) + L (bottom-left) + Z = 11 segments -->
+  <!-- ============================================ -->
+  <path d="M 160 260 L 185 278 L 210 290 L 235 299 L 260 305 L 285 310 L 310 314 L 335 317 L 360 320 L 360 350 L 160 350 Z"
+        fill="rgba(245, 158, 11, 0.30)" stroke="#f59e0b" stroke-width="1.5">
+    <animate attributeName="d"
+             values="M 160 260 L 185 278 L 210 290 L 235 299 L 260 305 L 285 310 L 310 314 L 335 317 L 360 320 L 360 350 L 160 350 Z;
+                     M 185 278 L 216.25 292.4 L 247.5 302 L 278.75 308.9 L 310 314 L 341.25 318 L 372.5 321.2 L 403.75 323.8 L 435 326 L 435 350 L 185 350 Z;
+                     M 210 290 L 247.5 302 L 285 310 L 322.5 315.7 L 360 320 L 397.5 323.3 L 435 326 L 472.5 328.2 L 510 330 L 510 350 L 210 350 Z;
+                     M 235 299 L 278.75 308.9 L 322.5 315.7 L 366.25 320.6 L 410 324.3 L 453.75 327.1 L 497.5 329.4 L 541.25 331.3 L 585 332.9 L 585 350 L 235 350 Z;
+                     M 260 305 L 310 314 L 360 320 L 410 324.3 L 460 327.5 L 510 330 L 560 332 L 610 333.6 L 660 335 L 660 350 L 260 350 Z;
+                     M 235 299 L 278.75 308.9 L 322.5 315.7 L 366.25 320.6 L 410 324.3 L 453.75 327.1 L 497.5 329.4 L 541.25 331.3 L 585 332.9 L 585 350 L 235 350 Z;
+                     M 210 290 L 247.5 302 L 285 310 L 322.5 315.7 L 360 320 L 397.5 323.3 L 435 326 L 472.5 328.2 L 510 330 L 510 350 L 210 350 Z;
+                     M 185 278 L 216.25 292.4 L 247.5 302 L 278.75 308.9 L 310 314 L 341.25 318 L 372.5 321.2 L 403.75 323.8 L 435 326 L 435 350 L 185 350 Z;
+                     M 160 260 L 185 278 L 210 290 L 235 299 L 260 305 L 285 310 L 310 314 L 335 317 L 360 320 L 360 350 L 160 350 Z"
+             keyTimes="0; 0.125; 0.25; 0.375; 0.5; 0.625; 0.75; 0.875; 1"
+             dur="10s"
+             repeatCount="indefinite"/>
+  </path>
+
+  <!-- ============================================ -->
+  <!-- Hyperbola y = 1/x (drawn over the strip)    -->
+  <!-- ============================================ -->
+  <polyline points="90,50 100,86 110,170 120,200 130,222 145,247 160,260 180,278 200,288 230,300 260,305 300,313 360,320 420,324 460,327 510,330 560,332 660,335"
+            fill="none" stroke="#888" stroke-width="2"/>
+  <text x="120" y="78" class="math display" fill="#888">y = 1/x</text>
+
+  <!-- ============================================ -->
+  <!-- Tick marks and x-axis labels                 -->
+  <!-- ============================================ -->
+  <line x1="160" y1="346" x2="160" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="160" y="368" class="small" text-anchor="middle">1</text>
+  <line x1="260" y1="346" x2="260" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="260" y="368" class="small" text-anchor="middle">2</text>
+  <line x1="360" y1="346" x2="360" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="360" y="368" class="small" text-anchor="middle">3</text>
+  <line x1="660" y1="346" x2="660" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="660" y="368" class="small" text-anchor="middle">6</text>
+
+  <!-- ============================================ -->
+  <!-- Animated c value indicator                   -->
+  <!-- A small text showing current c value, tracking the strip's left edge -->
+  <!-- ============================================ -->
+  <text x="160" y="245" class="display" text-anchor="middle" fill="#f59e0b" font-weight="600" opacity="1">c = 1
+    <animate attributeName="opacity"
+             values="1; 0; 0; 0; 0; 0; 0; 0; 1; 1"
+             keyTimes="0; 0.125; 0.25; 0.375; 0.5; 0.625; 0.75; 0.875; 0.95; 1"
+             dur="10s"
+             repeatCount="indefinite"/>
+  </text>
+  <text x="260" y="290" class="display" text-anchor="middle" fill="#f59e0b" font-weight="600" opacity="0">c = 2
+    <animate attributeName="opacity"
+             values="0; 0; 0; 0; 1; 0; 0; 0; 0"
+             keyTimes="0; 0.125; 0.25; 0.375; 0.5; 0.625; 0.75; 0.875; 1"
+             dur="10s"
+             repeatCount="indefinite"/>
+  </text>
+
+  <!-- ============================================ -->
+  <!-- Constant-area annotation (does not animate) -->
+  <!-- This is the load-bearing pedagogical point. -->
+  <!-- ============================================ -->
+  <g transform="translate(350, 88)">
+    <rect x="-200" y="0" width="400" height="38" rx="4" fill="rgba(245, 158, 11, 0.10)" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="0" y="16" class="note" text-anchor="middle" fill="#f59e0b" font-weight="600">Strip width × c, height × 1/c</text>
+    <text x="0" y="30" class="display" text-anchor="middle" fill="#f59e0b">Area = A(b) = A(3) (always)</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Final equation                               -->
+  <!-- ============================================ -->
+  <text x="350" y="397" class="display" text-anchor="middle" fill="#888">A(ab) − A(a) = A(b)  ⟺  A(ab) = A(a) + A(b)</text>
+
+</svg>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stack: SMIL -->
+<!-- Cardano's cubic 1545: x^3 = 15x + 4 has real root x = 4, but Cardano's formula reaches it via $\sqrt[3]{2+11i} + \sqrt[3]{2-11i}$.
+     The "impossible" intermediates 2±11i pass through cube roots to 2±i, which then sum to 4 with imaginary parts cancelling.
+     This animation traces the formula's path on the Argand plane: real→complex→back to real.
+     18-second loop. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 660" width="100%">
+  <style>
+    text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #888; font-size: 15px; }
+    .math { font-style: italic; }
+    .tick-label { font-size: 11px; fill: #888; opacity: 0.85; }
+    .axis-label { font-size: 13px; fill: #888; }
+    .caption { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 13.5px; fill: #888; opacity: 0.95; }
+    .caption-title { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 13.5px; font-weight: 600; fill: #888; opacity: 0.95; }
+    .title { font-family: system-ui, -apple-system, sans-serif; font-style: normal; font-size: 14.5px; fill: #888; font-weight: 600; }
+    .green { fill: #059669; }
+    .green-stroke { stroke: #059669; }
+    .purple { fill: #7c3aed; }
+    .purple-stroke { stroke: #7c3aed; }
+    .blue { fill: #2563eb; }
+    .blue-stroke { stroke: #2563eb; }
+    .strong { font-weight: 600; }
+  </style>
+
+  <defs>
+    <marker id="arrow888" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrowpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- ====== Title ====== -->
+  <text x="460" y="28" text-anchor="middle" class="title">Cardano 1545:  solve  x³ = 15x + 4</text>
+
+  <!-- ============================================================ -->
+  <!-- LEFT — Argand diagram (x: 60–420)                              -->
+  <!-- Origin at (240, 350), 1 unit = 24 px in both axes              -->
+  <!-- ============================================================ -->
+
+  <!-- Axes (always visible after t=0.04) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.03;0.06;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <line x1="60" y1="350" x2="420" y2="350" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="418" y="370" class="axis-label" text-anchor="end">Re</text>
+    <line x1="240" y1="640" x2="240" y2="60" stroke="#888" stroke-width="1.5" marker-end="url(#arrow888)"/>
+    <text x="252" y="72" class="axis-label">Im</text>
+
+    <!-- Real-axis ticks: at -1, 1, 2, 3, 4, 5 -->
+    <g stroke="#888" stroke-width="1" opacity="0.55">
+      <line x1="216" y1="346" x2="216" y2="354"/>
+      <line x1="264" y1="346" x2="264" y2="354"/>
+      <line x1="288" y1="346" x2="288" y2="354"/>
+      <line x1="312" y1="346" x2="312" y2="354"/>
+      <line x1="336" y1="346" x2="336" y2="354"/>
+      <line x1="360" y1="346" x2="360" y2="354"/>
+    </g>
+    <text x="216" y="368" class="tick-label" text-anchor="middle">−1</text>
+    <text x="264" y="368" class="tick-label" text-anchor="middle">1</text>
+    <text x="288" y="368" class="tick-label" text-anchor="middle">2</text>
+    <text x="312" y="368" class="tick-label" text-anchor="middle">3</text>
+    <text x="336" y="368" class="tick-label" text-anchor="middle">4</text>
+    <text x="360" y="368" class="tick-label" text-anchor="middle">5</text>
+
+    <!-- Imaginary-axis ticks: at i, 5i, 10i, 11i (and negatives) -->
+    <g stroke="#888" stroke-width="1" opacity="0.55">
+      <line x1="236" y1="326" x2="244" y2="326"/>
+      <line x1="236" y1="230" x2="244" y2="230"/>
+      <line x1="236" y1="110" x2="244" y2="110"/>
+      <line x1="236" y1="86" x2="244" y2="86"/>
+      <line x1="236" y1="374" x2="244" y2="374"/>
+      <line x1="236" y1="470" x2="244" y2="470"/>
+      <line x1="236" y1="590" x2="244" y2="590"/>
+      <line x1="236" y1="614" x2="244" y2="614"/>
+    </g>
+    <text x="232" y="330" class="tick-label" text-anchor="end">i</text>
+    <text x="232" y="234" class="tick-label" text-anchor="end">5i</text>
+    <text x="232" y="114" class="tick-label" text-anchor="end">10i</text>
+    <text x="232" y="378" class="tick-label" text-anchor="end">−i</text>
+    <text x="232" y="474" class="tick-label" text-anchor="end">−5i</text>
+    <text x="232" y="594" class="tick-label" text-anchor="end">−10i</text>
+    <text x="232" y="368" class="tick-label" text-anchor="end">0</text>
+  </g>
+
+  <!-- Stage 1: target real number x = 4 -->
+  <circle cx="336" cy="350" r="7" fill="#059669" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.10;0.13;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <text x="345" y="395" class="math green strong" font-size="17px" opacity="0">x = 4
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.11;0.14;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Stage 3: complex points 2 ± 11i appear -->
+  <circle cx="288" cy="86" r="7" fill="#7c3aed" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.23;0.26;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <text x="298" y="80" class="math purple strong" font-size="15px" opacity="0">2 + 11i
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.23;0.26;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </text>
+  <circle cx="288" cy="614" r="7" fill="#7c3aed" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.24;0.27;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <text x="298" y="608" class="math purple strong" font-size="15px" opacity="0">2 − 11i
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.24;0.27;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Stage 4: cube-root arcs from 2±11i to 2±i -->
+  <path d="M 288 86  C 325 110 330 180 313 220 S 295 305 288 326"
+        fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="380" stroke-dashoffset="380"
+        marker-end="url(#arrowpurple)">
+    <animate attributeName="stroke-dashoffset"
+             values="380;380;0;0;380"
+             keyTimes="0;0.30;0.42;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 288 614 C 325 590 330 520 313 480 S 295 395 288 374"
+        fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="380" stroke-dashoffset="380"
+        marker-end="url(#arrowpurple)">
+    <animate attributeName="stroke-dashoffset"
+             values="380;380;0;0;380"
+             keyTimes="0;0.30;0.42;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Stage 5: 2 ± i appear -->
+  <circle cx="288" cy="326" r="6" fill="#2563eb" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.41;0.44;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <text x="252" y="320" class="math blue strong" font-size="15px" opacity="0">2 + i
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.41;0.44;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </text>
+  <circle cx="288" cy="374" r="6" fill="#2563eb" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.42;0.45;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <text x="252" y="394" class="math blue strong" font-size="15px" opacity="0">2 − i
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.42;0.45;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Stage 6: addition arrows from 2±i to 4 -->
+  <line x1="288" y1="326" x2="336" y2="350" stroke="#059669" stroke-width="2"
+        stroke-dasharray="55" stroke-dashoffset="55" marker-end="url(#arrowgreen)">
+    <animate attributeName="stroke-dashoffset"
+             values="55;55;0;0;55"
+             keyTimes="0;0.55;0.62;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </line>
+  <line x1="288" y1="374" x2="336" y2="350" stroke="#059669" stroke-width="2"
+        stroke-dasharray="55" stroke-dashoffset="55" marker-end="url(#arrowgreen)">
+    <animate attributeName="stroke-dashoffset"
+             values="55;55;0;0;55"
+             keyTimes="0;0.55;0.62;0.95;1" dur="18s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Stage 7: pulse on the green target dot -->
+  <circle cx="336" cy="350" r="7" fill="none" stroke="#059669" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0;0"
+             keyTimes="0;0.62;0.65;0.70;0.74;1" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="7;7;7;28;7;7"
+             keyTimes="0;0.62;0.65;0.70;0.74;1" dur="18s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT — Narrative panel (x: 460–790)                           -->
+  <!-- Each step's caption appears at its beat and stays visible.    -->
+  <!-- All fade out together at end of loop.                          -->
+  <!-- ============================================================ -->
+
+  <!-- Step 0: real-root acknowledgement (appears at 0.10) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.10;0.13;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <text x="460" y="100" class="caption-title green">Step 0  —  the real answer</text>
+    <text x="460" y="124" class="caption">x = 4   verified by   4³ − 15·4 − 4 = 0  ✓</text>
+  </g>
+
+  <!-- Step 1: but Cardano's formula reaches it via... (appears at 0.18) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.18;0.21;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <text x="460" y="170" class="caption-title">Step 1  —  Cardano's formula</text>
+    <text x="460" y="194" class="caption">x = ∛(2 + 11i) + ∛(2 − 11i)</text>
+    <text x="460" y="216" class="caption" font-size="12px" opacity="0.75">computed via the depressed-cubic formula</text>
+  </g>
+
+  <!-- Step 2: the 'impossible' intermediates (appears at 0.26) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.26;0.29;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <text x="460" y="262" class="caption-title purple">Step 2  —  the "impossible" intermediates</text>
+    <text x="460" y="286" class="caption">2 + 11i  and  2 − 11i  appear on the Argand plane</text>
+    <text x="460" y="304" class="caption" font-size="12px" opacity="0.75">far from the real axis — the formula has left the real numbers</text>
+  </g>
+
+  <!-- Step 3: cube root operation (appears at 0.36) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.36;0.39;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <text x="460" y="350" class="caption-title purple">Step 3  —  cube root</text>
+    <text x="460" y="374" class="caption">shrink modulus by ∛125 = 5</text>
+    <text x="460" y="392" class="caption">divide argument by 3</text>
+    <text x="460" y="412" class="caption" font-size="12px" opacity="0.75">∛(2 ± 11i) = 2 ± i  ← still complex, but smaller</text>
+  </g>
+
+  <!-- Step 4: sum (appears at 0.58) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.58;0.61;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <text x="460" y="458" class="caption-title green">Step 4  —  the sum</text>
+    <text x="460" y="482" class="caption">(2 + i) + (2 − i) = 4</text>
+    <text x="460" y="500" class="caption" font-size="12px" opacity="0.75">imaginary parts cancel exactly</text>
+  </g>
+
+  <!-- Step 5: punchline (appears at 0.72) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0"
+             keyTimes="0;0.72;0.76;0.95;1" dur="18s" repeatCount="indefinite"/>
+    <line x1="460" y1="538" x2="900" y2="538" stroke="#888" stroke-width="0.8" opacity="0.4"/>
+    <text x="460" y="560" class="caption-title strong">The detour is necessary.</text>
+    <text x="460" y="582" class="caption" font-size="12.5px">The algebra leaves ℝ, takes a tour through ℂ,</text>
+    <text x="460" y="600" class="caption" font-size="12.5px">and comes home with the real root.</text>
+    <text x="460" y="628" class="caption" font-size="11.5px" font-style="italic" opacity="0.7">— Bombelli, 1572: "no other way to deal with these problems"</text>
+  </g>
+</svg>

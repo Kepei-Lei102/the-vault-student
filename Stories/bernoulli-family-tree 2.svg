@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bernoulli family tree, 1623-1807. Eight major mathematicians across three generations. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" width="100%">
+  <style>
+    text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #888; font-size: 13px; }
+    .name { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #888; }
+    .dates { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #888; opacity: 0.75; }
+    .role { font-family: system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #888; opacity: 0.7; font-style: italic; }
+    .gen-label { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #888; opacity: 0.55; font-style: italic; }
+    .title { font-family: system-ui, -apple-system, sans-serif; font-size: 14.5px; fill: #888; font-weight: 600; }
+    .feud { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #dc2626; opacity: 0.85; font-style: italic; }
+  </style>
+
+  <!-- Title -->
+  <text x="700" y="25" text-anchor="middle" class="title">The Bernoulli Family — three generations, eight mathematicians (1623–1807)</text>
+
+  <!-- ===================================================== -->
+  <!-- Generation 1                                          -->
+  <!-- ===================================================== -->
+  <text x="20" y="80" class="gen-label">Generation 1</text>
+  <g>
+    <rect x="620" y="55" width="170" height="50" rx="4" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+    <text x="705" y="73" text-anchor="middle" class="name">Niklaus the Elder</text>
+    <text x="705" y="88" text-anchor="middle" class="dates">1623 – 1708</text>
+    <text x="705" y="100" text-anchor="middle" class="role">Basel spice merchant — patriarch</text>
+  </g>
+
+  <!-- Lines from Niklaus the Elder branching to three sons -->
+  <line x1="705" y1="105" x2="705" y2="135" stroke="#888" stroke-width="1"/>
+  <line x1="195" y1="135" x2="1215" y2="135" stroke="#888" stroke-width="1"/>
+  <line x1="195" y1="135" x2="195" y2="165" stroke="#888" stroke-width="1"/>
+  <line x1="705" y1="135" x2="705" y2="165" stroke="#888" stroke-width="1"/>
+  <line x1="1215" y1="135" x2="1215" y2="165" stroke="#888" stroke-width="1"/>
+
+  <!-- ===================================================== -->
+  <!-- Generation 2                                          -->
+  <!-- ===================================================== -->
+  <text x="20" y="195" class="gen-label">Generation 2</text>
+
+  <!-- Jacob Bernoulli (eldest son) -->
+  <g>
+    <rect x="110" y="165" width="170" height="68" rx="4" fill="rgba(37,99,235,0.10)" stroke="#2563eb" stroke-width="1.6"/>
+    <text x="195" y="184" text-anchor="middle" class="name">Jacob Bernoulli</text>
+    <text x="195" y="199" text-anchor="middle" class="dates">1654 – 1705</text>
+    <text x="195" y="213" text-anchor="middle" class="role">probability · log spiral</text>
+    <text x="195" y="226" text-anchor="middle" class="role">Bernoulli numbers</text>
+  </g>
+
+  <!-- Niklaus middle son (non-mathematician) -->
+  <g>
+    <rect x="620" y="165" width="170" height="68" rx="4" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="705" y="184" text-anchor="middle" class="name">Niklaus Bernoulli</text>
+    <text x="705" y="199" text-anchor="middle" class="dates">1662 – 1716</text>
+    <text x="705" y="213" text-anchor="middle" class="role">non-mathematician</text>
+    <text x="705" y="226" text-anchor="middle" class="role">but father of one</text>
+  </g>
+
+  <!-- Johann Bernoulli (youngest son) -->
+  <g>
+    <rect x="1130" y="165" width="170" height="68" rx="4" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.6"/>
+    <text x="1215" y="184" text-anchor="middle" class="name">Johann Bernoulli</text>
+    <text x="1215" y="199" text-anchor="middle" class="dates">1667 – 1748</text>
+    <text x="1215" y="213" text-anchor="middle" class="role">brachistochrone · L'Hôpital</text>
+    <text x="1215" y="226" text-anchor="middle" class="role">teacher of Euler</text>
+  </g>
+
+  <!-- Brothers' rivalry annotation -->
+  <text x="705" y="252" text-anchor="middle" class="feud">⚔  Jacob vs Johann: twenty-year feud (1697–1705)  ⚔</text>
+
+  <!-- Lines from gen 2 to gen 3 -->
+  <!-- middle Niklaus has one son (Niklaus I) -->
+  <line x1="705" y1="233" x2="705" y2="290" stroke="#888" stroke-width="1"/>
+  <!-- Johann has three sons -->
+  <line x1="1215" y1="233" x2="1215" y2="270" stroke="#888" stroke-width="1"/>
+  <line x1="970" y1="270" x2="1295" y2="270" stroke="#888" stroke-width="1"/>
+  <line x1="970" y1="270" x2="970" y2="290" stroke="#888" stroke-width="1"/>
+  <line x1="1135" y1="270" x2="1135" y2="290" stroke="#888" stroke-width="1"/>
+  <line x1="1295" y1="270" x2="1295" y2="290" stroke="#888" stroke-width="1"/>
+
+  <!-- ===================================================== -->
+  <!-- Generation 3                                          -->
+  <!-- ===================================================== -->
+  <text x="20" y="320" class="gen-label">Generation 3</text>
+
+  <!-- Niklaus I (Jacob's nephew) -->
+  <g>
+    <rect x="620" y="290" width="170" height="68" rx="4" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="1.4"/>
+    <text x="705" y="309" text-anchor="middle" class="name">Niklaus I Bernoulli</text>
+    <text x="705" y="323" text-anchor="middle" class="dates">1687 – 1759</text>
+    <text x="705" y="337" text-anchor="middle" class="role">edited Ars Conjectandi</text>
+    <text x="705" y="350" text-anchor="middle" class="role">St. Petersburg Paradox</text>
+  </g>
+
+  <!-- Niklaus II (Johann's eldest son) -->
+  <g>
+    <rect x="885" y="290" width="170" height="68" rx="4" fill="rgba(220,38,38,0.08)" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="970" y="309" text-anchor="middle" class="name">Niklaus II Bernoulli</text>
+    <text x="970" y="323" text-anchor="middle" class="dates">1695 – 1726</text>
+    <text x="970" y="337" text-anchor="middle" class="role">died of fever in</text>
+    <text x="970" y="350" text-anchor="middle" class="role">St. Petersburg, age 31</text>
+  </g>
+
+  <!-- Daniel (Johann's middle son) -->
+  <g>
+    <rect x="1050" y="290" width="170" height="68" rx="4" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.6"/>
+    <text x="1135" y="309" text-anchor="middle" class="name">Daniel Bernoulli</text>
+    <text x="1135" y="323" text-anchor="middle" class="dates">1700 – 1782</text>
+    <text x="1135" y="337" text-anchor="middle" class="role">Hydrodynamica</text>
+    <text x="1135" y="350" text-anchor="middle" class="role">8 Paris Academy prizes</text>
+  </g>
+
+  <!-- Johann II (Johann's youngest son) -->
+  <g>
+    <rect x="1210" y="290" width="170" height="68" rx="4" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+    <text x="1295" y="309" text-anchor="middle" class="name">Johann II Bernoulli</text>
+    <text x="1295" y="323" text-anchor="middle" class="dates">1710 – 1790</text>
+    <text x="1295" y="337" text-anchor="middle" class="role">Basel mathematician</text>
+    <text x="1295" y="350" text-anchor="middle" class="role">(less prominent)</text>
+  </g>
+
+  <!-- Father-son conflict between Johann and Daniel -->
+  <text x="1135" y="380" text-anchor="middle" class="feud">⚔  Johann vs Daniel: 1734 prize · Hydraulica forgery 1739  ⚔</text>
+
+  <!-- Lines from Johann II to his children -->
+  <line x1="1295" y1="358" x2="1295" y2="395" stroke="#888" stroke-width="1"/>
+  <line x1="1215" y1="395" x2="1375" y2="395" stroke="#888" stroke-width="1"/>
+  <line x1="1215" y1="395" x2="1215" y2="415" stroke="#888" stroke-width="1"/>
+  <line x1="1375" y1="395" x2="1375" y2="415" stroke="#888" stroke-width="1"/>
+
+  <!-- ===================================================== -->
+  <!-- Generation 4                                          -->
+  <!-- ===================================================== -->
+  <text x="20" y="445" class="gen-label">Generation 4</text>
+
+  <!-- Johann III -->
+  <g>
+    <rect x="1130" y="415" width="170" height="58" rx="4" fill="rgba(136,136,136,0.06)" stroke="#888" stroke-width="1.2"/>
+    <text x="1215" y="433" text-anchor="middle" class="name">Johann III Bernoulli</text>
+    <text x="1215" y="447" text-anchor="middle" class="dates">1744 – 1807</text>
+    <text x="1215" y="461" text-anchor="middle" class="role">Berlin Royal Astronomer at 19</text>
+  </g>
+
+  <!-- Jacob II -->
+  <g>
+    <rect x="1290" y="415" width="105" height="58" rx="4" fill="rgba(220,38,38,0.08)" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="1342" y="433" text-anchor="middle" class="name">Jacob II</text>
+    <text x="1342" y="447" text-anchor="middle" class="dates">1759 – 1789</text>
+    <text x="1342" y="461" text-anchor="middle" class="role">drowned at 30</text>
+  </g>
+</svg>

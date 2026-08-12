@@ -1,0 +1,59 @@
+<svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <!-- ===== headers ===== -->
+  <text x="163" y="40" font-family="sans-serif" font-size="15" font-weight="bold" fill="#888" text-anchor="middle">Solved</text>
+  <text x="538" y="40" font-family="sans-serif" font-size="15" font-weight="bold" fill="#888" text-anchor="middle">14 and 15 swapped</text>
+
+  <!-- ================= LEFT GRID (solved) ================= -->
+  <g font-family="sans-serif" font-size="21" fill="#888" text-anchor="middle">
+    <!-- row 0 -->
+    <rect x="55"  y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="80"  y="103">1</text>
+    <rect x="109" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="134" y="103">2</text>
+    <rect x="163" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="188" y="103">3</text>
+    <rect x="217" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="242" y="103">4</text>
+    <!-- row 1 -->
+    <rect x="55"  y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="80"  y="157">5</text>
+    <rect x="109" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="134" y="157">6</text>
+    <rect x="163" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="188" y="157">7</text>
+    <rect x="217" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="242" y="157">8</text>
+    <!-- row 2 -->
+    <rect x="55"  y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="80"  y="211">9</text>
+    <rect x="109" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="134" y="211">10</text>
+    <rect x="163" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="188" y="211">11</text>
+    <rect x="217" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="242" y="211">12</text>
+    <!-- row 3 -->
+    <rect x="55"  y="232" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="80"  y="265">13</text>
+    <rect x="109" y="232" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="134" y="265">14</text>
+    <rect x="163" y="232" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="188" y="265">15</text>
+    <rect x="217" y="232" width="50" height="50" rx="6" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+  </g>
+
+  <!-- ================= RIGHT GRID (14-15 swapped) ================= -->
+  <g font-family="sans-serif" font-size="21" fill="#888" text-anchor="middle">
+    <!-- row 0 -->
+    <rect x="430" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="455" y="103">1</text>
+    <rect x="484" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="509" y="103">2</text>
+    <rect x="538" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="563" y="103">3</text>
+    <rect x="592" y="70"  width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="617" y="103">4</text>
+    <!-- row 1 -->
+    <rect x="430" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="455" y="157">5</text>
+    <rect x="484" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="509" y="157">6</text>
+    <rect x="538" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="563" y="157">7</text>
+    <rect x="592" y="124" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="617" y="157">8</text>
+    <!-- row 2 -->
+    <rect x="430" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="455" y="211">9</text>
+    <rect x="484" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="509" y="211">10</text>
+    <rect x="538" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="563" y="211">11</text>
+    <rect x="592" y="178" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="617" y="211">12</text>
+    <!-- row 3 : 13 | 15 | 14 | blank  (15 and 14 highlighted) -->
+    <rect x="430" y="232" width="50" height="50" rx="6" fill="rgba(8,145,178,0.10)" stroke="#888" stroke-width="1.5"/><text x="455" y="265">13</text>
+    <rect x="484" y="232" width="50" height="50" rx="6" fill="rgba(220,38,38,0.18)" stroke="#dc2626" stroke-width="2"/><text x="509" y="265">15</text>
+    <rect x="538" y="232" width="50" height="50" rx="6" fill="rgba(220,38,38,0.18)" stroke="#dc2626" stroke-width="2"/><text x="563" y="265">14</text>
+    <rect x="592" y="232" width="50" height="50" rx="6" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+  </g>
+
+  <!-- ===== verdicts ===== -->
+  <circle cx="70" cy="315" r="6" fill="#059669"/>
+  <text x="84" y="320" font-family="sans-serif" font-size="14" fill="#888">reachable by sliding</text>
+  <circle cx="445" cy="315" r="6" fill="#dc2626"/>
+  <text x="459" y="320" font-family="sans-serif" font-size="14" fill="#888">unreachable — ever</text>
+</svg>

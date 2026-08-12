@@ -1,0 +1,67 @@
+<svg width="100%" viewBox="0 0 960 410" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <title>Thirty years to blue: the crowd's bet and the stubborn track</title>
+  <defs>
+    <marker id="blArrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="28" text-anchor="middle" font-size="17" fill="#888" font-weight="bold">Thirty years to blue: the crowd's bet and the stubborn track</text>
+
+  <!-- the long gap band -->
+  <rect x="246" y="185" width="325" height="30" fill="rgba(136,136,136,0.10)"/>
+  <text x="408" y="155" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">thirty years of "ten more years"</text>
+
+  <!-- main axis -->
+  <line x1="60" y1="200" x2="920" y2="200" stroke="#888" stroke-width="2"/>
+  <g font-size="10" fill="#888" text-anchor="middle" opacity="0.75">
+    <text x="60" y="240">1960</text><text x="215" y="240">1970</text><text x="370" y="240">1980</text>
+    <text x="525" y="240">1990</text><text x="680" y="240">2000</text><text x="835" y="240">2010</text>
+  </g>
+
+  <!-- achievements on the axis -->
+  <circle cx="91" cy="200" r="7" fill="#dc2626"/>
+  <text x="91" y="175" text-anchor="middle" font-size="12" fill="#dc2626">red - 1962</text>
+
+  <circle cx="215" cy="200" r="7" fill="#059669"/>
+  <text x="215" y="175" text-anchor="middle" font-size="12" fill="#059669">green</text>
+
+  <circle cx="571" cy="200" r="10" fill="#2563eb"/>
+  <text x="560" y="95" text-anchor="middle" font-size="14" fill="#2563eb" font-weight="bold">BLUE - one candela</text>
+  <text x="560" y="113" text-anchor="middle" font-size="11.5" fill="#888">Nichia, Nov 1993</text>
+
+  <circle cx="618" cy="200" r="6" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="640" y="152" text-anchor="middle" font-size="11.5" fill="#f59e0b">1996: white = blue + phosphor</text>
+  <text x="640" y="168" text-anchor="middle" font-size="11" fill="#888">and the 405 nm laser - Blu-ray's pen</text>
+
+  <circle cx="897" cy="200" r="8" fill="#f59e0b"/>
+  <text x="905" y="152" text-anchor="end" font-size="12" fill="#f59e0b" font-weight="bold">2014: the Nobel</text>
+  <text x="905" y="184" text-anchor="end" font-size="11" fill="#888">Akasaki - Amano - Nakamura</text>
+
+  <!-- ZnSe track -->
+  <text x="58" y="277" font-size="12" fill="#0891b2" font-weight="bold">the crowd bet on ZnSe</text>
+  <line x1="370" y1="280" x2="633" y2="280" stroke="#0891b2" stroke-width="3.5" opacity="0.65"/>
+  <text x="644" y="284" font-size="11.5" fill="#dc2626" font-weight="bold">dead end - devices died young</text>
+
+  <!-- GaN track -->
+  <text x="58" y="327" font-size="12" fill="#2563eb" font-weight="bold">the stubborn kept GaN</text>
+  <line x1="246" y1="330" x2="571" y2="330" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="246" cy="330" r="4.5" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="463" cy="330" r="4" fill="#2563eb"/>
+  <circle cx="509" cy="330" r="4" fill="#2563eb"/>
+  <circle cx="540" cy="330" r="4" fill="#2563eb"/>
+  <circle cx="556" cy="330" r="4" fill="#2563eb"/>
+
+  <line x1="540" y1="316" x2="540" y2="325" stroke="#888" stroke-width="1"/>
+  <text x="540" y="311" text-anchor="middle" font-size="10.5" fill="#888">1991: the two-flow reactor (Tokushima)</text>
+
+  <text x="246" y="355" font-size="10.5" fill="#7c3aed">1972: RCA's violet, dropped</text>
+  <text x="509" y="355" text-anchor="middle" font-size="10.5" fill="#888">1989: p-type (Nagoya)</text>
+  <text x="455" y="375" text-anchor="end" font-size="10.5" fill="#888">1986: buffer layer (Nagoya)</text>
+  <text x="560" y="375" font-size="10.5" fill="#888">1992: annealing + the hydrogen secret (Tokushima)</text>
+
+  <!-- the rise -->
+  <line x1="571" y1="324" x2="571" y2="214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#blArrow)"/>
+
+  <text x="480" y="402" text-anchor="middle" font-size="12.5" fill="#888" font-style="italic">the crowded race rewards incumbents; the empty race rewards the stubborn</text>
+</svg>

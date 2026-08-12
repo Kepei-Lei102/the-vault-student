@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 15px; font-weight: 700; }
+    .lab { font-size: 12.5px; }
+    .note { font-size: 11px; }
+    .box { font-size: 12px; font-weight: 600; }
+    .dc { fill: #dc2626; }
+    .ac { fill: #059669; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888"/></marker>
+  </defs>
+
+  <text x="390" y="28" class="title" text-anchor="middle">Why AC won — same power P = V I, sent at high voltage so the current is small</text>
+
+  <!-- ============ DC panel ============ -->
+  <text x="20" y="78" class="lab dc" style="font-weight:700">DC — Edison</text>
+  <!-- plant -->
+  <rect x="40" y="92" width="92" height="52" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="86" y="114" class="box" text-anchor="middle">DC plant</text>
+  <text x="86" y="132" class="note" text-anchor="middle">~110 V</text>
+  <!-- lossy line -->
+  <line x1="132" y1="118" x2="600" y2="118" stroke="#dc2626" stroke-width="5" opacity="0.85" marker-end="url(#a)"/>
+  <text x="366" y="106" class="note dc" text-anchor="middle">large current I  (low V, high I)</text>
+  <text x="366" y="138" class="note dc" text-anchor="middle">P_loss = I²R  →  huge (wasted as heat)</text>
+  <!-- city -->
+  <rect x="608" y="92" width="86" height="52" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="651" y="123" class="box" text-anchor="middle">city</text>
+  <!-- reach -->
+  <text x="360" y="168" class="note dc" text-anchor="middle">serves only ≈ 1 mile → a plant on every block</text>
+
+  <line x1="20" y1="196" x2="760" y2="196" stroke="#888" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- ============ AC panel ============ -->
+  <text x="20" y="232" class="lab ac" style="font-weight:700">AC — Tesla + Westinghouse</text>
+  <!-- plant -->
+  <rect x="30" y="250" width="80" height="50" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="70" y="280" class="box" text-anchor="middle">AC plant</text>
+  <!-- step-up transformer -->
+  <rect x="118" y="250" width="74" height="50" rx="6" fill="rgba(245,158,11,0.22)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="272" class="note" text-anchor="middle" style="font-weight:600">step-up ⇧</text>
+  <text x="155" y="289" class="note" text-anchor="middle">high V</text>
+  <!-- long low-loss line -->
+  <line x1="192" y1="275" x2="540" y2="275" stroke="#059669" stroke-width="2.4" marker-end="url(#a)"/>
+  <text x="366" y="263" class="note ac" text-anchor="middle">tiny current I  (high V, low I)</text>
+  <text x="366" y="295" class="note ac" text-anchor="middle">P_loss = I²R  →  tiny</text>
+  <!-- step-down transformer -->
+  <rect x="540" y="250" width="74" height="50" rx="6" fill="rgba(245,158,11,0.22)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="577" y="272" class="note" text-anchor="middle" style="font-weight:600">step-down ⇩</text>
+  <text x="577" y="289" class="note" text-anchor="middle">safe V</text>
+  <!-- city -->
+  <rect x="624" y="250" width="80" height="50" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="664" y="280" class="box" text-anchor="middle">city</text>
+  <!-- reach -->
+  <text x="300" y="324" class="note ac" text-anchor="middle">serves hundreds of miles → one plant per region</text>
+
+  <text x="390" y="372" class="lab" text-anchor="middle">Loss grows as the square of the current — so cutting I crushes the waste.</text>
+  <text x="390" y="394" class="lab" text-anchor="middle">Only AC could change voltage easily (the transformer) — that was the whole game.</text>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 410" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .display { font-family: 'Times New Roman', serif; font-style: italic; font-size: 17px; }
+    .title { font-size: 15px; font-weight: 600; }
+    .label { font-size: 12px; }
+    .small { font-size: 11px; }
+    .tiny { font-size: 10px; opacity: 0.75; }
+    .note { font-size: 11px; opacity: 0.85; font-style: italic; }
+  </style>
+
+  <!-- Title -->
+  <text x="350" y="22" class="title" text-anchor="middle">Saint-Vincent's hyperbola — why A(ab) = A(a) + A(b)</text>
+  <text x="350" y="40" class="small" text-anchor="middle" font-style="italic">Stretch by a: heights shrink by 1/a, widths grow by a, areas preserved</text>
+
+  <!-- ============================================ -->
+  <!-- Axes                                         -->
+  <!-- ============================================ -->
+  <line x1="50" y1="350" x2="690" y2="350" stroke="#888" stroke-width="1"/>
+  <line x1="60" y1="60" x2="60" y2="358" stroke="#888" stroke-width="1"/>
+  <polygon points="690,350 683,346 683,354" fill="#888"/>
+  <polygon points="60,55 56,62 64,62" fill="#888"/>
+  <text x="685" y="367" class="small" text-anchor="end">x</text>
+  <text x="55" y="60" class="small" text-anchor="end">y</text>
+
+  <!-- ============================================ -->
+  <!-- Shaded region 1: x ∈ [1, 2], blue           -->
+  <!-- area = A(2) = A(a)                          -->
+  <!-- ============================================ -->
+  <path d="M 160 260 L 180 278 L 200 288 L 230 300 L 260 305 L 260 350 L 160 350 Z"
+        fill="rgba(37, 99, 235, 0.22)" stroke="#2563eb" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- Shaded region 2: x ∈ [2, 6], green          -->
+  <!-- area = A(6) - A(2) = A(b) by rescaling       -->
+  <!-- ============================================ -->
+  <path d="M 260 305 L 300 313 L 360 320 L 420 324 L 460 327 L 510 330 L 560 332 L 660 335 L 660 350 L 260 350 Z"
+        fill="rgba(5, 150, 105, 0.20)" stroke="#059669" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- Hyperbola y = 1/x — drawn on top            -->
+  <!-- ============================================ -->
+  <polyline points="90,50 100,86 110,170 120,200 130,222 145,247 160,260 180,278 200,288 230,300 260,305 300,313 360,320 420,324 460,327 510,330 560,332 660,335"
+            fill="none" stroke="#888" stroke-width="2"/>
+  <text x="120" y="78" class="math display" fill="#888">y = 1/x</text>
+
+  <!-- ============================================ -->
+  <!-- Tick marks and x-axis labels                 -->
+  <!-- ============================================ -->
+  <line x1="160" y1="346" x2="160" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="160" y="368" class="small" text-anchor="middle">1</text>
+  <line x1="260" y1="346" x2="260" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="260" y="368" class="small" text-anchor="middle" fill="#2563eb" font-weight="600">a = 2</text>
+  <line x1="360" y1="346" x2="360" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="360" y="368" class="small" text-anchor="middle" opacity="0.6">3</text>
+  <line x1="660" y1="346" x2="660" y2="354" stroke="#888" stroke-width="1"/>
+  <text x="660" y="368" class="small" text-anchor="middle" fill="#059669" font-weight="600">ab = 6</text>
+
+  <!-- ============================================ -->
+  <!-- Vertical dashed lines (x → curve)            -->
+  <!-- ============================================ -->
+  <line x1="160" y1="260" x2="160" y2="350" stroke="#888" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.45"/>
+  <line x1="260" y1="305" x2="260" y2="350" stroke="#888" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.45"/>
+  <line x1="660" y1="335" x2="660" y2="350" stroke="#888" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.45"/>
+
+  <!-- ============================================ -->
+  <!-- Region labels                                -->
+  <!-- ============================================ -->
+  <text x="200" y="332" class="display" text-anchor="middle" fill="#2563eb">A(2)</text>
+  <text x="200" y="348" class="tiny" text-anchor="middle" fill="#2563eb">= A(a)</text>
+
+  <text x="450" y="338" class="display" text-anchor="middle" fill="#059669">A(6) − A(2)</text>
+  <text x="450" y="354" class="tiny" text-anchor="middle" fill="#059669" font-style="italic">= A(3) by rescaling = A(b)</text>
+
+  <!-- ============================================ -->
+  <!-- The rescaling argument annotation            -->
+  <!-- ============================================ -->
+  <g transform="translate(350, 87)">
+    <rect x="-200" y="0" width="400" height="38" rx="4" fill="rgba(245, 158, 11, 0.08)" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="0" y="16" class="note" text-anchor="middle" fill="#f59e0b">x ↦ 2x maps the strip [1, 3] onto the strip [2, 6]</text>
+    <text x="0" y="30" class="tiny" text-anchor="middle" fill="#f59e0b">heights × ½, widths × 2, areas unchanged</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Final equation                               -->
+  <!-- ============================================ -->
+  <text x="350" y="397" class="display" text-anchor="middle" fill="#888">A(6) = A(2) + A(3)  ⟺  A(ab) = A(a) + A(b)</text>
+
+</svg>

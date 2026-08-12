@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .display { font-family: 'Times New Roman', serif; font-style: italic; font-size: 18px; }
+    .title { font-size: 16px; font-weight: 600; }
+    .panel-title { font-size: 15px; font-weight: 700; }
+    .label { font-size: 12px; }
+    .small { font-size: 11px; }
+    .tiny { font-size: 10px; }
+    .note { font-size: 11px; opacity: 0.75; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="22" class="title" text-anchor="middle">The chain rule, in three notations</text>
+  <text x="400" y="40" class="small" text-anchor="middle" font-style="italic">Each survives — every notation found its niche.</text>
+
+  <!-- ============================================ -->
+  <!-- PANEL 1 — Leibniz                            -->
+  <!-- ============================================ -->
+
+  <rect x="20" y="55" width="240" height="200" rx="6"
+        fill="rgba(37, 99, 235, 0.06)" stroke="#2563eb" stroke-width="1.5"/>
+
+  <text x="140" y="78" class="panel-title" text-anchor="middle" fill="#2563eb">Leibniz</text>
+  <text x="140" y="94" class="small" text-anchor="middle" fill="#2563eb" opacity="0.75">differentials as algebra (1684)</text>
+
+  <!-- Math: dy/dx = dy/du · du/dx -->
+  <!-- Frac 1 at x=66 -->
+  <text x="66" y="138" class="display" text-anchor="middle">dy</text>
+  <line x1="52" y1="146" x2="80" y2="146" stroke="#888" stroke-width="1"/>
+  <text x="66" y="164" class="display" text-anchor="middle">dx</text>
+
+  <!-- = -->
+  <text x="105" y="153" class="display" text-anchor="middle">=</text>
+
+  <!-- Frac 2 at x=140 -->
+  <text x="140" y="138" class="display" text-anchor="middle">dy</text>
+  <line x1="126" y1="146" x2="154" y2="146" stroke="#888" stroke-width="1"/>
+  <text x="140" y="164" class="display" text-anchor="middle">du</text>
+
+  <!-- · -->
+  <text x="180" y="153" class="display" text-anchor="middle">·</text>
+
+  <!-- Frac 3 at x=215 -->
+  <text x="215" y="138" class="display" text-anchor="middle">du</text>
+  <line x1="201" y1="146" x2="229" y2="146" stroke="#888" stroke-width="1"/>
+  <text x="215" y="164" class="display" text-anchor="middle">dx</text>
+
+  <!-- Annotation -->
+  <text x="140" y="200" class="label" text-anchor="middle" fill="#059669">✓ <tspan font-weight="600">cancels like algebra</tspan></text>
+  <text x="140" y="218" class="small" text-anchor="middle">du on top × du on bottom</text>
+  <text x="140" y="232" class="small" text-anchor="middle" opacity="0.7">≈ true cancellation</text>
+
+  <text x="140" y="250" class="tiny" text-anchor="middle" fill="#2563eb" font-style="italic">niche: working calculations</text>
+
+  <!-- ============================================ -->
+  <!-- PANEL 2 — Lagrange                           -->
+  <!-- ============================================ -->
+
+  <rect x="280" y="55" width="240" height="200" rx="6"
+        fill="rgba(124, 58, 237, 0.06)" stroke="#7c3aed" stroke-width="1.5"/>
+
+  <text x="400" y="78" class="panel-title" text-anchor="middle" fill="#7c3aed">Lagrange</text>
+  <text x="400" y="94" class="small" text-anchor="middle" fill="#7c3aed" opacity="0.75">function as object (1797)</text>
+
+  <!-- Math: [f(g(x))]' = f'(g(x)) · g'(x) — bracket form avoids the ∘ glyph fallback issue -->
+  <text x="400" y="155" class="display" text-anchor="middle">[f(g(x))]′ = f′(g(x)) · g′(x)</text>
+
+  <!-- Annotation -->
+  <text x="400" y="200" class="label" text-anchor="middle" fill="#059669">✓ <tspan font-weight="600">no infinitesimals</tspan></text>
+  <text x="400" y="218" class="small" text-anchor="middle">just function composition</text>
+  <text x="400" y="232" class="small" text-anchor="middle" opacity="0.7">primes scale to higher orders</text>
+
+  <text x="400" y="250" class="tiny" text-anchor="middle" fill="#7c3aed" font-style="italic">niche: theorem statements</text>
+
+  <!-- ============================================ -->
+  <!-- PANEL 3 — Newton                             -->
+  <!-- ============================================ -->
+
+  <rect x="540" y="55" width="240" height="200" rx="6"
+        fill="rgba(245, 158, 11, 0.06)" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <text x="660" y="78" class="panel-title" text-anchor="middle" fill="#f59e0b">Newton</text>
+  <text x="660" y="94" class="small" text-anchor="middle" fill="#f59e0b" opacity="0.85">fluxions over time (1666)</text>
+
+  <!-- Math: ẏ = (dy/du) · u̇ -->
+  <text x="610" y="153" class="display" text-anchor="middle">ẏ =</text>
+
+  <!-- frac dy/du -->
+  <text x="660" y="138" class="display" text-anchor="middle">dy</text>
+  <line x1="646" y1="146" x2="674" y2="146" stroke="#888" stroke-width="1"/>
+  <text x="660" y="164" class="display" text-anchor="middle">du</text>
+
+  <!-- · u̇ -->
+  <text x="710" y="153" class="display" text-anchor="middle">· u̇</text>
+
+  <!-- Annotation -->
+  <text x="660" y="200" class="label" text-anchor="middle" fill="#f59e0b">⚙ <tspan font-weight="600">needs Leibniz inside</tspan></text>
+  <text x="660" y="218" class="small" text-anchor="middle">dot is time-derivative only</text>
+  <text x="660" y="232" class="small" text-anchor="middle" opacity="0.7">no general dy/dx form</text>
+
+  <text x="660" y="250" class="tiny" text-anchor="middle" fill="#f59e0b" font-style="italic">niche: physics — time derivatives</text>
+
+  <!-- ============================================ -->
+  <!-- FOOTER NOTE                                  -->
+  <!-- ============================================ -->
+
+  <text x="400" y="278" class="note" text-anchor="middle">The British error of 1727–1812 was insisting Newton's notation do every job. Each notation is at its best where above; each is awkward elsewhere.</text>
+
+</svg>
