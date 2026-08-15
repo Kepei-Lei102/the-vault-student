@@ -15,6 +15,7 @@ leads_to:
   - "[[Exponential Growth and Decay]]"
   - "[[Discrete Random Variables]]"
   - "[[Maclaurin Series]]"
+  - "[[Summation of Series]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -359,12 +360,27 @@ A single deep card covers all three. Typical question patterns:
 - Stating the correct formula is worth a mark even if the arithmetic later errs.
 - On convergence questions, state the condition $\lvert r \rvert < 1$ explicitly — examiners award a mark for it.
 
-### A-Level
+### Cambridge 9709 — **Pure Mathematics 1, §1.6 Series**
 
-A-Level Mathematics (Pure 2) formalises the same content plus:
+Paper 1 is compulsory for both AS and A Level, and §1.6 has four learning objectives — the binomial expansion (which [[Binomial Theorem]] carries) plus **three that are entirely AP/GP**:
+
+- **Recognise arithmetic and geometric progressions.**
+- **Use the formulae for the $n$th term and the sum of the first $n$ terms to solve problems**, with the syllabus adding a specific piece of knowledge candidates are expected to have: numbers $a, b, c$ are in **arithmetic** progression if $2b = a+c$, and in **geometric** progression if $b^2 = ac$ *(or equivalent)*. It also warns that **questions may involve more than one progression**.
+- **Use the condition for convergence of a geometric progression, and the formula for the sum to infinity.**
+
+> [!tip] Where $2b = a+c$ and $b^2 = ac$ come from — and why the means are named after them
+> Both conditions just say *the middle term is the middle*. In an AP the steps either side are equal, so $b - a = c - b$, which rearranges to $2b = a+c$, i.e. $b = \frac{a+c}{2}$ — the **arithmetic mean**. In a GP the ratios either side are equal, so $\frac{b}{a} = \frac{c}{b}$, giving $b^2 = ac$, i.e. $b = \sqrt{ac}$ — the **geometric mean**. The two familiar averages are named after these two progressions, not the other way round; and the classical inequality $\frac{a+c}{2} \geqslant \sqrt{ac}$ says an AP's middle term always sits at least as high as the matching GP's.
+>
+> In the exam these are the fastest route into a *"the first, fourth and eighth terms of an AP form a GP"* question: write the three terms in $a$ and $d$, apply $b^2 = ac$, and one equation falls out instead of three.
+
+**What the syllabus explicitly does not require** on this section: knowledge of the greatest term, and properties of the binomial coefficients. Both are common textbook extras that cost revision time for no marks.
+
+### Other A-Level specifications
+
+Edexcel, AQA and OCR place the same content in their Pure 2 papers, and add:
 - $\sum$-notation proficiency: $\displaystyle\sum_{k=1}^{n} u_k$.
-- Proof by induction of the $S_n$ formulas (Further Mathematics).
-- Arithmetic + geometric *mixed* problems are standard in Pure 2 exams.
+- Proof of the $S_n$ formulas by induction (in the Further Mathematics options — [[Proof by Induction]]).
+- Mixed arithmetic-and-geometric problems as a standard question type.
 
 ### IB AA
 

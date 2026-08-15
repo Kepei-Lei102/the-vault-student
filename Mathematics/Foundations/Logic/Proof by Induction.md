@@ -294,7 +294,7 @@ Starting from the target equality at $k+1$ and manipulating both sides until som
 - **Proof in the wild:** [[Power Rule]] — the rule every calculus student uses daily, in three lines (Example 6); [[Euler's Formula and De Moivre's Theorem]] — de Moivre for integer $n$, proved by induction; [[Binomial Theorem]] — the classic inductive proof via Pascal's rule, and the other road to the power rule.
 - **Proof ingredient:** [[Product Rule]] — proved from first principles, so the inductive step of Example 6 borrows nothing it is trying to prove.
 - **Kindred:** [[Matrix]] — the multiplication engine under Example 3; [[Eigenvalues and Eigenvectors]] — why Example 3's answer is built from $1^n$ and $2^n$; [[Proof by Contradiction]] — the minimal-criminal lens; [[Chain of Thought]] — where induction sits among the proof structures; [[Gödel's Incompleteness Theorems]] — the method's outer edge.
-- **For 9231 students:** the standard sums $\sum r$, $\sum r^2$, $\sum r^3$ are *printed* in MF19's Further Pure list — the exam hands you the destination because the marks are in the journey. (Booklet-wide audit: [[MF19 Reference (9709)]].)
+- **For 9231 students:** the standard sums $\sum r$, $\sum r^2$, $\sum r^3$ are *printed* in MF19's Further Pure list — the exam hands you the destination because the marks are in the journey. (Booklet-wide audit: [[MF19 Reference (9231)]].)
 
 ## LaTeX Reference
 

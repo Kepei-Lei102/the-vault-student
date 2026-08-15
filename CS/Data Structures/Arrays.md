@@ -3,6 +3,8 @@ chinese: 数组 (shùzǔ)
 prerequisites:
   - "[[RAM and the Memory Hierarchy]]"
 leads_to:
+  - "[[File Handling]]"
+  - "[[User-Defined Data Types]]"
   - "[[Searching]]"
   - "[[Sorting]]"
   - "[[Stacks and Queues]]"
@@ -100,9 +102,14 @@ One multiplication and one addition — a fixed amount of work, whatever $i$ is.
 | **consecutive index numbers** | Adding $(i-l)\times\text{size}$ assumes cell $i$ sits exactly one $\text{size}$ past cell $i-1$. Skip an index and the arithmetic lands in the wrong place. |
 | **fixed length** | The block must stay unbroken. Growing it means the neighbouring memory must happen to be free — and in general it is not, so growth means moving the whole array somewhere else, and $\text{base}$ was the one thing everything relied on. |
 
-The restrictions are not the language being fussy. They are the **price of the multiplication**, and what you buy with them is the single most important property an array has.
+The restrictions are not the language being fussy — they are what the multiplication *costs*. The whole trick is that the machine reaches an element by **calculating** rather than looking, and a calculation can only replace a search if the layout is perfectly regular: same-size elements, evenly spaced, in one unbroken block. Give up any one of those and there is nothing left to compute. So the trade reads: **surrender the freedom to mix types, to skip indices and to grow, and receive in exchange the one property that makes arrays worth having.**
 
 **Access is $O(1)$ — constant time.** Reaching `scores[999999]` costs one multiply and one add, exactly what `scores[0]` costs. The array does not *look* for the element; it **calculates** where it is. This is why [[Big-O Notation]] can treat `a[i]` as one step, and why every algorithm that indexes — [[Searching|binary search]] jumping to the middle, [[Sorting|a sort]] swapping two distant items — is fast enough to be worth writing. Take that away and half of algorithmics collapses.
+
+> [!info] Beyond syllabus — where the block comes from, and giving it back
+> One unbroken block of the right size does not appear by wishing. Somebody has to **allocate** it: ask the system for `n × size` contiguous bytes and receive the base address the formula needs. In Python and Java that request is invisible and the memory is reclaimed automatically once nothing refers to it. In C and C++ it is explicit — `malloc(n * sizeof(int))` hands you the block and returns `NULL` if no run that long is free — and, crucially, **you must hand it back** with `free`. Forget to, and the program keeps the memory it no longer uses: a **memory leak**, which is not a crash but a slow strangulation, the process growing until the machine starts swapping or the allocator gives up. Leaks are hard to notice precisely because nothing goes *wrong* — a leaking program is correct in every output it produces, right up until it isn't running any more.
+>
+> The two mistakes are opposites and both are about ownership: a leak is memory you own and never release; the next section is memory you never owned and use anyway.
 
 > [!info] Beyond syllabus — how a list grows anyway
 > Python's `list` and Java's `ArrayList` *do* grow, which seems to contradict "fixed length". They don't cheat the formula, they pay for it: the object holds a fixed array with spare room, and when it fills up it allocates a **bigger one — typically about double — and copies everything across**. That one copy is $O(n)$, but doubling means it happens rarely; spread the cost over all the appends between copies and each one averages out to constant work. This averaging is called **amortised** analysis, and it is why `append` is *usually* instant and *occasionally* not. Note what stays true underneath: at any instant there is still one contiguous block and still one formula.
@@ -120,6 +127,8 @@ One-based indexing is the same formula with a compensation built in:
 $$\text{address}(i) = \text{base} + (i-1)\times\text{size} = \underbrace{(\text{base} - \text{size})}_{\text{a fictional element 0}} + i \times \text{size}$$
 
 The machine pretends the array begins one element *earlier* than it does, and everything works. So neither convention is more correct; one is the raw arithmetic and the other is the raw arithmetic plus a human courtesy. This is why languages genuinely disagree — Python, Java, C and C++ count from 0; Fortran, MATLAB, R and Lua from 1 — and why the exam's pseudocode makes you **declare your bounds explicitly** instead of assuming.
+
+There is a wrinkle worth naming rather than suffering. The exam dialect not only permits either bound, it *prefers* 1 — its own guidance says a lower bound of 1 will generally be used — while two of the three languages a candidate may answer the practical paper in, Python and Java, are unconditionally 0-based. So the same student, in the same week, writes `Names[1]` for the first name on one paper and `names[0]` for it on another. That is not a deep truth about arrays; it is a translation tax, and the only defence is to read the declaration first and convert deliberately rather than by habit. [[Cambridge Pseudocode]] carries the translation table.
 
 That is where the exam vocabulary comes from and it is worth being exact about it:
 
@@ -141,7 +150,11 @@ scores[30]        # IndexError: list index out of range   — refuses, loudly
 scores[-1]        # the LAST element: Python maps -1 to index 29
 ```
 
-Python **checks** every index and raises. C and C++ do not — they compute the address and use it, so `scores[30] = 0` quietly writes over whatever lives there: another variable, a saved return address, anything. The program does not crash at the mistake; it crashes later, somewhere unrelated, or worse, it does not crash at all and simply becomes wrong. This is the **buffer overflow**, and deliberately overrunning an array to overwrite a return address has been the engine behind a large fraction of the security exploits of the last thirty years. [[Operating Systems]]' memory protection is the outer wall that stops the damage escaping the process; inside the process, the array's bounds are guarded only by whoever wrote the loop.
+Python **checks** every index and raises. C and C++ do not — they compute the address and use it, so `scores[30] = 0` quietly writes over whatever lives there: another variable, a saved return address, anything. The program does not crash at the mistake; it crashes later, somewhere unrelated, or worse, it does not crash at all and simply becomes wrong.
+
+Stray far enough and you hit the one guard that is always on. Every process is given a set of memory pages it is allowed to touch, and an address outside them is refused by the hardware: the program dies immediately with a **segmentation fault** (段错误). Students meet it as C's most hated error, but it is worth seeing the right way round — **a segfault is the lucky outcome.** It fires at the moment of the mistake, and it fires because the index was wrong by a *lot*. Being wrong by one is far more common and far worse: that address is still inside your own memory, so nothing objects, and you have corrupted a neighbour instead of being told. The loud failure is the one you can fix in an afternoon.
+
+The quiet one is the **buffer overflow**, and deliberately overrunning an array to overwrite a return address has been the engine behind a large fraction of the security exploits of the last thirty years. [[Operating Systems]]' memory protection is the outer wall that stops the damage escaping the process; inside the process, the array's bounds are guarded only by whoever wrote the loop.
 
 The teaching point is not "C is bad". It is that **bounds checking is a cost some languages pay and others refuse**, and knowing which kind you are in tells you how careful the loop has to be.
 
@@ -151,7 +164,7 @@ A table wants two indices: `Results[team][metric]`. Declaring one is easy; the i
 
 $$\text{address}(r, c) = \text{base} + \big(r \times n_{\text{cols}} + c\big) \times \text{size}$$
 
-![[arrays-2d-row-major.svg]]
+![[arrays-2d-row-major.svg|697]]
 
 Read it as *skip $r$ whole rows, then $c$ elements into this one*. Still one multiply-and-add shape; still $O(1)$.
 
@@ -171,6 +184,8 @@ for r in range(2):                      # nested iteration: rows outside...
 
 The model predicts eight times the memory traffic for identical arithmetic. Measured, it is gentler than that: summing a 6000 × 6000 matrix of 64-bit floats — the same 36 million additions, differing only in visiting order — takes about **21 ms along the rows and about 98 ms down the columns, four to five times slower**. The gap between the predicted eight and the measured four-and-a-half is the **hardware prefetcher**, which spots the regular stride and starts fetching ahead of the loop. It claws back roughly half the loss and cannot claw back the rest. This is [[RAM and the Memory Hierarchy]]'s locality of reference with a stopwatch on it, and it is why numerical libraries care so much about which way a loop runs.
 
+The practical rule falls straight out, and it is a **design** decision rather than a coding one: **lay the data out so that the traversal you do most often runs along a row.** Thirty students with eight subject grades each can be stored as `[student][subject]` or `[subject][student]`, and the two hold identical information — but if the program mostly totals each student's grades, the first keeps every one of those eight values in the same cache line and the second scatters them thirty apart. Ask *which way will this be walked?* before you declare, because the decision costs nothing to make and is expensive to reverse once the rest of the code has been written around it. When both directions matter equally there is no free lunch, and that is when a library will keep a transposed copy and pay for the duplication on purpose.
+
 ## The name is not the box
 
 Here is the trap that survives into professional code, and it is examined:
@@ -182,7 +197,9 @@ b[0] = 99
 print(a)              # [99, 2, 3]   —  a changed
 ```
 
-Assignment copied the **name**, not the array. Both `a` and `b` now hold the same base address, so they are two labels on one block of memory — **aliasing**. Why would a language do this? Because the alternative is worse: copying on assignment would mean that passing a million-element array into a function silently duplicates a million elements. Handing over the base address costs a few bytes, and the formula does the rest.
+Assignment copied the **name**, not the array. Both `a` and `b` now hold the same base address, so they are two labels on one block of memory — **aliasing**.
+
+The exam's assignment arrow is unusually good at making this obvious, and deserves the credit. Written `b ← a`, the statement reads exactly as *put what is in `a` into `b`* — and it therefore forces the honest question **what actually is in `a`?** The answer is not the array. It is the array's address. Copy an address and you get a second copy of the address, not a second array; both slips of paper now carry the same house number, so a delivery made through either one arrives at the same door. `=` invites you to read it as equality and quietly hides that question; the arrow cannot. Why would a language do this? Because the alternative is worse: copying on assignment would mean that passing a million-element array into a function silently duplicates a million elements. Handing over the base address costs a few bytes, and the formula does the rest.
 
 That is exactly what the exam wants said out loud. When an array is passed to a procedure, it is passed **by reference** (`BYREF`) — and a Paper 2 question that says *"the array is passed as a parameter; identify how this parameter should be specified in the procedure header"* is worth its mark for that one word.
 
@@ -240,7 +257,9 @@ batch[7].weight = 20.1
 in_range = [c for c in batch if lo <= c.weight <= hi]
 ```
 
-This is the shape real exam questions use — a declared record type, then an array of a thousand of them — and it is the last stop before objects: attach functions to a record and the record becomes a class.
+This is the shape real exam questions use — a declared record type, then an array of a thousand of them.
+
+And it is one short step from here to objects. A record already bundles related values under one name; attach the operations that belong to those values and the bundle becomes a **class**, its instances **objects**. That is the whole of the idea, and it is the same move [[Stacks and Queues]] makes when it insists an abstract data type is data *plus* the operations allowed on it — a record is the data half waiting for the other half. The record is also one of a family of types you can define for yourself rather than accept ready-made: alongside it sit the **enumerated** type (a variable whose value may only be one of a named list — `Monday`, `Tuesday`, … — which turns a whole class of invalid states into something the compiler rejects rather than something you must remember to check), the **pointer**, and the **set**. [[User-Defined Data Types]] takes up that family, and [[Object-Oriented Programming]] takes up what happens when data and behaviour finally travel together.
 
 ## Worked examples
 
@@ -373,7 +392,8 @@ Neither Cambridge board examines memory addresses, cache behaviour, or the amort
 - **Cost model:** [[Big-O Notation]] — the $O(1)$ access assumption every array algorithm's analysis rests on.
 - **Exam dialect:** [[Cambridge Pseudocode]] — `DECLARE`, bounds, and the single-bracket 2D form.
 - **Maths bridge:** [[Matrix]] — a 2D array is how a matrix is stored; row-major order is why matrix libraries care which index runs fastest.
-- **Where the leak leads:** [[Operating Systems]] — memory protection as the wall that contains an out-of-bounds write once the array's own bounds have failed.
+- **Where the leak leads:** [[Operating Systems]] — memory protection as the wall that contains an out-of-bounds write once the array's own bounds have failed, and the page permissions whose refusal *is* the segmentation fault.
+- **Extends into:** [[User-Defined Data Types]] — the record promoted into a family you declare for yourself (enumerated, pointer, set, class/object); [[Object-Oriented Programming]] — what a record becomes once the operations move in with the data.
 
 ---
 

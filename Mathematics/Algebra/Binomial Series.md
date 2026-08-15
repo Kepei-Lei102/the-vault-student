@@ -180,12 +180,7 @@ $$(1 + x)^n = \sum_{k=0}^\infty \dfrac{n(n-1)(n-2)\cdots(n - k + 1)}{k!}\,x^k = 
 
 That's the binomial series. The derivation works **for any real $n$** — positive integer, negative integer, fraction, irrational — because the differentiation rule $\frac{d}{dx}(1+x)^n = n(1+x)^{n-1}$ holds for any $n \in \mathbb{R}$ (Power Rule). The only thing that distinguishes integer from non-integer $n$ is whether the $f^{(k)}(0)$ sequence eventually becomes zero (integer case) or never does (non-integer case).
 
-> [!info] Beyond syllabus — Newton's discovery (1665)
-> Isaac Newton discovered the binomial series in 1665 — at age 22, while plague had closed Cambridge and he was working at home in Lincolnshire. He didn't have Maclaurin's general formalism (Maclaurin published it in 1742). What Newton did was **interpolation**: he knew $(1+x)^n$ for $n = 0, 1, 2, 3, 4$ (finite series with combinatorial coefficients), and he interpolated the *pattern of coefficients* to non-integer $n$ — guessing that $\binom{1/2}{k} = \tfrac{(1/2)(1/2 - 1)\cdots}{k!}$ extended the integer-case formula.
->
-> He verified the interpolation numerically. Then he used the series to compute things no one else could compute — including the first 16 decimal digits of $\pi$ via $\pi = 6 \int_0^{1/2} \frac{dx}{\sqrt{1 - x^2}}$, expanded via the binomial series and integrated term by term. This *was* the first power-series-based calculation in mathematical history.
->
-> Newton's 1665 binomial series is one of the founding moments of analysis. Maclaurin's general framework came 77 years later and showed the binomial series was a *special case* of a much wider theory.
+Historically this derivation runs backwards. Newton had the series in **1665**, seventy-seven years before Maclaurin's framework existed to derive it from — he reached it by interpolating the coefficient pattern instead, and the full account of how is at the end of this card.
 
 ---
 
@@ -485,7 +480,9 @@ This forced the formula $\binom{n}{k} = \dfrac{n(n-1)\cdots(n-k+1)}{k!}$ — the
 
 Newton verified the conjecture by computing $\sqrt{1 + x}$ as a series, squaring it back, and checking the result equalled $1 + x$ termwise. *He had no rigorous proof.* He had numerical agreement, which was enough.
 
-His first application: compute $\pi$. From the area of a unit circle, $\dfrac{\pi}{4} = \int_0^1 \sqrt{1 - x^2}\,dx$. Expand $\sqrt{1 - x^2}$ as a binomial series, integrate term by term, evaluate. Newton got 16 decimal digits of $\pi$ — the most accurate value computed in Europe at that point. He never published it; the calculation appeared in his unpublished *De Methodis Serierum et Fluxionum* (1671), circulated among friends.
+His first application: compute $\pi$. He took the circular segment under $y = \sqrt{x - x^2} = \sqrt{x}\,(1 - x)^{1/2}$, expanded the $(1-x)^{1/2}$ factor by his new series, and integrated term by term — but only from $0$ to $\tfrac{1}{4}$, not across the whole circle. Adding the triangle that completes the sector recovers $\pi$.
+
+**The short interval is the whole trick, and it is §4's convergence lesson two centuries early.** Near $x = 0$ the terms collapse fast, so a handful of them pin many digits; integrating out towards $x = 1$, where the series crawls, would have bought him almost nothing for the same labour. Newton got 16 decimal digits — the most accurate value computed in Europe at that point. He never published it; the calculation circulated among friends in the unpublished *De Methodis Serierum et Fluxionum* (1671).
 
 **Maclaurin's 1742 *Treatise of Fluxions* gave the general framework** (Taylor series, with the now-standard $f^{(k)}(0)/k!$ formula), which makes the binomial series a corollary. But Newton had it first.
 

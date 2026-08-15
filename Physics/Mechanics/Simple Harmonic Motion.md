@@ -17,7 +17,6 @@ leads_to:
   - "[[Pendulums]]"
   - "[[Waves I: The Wave Equation]]"
   - "[[The Quantum Harmonic Oscillator]]"
-  - "[[Stories/The Pendulum Story]]"
   - "[[The Pendulum Story]]"
 tags:
   - subject/physics

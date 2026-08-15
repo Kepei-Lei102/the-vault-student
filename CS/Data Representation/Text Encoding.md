@@ -183,11 +183,11 @@ The lesson under the fun: **bytes carry no label saying which treaty wrote them.
 
 ## Exam Notes
 
-### Cambridge 0478 (IGCSE)
+### Cambridge 0478 (IGCSE) — **Paper 1**
 
 **§1.2.1 — text representation.** Expect to: explain what a **character set** is (the complete collection of characters a system can represent, each with a unique binary code); describe **ASCII** (7-bit, 128 characters, English-only) and **Unicode** (a superset covering all languages and emoji); and answer the standard comparison — *why does Unicode require more bits per character, and what does that cost/gain?* (More characters need more bits; costs storage, gains every language.) You will **not** be asked to memorise specific codes.
 
-### Cambridge 9618 (A-Level)
+### Cambridge 9618 (A-Level) — **Paper 1** (AS)
 
 **§1.1** includes character representation: internal binary form of character data "depending on the character set used," with **ASCII, extended ASCII and Unicode** named explicitly. Expect conversions in context (given a partial ASCII table, encode/decode a short string) and set-vs-set comparisons as in 0478, at more depth: extended ASCII's 8th bit and its incompatible variants are fair game. Again: no memorising code values.
 
@@ -196,6 +196,10 @@ The lesson under the fun: **bytes carry no label saying which treaty wrote them.
 ### IB CS (2027)
 
 Text encoding is **not a named statement**: A1.2's published representation wording stops at binary/hexadecimal conversion and logic gates processing encoded data — character sets, ASCII and Unicode are not listed. Treat this card as the depth behind "encoded data" rather than examinable IB content.
+
+### Where this is *not* examined
+
+**AP Computer Science A** has `char` and `String` in its subset but does not examine character *sets* — ASCII, Unicode, encodings and their widths are all outside it, and there is no file I/O in which an encoding could go wrong. Beyond every board: UTF-8's self-synchronising design, byte-order marks, normalisation forms, and the 乱码 diagnosis gallery are here because they explain the examined facts, not because they are examined.
 
 ---
 

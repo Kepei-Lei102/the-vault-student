@@ -7,6 +7,7 @@ prerequisites:
   - "[[Logic]]"
   - "[[Boltzmann's Tombstone]]"
   - "[[The Boolean-to-Silicon Bridge]]"
+  - "[[A Fight With the Inevitable Errors]]"
 leads_to:
   - "[[Compression]]"
   - "[[Kolmogorov Complexity]]"

@@ -2,6 +2,7 @@
 chinese: 平均数与离散程度 (píngjūnshù yǔ lísàn chéngdù)
 prerequisites:
   - "[[Classifying Data]]"
+  - "[[Greek Letters (Vocab)]]"
 leads_to:
   - "[[Statistical Charts]]"
   - "[[Scatter Diagrams]]"
@@ -89,23 +90,8 @@ Two data sets can have the same mean but look completely different. Test scores 
 | $Q_3$     | Upper quartile (75th percentile)                      |
 | IQR       | Interquartile range: $Q_3 - Q_1$                      |
 
-> [!info] Meeting $\sum$ for the first time — Greek letters in mathematics
-> If probability and statistics is your first mathematics topic, $\sum$ (capital sigma) may be the first Greek letter you encounter in a formula. It stands for **S**um — the capital S of the Greek alphabet.
->
-> Greek letters aren't random — there's a loose tradition behind many of them:
->
-> | Letter | Name | Common use | Why |
-> |--------|------|-----------|-----|
-> | $\sum$ | Sigma (capital) | Sum | **S** for Sum |
-> | $\sigma$ | sigma (lowercase) | Standard deviation | Measures **s**pread — related to the sum of squared deviations |
-> | $\mu$ | mu | Population mean | **M** for Mean |
-> | $\Delta$ / $\delta$ | Delta | Change / difference | **D** for Difference — $\Delta x$ means "change in $x$" |
-> | $\pi$ | pi | Circle ratio ≈ 3.14159 | **P** for Perimeter — originally the ratio of **p**erimeter to diameter |
-> | $\theta$ | theta | Angles | Traditional — theta has meant angle since ancient Greek geometry |
-> | $\epsilon$ | epsilon | Very small quantity | Suggests something **ε**vanescently small |
-> | $\lambda$ | lambda | Rate / parameter | Used in Poisson processes and CS (lambda calculus) |
->
-> The pattern: **capital Greek letters often represent operations or large objects** ($\sum$ sum, $\Pi$ product, $\Delta$ change), while **lowercase Greek letters represent quantities or parameters** ($\sigma$ deviation, $\mu$ mean, $\pi$ ratio). You don't need to memorise this — you'll absorb it naturally as you meet each letter in context.
+> [!info] Meeting $\sum$ for the first time
+> If statistics is your first mathematics topic, $\sum$ (capital sigma) may be the first Greek letter you meet inside a formula. It stands for **S**um — the capital S of the Greek alphabet — and its lowercase partner $\sigma$ measures **s**pread. That pattern holds widely: capital Greek letters name operations, lowercase ones name quantities. The full alphabet, with pronunciations and the letter collisions to watch for, is in [[Greek Letters (Vocab)]].
 
 ---
 

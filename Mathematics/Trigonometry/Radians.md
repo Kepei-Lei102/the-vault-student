@@ -18,6 +18,7 @@ leads_to:
   - "[[Trigonometric Equations]]"
   - "[[Trigonometric Graphs]]"
   - "[[Trigonometric Identities]]"
+  - "[[Polar Coordinates]]"
 tags:
   - subject/mathematics
   - domain/trigonometry

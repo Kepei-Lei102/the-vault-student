@@ -7,6 +7,7 @@ leads_to:
   - "[[Identity Matrix]]"
   - "[[Matrix Transformations]]"
   - "[[Combination of Transformations]]"
+  - "[[Determinants and Inverses]]"
 tags:
   - subject/mathematics
   - domain/matrices
@@ -143,6 +144,8 @@ At 9260 this is simple — only the first two cases appear.
 > 3. **Artificial intelligence.** Neural networks are built on matrix multiplications. The Transformer architecture (behind ChatGPT, image generators, etc.) is fundamentally a sequence of matrix operations. Linear algebra is the language AI thinks in.
 >
 > At 9260 you only see $2 \times 2$ matrices. But the same ideas scale — a $1000 \times 1000$ matrix works exactly the same way, just bigger.
+>
+> And if the whole thing feels like a tool that arrived from nowhere — a grid with a strange multiplication rule — that feeling has a history, and it is told in [[Determinants and Inverses]] §"Where matrices came from": the counting-board arrays of the 九章算术, Leibniz's determinant, Sylvester's *womb*, Cayley's algebra, and the physicist who reinvented matrices in 1925 without knowing they existed.
 
 ---
 

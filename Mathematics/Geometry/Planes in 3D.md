@@ -318,7 +318,7 @@ $\mathbf{a}\cdot\mathbf{n} - p$ comes out negative and gets reported as a negati
 - **Tool:** [[Cross Product]] — builds every normal here (plane through three points, line of intersection, skew-line sandwich); its scalar triple product is the numerator of the skew-distance formula in disguise.
 - **The trilogy closes:** point (position vector) → line (one parameter) → plane (two parameters) — each object is "anchor + span," with one more direction of freedom each time.
 - **Application:** [[Matrix]] — a system of three linear equations *is* three planes; solving it is asking where they meet (the configurations live under Beyond Syllabus).
-- **For 9231 students:** [[MF19 Reference (9709)]] — no plane formulas are given; memorise or re-derive from the shadow picture.
+- **For 9231 students:** [[MF19 Reference (9231)]] — no plane formulas are given; memorise or re-derive from the shadow picture.
 
 ## Beyond Syllabus
 

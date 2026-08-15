@@ -187,9 +187,15 @@ $$(6k)^2 - 4(10)(k^2 - 10) = 0 \;\Longrightarrow\; 36k^2 - 40k^2 + 400 = 0 \;\Lo
 > [!tip] Discriminant inequalities are quadratic in $k$
 > When you get to "$\Delta > 0$ in $k$", you typically face a *quadratic inequality in $k$*. Solve it the standard way: factorise, find roots in $k$, sketch a sign chart (see [[Quadratic Equations]]). The whole problem reduces to two layers of quadratic algebra — first in $x$ to set up the discriminant, then in $k$ to solve the inequality.
 
-### A-Level / 9709
+### Cambridge 9709 — Pure Mathematics 1, §1.1
 
-A-Level extends to: discriminants of *higher-degree* polynomials (mostly via factoring and depressed forms), discriminant-style criteria for repeated factors, and *complex roots* when $\Delta < 0$. The 0606 patterns are direct prerequisites.
+The named learning objective: **find the discriminant of a quadratic polynomial $ax^2+bx+c$ and use the discriminant** — with the syllabus's own example being *to determine the number of real roots of $ax^2+bx+c = 0$*, and the explicit note that **knowledge of the term "repeated root" is included**. Use that exact phrase in answers: "repeated root" is the syllabus's word for the $\Delta = 0$ case, and examiners look for it.
+
+In practice the 0606 patterns above carry over unchanged — tangency via $\Delta = 0$, ranges of $k$ via a quadratic inequality in $k$ — with P1's line-and-curve questions (§1.3 coordinate geometry) as the usual costume. When $\Delta < 0$ on Paper 3, the roots are a conjugate pair in [[Complex Numbers]].
+
+### Cambridge 9231 Further Mathematics — the discriminant promoted to a mapping tool
+
+Further Pure 1 §1.2 turns this page's tool onto a bigger target: for a rational function, setting $y$ equal to it and clearing the denominator gives **a quadratic in $x$ whose coefficients contain $y$** — and demanding $\Delta \geq 0$ maps out the *entire set of values the function takes*, with the band edges landing on the turning values. The full method, its degenerate case and a worked real-paper example live in [[Rational Functions and Graphs]]. Same $b^2-4ac$, promoted from answering "how many roots?" to charting where a curve can and cannot go.
 
 ### IB AA / AP
 

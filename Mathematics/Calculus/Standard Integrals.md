@@ -1,6 +1,7 @@
 ---
 chinese: 标准积分 (biāozhǔn jīfēn)
 prerequisites:
+  - "[[Hyperbolic Functions]]"
   - "[[Integration]]"
   - "[[Differentiation Rules]]"
   - "[[Logarithms]]"
@@ -414,6 +415,17 @@ For modern computer algebra: Robert Risch (1968) proved a complete decision proc
 **NOT on 9709:** $\int \dfrac{1}{\sqrt{a^2 - x^2}}\,dx \to \arcsin$. The syllabus says *"Derivatives of $\sin^{-1}x$ and $\cos^{-1}x$ are not required"* (P3 §3.4), and the $\arcsin$ integral is correspondingly out of scope. Knowing it anyway is enrichment for IB/AP students.
 
 **NOT on 9709:** the $\int \sec x\,dx$ Weierstrass-lite trick. Beyond syllabus but pedagogically essential — it's one of the cleanest demonstrations of the "multiply by a clever 1" technique that recurs throughout integration theory.
+
+### Cambridge 9231 Further Mathematics — **Further Pure 2, Paper 2**
+
+The card carries a `syllabus/9231-2-4` tag and the tables mark rows "9231 only", but the section itself was missing until 2026-08-12. **§2.4 Integration** asks for:
+
+- the three integrals $\displaystyle\int\frac{dx}{\sqrt{a^2-x^2}}$, $\displaystyle\int\frac{dx}{\sqrt{x^2+a^2}}$, $\displaystyle\int\frac{dx}{\sqrt{x^2-a^2}}$ **by trigonometric or hyperbolic substitution** — the substitutions themselves ($x = a\sin\theta$, $x = a\sinh u$, $x = a\cosh u$) come from [[Hyperbolic Functions]], and all three results are **printed on MF19**, so marks ride on the working and the limits rather than the answer;
+- **reduction formulae** — derive $I_n$ in terms of $I_{n-1}$ (usually by parts) and run the recursion down to a base case;
+- **rectangle bounds for sums** — sandwiching $\sum f(r)$ between integrals;
+- **arc length and surface of revolution**, in Cartesian, parametric *and* polar form.
+
+Only the first bullet lives on this page; the rest belong to [[Integration by Parts]], [[Areas and Volumes by Integration]] and their neighbours. A 9231 candidate reading this card for §2.4 should treat it as one quarter of the row.
 
 ### IB AA HL
 

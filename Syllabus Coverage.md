@@ -10,20 +10,21 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-08-12` · built 2026-08-12 from commit `d3c697b` + uncommitted changes  
-> 325 cards · 391 diagrams · 55 explainers · 90 illustrations
+> **Edition** `student-2026-08-15` · built 2026-08-15 from commit `f5b31a6`  
+> 337 cards · 415 diagrams · 57 explainers · 93 illustrations
 
 ---
 
 ## Cambridge IGCSE 0478 Computer Science
 
-*20 syllabus points · 34 card references*
+*22 syllabus points · 36 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.1 | [[Bitwise Operations]], [[Number Bases]], [[Overflow and Underflow]], [[Two's Complement]] |
 | 1.2 | [[Image Encoding]], [[Sound Encoding]], [[Text Encoding]] |
 | 1.3 | [[Compression]], [[Storage Units (Vocab)]] |
+| 2.2 | [[Error Detection and Correction]] |
 | 3 | [[Pipelining and Simultaneous Multithreading]] |
 | 3.1 | [[Assembly Language]], [[CPU Architecture and the Fetch-Execute Cycle]], [[Embedded Systems]], [[RAM and the Memory Hierarchy]], [[Von Neumann machine]] |
 | 3.2 | [[Input and Output Devices]], [[Sensors and Control Systems]] |
@@ -37,6 +38,7 @@ is often taught under a different heading.
 | 7.4 | [[Searching]], [[Sorting]] |
 | 7.9 | [[Program Design]] |
 | 8.2 | [[Arrays]] |
+| 8.3 | [[File Handling]] |
 | 10.1 | [[Logic Gates]] |
 | 10.2 | [[Logic Gates]] |
 | 10.3 | [[Logic Gates]] |
@@ -217,14 +219,18 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9231 Further Mathematics
 
-*14 syllabus points · 28 card references*
+*18 syllabus points · 36 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| 1.2 | [[Cubic Graphs]], [[Modulus Function]] |
-| 1.4 | [[Identity Matrix]], [[Matrix]], [[Matrix Transformations]] |
+| 1.1 | [[Symmetric Functions of Roots]] |
+| 1.2 | [[Cubic Graphs]], [[Modulus Function]], [[Rational Functions and Graphs]] |
+| 1.3 | [[Summation of Series]] |
+| 1.4 | [[Combination of Transformations]], [[Determinants and Inverses]], [[Identity Matrix]], [[Invariant Points and Lines]], [[Matrix]], [[Matrix Transformations]] |
+| 1.5 | [[Polar Coordinates]] |
 | 1.6 | [[3D Vectors and the Scalar Product]], [[Cross Product]], [[Planes in 3D]], [[Vector Equations of Lines]] |
 | 1.7 | [[Proof by Induction]] |
+| 2.1 | [[Hyperbolic Functions]] |
 | 2.3 | [[Differentiation Rules]], [[Implicit Differentiation]], [[Maclaurin Series]], [[Parametric Differentiation]] |
 | 2.4 | [[Integration]], [[Integration by Parts]], [[Standard Integrals]] |
 | 2.5 | [[Complex Numbers]], [[Euler's Formula and De Moivre's Theorem]] |
@@ -342,7 +348,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*30 syllabus points · 59 card references*
+*32 syllabus points · 63 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -356,10 +362,12 @@ is often taught under a different heading.
 | 4.3 | [[Assembly Language]], [[Bitwise Operations]] |
 | 5.1 | [[Operating Systems]] |
 | 5.2 | [[Compilers and Interpreters]] |
+| 6.2 | [[Error Detection and Correction]] |
 | 9.1 | [[Program Design]] |
 | 9.2 | [[Program Design]] |
-| 10.1 | [[Arrays]] |
+| 10.1 | [[Arrays]], [[Cambridge Pseudocode]] |
 | 10.2 | [[Arrays]], [[Searching]], [[Sorting]] |
+| 10.3 | [[Cambridge Pseudocode]], [[File Handling]] |
 | 10.4 | [[Linked List]], [[Stacks and Queues]] |
 | 11.1 | [[Cambridge Pseudocode]], [[Program Design]] |
 | 11.2 | [[Cambridge Pseudocode]] |
@@ -479,13 +487,14 @@ is often taught under a different heading.
 
 ## AP Calculus BC
 
-*4 syllabus points · 4 card references*
+*5 syllabus points · 5 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.8 | [[Squeeze Theorem]] |
 | 5.1 | [[Mean Value Theorem]] |
 | 6.6 | [[Properties of Definite Integrals]] |
+| 9 | [[Polar Coordinates]] |
 | 10 | [[Maclaurin Series]] |
 
 ## AP Physics 1
@@ -566,7 +575,7 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*6 syllabus points · 14 card references*
+*7 syllabus points · 15 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -576,6 +585,7 @@ is often taught under a different heading.
 | A2.3 | [[Compression]] |
 | B2.2 | [[Arrays]] |
 | B2.4 | [[Big-O Notation]], [[Recursion]], [[Searching]], [[Sorting]] |
+| B2.5 | [[File Handling]] |
 
 ## IB Physics
 

@@ -5,6 +5,7 @@ prerequisites:
 leads_to:
   - "[[Matrix Transformations]]"
   - "[[Combination of Transformations]]"
+  - "[[Determinants and Inverses]]"
 tags:
   - subject/mathematics
   - domain/matrices

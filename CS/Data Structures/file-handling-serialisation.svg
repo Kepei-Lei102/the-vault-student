@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .hd    { font-size: 14px; font-weight: 600; }
+    .mono  { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; }
+    .small { font-size: 12.5px; }
+    .note  { font-size: 12.5px; }
+  </style>
+
+  <text x="440" y="30" class="hd" text-anchor="middle">One record, three ways to flatten it into a line of text</text>
+
+  <rect x="250" y="46" width="380" height="52" rx="4"
+        fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="68" class="small" text-anchor="middle">name = "Smith, John"</text>
+  <text x="440" y="88" class="small" text-anchor="middle">amount = 42.50</text>
+
+  <!-- 1. delimiter -->
+  <text x="52" y="140" class="hd" fill="#dc2626">1 &#183; a delimiter</text>
+  <rect x="52" y="152" width="776" height="42" rx="3"
+        fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="70" y="179" class="mono">Smith<tspan fill="#dc2626">,</tspan> John<tspan fill="#059669">,</tspan>42.50</text>
+  <text x="300" y="179" class="small" fill="#dc2626">the red comma is inside the name, not between fields</text>
+  <text x="52" y="214" class="small">Cheap and readable. Splits into <tspan fill="#dc2626">three</tspan> fields where there should be two &#8212; silently, with no error anywhere.</text>
+
+  <!-- 2. fixed width -->
+  <text x="52" y="256" class="hd" fill="#f59e0b">2 &#183; fixed width</text>
+  <rect x="52" y="268" width="776" height="42" rx="3"
+        fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="70" y="295" class="mono">Smith, John<tspan opacity="0.4">.........</tspan><tspan>   42.50</tspan></text>
+  <text x="300" y="295" class="small">the dots are padding: characters 1&#8211;20 are the name, 21&#8211;28 the amount</text>
+  <text x="52" y="330" class="small">Always safe: you already know where to cut. The padding is wasted space, and a name longer than 20 cannot be stored at all.</text>
+
+  <!-- 3. length prefix -->
+  <text x="52" y="372" class="hd" fill="#059669">3 &#183; a length prefix</text>
+  <rect x="52" y="384" width="776" height="42" rx="3"
+        fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.6"/>
+  <text x="70" y="411" class="mono"><tspan fill="#059669">11,</tspan>Smith, John42.50</text>
+  <text x="300" y="411" class="small" fill="#059669">the green 11 says: take eleven characters, whatever they are</text>
+  <text x="52" y="446" class="small">Safe and tight. Nothing is forbidden inside the data and nothing is padded &#8212; which is why real binary formats use it.</text>
+
+  <line x1="52" y1="466" x2="828" y2="466" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="440" y="490" class="note" text-anchor="middle">Flattening throws the boundaries away. Every scheme here answers one question: where does this field end?</text>
+</svg>

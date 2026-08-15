@@ -417,6 +417,16 @@ $$
 
 **Syllabus refs:** 9709 **P1 §1.7** (basic differentiation, polynomials and trig), **P2 §2.4** (extends to log/exp/composite), **P3 §3.4** (full elementary function table including reciprocal trig). All derivatives in this card are A-Level Pure Maths content. *(Watch the numbering: differentiation is the seventh subsection of Paper 1 but the fourth of Papers 2 and 3 — §1.3 is coordinate geometry, and §2.3 / §3.3 are trigonometry.)*
 
+### Cambridge 9231 Further Mathematics — **Further Pure 2, Paper 2**
+
+The per-board tables above mark eight rows as 9231 territory, but the section was missing until 2026-08-12. **§2.3 Differentiation** wants:
+
+- the derivatives of $\sin^{-1} x$, $\cos^{-1} x$, $\tan^{-1} x$ **and the inverse hyperbolic functions** — every one of them **printed on MF19**, so the examinable skill is applying them inside a chain or quotient rule, not recalling them;
+- $\dfrac{d^2y}{dx^2}$ for relations given **implicitly or parametrically** — see [[Implicit Differentiation]] and [[Parametric Differentiation]], where the parametric second derivative's extra $\dfrac{dt}{dx}$ factor is the standard mark-loser;
+- the **first few terms of a Maclaurin series** — [[Maclaurin Series]].
+
+Note the split with 9709: Cambridge deliberately keeps $\sin^{-1}$ and $\cos^{-1}$ derivatives *out* of single maths (P3 §3.4 says so explicitly) and hands them to Further, which is why the row here reads ⚪ for 9709 and why [[Standard Integrals]] has no $\arcsin$ integral on 9709. The hyperbolic derivatives are one line from the $e^x$ definitions — [[Hyperbolic Functions]] derives them, including why $\dfrac{d}{dx}\cosh x$ carries **no minus sign**.
+
 ### IB AA / AP
 
 IB AA HL and AP Calculus AB/BC require all entries in the table including the inverse-trig three. AP BC additionally tests partial fraction integration and trig substitution (which use the $\arctan$ and $\arcsin$ rows of the table read backwards).

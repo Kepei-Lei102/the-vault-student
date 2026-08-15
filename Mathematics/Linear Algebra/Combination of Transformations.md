@@ -4,7 +4,8 @@ prerequisites:
   - "[[Matrix]]"
   - "[[Identity Matrix]]"
   - "[[Matrix Transformations]]"
-leads_to: []
+leads_to:
+  - "[[Invariant Points and Lines]]"
 tags:
   - subject/mathematics
   - domain/matrices
@@ -13,6 +14,7 @@ tags:
   - level/pre-AP
   - curriculum/OxAQA-9260
   - syllabus/9260-G26
+  - syllabus/9231-1-4
   - type/definition
   - misconception/matrix-multiplication-order
 ---

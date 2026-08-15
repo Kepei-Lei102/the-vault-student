@@ -8,6 +8,7 @@ prerequisites:
   - "[[Fractional Equations (Vocab)]]"
   - "[[Surds]]"
 leads_to:
+  - "[[Symmetric Functions of Roots]]"
   - "[[Simultaneous Equations (Vocab)]]"
   - "[[Sketching Curves (Vocab)]]"
   - "[[Graphs of Functions]]"
@@ -21,6 +22,7 @@ leads_to:
   - "[[Optimisation]]"
   - "[[Quadratic Inequalities]]"
   - "[[Substitution Equations]]"
+  - "[[Rational Functions and Graphs]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -283,6 +285,27 @@ The numbers are $9$ and $12$.
 ### Cambridge 0606
 
 **Syllabus ref:** 2.2 — "Solve quadratic equations for real roots." 0606 additionally expects: (a) forming quadratics from given roots using sum/product, (b) conditions for real/complex roots via discriminant, (c) maximum/minimum problems using completed square form.
+
+
+### Cambridge 9709 (A-Level Mathematics) — **Paper 1, §1.1 Quadratics**
+
+Quadratics open the A-Level syllabus and carry five named learning objectives — this was missing from the card until 2026-08-13:
+
+- **complete the square** for $ax^2+bx+c$ and *use* the completed form — to locate the vertex or sketch the graph;
+- **find and use the discriminant**, e.g. to determine the number of real roots. The term **"repeated root"** is explicitly included;
+- **solve quadratic equations *and quadratic inequalities*** in one unknown, by factorising, completing the square, or the formula;
+- **solve by substitution a pair of simultaneous equations** of which one is linear and one quadratic;
+- **recognise and solve equations which are quadratic in some function of $x$** — the sneaky one, and the one students miss. The syllabus's own examples are $x^4 - 5x^2 + 4 = 0$, $x - 6\sqrt{x} + 1 = 0$ and $\tan^2 x = 1 + \tan x$: nothing announces itself as a quadratic, and spotting the disguise is the mark. [[Substitution Equations]] carries that technique.
+
+The discriminant is by far the most examined of the five, usually as a *condition* rather than a calculation — "find the values of $k$ for which the line meets the curve twice" is a discriminant question wearing a geometry costume.
+
+### Cambridge 9231 Further Mathematics — where the Vieta section leads
+
+The Vieta section above is the **degree-2 case of a Further Pure 1 topic**. 9231 §1.1 removes the restriction on degree, extending $\alpha+\beta=-b/a$ to cubics and quartics and adding substitutions that transform the roots — see [[Symmetric Functions of Roots]]. Worth knowing while teaching it: the two relations here are not a quadratic trick, they are the first two of a general pattern, and students who learn them as a special case have to unlearn that later.
+
+### Where this is *not* examined
+
+Nothing here is beyond any of the boards covered — quadratics are universal. The **beyond-syllabus** material below (complex roots when $b^2-4ac<0$, the geometry of the discriminant) is examined only once [[Complex Numbers]] is available, which is A-Level and later.
 
 ---
 

@@ -6,9 +6,11 @@ prerequisites:
   - "[[Expanding Brackets (Vocab)]]"
   - "[[Algebraic Fractions (Vocab)]]"
 leads_to:
+  - "[[Symmetric Functions of Roots]]"
   - "[[Partial Fractions]]"
   - "[[Binomial Series]]"
   - "[[Cubic Equations]]"
+  - "[[Rational Functions and Graphs]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -373,6 +375,16 @@ The same algorithm appears in **AS / A-Level Pure Maths**, with the partial-frac
 Polynomial division per se isn't a CED-listed topic — but it's a prerequisite for **partial fractions integration** (BC Topic 6.10). AP students who haven't seen it in pre-calc will need it the day partial fractions arrives. Synthetic division is more common in US pre-calc curricula than in international syllabi.
 
 ---
+
+### Cambridge 9231 Further Mathematics — the licence behind Further Pure 1
+
+Polynomial division is not itself a named 9231 row, but the **factor theorem it rests on is what licenses the central move of FP1 §1.1**: a polynomial with roots $\alpha, \beta, \gamma$ must factor as $a(x-\alpha)(x-\beta)(x-\gamma)$, and expanding *that* is where every relation between roots and coefficients comes from — see [[Symmetric Functions of Roots]]. A student shaky on why a root forces a linear factor will treat those relations as magic.
+
+It also reappears as machinery on FP2: §2.2's characteristic equation is a polynomial whose roots are the eigenvalues, and reducing it once a root is known is exactly this division.
+
+### Where this is *not* examined
+
+Not on **0580** or **0606** — IGCSE stops at factorising quadratics and the factor theorem for cubics without formal long division. Not a named topic on **IB AA** (SL or HL) or **AP Calculus**, though both assume the skill wherever partial fractions or rational-function limits appear. Synthetic division is on no syllabus at all; it is here because it is faster and the exam does not care how you got the quotient.
 
 ## §10 Connections
 

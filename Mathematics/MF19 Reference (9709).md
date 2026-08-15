@@ -17,7 +17,7 @@ tags:
 
 The Cambridge 9709 exam gives you **List MF19** — a printed booklet of formulas, distributed with every exam paper. You will have it in front of you for every question.
 
-This card is the **map** of MF19 against the vault's content for Papers 1, 3, 4, and 5. For every formula you'd learn from a vault card, this card tells you:
+This card is the **map** of MF19 against the vault's content for Papers 1, 3, 4, 5 and 6. (Paper 2 is the AS-only route — Paper 3 is the A Level one — so it gets no separate treatment here.) The booklet's Further pages, which serve 9231, are audited in [[MF19 Reference (9231)]]. For every formula you'd learn from a vault card, this card tells you:
 
 - ✅ **Given** — it's on MF19. Don't memorise it; just be familiar with how to use it.
 - ❌ **Not given** — *if you're taking 9709, you need to memorise this* (or be able to re-derive it quickly). The exam room has no internet, no AI, no notes.
@@ -54,7 +54,7 @@ For each paper section below:
 
 ---
 
-## Pure Mathematics — Papers 1, 2, 3
+## Pure Mathematics — Papers 1 and 3
 
 ### Mensuration ✅ (all given)
 
@@ -104,7 +104,7 @@ MF19 gives you everything in the mensuration zone:
 | Double angle $\sin 2A$, $\cos 2A$ (all 3 forms), $\tan 2A$ | ✅ | [[Trigonometric Identities]] |
 | Principal value ranges for $\sin^{-1}, \cos^{-1}, \tan^{-1}$ | ✅ | [[Trigonometric Functions]], [[Inverse Function]] |
 
-**Must memorise (not on MF19) — for 9709 P1/P2/P3:**
+**Must memorise (not on MF19) — for 9709 P1/P3:**
 
 - **Exact special-angle values** for $\sin, \cos, \tan$ at $0°, 30°, 45°, 60°, 90°, 180°$. These are not on MF19 and are constantly needed. Memorise the special-angle table.
 - **Sine and cosine rules** for triangles ($\dfrac{a}{\sin A} = \dfrac{b}{\sin B}$, $a^2 = b^2 + c^2 - 2bc\cos A$). Not on MF19 — must memorise. Same for area $\tfrac{1}{2}ab\sin C$.
@@ -334,6 +334,14 @@ The **t-distribution critical values** for small-sample tests are on **MF19 page
 - **Median, mode of a continuous distribution** — definitions, not formulas.
 
 ---
+
+## The Further pages — handed over
+
+MF19 is **one booklet serving two qualifications**: Cambridge 9709 *and* 9231. Its later pages carry Further Pure, Further Mechanics and Further Probability & Statistics sections, plus the $t$, $\chi^2$ and two Wilcoxon tables, and this card does not audit them.
+
+**[[MF19 Reference (9231)]] does**, formula by formula, and a 9231 candidate should read both cards — because the booklet has no partition in it, and the Pure pages audited *here* serve Further rows too. The scalar product, the $\tan^{-1}$ derivative and the binomial series are all in this half and all examined over there.
+
+A 9709 candidate needs nothing from those pages. Turning to them is allowed and simply finds material that is not on the 9709 syllabus.
 
 ## Summary — your memorise lists, by paper
 

@@ -169,13 +169,15 @@ Going **down**: bigger, cheaper per bit, slower. Going **up**: smaller, costlier
 
 ## Exam Notes
 
-### Cambridge 0478 (IGCSE) — §3.3 primary storage, §3.1.3 cache
+### Cambridge 0478 (IGCSE) — §3.3 primary storage, §3.1.3 cache — **Paper 1**
 
 - State **RAM vs ROM** crisply: RAM is *volatile, read/write*, holds the programs/data **currently in use**; ROM is *non-volatile, read-only*, holds the start-up/boot instructions (firmware, e.g. the BIOS). "Volatile" = contents lost when power is off.
 - Know **DRAM vs SRAM** and the differences the board asks for: DRAM uses **capacitors**, needs **constant refreshing**, is slower and cheaper, and is used for **main memory**; SRAM uses **flip-flops**, needs **no refreshing**, is faster and more expensive, and is used for **cache**. The 0478 cache point (§3.1.3) is exactly this: cache is fast SRAM between the CPU and RAM that holds frequently/recently used data so the CPU waits on slow RAM less often — more cache → fewer trips to RAM → better performance.
 - **Virtual memory** (§3.3.4) — when RAM is full, the OS uses part of the *secondary storage* as if it were extra RAM, paging data in and out. It is slow (disk speeds) and is a *stopgap*, not real RAM — the full machinery (paging, replacement, thrashing) lives in [[Operating Systems]].
 
-### Cambridge 9618 (A-Level) — §3.1 components, §4.1 cache, §15.2 flip-flops
+### Cambridge 9618 (A-Level) — §3.1 components + §4.1 cache (**Paper 1**, AS) · §15.2 flip-flops (**Paper 3**, A2)
+
+Note the split: everything about RAM, ROM and cache is AS theory on Paper 1, while the flip-flop that *is* an SRAM cell is A2 sequential logic on Paper 3 — so the same physical circuit is examined twice, two years apart, from opposite directions.
 
 - §3.1 / §4.1: explain how **cache** improves performance and how **more cache or a larger/faster RAM** affects a system. Use the hierarchy: registers → L1/L2/L3 cache (SRAM) → main memory (DRAM); the closer and faster the memory, the smaller and dearer it is. Tie performance to the **hit rate** and the cost of a **miss** to DRAM.
 - §15.2 connection: the SRAM cell *is* a **flip-flop** (a bistable latch built from cross-coupled gates) — *why* such a circuit matters (it is how a computer remembers a bit) is the whole story above; the systematic treatment of **SR / JK / D-type** flip-flops belongs to sequential logic ([[Flip-Flops]]), simplified with the algebra and maps of [[Boolean Algebra]] and [[Karnaugh Maps]].
@@ -183,6 +185,10 @@ Going **down**: bigger, cheaper per bit, slower. Going **up**: smaller, costlier
 ### IB Computer Science — A1.1 Computer hardware and operation
 
 Memory sits inside A1.1 (computer fundamentals): the RAM/ROM distinction, cache, and the memory hierarchy are core vocabulary for explaining CPU performance, and the RAM-vs-storage distinction recurs whenever A1.1 asks what happens to data at power-off. The 9618-style mechanism language above (capacitor + refresh for DRAM, flip-flop for SRAM) is beyond what IB requires but is exactly the kind of justified explanation its extended responses reward.
+
+### Where this is *not* examined
+
+**AP Computer Science A does not examine memory hardware at all** — it is a Java programming course, and RAM, cache and the hierarchy are outside its subset. Volatility still matters there indirectly, since it is the reason a program's data has to be written somewhere to survive, but AP CSA has no file I/O either. Nothing on this page about capacitors, refresh, sense amplifiers or the memory wall is examined on any of the four boards.
 
 > [!info] Beyond syllabus — why these cells are the way they are
 > The capacitor's $Q = CV$ and its $RC$ leak (full story in [[Capacitors]]); the **sense amplifier** that resolves a femtofarad of charge into a clean 0/1; the **6T** SRAM cell as two inverters in positive feedback (the simplest bistable element); the **memory wall** and why the entire cache hierarchy is a workaround for it. None of this is examined, but it is the *reason* the exam facts are true — and it is where the bridge to electromagnetism ([[Capacitors]]) and to digital logic ([[Logic Gates]] → flip-flops) actually lives.

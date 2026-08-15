@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 452" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .hd    { font-size: 13.5px; font-weight: 600; }
+    .math  { font-family: 'Times New Roman', serif; font-style: italic; font-size: 14px; }
+    .val   { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13.5px; }
+    .small { font-size: 12px; }
+    .note  { font-size: 12.5px; }
+  </style>
+
+  <text x="440" y="26" class="hd" text-anchor="middle">The equation supplies the roots. It does not supply their names.</text>
+  <text x="440" y="48" class="small" text-anchor="middle">x&#179; &#8722; 6x&#178; + 11x &#8722; 6 = 0   has roots   {1, 2, 3}   &#8212; in no particular order</text>
+
+  <!-- three labellings -->
+  <rect x="300" y="66" width="176" height="58" rx="4" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/>
+  <rect x="490" y="66" width="176" height="58" rx="4" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.6"/>
+  <rect x="680" y="66" width="176" height="58" rx="4" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.6"/>
+
+  <text x="388" y="86" class="small" text-anchor="middle" fill="#2563eb">labelling A</text>
+  <text x="578" y="86" class="small" text-anchor="middle" fill="#7c3aed">labelling B</text>
+  <text x="768" y="86" class="small" text-anchor="middle" fill="#0891b2">labelling C</text>
+
+  <text x="388" y="110" class="val" text-anchor="middle">&#945;=1  &#946;=2  &#947;=3</text>
+  <text x="578" y="110" class="val" text-anchor="middle">&#945;=3  &#946;=1  &#947;=2</text>
+  <text x="768" y="110" class="val" text-anchor="middle">&#945;=2  &#946;=3  &#947;=1</text>
+
+  <text x="60" y="110" class="small">all three describe</text>
+  <text x="60" y="126" class="small">the same equation</text>
+
+  <line x1="52" y1="146" x2="856" y2="146" stroke="#888" stroke-width="1" opacity="0.35"/>
+
+  <!-- rows that change -->
+  <text x="60" y="180" class="math" fill="#dc2626">&#945;</text>
+  <text x="388" y="180" class="val" text-anchor="middle" fill="#dc2626">1</text>
+  <text x="578" y="180" class="val" text-anchor="middle" fill="#dc2626">3</text>
+  <text x="768" y="180" class="val" text-anchor="middle" fill="#dc2626">2</text>
+  <text x="130" y="180" class="small" fill="#dc2626">changes</text>
+
+  <text x="60" y="212" class="math" fill="#dc2626">&#945; &#8722; &#946;</text>
+  <text x="388" y="212" class="val" text-anchor="middle" fill="#dc2626">&#8722;1</text>
+  <text x="578" y="212" class="val" text-anchor="middle" fill="#dc2626">2</text>
+  <text x="768" y="212" class="val" text-anchor="middle" fill="#dc2626">&#8722;1</text>
+  <text x="130" y="212" class="small" fill="#dc2626">changes</text>
+
+  <text x="232" y="196" class="small" fill="#dc2626">no formula in a, b, c, d can reach these</text>
+  <line x1="52" y1="234" x2="856" y2="234" stroke="#888" stroke-width="1" opacity="0.35"/>
+
+  <!-- rows that survive -->
+  <text x="60" y="268" class="math" fill="#059669">&#945; + &#946; + &#947;</text>
+  <text x="388" y="268" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="578" y="268" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="768" y="268" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="150" y="268" class="small" fill="#059669">survives  =  &#8722;b/a</text>
+
+  <text x="60" y="300" class="math" fill="#059669">&#945;&#946; + &#946;&#947; + &#947;&#945;</text>
+  <text x="388" y="300" class="val" text-anchor="middle" fill="#059669">11</text>
+  <text x="578" y="300" class="val" text-anchor="middle" fill="#059669">11</text>
+  <text x="768" y="300" class="val" text-anchor="middle" fill="#059669">11</text>
+  <text x="150" y="300" class="small" fill="#059669">survives  =  c/a</text>
+
+  <text x="60" y="332" class="math" fill="#059669">&#945;&#946;&#947;</text>
+  <text x="388" y="332" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="578" y="332" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="768" y="332" class="val" text-anchor="middle" fill="#059669">6</text>
+  <text x="150" y="332" class="small" fill="#059669">survives  =  &#8722;d/a</text>
+
+  <text x="60" y="364" class="math" fill="#059669">&#945;&#178; + &#946;&#178; + &#947;&#178;</text>
+  <text x="388" y="364" class="val" text-anchor="middle" fill="#059669">14</text>
+  <text x="578" y="364" class="val" text-anchor="middle" fill="#059669">14</text>
+  <text x="768" y="364" class="val" text-anchor="middle" fill="#059669">14</text>
+  <text x="150" y="364" class="small" fill="#059669">survives  =  6&#178; &#8722; 2(11)</text>
+
+  <line x1="52" y1="390" x2="856" y2="390" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="440" y="414" class="note" text-anchor="middle">A quantity the coefficients can compute must be one that shuffling the labels leaves alone.</text>
+  <text x="440" y="436" class="note" text-anchor="middle">That is why every question on this topic asks for a symmetric function &#8212; and never for a single root.</text>
+</svg>

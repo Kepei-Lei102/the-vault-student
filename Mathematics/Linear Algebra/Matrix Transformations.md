@@ -9,6 +9,8 @@ prerequisites:
   - "[[Vectors]]"
 leads_to:
   - "[[Combination of Transformations]]"
+  - "[[Determinants and Inverses]]"
+  - "[[Invariant Points and Lines]]"
 tags:
   - subject/mathematics
   - domain/matrices

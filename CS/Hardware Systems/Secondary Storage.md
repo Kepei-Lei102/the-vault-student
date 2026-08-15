@@ -5,6 +5,7 @@ prerequisites:
   - "[[Gray Code]]"
 leads_to:
   - "[[Operating Systems]]"
+  - "[[File Handling]]"
   - "[[File Systems]]"
   - "[[Error Detection and Correction]]"
   - "[[How a Chip Is Made]]"
@@ -242,6 +243,8 @@ The pattern to name in an exam answer: **no medium wins every axis** — every r
 
 > [!warning] "Defragment your drives regularly."
 > On an HDD, defragmenting genuinely helps: it gathers each file's blocks into contiguous runs, so the head seeks less. On an SSD it is *worse than useless* — there is no head and no seek penalty to remove, so it gains nothing, and the mass rewriting burns the very program/erase cycles the drive's life is counted in. A habit from one technology, harmful on its successor.
+>
+> And the CD completes the picture, because it does the opposite on purpose: consecutive audio samples are **deliberately scattered** far apart along the spiral (*interleaving*), so that a scratch — one long continuous wound on the disc — lands as a few small, widely separated errors in the data stream, exactly the damage its [[Error Detection and Correction|error-correcting code]] can repair. A CD ships permanently "fragmented", and there is no defragmenter for it because the fragmentation *is* the protection. Three media, three verdicts on the same phenomenon, each decided by what that medium fears: the HDD fears the seek, the SSD fears the rewrite, the disc fears the scratch. ([[Stories/A Fight With the Inevitable Errors]] tells how that trick was designed in.)
 
 > [!warning] "An SSD is just a big USB stick."
 > Same flash cells, different machine around them. An SSD adds a serious controller, a RAM cache, many flash chips written in parallel, and aggressive wear levelling; a cheap USB stick has one slow chip and a minimal controller. That's why the same "flash memory" spans 50 MB/s sticks and 7 000 MB/s drives. And the *shape* has stopped being a guide in either direction: there are now stick-shaped external drives with full SSD controllers inside, and a camera's **CFexpress card is literally an NVMe SSD in a card shell** — same PCIe lanes, same protocol as a laptop's drive (which is why it sustains the multi-gigabit video an SD card's slower bus cannot). Judge the machine — controller, channels, interface — never the costume.

@@ -9,10 +9,8 @@ prerequisites:
 leads_to:
   - "[[Poisson Distribution]]"
   - "[[Repeated Measurements]]"
-  - "[[Stories/The Naming of Normal]]"
   - "[[Linear Combinations of Random Variables]]"
   - "[[Continuous Random Variables]]"
-  - "[[Stories/Inventing Variance]]"
   - "[[Sampling and Estimation]]"
   - "[[Hypothesis Tests]]"
   - "[[Inventing Variance]]"

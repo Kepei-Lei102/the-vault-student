@@ -7,6 +7,7 @@ prerequisites:
   - "[[Differentiation]]"
   - "[[Exponential Growth and Decay]]"
 leads_to:
+  - "[[Hyperbolic Functions]]"
   - "[[Poisson Distribution]]"
   - "[[Integration]]"
   - "[[Differential Equations]]"

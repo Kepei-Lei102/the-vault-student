@@ -5,23 +5,23 @@ written for international curricula: Cambridge IGCSE and A-Level, IB, and AP.
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> **Edition** `student-2026-08-12` · built 2026-08-12 from commit `d3c697b` + uncommitted changes  
-> 325 cards · 391 diagrams · 55 explainers · 90 illustrations
+> **Edition** `student-2026-08-15` · built 2026-08-15 from commit `f5b31a6`  
+> 337 cards · 415 diagrams · 57 explainers · 93 illustrations
 
 ---
 
 ## What's inside
 
-**325 Markdown cards** across five collections, plus the figures that go with them —
-**391 SVG diagrams** (many animated), **55 MP4 explainers**, and
-**90 illustrations and comics**.
+**337 Markdown cards** across five collections, plus the figures that go with them —
+**415 SVG diagrams** (many animated), **57 MP4 explainers**, and
+**93 illustrations and comics**.
 
 | Folder | Cards | What it is |
 |---|---|---|
-| `Mathematics/` | 201 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
+| `Mathematics/` | 210 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
 | `Physics/` | 37 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
-| `CS/` | 46 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
-| `Stories/` | 30 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
+| `CS/` | 48 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
+| `Stories/` | 31 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
 | `Meta/` | 11 | Methodology cards: how to *think* across domains. |
 
 Every concept appears in **both English and Chinese**, with key terminology anchored in each
@@ -159,7 +159,7 @@ Each card follows a consistent structure:
 10. **LaTeX Reference** — the notation used
 
 **Vocab cards** (50–120 lines) are short reference notes for syllabus terminology.
-**Deep cards** (200–350 lines) carry the proofs, worked examples and extensions.
+**Deep cards** (typically 300–450 lines) carry the proofs, worked examples and extensions.
 
 ---
 

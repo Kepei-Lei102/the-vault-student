@@ -8,6 +8,7 @@ leads_to:
   - "[[Gray Code]]"
   - "[[Text Encoding]]"
   - "[[Assembly Language]]"
+  - "[[Error Detection and Correction]]"
 tags:
   - subject/computer-science
   - subject/mathematics

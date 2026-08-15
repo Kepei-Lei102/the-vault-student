@@ -19,6 +19,7 @@ leads_to:
   - "[[Second-Order Differential Equations]]"
   - "[[Galois at Twenty]]"
   - "[[The Argument for i]]"
+  - "[[Polar Coordinates]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -385,22 +386,25 @@ Writing $\lvert z - 2 \rvert \leq 3$ and treating it as $\lvert z - 2 \rvert = 3
 ### Cambridge 9709 (A-Level)
 
 **Syllabus refs:** Paper 3 §3.9 — *complex numbers*. The 2026–27 syllabus lists:
-- Cartesian form $a + bi$ and the meaning of $\Re(z)$, $\Im(z)$.
-- Argand diagram representation; modulus and argument; the principal argument.
-- Polar form $r(\cos\theta + i\sin\theta)$, conversions both ways.
-- Multiplication and division using polar form (modulus multiplies, argument adds).
-- Conjugate $\bar{z}$ and its properties; using $\bar{z}$ to divide in Cartesian form.
+- Cartesian form $a + bi$ and the meaning of $\Re(z)$, $\Im(z)$; equality via matching real and imaginary parts.
+- Argand diagram representation; modulus and argument — and note the syllabus's own flexibility on the interval: *the argument will usually be $-\pi < \theta \leqslant \pi$, but $0 \leqslant \theta < 2\pi$ may be more convenient; answers may use either unless the question specifies*.
+- Polar form — and the syllabus writes it as $r(\cos\theta + i\sin\theta) \equiv re^{i\theta}$, so **Euler's form is officially on 9709 P3**, not an extra. Use $re^{i\theta}$ freely; it is the syllabus's own notation.
+- Multiplication and division in polar form, including $\lvert z_1 z_2\rvert = \lvert z_1\rvert\lvert z_2\rvert$ and $\arg(z_1z_2) = \arg z_1 + \arg z_2$ with the division counterparts.
+- Conjugate $\bar{z}$ and its properties; using $\bar{z}$ to divide in Cartesian form — with the syllabus warning that *full details of the working should be shown* for multiplication and division.
+- **Find the two square roots of a complex number** — the syllabus's own example is the square roots of $5 + 12i$ in exact Cartesian form. Method: set $(a+bi)^2 = 5+12i$, match parts ($a^2 - b^2 = 5$, $2ab = 12$), solve the pair — here $\pm(3 + 2i)$. A reliable 4–5 mark question, and again *full working shown*.
 - Solving polynomial equations with complex roots, including the conjugate-root theorem for real-coefficient polynomials.
-- Loci in the Argand diagram: $\lvert z - a \rvert = r$, $\lvert z - a \rvert = \lvert z - b \rvert$, $\arg(z - a) = \theta$, and inequalities thereof.
+- The **geometrical effects**, in simple terms, of conjugating and of the four operations — reflection in the real axis, translation, rotation-and-scaling.
+- Loci in the Argand diagram: $\lvert z - a \rvert = r$, $\lvert z - a \rvert = \lvert z - b \rvert$, $\arg(z - a) = \alpha$, and inequalities thereof.
 
-**What is *not* on 9709 P3:** Euler's form $e^{i\theta}$ and De Moivre's theorem are not formally in the syllabus. Both are taught in the companion card [[Euler's Formula and De Moivre's Theorem]] because they make polar-form computation vastly faster — apply them freely on exam day to *compute* polar answers; just don't cite them as named theorems on the mark scheme. (Cambridge 9231 Further Pure adds them formally.)
+**What is genuinely *not* on 9709 P3:** **De Moivre's theorem** — that, with roots of unity and the multiple-angle applications, is 9231 territory, taught in [[Euler's Formula and De Moivre's Theorem]].
 
 **Typical question shapes (6–10 marks):**
 1. *Express $z = (a + bi)/(c + di)$ in Cartesian form* — rationalise with conjugate. (3 marks)
 2. *Find the modulus and argument of $z$* — quadrant-aware. (2 marks)
 3. *Write $z$ in polar form* — combining the above. (1–2 marks)
 4. *Sketch the locus of $z$ such that $\ldots$ on an Argand diagram* — and compute area / specific points. (3–6 marks)
-5. *Given that $z = a + bi$ is a root of $P(z) = 0$, find all roots* — use conjugate-root theorem + polynomial-divide. (5–7 marks)
+5. *Find the square roots of $w$ in exact form* — match real and imaginary parts of $(a+bi)^2 = w$. (4–5 marks)
+6. *Given that $z = a + bi$ is a root of $P(z) = 0$, find all roots* — use conjugate-root theorem + polynomial-divide. (5–7 marks)
 
 **Tip.** Always sketch the Argand diagram for argument and locus questions. The diagram catches quadrant mistakes that the algebra alone misses.
 

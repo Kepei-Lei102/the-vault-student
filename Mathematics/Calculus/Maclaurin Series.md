@@ -10,6 +10,7 @@ prerequisites:
   - "[[Limit]]"
   - "[[Binomial Series]]"
   - "[[L'Hôpital's Rule]]"
+  - "[[Summation of Series]]"
 leads_to:
   - "[[Numerical Methods]]"
   - "[[Differential Equations]]"

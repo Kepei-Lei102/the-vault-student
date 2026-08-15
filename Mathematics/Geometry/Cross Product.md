@@ -308,7 +308,7 @@ The cross product is a first-week tool in **multivariable calculus** (normals, s
 - **Physics bridge:** [[Torque]] and [[Angular Momentum]] — the rotational-dynamics cards where $\mathbf{r}\times\mathbf{F}$ and $\mathbf{r}\times\mathbf{p}$ become the central objects.
 - **Physics bridge — electromagnetism:** [[Lorentz Force]] — the magnetic force $\mathbf{F}=q\mathbf{v}\times\mathbf{B}$ is a cross product, and [[Maxwell's Equations]] — two of the four are built on the curl $\nabla\times$. This is where the cross product's right-handedness becomes the right-hand rule of every physics classroom.
 - **Historical sibling:** [[Stories/The Argument for i]] — Hamilton's 1843 quaternions are where the cross product was *born*: the vector part of multiplying two pure quaternions *is* the cross product, and $\mathbf{i}\times\mathbf{j}=\mathbf{k}$ mirrors his $ij=k$.
-- **For 9231 students:** [[MF19 Reference (9709)]] — which vector formulas are printed on the Cambridge sheet vs need memorising. (IB AA HL and other boards have their own booklets.)
+- **For 9231 students:** [[MF19 Reference (9231)]] — and the answer is sharp: the **scalar** product is printed in MF19's Pure pages, the **vector** product appears nowhere in the booklet at all. Everything on this page is memorise-and-derive.
 
 ---
 

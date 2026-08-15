@@ -332,7 +332,7 @@ The student stops "when $x_n$ and $x_{n+1}$ agree to 4 decimal places" and think
 
 ### Cambridge 9709 (A-Level)
 
-**Syllabus refs:** P3 §3.6 (also P2 §2.6) — *numerical solution of equations*. Lists:
+**Syllabus refs:** P3 §3.6 — *numerical solution of equations*. Lists:
 - Sign-change location and bisection (briefly).
 - Fixed-point iteration $x_{n+1} = F(x_n)$ — checking convergence by considering $\lvert F'(\alpha) \rvert$ at or near the root.
 - Newton-Raphson iteration $x_{n+1} = x_n - \dfrac{f(x_n)}{f'(x_n)}$.
@@ -396,7 +396,7 @@ The hierarchy goes: 9709 §3.6 is the entry point. Numerical Analysis 101 builds
 - **Application:** [[Standard Integrals]] — Simpson's rule and other numerical integration methods are the integration counterparts of these root-finding methods.
 - **Application — beyond syllabus:** Newton's method on complex polynomials gives the **Newton fractals** — basins of attraction with self-similar boundaries. Connects to [[Complex Numbers]] and [[Euler's Formula and De Moivre's Theorem]].
 - **Application — beyond syllabus:** Every iterative optimisation algorithm in machine learning (gradient descent, Adam, L-BFGS) is a fixed-point iteration. Newton's method for systems is the foundational step.
-- **Closes:** 9709 P3 §3.6 (the last 🔴 row in the P3 map) **and** 9709 P2 §2.6.
+- **Closes:** 9709 P3 §3.6 — the last 🔴 row in the P3 map.
 - **For 9709 students:** [[MF19 Reference (9709)]] — the Newton-Raphson formula is *not* on the MF19 sheet. Memorise it.
 
 ---

@@ -379,7 +379,7 @@ The student tries $\kappa e^{2x}$ against a CF containing $e^{2x}$, gets $0 = 8e
 - **Electrical costume:** [[Capacitors]] — the RC circuit is the first-order cousin; adding an inductor makes the series RLC circuit, which obeys exactly $L\frac{d^2Q}{dt^2} + R\frac{dQ}{dt} + \frac{Q}{C} = V(t)$ — inductance as mass, resistance as friction, $1/C$ as stiffness. One equation, mechanical and electrical costumes.
 - **Story:** [[Stories/The Pendulum Story]] — Galileo's chandelier to the caesium clock, with Tacoma Narrows as the dark twin of isochronism (and the honest flutter-vs-resonance correction).
 - **Approximation link:** [[Maclaurin Series]] — why *linear* equations rule physics: near equilibrium, any restoring force is its tangent line ($F(x) \approx F'(0)\,x$), so small motions of almost anything obey the linear constant-coefficient equation. The pendulum's $\sin\theta \approx \theta$ is the canonical instance.
-- **For 9231 students:** [[MF19 Reference (9709)]] — MF19 carries no ODE formulas at all; memorise the three-case table and the PI trials.
+- **For 9231 students:** [[MF19 Reference (9231)]] — MF19 carries no ODE formulas at all; memorise the three-case table and the PI trials.
 
 ## Beyond Syllabus
 

@@ -14,6 +14,7 @@ leads_to:
   - "[[Numerical Methods]]"
   - "[[Searching]]"
   - "[[Sorting]]"
+  - "[[Summation of Series]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -346,7 +347,7 @@ Both **arithmetic progressions** and **quadratic sequences** are named directly 
 
 ### A-Level and Beyond
 
-A-Level Pure 2 and IB Mathematics AA both revisit sequences with more machinery:
+A-Level (Cambridge Paper 3; the equivalent second pure paper elsewhere) and IB Mathematics AA both revisit sequences with more machinery:
 
 - Recurrence relations of higher order (solving $u_{n+2} = au_{n+1} + bu_n$ — Fibonacci-style).
 - Proof by induction that a proposed $n$th term is correct.

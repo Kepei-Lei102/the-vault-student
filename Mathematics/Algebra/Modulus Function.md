@@ -7,6 +7,7 @@ prerequisites:
   - "[[Linear Inequalities (Vocab)]]"
 leads_to:
   - "[[Cubic Graphs]]"
+  - "[[Rational Functions and Graphs]]"
 tags:
   - subject/mathematics
   - domain/algebra

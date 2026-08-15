@@ -341,7 +341,7 @@ This pattern — "approach to equilibrium exponentially" — appears in RC circu
 
 ### Example — population with carrying capacity (the logistic)
 
-Already worked in §2 example 3. Set up: $\dot N = kN(1 - N/L)$ where $L$ is the carrying capacity. Solution: the logistic curve. Models: cane toads in Australia, COVID infection rate before containment, market saturation, sigmoid neural activation. *One ODE, four different fields use it daily.*
+Solved in full at §2 example 3, and repeated here on purpose: there it was an integration exercise, here it is the modelling pattern, and you should be able to meet it from either direction. Set up: $\dot N = kN(1 - N/L)$ where $L$ is the carrying capacity. Solution: the logistic curve. Models: cane toads in Australia, COVID infection rate before containment, market saturation, sigmoid neural activation. *One ODE, four different fields use it daily.*
 
 ---
 
@@ -436,11 +436,8 @@ The integrating-factor technique is **not** AP BC content; it appears in undergr
 
 ### Beyond high school — University
 
-Differential equations is a full one-to-two-semester undergraduate subject. Standard topics extending §3.8:
+Differential equations is a full one-to-two-semester undergraduate subject. Three of the standard extensions of §3.8 — second-order linear equations and the complex eigenvalues that put oscillation into them, systems $\dot{\mathbf x} = A\mathbf{x}$ and their phase portraits, and the nonlinear-and-chaotic regime — are taken up in the Beyond Syllabus section, with the full second-order machinery (CF + PI, all three root cases, resonance, reduction by substitution) at [[Second-Order Differential Equations]]. The rest:
 
-- **Second-order linear ODEs** with constant coefficients: $\ddot y + a\dot y + by = f(t)$. Characteristic equation $\lambda^2 + a\lambda + b = 0$ → three cases by discriminant (real distinct roots → exponentials; repeated root → $te^{\lambda t}$ term; complex conjugate pair → $e^{\sigma t}(A\cos\omega t + B\sin\omega t)$, *oscillation*). The complex-eigenvalue case is the natural home of [[Complex Numbers|complex numbers]] in physics. The full machinery — CF + PI, all three root cases, resonance, reduction by substitution — is at [[Second-Order Differential Equations]].
-- **Systems of ODEs** — vector $\dot{\mathbf x} = A\mathbf{x}$. Eigenvalues of $A$ classify phase-portrait behaviour (sources, sinks, saddles, spirals, centres). The foundation of *dynamical systems*.
-- **Nonlinear ODEs and chaos** — Lorenz system, three-body problem, predator-prey models. Local linearisation, Poincaré-Bendixson theorem.
 - **Partial differential equations (PDEs)** — derivatives with respect to multiple variables: the heat equation, wave equation, Laplace equation, Schrödinger equation (see [[Stories/The Argument for i]] Act V). Far harder than ODEs.
 - **Numerical methods for ODEs**: Euler, Runge-Kutta (RK4 is the workhorse), implicit methods, stiff ODEs.
 - **Lie symmetry methods**: a symmetry-based unifying framework for analytic ODE solving.
@@ -491,11 +488,11 @@ This is the entry point to **qualitative theory of ODEs** — a 20th-century fra
 
 ### Picard-Lindelöf as a fixed-point theorem
 
-The existence-and-uniqueness theorem for first-order ODEs is a *consequence* of the Banach Fixed-Point Theorem applied to the integral form
+Recall the existence-and-uniqueness theorem from §4. It is a *consequence* of the Banach Fixed-Point Theorem. Define the **Picard operator**
 
-$$y(x) = y_0 + \int_{x_0}^x F(t, y(t))\,dt.$$
+$$\mathcal{T}[y](x) = y_0 + \int_{x_0}^x F(t, y(t))\,dt,$$
 
-If you define the **Picard operator** $\mathcal{T}[y](x) = y_0 + \int_{x_0}^x F(t, y(t))\,dt$, then a fixed point of $\mathcal{T}$ (i.e. $y = \mathcal{T}[y]$) is exactly a solution of the ODE. Under mild conditions on $F$, $\mathcal{T}$ is a contraction on a space of continuous functions, and Banach gives a unique fixed point. *That's the proof.*
+and a fixed point of $\mathcal{T}$ — a $y$ with $y = \mathcal{T}[y]$ — is exactly a solution of the ODE. Under mild conditions on $F$, $\mathcal{T}$ is a contraction on a space of continuous functions, and Banach hands you a unique fixed point. *That's the proof.*
 
 Cross-link to [[Numerical Methods]] beyond-syllabus: Banach is the master framework, ODE existence is one instance, fixed-point iteration is another, and Newton-Raphson is a third.
 

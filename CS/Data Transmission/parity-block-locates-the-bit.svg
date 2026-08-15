@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .hd    { font-size: 13.5px; font-weight: 600; }
+    .bit   { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; }
+    .par   { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; fill: #7c3aed; font-weight: 600; }
+    .bad   { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; fill: #dc2626; font-weight: 700; }
+    .lbl   { font-size: 11.5px; opacity: 0.75; }
+    .note  { font-size: 12.5px; }
+    .fail  { font-size: 11.5px; fill: #dc2626; font-weight: 600; }
+  </style>
+
+  <text x="40" y="26" class="hd">Parity on the rows and on the columns. One flipped bit now has nowhere to hide.</text>
+
+  <!-- highlight bands: the failing row and the failing column -->
+  <rect x="52" y="152" width="358" height="30" fill="rgba(220,38,38,0.12)"/>
+  <rect x="251" y="54" width="34" height="252" fill="rgba(220,38,38,0.12)"/>
+
+  <!-- column headings -->
+  <text x="60"  y="70" class="lbl">col</text>
+  <text x="112" y="70" class="lbl" text-anchor="middle">1</text>
+  <text x="151" y="70" class="lbl" text-anchor="middle">2</text>
+  <text x="190" y="70" class="lbl" text-anchor="middle">3</text>
+  <text x="229" y="70" class="lbl" text-anchor="middle">4</text>
+  <text x="268" y="70" class="lbl" text-anchor="middle" fill="#dc2626">5</text>
+  <text x="307" y="70" class="lbl" text-anchor="middle">6</text>
+  <text x="346" y="70" class="lbl" text-anchor="middle">7</text>
+  <text x="392" y="70" class="lbl" text-anchor="middle" fill="#7c3aed">P</text>
+
+  <line x1="369" y1="54" x2="369" y2="306" stroke="#888" stroke-width="1" opacity="0.4"/>
+  <line x1="52"  y1="266" x2="412" y2="266" stroke="#888" stroke-width="1" opacity="0.4"/>
+
+  <!-- row 1 -->
+  <text x="60"  y="104" class="lbl">row 1</text>
+  <text x="112" y="104" class="bit" text-anchor="middle">1</text>
+  <text x="151" y="104" class="bit" text-anchor="middle">0</text>
+  <text x="190" y="104" class="bit" text-anchor="middle">1</text>
+  <text x="229" y="104" class="bit" text-anchor="middle">1</text>
+  <text x="268" y="104" class="bit" text-anchor="middle">0</text>
+  <text x="307" y="104" class="bit" text-anchor="middle">0</text>
+  <text x="346" y="104" class="bit" text-anchor="middle">1</text>
+  <text x="392" y="104" class="par" text-anchor="middle">0</text>
+
+  <!-- row 2 -->
+  <text x="60"  y="138" class="lbl">row 2</text>
+  <text x="112" y="138" class="bit" text-anchor="middle">0</text>
+  <text x="151" y="138" class="bit" text-anchor="middle">1</text>
+  <text x="190" y="138" class="bit" text-anchor="middle">1</text>
+  <text x="229" y="138" class="bit" text-anchor="middle">0</text>
+  <text x="268" y="138" class="bit" text-anchor="middle">1</text>
+  <text x="307" y="138" class="bit" text-anchor="middle">0</text>
+  <text x="346" y="138" class="bit" text-anchor="middle">1</text>
+  <text x="392" y="138" class="par" text-anchor="middle">0</text>
+
+  <!-- row 3 — the damaged one -->
+  <text x="60"  y="172" class="lbl" fill="#dc2626">row 3</text>
+  <text x="112" y="172" class="bit" text-anchor="middle">1</text>
+  <text x="151" y="172" class="bit" text-anchor="middle">1</text>
+  <text x="190" y="172" class="bit" text-anchor="middle">0</text>
+  <text x="229" y="172" class="bit" text-anchor="middle">0</text>
+  <text x="268" y="172" class="bad" text-anchor="middle">1</text>
+  <text x="307" y="172" class="bit" text-anchor="middle">1</text>
+  <text x="346" y="172" class="bit" text-anchor="middle">1</text>
+  <text x="392" y="172" class="par" text-anchor="middle">0</text>
+
+  <!-- row 4 -->
+  <text x="60"  y="206" class="lbl">row 4</text>
+  <text x="112" y="206" class="bit" text-anchor="middle">0</text>
+  <text x="151" y="206" class="bit" text-anchor="middle">0</text>
+  <text x="190" y="206" class="bit" text-anchor="middle">1</text>
+  <text x="229" y="206" class="bit" text-anchor="middle">1</text>
+  <text x="268" y="206" class="bit" text-anchor="middle">1</text>
+  <text x="307" y="206" class="bit" text-anchor="middle">1</text>
+  <text x="346" y="206" class="bit" text-anchor="middle">0</text>
+  <text x="392" y="206" class="par" text-anchor="middle">0</text>
+
+  <!-- the parity byte -->
+  <text x="60"  y="292" class="lbl" fill="#7c3aed">parity</text>
+  <text x="112" y="292" class="par" text-anchor="middle">0</text>
+  <text x="151" y="292" class="par" text-anchor="middle">0</text>
+  <text x="190" y="292" class="par" text-anchor="middle">1</text>
+  <text x="229" y="292" class="par" text-anchor="middle">0</text>
+  <text x="268" y="292" class="par" text-anchor="middle">0</text>
+  <text x="307" y="292" class="par" text-anchor="middle">0</text>
+  <text x="346" y="292" class="par" text-anchor="middle">1</text>
+  <text x="392" y="292" class="par" text-anchor="middle">0</text>
+
+  <!-- verdicts -->
+  <text x="424" y="168" class="fail">row 3 now holds an</text>
+  <text x="424" y="184" class="fail">odd number of 1s</text>
+  <text x="268" y="326" class="fail" text-anchor="middle">column 5 is odd too</text>
+  <text x="60"  y="326" class="lbl">each column&#8217;s parity</text>
+
+  <line x1="560" y1="40" x2="560" y2="404" stroke="#888" stroke-width="1" opacity="0.25"/>
+
+  <!-- right: the reasoning -->
+  <text x="590" y="86" class="hd">The two failures intersect at exactly one bit.</text>
+
+  <rect x="590" y="106" width="316" height="56" rx="5" fill="rgba(220,38,38,0.10)" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="604" y="128" class="note">Row 3 fails, so the damage is in row 3.</text>
+  <text x="604" y="150" class="note">Column 5 fails, so it is in column 5.</text>
+
+  <rect x="590" y="178" width="316" height="38" rx="5" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.4"/>
+  <text x="604" y="202" class="note" fill="#059669">Only one bit is in both. Flip it back.</text>
+
+  <text x="590" y="252" class="note">A single parity bit could only ever say</text>
+  <text x="590" y="272" class="note">&#8220;something in here is wrong&#8221;. A second</text>
+  <text x="590" y="292" class="note">direction turns that into a coordinate &#8212; and a</text>
+  <text x="590" y="312" class="note">wrong bit with an address has one repair.</text>
+
+  <line x1="590" y1="336" x2="906" y2="336" stroke="#888" stroke-width="1" opacity="0.3"/>
+  <text x="590" y="362" class="note">Two bits flipped in one row leave that row&#8217;s</text>
+  <text x="590" y="382" class="note">parity intact while both columns fail: detected,</text>
+  <text x="590" y="402" class="note">not locatable. Every scheme has a limit.</text>
+</svg>

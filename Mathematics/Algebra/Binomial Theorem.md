@@ -8,6 +8,7 @@ prerequisites:
   - "[[Counting Problems]]"
   - "[[Expanding Brackets (Vocab)]]"
 leads_to:
+  - "[[Symmetric Functions of Roots]]"
   - "[[Power Rule]]"
   - "[[Arithmetic and Geometric Progressions]]"
   - "[[Taylor Series]]"

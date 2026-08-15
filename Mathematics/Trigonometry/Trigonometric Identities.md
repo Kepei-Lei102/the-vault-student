@@ -8,10 +8,12 @@ prerequisites:
   - "[[Coordinate Geometry of the Circle]]"
   - "[[Exact Trigonometric Values]]"
 leads_to:
+  - "[[Hyperbolic Functions]]"
   - "[[Trigonometric Equations]]"
   - "[[Differentiation Rules]]"
   - "[[Euler's Formula and De Moivre's Theorem]]"
   - "[[Standard Integrals]]"
+  - "[[Polar Coordinates]]"
 tags:
   - subject/mathematics
   - domain/trigonometry

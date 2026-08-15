@@ -9,6 +9,7 @@ prerequisites:
 leads_to:
   - "[[Binomial Series]]"
   - "[[Differential Equations]]"
+  - "[[Summation of Series]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -355,6 +356,16 @@ Now each piece is a $(1 - u)^{-1}$ or $(1 + u)^{-1}$ — a [[Binomial Series|bin
 
 Many separable [[Differential Equations|ODEs]] produce integrals like $\int \dfrac{1}{y(y - 1)}\,dy = \ln\lvert y\rvert - \ln\lvert y - 1\rvert + C$ via partial fractions. The logistic-growth ODE is the canonical example.
 
+### Application 4 — summing a series by the method of differences
+
+The Further Pure payoff, and the one that most looks like magic. A sum such as $\displaystyle\sum_{r=1}^{n}\frac{1}{r(r+1)}$ has no common difference and no common ratio, so neither progression formula touches it — but decomposing the general term turns it into a difference:
+
+$$\frac{1}{r(r+1)} = \frac{1}{r} - \frac{1}{r+1}$$
+
+Now consecutive terms destroy each other in pairs and the whole sum collapses to its two ends, $1 - \frac{1}{n+1}$. **[[Summation of Series]]** is where that machinery lives; what matters here is the direction of the arrow — decomposition is not a step *within* the method, it is what makes the method available at all, and the syllabus wording says outright that producing the decomposition is the candidate's job.
+
+One decomposition-side check is worth carrying over: **for a decomposition to be able to telescope, its coefficients must sum to zero.** In $\frac1r - \frac1{r+1}$ they are $1$ and $-1$; in $\frac{1}{r(r+1)(r+2)} = \frac{1}{2r} - \frac{1}{r+1} + \frac{1}{2(r+2)}$ they are $\tfrac12, -1, \tfrac12$. Coefficients that fail to cancel are the fastest signal that the decomposition itself is wrong.
+
 > [!info] Beyond syllabus — Laplace transforms and inverse transforms
 > In an engineering / control-theory context (university level), partial fractions is the workhorse for **inverting Laplace transforms**. A transfer function $H(s) = \dfrac{N(s)}{D(s)}$ gets decomposed, and each piece corresponds to a known time-domain function (exponentials, sines, polynomials in $t$). The system's response is then read off as a sum of those pieces. Partial fractions is the algebraic backbone of every undergraduate signals-and-systems course.
 
@@ -453,11 +464,7 @@ The AP Calculus reference sheet does not list partial-fraction shapes; you memor
 
 ### Beyond high school — University
 
-University courses on **differential equations**, **complex analysis**, and **signals and systems** use partial fractions every week. The technique extends to:
-
-- Decomposition over $\mathbb{C}$ — every polynomial factors completely into linear factors over the complex numbers, so the irreducible-quadratic case disappears (and the resulting complex coefficients combine in conjugate pairs to give the real linear-numerator term).
-- **Hermite-Ostrogradski reduction** — an algorithmic method for separating the rational part of an antiderivative from the logarithmic-and-arctan part, used in computer algebra systems.
-- **Residue calculus** in complex analysis — the cover-up method generalises to "residues at simple poles," and the entire theory of contour integration is built on partial-fraction-like decompositions of meromorphic functions.
+University courses on **differential equations**, **complex analysis**, and **signals and systems** use partial fractions every week — decomposition over $\mathbb{C}$, the Hermite-Ostrogradski reduction that computer-algebra systems run, and residue calculus, where the cover-up method turns out to have been a residue at a simple pole all along. The Beyond Syllabus section takes each in turn.
 
 ---
 
@@ -485,12 +492,9 @@ University courses on **differential equations**, **complex analysis**, and **si
 
 ### Why partial fractions exists at all — the algebraic structure
 
-Every rational function $\dfrac{P(x)}{D(x)}$ over $\mathbb{R}$ admits a unique partial-fraction decomposition. This is not a coincidence — it's a corollary of two classical results:
+Recall the two classical results from §3: the **fundamental theorem of algebra** over $\mathbb{R}$, which guarantees $D(x)$ factors into linear and irreducible-quadratic pieces, and the **Chinese Remainder Theorem** for $\mathbb{R}[x]$, which turns that factorisation into a direct-sum decomposition $\mathbb{R}[x]/(D) \cong \mathbb{R}[x]/(D_1) \oplus \ldots \oplus \mathbb{R}[x]/(D_k)$ for pairwise-coprime factors. Partial fractions is that direct sum written out on the field of rational functions $\mathbb{R}(x)$ — which is why it always works, and why uniqueness comes for free.
 
-1. **Fundamental theorem of algebra (over $\mathbb{R}$).** Every non-constant polynomial in $\mathbb{R}[x]$ factors as a product of linear factors and irreducible quadratic factors. (Over $\mathbb{C}$, every polynomial factors into linear factors only.)
-2. **Chinese Remainder Theorem for polynomial rings.** If $D(x) = D_1(x) \cdot D_2(x) \cdots D_k(x)$ with the $D_i$ pairwise coprime, then $\mathbb{R}[x] / (D(x)) \cong \mathbb{R}[x]/(D_1) \oplus \ldots \oplus \mathbb{R}[x]/(D_k)$.
-
-Together, these say that the field of rational functions $\mathbb{R}(x)$ decomposes as a direct sum over each factor of the denominator. Partial-fraction decomposition is just the explicit description of that direct sum for one element. *That's why it always works; that's why it's unique.*
+Everything below is what happens when you push that structure further.
 
 ### Over $\mathbb{C}$, the irreducible-quadratic case disappears
 

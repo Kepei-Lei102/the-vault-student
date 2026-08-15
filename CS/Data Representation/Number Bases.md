@@ -14,6 +14,7 @@ leads_to:
   - "[[Assembly Language]]"
   - "[[Bitwise Operations]]"
   - "[[Gray Code]]"
+  - "[[Error Detection and Correction]]"
 tags:
   - subject/computer-science
   - subject/mathematics

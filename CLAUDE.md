@@ -4,8 +4,8 @@ This file is the operating manual for an AI agent working inside **The Vault —
 Student Edition** with Claude Code. Read it at the start of every session,
 before answering anything.
 
-> **Edition** `student-2026-08-12` · built 2026-08-12 from commit `d3c697b` + uncommitted changes  
-> 325 cards · 391 diagrams · 55 explainers · 90 illustrations
+> **Edition** `student-2026-08-15` · built 2026-08-15 from commit `f5b31a6`  
+> 337 cards · 415 diagrams · 57 explainers · 93 illustrations
 
 ---
 
@@ -129,9 +129,14 @@ This graph is also the **teaching order**. If a student is stuck on a card,
 `prerequisites` names what to shore up first; `leads_to` names where they're
 headed next. Use it to build a study path, not just to navigate.
 
-A `leads_to` link that resolves to nothing is a **dangling link** — a card that
-is planned but not yet written. That is a real signal: the material expects that
-topic and it isn't here yet. Say so plainly rather than inventing a link target.
+A link that resolves to nothing is a **dangling link**. In a full edition that
+has exactly one meaning — the card is planned but not yet written. The material
+expects that topic and it isn't here yet. Say so plainly rather than inventing a
+link target.
+
+In a **cohort edition** it has two possible meanings that call for opposite
+answers, and getting them the wrong way round tells a student something false
+about their own course. Read §6.1 before you tell anyone a card does not exist.
 
 ### The tag namespace
 
@@ -203,6 +208,40 @@ whenever a question is framed in exam language ("what covers 9618 §10.4?",
 "am I covered for Paper 4?"). It lists only points that *are* covered: a missing
 row means this edition doesn't cover that point, not that the point doesn't
 exist. Search the cards before concluding either way.
+
+### 6.1 The two absences
+
+Some editions are **cohort editions**: they carry only what that class has been
+taught so far, and grow through the year as it is taught. In one of those, a card
+you cannot find is missing for one of two quite different reasons.
+
+You can tell which by checking one file:
+
+> **`Not Yet Released.md`** at the vault root. If it is not present, this edition
+> withholds nothing — every unresolved link is the first case below, and the rest
+> of this section does not apply.
+
+| What you see | What it means | What to say |
+|---|---|---|
+| `**Topic** *(not yet released)*` in prose, or a title listed in `Not Yet Released.md` | **Written, not theirs yet.** The card exists upstream; this class hasn't reached it. | It exists and is coming. If they want it now, tell them to ask their teacher — see below. |
+| A dangling `[[Link]]` with no entry in `Not Yet Released.md` | **Not written yet.** The material expects the topic and nobody has written the card. | Say so plainly. Then answer from your own knowledge, clearly marked as not from the vault (§4.6). |
+
+Never collapse these into "that isn't in the vault". The first is a door, the
+second is a gap, and a student who is told the wrong one either stops asking for
+something they could have had, or waits for something that isn't coming.
+
+**When a student wants a withheld card.** Say yes, and tell them how to ask.
+Wanting to run ahead — especially after finishing everything released to them —
+is not a rule they are breaking; it is the best reason there is. Help them make
+the case: which card, and what they have already finished. Then it is their
+teacher's call, not yours.
+
+What you must not do is route around it. Do not reconstruct a withheld card from
+your own knowledge, do not reassemble it from what other cards quote, and do not
+treat "not yet released" as a formality to be talked past. The sequencing is a
+teaching decision made by someone who knows this student. If they press, answer
+the *question* as best you can from what they do have, and be honest that the
+card itself is theirs to ask for.
 
 ## 7. Reading conventions you'll meet in the cards
 

@@ -241,12 +241,12 @@ The curve comes up from bottom-left, crosses the axis at $x = -1$, rises to a tu
 ### A-Level / 9709 / IB AA / AP
 
 A-Level extends to:
-- **Stationary points** of cubics via $f'(x) = 0$ — exactly two stationary points (since $f'$ is a quadratic), classified using $f''$.
+- **Stationary points** of cubics via $f'(x) = 0$ — **at most** two, since $f'$ is a quadratic and a quadratic has two, one or no real roots: two turning points in the classic S-shape, one stationary inflection when $f'$ has a double root ($y = x^3$ at the origin), or none at all when $f' > 0$ throughout ($y = x^3 + x$, strictly increasing). Classified using $f''$.
 - **Inflection point** at $x = -b/(3a)$ — every cubic has exactly one, located by solving $f''(x) = 0$.
 - **Curve sketching from scratch** — given coefficients, find roots (rational-root theorem if integers, [[Remainder and Factor Theorems]]), turning points, inflection, and asymptotes (none for a polynomial), then sketch.
 - **Connection to integration** — areas under cubics, signed-area considerations when the curve crosses the axis.
 
-IB AA HL adds Cardano's formula explicitly. AP Calculus tests cubic shapes via concavity arguments.
+IB AA HL treats polynomial equations in general — factor and remainder theorems, and the sum-and-product-of-roots results that [[Symmetric Functions of Roots]] develops in full. Cardano's formula itself is on no board's syllabus, which is exactly why it lives below in Beyond Syllabus. AP Calculus tests cubic shapes via concavity arguments.
 
 ---
 
