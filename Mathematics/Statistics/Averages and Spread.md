@@ -11,6 +11,7 @@ leads_to:
   - "[[Histograms]]"
   - "[[Interpreting Data]]"
   - "[[Normal Distribution]]"
+  - "[[Non-Parametric Tests]]"
 tags:
   - subject/mathematics
   - domain/statistics

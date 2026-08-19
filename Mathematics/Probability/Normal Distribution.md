@@ -11,10 +11,13 @@ leads_to:
   - "[[Repeated Measurements]]"
   - "[[Linear Combinations of Random Variables]]"
   - "[[Continuous Random Variables]]"
+  - "[[t-Tests]]"
+  - "[[Chi-Squared Tests]]"
   - "[[Sampling and Estimation]]"
   - "[[Hypothesis Tests]]"
   - "[[Inventing Variance]]"
   - "[[The Naming of Normal]]"
+  - "[[Non-Parametric Tests]]"
 tags:
   - subject/mathematics
   - domain/probability

@@ -7,6 +7,7 @@ prerequisites:
   - "[[Inventing Variance]]"
 leads_to:
   - "[[Hypothesis Tests]]"
+  - "[[t-Tests]]"
 tags:
   - subject/mathematics
   - domain/statistics

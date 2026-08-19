@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .q { font-size: 14px; font-weight: 600; }
+    .a { font-size: 12.5px; }
+    .yn { font-size: 11.5px; font-style: italic; }
+    .note { font-size: 11px; opacity: 0.75; }
+    .title { font-size: 15px; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="26" class="title" text-anchor="middle">which engine? — ask these in order</text>
+
+  <!-- Q1: paired? -->
+  <rect x="330" y="46" width="300" height="46" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="480" y="66" class="q" text-anchor="middle">1. Are the observations naturally paired?</text>
+  <text x="480" y="83" class="note" text-anchor="middle">same individuals measured twice · matched pairs</text>
+
+  <!-- yes → paired t -->
+  <line x1="630" y1="69" x2="742" y2="69" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="686" y="62" class="yn" text-anchor="middle">yes</text>
+  <rect x="746" y="46" width="190" height="46" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="841" y="66" class="a" text-anchor="middle" style="font-weight:600">paired t on the differences</text>
+  <text x="841" y="83" class="note" text-anchor="middle">t = d̄ / (s_d /√n),  ν = n − 1</text>
+
+  <!-- no → Q2 -->
+  <line x1="480" y1="92" x2="480" y2="126" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="492" y="113" class="yn">no</text>
+
+  <!-- Q2: one or two samples -->
+  <rect x="330" y="130" width="300" height="40" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="480" y="155" class="q" text-anchor="middle">2. One sample, or two independent samples?</text>
+
+  <!-- one → left branch -->
+  <line x1="330" y1="150" x2="222" y2="150" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="276" y="143" class="yn" text-anchor="middle">one</text>
+  <!-- two → right branch -->
+  <line x1="630" y1="150" x2="742" y2="150" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="686" y="143" class="yn" text-anchor="middle">two</text>
+
+  <!-- Q3 (one sample): sigma known or n large? -->
+  <rect x="24" y="130" width="196" height="40" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="122" y="148" class="q" text-anchor="middle">3. σ known, or n large?</text>
+  <text x="122" y="163" class="note" text-anchor="middle">(large ≈ 30 or more)</text>
+
+  <line x1="80" y1="170" x2="80" y2="214" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="66" y="196" class="yn" text-anchor="end">yes</text>
+  <rect x="24" y="218" width="112" height="56" rx="8" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="80" y="240" class="a" text-anchor="middle" style="font-weight:600">z-test</text>
+  <text x="80" y="256" class="note" text-anchor="middle">(x̄ − μ₀)/(σ/√n)</text>
+  <text x="80" y="268" class="note" text-anchor="middle">Hypothesis Tests</text>
+
+  <line x1="164" y1="170" x2="164" y2="214" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="178" y="196" class="yn">no</text>
+  <rect x="142" y="218" width="126" height="56" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="205" y="240" class="a" text-anchor="middle" style="font-weight:600">one-sample t</text>
+  <text x="205" y="256" class="note" text-anchor="middle">(x̄ − μ₀)/(s/√n)</text>
+  <text x="205" y="268" class="note" text-anchor="middle">ν = n − 1 · normal pop.</text>
+
+  <!-- Q4 (two samples): both large? -->
+  <rect x="746" y="130" width="190" height="40" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="841" y="148" class="q" text-anchor="middle">4. Both samples large?</text>
+  <text x="841" y="163" class="note" text-anchor="middle">(or both σ known)</text>
+
+  <line x1="790" y1="170" x2="790" y2="214" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="776" y="196" class="yn" text-anchor="end">yes</text>
+  <rect x="704" y="218" width="172" height="70" rx="8" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="790" y="238" class="a" text-anchor="middle" style="font-weight:600">normal engine</text>
+  <text x="790" y="254" class="note" text-anchor="middle">(x̄ − ȳ) / √(s₁²/n₁ + s₂²/n₂)</text>
+  <text x="790" y="268" class="note" text-anchor="middle">variances need not be equal</text>
+  <text x="790" y="282" class="note" text-anchor="middle">compare with 1.645 / 1.96 …</text>
+
+  <line x1="900" y1="170" x2="900" y2="308" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="912" y="240" class="yn">no</text>
+
+  <!-- Q5: common variance assumed? -->
+  <rect x="704" y="312" width="232" height="40" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="820" y="330" class="q" text-anchor="middle">5. Told to assume equal variances?</text>
+  <text x="820" y="345" class="note" text-anchor="middle">"…the same population variance"</text>
+
+  <line x1="760" y1="352" x2="760" y2="392" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="746" y="374" class="yn" text-anchor="end">yes</text>
+  <rect x="640" y="396" width="200" height="60" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.6"/>
+  <text x="740" y="416" class="a" text-anchor="middle" style="font-weight:600">pooled two-sample t</text>
+  <text x="740" y="432" class="note" text-anchor="middle">s_p² from both samples</text>
+  <text x="740" y="446" class="note" text-anchor="middle">ν = n₁ + n₂ − 2</text>
+
+  <line x1="890" y1="352" x2="890" y2="392" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="902" y="374" class="yn">no</text>
+  <rect x="852" y="396" width="100" height="60" rx="8" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="5,3"/>
+  <text x="902" y="418" class="a" text-anchor="middle">Welch's t</text>
+  <text x="902" y="434" class="note" text-anchor="middle">beyond 9231</text>
+  <text x="902" y="448" class="note" text-anchor="middle">(AP's default)</text>
+
+  <!-- footer -->
+  <text x="330" y="330" class="note">Every branch runs the same five-step ritual — the box only decides</text>
+  <text x="330" y="346" class="note">the statistic and the table. Ask 1 first: paired data arrive as two</text>
+  <text x="330" y="362" class="note">columns and look like two samples; the word "paired" is rarely printed.</text>
+  <text x="330" y="392" class="note">amber = a question · green = a t-engine · blue = a normal engine</text>
+</svg>

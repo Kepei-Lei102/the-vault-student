@@ -10,6 +10,7 @@ leads_to:
   - "[[Continuous Random Variables]]"
   - "[[Hypothesis Tests]]"
   - "[[Linear Combinations of Random Variables]]"
+  - "[[Probability Generating Functions]]"
 tags:
   - subject/mathematics
   - domain/probability
@@ -217,7 +218,7 @@ So the mature skill is two-sided. **One:** don't hunt causes that chance already
 
 ### Cambridge 9231 Further Maths (Further Probability & Statistics)
 
-- The Poisson returns twice: inside **probability generating functions** (derive mean/variance/additivity from $e^{\lambda(t-1)}$) and as a target of **$\chi^2$ goodness-of-fit** — fitting Po($\bar{x}$) to observed counts and testing the fit, the formal version of this card's mean-vs-variance diagnostic.
+- The Poisson returns twice: inside [[Probability Generating Functions]] (derive mean/variance/additivity from $e^{\lambda(t-1)}$) and as a target of **$\chi^2$ goodness-of-fit** — fitting Po($\bar{x}$) to observed counts and testing the fit, the formal version of this card's mean-vs-variance diagnostic.
 
 ### Other boards
 

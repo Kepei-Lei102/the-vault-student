@@ -7,7 +7,10 @@ prerequisites:
   - "[[Poisson Distribution]]"
   - "[[Continuous Random Variables]]"
   - "[[Inventing Variance]]"
-leads_to: []
+leads_to:
+  - "[[t-Tests]]"
+  - "[[Chi-Squared Tests]]"
+  - "[[Non-Parametric Tests]]"
 tags:
   - subject/mathematics
   - domain/statistics
@@ -162,7 +165,7 @@ And the 5% itself is a comfort, not a law of nature. Real decisions do not alway
 
 ### Cambridge 9231 — Further Probability & Statistics (forward)
 
-- The FS paper is this ritual with new engines: §4.2 swaps $z$ for Student's $t$ (small $n$, unknown $\sigma$) and tests *differences* of means; §4.3 sends whole distributions to trial ($\chi^2$ goodness-of-fit and contingency tables — Pearson's 1900 invention, with Fisher's degrees-of-freedom correction from their war); §4.4 drops the normality assumption entirely (sign and Wilcoxon tests). Master the five-step ritual here and Further Stats is variations on the theme.
+- The FS paper is this ritual with new engines: §4.2 swaps $z$ for Student's $t$ (small $n$, unknown $\sigma$) and tests *differences* of means; §4.3 sends whole distributions to trial ($\chi^2$ goodness-of-fit and contingency tables — Pearson's 1900 invention, with Fisher's degrees-of-freedom correction from their war); §4.4 drops the normality assumption entirely — [[Non-Parametric Tests]]: the sign test *is* this card's binomial test with $p = \tfrac12$, and the Wilcoxon tests replace values by ranks. Master the five-step ritual here and Further Stats is variations on the theme.
 
 ### AP Statistics
 

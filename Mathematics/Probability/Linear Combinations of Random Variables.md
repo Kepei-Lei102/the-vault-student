@@ -9,6 +9,7 @@ leads_to:
   - "[[Sampling and Estimation]]"
   - "[[Stories/Inventing Variance]]"
   - "[[Inventing Variance]]"
+  - "[[Probability Generating Functions]]"
 tags:
   - subject/mathematics
   - domain/probability
@@ -190,7 +191,7 @@ Two-thirds of head-to-heads go to A. The whole question turned on one move — v
 
 ### Cambridge 9231 Further Maths (Further Probability & Statistics)
 
-- These rules are load-bearing background: **probability generating functions** re-derive them in a line ($G_{X+Y} = G_X G_Y$ for independent variables — the Poisson pooling falls out instantly), and the estimation chapters lean on $\text{Var}(\bar{X}) = \sigma^2/n$ throughout.
+- These rules are load-bearing background: [[Probability Generating Functions]] re-derive them in a line ($G_{X+Y} = G_X G_Y$ for independent variables — the Poisson pooling falls out instantly), and the estimation chapters lean on $\text{Var}(\bar{X}) = \sigma^2/n$ throughout.
 
 ### IB / AP
 

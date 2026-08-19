@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-08-15` · built 2026-08-15 from commit `f5b31a6`  
-> 337 cards · 415 diagrams · 57 explainers · 93 illustrations
+> **Edition** `student-2026-08-19` · built 2026-08-19 from commit `a81c4d0`  
+> 342 cards · 428 diagrams · 62 explainers · 95 illustrations
 
 ---
 
@@ -219,7 +219,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9231 Further Mathematics
 
-*18 syllabus points · 36 card references*
+*22 syllabus points · 40 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -241,6 +241,10 @@ is often taught under a different heading.
 | 3.5 | [[Differential Equations]] |
 | 3.6 | [[Linear Momentum]] |
 | 4.1 | [[Continuous Random Variables]] |
+| 4.2 | [[t-Tests]] |
+| 4.3 | [[Chi-Squared Tests]] |
+| 4.4 | [[Non-Parametric Tests]] |
+| 4.5 | [[Probability Generating Functions]] |
 
 ## Oxford AQA 9260 International Mathematics (Extension)
 

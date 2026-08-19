@@ -5,23 +5,23 @@ written for international curricula: Cambridge IGCSE and A-Level, IB, and AP.
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> **Edition** `student-2026-08-15` · built 2026-08-15 from commit `f5b31a6`  
-> 337 cards · 415 diagrams · 57 explainers · 93 illustrations
+> **Edition** `student-2026-08-19` · built 2026-08-19 from commit `a81c4d0`  
+> 342 cards · 428 diagrams · 62 explainers · 95 illustrations
 
 ---
 
 ## What's inside
 
-**337 Markdown cards** across five collections, plus the figures that go with them —
-**415 SVG diagrams** (many animated), **57 MP4 explainers**, and
-**93 illustrations and comics**.
+**342 Markdown cards** across five collections, plus the figures that go with them —
+**428 SVG diagrams** (many animated), **62 MP4 explainers**, and
+**95 illustrations and comics**.
 
 | Folder | Cards | What it is |
 |---|---|---|
-| `Mathematics/` | 210 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
+| `Mathematics/` | 214 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
 | `Physics/` | 37 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
 | `CS/` | 48 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
-| `Stories/` | 31 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
+| `Stories/` | 32 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
 | `Meta/` | 11 | Methodology cards: how to *think* across domains. |
 
 Every concept appears in **both English and Chinese**, with key terminology anchored in each

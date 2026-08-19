@@ -322,8 +322,16 @@ The four-board exam-strategy table for the binomial theorem. Same legend as [[St
 ### 0606 (12.1, 12.2)
 
 - **12.1:** Expand $(a + b)^n$ for positive integer $n$. The formula $(a+b)^n = \sum \binom{n}{r}a^{n-r}b^r$ is given in the formula sheet. You must simplify coefficients fully.
-- **12.2:** Use the general term $\binom{n}{r}a^{n-r}b^r$ to find specific terms. Classic question types: "find the coefficient of $x^k$", "find the term independent of $x$", "find the constant term".
-- **Not required:** knowledge of the greatest term, or properties of the coefficients (e.g. proving symmetry).
+- **12.2:** Use the general term $\binom{n}{r}a^{n-r}b^r$ to find specific terms — the syllabus's own example is *the term independent of $x$ in $\left(2x + \tfrac{1}{x}\right)^{10}$*. Classic phrasings: "find the coefficient of $x^k$", "find the term independent of $x$", "find the constant term".
+
+### Cambridge 9709 — Pure 1, §1.6 Series
+
+- **Use the expansion of $(a+b)^n$, where $n$ is a positive integer**, "including the notations $\binom{n}{r}$ and $n!$" — the same content as 0606 §12, one year on, and MF19 prints the expansion (see the table above). The syllabus states explicitly that **"knowledge of the greatest term and properties of the coefficients are not required."**
+- The rational-$n$ expansion $(1+x)^n$ with $\lvert x \rvert < 1$ is Pure 3 material — [[Binomial Series]].
+
+### IB AA
+
+- **SL 1.9** — the binomial theorem for $n \in \mathbb{N}$, with $\binom{n}{r}$ from Pascal's triangle or technology; **AHL 1.10** extends to fractional and negative $n$, the territory of [[Binomial Series]].
 
 ### Common exam phrasing
 

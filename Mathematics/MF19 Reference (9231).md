@@ -187,10 +187,11 @@ Printed as a table: $\sin^{-1}x$, $\cos^{-1}x$, $\sinh x$, $\cosh x$, $\tanh x$,
 | **Critical values for the $\chi^2$-distribution** | ✅ table | §4.3 |
 | **Wilcoxon signed-rank test — critical values of $T$** | ✅ table | §4.4 |
 | **Wilcoxon rank-sum test — critical values of $W$** | ✅ table | §4.4 |
+| Wilcoxon normal approximations — $P, Q \approx N\!\big(\tfrac14 n(n+1),\ \tfrac1{24}n(n+1)(2n+1)\big)$ and $R_m \approx N\!\big(\tfrac12 m(m+n+1),\ \tfrac1{12}mn(m+n+1)\big)$ | ✅ printed under each table | §4.4 — the $\pm\tfrac12$ continuity correction is **not** |
 | PGFs: $G_X(t) = E(t^X)$, $E(X) = G_X'(1)$, $\operatorname{Var}(X) = G_X''(1) + G_X'(1) - \{G_X'(1)\}^2$ | ✅ | §4.5 |
 | The normal distribution function $\Phi(z)$ and its critical values | ✅ table | §4.2 |
 | The $\chi^2$ test statistic $\sum\frac{(O-E)^2}{E}$ | ❌ | **memorise** — the table is given, the statistic is not |
-| Which Wilcoxon test to use, and how to rank and handle ties | ❌ | technique; the tables assume you got there |
+| Which Wilcoxon test to use, how to rank, $T = \min(P,Q)$ and $W = \min\!\big(R_m,\ m(m+n+1)-R_m\big)$ | ❌ | technique — the *rules* for $T$ and $W$ are printed above the tables, but the ranking procedure and the reject-when-**small** direction are yours; see [[Non-Parametric Tests]] |
 | The PGF of any *named* distribution | ❌ | derive from $G_X(t) = E(t^X)$ |
 
 > [!info] Paper 4 is the best-supported paper on the whole qualification

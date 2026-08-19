@@ -16,6 +16,7 @@ leads_to:
   - "[[Discrete Random Variables]]"
   - "[[Maclaurin Series]]"
   - "[[Summation of Series]]"
+  - "[[Probability Generating Functions]]"
 tags:
   - subject/mathematics
   - domain/algebra

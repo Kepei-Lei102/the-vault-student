@@ -9,6 +9,7 @@ leads_to:
   - "[[Sorting]]"
   - "[[Stacks and Queues]]"
   - "[[Linked List]]"
+  - "[[The Arrow That Pointed the Other Way]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -199,7 +200,7 @@ print(a)              # [99, 2, 3]   —  a changed
 
 Assignment copied the **name**, not the array. Both `a` and `b` now hold the same base address, so they are two labels on one block of memory — **aliasing**.
 
-The exam's assignment arrow is unusually good at making this obvious, and deserves the credit. Written `b ← a`, the statement reads exactly as *put what is in `a` into `b`* — and it therefore forces the honest question **what actually is in `a`?** The answer is not the array. It is the array's address. Copy an address and you get a second copy of the address, not a second array; both slips of paper now carry the same house number, so a delivery made through either one arrives at the same door. `=` invites you to read it as equality and quietly hides that question; the arrow cannot. Why would a language do this? Because the alternative is worse: copying on assignment would mean that passing a million-element array into a function silently duplicates a million elements. Handing over the base address costs a few bytes, and the formula does the rest.
+The exam's assignment arrow is unusually good at making this obvious, and deserves the credit. Written `b ← a`, the statement reads exactly as *put what is in `a` into `b`* — and it therefore forces the honest question **what actually is in `a`?** The answer is not the array. It is the array's address. Copy an address and you get a second copy of the address, not a second array; both slips of paper now carry the same house number, so a delivery made through either one arrives at the same door. `=` invites you to read it as equality and quietly hides that question; the arrow cannot. (Whether to write the arrow or the equals sign was fought over across an ocean in 1958 and again in 2018 — [[Stories/The Arrow That Pointed the Other Way]].) Why would a language do this? Because the alternative is worse: copying on assignment would mean that passing a million-element array into a function silently duplicates a million elements. Handing over the base address costs a few bytes, and the formula does the rest.
 
 That is exactly what the exam wants said out loud. When an array is passed to a procedure, it is passed **by reference** (`BYREF`) — and a Paper 2 question that says *"the array is passed as a parameter; identify how this parameter should be specified in the procedure header"* is worth its mark for that one word.
 

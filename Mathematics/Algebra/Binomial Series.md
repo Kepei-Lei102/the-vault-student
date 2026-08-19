@@ -11,6 +11,7 @@ prerequisites:
 leads_to:
   - "[[Differential Equations]]"
   - "[[Maclaurin Series]]"
+  - "[[Probability Generating Functions]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -18,8 +19,10 @@ tags:
   - level/pre-IB
   - level/pre-AP
   - curriculum/A-Level
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - curriculum/IB-AA
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
   - syllabus/9709-3-1
   - type/theorem
   - type/technique
@@ -415,13 +418,17 @@ A student tries to apply $\binom{n}{k} = \dfrac{n!}{k!(n-k)!}$ to $n = 1/2$ — 
 
 **Tip.** When the question says "up to and including the term in $x^n$", you need terms $x^0, x^1, \ldots, x^n$ — that's $n + 1$ terms total. Off-by-one is the most-missed mark.
 
+### Edexcel IAL — Pure 4, §4.1
+
+*"Binomial series for any rational $n$"*, with the validity condition written the IAL way: for $\lvert x \rvert < \tfrac{b}{a}$ students obtain the expansion of $(ax + b)^n$ — so factor out $b^n$ first — *and the expansion of rational functions by decomposition into partial fractions*, i.e. exactly the 9709 §7-shape above. Same marks, same off-by-one trap.
+
+### OxAQA 9660 — Pure 2, §P2.2
+
+*"Binomial series for any rational $n$ — expansion of $(1+x)^n$, $\lvert x \rvert < 1$"*, with the stated greatest level of difficulty $(2 + 3x)^{-2}$ — factor out $2^{-2}$ first, then expand $\left(1 + \tfrac{3x}{2}\right)^{-2}$ for $\lvert x \rvert < \tfrac23$ — and the series expansion of rational functions via partial fractions as a separate row. Identical content to 9709 P3 §3.1.
+
 ### Cambridge 0606
 
-**Not on 0606.** The 0606 syllabus covers the [[Binomial Theorem|finite binomial theorem]] (positive-integer $n$) only. The infinite-series generalization is A-Level / 9709 P3 / IB AA HL / AP BC.
-
-### A-Level — Edexcel / AQA / OCR / MEI
-
-Edexcel and AQA include binomial series in **A2 Pure** at the same level as 9709 P3. OCR's Pure Mathematics A2 covers the same content with cosmetic notational differences. Mark schemes match.
+**Not on 0606.** The 0606 syllabus covers the [[Binomial Theorem|finite binomial theorem]] (positive-integer $n$) only. The infinite-series generalization is A-Level / 9709 P3 / IAL P4 / 9660 P2 / IB AA HL.
 
 ### IB AA HL
 
@@ -431,15 +438,13 @@ AA SL does **not** test the infinite generalization; it covers only the finite, 
 
 **Typical IB HL question shape:** combines binomial series with [[Maclaurin Series]]-style power-series questions. May ask for the general term, the interval of convergence, or term-by-term integration.
 
-### AP Calculus
+### AP Calculus BC
 
-**AP Calculus BC**, Topic 10.13: includes the binomial series as one of the four named Maclaurin series students must memorise (alongside $e^x$, $\sin x$, $\cos x$, $\ln(1+x)$, $\arctan x$, and $\dfrac{1}{1-x}$). Specifically required:
+The CED does **not** name the binomial series. What BC requires (Unit 10) is the general Taylor/Maclaurin machinery plus four series to know outright — $e^x$, $\sin x$, $\cos x$ and $\dfrac{1}{1-x}$ — and $(1+x)^n$ turns up only as a function whose Maclaurin series a student *derives* by repeated differentiation, or reaches from $\dfrac{1}{1-x}$ by substitution ($n = -1$). Where it does appear the surrounding questions are the usual BC ones: interval of convergence by the ratio test with endpoint checks, term-by-term integration, and error bounds. **AP Calculus AB** has no series unit at all.
 
-$$(1 + x)^n = \sum_{k=0}^\infty \binom{n}{k} x^k, \quad \lvert x \rvert < 1.$$
+### Where it is *not* examined
 
-Tested in the "series" portion of BC: convergence (ratio test, interval of convergence, endpoint testing), term-by-term integration/differentiation, error bounds.
-
-**AP Calculus AB** does **not** test series — entire series unit is BC-only.
+**Cambridge 9231** (its Further Pure Maclaurin work uses $e^x$, trig and log series and $(1+x)^n$ only as an example, never as its own topic), **0580**, **0606**, **IB AA SL** and **IB AI** — none set the infinite binomial series. Outside the vault's boards, UK Edexcel/AQA/OCR A2 Pure examine it in the 9709 shape.
 
 ### Beyond high school — University
 

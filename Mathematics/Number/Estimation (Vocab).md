@@ -101,16 +101,25 @@ This is the same instinct that catches sign errors, units errors, and "off by a 
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 — C1.9 / E1.9 Estimation (Core and Extended alike)
 
-**Syllabus ref:** N11 — make estimates of numbers, quantities, and lengths; estimate calculations by rounding to 1 s.f. Standard exam phrasings:
+Two learning objectives, identical at both tiers: **(1)** *round values to a specified degree of accuracy* — "includes decimal places and significant figures" — and **(2)** *make estimates for calculations involving numbers, quantities and measurements*, the syllabus's own example being *"by writing each number correct to 1 significant figure, estimate the value of …"*. Standard exam phrasings:
 
-- "By writing each number correct to 1 significant figure, estimate the value of $\dfrac{6.91 \times 38.7}{0.052}$."
-- "Estimate the area of the lake on the map."
+- "By writing each number correct to 1 significant figure, estimate the value of $\dfrac{6.91 \times 38.7}{0.052}$." — round *first*, then compute; the mark is for the rounding shown.
+- "Write 5764 correct to the nearest thousand." — the syllabus's own instance of LO 1.
+- "Estimate the area of the lake on the map." — a measurement estimate, LO 2.
 
-### A-Level / IB / AP
+### OxAQA 9260 — N11 Rounding, estimation and bounds
 
-A-Level adds **Fermi estimation** ("how many piano tuners in Chicago?") as a problem-solving skill. The same round-then-compute habit extends to multi-step science problems where exact data is unavailable.
+Core: *round numbers and measures to an appropriate degree of accuracy (e.g. to a specified number of decimal places or significant figures)* and *apply and interpret limits of accuracy*. Extension adds *calculate and use upper and lower bounds* — [[Upper and Lower Bounds]], this card's peer.
+
+### IB
+
+Mathematics: Applications and Interpretation SL 1.6 lists **estimation** explicitly alongside decimal places, significant figures, bounds and percentage error; AA does not name it as a topic.
+
+### Where it is *not* examined
+
+Not a syllabus item at 0606, 9709 or 9231, nor on any AP course — by A-Level the habit is assumed. *Fermi estimation* ("how many piano tuners in Chicago?") is the grown-up version of LO 2 and a genuinely useful thinking skill, but it is enrichment, not a mark on any of these papers.
 
 ---
 

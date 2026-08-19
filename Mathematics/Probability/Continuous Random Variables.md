@@ -9,6 +9,7 @@ prerequisites:
 leads_to:
   - "[[Sampling and Estimation]]"
   - "[[Hypothesis Tests]]"
+  - "[[Chi-Squared Tests]]"
 tags:
   - subject/mathematics
   - domain/probability

@@ -2,7 +2,8 @@
 chinese: 剑桥伪代码 (Jiànqiáo wěidàimǎ)
 prerequisites:
   - "[[Program Design]]"
-leads_to: []
+leads_to:
+  - "[[The Arrow That Pointed the Other Way]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -68,7 +69,7 @@ That is a genuine problem and this is a reasonable answer to it. Worth saying pl
 
 Everything below is from the published guide for 2027–29. Keywords are **UPPER CASE**; identifiers are **MixedCase**; indentation is three spaces; comments start with `//`; and `<angle brackets>` mark a slot you fill in, a convention the guide borrows from the grammar notation **BNF** ([[Compilers and Interpreters]] covers it).
 
-**Declaring and assigning.** Assignment is `←`, never `=`. `=` is comparison only.
+**Declaring and assigning.** Assignment is `←`, never `=`. `=` is comparison only. (The arrow is not an exam-board quirk — it is the symbol that lost a fight in Zurich in 1958 and lost its seat in ASCII in 1967, and it points where the value goes, which `=` never did: [[Stories/The Arrow That Pointed the Other Way]].)
 
 ```
 DECLARE Counter : INTEGER

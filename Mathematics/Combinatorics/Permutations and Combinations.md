@@ -14,7 +14,11 @@ tags:
   - domain/combinatorics
   - level/pre-IB
   - level/pre-AP
+  - level/A-Level
   - curriculum/Cambridge-0606
+  - curriculum/Cambridge-9709
+  - curriculum/A-Level
+  - curriculum/IB-AA
   - syllabus/0606-11-1
   - syllabus/0606-11-2
   - syllabus/9709-5-2
@@ -233,6 +237,14 @@ These are the same thing — two notations for the same number. Students sometim
 
 ## Exam Notes
 
+### Cambridge 9709 — Paper 5 (Probability & Statistics 1), §5.2
+
+Two learning objectives, and a 5–8 mark question on almost every Paper 5:
+
+- **Understand the terms permutation and combination, and solve simple problems involving selections** — committees, teams, "how many ways to choose $r$ from $n$", including "at least / at most" splits.
+- **Solve problems about arrangements of objects in a line**, including **repetition** — the syllabus's own example is *the number of ways of arranging the letters of the word NEEDLESS* ($\tfrac{8!}{3!\,2!}$) — and **restriction** — *several people standing in a line if two particular people must, or must not, stand next to each other* (glue them into one block; complement for "must not"). The notes warn that *"questions may include cases such as people sitting in two (or more) rows"*, and promise that *"questions about objects arranged in a circle will not be included"*.
+- Show the product or the ${}^nC_r$ / ${}^nP_r$ expression, not just the answer — the M1 is for the method; and when a question says "at least", list the cases or use the complement explicitly.
+
 ### Cambridge 0606
 
 - 11.1: recognize the difference between a permutation and a combination and know when each applies
@@ -243,15 +255,14 @@ These are the same thing — two notations for the same number. Students sometim
 - Both Paper 1 and Paper 2
 - Typical questions: "How many ways can ... be arranged/chosen?", "How many committees...", sometimes linked to probability
 
-### Not in 0580 or 9260
+### AP / IB
 
-Permutations and combinations are **not directly tested** in Cambridge 0580 or OxAQA 9260. However, the counting principles behind them are essential for probability at any level. At 0580/9260, students list outcomes or use systematic counting instead of formulas.
+- **AP Statistics:** combinations appear inside binomial probability $P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}$; counting is not examined on its own.
+- **IB Mathematics AA HL** (Topic 1, counting principles): permutations and combinations *including* circular arrangements and cases with repetition — the two things Cambridge excludes. **AA SL** and **AI** do not examine counting principles.
 
-### AP / IB / A-Level
+### Where it is *not* examined
 
-- **AP Statistics:** combinations used heavily in binomial probability $P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}$; permutations in some discrete models
-- **IB Mathematics AA HL:** includes circular permutations and cases with repetition (Topic 1: Number and Algebra)
-- **A-Level Further Mathematics:** multinomial coefficients, inclusion-exclusion principle, derangements (Further Pure)
+**Cambridge 0580** and **OxAQA 9260** do not test permutations or combinations directly — students list outcomes or count systematically. **Cambridge 9231** adds nothing beyond 9709 (no multinomial coefficients, derangements or inclusion–exclusion on that syllabus). **Edexcel IAL** has no permutations-and-combinations topic in any of its Statistics units — its formula book lists $n!$ and $\binom{n}{r}$ only for the binomial distribution — and **OxAQA 9660** likewise. Where these appear elsewhere in the world, they are almost always in the probability unit, so a student meeting them there should read this card first and [[Counting Problems]] second.
 
 ### Beyond high school — University
 

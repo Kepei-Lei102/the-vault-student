@@ -67,6 +67,7 @@ For ASCII the two layers coincide (one small number, one byte), which is exactly
 - **Digits `'0'`–`'9'` sit at 48–57** ($30_{16}$–$39_{16}$). So for any digit character, `character − 48 = its value` — converting `'7'` to $7$ is one subtraction. The bottom four bits of a digit's code *are* the digit ($0111$ for `'7'`) — BCD hiding inside ASCII.
 - **`'A'`–`'Z'` at 65–90, `'a'`–`'z'` at 97–122.** The gap between a letter's two cases is exactly $97 - 65 = 32 = 2^5$: **uppercase and lowercase differ in a single bit (bit 5)**. `A` = $0100\,0001$, `a` = $0110\,0001$. Case conversion is one bit-flip, case-insensitive comparison is one masked compare — the [[Bitwise Operations]] toolkit applied to text, by design.
 - **Alphabetical order = numerical order.** Sorting text *is* sorting numbers; no lookup needed.
+- **Two seats changed hands.** The 1963 table had a left arrow `←` at 95 and an up arrow `↑` at 94; the 1967 revision replaced them with `_` and `^`, which is where those two characters still sit — and why the assignment arrow, the honest symbol for *put this value there*, has been untypeable on an ordinary keyboard ever since ([[Stories/The Arrow That Pointed the Other Way]]).
 
 **Worked example — encode `Hi!`:** `H` = 72 = $48_{16}$, `i` = 105 = $69_{16}$, `!` = 33 = $21_{16}$. Three characters, three bytes: `48 69 21`. (Byte ↔ two hex digits, as always — [[Number Bases]].)
 

@@ -14,6 +14,9 @@ leads_to:
   - "[[Continuous Random Variables]]"
   - "[[Hypothesis Tests]]"
   - "[[Why Probability and Statistics]]"
+  - "[[Chi-Squared Tests]]"
+  - "[[Non-Parametric Tests]]"
+  - "[[Probability Generating Functions]]"
 tags:
   - subject/mathematics
   - domain/probability
