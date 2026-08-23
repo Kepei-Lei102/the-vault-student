@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-08-19` · built 2026-08-19 from commit `a81c4d0`  
-> 342 cards · 428 diagrams · 62 explainers · 95 illustrations
+> **Edition** `student-2026-08-23` · built 2026-08-23 from commit `f8137b9`  
+> 349 cards · 436 diagrams · 66 explainers · 96 illustrations
 
 ---
 
@@ -70,10 +70,10 @@ is often taught under a different heading.
 | E1.17 | [[Exponential Growth and Decay]] |
 | E1.18 | [[Surds]] |
 | E2.1 | [[Algebraic Expressions (Vocab)]] |
-| E2.2 | [[Collecting Like Terms (Vocab)]], [[Completing the Square]], [[Expanding Brackets (Vocab)]], [[Factorising (Vocab)]] |
+| E2.2 | [[Collecting Like Terms (Vocab)]], [[Expanding Brackets (Vocab)]], [[Factorising (Vocab)]] |
 | E2.3 | [[Algebraic Fractions (Vocab)]] |
 | E2.4 | [[Indices in Algebra (Vocab)]] |
-| E2.5 | [[Changing the Subject (Vocab)]], [[Fractional Equations (Vocab)]], [[Linear Equations (Vocab)]], [[Quadratic Equations]], [[Simultaneous Equations (Vocab)]] |
+| E2.5 | [[Changing the Subject (Vocab)]], [[Completing the Square]], [[Fractional Equations (Vocab)]], [[Linear Equations (Vocab)]], [[Quadratic Equations]], [[Simultaneous Equations (Vocab)]] |
 | E2.6 | [[Graphical Inequalities (Vocab)]], [[Linear Inequalities (Vocab)]] |
 | E2.7 | [[Sequences]] |
 | E2.8 | [[Direct and Inverse Proportion (Vocab)]] |
@@ -219,7 +219,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9231 Further Mathematics
 
-*22 syllabus points · 40 card references*
+*23 syllabus points · 48 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -231,9 +231,10 @@ is often taught under a different heading.
 | 1.6 | [[3D Vectors and the Scalar Product]], [[Cross Product]], [[Planes in 3D]], [[Vector Equations of Lines]] |
 | 1.7 | [[Proof by Induction]] |
 | 2.1 | [[Hyperbolic Functions]] |
-| 2.3 | [[Differentiation Rules]], [[Implicit Differentiation]], [[Maclaurin Series]], [[Parametric Differentiation]] |
-| 2.4 | [[Integration]], [[Integration by Parts]], [[Standard Integrals]] |
-| 2.5 | [[Complex Numbers]], [[Euler's Formula and De Moivre's Theorem]] |
+| 2.2 | [[Eigenvalues and Eigenvectors]], [[Linear Systems in 3D]] |
+| 2.3 | [[Differentiation Rules]], [[Hyperbolic Functions]], [[Implicit Differentiation]], [[Maclaurin Series]], [[Parametric Differentiation]] |
+| 2.4 | [[Arc Length and Surfaces of Revolution]], [[Bounding Sums with Integrals]], [[Hyperbolic Functions]], [[Integration]], [[Integration by Parts]], [[Reduction Formulae]], [[Standard Integrals]] |
+| 2.5 | [[Complex Numbers]], [[De Moivre at Work]], [[Euler's Formula and De Moivre's Theorem]] |
 | 2.6 | [[Differential Equations]], [[Second-Order Differential Equations]] |
 | 3.1 | [[SUVAT]] |
 | 3.2 | [[Forces and Equilibrium]], [[Torque]] |
@@ -432,7 +433,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9709 Mathematics
 
-*38 syllabus points · 91 card references*
+*38 syllabus points · 92 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -464,7 +465,7 @@ is often taught under a different heading.
 | 4.3 | [[Linear Momentum]] |
 | 4.4 | [[Force (Vocab)]], [[Newton's Laws of Motion]], [[Tension (Vocab)]] |
 | 4.5 | [[Work, Energy and Power]] |
-| 5.1 | [[Box Plots]], [[Cumulative Frequency]], [[Histograms]] |
+| 5.1 | [[Averages and Spread]], [[Box Plots]], [[Cumulative Frequency]], [[Histograms]] |
 | 5.2 | [[Permutations and Combinations]] |
 | 5.3 | [[Combined Probability]], [[Conditional Probability]], [[Probability Basics]] |
 | 5.4 | [[Discrete Random Variables]] |

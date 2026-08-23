@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[Chi-Squared Tests]]"
   - "[[Non-Parametric Tests]]"
+  - "[[The Lady Tasting Tea]]"
 tags:
   - subject/mathematics
   - domain/statistics
@@ -53,7 +54,7 @@ The whole subject then reduces to a swap: wherever the $z$-machinery of the pare
 
 ### 中文锚点 (Chinese Anchor)
 
-**t 检验**（也叫**学生 t 检验**，Student's t-test）解决的是：总体方差**未知**、样本又**小**的时候，怎样对均值下结论。中国教材里这一节通常紧接正态分布 z 检验之后出现，关键差别只有一个：把未知的 $\sigma$ 换成样本标准差 $s$ 之后，统计量不再服从标准正态，而服从**自由度**为 $n-1$ 的 t 分布——尾巴更厚，临界值更大，样本越小差得越多。
+**t 检验**（也叫**学生 t 检验**，Student's t-test）解决的是：总体方差**未知**、样本又**小**的时候，怎样对均值下结论。中国教材里这一节通常就排在正态分布 z 检验后面，关键差别只有一个：把未知的 $\sigma$ 换成样本标准差 $s$ 之后，统计量不再服从标准正态，而服从**自由度**为 $n-1$ 的 t 分布——尾巴更厚，临界值更大，样本越小差得越多。
 
 术语对照：**自由度**（degrees of freedom, $\nu$）；**单样本 t 检验**（one-sample）；**双样本 t 检验**（two-sample，独立样本）；**配对 t 检验**（paired，同一对象前后两次）；**合并方差**（pooled variance, $s_p^2$）；**置信区间**（confidence interval）。中文的"配对"二字比英文 *paired* 更直白：一对一对地比，而不是两堆一起比——这正是本卡最大的考点。
 
@@ -362,6 +363,7 @@ Every introductory statistics course runs on this card for a term; the additions
 - **The story:** [[Stories/Inventing Variance]] — Gosset, the brewery, and the alias.
 - **Neighbour:** [[Repeated Measurements]] — the physics lab is the one-sample $t$-interval in a lab coat: a few repeats, a mean, and an honest error bar.
 - **For 9231 students:** [[MF19 Reference (9231)]] — everything *around* the tests is printed: the unbiased $s^2$, the pooled-variance formula, the $t$-table and the normal table. What is not printed is the test statistics themselves and the decision of which one to use — which is exactly where the marks are.
+- **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — Gosset the brewer as the only man Pearson and Fisher would both listen to; Fisher's 1912 proof, and why the percentage-point table format exists at all.
 
 ---
 

@@ -153,9 +153,13 @@ Solve by the [[Quadratic Equations|quadratic formula]]: $x = 2 \pm \sqrt{7}$. (B
 
 Algebraic fractions sit underneath [[Remainder and Factor Theorems]] (rational expressions after polynomial division), composite functions, and many differentiation questions. Not tested standalone, but used daily.
 
-### A-Level / IB / AP (Forward Bridge)
+### A-Level (Forward Bridge)
 
-At A-Level, algebraic fractions become **partial fractions** — the reverse operation: splitting $\dfrac{5x - 4}{(x-1)(x-2)}$ into $\dfrac{1}{x-1} + \dfrac{4}{x-2}$. Partial fractions then unlock tricky [[Integration|integrals]] like $\int \dfrac{1}{x^2 - 1}\, dx$.
+At A-Level the reverse operation takes over: **partial fractions** — splitting $\dfrac{5x - 4}{(x-1)(x-2)}$ into $\dfrac{1}{x-1} + \dfrac{4}{x-2}$ — examined on Cambridge 9709 P3 §3.1 and Edexcel IAL P4 §2.1, and the key that unlocks [[Integration|integrals]] like $\int \dfrac{1}{x^2 - 1}\, dx$.
+
+### Where it is *not* examined
+
+Beyond IGCSE the manipulation itself earns no marks of its own — 0606, 9709, Edexcel IAL and OxAQA 9660 all assume it silently inside rational-function, calculus and partial-fractions questions.
 
 ---
 

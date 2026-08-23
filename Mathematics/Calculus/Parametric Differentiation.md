@@ -8,6 +8,7 @@ prerequisites:
 leads_to:
   - "[[Tangents and Normals]]"
   - "[[Connected Rates of Change]]"
+  - "[[Arc Length and Surfaces of Revolution]]"
 teach_together:
   - "[[Kinematics Calculus]]"
 tags:

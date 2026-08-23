@@ -11,6 +11,7 @@ leads_to:
   - "[[Angular Momentum]]"
   - "[[Lorentz Force]]"
   - "[[Maxwell's Equations]]"
+  - "[[Eigenvalues and Eigenvectors]]"
 tags:
   - subject/mathematics
   - domain/geometry

@@ -9,6 +9,7 @@ leads_to:
   - "[[Poisson Distribution]]"
   - "[[Stories/Inventing Variance]]"
   - "[[Inventing Variance]]"
+  - "[[The Lady Tasting Tea]]"
 tags:
   - subject/mathematics
   - subject/philosophy
@@ -346,6 +347,7 @@ None of this was in the syllabus that ordered the cards. It emerged because each
 - **Where Euler's number lives:** [[Euler's Number]] (three definitions, irrationality proof, history), [[Exponential Function]] ($e^x$ as the function $f' = f$). The connection $\lim_n (1 - \lambda/n)^n = e^{-\lambda}$ in this card is the same limit definition shown in those cards, applied to probability.
 - **For students taking 9709:** [[MF19 Reference (9709)]] — the formula-sheet audit. The technical formulas behind every statement in this card are listed there as "given" or "memorise" depending on the paper.
 - **Cross-domain:** Survivorship bias, Simpson's paradox, mean-vs-typical confusions live everywhere data is summarised — public health, economics, sports analytics, AI evaluation, social science. The hunter's questions ("what was thrown away to produce this summary?", "what's the reference frame?") apply identically across all of them.
+- **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — Fisher, Pearson, Gosset and Neyman: the people behind *the trace and the threshold*, and the Epilogue where the hunter stopped tracing.
 
 ---
 

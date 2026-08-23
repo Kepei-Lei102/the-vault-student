@@ -5,7 +5,8 @@ prerequisites:
   - "[[Trigonometric Identities]]"
   - "[[Complex Numbers]]"
   - "[[Integration]]"
-leads_to: []
+leads_to:
+  - "[[Arc Length and Surfaces of Revolution]]"
 tags:
   - subject/mathematics
   - domain/geometry

@@ -21,8 +21,16 @@ tags:
   - level/pre-AP
   - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
+  - curriculum/Cambridge-9709
+  - curriculum/A-Level
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - curriculum/AP-Statistics
+  - curriculum/IB-AA
+  - curriculum/IB-AI
   - syllabus/9260-S5
   - syllabus/0580-E9-3
+  - syllabus/9709-5-1
   - type/concept
   - type/vocabulary
   - misconception/mean-vs-average
@@ -271,7 +279,7 @@ $$\text{IQR} = Q_3 - Q_1$$
 
 The IQR measures the spread of the **middle 50%** of the data, ignoring the top and bottom quarters. It is **resistant to outliers**.
 
-There are **two common methods** for finding quartiles. They can give different answers — know which one your exam expects.
+There are **three common methods** for finding quartiles. They can give different answers on the same data — know which one your exam expects, and (the good news below) how forgiving the mark schemes actually are.
 
 #### Method 1: Median of halves (Cambridge 0580, OxAQA 9260)
 
@@ -288,11 +296,11 @@ If $n$ is odd, **exclude** the overall median from both halves.
 - Upper half: 9, 11, 12, 15 → $Q_3 = \dfrac{11 + 12}{2} = 11.5$
 - IQR $= 11.5 - 4 = 7.5$
 
-#### Method 2: Position formula
+#### Method 2: Position formula (Cambridge 9709, for listed data)
 
 $$Q_1 \text{ position} = \dfrac{n + 1}{4}, \qquad Q_3 \text{ position} = \dfrac{3(n + 1)}{4}$$
 
-If the position is not a whole number, interpolate between the two nearest values.
+If the position is not a whole number, interpolate between the two nearest values. This is the convention 9709 mark schemes themselves compute with: a real Paper 5 stem-and-leaf question with $n = 15$ takes the lower quartile as the $4$th value and the upper as the $12$th — positions $\frac{16}{4}$ and $\frac{3 \times 16}{4}$.
 
 **Same example:** $n = 9$
 
@@ -318,12 +326,22 @@ Here both methods agree. They don't always.
 
 Different answers! The discrepancy is small for large data sets but noticeable for small ones.
 
-> [!warning] Which method does your exam use?
-> **Cambridge 0580 and OxAQA 9260:** Method 1 (median of halves). This is the method your exam expects — use it unless told otherwise.
+#### Method 3: Linear interpolation in a grouped table (Edexcel IAL, OxAQA 9660)
+
+When the data arrives **grouped** into classes, individual values are gone and both methods above are unusable. The Edexcel-family convention: quartile positions are $\dfrac{n}{4}$ and $\dfrac{3n}{4}$ (**no** $+1$), and you interpolate *within* the class that holds that position, assuming the values spread evenly through it:
+
+$$Q_1 = L + \frac{\frac{n}{4} - F}{f} \times w \qquad \begin{array}{l} L = \text{lower boundary of the class holding the position} \\ F = \text{cumulative frequency before the class} \\ f, w = \text{the class's frequency and width} \end{array}$$
+
+Straight from a real S1 mark scheme ($n = 80$, so the position is $20$; the class $4.5$–$6.5$ holds it, with $15$ values before and $9$ inside): $Q_1 = 4.5 + \frac{20 - 15}{9} \times 2 = 5.61$. The method mark is for the **interpolation expression itself** — writing it is the skill being examined — and the scheme *condones* the $\frac{n+1}{4}$ variant (it accepts $5.66$, the position-$20.25$ answer, as well).
+
+> [!warning] Which method does your exam use — checked against the papers, not the syllabus
+> **Cambridge 0580 / OxAQA 9260:** taught and marked as Method 1 (halves). And the schemes are deliberately forgiving: a real 0580 Paper 2 scheme accepts "$6.5$ **or** $6.75$ **or** $7$" for one lower quartile — one value per convention. Use halves; you cannot lose the mark to a convention.
 >
-> **AP Statistics and most software** (Excel, Python, R, SPSS): Method 2, or more precisely, one of several interpolation variants. R alone offers **9 different quantile algorithms**. The differences only matter for small data sets — for large $n$, all methods converge. Industry and research use interpolation because it handles continuous distributions more naturally; GCSE exams use the halves method because it's easier to explain and mark.
+> **Cambridge 9709:** Method 2 on listed/stem-leaf data — but the schemes print an *acceptance band* (one real question allows any $79 \leqslant Q_1 \leqslant 82$), inside which the halves answer also lands. Grouped data goes through the [[Cumulative Frequency|cumulative frequency curve]], reading at $\frac{n}{4}$, $\frac{n}{2}$, $\frac{3n}{4}$.
 >
-> For large data sets, quartiles are typically read from a [[Cumulative Frequency|cumulative frequency curve]], which sidesteps the method question entirely.
+> **Edexcel IAL / OxAQA 9660 (S1):** Method 3 is *required* for grouped tables — the interpolation expression is the method mark. For listed data, values from the list ("cao" — no tolerance). These are also the boards that love $Q_3 - Q_2$ vs $Q_2 - Q_1$ as a **skewness** test, so quartiles feed the next part.
+>
+> **Calculators and software:** the fx-991's 1-variable stats and the TI-84 both return halves-method quartiles; Excel, Python and R interpolate instead — R alone offers **9 quantile algorithms**. Thirty-second verification, in the spirit of trusting nothing: key in $1, 3, 5, 7, 9, 11$. If your machine says $Q_1 = 3$, it thinks in halves; if $2.5$, it interpolates. For large $n$ every method converges — the fuss is only ever about small data.
 
 ### Skewed Data
 
@@ -493,14 +511,23 @@ The mean (£33,250) is misleadingly high — 17 out of 20 employees earn less th
 - Paper 2 (non-calculator): simpler data, exact arithmetic. Paper 4 (calculator): larger data sets, grouped frequency tables
 - "State the type of average you have calculated and give a reason for your choice" — this justification is worth marks
 
-### AP / IB / A-Level
+### Cambridge 9709 — Paper 5 (Probability & Statistics 1), §5.1
 
-- **Variance and standard deviation:** the **variance** ($\sigma^2$ or $s^2$) is the mean of the squared deviations from the mean — it measures spread in squared units. The **standard deviation** ($\sigma$ or $s$) is the square root of the variance — it measures spread in the same units as the data. These are the standard measures of spread at this level, replacing the range and IQR for most purposes.
-  - Population standard deviation: $\sigma = \sqrt{\dfrac{\sum(x - \bar{x})^2}{n}}$ or equivalently $\sigma = \sqrt{\dfrac{\sum x^2}{n} - \bar{x}^2}$
-  - Sample standard deviation uses $n - 1$ instead of $n$ (called **Bessel's correction**) — you'll learn why in A-Level or AP
-- **AP Statistics:** the **five-number summary** (min, $Q_1$, median, $Q_3$, max) for box plots; formal treatment of **outliers** using the $1.5 \times \text{IQR}$ rule; the distinction between population parameters ($\mu$, $\sigma$) and sample statistics ($\bar{x}$, $s$)
-- **IB Mathematics AA/AI:** AI SL emphasises which average is appropriate for real-world contexts; AA HL includes variance and standard deviation calculations from frequency tables
-- **A-Level Statistics (S1):** full calculation of variance and standard deviation from raw data and frequency tables; coding/linear interpolation for the median of grouped data; comparison of distributions using summary statistics
+*"Understand and use different measures of central tendency (mean, median, mode) and variation (range, interquartile range, standard deviation)"* — *"e.g. in comparing and contrasting sets of data"*. Expect a stem-and-leaf, box plot or cumulative-frequency graph first ([[Histograms]], [[Box Plots]], [[Cumulative Frequency]]) and then the measures read or calculated from it; the standard deviation is from $\sqrt{\dfrac{\sum x^2}{n} - \bar x^2}$ (the $n$ form, not $n-1$), often with the totals $\sum x$ and $\sum x^2$ given or coded ($\sum(x - a)$, $\sum(x-a)^2$). The comparison sentence wants one average **and** one spread, in context, as for 9260.
+
+### Edexcel IAL — Statistics 1, §2.2–2.4
+
+Mean, median and mode from lists and frequency tables (§2.2); range, interpercentile ranges, variance and standard deviation, including **coding** $y = \dfrac{x - a}{b}$ and the un-coding of $\bar y$ and $s_y$ (§2.3); skewness read from the relative positions of mean, median and mode or from a box plot, and outliers by whatever rule the question states (§2.4). IAL uses the same $n$-denominator standard deviation as 9709.
+
+### OxAQA 9660 — Statistics 1, §S1.2
+
+Measures of centre and spread — mean, median, mode, range, interquartile range, variance and standard deviation — from raw and grouped data, with the same comparison-sentence expectation.
+
+### AP Statistics / IB
+
+- **The variance and standard deviation, for all of the above:** the **variance** ($\sigma^2$ or $s^2$) is the mean of the squared deviations from the mean — spread in squared units; the **standard deviation** is its square root, back in the data's units. Population form $\sigma = \sqrt{\dfrac{\sum(x - \bar{x})^2}{n}} = \sqrt{\dfrac{\sum x^2}{n} - \bar{x}^2}$; the **sample** form divides by $n - 1$ (Bessel's correction — the reason is the seesaw of [[t-Tests]]: the deviations are measured from a mean that was itself fitted to the data).
+- **AP Statistics** (Unit 1): the five-number summary (min, $Q_1$, median, $Q_3$, max) for box plots; outliers by the $1.5 \times \text{IQR}$ rule; the population / sample distinction ($\mu, \sigma$ vs $\bar x, s$) with the $n-1$ sample standard deviation throughout.
+- **IB AA and AI** (SL 4.3): measures of central tendency and dispersion from lists and frequency tables, the effect of constant changes on them, and — especially in AI — choosing the *appropriate* average for a context.
 
 ### Beyond high school — University
 

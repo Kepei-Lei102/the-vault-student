@@ -17,6 +17,7 @@ leads_to:
   - "[[Maclaurin Series]]"
   - "[[Summation of Series]]"
   - "[[Probability Generating Functions]]"
+  - "[[De Moivre at Work]]"
 tags:
   - subject/mathematics
   - domain/algebra

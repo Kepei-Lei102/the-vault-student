@@ -20,13 +20,17 @@ tags:
   - level/pre-IB
   - level/pre-AP
   - curriculum/OxAQA-9260
+  - curriculum/Cambridge-0580
   - curriculum/Cambridge-0606
+  - curriculum/A-Level
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - syllabus/9260-A16
   - syllabus/9260-A20
   - syllabus/0606-2-3
   - syllabus/0606-2-1
   - syllabus/9709-1-1
-  - syllabus/0580-E2-2
+  - syllabus/0580-E2-5
   - type/technique
   - type/proof
   - misconception/completing-sign-error
@@ -357,23 +361,31 @@ Since $(x + 2)^2 \geq 0$, the expression is always $\geq 3 > 0$, so it can never
 
 **Mark scheme patterns:** Marks are typically distributed as (1) factor $a$ out correctly, (2) halve $b$ correctly and square, (3) produce the completed square form, (4) simplify the constant. Partial credit is available even with arithmetic slips if the method is clear.
 
-### Cambridge 0580
+### Cambridge 0580 Extended
 
-Completing the square is **not** explicitly on the 0580 syllabus. 0580 students use factorisation and the quadratic formula only. However, "show that the minimum value is…" questions do appear and benefit from knowing the technique.
+**Syllabus ref:** E2.5 #6 — "Solve quadratic equations by factorisation, completing the square and by use of the quadratic formula. *Includes writing a quadratic expression in completed square form.*" On the 2025+ syllabus the technique is named outright, **Extended tier only** (it appears exactly once in the syllabus document, in the Extended column — Core candidates solve by factorisation and the given formula). Candidates may be asked for solutions in surd form; the quadratic formula is printed in the List of formulas, the completed-square method is not.
 
 ### Cambridge 0606
 
 **Syllabus ref:** 2.3 — "Find maximum or minimum values of a quadratic function by completing the square." This is a core 0606 technique and appears in almost every exam cycle. 0606 students are explicitly expected to find vertex form and identify max/min.
 
-### AP / IB / A-Level
+### Cambridge 9709 (A-Level)
 
-At AP Precalculus, IB AA, and A-Level, completing the square is assumed knowledge. It reappears in:
+**Syllabus ref:** Paper 1 §1.1 (Quadratics) — "carry out the process of completing the square for a quadratic polynomial $ax^2 + bx + c$ and use a completed square form", e.g. to locate the vertex or sketch the graph; solving quadratics (and quadratic inequalities) "by factorising, completing the square and using the formula" is listed alongside. Far from assumed knowledge, this is an explicitly examined P1 process — the classic ask is "express in the form $a(x + p)^2 + q$, hence state the range of $f$" feeding straight into the §1.2 functions work (range, and showing a restricted quadratic is one-one for the inverse).
+
+### Edexcel IAL / OxAQA 9660
+
+Both IAL boards examine it in their first pure unit. **Edexcel IAL P1 §1.5**: "Completing the square. Solution of quadratic equations" — solving "by factorisation, use of the formula, use of a calculator and completing the square". **OxAQA 9660 P1.1**: "Completing the square" is its own listed row (with the spec's own examples $x^2 + 6x - 1 = (x+3)^2 - 10$ and a non-monic), beside "quadratic functions and their graphs — vertex and line of symmetry", which is exactly what the completed square delivers.
+
+### AP / IB
+
+At AP Precalculus and IB AA/AI the technique itself is assumed rather than freshly examined, but it keeps reappearing as the tool inside later topics:
 
 - **Integration** — turning $\int \dfrac{dx}{x^2 + 2x + 5}$ into $\int \dfrac{dx}{(x+1)^2 + 4}$, which is an $\arctan$ integral.
 - **Conic sections** — writing circles, ellipses, hyperbolas in standard form requires completing the square on both $x$ and $y$.
-- **Eigenvalues** in linear algebra, via characteristic polynomials.
+- **Eigenvalues** — solving a characteristic equation $\lambda^2 - (\operatorname{tr}\mathbf{A})\lambda + \det\mathbf{A} = 0$ exactly, at [[Eigenvalues and Eigenvectors]].
 
-The technique you learn at 9260 Extension is used for the next decade of mathematics.
+The technique you learn at IGCSE Extension is used for the next decade of mathematics. There is no mainstream board a student here will sit that leaves it out — only 0580 **Core** stops short of it.
 
 ---
 

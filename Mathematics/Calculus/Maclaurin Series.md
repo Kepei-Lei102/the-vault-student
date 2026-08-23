@@ -310,6 +310,21 @@ $$\boxed{\lim_{x \to 0} \dfrac{\sin x - x}{x^3} = -\dfrac{1}{6}.}$$
 > [!tip] Why Taylor beats L'Hôpital here
 > L'Hôpital's rule on $\dfrac{\sin x - x}{x^3}$ would need *three* applications (it's $\tfrac{0}{0}$ each time until the third). Taylor series gives the answer in one substitution. The Taylor approach also explains *why* — it's the cubic term of $\sin$ that survives. L'Hôpital just spits out the number; Taylor shows the structure. See [[L'Hôpital's Rule]] §8 for the broader comparison.
 
+### Example 4 (Cambridge 9231): the successive-differentiation route — $\tan x$ up to $x^3$
+
+Some functions have no friendly known series to substitute into, and the syllabus's own example is $y = \tan x$. The technique: differentiate **successively**, feeding each derivative back into the ones after it, then evaluate everything at $0$ and assemble.
+
+*Tool: the derivative that quotes itself.* $y' = \sec^2 x = 1 + \tan^2 x = 1 + y^2$ — the derivative written *in terms of $y$*, which is the whole trick, because now each further derivative comes by the chain rule with no new trigonometry:
+
+$$y' = 1 + y^2 \quad\Longrightarrow\quad y'' = 2y\,y' \quad\Longrightarrow\quad y''' = 2(y')^2 + 2y\,y''.$$
+
+*Tool: evaluate the chain at $x = 0$, bottom up.* $y(0) = 0$, so $y'(0) = 1 + 0 = 1$, then $y''(0) = 2 \cdot 0 \cdot 1 = 0$, then $y'''(0) = 2 \cdot 1 + 0 = 2$. Assemble:
+
+$$\tan x = y(0) + x\,y'(0) + \frac{x^2}{2!}\,y''(0) + \frac{x^3}{3!}\,y'''(0) + \cdots = \boxed{\ x + \frac{x^3}{3} + \cdots\ } \qquad \left(\text{next term } \tfrac{2}{15}x^5\right)$$
+
+> [!warning] The exam shape, and a one-mark trap
+> On 9231 Paper 2 this technique usually arrives welded to the *other* differentiation LO: an earlier part makes you find $\frac{dy}{dx}$ and $\frac{d^2y}{dx^2}$ for an implicitly or parametrically defined relation ([[Implicit Differentiation]], [[Parametric Differentiation]]), and the last part says "hence find the first three terms of the Maclaurin series" — the assembly step is exactly the boxed formula with *your* computed values. A real recent scheme awards the method mark for $y(0), y'(0), y''(0)$ evaluated, and then **refuses the accuracy mark if $\frac{x^2}{2!}$ is left unsimplified** — write $\frac{x^2}{2}$, always.
+
 ## §8 — Beyond Syllabus
 
 ### Taylor's theorem with integral remainder

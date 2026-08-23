@@ -15,6 +15,7 @@ leads_to:
   - "[[Euler's Number]]"
   - "[[Binomial Series]]"
   - "[[Euler's Formula and De Moivre's Theorem]]"
+  - "[[De Moivre at Work]]"
 tags:
   - subject/mathematics
   - domain/algebra

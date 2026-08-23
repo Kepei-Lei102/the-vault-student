@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="442.697547pt" height="1534.2375pt" viewBox="0 0 442.697547 1534.2375" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1534.2375 
+L 442.697547 1534.2375 
+L 442.697547 0 
+L 0 0 
+L 0 1534.2375 
+z
+" style="fill: none"/>
+  </g>
+  <g id="patch_2">
+   <path d="M 41.796328 371.4975 
+L 390.092578 371.4975 
+L 390.092578 23.20125 
+L 41.796328 23.20125 
+L 41.796328 371.4975 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 137.60477 168.669241 
+L 307.529825 217.722379 
+" clip-path="url(#p5c945fc655)" style="fill: none; stroke: #888888; stroke-opacity: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 169.629955 236.828328 
+L 267.836183 151.77924 
+" clip-path="url(#p5c945fc655)" style="fill: none; stroke: #888888; stroke-opacity: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 220.651159 255.112049 
+L 220.651159 127.684469 
+" clip-path="url(#p5c945fc655)" style="fill: none; stroke: #888888; stroke-opacity: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="Path3DCollection_1">
+    <defs>
+     <path id="mdd6a7984b3" d="M 0 4.743416 
+C 1.257969 4.743416 2.464584 4.24362 3.354102 3.354102 
+C 4.24362 2.464584 4.743416 1.257969 4.743416 0 
+C 4.743416 -1.257969 4.24362 -2.464584 3.354102 -3.354102 
+C 2.464584 -4.24362 1.257969 -4.743416 0 -4.743416 
+C -1.257969 -4.743416 -2.464584 -4.24362 -3.354102 -3.354102 
+C -4.24362 -2.464584 -4.743416 -1.257969 -4.743416 0 
+C -4.743416 1.257969 -4.24362 2.464584 -3.354102 3.354102 
+C -2.464584 4.24362 -1.257969 4.743416 0 4.743416 
+z
+" style="stroke: #059669"/>
+    </defs>
+    <g clip-path="url(#p5c945fc655)">
+     <use xlink:href="#mdd6a7984b3" x="220.651159" y="192.642669" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="44.099025" transform="rotate(-0 215.944453 44.099025)">three planes pin exactly one point</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #059669" x="232.733277" y="184.294612" transform="rotate(-0 232.733277 184.294612)">the unique solution</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="19.3575" transform="rotate(-0 215.944453 19.3575)">det A ≠ 0 — the corner</text>
+   </g>
+   <g id="Poly3DCollection_1">
+    <defs>
+     <path id="m847182a7db" d="M 142.892201 -1305.72269 
+L 301.760096 -1257.348995 
+L 304.90353 -1380.462545 
+L 140.007683 -1425.357204 
+z
+" style="stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p5c945fc655)">
+     <use xlink:href="#m847182a7db" x="0" y="1534.2375" style="fill: #0891b2; fill-opacity: 0.2; stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="Poly3DCollection_2">
+    <defs>
+     <path id="m5f8d419628" d="M 173.072629 -1238.584292 
+L 264.876727 -1322.444598 
+L 266.491978 -1440.843116 
+L 171.197983 -1363.008685 
+z
+" style="stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p5c945fc655)">
+     <use xlink:href="#m5f8d419628" x="0" y="1534.2375" style="fill: #7c3aed; fill-opacity: 0.2; stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="Poly3DCollection_3">
+    <defs>
+     <path id="mb10ee27346" d="M 91.044225 -1324.230794 
+L 256.964067 -1273.834022 
+L 346.245418 -1358.421271 
+L 188.363796 -1401.843871 
+z
+" style="stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p5c945fc655)">
+     <use xlink:href="#mb10ee27346" x="0" y="1534.2375" style="fill: #2563eb; fill-opacity: 0.2; stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+  </g>
+  <g id="patch_3">
+   <path d="M 41.796328 756.6775 
+L 390.092578 756.6775 
+L 390.092578 408.38125 
+L 41.796328 408.38125 
+L 41.796328 756.6775 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_2">
+   <g id="Poly3DCollection_4">
+    <defs>
+     <path id="m0788b825b0" d="M 136.051546 -876.060527 
+L 302.287918 -916.942548 
+L 305.326357 -1036.840927 
+L 132.784143 -998.899513 
+z
+" style="stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p4b61d27c79)">
+     <use xlink:href="#m0788b825b0" x="0" y="1534.2375" style="fill: #7c3aed; fill-opacity: 0.2; stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="429.279025" transform="rotate(-0 215.944453 429.279025)">three pages, one spine: infinitely many solutions on a line</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #059669" x="231.017182" y="520.984363" transform="rotate(-0 231.017182 520.984363)">the common line</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="404.5375" transform="rotate(-0 215.944453 404.5375)">det A = 0, eliminations agree — the sheaf</text>
+   </g>
+   <g id="Poly3DCollection_5">
+    <defs>
+     <path id="m68260ac15d" d="M 142.892201 -920.54269 
+L 301.760096 -872.168995 
+L 304.90353 -995.282545 
+L 140.007683 -1040.177204 
+z
+" style="stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p4b61d27c79)">
+     <use xlink:href="#m68260ac15d" x="0" y="1534.2375" style="fill: #2563eb; fill-opacity: 0.2; stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="Poly3DCollection_6">
+    <defs>
+     <path id="mb7ca953f0a" d="M 212.31015 -846.585247 
+L 228.31957 -943.09197 
+L 228.598114 -1061.055741 
+L 211.979547 -971.480623 
+z
+" style="stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p4b61d27c79)">
+     <use xlink:href="#mb7ca953f0a" x="0" y="1534.2375" style="fill: #0891b2; fill-opacity: 0.2; stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <path d="M 220.651159 640.292049 
+L 220.651159 512.864469 
+" clip-path="url(#p4b61d27c79)" style="fill: none; stroke: #059669; stroke-width: 3.5; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="patch_4">
+   <path d="M 41.796328 1141.8575 
+L 390.092578 1141.8575 
+L 390.092578 793.56125 
+L 41.796328 793.56125 
+L 41.796328 1141.8575 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_3">
+   <g id="line2d_5">
+    <path d="M 141.694247 1015.938665 
+L 247.863204 1058.157043 
+L 256.639762 987.076132 
+L 141.694247 1015.938665 
+" clip-path="url(#p070b9e2a19)" style="fill: none; stroke: #888888; stroke-opacity: 0.8; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 138.840811 908.967303 
+L 248.881661 948.954721 
+L 257.908748 881.687037 
+L 138.840811 908.967303 
+" clip-path="url(#p070b9e2a19)" style="fill: none; stroke: #888888; stroke-opacity: 0.8; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="Poly3DCollection_7">
+    <defs>
+     <path id="m030f36b941" d="M 277.184872 -552.320194 
+L 119.960334 -512.841504 
+L 116.304713 -620.106836 
+L 279.169427 -657.421607 
+z
+" style="stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p070b9e2a19)">
+     <use xlink:href="#m030f36b941" x="0" y="1534.2375" style="fill: #0891b2; fill-opacity: 0.2; stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="814.459025" transform="rotate(-0 215.944453 814.459025)">each pair meets; the three edges are parallel; no common point</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #dc2626" transform="translate(266.546448 939.845245)">three parallel edges,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #dc2626" transform="translate(266.546448 955.448799)">never meeting</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="789.7175" transform="rotate(-0 215.944453 789.7175)">det A = 0, eliminations contradict — the prism</text>
+   </g>
+   <g id="Poly3DCollection_8">
+    <defs>
+     <path id="m99288aaa06" d="M 123.472991 -525.544567 
+L 267.594018 -468.234445 
+L 269.362181 -577.840424 
+L 119.982497 -632.123063 
+z
+" style="stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p070b9e2a19)">
+     <use xlink:href="#m99288aaa06" x="0" y="1534.2375" style="fill: #2563eb; fill-opacity: 0.2; stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="Poly3DCollection_9">
+    <defs>
+     <path id="m135ab10ddd" d="M 246.135524 -462.088062 
+L 258.147435 -559.371935 
+L 259.455665 -664.077718 
+L 247.100212 -572.007854 
+z
+" style="stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p070b9e2a19)">
+     <use xlink:href="#m135ab10ddd" x="0" y="1534.2375" style="fill: #7c3aed; fill-opacity: 0.2; stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <path d="M 141.846946 1021.663147 
+L 138.676228 902.797293 
+" clip-path="url(#p070b9e2a19)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #dc2626; stroke-width: 2.5"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 247.808774 1063.993273 
+L 248.940482 942.647751 
+" clip-path="url(#p070b9e2a19)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #dc2626; stroke-width: 2.5"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 256.571793 992.720982 
+L 257.981876 875.61374 
+" clip-path="url(#p070b9e2a19)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #dc2626; stroke-width: 2.5"/>
+   </g>
+  </g>
+  <g id="patch_5">
+   <path d="M 41.796328 1527.0375 
+L 390.092578 1527.0375 
+L 390.092578 1178.74125 
+L 41.796328 1178.74125 
+L 41.796328 1527.0375 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_4">
+   <g id="Poly3DCollection_10">
+    <defs>
+     <path id="mc2a0665a8a" d="M 92.736389 -126.342776 
+L 256.468621 -74.7274 
+L 344.655769 -161.395018 
+L 188.756077 -205.952963 
+z
+" style="stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p03d40a777c)">
+     <use xlink:href="#mc2a0665a8a" x="0" y="1534.2375" style="fill: #2563eb; fill-opacity: 0.2; stroke: #2563eb; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="1199.639025" transform="rotate(-0 215.944453 1199.639025)">proportional normals, right-hand sides breaking the proportion</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #dc2626" x="320.433328" y="1255.366425" transform="rotate(-0 320.433328 1255.366425)">no two ever meet</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #888888" x="215.944453" y="1174.8975" transform="rotate(-0 215.944453 1174.8975)">det A = 0, eliminations contradict — parallel planes</text>
+   </g>
+   <g id="Poly3DCollection_11">
+    <defs>
+     <path id="ma529f470d4" d="M 91.044225 -168.690794 
+L 256.964067 -118.294022 
+L 346.245418 -202.881271 
+L 188.363796 -246.303871 
+z
+" style="stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p03d40a777c)">
+     <use xlink:href="#ma529f470d4" x="0" y="1534.2375" style="fill: #7c3aed; fill-opacity: 0.2; stroke: #7c3aed; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+   <g id="Poly3DCollection_12">
+    <defs>
+     <path id="m60b04dc0ca" d="M 89.306691 -212.174264 
+L 257.473413 -163.082824 
+L 347.876352 -245.444983 
+L 187.961746 -287.659698 
+z
+" style="stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </defs>
+    <g clip-path="url(#p03d40a777c)">
+     <use xlink:href="#m60b04dc0ca" x="0" y="1534.2375" style="fill: #0891b2; fill-opacity: 0.2; stroke: #0891b2; stroke-opacity: 0.2; stroke-width: 1.2"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5c945fc655">
+   <rect x="41.796328" y="23.20125" width="348.29625" height="348.29625"/>
+  </clipPath>
+  <clipPath id="p4b61d27c79">
+   <rect x="41.796328" y="408.38125" width="348.29625" height="348.29625"/>
+  </clipPath>
+  <clipPath id="p070b9e2a19">
+   <rect x="41.796328" y="793.56125" width="348.29625" height="348.29625"/>
+  </clipPath>
+  <clipPath id="p03d40a777c">
+   <rect x="41.796328" y="1178.74125" width="348.29625" height="348.29625"/>
+  </clipPath>
+ </defs>
+</svg>

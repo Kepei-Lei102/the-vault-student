@@ -110,11 +110,27 @@ Two lines with gradients $m_1$ and $m_2$:
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580 Extended
 
-**Syllabus ref:** A11 (9260), E3.4 (0580). "Find the equation of a straight line given sufficient information (two points, one point and gradient, or point and parallel/perpendicular line)."
+**Syllabus ref:** three rows, not one — **E3.5** (Equations of linear graphs): "interpret and obtain the equation of a straight-line graph", with questions using and requesting lines in different forms; **E3.6** (Parallel lines): gradient and equation of a line parallel to a given line; **E3.7** (Perpendicular lines): the same for perpendicular. The parallel/perpendicular skills are their own examined rows, not sub-clauses.
 
-**Typical phrasing:** "Find the equation of the line passing through $A(2, 1)$ and $B(6, 9)$." "Find the equation of the line parallel to $y = 3x - 2$ passing through $(1, 4)$." "A line perpendicular to $y = \dfrac{1}{2}x + 3$ passes through the origin; find its equation."
+**Typical phrasing:** "Find the equation of the line passing through $A(2, 1)$ and $B(6, 9)$." "Find the equation of the line parallel to $y = 3x - 2$ passing through $(1, 4)$." "Find the gradient of a line perpendicular to $2y = 3x + 1$."
+
+### OxAQA 9260
+
+**Syllabus ref:** A11 — equation of a straight line from sufficient information (two points, or point and gradient), with parallel and perpendicular gradients.
+
+### Cambridge 0606
+
+**Syllabus ref:** §7 (Straight-line graphs) — the same vocabulary at Additional level: equations in the forms $y = mx + c$ and $ax + by = c$, parallel/perpendicular conditions, plus midpoint and length feeding the coordinate-geometry questions.
+
+### Cambridge 9709 (A-Level)
+
+**Syllabus ref:** P1 §1.3 (Coordinate geometry) — the equation of a line remains directly examined at A-Level: forms $y = mx+c$, $y - y_1 = m(x - x_1)$ and $ax+by+c=0$, parallel/perpendicular gradients, intersections. The vocabulary of this card is assumed instantly.
+
+### Where it is *not* examined
+
+Beyond these, never standalone: Edexcel IAL P1 and IB both fold it silently into calculus (tangents and normals *are* straight-line equations, every time).
 
 ---
 

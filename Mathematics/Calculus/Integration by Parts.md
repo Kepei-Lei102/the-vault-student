@@ -9,6 +9,7 @@ prerequisites:
   - "[[Standard Integrals]]"
 leads_to:
   - "[[Differential Equations]]"
+  - "[[Reduction Formulae]]"
 tags:
   - subject/mathematics
   - domain/calculus

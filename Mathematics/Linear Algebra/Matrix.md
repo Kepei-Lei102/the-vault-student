@@ -8,6 +8,7 @@ leads_to:
   - "[[Matrix Transformations]]"
   - "[[Combination of Transformations]]"
   - "[[Determinants and Inverses]]"
+  - "[[Linear Systems in 3D]]"
 tags:
   - subject/mathematics
   - domain/matrices

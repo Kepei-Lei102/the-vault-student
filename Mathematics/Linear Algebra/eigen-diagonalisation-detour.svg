@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .math { font-family: 'Times New Roman', serif; font-style: italic; }
+    .title { font-size: 19px; font-weight: 600; }
+    .label { font-size: 16px; }
+    .big { font-size: 22px; }
+    .sup { font-size: 13px; }
+    .note { font-size: 14px; opacity: 0.75; }
+  </style>
+  <defs>
+    <marker id="arrPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" class="title" text-anchor="middle">Two routes from x to Ax — they always agree</text>
+
+  <!-- Top-left box: x -->
+  <rect x="60" y="70" width="200" height="70" rx="10" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="99" class="big math" text-anchor="middle" fill="#2563eb">x</text>
+  <text x="160" y="124" class="note" text-anchor="middle">any vector, usual coordinates</text>
+
+  <!-- Top-right box: Ax -->
+  <rect x="640" y="70" width="200" height="70" rx="10" fill="rgba(124,58,237,0.13)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="740" y="99" class="big math" text-anchor="middle" fill="#7c3aed">Ax</text>
+  <text x="740" y="124" class="note" text-anchor="middle">the image, usual coordinates</text>
+
+  <!-- Bottom-left box: Q^-1 x, hand-placed tokens -->
+  <rect x="60" y="310" width="200" height="70" rx="10" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="132" y="339" class="big math" fill="#2563eb">Q</text>
+  <text x="151" y="327" class="sup math" fill="#2563eb">-1</text>
+  <text x="168" y="339" class="big math" fill="#2563eb">x</text>
+  <text x="160" y="364" class="note" text-anchor="middle">same vector, rail coordinates</text>
+
+  <!-- Bottom-right box: D Q^-1 x, hand-placed tokens -->
+  <rect x="640" y="310" width="200" height="70" rx="10" fill="rgba(5,150,105,0.13)" stroke="#059669" stroke-width="2"/>
+  <text x="694" y="339" class="big math" fill="#059669">DQ</text>
+  <text x="733" y="327" class="sup math" fill="#059669">-1</text>
+  <text x="750" y="339" class="big math" fill="#059669">x</text>
+  <text x="740" y="364" class="note" text-anchor="middle">each rail stretched by its λ</text>
+
+  <!-- Top arrow: A -->
+  <line x1="270" y1="105" x2="630" y2="105" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrPurple)"/>
+  <text x="450" y="66" class="label" text-anchor="middle" fill="#7c3aed">ROUTE 1</text>
+  <text x="450" y="92" class="label" text-anchor="middle" fill="#7c3aed">A — one tangled step</text>
+
+  <!-- Left arrow: Q^-1 down -->
+  <line x1="160" y1="150" x2="160" y2="300" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="175" y="190" class="label" fill="#2563eb">ROUTE 2 — step 1</text>
+  <text x="175" y="216" class="label" fill="#2563eb">Q</text>
+  <text x="188" y="208" class="sup" fill="#2563eb">-1</text>
+  <text x="175" y="240" class="note">translate into</text>
+  <text x="175" y="258" class="note">rail coordinates</text>
+
+  <!-- Bottom arrow: D -->
+  <line x1="270" y1="345" x2="630" y2="345" stroke="#059669" stroke-width="3" marker-end="url(#arrGreen)"/>
+  <text x="450" y="308" class="label" text-anchor="middle" fill="#059669">ROUTE 2 — step 2</text>
+  <text x="450" y="332" class="label" text-anchor="middle" fill="#059669">D — a plain stretch, diagonal, trivial</text>
+  <text x="450" y="372" class="note" text-anchor="middle">×3 on the first rail, ×2 on the second</text>
+
+  <!-- Right arrow: Q up -->
+  <line x1="740" y1="300" x2="740" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="755" y="190" class="label" fill="#2563eb">ROUTE 2 — step 3</text>
+  <text x="755" y="216" class="label" fill="#2563eb">Q</text>
+  <text x="755" y="240" class="note">translate back to</text>
+  <text x="755" y="258" class="note">usual coordinates</text>
+
+  <!-- Center caption (words only — no superscripts, cairosvg-safe) -->
+  <text x="460" y="196" class="label" text-anchor="middle">Route 1 = Route 2, always:</text>
+  <text x="460" y="222" class="label" text-anchor="middle">A = Q D Q-inverse</text>
+  <text x="460" y="248" class="label" text-anchor="middle">a 50th power repeats only step 2</text>
+
+  <text x="450" y="430" class="note" text-anchor="middle">The matrix was a plain stretch all along — the change of viewpoint is what lets you see it.</text>
+</svg>

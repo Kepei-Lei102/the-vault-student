@@ -88,11 +88,19 @@ Legend has it that Descartes invented the coordinate system while lying sick in 
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580 Extended
 
-**Syllabus ref:** A10 (9260), E3.1 (0580). "Use Cartesian coordinates in the four quadrants; plot points and read coordinates; find the midpoint of a line segment, the distance between two points, and identify quadrants."
+**Syllabus ref:** E3.1 (Coordinates), and its whole text is one line: "use and interpret Cartesian coordinates in two dimensions." The midpoint and the length of a line segment are **not** part of this row — they have their own, E3.4 (Length and midpoint), tested with the coordinate-geometry cluster rather than as plotting.
 
-**Typical phrasing:** "Plot the point $A(3, -2)$." "Write down the coordinates of $B$." "In which quadrant does $(−4, −5)$ lie?"
+**Typical phrasing:** "Plot the point $A(3, -2)$." "Write down the coordinates of $B$."
+
+### OxAQA 9260
+
+**Syllabus ref:** A10 — the same plotting-and-reading vocabulary, feeding the linear-graphs rows that follow it.
+
+### Where it is *not* examined
+
+Never a question of its own beyond IGCSE — every later board assumes the plane from page one; the words worth keeping are the English ones (*origin, axes, quadrant, ordered pair*).
 
 ---
 

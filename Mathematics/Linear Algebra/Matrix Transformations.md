@@ -11,6 +11,7 @@ leads_to:
   - "[[Combination of Transformations]]"
   - "[[Determinants and Inverses]]"
   - "[[Invariant Points and Lines]]"
+  - "[[Eigenvalues and Eigenvectors]]"
 tags:
   - subject/mathematics
   - domain/matrices

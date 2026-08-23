@@ -11,6 +11,7 @@ leads_to:
   - "[[Heptadecagon]]"
   - "[[Differential Equations]]"
   - "[[Second-Order Differential Equations]]"
+  - "[[De Moivre at Work]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -193,6 +194,18 @@ which by the polar-multiplication rule (see [[Complex Numbers]] §5, or expand u
 > [!warning] De Moivre with non-integer $n$ — careful
 > For non-integer $n$ (e.g. $n = 1/3$), the equation $[\cos\theta + i\sin\theta]^n = \cos(n\theta) + i\sin(n\theta)$ gives **only one of several values**. A cube root of $\cos\theta + i\sin\theta$ has *three* values; the formula returns the *principal* one. The other two are obtained by replacing $\theta$ with $\theta + 2\pi$ and $\theta + 4\pi$ before dividing by 3. (See §6 for the full $n$-th-roots-of-unity treatment.)
 
+### Rational exponents — all the values, on purpose
+
+The warning becomes a technique the moment you *want* every value. For $z^{p/q}$ (fraction in lowest terms), write $z$ with its **general argument first**, then exponentiate:
+
+$$z = r\,e^{i(\theta + 2\pi k)} \quad\Longrightarrow\quad z^{p/q} = r^{p/q}\, e^{i\,p(\theta + 2\pi k)/q}, \qquad k = 0, 1, \ldots, q - 1$$
+
+— exactly $q$ distinct values (because $\gcd(p, q) = 1$), equally spaced around a circle. A real Further exam case: *solve $z^3 = -108\sqrt{3} + 108i$.* Modulus: $\sqrt{108^2 \cdot 3 + 108^2} = 216 = 6^3$. Argument: $\pi - \frac{\pi}{6} = \frac{5\pi}{6}$. Generalise, then take the cube root:
+
+$$z = 216^{1/3} e^{i\left(\frac{5\pi}{6} + 2\pi k\right)/3} = 6e^{5i\pi/18},\quad 6e^{17i\pi/18},\quad 6e^{29i\pi/18}.$$
+
+The mark scheme's own M1 is for *dividing the generalised argument by* $3$ — the habit that earns it: **generalise the argument first, exponentiate second.** Exponentiating first throws away every value but one.
+
 ---
 
 ## §5 Application — Multiple-Angle Identities
@@ -362,13 +375,13 @@ Computing $\arg(z)$ via $\arctan$ and getting a value outside $(-\pi, \pi]$, or 
 
 So an organised P3 student learns Euler form *as enrichment*. Don't rely on it *appearing on the mark scheme* — but use it freely to compute the polar-form answers the mark scheme does want.
 
-**Cambridge 9231 Further Pure** does include De Moivre's theorem and roots of unity formally — see syllabus §3 (Complex numbers — further work).
+### Cambridge 9231 (Further Pure 2, Paper 2 — §2.5)
 
-### A-Level — Edexcel / AQA / OCR / MEI
+De Moivre's theorem is examined in full: integer and negative exponents with the geometric meaning, the induction proof (the syllabus's own suggested route — §4 above *is* the exam answer), rational exponents (the subsection above, with the generalise-the-argument-first discipline), and $n$-th roots of unity. The applied machinery — multiple-angle identities both directions, the $C+iS$ series method — is worked exam-shape by exam-shape in [[De Moivre at Work]]. **MF19 gives none of it** ([[MF19 Reference (9231)]]).
 
-**Edexcel and AQA** A-Level Pure include Euler's formula and De Moivre's theorem in **Year 13 Pure Mathematics**, with applications to multiple-angle identities and roots of unity. Identical content to the IB AA HL treatment.
+### Edexcel IAL (Further Pure 2 — WFM02, §3.1–3.2)
 
-**OCR Further Mathematics AS** adds De Moivre's theorem, $n$-th roots of unity, and applications to trigonometric identities — same syllabus weight.
+Euler's relation is stated in the spec itself (with $\cos\theta = \frac12(e^{i\theta} + e^{-i\theta})$ and its sine twin), De Moivre must be provable "for any integer $n$", and the applications named are trigonometric identities in both directions and roots of a complex number. In the UK-domestic families the same content sits in the **Further** qualifications (never in single-subject A-Level Pure).
 
 ### IB AA HL
 

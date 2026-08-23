@@ -20,6 +20,7 @@ leads_to:
   - "[[Galois at Twenty]]"
   - "[[The Argument for i]]"
   - "[[Polar Coordinates]]"
+  - "[[De Moivre at Work]]"
 tags:
   - subject/mathematics
   - domain/algebra

@@ -6,6 +6,7 @@ prerequisites:
   - "[[Trigonometric Identities]]"
 leads_to:
   - "[[Standard Integrals]]"
+  - "[[Arc Length and Surfaces of Revolution]]"
 tags:
   - subject/mathematics
   - domain/calculus
@@ -15,6 +16,8 @@ tags:
   - curriculum/Cambridge-9231
   - curriculum/OxAQA-9660
   - syllabus/9231-2-1
+  - syllabus/9231-2-3
+  - syllabus/9231-2-4
   - type/deep
   - type/definition
   - type/proof

@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[Invariant Points and Lines]]"
   - "[[Eigenvalues and Eigenvectors]]"
+  - "[[Linear Systems in 3D]]"
 tags:
   - subject/mathematics
   - domain/matrices

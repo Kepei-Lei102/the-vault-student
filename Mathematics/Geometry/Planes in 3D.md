@@ -4,7 +4,8 @@ prerequisites:
   - "[[3D Vectors and the Scalar Product]]"
   - "[[Vector Equations of Lines]]"
   - "[[Cross Product]]"
-leads_to: []
+leads_to:
+  - "[[Linear Systems in 3D]]"
 tags:
   - subject/mathematics
   - domain/geometry
@@ -324,7 +325,7 @@ $\mathbf{a}\cdot\mathbf{n} - p$ comes out negative and gets reported as a negati
 
 ### Three planes — the configurations
 
-Two planes meet in a line (or are parallel); *three* planes are where geometry meets algebra. The possibilities: a single point (the generic case — three floors pin one corner), a common line (a **sheaf**, like pages of an open book), a triangular **prism** (each pair meets, but the three crease lines are parallel — no common point), or parallel/coincident degeneracies. Solving $3\times 3$ linear systems is exactly classifying which configuration you're in — the [[Matrix]] determinant is zero precisely in the degenerate cases. This is the geometric heart of FP2's linear-systems work.
+Two planes meet in a line (or are parallel); *three* planes are where geometry meets algebra. The possibilities: a single point (the generic case — three floors pin one corner), a common line (a **sheaf**, like pages of an open book), a triangular **prism** (each pair meets, but the three crease lines are parallel — no common point), or parallel/coincident degeneracies. Solving $3\times 3$ linear systems is exactly classifying which configuration you're in — the [[Matrix]] determinant is zero precisely in the degenerate cases. The full algebra — the determinant-then-eliminate protocol, the census of configurations, and the real exam cases — lives at [[Linear Systems in 3D]].
 
 ### Hyperplanes — the idea that scales
 

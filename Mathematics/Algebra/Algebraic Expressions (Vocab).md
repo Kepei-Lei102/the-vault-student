@@ -89,9 +89,17 @@ Common exam phrasing: "Find the value of … when $x = \ldots$" or "Evaluate …
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### OxAQA 9260
 
-**Syllabus ref:** A1–A3 (9260), E2.1 (0580). "Use letters to express generalised numbers" and "substitute numerical values into formulae and expressions." The expression/equation/formula/identity distinction is directly examined.
+**Syllabus ref:** A1–A3. Letters as generalised numbers, substitution — and, verbatim in A3 core content, "understand and use the concepts of expressions, equations, formulae, identities, inequalities, terms and factors": on this board the vocabulary distinction itself is directly examinable.
+
+### Cambridge 0580 Extended
+
+**Syllabus ref:** E2.1 (Introduction to algebra): know that letters represent generalised numbers, and substitute numbers into expressions and formulas. The expression/equation/formula/identity *distinction* is not named as an LO — the terms are simply used throughout the papers and assumed understood, which is exactly why the vocabulary is worth securing early.
+
+### Where it is *not* examined
+
+Never tested standalone beyond IGCSE: 0606, 9709, Edexcel IAL and OxAQA 9660 all assume this vocabulary from the first page.
 
 ---
 

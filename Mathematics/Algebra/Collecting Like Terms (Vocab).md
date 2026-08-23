@@ -60,9 +60,17 @@ Like terms represent the same "unit." $3x^2$ means "three lots of $x^2$" and $5x
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580 Extended
 
-**Syllabus ref:** A4 (9260), E2.2 (0580). "Collect like terms" appears in almost every algebra question as a sub-step. Common exam instruction: "Simplify" — which means collect like terms (and cancel if fractions).
+**Syllabus ref:** E2.2 #1 (Algebraic manipulation): "simplify expressions by collecting like terms", with the syllabus's own gloss — *"Simplify means give the answer in its simplest form"* — and its own calibration of the tiers: the Core example is $2a + 3b + 5a - 9b$, the Extended one is $2a^2 + 3ab - 1 + 5a^2 - 9ab + 4$ (like terms now include $a^2$ and $ab$ as separate species). A sub-step of almost every algebra question rather than a question of its own.
+
+### OxAQA 9260
+
+**Syllabus ref:** A4: "collecting like terms and expanding brackets" (core), products of two or three binomials (extension) — collection and expansion share one row on this board.
+
+### Where it is *not* examined
+
+Named nowhere beyond IGCSE; from 0606 upward "simplify" assumes it without comment.
 
 ---
 

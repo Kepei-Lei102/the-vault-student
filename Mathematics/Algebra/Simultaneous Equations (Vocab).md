@@ -11,6 +11,7 @@ leads_to:
   - "[[Graphical Inequalities (Vocab)]]"
   - "[[Sequences]]"
   - "[[Vector Equations of Lines]]"
+  - "[[Linear Systems in 3D]]"
 tags:
   - subject/mathematics
   - domain/algebra

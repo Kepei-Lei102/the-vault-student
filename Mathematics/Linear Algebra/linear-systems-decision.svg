@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="100%">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
+    .title { font-size: 19px; font-weight: 600; }
+    .label { font-size: 16px; }
+    .note { font-size: 13px; opacity: 0.75; }
+  </style>
+  <defs>
+    <marker id="arrGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" class="title" text-anchor="middle">The two-question protocol</text>
+
+  <!-- Q1 box -->
+  <rect x="330" y="55" width="240" height="60" rx="10" fill="rgba(37,99,235,0.13)" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="82" class="label" text-anchor="middle" fill="#2563eb">Question 1: compute det A</text>
+  <text x="450" y="103" class="note" text-anchor="middle">the walls' geometry, ignoring b</text>
+
+  <!-- branch: det nonzero -->
+  <line x1="330" y1="85" x2="180" y2="165" stroke="#888" stroke-width="2" marker-end="url(#arrGrey)"/>
+  <text x="205" y="115" class="label">det A is not 0</text>
+
+  <rect x="40" y="175" width="280" height="86" rx="10" fill="rgba(5,150,105,0.13)" stroke="#059669" stroke-width="2"/>
+  <text x="180" y="203" class="label" text-anchor="middle" fill="#059669">UNIQUE solution — the corner</text>
+  <text x="180" y="226" class="note" text-anchor="middle">three planes pin one point</text>
+  <text x="180" y="246" class="note" text-anchor="middle">solve: x = A-inverse times b</text>
+
+  <!-- branch: det zero -->
+  <line x1="570" y1="85" x2="700" y2="165" stroke="#888" stroke-width="2" marker-end="url(#arrGrey)"/>
+  <text x="640" y="115" class="label">det A = 0</text>
+
+  <rect x="520" y="175" width="360" height="92" rx="10" fill="rgba(245,158,11,0.13)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="700" y="202" class="label" text-anchor="middle" fill="#f59e0b">Question 2: eliminate</text>
+  <text x="700" y="226" class="note" text-anchor="middle">use ALL THREE equations, two ways,</text>
+  <text x="700" y="246" class="note" text-anchor="middle">down to ONE equation in two unknowns — compare</text>
+
+  <!-- branch: agree -->
+  <line x1="600" y1="267" x2="470" y2="345" stroke="#888" stroke-width="2" marker-end="url(#arrGrey)"/>
+  <text x="428" y="300" class="label">they agree</text>
+
+  <rect x="290" y="355" width="310" height="106" rx="10" fill="rgba(8,145,178,0.13)" stroke="#0891b2" stroke-width="2"/>
+  <text x="445" y="383" class="label" text-anchor="middle" fill="#0891b2">INFINITELY MANY — a line</text>
+  <text x="445" y="406" class="note" text-anchor="middle">sheaf (three pages, one spine),</text>
+  <text x="445" y="424" class="note" text-anchor="middle">or a coincident pair cut by the third plane</text>
+  <text x="445" y="444" class="note" text-anchor="middle">describe the line: point + t direction</text>
+
+  <!-- branch: contradict -->
+  <line x1="790" y1="267" x2="790" y2="345" stroke="#888" stroke-width="2" marker-end="url(#arrGrey)"/>
+  <text x="778" y="300" class="label" text-anchor="end">they contradict</text>
+
+  <rect x="640" y="355" width="250" height="106" rx="10" fill="rgba(220,38,38,0.13)" stroke="#dc2626" stroke-width="2"/>
+  <text x="765" y="383" class="label" text-anchor="middle" fill="#dc2626">NO solutions</text>
+  <text x="765" y="406" class="note" text-anchor="middle">prism (no parallel planes!)</text>
+  <text x="765" y="424" class="note" text-anchor="middle">or parallel / coincident-plus-parallel —</text>
+  <text x="765" y="444" class="note" text-anchor="middle">proportional normals mean parallel</text>
+
+  <text x="450" y="510" class="note" text-anchor="middle">The determinant sorts unique from not-unique; only the elimination sorts consistent from inconsistent.</text>
+</svg>

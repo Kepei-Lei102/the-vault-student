@@ -8,6 +8,7 @@ prerequisites:
   - "[[Normal Distribution]]"
 leads_to:
   - "[[Non-Parametric Tests]]"
+  - "[[The Lady Tasting Tea]]"
 tags:
   - subject/mathematics
   - domain/statistics
@@ -57,7 +58,7 @@ The "unit of wobble" is $\sqrt{E}$: a count that is expected to be $E$ has a spr
 
 ### 中文锚点 (Chinese Anchor)
 
-**卡方检验**（$\chi^2$ test）检验的不是一个数，而是一个**形状**：数据是否服从某个给定的分布（**拟合优度检验**，goodness of fit），或者两个分类变量是否**独立**（**独立性检验**，用**列联表** contingency table）。统计量 $\sum\frac{(O-E)^2}{E}$：每格用**观察频数** $O$ 与**期望频数** $E$ 的差，除以 $E$（每格自己的"正常波动"尺度），平方后求和。中国教材通常把独立性检验（$2\times2$ 表）放在高中，把拟合优度放在大学；剑桥两者同考。**自由度**的规则是本卡最大的考点：格数减一，再减去**从数据估计的参数个数**——估了一个 $p$ 减一，估了 $\mu$ 和 $\sigma$ 减二；列联表则是 $(r-1)(c-1)$。**期望频数不足 5 的格要合并**。
+**卡方检验**（$\chi^2$ test）检验的不是一个数，而是一个**形状**：数据是否服从某个给定的分布（**拟合优度检验**，goodness of fit），或者两个分类变量是否**独立**（**独立性检验**，用**列联表** contingency table）。统计量 $\sum\frac{(O-E)^2}{E}$：每格取**观察频数** $O$ 与**期望频数** $E$ 的差，平方后除以 $E$（每格自己的"正常波动"尺度），再求和。中国教材通常把独立性检验（$2\times2$ 表）放在高中，把拟合优度放在大学；剑桥两者同考。**自由度**的规则是本卡最大的考点：格数减一，再减去**从数据估计的参数个数**——估了一个 $p$ 减一，估了 $\mu$ 和 $\sigma$ 减二；列联表则是 $(r-1)(c-1)$。**期望频数不足 5 的格要合并**。
 
 ## Notation
 
@@ -310,6 +311,7 @@ The two engines are the front door of *categorical data analysis*: Fisher's exac
 - **The rule underneath engine 2:** [[Probability Basics]] — $P(A \cap B) = P(A)P(B)$ under independence is the whole of the row × column ÷ total formula.
 - **Continues in:** [[Non-Parametric Tests]] — the third kind of test on this paper, for when even the shape of the population is off the table.
 - **For 9231 students:** [[MF19 Reference (9231)]] — the $\chi^2$ table is printed; the statistic $\sum\frac{(O-E)^2}{E}$ and the degrees-of-freedom rule are **not** — those are the two things to carry in your head.
+- **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — the Pearson–Fisher quarrel from the human side, and the eight-cups test that is Fisher's exact test in its first form.
 
 ---
 

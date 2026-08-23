@@ -11,6 +11,7 @@ leads_to:
   - "[[t-Tests]]"
   - "[[Chi-Squared Tests]]"
   - "[[Non-Parametric Tests]]"
+  - "[[The Lady Tasting Tea]]"
 tags:
   - subject/mathematics
   - domain/statistics
@@ -36,7 +37,7 @@ tags:
 | English | 中文 | one-line meaning |
 |---|---|---|
 | hypothesis test | 假设检验 | a courtroom procedure for deciding between two claims about a population |
-| null hypothesis $H_0$ | 原假设 | the presumed-innocent default: *nothing has changed, no effect, pure chance* |
+| null hypothesis $H_0$ | 原假设（零假设） | the presumed-innocent default: *nothing has changed, no effect, pure chance* |
 | alternative hypothesis $H_1$ | 备择假设 | the claim seeking a conviction: *something has changed* |
 | significance level $\alpha$ | 显著性水平 | how unlikely the evidence must be (under $H_0$) before we convict — the standard of proof |
 | test statistic | 检验统计量 | the number computed from the data that the verdict turns on |
@@ -191,6 +192,7 @@ And the 5% itself is a comfort, not a law of nature. Real decisions do not alway
 - **Builds on:** [[Sampling and Estimation]] — the sampling distribution of $\bar{X}$ is the entire engine of the $z$-test, and the fisherman's-net logic becomes a verdict; [[Normal Distribution]] — critical values, tails, and the approximation route for large discrete tests; [[Discrete Random Variables]] — the binomial on trial; [[Poisson Distribution]] — the promised test on a Poisson mean, delivered.
 - **Kindred:** [[Conditional Probability]] — misconception 2 is a conditional-direction error, and the Bayesian road not taken here; [[Stories/Inventing Variance]] — Fisher, the Pearsons, and the human history behind both the tea party and the feud; [[Forward Reading and Problem Discovery]] — "what would this look like if nothing were going on?" is the hunter's null model, the same instinct as [[Poisson Distribution]]'s clustering illusion.
 - **For 9709 students:** [[MF19 Reference (9709)]] — distribution formulas and the normal table are on the sheet; critical $z$-values, the tail discipline, and all interpretation are not.
+- **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — the afternoon in the 1920s when the five-step ritual was invented over eight cups of tea: randomisation, the null hypothesis, and why the 5% line is a *convenience* and not a law.
 
 ---
 

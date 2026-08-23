@@ -8,6 +8,8 @@ prerequisites:
   - "[[Limit]]"
 leads_to:
   - "[[Maclaurin Series]]"
+  - "[[De Moivre at Work]]"
+  - "[[Bounding Sums with Integrals]]"
 tags:
   - subject/mathematics
   - domain/algebra

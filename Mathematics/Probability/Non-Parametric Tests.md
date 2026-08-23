@@ -7,7 +7,8 @@ prerequisites:
   - "[[Discrete Random Variables]]"
   - "[[Normal Distribution]]"
   - "[[Averages and Spread]]"
-leads_to: []
+leads_to:
+  - "[[The Lady Tasting Tea]]"
 tags:
   - subject/mathematics
   - domain/statistics
@@ -67,10 +68,10 @@ Each rung up the ladder uses more of the data and demands more of the population
 一句话：数据长得不像正态、或者带着离谱的极端值时，别硬用 $t$ 检验——改用只看"在哪一边"或"排第几名"的检验。三个工具，各自**能说什么、要什么、差在哪**：
 
 - **符号检验**（sign test）：只数每个数据落在假设中位数的**哪一边**。要求几乎没有——只要"高于/低于"说得清就行，工资、房价、排队时间都能用。能说的是：中位数是不是这个值（配对数据：两次测量的差是不是没有偏向）。代价是最不灵敏——它把"差多少"全扔了，十对数据里要九对同向它才肯开口。
-- **Wilcoxon 符号秩检验**（signed-rank）：既看哪一边，也看**差多远——但只按名次**。要求：总体要**对称**（不必正态）。能说的还是中位数，但灵敏得多——拼图那道题，符号检验说"证据不够"，它说"够了"，因为它听见了两个反例恰好是差得最小的两个。缺点：数据一歪（工资、房价这种一头长尾的），大名次会天然堆到长尾那边，它就会冤枉一个其实成立的中位数——所以考题问"为什么 Wilcoxon 不合适"，答案是"数据有偏/有极端值，总体不一定对称"。
+- **Wilcoxon 符号秩检验**（signed-rank）：既看哪一边，也看**差多远——但只按名次**。要求：总体要**对称**（不必正态）。能说的还是中位数，但灵敏得多——拼图那道题，符号检验说"证据不够"，它说"够了"，因为它听见了两个反例恰好是差得最小的两个。缺点：数据一歪（工资、房价这种一头长尾的），名次大的会天然堆到长尾那边，它就会冤枉一个其实成立的中位数——所以考题问"为什么 Wilcoxon 不合适"，答案是"数据有偏/有极端值，总体不一定对称"。
 - **Wilcoxon 秩和检验**（rank-sum）：两组**不同的人**（不是同一批人测两次），混在一起排名次，看小组的名次是不是集中在一头。要求：两组分布形状一样，同样不要正态。能说的是：两组是不是同一个总体（中位数是否相同）。缺点：如果数据本来是配对的，用它等于把配对信息扔掉了。
 
-样本大到查不到表时用正态近似，别忘了 ±½ 的修正。考纲承诺不会出现并列名次、也不会出现恰好等于中位数的观测。考试里另一句常问的话："为什么配对 $t$ 检验不合适？"——因为差值的总体不一定正态。
+样本大到表里查不到临界值时用正态近似，别忘了 ±½ 的修正。考纲承诺不会出现并列名次、也不会出现恰好等于中位数的观测。考试里另一句常问的话："为什么配对 $t$ 检验不合适？"——因为差值的总体不一定正态。
 
 ## Notation
 
@@ -374,6 +375,7 @@ The rank-sum test is the same test as the **Mann–Whitney $U$** ($U = R_m - \tf
 - **The counting underneath:** [[Discrete Random Variables]] (the binomial tail of the sign test), [[Permutations and Combinations]] ($2^n$ sign patterns; $\binom{m+n}{m}$ hands), [[Normal Distribution]] (the large-sample approximations and the continuity correction).
 - **The median:** [[Averages and Spread]] — why the median resists an outlier that drags the mean; that resistance is what these tests inherit.
 - **For 9231 students:** [[MF19 Reference (9231)]] — both Wilcoxon tables and both normal approximations are printed; the ranking procedure, the rule for $T$ and $W$, and the continuity correction are the parts to carry.
+- **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — the first permutation test: eight cups, seventy arrangements, *only a perfect score will do*.
 
 ---
 

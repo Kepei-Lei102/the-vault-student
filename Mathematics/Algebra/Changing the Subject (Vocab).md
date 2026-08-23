@@ -98,9 +98,17 @@ This gets considerably harder once you are solving differential equations, where
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580 Extended
 
-**Syllabus ref:** A2 (9260) / E2.2 (0580). Appears as "Make $x$ the subject of…" for 2–4 marks. At Extension, expect the target variable to appear twice (requiring factoring) or the formula to involve fractions, squares, or roots. A common 3-mark question: rearrange a formula involving a fraction, then a square root.
+**Syllabus ref:** E2.5 #7 (Equations): "change the subject of formulas" — the syllabus's own difficulty markers are exactly the two escalations to drill: *the subject appears twice* (requiring factorising it out) and *there is a power or root of the subject*. (Core C2.5 #4 keeps it to subject-once, no powers.) Appears as "Make $x$ the subject of…" for 2–4 marks; a common 3-mark shape: a fraction, then a square root.
+
+### OxAQA 9260
+
+**Syllabus ref:** A2: "transform simple formulae" (core) escalating to "transform complex formulae **including when the subject appears twice**" (extension) — the same two-step ladder in the board's own words.
+
+### Where it is *not* examined
+
+Never a standalone question beyond IGCSE — 0606, 9709 and the A-Level boards assume rearrangement silently inside every solve-for-$x$ step.
 
 ---
 
