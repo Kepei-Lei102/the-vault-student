@@ -5,6 +5,7 @@ prerequisites:
   - "[[Stacks and Queues]]"
 leads_to:
   - "[[Binary Trees]]"
+  - "[[Hash Tables]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -25,6 +26,8 @@ tags:
 > *Keep a sorted array of a million names and insert one that belongs in the middle: a million-item shuffle, every later name copied one cell to the right, to make room for one. Now ask the hunter's question — **what actually needed to change?** Not a single name moved in the alphabet. Only one fact changed: who comes after whom. The array was paying a million moves because it stores order and location as the same thing, and they are not the same thing. The linked list is what you get when you stop conflating them — and to build it, you have to dig one level closer to what memory really is.*
 
 ## 中文锚点
+
+玩过寻宝游戏吗？每张纸条上写的不是宝物，而是**下一张纸条藏在哪**。纸条可以东一张西一张散落全屋——顺序不靠摆放位置，全靠每张纸条里那行"下一站"。这就是链表：每个**节点**装两样东西——数据本身，和下一个节点的**地址**（指针）；最后一张纸条写着"没有下一站"（空指针，考卷上的 −1），而你手里只攥着第一张（头指针），全链由此可达。它换来的本事正是数组给不了的：火车中段要加一节车厢，不必全列让位——**解开一个挂钩、挂上两个**，两次指针改写就完成，列车多长都一样；删除更省，把挂钩绕过那节车厢，一次改写了事（被绕过的车厢并没有被销毁——只是再也没有挂钩通向它）。代价同样立刻到账：想看第 500 节车厢？没有"算一下直接跳"这回事，只能从车头一节节摸过去——数组的一步直达，在这里换成了 $O(n)$ 的顺藤摸瓜。空出来的车厢也不浪费：它们自己也被链成一列（**空闲链表**），要新节点就从那儿领、删了就还回去——用一个链表来管理"链表能用的空位"，漂亮得像句绕口令。
 
 | English | 中文 | one-line meaning |
 |---|---|---|

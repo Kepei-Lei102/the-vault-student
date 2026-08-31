@@ -4,6 +4,7 @@ prerequisites:
   - "[[Arrays]]"
   - "[[Compilers and Interpreters]]"
 leads_to:
+  - "[[Graphs]]"
   - "[[Linked List]]"
   - "[[The Call Stack]]"
 tags:
@@ -26,6 +27,8 @@ tags:
 > *Close twenty browser tabs, then reopen them — they come back in reverse order. Nobody wrote a "reverse the tabs" feature; the reversal falls out of the structure they were stored in. You have been using stacks and queues all your life: every Ctrl-Z, every Back button, every printer that serves the person who asked first. This card's promise is the demystifying one: a stack is an array and one integer; a queue is an array and two integers. Everything else — the guarantees, the exam questions, the bugs — grows from those pointers and the discipline they enforce.*
 
 ## 中文锚点
+
+食堂里两样东西天天在演示这张卡片：洗净的餐盘**摞**成一摞——新盘子放最上面，取也从最上面取，最底下那只可能一学期没见过天日（**后进先出**）；打饭的**队**——新来的站队尾，打到饭的从队头走，谁先来谁先走（**先进先出**）。栈和队列不是两件新家具，而是**同一个数组加上两条不同的纪律**：东西还是那样放，规矩只管"从哪端进、从哪端出"——这正是"抽象数据类型"的意思：数据加上**允许的操作**，纪律本身就是结构的一半。栈只要一个栈顶指针，压入弹出全在同一端；队列一头进一头出，得记队头队尾两个指针——而队头不断前移，会把数组前段白白空出来，于是把直队伍**绕成一圈**（`MOD` 回绕的循环队列），走空的格子转一圈又能用。这两句大实话，考卷最爱拿它挖坑：往满的结构里塞是**上溢**，从空的结构里取是**下溢**。还有一件事眼见才为实：**"弹出"的盘子并没有被搬走**——指针退了一格、不再承认它而已，它还留在原格里当幽灵。你其实早就在用这两条纪律：程序的函数调用栈（递归为什么能"原路返回"）、打印机的任务队列，还有你打字超前时替你排队的键盘缓冲——一个野生的循环队列。
 
 | English | 中文 | one-line meaning |
 |---|---|---|

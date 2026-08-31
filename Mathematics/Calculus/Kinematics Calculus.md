@@ -292,18 +292,29 @@ Distance = $|s(1.535) - s(0)| + |s(2) - s(1.535)| \approx |4.88 - 0| + |4 - 4.88
 - **Pattern C — "max/min velocity."** Solve $a = 0$, evaluate $v$ at the critical time *and* at endpoints, take the largest in magnitude.
 - **Pattern D — "deceleration question."** Decelerating means *speed* is decreasing, i.e. $v$ and $a$ have *opposite signs*. Watch out: $a < 0$ alone does not always mean decelerating!
 
-### A-Level / 9709 / IB AA
+### Cambridge 0580
 
-A-Level Mechanics extends to:
-- **Newton's second law** $F = ma$ — converts a force law into a second-order differential equation $\ddot s = F(s, \dot s, t)/m$, the master equation of classical mechanics.
-- **2D motion** — kinematics on each axis independently (projectile motion is "horizontal: constant velocity; vertical: constant acceleration").
-- **Variable mass** (rocket equation) — Newton's law with $\dfrac{d(mv)}{dt}$, leading to Tsiolkovsky's equation.
+**Not examined as calculus.** IGCSE Maths reads motion from graphs only — gradients and areas of speed–time graphs ([[Travel Graphs (Vocab)]]); no differentiation of $s(t)$ ever appears. The calculus version starts at 0606.
 
-IB AA HL adds **simple harmonic motion** ($\ddot s = -\omega^2 s$, the spring/pendulum equation) and the *phase plane* — plotting $v$ against $s$ to see all motions of a system at once.
+### Cambridge 9709 (Mechanics, Paper 4)
 
-### AP Calculus BC
+§4.2 pairs the suvat equations with their calculus escape hatch: **the moment acceleration is not constant, suvat is dead**, and the paper expects $v = \dfrac{ds}{dt}$, $a = \dfrac{dv}{dt}$, integration with initial conditions to go back up the chain. Standard shapes: polynomial or trig $v(t)$ given → find displacement *and* total distance (Pattern A's split-at-$v=0$ discipline, exactly as at 0606, now with harder integrands from P3); two-phase journeys where one phase is suvat and one is calculus. The deceleration trap (Pattern D) is marked the same way.
 
-AP Topic 8.2 covers exactly this content as "particle motion." The integration patterns are identical; AP additionally cares about the *speed* $|v|$ and *acceleration vs. deceleration* distinction (Pattern D above).
+### Cambridge 9231 (Further Mechanics)
+
+§3.5 — **linear motion under a variable force** — is this card's chain pushed one step further: Newton's second law with $F$ depending on $x$ or $v$ turns $a = \dfrac{dv}{dt}$ into a differential equation, and the syllabus names the substitution that makes position-dependent forces integrable, $a = v\dfrac{dv}{dx}$ (chain rule: $\dfrac{dv}{dt} = \dfrac{dv}{dx}\dfrac{dx}{dt}$). Separable-equation technique from [[Differential Equations]]; the inverse-square case is worked in full in [[Gravitational Fields]] (escape speed via $v\,dv/dx = -gR^2/x^2$); resistive forces $kv$ and $kv^2$ are the other stock integrands.
+
+### IB AA
+
+AA **SL 5.9** names "kinematic problems involving displacement $s$, velocity $v$, acceleration $a$ and total distance travelled" — the same patterns as above, with total distance $\int \lvert v \rvert \, dt$ the flagged distinction. (Simple harmonic motion and phase-plane pictures are physics-side enrichment, not AA syllabus rows.)
+
+### AP Calculus AB/BC
+
+Particle motion appears twice: Topic 4.2 (straight-line motion — interpreting $v$ and $a$ as derivatives) and Topic 8.2 (position from velocity by integration). The integration patterns are identical to the Cambridge ones; AP additionally leans on the *speed* $\lvert v \rvert$ vs velocity distinction and the speeding-up/slowing-down sign test (Pattern D above) as a named FRQ part.
+
+### The physics boards
+
+9702 and 0625 do kinematics with graphs and the equations of motion, not calculus — the derivative notation appears only as shorthand. The calculus formalism on this card belongs to the maths boards; the physics side of the same bridge is [[Newton's Laws of Motion]].
 
 ---
 
@@ -315,7 +326,7 @@ AP Topic 8.2 covers exactly this content as "particle motion." The integration p
 
 Pause and notice who shows up here. Newton invented calculus (the $\frac{d}{dt}$ machinery on this card). Newton also wrote $F = ma$ (the law that *uses* this card to predict motion). Kinematics is exactly the topic where Newton-the-mathematician hands the baton to Newton-the-physicist — same guy, two hats, same century. **Newton²**. The kinematic chain $s \to v \to a$ is the bridge built between his two halves.
 
-That bridge — turning a force law into a second-order ODE in $s$, then integrating with initial conditions — is the whole project of classical mechanics, from Galileo through Lagrange to Hamilton. It deserves its own card. See [[Newton's Laws of Motion]] for the physics-side treatment.
+That bridge — turning a force law into a second-order ODE in $s$, then integrating with initial conditions — is the whole project of classical mechanics, from Galileo through Lagrange to Hamilton; [[Newton's Laws of Motion]] carries the physics-side treatment, and [[Differential Equations]] the machinery.
 
 ### Higher Derivatives — jerk, snap, crackle, and pop
 

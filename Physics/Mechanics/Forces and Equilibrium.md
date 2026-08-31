@@ -17,6 +17,7 @@ leads_to:
   - "[[Torque]]"
   - "[[Braking Systems]]"
   - "[[Stress, Strain and Young Modulus]]"
+  - "[[Circular Motion]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -27,7 +28,6 @@ tags:
   - curriculum/Cambridge-9702
   - curriculum/Cambridge-0625
   - curriculum/A-Level
-  - curriculum/IB-AA
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-C-Mechanics
@@ -183,7 +183,7 @@ Or equivalently, the signed sum of all moments equals zero. The principle of mom
 
 ## Centre of Gravity — and stability
 
-The **centre of gravity** (重心, zhòngxīn) of a body is the point where its **total weight** can be considered to act. For a uniform body in a uniform gravitational field, this coincides with the **centre of mass** (质心, zhìxīn) — the mass-weighted average position. The two are formally distinct but practically identical for everything you'll meet at A-Level.
+The **centre of gravity** (重心, zhòngxīn) of a body is the point where its **total weight** can be considered to act. For a uniform body in a uniform gravitational field, this coincides with the **centre of mass** (质心, zhìxīn) — the mass-weighted average position. The two are formally distinct but practically identical for everything you'll meet at A-Level. [[Centre of Mass]] proves why the replacement is legitimate and shows how to *locate* the point when it isn't obvious — composite shapes, laminae with pieces removed, and the toppling-versus-sliding comparison in numbers.
 
 ### Stability — the toppling test
 
@@ -343,18 +343,29 @@ So 9709 students should master the translational half of this card and skip the 
 > [!info] On the 9702 data sheet
 > No formulas given. $\tau = Fd$, $W = mg$, principle of moments — all language-to-memorise.
 
-### Cambridge 0625 (IGCSE Physics) — §1.5
+### Cambridge 0625 (IGCSE Physics) — §1.3, §1.5
 
-Core: Hooke's law (elastic), resultant force, $F = ma$, friction qualitative, turning effect of a force qualitative, equilibrium, centre of gravity (toppling).
-Extended: principle of moments quantitative, circular motion qualitative.
+§1.3: mass vs weight, $W = mg$ with $g$ as gravitational field strength ([[Gravitational Fields]] carries the field itself). §1.5 Core: resultant force, $F = ma$, friction qualitative, turning effect of a force qualitative, equilibrium, centre of gravity (toppling). Extended: principle of moments quantitative; circular motion qualitative ([[Circular Motion]]).
 
-### A-Level Mathematics Mechanics (AQA / OCR / Edexcel M1 / 9709 M2) and IB AA
+### Cambridge 9231 (Further Mechanics, Paper 3 — §3.2)
 
-A-Level Mechanics 1 modules cover everything in this card plus equilibrium of a *rigid body* in 2D, Lami's theorem explicitly, stable / unstable / neutral equilibrium classification by displacement-energy reasoning, and frameworks (truss / pin-jointed). IB AA HL Mechanics is similar in scope.
+Equilibrium of a rigid body: moment of a force about a point, coplanar forces in equilibrium, and **toppling vs sliding** — the concept and the toppling test are here; the syllabus also wants **centres of mass of uniform laminae and composite bodies** (triangular lamina, standard shapes by symmetry, MF19's list), which this card states but does not compute. $g = 10$.
 
-### AP Physics 1 / C: Mechanics
+### IB Physics (A.2.1)
 
-AP Physics 1 covers static equilibrium qualitatively + simple problems. AP Physics C: Mechanics adds the integral / centroid definition of centre of mass and uses calculus on continuous mass distributions.
+Free-body diagrams for one- and two-dimensional situations, the resultant force, and Newton's first law applied to translational equilibrium; forces labelled with their accepted names. The moments half is not in A.2 (rigid-body rotation lives in A.4).
+
+### AP Physics 1 / C: Mechanics (§2.2–2.4)
+
+2.2 forces and free-body diagrams, 2.3 Newton's third law (the contact-pair reasoning on this page), 2.4 Newton's first law as translational equilibrium; AP Physics 1 keeps static equilibrium qualitative-plus-simple, AP C adds the centre-of-mass integral and rotational equilibrium with calculus.
+
+### Edexcel IAL (M1 statics of a particle; M2 rigid bodies) · OxAQA 9660 (M1.3, M2.3)
+
+The particle half — resolving, $\sum F = 0$, limiting friction — is M1 on both boards; the rigid-body half (moments, centres of mass of laminae, suspension and toppling) is IAL M2 / 9660 M2.3, where again the computations of centres of mass are the piece still owed.
+
+### Where it is *not* examined
+
+Not on Cambridge 0580 / 0606 or OxAQA 9260 (no mechanics), not in IB AA / AI (no mechanics option since 2019); and 9709 P4 examines only the particle half — see the top of this section.
 
 ---
 

@@ -8,6 +8,7 @@ prerequisites:
 leads_to:
   - "[[Stacks and Queues]]"
   - "[[The Call Stack]]"
+  - "[[A, B, C]]"
 tags:
   - subject/computer-science
   - domain/systems-software
@@ -86,7 +87,7 @@ Two philosophies compete for the high-level job:
 | distribution | ship the executable: no translator needed on the user's machine, and the **source stays private** | users need the interpreter installed, and (classically) receive your source |
 | portability | recompile for each processor/OS | the same source runs anywhere the interpreter exists |
 
-The justify-the-choice questions on both boards resolve by matching the column to the scenario: a **game shipped to millions** wants compilation (speed, no dependencies, source protected); a **beginner learning to code** or a **script being tinkered with** wants interpretation (instant feedback, stop-at-first-error, no build step); an **embedded controller** ([[Embedded Systems]]) compiles — there is no room for an interpreter on the chip.
+The justify-the-choice questions on both boards resolve by matching the column to the scenario: a **game shipped to millions** wants compilation (speed, no dependencies, source protected); a **beginner learning to code** or a **script being tinkered with** wants interpretation (instant feedback, stop-at-first-error, no build step); an **embedded controller** ([[Embedded Systems]]) compiles — there is no room for an interpreter on the chip. (This trade once decided the fate of an operating system: C's own parent, B, was interpreted — and ran too slowly for anyone to dare write a kernel in it. The family drama, machines and names included, is [[A, B, C]].)
 
 ### Java's half-and-half — and the virtual machine's other meaning
 
@@ -246,5 +247,5 @@ RPN's whole point is a single **left-to-right** pass; and on `-` or `÷`, the *f
 ## Connections
 
 - **Builds on:** [[Assembly Language]] — the assembler, the 1-to-1 rule this card's translators break on purpose, and the machine-code destination of stage 3; [[CISC vs RISC]] — RISC's founding bet was that compilers, not humans, write the assembly: this card is the bet's other half, honoured in stage 4; [[Operating Systems]] — the bay's government: it loads what the compiler produced, supplies the libraries the linker leans on, and hosts the hardware-level VMs this card's bytecode VMs are cousins of; [[Recursion]] — BNF's self-referring rules are recursion writing grammar.
-- **Leads to:** [[Stacks and Queues]] — RPN's engine: the pop-two-push-one discipline as a named, disciplined structure; [[The Call Stack]] — the call stack every running program lives on, frames and all.
-- **Kindred:** [[Von Neumann machine]] — code-as-data is what makes translators possible at all: a compiler is a program whose *output* is a program; [[Embedded Systems]] — where compilation is the only option on the chip.
+- **Leads to:** [[Stacks and Queues]] — RPN's engine: the pop-two-push-one discipline as a named, disciplined structure; [[The Call Stack]] — the call stack every running program lives on, frames and all; [[A, B, C]] — the story that ran this card's trade-off live: B interpreted and too slow for a kernel, C compiled and rewriting Unix within two years.
+- **Kindred:** [[Von Neumann machine]] — code-as-data is what makes translators possible at all: a compiler is a program whose *output* is a program; [[Embedded Systems]] — where compilation is the only option on the chip; [[Courage]] — binary translation shipped as a product: Rosetta translating just-in-time in 2006, Rosetta 2 translating ahead-of-time in 2020, each carrying a whole software ecosystem across a CPU change.

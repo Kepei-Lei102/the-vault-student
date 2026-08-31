@@ -6,6 +6,8 @@ prerequisites:
   - "[[Cross Product]]"
   - "[[Linear Momentum]]"
   - "[[Work, Energy and Power]]"
+  - "[[Circular Motion]]"
+  - "[[Gravitational Fields]]"
 leads_to:
   - "[[Laws and Theorems]]"
 tags:

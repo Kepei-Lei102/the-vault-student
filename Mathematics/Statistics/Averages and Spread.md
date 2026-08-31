@@ -546,6 +546,7 @@ Measures of centre and spread — mean, median, mode, range, interquartile range
 - **Leads to:** [[Scatter Diagrams]] — the mean point $(\bar{x}, \bar{y})$ always lies on the line of best fit
 - **Application:** [[Relative and Expected Frequency]] — expected frequency uses probability as a kind of theoretical mean
 - **Foundation:** [[Probability Basics]] — expected value in probability is a weighted mean of outcomes
+- **Story:** [[You Never Expect the Change of Needs]] — mean vs spread decided by speedrunners: a constant input delay can be practised away, but jitter never can, so "smoother" is a low-variance verdict — this card's central distinction, wearing a game controller
 
 ---
 

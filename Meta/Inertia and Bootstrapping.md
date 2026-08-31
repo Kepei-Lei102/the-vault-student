@@ -6,6 +6,7 @@ prerequisites:
   - "[[Forward Reading and Problem Discovery]]"
 leads_to:
   - "[[The Gift of the Gradient]]"
+  - "[[The Ghost of Drive A]]"
 tags:
   - subject/methodology
   - subject/physics
@@ -148,6 +149,8 @@ Same shape, third regime. Every distributed system, programming language runtime
 - **CDN cache miss.** A content delivery network's first request for a new file has to fetch from origin (slow); the second request from the cached edge node is fast. The hump is the trip to origin; warming the cache flattens it.
 
 The unifying pattern: **every system that has both a "running" state and a "not running" state pays a one-time cost to transition.** Engineers have responded with a uniform vocabulary — pre-warming, pooling, caching, JIT, eager initialisation — that is, in every case, the software equivalent of the chemistry catalyst: *lower the hump in advance so the first request is fast.*
+
+The same physics runs in reverse, and it is just as important: once a system *is* moving, changing its direction costs the hump — which is why computing's past never really dies, and why every interface is secretly a museum ([[The Ghost of Drive A]]). Inertia is not only the enemy of starting; it is the guardian of everything already started.
 
 > [!info] Beyond syllabus — the bootstrap problem in compilers
 > *Recall that [[Forward Reading and Problem Discovery]] mentions self-hosting compilers as one of the formal twins of "discovery is an instance of the discovered."* The literal compiler bootstrap is also a cold-start problem. To compile a compiler written in language X, you need an existing compiler for X. The very first compiler had to be hand-translated to machine code (huge activation cost!); every subsequent compiler can use the previous one to compile itself. **The first hump is the worst hump.** Once a language has a working compiler, evolving it costs almost nothing — you compile each new version with the previous version. The expression "pulling oneself up by one's bootstraps" is mathematically accurate here: there is no external lever; the system has to start itself, and starting is the entire cost.
@@ -325,6 +328,7 @@ Newton wrote the equation in 1687. Arrhenius wrote it in 1889. Cold-start engine
 - **Cross-domain (mathematical universality):** the activation hump's recurrence across substrates is a structural cousin of *fractal self-similarity* — the same shape under magnification or substrate-change. Strict mathematical fractals (Mandelbrot, Koch snowflake, Cantor set) self-repeat under magnification of the *same* object; this card's hump self-repeats across *different* physical regimes. The formal cousin is **universality** in physics (the same critical exponents at very different phase transitions, e.g. liquid–gas vs ferromagnet). Recognise both: same shape, different scales = fractal; same shape, different substrates = universality. The cognitive habit of seeing both is what this card is training.
 - **Cross-domain (philosophy of action):** Stoicism's "control what's controllable, accept what isn't" — the environment is mostly controllable, in-the-moment willpower mostly isn't. The Stoic move and the catalyst move are the same move at different scales.
 - **Beyond syllabus — the trap side:** *sunk-cost fallacy*, the *hedonic treadmill*, *learned helplessness*, *escalation of commitment*. All four are inertia-traps where the body in motion is in the wrong motion, and the audit at the end of Part II is how you spot them.
+- **Stories:** [[The Ghost of Drive A]] — inertia as the guardian of everything already started, at civilisation scale; [[Courage]] — what it costs to pay that inertia down *deliberately*: the scheduled lump sum instead of the perpetual interest.
 - **Cultural touchstones:** the Chinese proverb 万事开头难 ("everything is hard at the start"), the English "the hardest part is starting," the runner's "showing up is half the battle," the writer's "first sentence is the worst sentence" — every culture has named this hump in its own vocabulary, because every culture has noticed the same physics.
 
 ---

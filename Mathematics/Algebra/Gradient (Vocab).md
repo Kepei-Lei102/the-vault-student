@@ -97,11 +97,19 @@ The moment the gradient starts varying from point to point, you no longer have a
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580
 
-**Syllabus ref:** A11 (9260), E3.3 (0580). "Calculate the gradient of a straight line from the coordinates of two points on it; interpret the gradient as a rate of change."
+**Syllabus ref: C3.3 / E3.3** ("Gradient of linear graphs"), and the tier split is the audit-worthy fact: **Core finds the gradient "from a grid only"** — count squares, rise over run — while **Extended adds calculating it from the coordinates of two points** with no grid drawn. The rate-of-change *interpretation* lives with the graphs-in-practical-situations rows (travel graphs and their gradients), not in E3.3's own wording.
 
 **Typical phrasing:** "Find the gradient of the line joining $A$ and $B$." "A line has gradient $-2$ and passes through $(1, 5)$…". Usually paired with [[Equation of a Straight Line (Vocab)]].
+
+### OxAQA 9260
+
+**Syllabus ref: A11.** Same two skills, one tier: gradient from a graph and from two points.
+
+### Cambridge 9709
+
+**§1.3 (coordinate geometry)** assumes the two-point gradient fluently — it appears inside every line-equation, parallel/perpendicular ($m_1 m_2 = -1$) and tangent/normal question rather than as a question of its own, and from [[Differentiation]] onward "gradient" means the derivative evaluated at a point.
 
 ---
 

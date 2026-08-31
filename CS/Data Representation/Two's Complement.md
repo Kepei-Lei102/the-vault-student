@@ -176,6 +176,7 @@ Not yet a confirmed statement: the rebuilt course's A1.2 ("Data representation a
 - **The circuit:** [[Half-Adder and Full-Adder]] — the full-adder built from gates is the one unit that does signed and unsigned add/subtract, *because* of two's complement.
 - **Next:** [[Overflow and Underflow]] — what happens at the cliff: detecting true overflow, underflow, logical/arithmetic shifts, and the famous overflow bugs (and deliberate wraparound).
 - **Maths underneath:** modular arithmetic — a fixed-width register is the ring $\mathbb{Z}/2^n\mathbb{Z}$; the clock is the right mental model.
+- **Story:** [[You Never Expect the Change of Needs]] — this card's overflow cliff with a date on it: the 32-bit signed second-counter that runs out at 03:14:07 UTC on 19 January 2038, and the museum of ceilings it belongs to.
 
 ---
 

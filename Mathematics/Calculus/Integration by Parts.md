@@ -290,17 +290,25 @@ Unlike substitution, parts is often **not** spoon-fed — Cambridge expects you 
 
 Parts is **not** on 9709 Paper 1 or Paper 2.
 
-### A-Level (general)
+### Cambridge 0580 / 0606
 
-Integration by parts is a core A-Level technique from Year 2 (A2). The exam expects fluency on the standard cases: $x^n e^{ax}$, $x^n \sin(ax)$, $x^n \cos(ax)$, $\ln x$, $\tan^{-1} x$. Self-referential exponential-trig is the common "hard" problem at A-Level.
+**Not examined at either.** 0580 has no integration at all, and 0606's integration stops at recognisable antiderivatives — powers of $(ax+b)$, $e^{ax+b}$, $\sin(ax+b)$, $\cos(ax+b)$ — never products. Parts begins at 9709 Paper 3.
+
+### Cambridge 9231 (Further Maths)
+
+Assumed from 9709 P3, then promoted from technique to **engine**: FP2's §2.4 builds **reduction formulae** on it — apply parts to a whole family $I_n$ and land a recurrence dropping $n$ by one or two rungs — and [[Reduction Formulae]] runs that machine on real Paper 2 questions, including the hinted-derivative variant where the paper hands you $\frac{d}{dx}[\ldots]$ instead of saying "integrate by parts". No FP2 question asks for a plain parts integral; it asks what parts can *build*.
+
+### Edexcel IAL / OxAQA 9660
+
+IAL names parts at **P4.6.2**, alongside substitution, with $\int \ln x \, dx$ the flagged standalone case (the "invisible 1" trick — differentiate the log, integrate the 1). OxAQA 9660 puts it at **P2.7**, glossed in the syllabus's own spirit as *the product rule reversed* — the honest genealogy, since parts is exactly the product rule read backwards and rearranged. Both expect the standard cases: $x^n e^{ax}$, $x^n \sin(ax)$, $x^n\cos(ax)$, $\ln x$, and the self-referential exponential-trig double round.
 
 ### IB AA HL
 
-Same standard cases as A-Level, plus **reduction formulas** — the HL extension where you apply parts to a family like $\int x^n e^x \, dx$ to derive a recursive formula linking the $n$th integral to the $(n-1)$th:
+Parts is HL-only in AA (SL integrates by recognition and substitution). Same standard cases, plus **reduction formulas** as the HL extension — apply parts to a family like $\int x^n e^x \, dx$ to derive a recursive formula linking the $n$th integral to the $(n-1)$th:
 
 $$I_n = \int x^n e^x \, dx = x^n e^x - n I_{n-1}.$$
 
-Reduction formulas let you integrate $\int x^5 e^x \, dx$ without doing parts five times from scratch — you just iterate the recurrence.
+Reduction formulas let you integrate $\int x^5 e^x \, dx$ without doing parts five times from scratch — you iterate the recurrence. The full machinery — why the ladder always reaches the ground, and what examiners do with it — is [[Reduction Formulae]].
 
 ### AP Calculus BC
 

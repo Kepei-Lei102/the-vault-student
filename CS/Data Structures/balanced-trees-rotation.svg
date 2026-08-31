@@ -1,0 +1,26 @@
+<svg width="100%" viewBox="0 0 780 330" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="180" y="30" text-anchor="middle" fill="#888" font-size="13">before — y heavy on the left</text>
+<line x1="165.9" y1="84.1" x2="114.1" y2="135.9" stroke="#888" stroke-width="1.4"/>
+<line x1="194.6" y1="83.6" x2="240.4" y2="126.4" stroke="#888" stroke-width="1.4"/>
+<circle cx="180" cy="70" r="20" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="180" y="75" text-anchor="middle" fill="#888" font-size="14">y</text>
+<circle cx="100" cy="150" r="20" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="100" y="155" text-anchor="middle" fill="#888" font-size="14">x</text>
+<polygon points="255,150 223.0,214 287.0,214" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="255" y="206" text-anchor="middle" fill="#888" font-size="13">C</text>
+<line x1="88.6" y1="166.4" x2="66.4" y2="198.6" stroke="#888" stroke-width="1.4"/>
+<line x1="112.2" y1="165.9" x2="137.8" y2="199.1" stroke="#888" stroke-width="1.4"/>
+<polygon points="55,222 26.0,280 84.0,280" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="55" y="272" text-anchor="middle" fill="#888" font-size="13">A</text>
+<polygon points="150,222 121.0,280 179.0,280" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="150" y="272" text-anchor="middle" fill="#888" font-size="13">B</text>
+<line x1="330" y1="160" x2="430" y2="160" stroke="#f59e0b" stroke-width="2"/><polygon points="440,160 428,155 428,165" fill="#f59e0b"/>
+<text x="385" y="145" text-anchor="middle" fill="#888" font-size="12.5">rotate right</text>
+<text x="385" y="182" text-anchor="middle" fill="#888" font-size="11">3 pointer writes</text>
+<text x="590" y="30" text-anchor="middle" fill="#888" font-size="13">after — x lifted, height moved to the light side</text>
+<line x1="555.4" y1="83.6" x2="509.6" y2="126.4" stroke="#888" stroke-width="1.4"/>
+<line x1="584.6" y1="83.7" x2="640.4" y2="136.3" stroke="#888" stroke-width="1.4"/>
+<circle cx="570" cy="70" r="20" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="570" y="75" text-anchor="middle" fill="#888" font-size="14">x</text>
+<polygon points="495,150 463.0,214 527.0,214" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="495" y="206" text-anchor="middle" fill="#888" font-size="13">A</text>
+<circle cx="655" cy="150" r="20" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="655" y="155" text-anchor="middle" fill="#888" font-size="14">y</text>
+<line x1="643.6" y1="166.4" x2="621.4" y2="198.6" stroke="#888" stroke-width="1.4"/>
+<line x1="667.2" y1="165.9" x2="692.8" y2="199.1" stroke="#888" stroke-width="1.4"/>
+<polygon points="610,222 581.0,280 639.0,280" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="610" y="272" text-anchor="middle" fill="#888" font-size="13">B</text>
+<polygon points="705,222 676.0,280 734.0,280" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.3"/><text x="705" y="272" text-anchor="middle" fill="#888" font-size="13">C</text>
+<text x="390" y="310" text-anchor="middle" fill="#888" font-size="12.5">in-order both panels: A · x · B · y · C — the promise never moves</text>
+</svg>

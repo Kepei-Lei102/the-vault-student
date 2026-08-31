@@ -2,6 +2,7 @@
 chinese: 转动惯量 (zhuàndòng guànliàng)
 prerequisites:
   - "[[Torque]]"
+  - "[[Centre of Mass]]"
   - "[[Newton's Laws of Motion]]"
   - "[[Integration]]"
   - "[[Areas and Volumes by Integration]]"

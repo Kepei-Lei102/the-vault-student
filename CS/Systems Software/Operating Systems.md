@@ -9,6 +9,7 @@ prerequisites:
 leads_to:
   - "[[Compilers and Interpreters]]"
   - "[[File Systems]]"
+  - "[[The Ghost of Drive A]]"
 tags:
   - subject/computer-science
   - domain/systems-software
@@ -63,7 +64,7 @@ And the honest boundary: some computers genuinely run **without** an OS — the 
 ![[os-layer-cake.svg|697]]
 
 - **Hardware** — the physical machine.
-- **Firmware** — software stored *in* the hardware (flash ROM on the board): the code that runs first at power-on. The **bootstrap**: the CPU wakes pointing at firmware (BIOS/UEFI on a PC); firmware checks the hardware, finds the disk, loads the OS's loader into RAM, and jumps — each stage pulling in a bigger one, the system hoisting itself by its own straps. Firmware is the bridge in 0478's trio: *hardware runs firmware; firmware loads software.*
+- **Firmware** — software stored *in* the hardware (flash ROM on the board): the code that runs first at power-on. The **bootstrap**: the CPU wakes pointing at firmware (BIOS/UEFI on a PC); firmware checks the hardware, finds the disk, loads the OS's loader into RAM, and jumps — each stage pulling in a bigger one, the system hoisting itself by its own straps. Firmware is the bridge in 0478's trio: *hardware runs firmware; firmware loads software.* (For decades, the first instants of that wake-up were spent impersonating a processor from 1978 — the fossil record inside every boot is [[The Ghost of Drive A]].)
 - **Operating system** — the kernel plus its services, loaded by firmware, resident until shutdown.
 - **System vs application software:** system software runs and maintains the machine itself (the OS, utilities, translators); **application software does the user's actual task** (browser, word processor, game). The test: *would you still need it if you used the computer for something completely different?* System software: yes. Application: no.
 
@@ -242,3 +243,4 @@ The kernel is not a process taking turns — it is the **turn-giver**: code that
 - **Builds on:** [[Interrupt Handling]] — the constitution: the timer tick that takes the CPU back, the kernel as interrupt handler, the ISR/scheduler machinery this card names and completes; [[CPU Architecture and the Fetch-Execute Cycle]] — the one instruction stream being shared; [[RAM and the Memory Hierarchy]] — the memory being allocated, protected, and extended (its virtual-memory preview cashed here); [[Secondary Storage]] — the blocks under the files, the swap space under the paging, and the defrag/SSD warning the utilities table inherits.
 - **Leads to:** [[Compilers and Interpreters]] — the bay's next resident: 9618 §5.2's translators and §16.2's compilation stages, plus the *other* kind of virtual machine; [[File Systems]] — the file-management section's deep story (how names become blocks).
 - **Kindred:** [[Embedded Systems]] — the honest contrast: the machine that needs no OS, and the real-time scheduling contract when it needs a small one; [[Input and Output Devices]] — drivers, buffers, and the interrupt-driven I/O the hardware-management section governs; [[Compression]] — the file-compression utility's engine.
+- **Stories:** [[The Ghost of Drive A]] — the fossil record inside every boot; [[Courage]] — the OS as where compatibility promises live and die: Classic, Carbon and the 32-bit cutoff, each bridge ended on a published schedule.

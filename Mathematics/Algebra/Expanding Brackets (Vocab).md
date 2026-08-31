@@ -78,9 +78,17 @@ The middle terms cancel: $ab - ab = 0$. This identity is used constantly in fact
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580
 
-**Syllabus ref:** A4 (9260), E2.2 (0580). Expanding is rarely a standalone question — it's a sub-step in equations, proof ("Show that"), and simplification. Exam instruction: "Expand and simplify" means expand, then collect like terms.
+**Syllabus ref:** C2.2 / E2.2 — "expand products of algebraic expressions". Core stops at single brackets and two brackets in one variable, e.g. $(2x+1)(x-4)$; **Extended adds products of more than two brackets**, e.g. $(x-2)(x+3)(2x+1)$ — expand two, then multiply the result by the third. Rarely a standalone question: it's a sub-step in equations, proof ("Show that"), and simplification. The instruction "Expand and simplify" means expand, then collect like terms.
+
+### OxAQA 9260
+
+**Syllabus ref:** A4 — expanding up to two linear expressions; the Extension tier adds products of **two or three binomials** (the Pascal's-triangle shortcut for repeated brackets lives with [[Binomial Theorem]]).
+
+### Everywhere above IGCSE
+
+Not examined as its own question on 0606, 9709 or beyond — those boards assume it fluently and test it only inside larger manipulations (binomial expansions, polynomial division, calculus rearrangements). If expanding is costing you marks there, the leak is speed and sign discipline, not syllabus content.
 
 ---
 

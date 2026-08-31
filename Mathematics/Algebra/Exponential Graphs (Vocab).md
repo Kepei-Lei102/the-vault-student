@@ -92,11 +92,15 @@ Left: $y = 2^x$ with its asymptote $y = 0$ — the curve approaches the $x$-axis
 
 ### Cambridge 0580 Extended
 
-**E2.10** — Recognise, sketch, and interpret graphs of exponential functions in the context of growth and decay. Usually 2–3 marks: shape, $y$-intercept, asymptote.
+**E2.10** — Recognise, sketch, and interpret graphs of exponential functions, and draw/interpret graphs of exponential growth and decay problems (E1.17 context: depreciation, population). Usually 2–3 marks: shape, $y$-intercept, asymptote. Two fine-print facts from the syllabus itself: the examined family is $y = ar^x + b$ — **the $+b$ lifts the asymptote to $y = b$**, so read the equation before writing $y = 0$ — and **knowledge of $e$ is not required** at 0580; the natural exponential waits for 0606.
 
 ### Cambridge 0606
 
-**6.1** — Properties and graphs of $y = e^x$ and $y = \ln x$ specifically, including asymptotic behaviour. The natural exponential is the main target at 0606; general $b^x$ is assumed from 0580.
+**6.1** — Properties and graphs of $y = e^x$ and $y = \ln x$, "including the asymptotic nature of the graphs" — and the syllabus asks you to **state the equations of any asymptotes**, on graphs limited to $y = ke^{nx} + a$ and $y = k\ln(ax+b)$ with integer constants. Same trap as 0580, one level up: the $+a$ makes the horizontal asymptote $y = a$. Also required: $e^x$ and $\ln x$ as inverses of each other (the reflection across $y = x$).
+
+### Beyond IGCSE
+
+Not examined as a recognition task above 0606 — A Level and beyond assume these shapes fluently and test them inside calculus, logarithms, and modelling ([[Exponential Growth and Decay]] carries that story).
 
 ## Connections
 

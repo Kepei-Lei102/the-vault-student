@@ -5,6 +5,7 @@ prerequisites:
   - "[[Secondary Storage]]"
 leads_to:
   - "[[File Systems]]"
+  - "[[Hash Tables]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -32,6 +33,8 @@ tags:
 > *Every variable your program has ever created is gone. The array you filled, the record you assembled, the total you spent an hour getting right — all of it lived in RAM, and RAM forgets the moment the process ends. That is not a flaw to be worked around; it is the deal. A file is the **one** deliberate exception: the structure whose lifetime is longer than the program that made it. Everything else here — why `open` and `close` exist at all, why a file has no idea how many lines it has, why writing a record down is easy and reading it back is the hard part — follows from taking that exception seriously.*
 
 ## 中文锚点
+
+游戏打了三小时不存档，关机——全没了。变量就是这样活着的：它们住在内存里，像写在教室黑板上的字，程序一退出、电一断，黑板就被擦得干干净净。**文件就是存档**：把数据誊进磁盘这本"笔记本"，它就**活得比程序久**（持久化），明天开机还在。和笔记本打交道有一套完整的礼节：**打开**（跟系统借到本子），读或写（**文件指针**是你的书签，记着读到哪儿），**关闭**（合上、还回去）。读到最后一页再没有字，那是**文件结束**——一个"到头了"的**状态**，不是藏在末尾的某个特殊字符，循环拿它当停止信号。最要紧的礼节藏在"关闭"里：你写的字不会立刻落到磁盘上，而是先攒在内存的**缓冲区**里，攒够一批才真正誊过去——合上本子那一刻，没誊完的才被全部誊清。这也是 U 盘要"安全弹出"的全部道理：直接拔，缓冲区里没誊完的字就永远丢在半路了。写的方式还分两种脾气：**写模式**翻开就把旧内容整本撕掉从头来，**追加模式**只在末尾续写——考卷年年爱考你分清这两位，分不清的代价是整个文件。
 
 | English | 中文 | one-line meaning |
 |---|---|---|

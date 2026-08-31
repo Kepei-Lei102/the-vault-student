@@ -1,0 +1,71 @@
+<svg width="100%" viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <!-- column headers -->
+  <text x="180" y="28" text-anchor="middle" fill="#888" font-size="14.5">the fossil</text>
+  <text x="620" y="28" text-anchor="middle" fill="#888" font-size="14.5">where it still lives</text>
+  <line x1="40" y1="38" x2="320" y2="38" stroke="#888" stroke-width="0.8"/>
+  <line x1="480" y1="38" x2="760" y2="38" stroke="#888" stroke-width="0.8"/>
+
+  <!-- row 1: QWERTY -->
+  <rect x="40" y="56" width="280" height="58" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="180" y="79" text-anchor="middle" fill="#888" font-size="12.5">1873 — type bars jam,</text>
+  <text x="180" y="97" text-anchor="middle" fill="#888" font-size="12.5">so QWERTY spreads the pairs out</text>
+  <rect x="480" y="56" width="280" height="58" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="620" y="79" text-anchor="middle" fill="#888" font-size="12.5">the keyboard on your phone's glass —</text>
+  <text x="620" y="97" text-anchor="middle" fill="#888" font-size="12.5">no bars, no levers, same layout</text>
+  <line x1="320" y1="85" x2="468" y2="85" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,85 466,80 466,90" fill="#888"/>
+
+  <!-- row 2: dollar bill / card -->
+  <rect x="40" y="130" width="280" height="58" rx="8" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="180" y="153" text-anchor="middle" fill="#888" font-size="12.5">1887 dollar bill sizes the punched card;</text>
+  <text x="180" y="171" text-anchor="middle" fill="#888" font-size="12.5">1928 — the card gets 80 columns</text>
+  <rect x="480" y="130" width="280" height="58" rx="8" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="620" y="153" text-anchor="middle" fill="#888" font-size="12.5">80-column terminals, and PEP 8</text>
+  <text x="620" y="171" text-anchor="middle" fill="#888" font-size="12.5">capping your code at 79 characters</text>
+  <line x1="320" y1="159" x2="468" y2="159" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,159 466,154 466,164" fill="#888"/>
+
+  <!-- row 3: carriage -->
+  <rect x="40" y="204" width="280" height="58" rx="8" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="180" y="227" text-anchor="middle" fill="#888" font-size="12.5">1960s — a teletype carriage needs</text>
+  <text x="180" y="245" text-anchor="middle" fill="#888" font-size="12.5">travel time: CR then LF, two codes</text>
+  <rect x="480" y="204" width="280" height="58" rx="8" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.4"/>
+  <text x="620" y="227" text-anchor="middle" fill="#888" font-size="12.5">Windows line endings, HTTP headers,</text>
+  <text x="620" y="245" text-anchor="middle" fill="#888" font-size="12.5">and git's LF/CRLF warning</text>
+  <line x1="320" y1="233" x2="468" y2="233" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,233 466,228 466,238" fill="#888"/>
+
+  <!-- row 4: drive letters -->
+  <rect x="40" y="278" width="280" height="58" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.4"/>
+  <text x="180" y="301" text-anchor="middle" fill="#888" font-size="12.5">1974 — CP/M letters its floppies A: and B:;</text>
+  <text x="180" y="319" text-anchor="middle" fill="#888" font-size="12.5">1983 — the XT's hard disk queues up third</text>
+  <rect x="480" y="278" width="280" height="58" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.4"/>
+  <text x="620" y="301" text-anchor="middle" fill="#888" font-size="12.5">C:\ on every Windows machine —</text>
+  <text x="620" y="319" text-anchor="middle" fill="#888" font-size="12.5">A: and B: still reserved, still empty</text>
+  <line x1="320" y1="307" x2="468" y2="307" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,307 466,302 466,312" fill="#888"/>
+
+  <!-- row 5: leap year -->
+  <rect x="40" y="352" width="280" height="58" rx="8" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1.4"/>
+  <text x="180" y="375" text-anchor="middle" fill="#888" font-size="12.5">1983 — Lotus 1-2-3 pretends 1900</text>
+  <text x="180" y="393" text-anchor="middle" fill="#888" font-size="12.5">is a leap year; Excel copies it on purpose</text>
+  <rect x="480" y="352" width="280" height="58" rx="8" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="1.4"/>
+  <text x="620" y="375" text-anchor="middle" fill="#888" font-size="12.5">serial 60 = Feb 29, 1900 — forever,</text>
+  <text x="620" y="393" text-anchor="middle" fill="#888" font-size="12.5">now required by the file-format standard</text>
+  <line x1="320" y1="381" x2="468" y2="381" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,381 466,376 466,386" fill="#888"/>
+
+  <!-- row 6: A20 -->
+  <rect x="40" y="426" width="280" height="58" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.4"/>
+  <text x="180" y="449" text-anchor="middle" fill="#888" font-size="12.5">1978 — the 8086 wraps addresses at 1 MB;</text>
+  <text x="180" y="467" text-anchor="middle" fill="#888" font-size="12.5">1984 — the fake wraparound gets a switch</text>
+  <rect x="480" y="426" width="280" height="58" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.4"/>
+  <text x="620" y="449" text-anchor="middle" fill="#888" font-size="12.5">every boot starting as 1978, the A20 gate</text>
+  <text x="620" y="467" text-anchor="middle" fill="#888" font-size="12.5">wired through the keyboard chip until the 2010s</text>
+  <line x1="320" y1="455" x2="468" y2="455" stroke="#888" stroke-width="1.3"/>
+  <polygon points="478,455 466,450 466,460" fill="#888"/>
+
+  <!-- moral -->
+  <text x="400" y="524" text-anchor="middle" fill="#888" font-size="12">every arrow is the same arrow: a reasonable decision, leaked into a format, kept because</text>
+  <text x="400" y="543" text-anchor="middle" fill="#888" font-size="12">keeping it costs pennies today and breaking it costs everyone, all at once, visibly</text>
+</svg>

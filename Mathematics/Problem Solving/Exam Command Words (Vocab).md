@@ -93,7 +93,7 @@ Rule of thumb: **State = what. Describe = what in more detail. Explain = why.**
 | **Prove** | Start from definitions; reach the general statement. | Highest — no gaps, justify every inference. |
 
 > [!warning] Never use the result in "Show that" or "Prove"
-> "Verify" is the ONLY command that lets you substitute the answer into both sides. For "Show that" and "Prove", using the result is **circular reasoning** and earns zero. See [[Chain of Thought]] §4.
+> "Verify" is the ONLY command that lets you substitute the answer into both sides. For "Show that" and "Prove", using the result is **circular reasoning** and earns zero. See [[Chain of Thought]] §5.
 
 ### Give vs Write down vs Write
 
@@ -123,7 +123,7 @@ Safe advice: show method for all three.
 - "Show that" and "Hence" are frequent (especially in multi-part algebra questions).
 - "Prove" appears in A8 Algebraic Proof — treat strictly.
 - "Justify" = "Explain with evidence from your working." Similar to "Explain" but tied to a calculation you just did.
-- Quality-of-written-communication (QWC) marks reward a clear chain of signal words (*therefore*, *since*, *hence*). See [[Chain of Thought]] §6.
+- Quality-of-written-communication (QWC) marks reward a clear chain of signal words (*therefore*, *since*, *hence*). See [[Chain of Thought]] §7.
 
 ### Cambridge 0580 Extended
 
@@ -199,7 +199,7 @@ Safe advice: show method for all three.
 - **Sibling:** [[Sketching Curves (Vocab)]] — the canonical "Sketch" command in action
 - **Application:** [[Algebraic Proof]] — "Show that" and "Prove" in algebraic form
 - **Application:** [[Geometrical Proof]] — "Show that" for circle-theorem questions
-- **Vocabulary reference:** [[Chain of Thought]] §4 — has a compact version of this table embedded for proof-technique context
+- **Vocabulary reference:** [[Chain of Thought]] §5 — has a compact version of this table embedded for proof-technique context
 
 ## LaTeX Reference
 

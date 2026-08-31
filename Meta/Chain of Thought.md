@@ -23,6 +23,7 @@ tags:
   - type/methodology
   - type/exam-technique
   - misconception/skipping-steps
+  - misconception/technique-without-trigger
 ---
 
 # Chain of Thought 思维链
@@ -80,6 +81,7 @@ Real chains aren't always straight lines. They branch: "**if** the venue is avai
 | 证明 (zhèngmíng) | Proof | A complete, unbroken chain from given to conclusion |
 | 复盘 (fùpán) | Review / post-mortem | Replaying the chain after the fact to find what worked and what didn't (see [[复盘]]) |
 | 如果…那么 (rúguǒ…nàme) | If…then | Branching — the chain splits based on conditions |
+| 触发特征 (chùfā tèzhēng) | Trigger | The feature of the question that selects the tool — find it before the technique |
 | 预测 (yùcè) | Prediction | Running the chain forward to anticipate outcomes before they happen |
 
 > [!tip] 已知 → 求证 is the Chinese exam structure
@@ -121,7 +123,34 @@ These are the most common strategies for IGCSE-level problems. Knowing them by n
 | **Contradiction** | Assume the opposite, show it leads to nonsense | "Suppose $\sqrt{2}$ is rational..." (see [[Surds]]) |
 | **Exhaustion** | Only finitely many cases to check | "Test $x = 1, 2, 3, \ldots$" |
 
-### 3. Anatomy of a "Show That" Question
+### 3. The Trigger, Not the Technique
+
+The toolkit above answers *"what tools exist?"* Look again at its middle column — **When to use it**. That column is quietly doing a second, harder job, because knowing a tool is really two separate pieces of knowledge:
+
+- The **technique** — how to run the tool once it is in your hand.
+- The **trigger** — the feature of the question that told you to reach for it.
+
+The second is almost never written down. Recall the System 1 / System 2 callout above: in an experienced solver, *selection* has become System 1 — instant, automatic, invisible. An experienced programmer reads "for each student in the list…" and knows *loop* before the sentence ends; a physicist reads "constant speed up a rough slope" and knows *force balance* before reaching the question mark. Neither is hiding anything — the selection fires too fast to be noticed. So when the working is written out, only the technique survives on the page ("factorise", "resolve forces", "use a loop") and the trigger evaporates.
+
+**Why this matters: only the trigger transfers.** A worked solution that names its tools lets you replay *that* problem. A new problem will not match the old one's steps — but it *will* show the same features. If you learned "factorise, then cancel", you can repeat Example 1 below; if you learned "*the excluded values in the condition are naming the factors*", you can start any question that carries such a condition. Grinding past papers without improving is exactly what technique-without-trigger practice looks like: each solved paper adds one more replayable problem and zero transferable selections.
+
+Each subject has signature triggers that experienced solvers never say aloud:
+
+| Subject | The question says | What it guarantees | Tool selected |
+|---|---|---|---|
+| Maths | "…for $x \neq \pm 3$" at the end of a "Show that" | Excluded values exist only to protect a denominator from zero — the condition is *naming its factors* | Factorise: $(x+3)(x-3)$ is already written in the condition (Example 1 below) |
+| Physics | "constant speed up a rough slope" | Constant speed means $a = 0$, so the net force is zero | Force balance ($\Sigma F = 0$) — not SUVAT, which needs an acceleration to work with |
+| CS | "for each mark in the list…", "keep asking until the input is valid" | The same action repeats — once per item, or until a condition holds | A loop — `for` over the collection, `while` on the condition |
+
+**A trigger is a reason, not a keyword.** The middle column is the load-bearing one: the feature *guarantees the tool's precondition*. Constant speed selects force balance because zero acceleration is literally what force balance states. Skip that middle step and the trigger degrades into keyword superstition — "the question said 'minimum', so I differentiated" fails the moment the minimum sits at an endpoint of the domain, where the derivative is not zero. So record every trigger in three parts: *phrase → what it guarantees → tool*. If you cannot fill in the middle, you do not have a trigger yet; you have a coincidence.
+
+**How to practise it.** After every worked example — in class, in a textbook, anywhere — take each tool the solution used and ask: *what in the question selected that?* Write the trigger beside the tool. If you cannot answer, you understood the replay but not the selection: you followed the solution without being in a position to have produced it. Building your own three-column trigger table per topic is worth more than solving five more copies of the same problem, because the table is the part an unfamiliar question can use.
+
+Mechanics has the fully worked-out version of this discipline: the trigger-phrasing table in [[Choosing Effective Equations]] maps Cambridge's own idioms — "coalesce", "constant power", "use an energy method" — straight to frameworks. And [[Forward Reading and Problem Discovery]] is the general theory: a trigger is an invariant read forward, and reading for them is what problem-solving *is*.
+
+一句话：解题的关键不是"会用哪个方法"，而是"题目中的哪个特征让你选中了它"——**先找触发特征，再谈技巧。**
+
+### 4. Anatomy of a "Show That" Question
 
 "Show that" is the most chain-dependent question type. The answer is *given to you* — what the examiner wants is the chain.
 
@@ -135,7 +164,7 @@ $$\underbrace{\text{Given information}}_{\text{starting point}} \xrightarrow{\te
 - The final line of your working must match the stated result **exactly**. If the question says "show that the area is $\dfrac{25\pi}{4}$," your last line must say $\dfrac{25\pi}{4}$, not $6.25\pi$.
 - "Show that" earns method marks. A correct chain with a small arithmetic error still earns most marks. A correct answer with no working earns zero.
 
-### 4. Command Words and What They Demand
+### 5. Command Words and What They Demand
 
 Different command words expect different levels of chain:
 
@@ -152,7 +181,7 @@ Different command words expect different levels of chain:
 > [!warning] "Show that" vs "Prove"
 > At IGCSE, "show that" and "prove" are nearly interchangeable. At A-Level and university, "prove" carries stricter expectations: you must cite the exact definitions and theorems you use, and your reasoning must be airtight. Think of "show that" as building a bridge with wooden planks — sturdy enough to cross. "Prove" is building it with steel — engineered to carry any load.
 
-### 5. How Marks Are Awarded
+### 6. How Marks Are Awarded
 
 Exam mark schemes award marks for the **chain**, not just the answer:
 
@@ -167,7 +196,7 @@ Exam mark schemes award marks for the **chain**, not just the answer:
 
 This is why writing the chain is not just good practice — it's the scoring mechanism.
 
-### 6. Signal Words — The Glue of the Chain
+### 7. Signal Words — The Glue of the Chain
 
 Every link in the chain needs a signal word connecting it to the next:
 
@@ -179,7 +208,7 @@ Every link in the chain needs a signal word connecting it to the next:
 | Substituting | 代入 | Replacing a variable with a value or expression |
 | From the diagram / From (i) | 由图可知 / 由(i) | Referencing earlier work or given information |
 | This gives | 可得 | Stating the result of a computation |
-| As required | 如题所求 (rú tí suǒ qiú) | Final line of a "Show that" — confirms you've reached the destination |
+| As required | 即为所求 (jí wéi suǒ qiú) | Final line of a "Show that" — confirms you've reached the destination |
 
 ## Common Misconceptions (Teaching Notes)
 
@@ -190,6 +219,8 @@ Every link in the chain needs a signal word connecting it to the next:
 **Why it fails:** In a "Show that" question, the answer is worth 0 marks. ALL the marks are in the working. Even in "Find" questions, A marks depend on M marks — skip the method, lose both.
 
 **Fix:** Pretend you're explaining to someone who can't see the answer. If they couldn't follow your steps to reach it independently, you haven't shown enough.
+
+**The same skip, seen from the other side:** a worked solution that says "here, use substitution" without saying what *called for* substitution is skipping a step too — the selection step. When any solution "just knows" the tool, ask the question from Key Facts §3: which feature of the problem fired? An answer without the chain earns no marks; a tool without its trigger teaches no transfer.
 
 ### 2. "More steps = more risk of errors"
 
@@ -336,6 +367,8 @@ Therefore $\sqrt{2}$ is irrational.
 - [[Algebraic Proof]] — applying chain-of-thought to algebraic "Prove" questions (9260 A8)
 - [[Geometrical Proof]] — applying chain-of-thought with circle theorems and angle facts (9260 G9 Ext)
 - [[Exam Command Words (Vocab)\|Exam Command Words]] — decoding what each command word demands (Sketch vs Plot, State vs Explain, Show that vs Prove vs Verify)
+- [[Choosing Effective Equations]] — the trigger discipline at full mechanics depth: a trigger-phrasing table mapping Cambridge's own idioms to frameworks
+- [[Forward Reading and Problem Discovery]] — the general theory behind triggers: reading forward for the invariants each clause locks down
 
 **Used across:**
 - [[Differentiation]] — multi-step tangent/normal problems require a clear chain

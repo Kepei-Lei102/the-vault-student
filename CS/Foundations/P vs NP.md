@@ -218,6 +218,7 @@ P vs NP is **not a named topic** on Cambridge IGCSE 0478 or A-Level 9618 — lik
 - **The cognitive twin:** [[Forward Reading and Problem Discovery]] — verification-vs-discovery is P-vs-NP for the human mind; the "P vs NP, in cognitive form" callout there is this card's philosophical mirror.
 - **Where the hardness is used on purpose:** [[Information Theory]] — cryptography turns the *difficulty* of certain NP / NP-intermediate problems into security; the gap P vs NP asks about is the gap the internet is built on.
 - **Foundation it draws on:** [[Logic Gates]] — SAT, the first NP-complete problem, is satisfiability of exactly the Boolean circuits that card builds.
+- **The map-shaped demonstration:** [[Graphs]] — three questions on one map: cross every edge once (Euler, polynomial, solved in 1736 by counting), shortest route (Dijkstra, polynomial — the miracle navigation runs on), visit every vertex once (Hamiltonian/TSP, NP-complete). One word changes and the complexity chasm opens; that card's date-seeded harness shows its try-every-path checker dying at seven vertices while Dijkstra shrugs.
 
 ## Glossary / Notation Reference
 

@@ -10,6 +10,7 @@ prerequisites:
   - "[[Trigonometric Functions]]"
   - "[[Maclaurin Series]]"
   - "[[Radians]]"
+  - "[[Circular Motion]]"
 leads_to:
   - "[[Damped Oscillations]]"
   - "[[Resonance]]"

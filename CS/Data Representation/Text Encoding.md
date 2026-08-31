@@ -5,6 +5,7 @@ prerequisites:
   - "[[Bitwise Operations]]"
 leads_to:
   - "[[Sound Encoding]]"
+  - "[[The Ghost of Drive A]]"
   - "[[Image Encoding]]"
   - "[[Compression]]"
   - "[[Credit Is the Currency]]"
@@ -63,7 +64,7 @@ For ASCII the two layers coincide (one small number, one byte), which is exactly
 
 ![[text-encoding-ascii-map.svg|700]]
 
-- **0–31 are control characters** — not symbols but *instructions to the machine*, straight from the teletype era: `10` = line feed `\n` (move the paper up one line), `9` = tab, `13` = carriage return `\r` (slide the print head back), and `7` = **BEL**, which physically rang a bell on the receiving teletype. Text files still carry these ghosts of 1963 machinery.
+- **0–31 are control characters** — not symbols but *instructions to the machine*, straight from the teletype era: `10` = line feed `\n` (move the paper up one line), `9` = tab, `13` = carriage return `\r` (slide the print head back), and `7` = **BEL**, which physically rang a bell on the receiving teletype. Text files still carry these ghosts of 1963 machinery — why Windows and Unix still disagree about how a line ends, and what else in computing never dies, is [[The Ghost of Drive A]].
 - **Digits `'0'`–`'9'` sit at 48–57** ($30_{16}$–$39_{16}$). So for any digit character, `character − 48 = its value` — converting `'7'` to $7$ is one subtraction. The bottom four bits of a digit's code *are* the digit ($0111$ for `'7'`) — BCD hiding inside ASCII.
 - **`'A'`–`'Z'` at 65–90, `'a'`–`'z'` at 97–122.** The gap between a letter's two cases is exactly $97 - 65 = 32 = 2^5$: **uppercase and lowercase differ in a single bit (bit 5)**. `A` = $0100\,0001$, `a` = $0110\,0001$. Case conversion is one bit-flip, case-insensitive comparison is one masked compare — the [[Bitwise Operations]] toolkit applied to text, by design.
 - **Alphabetical order = numerical order.** Sorting text *is* sorting numbers; no lookup needed.

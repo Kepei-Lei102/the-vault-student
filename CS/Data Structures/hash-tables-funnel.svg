@@ -1,0 +1,33 @@
+<svg width="100%" viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<rect x="40" y="42" width="90" height="36" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.2"/><text x="85.0" y="64.0" text-anchor="middle" fill="#888" font-size="14">528</text>
+<rect x="40" y="112" width="90" height="36" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.2"/><text x="85.0" y="134.0" text-anchor="middle" fill="#888" font-size="14">317</text>
+<rect x="40" y="182" width="90" height="36" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.2"/><text x="85.0" y="204.0" text-anchor="middle" fill="#888" font-size="14">909</text>
+<rect x="40" y="252" width="90" height="36" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.2"/><text x="85.0" y="274.0" text-anchor="middle" fill="#888" font-size="14">413</text>
+<text x="85" y="32" text-anchor="middle" fill="#888" font-size="13">keys</text>
+<rect x="280" y="140" width="170" height="70" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="365" y="168" text-anchor="middle" fill="#888" font-size="14">Hash(key) =</text>
+<text x="365" y="190" text-anchor="middle" fill="#888" font-size="14">key MOD 100</text>
+<text x="365" y="120" text-anchor="middle" fill="#888" font-size="12">the address factory</text>
+<line x1="132" y1="60" x2="270.1" y2="165.9" stroke="#888" stroke-width="1.4"/><polygon points="278,172 267.6,169.1 272.5,162.7" fill="#888"/>
+<line x1="132" y1="130" x2="268.4" y2="169.2" stroke="#888" stroke-width="1.4"/><polygon points="278,172 267.3,173.1 269.5,165.4" fill="#888"/>
+<line x1="132" y1="200" x2="268.2" y2="173.9" stroke="#888" stroke-width="1.4"/><polygon points="278,172 268.9,177.8 267.4,170.0" fill="#888"/>
+<line x1="132" y1="270" x2="269.7" y2="177.6" stroke="#888" stroke-width="1.4"/><polygon points="278,172 271.9,180.9 267.5,174.3" fill="#888"/>
+<text x="645" y="32" text-anchor="middle" fill="#888" font-size="13">the table (rows 0–99)</text>
+<rect x="590" y="82" width="120" height="36" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="575" y="104" text-anchor="end" fill="#888" font-size="12">13</text>
+<rect x="590" y="132" width="120" height="36" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.2"/>
+<text x="575" y="154" text-anchor="end" fill="#888" font-size="12">17</text>
+<rect x="590" y="182" width="120" height="36" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.2"/>
+<text x="575" y="204" text-anchor="end" fill="#888" font-size="12">28</text>
+<rect x="590" y="232" width="120" height="36" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="575" y="254" text-anchor="end" fill="#888" font-size="12">09</text>
+<line x1="452" y1="160" x2="578.2" y2="134.0" stroke="#f59e0b" stroke-width="1.6"/><polygon points="588,132 579.0,137.9 577.4,130.1" fill="#f59e0b"/>
+<line x1="452" y1="170" x2="578.2" y2="197.8" stroke="#059669" stroke-width="1.6"/><polygon points="588,200 577.4,201.8 579.1,193.9" fill="#059669"/>
+<line x1="452" y1="180" x2="579.1" y2="245.4" stroke="#f59e0b" stroke-width="1.6"/><polygon points="588,250 577.3,249.0 580.9,241.9" fill="#f59e0b"/>
+<line x1="452" y1="190" x2="578.4" y2="152.8" stroke="#059669" stroke-width="1.6"/><polygon points="588,150 579.5,156.7 577.3,149.0" fill="#059669"/>
+<text x="520" y="330" text-anchor="middle" fill="#888" font-size="12.5">528 lands in row 28, 317 in row 17: one calculation, straight there — no searching</text>
+<text x="520" y="352" text-anchor="middle" fill="#888" font-size="12.5">909 into 09, 413 into 13 … and eventually two keys share a row:</text>
+<text x="520" y="372" text-anchor="middle" fill="#888" font-size="12.5">a collision — guaranteed by pigeonholes, priced by the birthday paradox</text>
+<text x="160" y="372" text-anchor="middle" fill="#888" font-size="12">13 random keys in 100 slots:</text>
+<text x="160" y="390" text-anchor="middle" fill="#888" font-size="12">56% chance of a collision already</text>
+</svg>

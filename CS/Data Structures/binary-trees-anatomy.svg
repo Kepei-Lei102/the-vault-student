@@ -1,0 +1,27 @@
+<svg width="100%" viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<ellipse cx="240" cy="225" rx="120" ry="115" fill="rgba(37,99,235,0.10)" stroke="none"/>
+<ellipse cx="480" cy="225" rx="115" ry="115" fill="rgba(5,150,105,0.10)" stroke="none"/>
+<text x="240" y="368" text-anchor="middle" fill="#888" font-size="12.5">the ENTIRE left subtree &lt; 20</text>
+<text x="487" y="368" text-anchor="middle" fill="#888" font-size="12.5">the ENTIRE right subtree &gt; 20</text>
+<line x1="373.1" y1="84.1" x2="286.9" y2="155.9" stroke="#888" stroke-width="1.4"/>
+<line x1="406.9" y1="84.1" x2="493.1" y2="155.9" stroke="#888" stroke-width="1.4"/>
+<line x1="256.8" y1="187.6" x2="208.2" y2="252.4" stroke="#888" stroke-width="1.4"/>
+<line x1="496.8" y1="187.6" x2="448.2" y2="252.4" stroke="#888" stroke-width="1.4"/>
+<circle cx="390" cy="70" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="390" y="75" text-anchor="middle" fill="#888" font-size="15">20</text>
+<circle cx="270" cy="170" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="270" y="175" text-anchor="middle" fill="#888" font-size="15">10</text>
+<circle cx="510" cy="170" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="510" y="175" text-anchor="middle" fill="#888" font-size="15">26</text>
+<circle cx="195" cy="270" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="195" y="275" text-anchor="middle" fill="#888" font-size="15">8</text>
+<circle cx="435" cy="270" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="435" y="275" text-anchor="middle" fill="#888" font-size="15">22</text>
+<text x="390" y="25" text-anchor="middle" fill="#888" font-size="12.5">root — the one node everything is reachable from</text>
+<line x1="390" y1="32" x2="390" y2="42" stroke="#888" stroke-width="1"/>
+<text x="608" y="170" text-anchor="start" fill="#888" font-size="12">parent of 22</text>
+<line x1="604" y1="166" x2="537" y2="168" stroke="#888" stroke-width="1"/>
+<text x="120" y="300" text-anchor="start" fill="#888" font-size="12">leaf —</text>
+<text x="120" y="315" text-anchor="start" fill="#888" font-size="12">both pointers null</text>
+<line x1="163" y1="294" x2="180" y2="284" stroke="#888" stroke-width="1"/>
+<line x1="60" y1="70" x2="60" y2="270" stroke="#888" stroke-width="1"/>
+<line x1="55" y1="70" x2="65" y2="70" stroke="#888" stroke-width="1"/>
+<line x1="55" y1="270" x2="65" y2="270" stroke="#888" stroke-width="1"/>
+<text x="48" y="165" text-anchor="middle" fill="#888" font-size="12">height</text>
+<text x="48" y="180" text-anchor="middle" fill="#888" font-size="12">= 3</text>
+</svg>

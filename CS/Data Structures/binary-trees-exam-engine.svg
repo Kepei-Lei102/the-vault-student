@@ -1,0 +1,59 @@
+<svg width="100%" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="75.0" y="50" text-anchor="middle" fill="#888" font-size="12">index</text>
+<text x="185.0" y="50" text-anchor="middle" fill="#888" font-size="12">left pointer</text>
+<text x="310.0" y="50" text-anchor="middle" fill="#888" font-size="12">data</text>
+<text x="410.0" y="50" text-anchor="middle" fill="#888" font-size="12">right pointer</text>
+<rect x="40" y="60" width="70" height="34" fill="rgba(245,158,11,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="75.0" y="82" text-anchor="middle" fill="#888" font-size="13.5">0</text>
+<rect x="110" y="60" width="150" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="185.0" y="82" text-anchor="middle" fill="#888" font-size="13.5">1</text>
+<rect x="260" y="60" width="100" height="34" fill="rgba(5,150,105,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="310.0" y="82" text-anchor="middle" fill="#888" font-size="13.5">20</text>
+<rect x="360" y="60" width="100" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="410.0" y="82" text-anchor="middle" fill="#888" font-size="13.5">2</text>
+<rect x="40" y="94" width="70" height="34" fill="rgba(245,158,11,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="75.0" y="116" text-anchor="middle" fill="#888" font-size="13.5">1</text>
+<rect x="110" y="94" width="150" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="185.0" y="116" text-anchor="middle" fill="#888" font-size="13.5">4</text>
+<rect x="260" y="94" width="100" height="34" fill="rgba(5,150,105,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="310.0" y="116" text-anchor="middle" fill="#888" font-size="13.5">10</text>
+<rect x="360" y="94" width="100" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="410.0" y="116" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<rect x="40" y="128" width="70" height="34" fill="rgba(245,158,11,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="75.0" y="150" text-anchor="middle" fill="#888" font-size="13.5">2</text>
+<rect x="110" y="128" width="150" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="185.0" y="150" text-anchor="middle" fill="#888" font-size="13.5">3</text>
+<rect x="260" y="128" width="100" height="34" fill="rgba(5,150,105,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="310.0" y="150" text-anchor="middle" fill="#888" font-size="13.5">26</text>
+<rect x="360" y="128" width="100" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="410.0" y="150" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<rect x="40" y="162" width="70" height="34" fill="rgba(245,158,11,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="75.0" y="184" text-anchor="middle" fill="#888" font-size="13.5">3</text>
+<rect x="110" y="162" width="150" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="185.0" y="184" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<rect x="260" y="162" width="100" height="34" fill="rgba(5,150,105,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="310.0" y="184" text-anchor="middle" fill="#888" font-size="13.5">22</text>
+<rect x="360" y="162" width="100" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="410.0" y="184" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<rect x="40" y="196" width="70" height="34" fill="rgba(245,158,11,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="75.0" y="218" text-anchor="middle" fill="#888" font-size="13.5">4</text>
+<rect x="110" y="196" width="150" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="185.0" y="218" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<rect x="260" y="196" width="100" height="34" fill="rgba(5,150,105,0.10)" stroke="#888" stroke-width="0.7"/>
+<text x="310.0" y="218" text-anchor="middle" fill="#888" font-size="13.5">8</text>
+<rect x="360" y="196" width="100" height="34" fill="rgba(37,99,235,0.08)" stroke="#888" stroke-width="0.7"/>
+<text x="410.0" y="218" text-anchor="middle" fill="#888" font-size="13.5">&#8722;1</text>
+<text x="250" y="258" text-anchor="middle" fill="#888" font-size="12">row order = arrival order (bump allocation)</text>
+<text x="250" y="276" text-anchor="middle" fill="#888" font-size="12">TreeRootPointer = 0 &#183; FirstFreeNodePointer = 5</text>
+<line x1="595.4" y1="106.4" x2="544.6" y2="163.6" stroke="#888" stroke-width="1.4"/>
+<line x1="624.6" y1="106.4" x2="675.4" y2="163.6" stroke="#888" stroke-width="1.4"/>
+<line x1="519.3" y1="199.2" x2="490.7" y2="250.8" stroke="#888" stroke-width="1.4"/>
+<line x1="679.3" y1="199.2" x2="650.7" y2="250.8" stroke="#888" stroke-width="1.4"/>
+<circle cx="610" cy="90" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="610" y="95" text-anchor="middle" fill="#888" font-size="15">20</text><circle cx="637.0" cy="63.0" r="10" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1"/><text x="637.0" y="71.0" text-anchor="middle" fill="#888" font-size="10">0</text>
+<circle cx="530" cy="180" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="530" y="185" text-anchor="middle" fill="#888" font-size="15">10</text><circle cx="557.0" cy="153.0" r="10" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1"/><text x="557.0" y="161.0" text-anchor="middle" fill="#888" font-size="10">1</text>
+<circle cx="690" cy="180" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="690" y="185" text-anchor="middle" fill="#888" font-size="15">26</text><circle cx="717.0" cy="153.0" r="10" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1"/><text x="717.0" y="161.0" text-anchor="middle" fill="#888" font-size="10">2</text>
+<circle cx="480" cy="270" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="480" y="275" text-anchor="middle" fill="#888" font-size="15">8</text><circle cx="507.0" cy="243.0" r="10" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1"/><text x="507.0" y="251.0" text-anchor="middle" fill="#888" font-size="10">4</text>
+<circle cx="640" cy="270" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="640" y="275" text-anchor="middle" fill="#888" font-size="15">22</text><circle cx="667.0" cy="243.0" r="10" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1"/><text x="667.0" y="251.0" text-anchor="middle" fill="#888" font-size="10">3</text>
+<text x="610" y="30" text-anchor="middle" fill="#888" font-size="12.5">the tree the pointer columns describe</text>
+<text x="610" y="330" text-anchor="middle" fill="#888" font-size="12">amber badge = array index &#183; cover the pointers and the tree is gone</text>
+</svg>

@@ -15,6 +15,9 @@ leads_to:
   - "[[Stories/Aristotle to Apollo]]"
   - "[[Aristotle to Apollo]]"
   - "[[Kinetic Theory and the Ideal Gas]]"
+  - "[[Circular Motion]]"
+  - "[[Gravitational Fields]]"
+  - "[[Projectile Motion]]"
 tags:
   - subject/physics
   - subject/mathematics

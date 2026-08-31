@@ -7,12 +7,10 @@ prerequisites:
   - "[[Vectors]]"
   - "[[Trigonometric Ratios]]"
   - "[[Work, Energy and Power]]"
+  - "[[Circular Motion]]"
 leads_to:
   - "[[Braking Systems]]"
   - "[[Stories/From the Grid to the Garage]]"
-  - "[[Circular Motion]]"
-  - "[[Centripetal Force]]"
-  - "[[Banked Curves]]"
   - "[[Drag and Terminal Velocity]]"
   - "[[From the Grid to the Garage]]"
 tags:
@@ -428,9 +426,7 @@ For 9702 students: the Cambridge data sheet uses $R$ (reaction) where this card 
    - [[Trigonometric Ratios]] — the lean-angle and slope-angle calculations use $\tan\theta = $ (slip ratio).
 
 - **Children:**
-   - [[Circular Motion]] — formal treatment of centripetal force and uniform circular motion; the corner-speed-limit derivation generalises from there.
-   - [[Centripetal Force]] — the dedicated card on $F_c = mv^2/r$ and its various sources (friction, tension, gravity, normal force on a banked surface).
-   - [[Banked Curves]] — when the road tilts, the friction limit changes; the calculation generalises the lean-angle derivation here.
+   - [[Circular Motion]] — the formal treatment of centripetal force, $F = mv^2/r$ and its sources (friction, tension, gravity, a tilted normal reaction), and the banked bend $v^2 = rg\tan\theta$ where the friction limit changes; the corner-speed-limit derivation here is its flat-road special case.
    - [[Drag and Terminal Velocity]] — dynamic friction's air-resistance cousin; closes the §3.2 row's remaining content alongside this card.
 
 - **Cross-domain bridges:**

@@ -110,9 +110,17 @@ $$6x^2 + 17x + 5 = (2x + 5)(3x + 1)$$
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580
 
-**Syllabus ref:** A5 (9260), E2.5 (0580). Factorising is tested directly ("Factorise fully") and as a sub-step in solving quadratics, simplifying algebraic fractions, and proof. The word **"fully"** means the examiner expects complete factorisation — partial factorisation loses marks.
+**Syllabus ref: C2.2 / E2.2** (the algebraic-manipulation block, alongside expanding). The tier split is sharp and worth knowing: **Core stops at extracting common factors** — item 3, "e.g. $9x^2 + 15xy = 3x(3x+5y)$" — while **Extended adds the whole standard catalogue** as item 4: grouping ($ax + bx + kay + kby$), the difference of two squares ($a^2x^2 - b^2y^2$), the perfect square ($a^2 + 2ab + b^2$), the general quadratic ($ax^2+bx+c$), and the common-factor cubic ($ax^3+bx^2+cx$). That list *is* the syllabus's own definition of what you are expected to recognise, so it doubles as a revision checklist. Note also the syllabus's standing gloss, printed beside the row: **"Factorise means factorise fully"** — so partial factorisation loses the mark even when the question does not repeat the word.
+
+### OxfordAQA 9260
+
+**Syllabus ref: A5.** Same skill, tested directly and as a sub-step in solving quadratics, simplifying algebraic fractions, and proof.
+
+### Cambridge 0606
+
+Not a standalone question type: factorising is assumed, and appears as the first-choice method for solving quadratics (alongside the formula and completing the square). The syllabus carries the same instruction verbatim in its notes to candidates — when asked to *factorise*, factorise **fully**.
 
 ---
 

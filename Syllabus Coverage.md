@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-08-23` · built 2026-08-23 from commit `f8137b9`  
-> 349 cards · 436 diagrams · 66 explainers · 96 illustrations
+> **Edition** `student-2026-08-31` · built 2026-08-31 from commit `b2131e0`  
+> 362 cards · 470 diagrams · 80 explainers · 105 illustrations
 
 ---
 
@@ -199,7 +199,7 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0625 Physics
 
-*13 syllabus points · 31 card references*
+*14 syllabus points · 34 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -209,17 +209,18 @@ is often taught under a different heading.
 | P7 | [[Accuracy vs Precision]], [[Repeated Measurements]] |
 | 1.1 | [[Physical Quantities and Units]], [[Repeated Measurements]], [[Vectors in Physics]] |
 | 1.2 | [[Kinematics Calculus]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
-| 1.3 | [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
-| 1.5 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Friction (Vocab)]], [[Hooke's Law for Springs]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[The Friction Limit]] |
+| 1.3 | [[Forces and Equilibrium]], [[Gravitational Fields]], [[Newton's Laws of Motion]] |
+| 1.5 | [[Circular Motion]], [[Force (Vocab)]], [[Forces and Equilibrium]], [[Friction (Vocab)]], [[Hooke's Law for Springs]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[The Friction Limit]] |
 | 1.6 | [[Linear Momentum]] |
 | 1.7 | [[Work, Energy and Power]] |
 | 2.2 | [[Specific Heat Capacity]] |
 | 4.2 | [[Electric Current]], [[Resistance]] |
 | 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]] |
+| 6.1 | [[Gravitational Fields]] |
 
 ## Cambridge A-Level 9231 Further Mathematics
 
-*23 syllabus points · 48 card references*
+*24 syllabus points · 51 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -236,10 +237,11 @@ is often taught under a different heading.
 | 2.4 | [[Arc Length and Surfaces of Revolution]], [[Bounding Sums with Integrals]], [[Hyperbolic Functions]], [[Integration]], [[Integration by Parts]], [[Reduction Formulae]], [[Standard Integrals]] |
 | 2.5 | [[Complex Numbers]], [[De Moivre at Work]], [[Euler's Formula and De Moivre's Theorem]] |
 | 2.6 | [[Differential Equations]], [[Second-Order Differential Equations]] |
-| 3.1 | [[SUVAT]] |
-| 3.2 | [[Forces and Equilibrium]], [[Torque]] |
+| 3.1 | [[Projectile Motion]] |
+| 3.2 | [[Centre of Mass]], [[Forces and Equilibrium]], [[Torque]] |
+| 3.3 | [[Circular Motion]] |
 | 3.4 | [[Hooke's Law for Springs]] |
-| 3.5 | [[Differential Equations]] |
+| 3.5 | [[Differential Equations]], [[Gravitational Fields]] |
 | 3.6 | [[Linear Momentum]] |
 | 4.1 | [[Continuous Random Variables]] |
 | 4.2 | [[t-Tests]] |
@@ -353,7 +355,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*32 syllabus points · 63 card references*
+*33 syllabus points · 67 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -378,21 +380,22 @@ is often taught under a different heading.
 | 11.2 | [[Cambridge Pseudocode]] |
 | 11.3 | [[Cambridge Pseudocode]], [[Program Design]] |
 | 12.2 | [[Program Design]] |
+| 13.2 | [[Hash Tables]] |
 | 13.3 | [[Floating-Point Representation]] |
 | 15.1 | [[CISC vs RISC]], [[Operating Systems]], [[Pipelining and Simultaneous Multithreading]] |
 | 15.2 | [[Boolean Algebra]], [[Flip-Flops]], [[Half-Adder and Full-Adder]], [[Karnaugh Maps]], [[Logic Gates]] |
 | 16.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 16.2 | [[Compilers and Interpreters]] |
-| 19.1 | [[Big-O Notation]], [[Linked List]], [[Stacks and Queues]] |
+| 18.1 | [[Graphs]] |
+| 19.1 | [[Big-O Notation]], [[Binary Trees]], [[Graphs]], [[Hash Tables]], [[Linked List]], [[Stacks and Queues]] |
 | 19.1a | [[Searching]] |
 | 19.1b | [[Sorting]] |
-| 19.1c | [[Recursion]] |
 | 19.2 | [[Recursion]] |
 | 20.1 | [[Assembly Language]] |
 
 ## Cambridge A-Level 9702 Physics
 
-*34 syllabus points · 50 card references*
+*40 syllabus points · 57 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -400,7 +403,7 @@ is often taught under a different heading.
 | 1.2 | [[Physical Quantities and Units]] |
 | 1.3 | [[Accuracy vs Precision]], [[Calibration of Instruments]], [[Error Propagation]], [[Repeated Measurements]], [[Significant Figures]] |
 | 1.4 | [[Force (Vocab)]], [[Vectors]], [[Vectors in Physics]] |
-| 2.1 | [[Kinematics Calculus]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
+| 2.1 | [[Kinematics Calculus]], [[Projectile Motion]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
 | 3.1 | [[Force (Vocab)]], [[Linear Momentum]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[Tension (Vocab)]] |
 | 3.2 | [[Braking Systems]], [[Force (Vocab)]], [[Friction (Vocab)]], [[The Friction Limit]] |
 | 3.3 | [[Linear Momentum]] |
@@ -413,6 +416,12 @@ is often taught under a different heading.
 | 9.1 | [[Electric Current]] |
 | 9.2 | [[Resistance]] |
 | 9.3 | [[Resistance]] |
+| 12.1 | [[Circular Motion]] |
+| 12.2 | [[Circular Motion]] |
+| 13.1 | [[Gravitational Fields]] |
+| 13.2 | [[Gravitational Fields]] |
+| 13.3 | [[Gravitational Fields]] |
+| 13.4 | [[Gravitational Fields]] |
 | 14.2 | [[Kinetic Theory and the Ideal Gas]] |
 | 14.3 | [[Specific Heat Capacity]] |
 | 15.1 | [[Kinetic Theory and the Ideal Gas]] |
@@ -504,7 +513,7 @@ is often taught under a different heading.
 
 ## AP Physics 1
 
-*27 syllabus points · 44 card references*
+*30 syllabus points · 49 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -512,14 +521,16 @@ is often taught under a different heading.
 | SP.3 | [[Calibration of Instruments]] |
 | 1.1 | [[SUVAT]] |
 | 1.2 | [[SUVAT]] |
-| 2.1 | [[Force (Vocab)]], [[Newton's Laws of Motion]] |
+| 1.5 | [[Projectile Motion]] |
+| 2.1 | [[Centre of Mass]], [[Force (Vocab)]], [[Newton's Laws of Motion]] |
 | 2.2 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[Tension (Vocab)]] |
 | 2.3 | [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
 | 2.4 | [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
 | 2.5 | [[Newton's Laws of Motion]] |
-| 2.6 | [[Newton's Laws of Motion]] |
+| 2.6 | [[Gravitational Fields]], [[Newton's Laws of Motion]] |
 | 2.7 | [[Braking Systems]], [[Friction (Vocab)]], [[The Friction Limit]] |
 | 2.8 | [[Hooke's Law for Springs]], [[Stress, Strain and Young Modulus]] |
+| 2.9 | [[Circular Motion]] |
 | 3.1 | [[Work, Energy and Power]] |
 | 3.2 | [[Work, Energy and Power]] |
 | 3.3 | [[Work, Energy and Power]] |
@@ -531,6 +542,7 @@ is often taught under a different heading.
 | 5.4 | [[Moment of Inertia]] |
 | 6.3 | [[Angular Momentum]] |
 | 6.4 | [[Angular Momentum]] |
+| 6.6 | [[Gravitational Fields]] |
 | 7.1 | [[Hooke's Law for Springs]], [[Simple Harmonic Motion]] |
 | 7.2 | [[Hooke's Law for Springs]], [[Simple Harmonic Motion]] |
 | 7.3 | [[Simple Harmonic Motion]] |
@@ -538,19 +550,22 @@ is often taught under a different heading.
 
 ## AP Physics C: Mechanics
 
-*27 syllabus points · 39 card references*
+*30 syllabus points · 44 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.1 | [[SUVAT]] |
 | 1.2 | [[SUVAT]] |
-| 2.1 | [[Force (Vocab)]], [[Newton's Laws of Motion]] |
+| 1.5 | [[Projectile Motion]] |
+| 2.1 | [[Centre of Mass]], [[Centres of Mass by Integration]], [[Force (Vocab)]], [[Newton's Laws of Motion]] |
 | 2.2 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[Tension (Vocab)]] |
 | 2.3 | [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
 | 2.4 | [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
 | 2.5 | [[Newton's Laws of Motion]] |
+| 2.6 | [[Gravitational Fields]] |
 | 2.7 | [[Braking Systems]], [[Friction (Vocab)]], [[The Friction Limit]] |
 | 2.8 | [[Hooke's Law for Springs]], [[Stress, Strain and Young Modulus]] |
+| 2.10 | [[Circular Motion]] |
 | 3.1 | [[Work, Energy and Power]] |
 | 3.2 | [[Work, Energy and Power]] |
 | 3.3 | [[Work, Energy and Power]] |
@@ -580,7 +595,7 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*7 syllabus points · 15 card references*
+*8 syllabus points · 16 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -591,18 +606,21 @@ is often taught under a different heading.
 | B2.2 | [[Arrays]] |
 | B2.4 | [[Big-O Notation]], [[Recursion]], [[Searching]], [[Sorting]] |
 | B2.5 | [[File Handling]] |
+| B4.1 | [[Binary Trees]] |
 
 ## IB Physics
 
-*15 syllabus points · 29 card references*
+*21 syllabus points · 35 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | A.1 | [[Physical Quantities and Units]], [[Vectors in Physics]] |
 | A.1.1 | [[SUVAT]] |
+| A.1.2 | [[Projectile Motion]] |
 | A.2.1 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
 | A.2.2 | [[Braking Systems]], [[Force (Vocab)]], [[Friction (Vocab)]], [[Hooke's Law for Springs]], [[Normal Force (Vocab)]], [[Stress, Strain and Young Modulus]], [[Tension (Vocab)]], [[The Friction Limit]] |
 | A.2.3 | [[Linear Momentum]] |
+| A.2.4 | [[Circular Motion]] |
 | A.3.1 | [[Work, Energy and Power]] |
 | A.4.1 | [[Torque]] |
 | A.4.3 | [[Moment of Inertia]] |
@@ -611,5 +629,9 @@ is often taught under a different heading.
 | C.1.2 | [[Simple Harmonic Motion]] |
 | C.1.3 | [[Simple Harmonic Motion]] |
 | C.4.3 | [[Damped Oscillations]] |
+| D.1.1 | [[Gravitational Fields]] |
+| D.1.2 | [[Gravitational Fields]] |
+| D.1.3 | [[Gravitational Fields]] |
+| D.1.4 | [[Gravitational Fields]] |
 | PRAC.1 | [[Calibration of Instruments]] |
 | PRAC.2 | [[Accuracy vs Precision]], [[Error Propagation]], [[Repeated Measurements]], [[Significant Figures]] |

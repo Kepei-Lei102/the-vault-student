@@ -6,6 +6,7 @@ prerequisites:
   - "[[Interrupt Handling]]"
 leads_to:
   - "[[Compilers and Interpreters]]"
+  - "[[The Ghost of Drive A]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -35,7 +36,7 @@ tags:
 | micro-ops (μops) | 微操作 | what a modern x86 decoder slices its CISC instructions into — RISC-like internally |
 | fixed-length instruction | 定长指令 | every instruction the same size — the pipeline's favourite food |
 | general-purpose registers | 通用寄存器 | RISC's large working set (16–32+), vs classic CISC's handful |
-| backward compatibility | 向后兼容 | the reason x86 still honours instructions designed in 1978 |
+| backward compatibility | 向后兼容 | the reason x86 still honours instructions designed in 1978 — the museum of such fossils is [[The Ghost of Drive A]] |
 
 ## Two philosophies of the dictionary
 
@@ -148,3 +149,4 @@ A RISC processor simply completes the (short) current instruction, so interrupt 
 - **Builds on:** [[Assembly Language]] — the instructions whose very shape this war contested, and the one-per-ISA fact it explains; [[Pipelining and Simultaneous Multithreading]] — the machinery RISC was shaped to feed, and the shared home of §15.1's Flynn taxonomy.
 - **Leads to:** [[Compilers and Interpreters]] — RISC's founding bet was that compilers, not humans, write the assembly; the translator that made "reduced" viable deserves its own card.
 - **Kindred:** [[Interrupt Handling]] — the finish-the-instruction rule this card prices on both architectures; [[Embedded Systems]] — where RISC's predictable latency and battery thrift rule, and the ARM SoC blurring the boundary; [[Turing Machine]] — why the two camps compute exactly the same set of things, however they phrase it.
+- **Stories:** [[The Ghost of Drive A]] — the museum of what never breaking costs: x86's zero architecture migrations, priced in A20 fossils; [[Courage]] — the other side of the same coin: three CPU migrations (68k, PowerPC, Intel, each abandoned), every one carried on a translation bridge later demolished on schedule; [[You Never Expect the Change of Needs]] — AMD64 as the CISC world quietly adopting RISC's register philosophy: eight registers become sixteen, and the unadvertised half of "64-bit" turns out to be the half you can feel.

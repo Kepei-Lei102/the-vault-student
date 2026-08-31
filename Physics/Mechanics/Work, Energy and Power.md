@@ -20,6 +20,9 @@ leads_to:
   - "[[Simple Harmonic Motion]]"
   - "[[Stress, Strain and Young Modulus]]"
   - "[[The Friction Limit]]"
+  - "[[Circular Motion]]"
+  - "[[Gravitational Fields]]"
+  - "[[Projectile Motion]]"
 tags:
   - subject/physics
   - subject/mathematics

@@ -190,7 +190,7 @@ The CPU, its components, and the **fetch–decode–execute cycle** sit at the c
 - **The ancestors (reserved):** [[Turing Machine]] — the 1936 *theoretical* universal machine (what is computable); [[Von Neumann machine]] — the 1945 *architectural* ancestor (the stored-program idea this card runs on). The lineage Turing → von Neumann → the FDE CPU.
 - **Extends to (reserved):** [[Assembly Language]] — the human-readable form of the machine code the CU decodes (9618 §4.2). [[The Modern CPU vs the Textbook Model]] — how far a real core has grown past this 5-register picture.
 - **Uses:** [[Overflow and Underflow]] — the status-register carry/overflow flags are set by the ALU here.
-- **History:** [[Stories/The Boolean-to-Silicon Bridge]] — Turing's universal machine, von Neumann's 1945 EDVAC report, and the road to silicon.
+- **History:** [[Stories/The Boolean-to-Silicon Bridge]] — Turing's universal machine, von Neumann's 1945 EDVAC report, and the road to silicon; [[You Never Expect the Change of Needs]] — what doubling the register file quietly bought when x86 went 64-bit: fewer trips to memory, and a gift gamers could feel.
 
 ## Beyond Syllabus
 

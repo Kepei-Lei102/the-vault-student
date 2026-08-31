@@ -7,9 +7,8 @@ prerequisites:
   - "[[Work, Energy and Power]]"
   - "[[SUVAT]]"
   - "[[Friction (Vocab)]]"
-leads_to:
   - "[[Circular Motion]]"
-  - "[[Centripetal Force]]"
+leads_to:
   - "[[Stories/From the Grid to the Garage]]"
   - "[[From the Grid to the Garage]]"
 tags:
@@ -316,23 +315,25 @@ By contrast, in a four-wheeled car the equivalent "tip-over" deceleration is muc
 
 ## Exam Notes
 
-### Cambridge 9702
+### Cambridge 9702 (A-Level Physics)
 
-The §3.2 row "Forces — types of force" includes friction, drag, and weight; brake-force as a friction application appears in **9702 Paper 4 / 5** mechanics questions, typically as part of a longer compound problem (e.g., "calculate the deceleration of a car of mass $m$ braking with friction force $F$ on a level road"). The pedagogical depth of this card is well beyond what 9702 tests directly — it earns its place as the *system context* that makes the §3.2 friction questions intuitive.
+Braking is never a topic of its own; it is the standard *application* inside **§3.2 Non-uniform motion** — "qualitative understanding of frictional forces and viscous/drag forces", where a braking car is the textbook example — and it surfaces in Paper 2 / Paper 4 compound questions as "calculate the deceleration of a car of mass … braking from … over …" (Newton's second law + SUVAT, or the work–energy route $F\,d = 	frac12 mv^2$). The brake-bias moments derivation matches the style of §4.1 turning-effects questions and is a natural stretch for a strong candidate; the ABS and Stribeck material is beyond the syllabus.
 
-The Stoppie geometry derivation matches the style of 9702 P4 moments-and-equilibrium questions and would be a natural extension question for a strong student.
+### Cambridge 0625 (IGCSE Physics)
 
-### IB Physics
+§1.5 Forces treats friction qualitatively, and §1.7 Energy the KE-to-heat transfer; a braking question is "describe the energy transfers when a car brakes" and "state the effect of a resultant force" — no calculation beyond $F = ma$ and $	frac12 mv^2$.
 
-IB Theme A (Mechanics) treats brakes within the friction and energy-conservation context. Card §"Heat — the central constraint" supports the energy-transfer questions (KE → heat as a worked $\Delta T$ calculation). Card §"Regenerative braking" supports the electromagnetic-induction bridge in Theme D, which crosses domains.
+### IB Physics (A.2 Forces and momentum)
 
-### AP Physics
+A.2.2 (contact forces, friction) and A.3 (work, energy, power) carry braking as the context for friction-limit and energy-conservation questions; the heat section of this page (KE $	o$ thermal energy as a worked $\Delta T$) and the regenerative-braking section answer the two question shapes IB actually sets.
 
-AP Physics 1 Unit 2.7 (Friction) and Unit 5 (Energy) both touch braking as an application. AP Physics C — Mechanics goes further and could ask the brake-bias moments calculation as a Free Response.
+### AP Physics 1 / AP Physics C: Mechanics
 
-### A-Level (broader)
+Unit 2 §2.7 (kinetic and static friction) and the energy unit both use braking as an application; AP C can frame the brake-bias moments calculation as a free-response part. The friction-limit treatment lives in [[The Friction Limit]].
 
-A-Level Edexcel / AQA / OCR mechanics modules treat braking the same way 9702 does — as a friction-force application within a longer problem. The card's value at A-Level is primarily as a *worked engineering example* that builds intuition for problems set on the same physics in unfamiliar contexts (the "interpret this real-world scenario" question type).
+### Where it is *not* examined
+
+No board examines brakes as a topic: ABS, the slip curve, brake bias and regenerative systems are engineering enrichment. What every board examines is the physics underneath — friction limits, $F = ma$ under deceleration, and energy leaving as heat — and those are the parts of this page to revise.
 
 ---
 

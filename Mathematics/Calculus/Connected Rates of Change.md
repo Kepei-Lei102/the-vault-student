@@ -209,15 +209,29 @@ This is the foundation of **error propagation** in physics: if a measurement has
 > [!tip] State the chain-rule identity first; don't go straight to numbers
 > 0606 markscheme typically gives a method mark for *writing down* $\dfrac{dV}{dt} = \dfrac{dV}{dr} \cdot \dfrac{dr}{dt}$ before plugging in numbers. Even if your arithmetic later goes wrong, that mark is yours. Always show the chain-rule step explicitly as the first line of working.
 
-### A-Level / IB AA / AP
+### Cambridge 0580
 
-A-Level extends connected rates to:
+**Not examined.** Extended's calculus (E2.12) differentiates single-variable polynomials for gradients and turning points — no time rates, no chained variables.
 
-- **Implicit differentiation** — when the relation is $F(x, y) = 0$ and you can't solve for $y$ explicitly, differentiate in place: $\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} \cdot \frac{dy}{dx} = 0$. The same chain-rule logic, treated more abstractly.
-- **Parametric differentiation** — $x(t)$ and $y(t)$ both functions of a parameter $t$, then $\dfrac{dy}{dx} = \dfrac{dy/dt}{dx/dt}$.
-- **Higher-order related rates** — find $\dfrac{d^2y}{dt^2}$ when both $x$ and $y$ are time-varying. Chain rule applied repeatedly.
+### Cambridge 9709
 
-AP Calculus AB Topic 4.5 covers exactly this, using identical setups.
+On **Paper 1 (AS), §1.7** — the syllabus's applications-of-differentiation row says, in its own notes, "Including connected rates of change, e.g. given the rate of increase of the radius of a circle, find the rate of increase of the area for a specific value of one of the variables." Exactly the 0606 patterns above, one calculus tier up. Paper 3 then supplies the grown-up forms the harder setups need — **implicit differentiation** (when the relation $F(x,y)=0$ won't solve for $y$: Pattern C's ladder, done properly) and **parametric differentiation** ($\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$ — itself a connected-rates statement about the parameter $t$).
+
+### Cambridge 9231 (Further Maths)
+
+Assumed, never re-examined — but the *shape* returns in Further Mechanics whenever a geometric constraint ties two moving quantities together.
+
+### Edexcel IAL / OxAQA 9660
+
+IAL leans on connected rates twice: **P3.4.3**'s reciprocal-derivative rule $\frac{dy}{dx} = 1\big/\frac{dx}{dy}$, and — the distinctive IAL habit — **P4.5.2**, where a connected-rates sentence is the *birth of a differential equation*: "the rate of change of $X$ is proportional to…" turns straight into $\frac{dX}{dt} = kX$. OxAQA 9660 examines the same material in its P2 calculus block. On both boards the method mark for writing the chain first (the 0606 tip above) carries over unchanged.
+
+### IB AA
+
+Related rates are **HL** (the AHL differentiation extension, alongside implicit differentiation) — an AA SL student is not asked them. HL Paper 2 recycles the classic setups: the cone tank, the sliding ladder, the moving shadow.
+
+### AP Calculus AB/BC
+
+Topics **4.4–4.5** — "related rates" is a named topic with its own FRQ tradition, using identical setups to the Cambridge patterns; AP's marking makes the same demand as 0606's: state the connecting equation *before* substituting numbers, because differentiating after plugging in a constant is the classic zero.
 
 ---
 

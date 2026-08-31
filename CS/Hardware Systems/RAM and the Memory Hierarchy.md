@@ -200,6 +200,7 @@ Memory sits inside A1.1 (computer fundamentals): the RAM/ROM distinction, cache,
 - **Built on / contrasts:** [[Turing Machine]] — sequential tape vs random access; [[Big-O Notation]] — why $O(1)$ array access assumes a random-access machine; [[Exponential Growth and Decay]] — the $V_0 e^{-t/\tau}$ leak that forces refresh.
 - **Application:** [[Pipelining and Simultaneous Multithreading]] — the memory wall and how out-of-order execution hides DRAM latency; [[Recursion]] — cache locality of loops vs scattered calls; [[Stories/Dual-Core Craft]] — cache-friendly ECS data layout.
 - **Leads to:** [[Arrays]] — the software convention laid over this flat sea of numbered cells: $\text{base} + i \times \text{size}$ turns random access into indexing, and row-major layout turns locality of reference into measurable speed; [[Operating Systems]] — its virtual-memory machinery extending the hierarchy onto the disk (paging) when DRAM runs out; [[Secondary Storage]] — the non-volatile layers beneath (HDD, flash, optical, and the ROM family), where the sense-amplifier's analog-to-bit decision reappears on every medium; [[How a Chip Is Made]] — how these transistors and capacitors are etched into silicon.
+- **Story:** [[You Never Expect the Change of Needs]] — the hierarchy's zero-latency tip enlarged by accident: 64-bit x86 doubled the register file while selling address space, and compiled code stopped spilling to RAM so often.
 
 ## Glossary
 

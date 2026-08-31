@@ -1,0 +1,41 @@
+<svg width="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<line x1="234.4" y1="95.6" x2="165.6" y2="164.4" stroke="#888" stroke-width="1.4"/>
+<line x1="265.6" y1="95.6" x2="334.4" y2="164.4" stroke="#888" stroke-width="1.4"/>
+<line x1="138.0" y1="198.4" x2="97.0" y2="261.6" stroke="#888" stroke-width="1.4"/>
+<line x1="338.0" y1="198.4" x2="297.0" y2="261.6" stroke="#888" stroke-width="1.4"/>
+<path d="M 250 40 C 150 40 90 120 60 210 C 40 280 40 330 85 330 C 130 330 140 260 155 230 C 165 260 175 320 220 320 C 260 320 265 300 285 320 C 320 350 380 300 390 220 C 400 150 340 60 250 40 Z" fill="none" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="7 5"/>
+<circle cx="250" cy="80" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="250" y="85" text-anchor="middle" fill="#888" font-size="15">20</text>
+<circle cx="150" cy="180" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="150" y="185" text-anchor="middle" fill="#888" font-size="15">10</text>
+<circle cx="350" cy="180" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="350" y="185" text-anchor="middle" fill="#888" font-size="15">26</text>
+<circle cx="85" cy="280" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="85" y="285" text-anchor="middle" fill="#888" font-size="15">8</text>
+<circle cx="285" cy="280" r="22" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.6"/><text x="285" y="285" text-anchor="middle" fill="#888" font-size="15">22</text>
+<circle cx="112" cy="180" r="5" fill="#dc2626"/>
+<text x="112" y="168" text-anchor="middle" fill="#888" font-size="11.5">pre</text>
+<circle cx="150" cy="220" r="5" fill="#dc2626"/>
+<text x="118" y="226" text-anchor="middle" fill="#888" font-size="11.5">in</text>
+<circle cx="188" cy="180" r="5" fill="#dc2626"/>
+<text x="188" y="168" text-anchor="middle" fill="#888" font-size="11.5">post</text>
+<text x="250" y="25" text-anchor="middle" fill="#888" font-size="12.5">the contour walk — pass every node three times; emit at one flag</text>
+<text x="560" y="120" text-anchor="start" fill="#888" font-size="13">pre-order (left flank): 20 10 8 26 22</text>
+<text x="560" y="160" text-anchor="start" fill="#888" font-size="13">in-order (bottom): 8 10 20 22 26</text>
+<text x="560" y="180" text-anchor="start" fill="#888" font-size="11.5">&#8212; sorted, always, for any BST</text>
+<text x="560" y="220" text-anchor="start" fill="#888" font-size="13">post-order (right flank): 8 10 22 26 20</text>
+<text x="250" y="375" text-anchor="middle" fill="#888" font-size="12.5">the expression tree of (3 + 4) &#215; 5</text>
+<line x1="235.9" y1="424.1" x2="184.1" y2="475.9" stroke="#888" stroke-width="1.4"/>
+<line x1="264.1" y1="424.1" x2="315.9" y2="475.9" stroke="#888" stroke-width="1.4"/>
+<line x1="157.2" y1="505.4" x2="132.8" y2="534.6" stroke="#888" stroke-width="1.4"/>
+<line x1="182.8" y1="505.4" x2="207.2" y2="534.6" stroke="#888" stroke-width="1.4"/>
+<circle cx="250" cy="410" r="20" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="250" y="415" text-anchor="middle" fill="#888" font-size="15">&#215;</text>
+<circle cx="170" cy="490" r="20" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="170" y="495" text-anchor="middle" fill="#888" font-size="15">+</text>
+<circle cx="330" cy="490" r="20" fill="rgba(124,58,237,0.10)" stroke="#0891b2" stroke-width="1.6"/>
+<text x="330" y="495" text-anchor="middle" fill="#888" font-size="15">5</text>
+<circle cx="120" cy="550" r="20" fill="rgba(124,58,237,0.10)" stroke="#0891b2" stroke-width="1.6"/>
+<text x="120" y="555" text-anchor="middle" fill="#888" font-size="15">3</text>
+<circle cx="220" cy="550" r="20" fill="rgba(124,58,237,0.10)" stroke="#0891b2" stroke-width="1.6"/>
+<text x="220" y="555" text-anchor="middle" fill="#888" font-size="15">4</text>
+<text x="560" y="480" text-anchor="start" fill="#888" font-size="13.5">post-order: 3 4 + 5 &#215;</text>
+<text x="560" y="500" text-anchor="start" fill="#888" font-size="11.5">&#8212; exactly RPN: operators after operands,</text>
+<text x="560" y="518" text-anchor="start" fill="#888" font-size="11.5">no brackets needed</text>
+</svg>

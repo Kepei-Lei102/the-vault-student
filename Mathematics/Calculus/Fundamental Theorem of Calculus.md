@@ -182,17 +182,21 @@ In each case, "fundamental" means: *without this theorem, the two operations loo
 
 The FTC is **assumed but rarely named explicitly** at 0606 level. Every "evaluate $\int_a^b \ldots\, dx$" question silently uses FTC2. You won't be asked to prove either form, and FTC1 with a variable limit doesn't appear. The vault recommends knowing the *statement* of FTC2 by heart and treating "Newton–Leibniz formula" as a synonym.
 
-### A-Level (Pure Mathematics)
+### Cambridge 0580
 
-A-Level treats the FTC formally. Students are expected to *state* the theorem and apply it; the proof of FTC1 is sometimes given as bookwork (Edexcel, OCR), sometimes not (AQA). Variable-upper-limit problems ("find $\frac{d}{dx}\int_1^x e^{t^2}\, dt$") do appear.
+**Not examined.** Extended's calculus (E2.12) is differentiation only — there is no integration at 0580, so neither form of the theorem can arise.
 
-### IB AA HL & AP Calculus AB / BC
+### Cambridge 9709 / 9231 · Edexcel IAL · OxAQA 9660
 
-Full statement of both forms, with at least informal proof of FTC1. Variable-upper-limit problems are standard. AP BC sometimes asks for the chain-rule extension: if $F(x) = \int_{u(x)}^{v(x)} f(t)\, dt$, compute $F'(x)$.
+On all the Cambridge-style A-Level boards the theorem is **invisible by definition**: the syllabus *defines* integration as the reverse of differentiation, so FTC2 is built into the notation before any question is asked, and the theorem's real content — that the *area under the curve* is computed by that antiderivative — arrives as an unproved bridge in the area topic. What analysis calls a theorem, these boards call a definition; no paper names "Fundamental Theorem", asks for a statement, or sets variable-upper-limit differentiation. (The claim is checked against the topic maps: no board row exists for the FTC on 9709, 9231, IAL or 9660 — every "evaluate $\int_a^b$" question simply *uses* FTC2 silently, exactly as at 0606.) At 9231 the theorem's spirit does surface once, in disguise: the **method of differences** is the FTC's discrete twin — summing consecutive differences telescopes to endpoint values, exactly as integrating a derivative does — and [[Summation of Series]] runs that engine.
 
-### IB AA SL
+### IB AA
 
-Statement and use of FTC2; FTC1 with variable upper limit appears in some textbooks but not as a heavily-tested item.
+**SL**: statement and use of FTC2; FTC1 with a variable upper limit appears in some textbooks but is not a heavily-tested item. **HL**: both forms, with at least an informal argument for FTC1, and variable-upper-limit problems ("find $\frac{d}{dx}\int_1^x e^{t^2}\, dt$") as standard fare.
+
+### AP Calculus AB / BC
+
+The one school system that examines the theorem *as a theorem*, by name. Topics **6.4** (accumulation functions), **6.7** (the FTC itself) and **8.3** (using accumulation functions in context) are map-confirmed rows; the accumulation function $F(x) = \int_a^x f(t)\,dt$ — read its derivative, its increasing/decreasing intervals, its concavity straight off the graph of $f$ — is AP's signature FRQ shape, and the chain-rule extension $F(x) = \int_{u(x)}^{v(x)} f(t)\, dt \Rightarrow F'(x) = f(v)v' - f(u)u'$ is fair game on both routes.
 
 ---
 

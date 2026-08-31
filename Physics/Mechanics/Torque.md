@@ -6,6 +6,7 @@ prerequisites:
   - "[[Vectors in Physics]]"
   - "[[Newton's Laws of Motion]]"
 leads_to:
+  - "[[Centre of Mass]]"
   - "[[Moment of Inertia]]"
   - "[[Angular Momentum]]"
   - "[[Laws and Theorems]]"

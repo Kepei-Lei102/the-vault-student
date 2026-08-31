@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="135" y="30" text-anchor="middle" fill="#888" font-size="13.5">1 · bucket rows (N25/41)</text>
+<text x="135" y="48" text-anchor="middle" fill="#888" font-size="11.5">HashTable[100][10] — walk the row</text>
+<rect x="40" y="70" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="78" y="70" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="116" y="70" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="154" y="70" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="192" y="70" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="40" y="110" width="38" height="32" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="78" y="110" width="38" height="32" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="116" y="110" width="38" height="32" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="154" y="110" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="192" y="110" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="40" y="150" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="78" y="150" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="116" y="150" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="154" y="150" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="192" y="150" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="40" y="190" width="38" height="32" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="78" y="190" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="116" y="190" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="154" y="190" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="192" y="190" width="38" height="32" fill="none" stroke="#888" stroke-width="1.2"/>
+<text x="24" y="90" text-anchor="end" fill="#888" font-size="12">…</text>
+<text x="24" y="130" text-anchor="end" fill="#888" font-size="12">1</text>
+<text x="24" y="170" text-anchor="end" fill="#888" font-size="12">2</text>
+<text x="24" y="210" text-anchor="end" fill="#888" font-size="12">3</text>
+<line x1="60" y1="260" x2="60.0" y2="120.0" stroke="#f59e0b" stroke-width="1.4"/><polygon points="60,110 64.0,120.0 56.0,120.0" fill="#f59e0b"/>
+<text x="135" y="282" text-anchor="middle" fill="#888" font-size="11.5">same hash: next space in the row</text>
+<text x="400" y="30" text-anchor="middle" fill="#888" font-size="13.5">2 · overflow area (J25/42)</text>
+<text x="400" y="48" text-anchor="middle" fill="#888" font-size="11.5">slot taken: into Spare</text>
+<rect x="340" y="70" width="110" height="30" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="340" y="106" width="110" height="30" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="340" y="142" width="110" height="30" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="340" y="178" width="110" height="30" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/>
+<rect x="340" y="214" width="110" height="30" fill="none" stroke="#888" stroke-width="1.2"/>
+<rect x="340" y="290" width="110" height="70" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="395" y="283" text-anchor="middle" fill="#888" font-size="12">Spare</text>
+<text x="395" y="315" text-anchor="middle" fill="#888" font-size="11.5">key 731</text>
+<text x="395" y="338" text-anchor="middle" fill="#888" font-size="11.5">key 231</text>
+<line x1="455" y1="120" x2="469.2" y2="290.0" stroke="#f59e0b" stroke-width="1.4"/><polygon points="470,300 465.2,290.4 473.2,289.7" fill="#f59e0b"/>
+<text x="560" y="120" text-anchor="middle" fill="#888" font-size="11.5">731 hashes to a taken slot —</text>
+<text x="555" y="138" text-anchor="middle" fill="#888" font-size="11.5">straight to the spare array</text>
+<text x="645" y="190" text-anchor="middle" fill="#888" font-size="13.5">3 · linear probing (classic)</text>
+<text x="645" y="208" text-anchor="middle" fill="#888" font-size="11.5">next slot, wrap by MOD</text>
+<rect x="530" y="230" width="27" height="30" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/><text x="543.5" y="249.0" text-anchor="middle" fill="#888" font-size="11">42</text>
+<text x="543" y="222" text-anchor="middle" fill="#888" font-size="9.5">0</text>
+<rect x="557" y="230" width="27" height="30" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.2"/><text x="570.5" y="249.0" text-anchor="middle" fill="#888" font-size="11">12</text>
+<text x="570" y="222" text-anchor="middle" fill="#888" font-size="9.5">1</text>
+<rect x="584" y="230" width="27" height="30" fill="none" stroke="#888" stroke-width="1.2"/><text x="597.5" y="249.0" text-anchor="middle" fill="#888" font-size="11"></text>
+<text x="597" y="222" text-anchor="middle" fill="#888" font-size="9.5">2</text>
+<rect x="611" y="230" width="27" height="30" fill="none" stroke="#888" stroke-width="1.2"/><text x="624.5" y="249.0" text-anchor="middle" fill="#888" font-size="11"></text>
+<text x="624" y="222" text-anchor="middle" fill="#888" font-size="9.5">3</text>
+<rect x="638" y="230" width="27" height="30" fill="none" stroke="#888" stroke-width="1.2"/><text x="651.5" y="249.0" text-anchor="middle" fill="#888" font-size="11"></text>
+<text x="651" y="222" text-anchor="middle" fill="#888" font-size="9.5">4</text>
+<rect x="665" y="230" width="27" height="30" fill="none" stroke="#888" stroke-width="1.2"/><text x="678.5" y="249.0" text-anchor="middle" fill="#888" font-size="11"></text>
+<text x="678" y="222" text-anchor="middle" fill="#888" font-size="9.5">5</text>
+<rect x="692" y="230" width="27" height="30" fill="none" stroke="#888" stroke-width="1.2"/><text x="705.5" y="249.0" text-anchor="middle" fill="#888" font-size="11"></text>
+<text x="705" y="222" text-anchor="middle" fill="#888" font-size="9.5">6</text>
+<rect x="719" y="230" width="27" height="30" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="1.2"/><text x="732.5" y="249.0" text-anchor="middle" fill="#888" font-size="11">17</text>
+<text x="732" y="222" text-anchor="middle" fill="#888" font-size="9.5">7</text>
+<rect x="746" y="230" width="27" height="30" fill="rgba(245,158,11,0.18)" stroke="#f59e0b" stroke-width="1.2"/><text x="759.5" y="249.0" text-anchor="middle" fill="#888" font-size="11">27</text>
+<text x="759" y="222" text-anchor="middle" fill="#888" font-size="9.5">8</text>
+<rect x="773" y="230" width="27" height="30" fill="rgba(220,38,38,0.18)" stroke="#dc2626" stroke-width="1.2"/><text x="786.5" y="249.0" text-anchor="middle" fill="#888" font-size="11">X</text>
+<text x="786" y="222" text-anchor="middle" fill="#888" font-size="9.5">9</text>
+<line x1="720" y1="290" x2="737.5" y2="274.6" stroke="#f59e0b" stroke-width="1.3"/><polygon points="745,268 740.1,277.6 734.9,271.6" fill="#f59e0b"/>
+<text x="660" y="300" text-anchor="middle" fill="#888" font-size="11">17 took slot 7, so 27 probes on to 8</text>
+<text x="660" y="318" text-anchor="middle" fill="#888" font-size="11">12 hit 42 at slot 2, probes to 3</text>
+<text x="692" y="352" text-anchor="middle" fill="#888" font-size="11">X = tombstone: deleted, but the slot must</text>
+<text x="676" y="370" text-anchor="middle" fill="#888" font-size="11">say “keep walking”, or later finds lie</text>
+<text x="400" y="412" text-anchor="middle" fill="#888" font-size="12.5">one skeleton — hash, test, walk — three answers to “the slot is taken”</text>
+</svg>

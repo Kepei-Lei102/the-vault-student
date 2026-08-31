@@ -9,7 +9,9 @@ leads_to:
   - "[[Sorting]]"
   - "[[Stacks and Queues]]"
   - "[[Linked List]]"
+  - "[[Binary Trees]]"
   - "[[The Arrow That Pointed the Other Way]]"
+  - "[[Hash Tables]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -40,6 +42,8 @@ tags:
 > *Thirty students, thirty test scores. Write `s1, s2, s3, …, s30` and you have thirty perfectly good variables — and no way to loop over them, because **a loop counts, and `s1` is not a number**. That is the entire problem, and the array is the entire answer: it trades thirty names your program cannot compute for one name plus arithmetic it can. Everything else — why every element must be the same type, why the length is fixed, why `scores[999999]` is exactly as fast as `scores[0]`, even why the argument about counting from 0 or from 1 is not a matter of taste — falls out of the one formula that makes that arithmetic work.*
 
 ## 中文锚点
+
+一排完全相同的储物柜，从 0 号起编号。要开 47 号柜，你从不挨个看门牌——**迈几步都能算出来**：起点 + 47 × 柜宽，径直走到，一步开门。这就是数组：许多**同类型**的值排成**连续**一排，每格一样宽，于是"第 $i$ 格在哪"根本不用找，只用算——`base + i × size`——一百格如此，一百万格也如此，取用永远是同一个价钱 $O(1)$。下标其实是**偏移量**："第 47 号"说的是"离起点 47 格"，这就是为什么从 0 数起最自然：0 号就是起点本身。编号从哪起、到哪止（下界与上界）是柜子跟你签的合同，**越界**就是去开一个不存在的柜门——有些语言真的不拦你，门后拿到的是别人的东西。这份"连续、等宽"的合同也开出账单：合影队伍中间要插进一个人，后面**整排人都得挪一步**——想低成本地往中段插入，得去找[[Linked List|链表]]。若一格里要装**不同类型**的东西——姓名、生日、成绩——那是**记录**：一个学生的档案袋，袋子格式统一，装的是不同科目的纸。
 
 | English | 中文 | one-line meaning |
 |---|---|---|

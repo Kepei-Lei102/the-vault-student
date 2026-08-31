@@ -14,6 +14,7 @@ leads_to:
   - "[[The Quantum Harmonic Oscillator]]"
   - "[[Stories/The Pendulum Story]]"
   - "[[The Pendulum Story]]"
+  - "[[Circular Motion]]"
 tags:
   - subject/physics
   - subject/mathematics

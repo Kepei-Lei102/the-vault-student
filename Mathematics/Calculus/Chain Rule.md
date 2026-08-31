@@ -208,6 +208,10 @@ Syllabus §14.3: chain rule is **explicitly listed** among required differentiat
 
 Mark schemes award method marks for setting up the chain (writing $\tfrac{dy}{du}\tfrac{du}{dx}$ or naming the outer/inner derivatives) even when the final value is wrong.
 
+### Cambridge 0580
+
+**Not examined.** Extended's calculus (E2.12) stops at derivatives of $ax^n$ and sums of at most three such terms — no composites, so no chain rule. It is the single biggest step up from 0580 to 0606 differentiation.
+
 ### Cambridge A-Level 9709
 
 §1.7 (Paper 1, AS): chain rule for $x^n$ composites and the linear-inside family.
@@ -216,13 +220,17 @@ Mark schemes award method marks for setting up the chain (writing $\tfrac{dy}{du
 
 §3.5 (Paper 3): integration via substitution is chain rule running backwards — see [[Integration by Substitution]].
 
-### A-Level (Edexcel / OCR / AQA)
+### Cambridge 9231 (Further Maths)
 
-Chain rule is in the AS pure module and used heavily in connected rates of change problems (Year 2). Typical question: "A balloon is inflated; the radius increases at $0.5$ cm/s. Find the rate of change of volume when $r = 10$." Solution: $\dfrac{dV}{dt} = \dfrac{dV}{dr}\cdot\dfrac{dr}{dt}$ — direct chain rule in Leibniz form.
+**Assumed, never re-examined.** 9709 P1–P3 knowledge is prerequisite for the whole qualification, and the chain rule runs silently inside most FP1/FP2 calculus — every [[Reduction Formulae]] integration by parts, every [[Polar Coordinates]] $\tfrac{dy}{dx}$ from $r(\theta)$, every [[Arc Length and Surfaces of Revolution]] integrand. Fluency is presumed; no question tests the rule itself.
+
+### Edexcel IAL / OxAQA 9660
+
+IAL examines the chain rule (with product and quotient) in **P3.4.2**; OxAQA 9660 in **P2.6**, where it is paired with the reciprocal-derivative rule $\dfrac{dy}{dx} = 1\big/\dfrac{dx}{dy}$ — itself a chain-rule consequence. Both boards then lean on it for connected rates of change: "a balloon's radius increases at $0.5$ cm/s — find the rate of change of volume when $r = 10$", solved as $\dfrac{dV}{dt} = \dfrac{dV}{dr}\cdot\dfrac{dr}{dt}$, the Leibniz form doing exactly what it looks like.
 
 ### IB AA / AI
 
-Topic 5 (Calculus). HL students are expected to combine chain, product, and quotient rules fluently. The "related rates" application is a recurring HL Paper 2 type — solid chain-rule fluency is non-negotiable.
+AA names the chain rule at **SL 5.6** (with product and quotient — every AA student meets it); related rates of change are the HL extension and a recurring Paper 2 type. AI is the asymmetry to know: AI **SL** differentiates polynomials only — no chain rule — while AI **HL** brings composites in. HL students on either route are expected to combine chain, product, and quotient fluently.
 
 ### AP Calculus AB / BC
 

@@ -8,6 +8,7 @@ prerequisites:
 leads_to:
   - "[[Sorting]]"
   - "[[Big-O Notation]]"
+  - "[[Binary Trees]]"
 tags:
   - subject/computer-science
   - subject/mathematics

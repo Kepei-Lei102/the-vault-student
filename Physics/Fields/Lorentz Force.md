@@ -6,6 +6,7 @@ prerequisites:
   - "[[Electric Current]]"
   - "[[Stories/The War of the Currents]]"
   - "[[The War of the Currents]]"
+  - "[[Circular Motion]]"
 leads_to:
   - "[[Electromagnetic Induction]]"
   - "[[Maxwell's Equations]]"

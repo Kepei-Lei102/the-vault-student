@@ -34,7 +34,6 @@ tags:
   - syllabus/AP-Physics-1-1-2
   - syllabus/AP-Physics-C-Mech-1-1
   - syllabus/AP-Physics-C-Mech-1-2
-  - syllabus/9231-3-1
   - type/deep
   - type/theorem
   - type/proof
@@ -189,7 +188,7 @@ Three canonical setups, with sign convention "**up = positive**":
 ## Projectile Motion — 2D as Two Independent SUVATs
 
 > [!info] Scope note
-> Projectile motion is in **9702 §2.1** ("describe and explain motion due to a uniform velocity in one direction and a uniform acceleration in a perpendicular direction"), **IB AA**, and **AP Physics 1**. It is **not in 9709 P4** (Mechanics) — 9709 examines 1D SUVAT only. Skip this section if you're sitting only 9709.
+> This section is the *scoped summary*; the full treatment — the standard trio derived with its small print, the trajectory equation, real Further-Maths questions, the misconception set — is [[Projectile Motion]]. Projectiles are examined on **9702 §2.1**, **9231 §3.1**, **IAL M2 / OxAQA M2**, **IB Physics A.1.2** and **AP Physics 1/C**. They are **not in 9709 P4** — 9709 examines 1D SUVAT only. Skip this section if you're sitting only 9709.
 
 A body launched at angle $\theta$ to the horizontal with speed $U$ has its motion *split into two independent components*:
 

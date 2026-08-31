@@ -426,7 +426,7 @@ These three sentences run a *huge* fraction of physical science:
 - **Extension:** [[Work, Energy and Power]] — integrating $\mathbf{F} \cdot d\mathbf{s}$ gives the work-energy theorem, derived directly from N2.
 - **Extension:** [[Connected Particles]] — Examples 3 and 4 generalised; pulleys, multiple masses, slopes.
 - **Extension:** [[Inclined Plane Motion]] — Example 2 with friction added.
-- **Application:** [[Centripetal Acceleration]] — for circular motion, $\mathbf{F} = m\mathbf{a}$ with $\mathbf{a}$ pointing toward the centre and magnitude $v^2/r$. (9702 §12.2)
+- **Application:** [[Circular Motion]] — for circular motion, $\mathbf{F} = m\mathbf{a}$ with $\mathbf{a}$ pointing toward the centre and magnitude $v^2/r$. (9702 §12.2)
 - **Application:** [[Simple Harmonic Motion]] — N2 applied to a restoring force $F = -kx$ gives the SHM equation $\ddot x = -\omega^2 x$.
 - **Reverse — historical:** Aristotle's *Physics* (~350 BC) and Galileo's *Dialogue* (1632); the long arc that made N1 possible.
 - **Cross-domain bridge:** [[Inertia and Bootstrapping]] — N1 as a model for human productivity, static vs kinetic friction in habit formation, activation energy in chemistry, the cold-start problem in software.

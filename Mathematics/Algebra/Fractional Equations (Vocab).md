@@ -140,7 +140,7 @@ $$x = \dfrac{4 \pm \sqrt{16 + 12}}{2} = \dfrac{4 \pm 2\sqrt{7}}{2} = 2 \pm \sqrt
 
 ### Cambridge 0580 Extended
 
-**Syllabus ref:** E2.5. "Solve equations with numerical and algebraic denominators." Typically 3–5 marks: one mark for clearing fractions correctly, one for simplifying, one or two for solving, one for the final answer (and implicitly for rejecting any extraneous root).
+**Syllabus ref:** E2.5.3, in the syllabus's own words: "solve fractional equations with numerical and **linear** algebraic denominators." The word *linear* is a real boundary — denominators like $2x+1$ and $x+2$ are examined (the syllabus's own examples are $\frac{x}{2x+1} = 4$ and $\frac{2}{x+2} + \frac{3}{2x-1} = 1$), quadratic denominators are not. Typically 3–5 marks: one for clearing fractions correctly, one for simplifying, one or two for solving, one for the final answer (and implicitly for rejecting any extraneous root).
 
 ### OxAQA 9260
 
@@ -148,7 +148,7 @@ $$x = \dfrac{4 \pm \sqrt{16 + 12}}{2} = \dfrac{4 \pm 2\sqrt{7}}{2} = 2 \pm \sqrt
 
 ### Cambridge 0606 (Assumed)
 
-0606 uses fractional equations freely inside larger problems — intersections of rational curves with lines, equations arising from rate problems, partial-fractions setups. Not tested standalone, but the extraneous-root discipline remains essential.
+0606 uses fractional equations freely inside larger problems — intersections of rational curves with lines, equations arising from rate problems, partial-fractions setups. Not tested standalone, but the extraneous-root discipline remains essential. The same is true from 9709 upward: fully assumed, never a question of its own.
 
 ---
 

@@ -7,8 +7,11 @@ prerequisites:
   - "[[Recursion]]"
   - "[[Sequences]]"
 leads_to:
+  - "[[Graphs]]"
   - "[[P vs NP]]"
   - "[[Parallel and External Sorting]]"
+  - "[[Balanced Trees]]"
+  - "[[Hash Tables]]"
 tags:
   - subject/computer-science
   - subject/mathematics

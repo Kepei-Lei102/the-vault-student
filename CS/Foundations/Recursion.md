@@ -10,7 +10,7 @@ leads_to:
   - "[[Dynamic Programming]]"
   - "[[Searching]]"
   - "[[Sorting]]"
-  - "[[Trees]]"
+  - "[[Binary Trees]]"
   - "[[Recursion as a Way of Thinking]]"
   - "[[Big-O Notation]]"
   - "[[Compilers and Interpreters]]"
@@ -28,7 +28,6 @@ tags:
   - curriculum/AP-CSA
   - curriculum/IB-CS
   - syllabus/IB-CS-B2-4
-  - syllabus/9618-19-1c
   - syllabus/9618-19-2
   - syllabus/AP-CSA-4-16
   - syllabus/AP-CSA-4-17
@@ -536,7 +535,7 @@ What this means: **recursion is not one programming feature among many. It is on
    - [[Dynamic Programming]] — the systematic way to remove redundancy from recursive solutions via memoisation or tabulation.
    - [[Searching]] — home of **binary search**, the canonical $O(\log n)$ recursive algorithm; divide-and-conquer in its purest form.
    - [[Sorting]] — **merge sort** is divide-and-conquer recursion at full size: split the list in half, recurse on each, merge the sorted halves.
-   - [[Trees]] — recursively-defined data structure where recursive traversal is far more natural than iteration.
+   - [[Binary Trees]] — the recursively-defined data structure (a tree is a node plus two smaller trees) where recursive traversal is far more natural than iteration — and where the in-order walk of a search tree emits sorted output.
    - [[Big-O Notation]] — the formal language for talking about the time cost of recursive algorithms ($O(n)$ for factorial, $O(\log n)$ for binary search, $O(\varphi^n)$ for naive Fibonacci).
    - [[Recursion as a Way of Thinking]] — the cognitive expansion beyond this card.
 

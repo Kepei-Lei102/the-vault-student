@@ -343,9 +343,13 @@ Where $f \ll g$ means $\lim_{x\to\infty} f/g = 0$. Each comparison is a single L
 
 That said, knowing L'Hôpital is a useful **verification tool** when the textbook method gives an answer you doubt. Compute by both routes; if they agree, ship.
 
-### A-Level Further Mathematics (Edexcel / AQA / OCR)
+### Cambridge 0580 / 0606
 
-Some Further Mathematics specifications include L'Hôpital under Further Pure. Check the specification — Edexcel's Further Pure 1 has it; AQA places it in Further Pure 2.
+**Not examined** — neither syllabus has limits at all; the nearest 0606 gets is the derivative's definition used informally.
+
+### Cambridge 9231 · Edexcel IAL · OxAQA 9660
+
+**L'Hôpital is not named on any of the three** (checked against the topic maps: no row exists on 9231, IAL FP1–FP3, or 9660). The Further-Maths route to indeterminate limits is **Maclaurin series** — a 9231 FP2 limit question expects the first few series terms substituted and the leading power read off, not a derivative quotient. L'Hôpital remains the private verification tool here exactly as at 9709: compute by the syllabus method, confirm by the rule, ship the syllabus method.
 
 ### IB AA HL
 

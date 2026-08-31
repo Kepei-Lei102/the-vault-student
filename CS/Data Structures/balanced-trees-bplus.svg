@@ -1,0 +1,21 @@
+<svg width="100%" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="400" y="28" text-anchor="middle" fill="#888" font-size="13.5">a B+ tree: routing above, all data in the leaves, leaves chained</text>
+<rect x="310" y="50" width="180" height="36" rx="5" fill="rgba(124,58,237,0.10)" stroke="#7c3aed" stroke-width="1.5"/><text x="355.0" y="73.0" text-anchor="middle" fill="#888" font-size="13">31</text><line x1="400.0" y1="50" x2="400.0" y2="86" stroke="#7c3aed" stroke-width="0.8"/><text x="445.0" y="73.0" text-anchor="middle" fill="#888" font-size="13">62</text>
+<text x="400" y="110" text-anchor="middle" fill="#888" font-size="11.5">routing keys only — no data up here</text>
+<rect x="60" y="190" width="150" height="36" rx="5" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="85.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">8</text><line x1="110.0" y1="190" x2="110.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="135.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">17</text><line x1="160.0" y1="190" x2="160.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="185.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">25</text>
+<rect x="250" y="190" width="150" height="36" rx="5" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="275.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">31</text><line x1="300.0" y1="190" x2="300.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="325.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">40</text><line x1="350.0" y1="190" x2="350.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="375.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">55</text>
+<rect x="440" y="190" width="150" height="36" rx="5" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="465.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">62</text><line x1="490.0" y1="190" x2="490.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="515.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">74</text><line x1="540.0" y1="190" x2="540.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="565.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">88</text>
+<line x1="330" y1="86" x2="135" y2="188" stroke="#888" stroke-width="1.2"/>
+<line x1="400" y1="86" x2="325" y2="188" stroke="#888" stroke-width="1.2"/>
+<line x1="470" y1="86" x2="515" y2="188" stroke="#888" stroke-width="1.2"/>
+<line x1="210" y1="208" x2="240" y2="208" stroke="#f59e0b" stroke-width="2"/>
+<polygon points="250,208 239,203 239,213" fill="#f59e0b"/>
+<line x1="400" y1="208" x2="430" y2="208" stroke="#f59e0b" stroke-width="2"/>
+<polygon points="440,208 429,203 429,213" fill="#f59e0b"/>
+<rect x="630" y="190" width="150" height="36" rx="5" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.5"/><text x="655.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">…</text><line x1="680.0" y1="190" x2="680.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="705.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">…</text><line x1="730.0" y1="190" x2="730.0" y2="226" stroke="#059669" stroke-width="0.8"/><text x="755.0" y="213.0" text-anchor="middle" fill="#888" font-size="13">…</text>
+<line x1="590" y1="208" x2="620" y2="208" stroke="#f59e0b" stroke-width="2"/>
+<polygon points="630,208 619,203 619,213" fill="#f59e0b"/>
+<text x="400" y="260" text-anchor="middle" fill="#888" font-size="12">point query: descend once (3–4 block reads even for 100 million keys)</text>
+<text x="400" y="282" text-anchor="middle" fill="#888" font-size="12">range query: descend once, then walk the amber chain — a linked list at the bottom of a tree</text>
+<text x="400" y="320" text-anchor="middle" fill="#888" font-size="12.5">this is the index inside MySQL, SQLite and PostgreSQL</text>
+</svg>

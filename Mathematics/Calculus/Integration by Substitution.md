@@ -312,23 +312,30 @@ Memorise the three-line procedure: (1) compute $du$; (2) change the limits; (3) 
 
 Substitution is **not** on 9709 Paper 1 or Paper 2 — those papers stop at the linear-inside rule. But the linear-inside rule *is* substitution in disguise, as flagged in [[Integration]].
 
-### A-Level (general)
+### Cambridge 0580 / 0606
 
-Same as 9709 P3 — the substitution is typically given. Where substitution must be invented, it is for a named standard form (e.g. $x = a \sin \theta$ for $\sqrt{a^2 - x^2}$, $x = a \tan \theta$ for $1/(a^2 + x^2)$) — see the IB/AP section below.
+**Not examined at either.** 0580 has no integration; 0606 integrates only the recognisable forms — powers of $(ax+b)$, $e^{ax+b}$, $\sin(ax+b)$, $\cos(ax+b)$ — which are the linear-inside family again, never a change of variable the student performs.
+
+### Cambridge 9231 (Further Maths)
+
+Assumed from P3, then made *systematic*: FP2 §2.4 names the three standard forms $\dfrac{1}{\sqrt{a^2-x^2}}$, $\dfrac{1}{\sqrt{x^2+a^2}}$, $\dfrac{1}{\sqrt{x^2-a^2}}$, integrated by **trigonometric or hyperbolic substitution** — [[Standard Integrals]] tabulates the recognition forms and [[Hyperbolic Functions]] derives the log forms the hyperbolic route lands on. Longer Paper 2 integrals ([[Arc Length and Surfaces of Revolution]]'s surface cases, [[Reduction Formulae]]'s set-ups) usually *give* the substitution, 9709-style; the FP2-specific skill is choosing between the trig and hyperbolic routes for the three standard shapes.
+
+### Edexcel IAL / OxAQA 9660
+
+IAL names substitution at **P4.6.2** (alongside parts); OxAQA 9660 at **P2.7**, where the syllabus pairs it with *integration by inspection* — recognising $\int f'(x)[f(x)]^n\,dx$ and $\int \frac{f'(x)}{f(x)}\,dx$ without writing the $u$ down, which is exactly this card's method internalised. Both boards, like 9709, usually supply the substitution for anything non-obvious.
 
 ### IB AA HL
 
-Substitution is a full technique students must *invent* (Topic 5: Calculus). In particular, IB HL adds the named **trigonometric substitutions**:
+Substitution is a technique students must *invent* more often than at Cambridge (AA HL's integration extension expects "substitution as a required technique", with non-obvious choices fair game). AA HL is also where the named **trigonometric substitutions** genuinely live at school level:
 
 - $x = a \sin \theta \Rightarrow dx = a \cos \theta \, d\theta$, useful for $\sqrt{a^2 - x^2}$
 - $x = a \tan \theta \Rightarrow dx = a \sec^2 \theta \, d\theta$, useful for $a^2 + x^2$
-- $x = a \sec \theta$, useful for $\sqrt{x^2 - a^2}$
 
-These exploit Pythagorean identities (e.g. $1 - \sin^2 \theta = \cos^2 \theta$) to convert algebraic radicals into clean trig expressions.
+These exploit Pythagorean identities (e.g. $1 - \sin^2 \theta = \cos^2 \theta$) to convert algebraic radicals into clean trig expressions — the same move 9231 makes with its hyperbolic siblings.
 
 ### AP Calculus AB / BC
 
-Unit 6 introduces u-substitution under the name **"integration by substitution"** or sometimes just **"u-sub"**. AP Calc AB students are expected to invent substitutions on simple integrands; BC extends to trig substitution and partial-fraction integration. The FRQ style tends to include substitution as a *step* in a longer kinematics or area/volume problem, not a standalone exercise.
+Unit 6 introduces u-substitution (Topic 6.9 for AB, extended integrand families at BC) — and both routes expect the substitution to be *invented*, on integrands built to make the choice visible. **Trigonometric substitution is not in the current AP course description** for either route — BC's named extras are integration by parts and linear partial fractions — so the trig-sub machinery above is IB/9231 territory, not AP's. The FRQ style tends to include substitution as a *step* in a longer kinematics or area/volume problem, not a standalone exercise.
 
 > [!info] Beyond syllabus — Weierstrass substitution
 > For integrands rational in $\sin x$ and $\cos x$ (e.g. $\int \dfrac{dx}{1 + \sin x}$), the substitution $t = \tan(x/2)$ converts everything into a rational function of $t$:

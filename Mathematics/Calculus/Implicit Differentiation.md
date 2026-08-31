@@ -341,9 +341,17 @@ A consumer's indifference curve is the level set of a utility function $U(x, y) 
 
 **Not on the syllabus.** 0606 covers explicit differentiation only. Implicit differentiation is an A-Level topic.
 
-### A-Level (Edexcel / AQA / OCR)
+### Cambridge 0580
 
-**Standard A2 topic** in all three boards. Examined directly and in context (related rates, parametric differentiation often set up via implicit differentiation).
+**Not examined** — Extended's calculus differentiates explicit polynomials only.
+
+### Cambridge 9231 (Further Maths)
+
+Assumed from P3 and then *worked harder*: FP2's differentiation row leans on **iterated implicit differentiation** as its Maclaurin engine — the real November 2025 shape asks for the series of $\tan x$ by differentiating $y' = 1 + y^2$ implicitly again and again ([[Maclaurin Series]] works it in full). No new rule; the P3 skill run at FP2 stamina.
+
+### Edexcel IAL / OxAQA 9660
+
+IAL examines implicit differentiation at **P4** (alongside parametric — the two arrive as a pair); OxAQA 9660 at **P2.6**, same pairing. Both map-checked; both set the standard tangent/normal and horizontal-tangent shapes, with related rates as the context twist.
 
 ### IB AA HL
 

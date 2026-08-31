@@ -19,6 +19,7 @@ leads_to:
   - "[[Trigonometric Graphs]]"
   - "[[Trigonometric Identities]]"
   - "[[Polar Coordinates]]"
+  - "[[Circular Motion]]"
 tags:
   - subject/mathematics
   - domain/trigonometry
