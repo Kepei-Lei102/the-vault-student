@@ -4,6 +4,7 @@ prerequisites:
   - "[[Program Design]]"
 leads_to:
   - "[[The Arrow That Pointed the Other Way]]"
+  - "[[User-Defined Data Types]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -135,7 +136,7 @@ DECLARE Board : ARRAY[1:3, 1:3] OF CHAR
 
 Stating the lower bound is not decoration. Different real languages start at 0 or 1, so the declaration is where you settle it, and `ARRAY[1:30]` holds thirty elements indexed 1 to 30 — not 31, and not 0 to 29.
 
-**Records** are the one composite type you define yourself, and the syntax is a block, not a one-liner. `TYPE` names the new type, each field is `DECLARE`d inside it, and `ENDTYPE` closes it — after which the type name is usable exactly where a built-in type would be, including as an array's element type:
+**Records** are the composite type you define most often (the full family — enumerated, pointer, set, class — is [[User-Defined Data Types]]'s story; the declaration forms for the rest follow below), and the syntax is a block, not a one-liner. `TYPE` names the new type, each field is `DECLARE`d inside it, and `ENDTYPE` closes it — after which the type name is usable exactly where a built-in type would be, including as an array's element type:
 
 ```
 TYPE Component
@@ -151,12 +152,34 @@ DECLARE Batch : ARRAY[1:1000] OF Component
 Fields are reached with a **dot**, and that is the whole of the notation — there is no separate syntax for reading a record and writing one:
 
 ```
-ThisPart.Weight  19.6
-Batch[7].Reject  TRUE
+ThisPart.Weight ← 19.6
+Batch[7].Reject ← TRUE
 OUTPUT Batch[7].Item_ID
 ```
 
-Two things are worth noticing, because both are marked. The **array-of-records** shape above is the standard A-Level scenario — a `TYPE` declaration, then an array of a thousand of them, then modules that search or update it — so the two indexing styles compose: `Batch[7]` picks the record with a number computed at run time, `.Reject` picks the field with a name fixed when the program was written ([[Arrays]] argues why those are different in kind). And a record is **assignable whole**: `Batch[8]  Batch[7]` copies every field, which is a genuine difference from an array, where the same statement would copy a reference.
+Two things are worth noticing, because both are marked. The **array-of-records** shape above is the standard A-Level scenario — a `TYPE` declaration, then an array of a thousand of them, then modules that search or update it — so the two indexing styles compose: `Batch[7]` picks the record with a number computed at run time, `.Reject` picks the field with a name fixed when the program was written ([[Arrays]] argues why those are different in kind). And a record is **assignable whole**: `Batch[8] ← Batch[7]` copies every field, which is a genuine difference from an array, where the same statement would copy a reference.
+
+**User-defined types (§13.1's other three).** The concepts live in [[User-Defined Data Types]]; the dialect writes them like this. An **enumerated type** is a one-liner — `TYPE`, an equals sign, the value list in brackets:
+
+```
+TYPE Season = (Spring, Summer, Autumn, Winter)
+```
+
+The published schemes police this line's fine print: **equals sign only** (no colon), **no quotation marks** around the values (they are names, not strings), the **order exactly as given**, and no extra punctuation between elements. A **pointer type** is declared with a caret naming what it points at, and the caret then never reappears on the variables:
+
+```
+TYPE TIntPointer = ^INTEGER
+DECLARE MyPointer : TIntPointer
+```
+
+A **set type** takes two lines — the type, then a `DEFINE` that fills a variable of it:
+
+```
+TYPE Letters = SET OF CHAR
+DEFINE Vowels ('A','E','I','O','U') : Letters
+```
+
+(Note the asymmetry the June 2024 scheme marks point by point: the *set's* values keep their normal literal quoting — these are `CHAR`s — while an *enumerated* list must not be quoted. The quote rule follows the values' nature, not the keyword.)
 
 
 **Procedures and functions.** The distinction is enforced by the syntax: a procedure is `CALL`ed and returns nothing, a function is used inside an expression and must declare what it `RETURNS`.

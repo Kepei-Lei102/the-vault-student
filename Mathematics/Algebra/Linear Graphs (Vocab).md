@@ -87,6 +87,10 @@ Plot each $(x, y)$ pair on graph paper, then join with a straight edge. If the p
 
 **Syllabus ref:** A11 (9260), E3.2 (0580). "Draw straight-line graphs from given equations; interpret the meaning of intercepts." Usually paired with [[Gradient (Vocab)]] and [[Equation of a Straight Line (Vocab)]] for full coordinate-geometry questions.
 
+### Cambridge 0606 Additional Maths
+
+Drawing a line from its equation is assumed from 0580; the straight line returns in §7 as *algebra* — the equation forms in [[Equation of a Straight Line (Vocab)]], and the transformations that turn a curved relationship into a straight-line graph in [[Linearisation]].
+
 ---
 
 ## Beyond the Syllabus

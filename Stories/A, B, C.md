@@ -2,6 +2,7 @@
 chinese: 语言的字母表 (yǔyán de zìmǔbiǎo) — C 语言名字之谜
 prerequisites:
   - "[[Compilers and Interpreters]]"
+  - "[[Space Travel]]"
 leads_to: []
 tags:
   - type/story

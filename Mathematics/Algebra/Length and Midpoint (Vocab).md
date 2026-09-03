@@ -106,9 +106,17 @@ So $B = (5, -8)$.
 
 **Syllabus ref:** E3.4. Both formulas are tested directly. Expect 1–3 mark questions: "Find the length of segment $AB$", "Find the midpoint of $AB$", "Given $M$ and one endpoint, find the other endpoint."
 
-### OxAQA 9260
+### Cambridge 0606 Additional Maths
 
-Both formulas are A-Level / 9260-Extension content; same use as 0580.
+**Syllabus ref:** §7.3 — midpoint and length appear inside coordinate-geometry questions, most often as the setup for a **perpendicular bisector** (midpoint gives the point, length/gradient gives the direction). Rarely asked bare; usually the first two marks of a longer question.
+
+### OxAQA 9660 (International A-Level)
+
+Distance and midpoint are named at P1.2 (with the straight line) and distance again at P2.10 (extended to 3D alongside vectors) — same formulas, coordinates just grow a third entry.
+
+### Edexcel IAL
+
+P4.7.5 examines the distance between two points in **3D** — the Pythagorean extension $\sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}$, one square per axis.
 
 ### Beyond — used in every analytic-geometry card
 

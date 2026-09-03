@@ -7,6 +7,7 @@ prerequisites:
   - "[[Pythagoras Theorem]]"
   - "[[Trigonometric Ratios]]"
 leads_to:
+  - "[[Newton's Law of Restitution]]"
   - "[[Newton's Laws of Motion]]"
   - "[[Forces and Equilibrium]]"
   - "[[Torque]]"

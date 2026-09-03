@@ -1,6 +1,7 @@
 ---
 chinese: 引力场 (yǐnlì chǎng)
 prerequisites:
+  - "[[Linear Motion under a Variable Force]]"
   - "[[Circular Motion]]"
   - "[[Newton's Laws of Motion]]"
   - "[[Work, Energy and Power]]"

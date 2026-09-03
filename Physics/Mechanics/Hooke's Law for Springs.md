@@ -15,6 +15,7 @@ leads_to:
   - "[[Stories/The Pendulum Story]]"
   - "[[The Pendulum Story]]"
   - "[[Circular Motion]]"
+  - "[[Elastic Strings and Springs]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -413,7 +414,7 @@ That is what this card teaches the hunter to trace.
 
 ### Cambridge 9231 Further Mechanics (§3.4) — the notation shift
 
-- The same law in different clothes: an elastic string or spring of **natural length** $L$ and **modulus of elasticity** $\lambda$ obeys $T = \lambda x / L$, with stored energy $\lambda x^2/2L$. Translation: $k = \lambda/L$ — the modulus absorbs the length, making $\lambda$ a property of the material and cross-section rather than of the particular cut length.
+- The same law in different clothes: an elastic string or spring of **natural length** $L$ and **modulus of elasticity** $\lambda$ obeys $T = \lambda x / L$, with stored energy $\lambda x^2/2L$. Translation: $k = \lambda/L$ — the modulus absorbs the length, making $\lambda$ a property of the material and cross-section rather than of the particular cut length. The full Further-Mechanics treatment — worked Paper 3 questions, the slack discipline, the bungee design — is [[Elastic Strings and Springs]].
 - **Strings go slack.** Unlike a spring, an elastic string cannot push — before trusting any formula, check the extension is genuinely positive on the interval in question.
 - Question style: work–energy problems (particle on an elastic string over an incline; the elastic conical pendulum), typically asking for the speed as the string reaches natural length.
 - Note **9709 carries no Hooke's law at all** — for Cambridge maths students the elastic-energy machinery is entirely a 9231 topic.

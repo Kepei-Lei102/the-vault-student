@@ -141,6 +141,10 @@ Adding vs multiplying is where students stumble.
 
 **Syllabus ref:** A6 extends index work into algebra. The rules themselves are the same five as [[Laws of Indices]].
 
+### Cambridge 0606 Additional Maths
+
+Not examined directly — the 0606 specification states that 0580 content (indices and surds included) is **assumed** and "will not be tested directly but may be needed" — so these rules appear silently inside every 0606 simplification.
+
 ---
 
 ## Connections

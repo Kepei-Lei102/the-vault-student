@@ -8,6 +8,7 @@ prerequisites:
   - "[[Area Under a Graph (Vocab)]]"
   - "[[Average Speed (Vocab)]]"
 leads_to:
+  - "[[Linear Motion under a Variable Force]]"
   - "[[Differential Equations]]"
   - "[[Newton's Laws of Motion]]"
   - "[[Choosing Effective Equations]]"
@@ -302,7 +303,7 @@ Distance = $|s(1.535) - s(0)| + |s(2) - s(1.535)| \approx |4.88 - 0| + |4 - 4.88
 
 ### Cambridge 9231 (Further Mechanics)
 
-§3.5 — **linear motion under a variable force** — is this card's chain pushed one step further: Newton's second law with $F$ depending on $x$ or $v$ turns $a = \dfrac{dv}{dt}$ into a differential equation, and the syllabus names the substitution that makes position-dependent forces integrable, $a = v\dfrac{dv}{dx}$ (chain rule: $\dfrac{dv}{dt} = \dfrac{dv}{dx}\dfrac{dx}{dt}$). Separable-equation technique from [[Differential Equations]]; the inverse-square case is worked in full in [[Gravitational Fields]] (escape speed via $v\,dv/dx = -gR^2/x^2$); resistive forces $kv$ and $kv^2$ are the other stock integrands.
+§3.5 — **linear motion under a variable force** — is this card's chain pushed one step further: Newton's second law with $F$ depending on $x$ or $v$ turns $a = \dfrac{dv}{dt}$ into a differential equation, and the syllabus names the substitution that makes position-dependent forces integrable, $a = v\dfrac{dv}{dx}$ (chain rule: $\dfrac{dv}{dt} = \dfrac{dv}{dx}\dfrac{dx}{dt}$). Separable-equation technique from [[Differential Equations]]; the inverse-square case is worked in full in [[Gravitational Fields]] (escape speed via $v\,dv/dx = -gR^2/x^2$); the resistive cases $kv$ and $kv^2$, the face-of-$a$ decision and five real Paper 3 questions are [[Linear Motion under a Variable Force]].
 
 ### IB AA
 

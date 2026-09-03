@@ -295,9 +295,13 @@ The $y = af(b(x-c)) + d$ framework is the engine behind all three of the above �
 
 **A12 Graphs of Functions** — recognise, sketch, and interpret graphs of linear, quadratic, cubic, reciprocal functions; exponential at Extension tier. Shape recognition is explicitly examined; transformation questions appear in the Extension.
 
-### A-Level / IB / AP
+### Cambridge 9709
 
-The full $y = af(b(x-c)) + d$ framework is standard at A-Level Pure 1 and AP Pre-Calculus. IB AA has it in Topic 2. Students coming from IGCSE are expected to recognise the six parent graphs without hesitation and apply transformations in any order — that is the bar.
+**§1.2 (Functions), in the syllabus's own words:** "understand and use the transformations of the graph of $y = f(x)$ given by $y = f(x) + a$, $y = f(x+a)$, $y = af(x)$, $y = f(ax)$ **and simple combinations of these**" — with the guidance adding that answers should use the terms *translation*, *reflection* and *stretch*, and that questions "may involve algebraic or trigonometric functions, or other graphs with given features." So at 9709 the framework itself is the examined object: describe-the-transformation questions want the named word plus its data (translation by $\begin{pmatrix}-a\\0\end{pmatrix}$, stretch factor $\tfrac1a$ in the $x$-direction), and the combination questions stop at *simple* pairings.
+
+### IB AA / AP Precalculus
+
+The same framework, same vocabulary: IB AA Topic 2 (with the reciprocal transformation $y = \tfrac{1}{f(x)}$ added at HL), AP Precalculus Unit 1. Students arriving from IGCSE are expected to recognise the parent graphs without hesitation and compose transformations — that is the bar.
 
 ---
 

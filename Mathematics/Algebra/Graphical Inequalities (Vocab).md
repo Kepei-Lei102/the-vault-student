@@ -104,9 +104,13 @@ A follow-up question might ask "List the points with integer coordinates in R" o
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### Cambridge 0580
 
-**Syllabus ref:** A23 Extension (9260) / E2.9 (0580). Typical question: given 3 inequalities (e.g., $y \geq 1$, $x + y \leq 6$, $y \leq 2x$), draw the lines, shade the feasible region, then find integer points in the region or optimise a simple expression. Worth 4–6 marks. The shading direction instruction varies — read it every time.
+**Syllabus ref: E2.6.3** (the prose here previously said E2.9 — the PDF says E2.6): "represent and interpret linear inequalities in two variables graphically," with the syllabus's own three conventions, each worth a mark when ignored: **broken lines** for strict inequalities, **solid lines** for inclusive ones, and **shading for the *unwanted* regions** unless the question directs otherwise — so the default is now fixed, not variable. One boundary worth knowing loudly: **linear programming was removed from the 2025–27 Extended syllabus** (it is on the official content-removed list) — the classic "find integer points in the feasible region and optimise $2x+y$" question is no longer asked at 0580; *represent and interpret* is the whole task.
+
+### OxAQA 9260
+
+**Syllabus ref: A23 Extension.** The fuller shape survives here: draw the lines, identify the region, and work with points inside it. Read the shading instruction every time — 9260 does not fix a default the way 0580 now does.
 
 ---
 

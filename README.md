@@ -5,24 +5,24 @@ written for international curricula: Cambridge IGCSE and A-Level, IB, and AP.
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> **Edition** `student-2026-08-31` · built 2026-08-31 from commit `b2131e0`  
-> 362 cards · 470 diagrams · 80 explainers · 105 illustrations
+> **Edition** `student-2026-09-02` · built 2026-09-03 from commit `703a92d` + uncommitted changes  
+> 369 cards · 479 diagrams · 85 explainers · 109 illustrations
 
 ---
 
 ## What's inside
 
-**362 Markdown cards** across five collections, plus the figures that go with them —
-**470 SVG diagrams** (many animated), **80 MP4 explainers**, and
-**105 illustrations and comics**.
+**369 Markdown cards** across five collections, plus the figures that go with them —
+**479 SVG diagrams** (many animated), **85 MP4 explainers**, and
+**109 illustrations and comics**.
 
 | Folder | Cards | What it is |
 |---|---|---|
 | `Mathematics/` | 220 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
-| `Physics/` | 42 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
-| `CS/` | 52 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
-| `Stories/` | 37 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
-| `Meta/` | 11 | Methodology cards: how to *think* across domains. |
+| `Physics/` | 45 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
+| `CS/` | 53 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
+| `Stories/` | 39 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
+| `Meta/` | 12 | Methodology cards: how to *think* across domains. |
 
 Every concept appears in **both English and Chinese**, with key terminology anchored in each
 card's **中文锚点** section.

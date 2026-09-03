@@ -2,6 +2,7 @@
 chinese: 勇气 (yǒngqì) — 按日程表违约的公司
 prerequisites:
   - "[[The Ghost of Drive A]]"
+  - "[[A Rich Neighbor Named Xerox]]"
 leads_to:
   - "[[You Never Expect the Change of Needs]]"
 tags:
@@ -113,6 +114,7 @@ The epilogue's asterisk belongs to Brussels: the USB-C mandate proved the promis
 - [[Operating Systems]] — Classic, Carbon and Catalina are OS-level promises and their scheduled ends; the OS is where compatibility lives and dies.
 - [[Inertia and Bootstrapping]] — ecosystem inertia as the force that vetoes breaking for everyone else, and what it costs to pay it down deliberately.
 - [[You Never Expect the Change of Needs]] — the sequel in both directions: why the funerals are necessary (every generous ceiling dies of changed needs), and the flip side no funeral plans for — the consequences of a change are as unpredictable as the needs, and sometimes the surprise is a gift.
+- [[A Rich Neighbor Named Xerox]] — the prequel: the young Jobs watching a giant lose the future by being comfortable. This card's promise-breaking discipline is that lesson, learned and run as policy.
 
 ## Receipts
 

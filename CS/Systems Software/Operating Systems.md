@@ -8,6 +8,7 @@ prerequisites:
   - "[[Embedded Systems]]"
 leads_to:
   - "[[Compilers and Interpreters]]"
+  - "[[Space Travel]]"
   - "[[File Systems]]"
   - "[[The Ghost of Drive A]]"
 tags:
@@ -244,3 +245,5 @@ The kernel is not a process taking turns — it is the **turn-giver**: code that
 - **Leads to:** [[Compilers and Interpreters]] — the bay's next resident: 9618 §5.2's translators and §16.2's compilation stages, plus the *other* kind of virtual machine; [[File Systems]] — the file-management section's deep story (how names become blocks).
 - **Kindred:** [[Embedded Systems]] — the honest contrast: the machine that needs no OS, and the real-time scheduling contract when it needs a small one; [[Input and Output Devices]] — drivers, buffers, and the interrupt-driven I/O the hardware-management section governs; [[Compression]] — the file-compression utility's engine.
 - **Stories:** [[The Ghost of Drive A]] — the fossil record inside every boot; [[Courage]] — the OS as where compatibility promises live and die: Classic, Carbon and the 32-bit cutoff, each bridge ended on a published schedule.
+- **Origin myth:** [[Space Travel]] — the file system, processes and shell this card governs were first built in one famous month, on a cast-off machine, to keep a $75-per-game video game running for free.
+- **The interface's origin myth:** [[A Rich Neighbor Named Xerox]] — the last abstraction this card presents to the user (windows, icons, menus, pointer) was built at PARC in 1973, carried out by two thieves, and ruled public ground by a court in 1994.

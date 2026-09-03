@@ -3,6 +3,7 @@ chinese: 链表 (liànbiǎo)
 prerequisites:
   - "[[Arrays]]"
   - "[[Stacks and Queues]]"
+  - "[[User-Defined Data Types]]"
 leads_to:
   - "[[Binary Trees]]"
   - "[[Hash Tables]]"

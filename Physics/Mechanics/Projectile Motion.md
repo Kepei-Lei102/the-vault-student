@@ -6,6 +6,7 @@ prerequisites:
   - "[[Newton's Laws of Motion]]"
   - "[[Work, Energy and Power]]"
 leads_to:
+  - "[[Newton's Law of Restitution]]"
   - "[[Circular Motion]]"
 tags:
   - subject/physics

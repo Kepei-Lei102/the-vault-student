@@ -48,6 +48,10 @@ The craft — the *only* craft — is choosing the slice, and the rule for choos
 
 Everything below is that one move, six times — with two delightful exceptions where a *theorem* beats the integral to the answer.
 
+![[com-integration-see-it-run.mp4]]
+
+*All six, integrated before your eyes: the slice sweeps through each body — the animation is the integral — and the two no-integral arguments (the fan of triangles, Archimedes' hat-box) get their chapters. The closing frame is the formula sheet, earned.*
+
 ## The laminae and curves
 
 ![[com-integration-laminae.svg|780]]

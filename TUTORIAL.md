@@ -82,6 +82,21 @@ gh repo clone Kepei-Lei102/the-vault-student -- --depth 1
 `Syllabus Coverage.md`, and the folders `Mathematics/`, `Physics/`, `CS/`, `Stories/`,
 `Meta/`. If any are missing, the download was incomplete — retry before continuing.
 
+**Step 3b — Install Obsidian. Not optional.** Terminals do not render maths, and
+the cards are full of it — so your worked answers will be written as notes in a
+`Tutor/` folder and opened in Obsidian, where they render with the same diagrams
+the cards use. Check for it, install it if missing, and open the vault folder in it
+once (**Open folder as vault**, pick the whole folder):
+
+```bash
+brew install --cask obsidian          # macOS
+winget install -e --id Obsidian.Obsidian   # Windows
+```
+
+(Linux: the AppImage or Flatpak from <https://obsidian.md/download>.) If the machine
+won't allow an install, say so and carry on — the cards still work; only the rendered
+answers are lost, and the student can read raw Markdown in any editor.
+
 **Step 4 — Load the house rules. This is the step that matters.**
 
 Read `CLAUDE.md` at the root of that folder, in full, and follow it for the rest of your
@@ -153,6 +168,10 @@ downloaded. Start with any `Directory.md` — `Mathematics/Directory.md`,
 each lists every card in that subject with a one-line description. Click any `[[link]]` to
 follow it.
 
+Obsidian is also where your AI's answers land. Any worked solution or plan with real
+maths in it is written to a note in the vault's `Tutor/` folder and opened for you
+in Obsidian, rendered — so install it before the next step, not after.
+
 **3. Study with it.** Install [Claude Code](https://claude.com/claude-code). In a terminal:
 
 ```bash
@@ -181,6 +200,14 @@ didn't load; see *If something's wrong* below.
 - *"I keep losing marks on significant figures. What am I getting wrong?"*
 - *"Build me a two-week revision path for Paper 4."*
 - *"用中文解释一下熵是什么。"*
+- *"Update my Progress.md — I just scored 5 on AP Calc BC."*
+- *"What's next for me, from Progress.md and the prerequisites?"*
+
+Two files in the vault are *yours*: **`Progress.md`** (one row per card, tracking what
+you have shown you can use — your AI maintains it; a card only goes green after a
+checkpoint you actually passed) and the notes in **`Tutor/`** (your AI's worked answers;
+they expire after two weeks, because everything in them lives permanently in a card —
+move one out of the folder if you want to keep it). Neither is touched by updates.
 
 Any time an answer feels generic, ask **"which card is that from?"** A good answer here
 always has a file behind it.

@@ -224,9 +224,21 @@ Algebraically the same answer comes from $|x^2 - 4| = 3 \Leftrightarrow x^2 - 4 
 - "Find the values of $x$ for which $|x^2 - 1| > 3$" — graphical or algebraic
 - Combined with [[Trigonometric Graphs]]: "Sketch $y = |\sin x|$ for $0 \le x \le 2\pi$" (positive lobes stay; negative lobes reflect up — produces a row of arches with kinks at $x = 0, \pi, 2\pi$).
 
-### A-Level Pure Mathematics
+### Cambridge 9709 (P2 §2.1 and P3 §3.1)
 
-A-Level extends to: $|f(x)| = |g(x)|$ via squaring (covered above), modulus combined with reciprocal and quadratic graphs, and $|x - a| < \epsilon$ as the language of *limits and convergence* (introductory analysis).
+Named in the algebra row of both papers: understand the meaning of $\lvert x\rvert$, sketch $y = \lvert ax + b\rvert$, and solve $\lvert ax+b\rvert = \lvert cx+d\rvert$ and $\lvert ax + b\rvert < c$ — the two-case and squaring methods above are exactly the P2/P3 marks; a modulus equation or inequality is a near-certain short question.
+
+### Cambridge 9231 (FP1 §1.2)
+
+The Further board wants the *graph relatives*: given $y = f(x)$, sketch $y = \lvert f(x)\rvert$ and $y = f(\lvert x\rvert)$ for rational and cubic $f$ — the reflect-the-negative-parts and mirror-the-right-half moves, worked on real papers in [[Rational Functions and Graphs]].
+
+### Edexcel IAL (P3 §1.3; FP2 §1.1)
+
+P3 §1.3 is the modulus function with the graphs of $\lvert f(x)\rvert$ and $f(\lvert x\rvert)$; FP2 §1.1 uses modulus inside inequalities alongside rational functions — the graphical-or-algebraic choice, with the squaring route needing the "both sides non-negative" check.
+
+### Beyond the rows
+
+$\lvert x - a\rvert < \epsilon$ is the language of *limits and convergence* (introductory analysis) — see [[Limit]].
 
 ### IB AA HL & AP
 

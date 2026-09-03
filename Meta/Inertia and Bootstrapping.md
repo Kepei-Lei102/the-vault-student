@@ -6,6 +6,7 @@ prerequisites:
   - "[[Forward Reading and Problem Discovery]]"
 leads_to:
   - "[[The Gift of the Gradient]]"
+  - "[[Fun Is the Brachistochrone]]"
   - "[[The Ghost of Drive A]]"
 tags:
   - subject/methodology

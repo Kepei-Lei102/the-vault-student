@@ -3,6 +3,7 @@ chinese: 爱智慧 (ài zhìhuì)
 prerequisites:
   - "[[Gödel's Incompleteness Theorems]]"
   - "[[The Feynman Technique]]"
+  - "[[Fun Is the Brachistochrone]]"
 leads_to:
   - "[[The Gift of the Gradient]]"
 tags:

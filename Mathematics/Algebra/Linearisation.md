@@ -308,7 +308,15 @@ The pattern is *always*: pick a substitution that turns the model into "(linear 
 > [!warning] Use enough decimal places in the log column
 > 0606 markschemes often want $\lg$ values to *three* decimal places. Two isn't enough — small differences in $\lg y$ feed into the gradient with high leverage, and rounding to $0.55$ instead of $0.556$ can shift the gradient by $5\%$ or more. Calculate to four, report to three.
 
-### A-Level / 9709
+### Cambridge 9709 (P1 §2.2)
+
+Named inside the logarithms row — *laws, solving, natural log, $e$, graphs, linearisation* — so it arrives as an application of [[Logarithms]] rather than as its own topic: given $y = Ax^n$ data, take logs and read $n$ and $A$ off the line. Same craft as 0606 §7.4 with the log laws now examinable alongside.
+
+### Edexcel IAL (P3 §3.3)
+
+The spec names it directly: *use logarithmic graphs to estimate parameters in relationships of the form $y = ax^n$ and $y = kb^x$* — the two 0606 models exactly, so this card is the whole row.
+
+### A-Level, beyond the rows
 
 A-Level extends linearisation to:
 

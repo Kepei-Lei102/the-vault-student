@@ -11,6 +11,7 @@ leads_to:
   - "[[Material Failure]]"
   - "[[Composite Materials]]"
   - "[[Waves I: The Wave Equation]]"
+  - "[[Elastic Strings and Springs]]"
 tags:
   - subject/physics
   - subject/materials-science
@@ -345,7 +346,7 @@ The $k = EA/L_0$ relation is essential for connecting Hooke's Law to materials, 
 
 ### Other boards
 
-- **Cambridge 9231:** stress/strain as such is not a Further Mechanics topic — elastic strings appear via the modulus of elasticity $\lambda$ ($T = \lambda x/L$), the notation bridge noted in [[Hooke's Law for Springs]].
+- **Cambridge 9231:** stress/strain as such is not a Further Mechanics topic — elastic strings appear via the modulus of elasticity $\lambda$ ($T = \lambda x/L$), treated in full in [[Elastic Strings and Springs]] (where $\lambda = EA$ closes the loop back to this card).
 - **Cambridge 0625:** not examined — IGCSE stops at Hooke's law and the load–extension graph.
 - **IB Physics (2023 guide):** deformation beyond Hooke's law was dropped; Young modulus is not assessed.
 - **AP Physics 1/2/C:** not an examined topic (occasionally a passage-context in AP 2).

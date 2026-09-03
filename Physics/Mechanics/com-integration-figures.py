@@ -42,7 +42,9 @@ def setup(ax, title):
 
 
 # ============================ Fig 1: laminae and curves ============================
-fig, axes = plt.subplots(1, 3, figsize=(12.8, 4.9))
+fig = plt.figure(figsize=(10.8, 9.0))
+gs = fig.add_gridspec(2, 2)
+axes = [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, :])]
 
 # --- (a) triangle, strips parallel to the base -------------------------------
 ax = axes[0]
@@ -130,7 +132,7 @@ ax.plot(*cm_sec, **STAR)
 ax.annotate(r"$\dfrac{2r\sin\alpha}{3\alpha}$", xy=cm_sec, xytext=(3.3, -1.9),
             color=AMBER, fontsize=12,
             arrowprops=dict(arrowstyle="-", color=AMBER, lw=0.9, shrinkB=9))
-ax.set_xlim(-2.0, 6.2); ax.set_ylim(-2.9, 3.7)
+ax.set_xlim(-4.6, 8.8); ax.set_ylim(-2.9, 3.7)
 setup(ax, "sector:  a fan of triangles — no integral")
 
 fig.suptitle("slice so that each slice's own centre of mass is known",
@@ -141,7 +143,9 @@ plt.close(fig)
 
 
 # ============================ Fig 2: the solids ============================
-fig, axes = plt.subplots(1, 3, figsize=(12.8, 4.9))
+fig = plt.figure(figsize=(10.8, 9.0))
+gs = fig.add_gridspec(2, 2)
+axes = [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, :])]
 
 
 def ellipse_disc(ax, y, half_w, color, alpha, lw=1.2, ec=None, z=4):
@@ -215,7 +219,7 @@ ax.plot(0, r / 2, **STAR)
 ax.annotate("mass uniform in height,\nso the CM is at  $r/2$", xy=(0, r / 2),
             xytext=(-3.7, -1.55), color=AMBER, fontsize=9.8,
             arrowprops=dict(arrowstyle="-", color=AMBER, lw=0.9, shrinkB=8))
-ax.set_xlim(-3.8, 4.6); ax.set_ylim(-2.0, 3.5)
+ax.set_xlim(-6.4, 7.2); ax.set_ylim(-2.0, 3.5)
 setup(ax, "shell:  Archimedes beats the integral")
 
 fig.suptitle("the solids — and the one result that needs no integral at all",

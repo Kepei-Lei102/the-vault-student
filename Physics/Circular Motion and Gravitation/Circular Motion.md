@@ -16,6 +16,7 @@ leads_to:
   - "[[Angular Momentum]]"
   - "[[The Friction Limit]]"
   - "[[Braking Systems]]"
+  - "[[Elastic Strings and Springs]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -203,7 +204,7 @@ The mass cancels — the bend is designed for a *speed*, not a vehicle. ($r = 50
 
 ![[circular-motion-q-disc.svg|760]]
 
-**(a)** *Tool: [[Hooke's Law for Springs]] in the $\lambda x/l$ form.* $T = \dfrac{\lambda x}{l} = 8 \Rightarrow x = \dfrac{8\times 2}{32} = 0.5$ m, so the stretched length is $2.5$ m, and $\sin\alpha = \dfrac{1.5}{2.5} = 0.6$. $\blacksquare$ (So $\cos\alpha = 0.8$.)
+**(a)** *Tool: [[Elastic Strings and Springs]] — Hooke's law in the $\lambda x/l$ form.* $T = \dfrac{\lambda x}{l} = 8 \Rightarrow x = \dfrac{8\times 2}{32} = 0.5$ m, so the stretched length is $2.5$ m, and $\sin\alpha = \dfrac{1.5}{2.5} = 0.6$. $\blacksquare$ (So $\cos\alpha = 0.8$.)
 
 **(b)** *Tool: read the friction's direction from "on the point of slipping in the direction $OP$"* — $P$ wants to slide *outward*, so limiting friction acts **inward**, toward $O$, and joins the tension's horizontal component in the centripetal job.
 

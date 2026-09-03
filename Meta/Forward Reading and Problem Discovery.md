@@ -7,6 +7,7 @@ prerequisites:
   - "[[Chain Rule]]"
 leads_to:
   - "[[Inertia and Bootstrapping]]"
+  - "[[Fun Is the Brachistochrone]]"
   - "[[Why Probability and Statistics]]"
   - "[[Program Design]]"
 tags:

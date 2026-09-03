@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-08-31` · built 2026-08-31 from commit `b2131e0`  
-> 362 cards · 470 diagrams · 80 explainers · 105 illustrations
+> **Edition** `student-2026-09-02` · built 2026-09-03 from commit `703a92d` + uncommitted changes  
+> 369 cards · 479 diagrams · 85 explainers · 109 illustrations
 
 ---
 
@@ -220,7 +220,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9231 Further Mathematics
 
-*24 syllabus points · 51 card references*
+*24 syllabus points · 54 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -240,9 +240,9 @@ is often taught under a different heading.
 | 3.1 | [[Projectile Motion]] |
 | 3.2 | [[Centre of Mass]], [[Forces and Equilibrium]], [[Torque]] |
 | 3.3 | [[Circular Motion]] |
-| 3.4 | [[Hooke's Law for Springs]] |
-| 3.5 | [[Differential Equations]], [[Gravitational Fields]] |
-| 3.6 | [[Linear Momentum]] |
+| 3.4 | [[Elastic Strings and Springs]], [[Hooke's Law for Springs]] |
+| 3.5 | [[Differential Equations]], [[Gravitational Fields]], [[Linear Motion under a Variable Force]] |
+| 3.6 | [[Linear Momentum]], [[Newton's Law of Restitution]] |
 | 4.1 | [[Continuous Random Variables]] |
 | 4.2 | [[t-Tests]] |
 | 4.3 | [[Chi-Squared Tests]] |
@@ -355,7 +355,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*33 syllabus points · 67 card references*
+*34 syllabus points · 68 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -380,6 +380,7 @@ is often taught under a different heading.
 | 11.2 | [[Cambridge Pseudocode]] |
 | 11.3 | [[Cambridge Pseudocode]], [[Program Design]] |
 | 12.2 | [[Program Design]] |
+| 13.1 | [[User-Defined Data Types]] |
 | 13.2 | [[Hash Tables]] |
 | 13.3 | [[Floating-Point Representation]] |
 | 15.1 | [[CISC vs RISC]], [[Operating Systems]], [[Pipelining and Simultaneous Multithreading]] |
@@ -550,7 +551,7 @@ is often taught under a different heading.
 
 ## AP Physics C: Mechanics
 
-*30 syllabus points · 44 card references*
+*31 syllabus points · 45 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -565,6 +566,7 @@ is often taught under a different heading.
 | 2.6 | [[Gravitational Fields]] |
 | 2.7 | [[Braking Systems]], [[Friction (Vocab)]], [[The Friction Limit]] |
 | 2.8 | [[Hooke's Law for Springs]], [[Stress, Strain and Young Modulus]] |
+| 2.9 | [[Linear Motion under a Variable Force]] |
 | 2.10 | [[Circular Motion]] |
 | 3.1 | [[Work, Energy and Power]] |
 | 3.2 | [[Work, Energy and Power]] |

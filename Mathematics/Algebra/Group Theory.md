@@ -354,7 +354,7 @@ Group theory sits **beyond the core** A-Level and is absent from IB and AP, but 
 
 - **Edexcel Further Pure 2 (9FM0, option paper)** — *Groups*: the four axioms; order of a group and of an element; **cyclic groups** and generators; **subgroups**; **Lagrange's theorem** and its use to constrain possible subgroup orders; the group tables (Cayley tables) of small groups; **isomorphism** of groups (matching Cayley tables / preserving structure). Typical questions: "Show that the given set forms a group under the stated operation," "list the subgroups and verify Lagrange," "show these two groups of order $n$ are (not) isomorphic."
 - **AQA / MEI Further Pure options** carry a comparable groups unit (axioms → cyclic → Lagrange → isomorphism).
-- **Not** on Cambridge 9231 (current Further Pure), IB AA/AI, or AP.
+- **Not** on Cambridge 9231 (current Further Pure), Edexcel IAL (FP1–FP3 carry no groups — the topic is a *domestic* 9FM0 option only), OxfordAQA 9660, IB AA/AI, or AP.
 
 ### Beyond high school — University
 

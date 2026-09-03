@@ -135,7 +135,7 @@ Six marks, six sentences, and the two most-dropped are the quiet ones: *finishes
 
 > *(a) State **two** different causes of an interrupt.* **[2]**
 > *(b) A printer generates an interrupt when it runs out of paper. Explain **one benefit** of using an interrupt rather than polling for this.* **[2]**
-> *(c) Explain why interrupts are given **priorities**.* **[2]*
+> *(c) Explain why interrupts are given **priorities**.* **[2]**
 
 *Tool: the causes table + the speed-gulf argument + rank-by-cost-of-delay.*
 

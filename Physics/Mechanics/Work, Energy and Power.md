@@ -23,6 +23,8 @@ leads_to:
   - "[[Circular Motion]]"
   - "[[Gravitational Fields]]"
   - "[[Projectile Motion]]"
+  - "[[Elastic Strings and Springs]]"
+  - "[[Linear Motion under a Variable Force]]"
 tags:
   - subject/physics
   - subject/mathematics

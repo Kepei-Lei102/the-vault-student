@@ -5,6 +5,7 @@ prerequisites:
   - "[[Logarithms]]"
   - "[[Trigonometric Identities]]"
 leads_to:
+  - "[[Linear Motion under a Variable Force]]"
   - "[[Standard Integrals]]"
   - "[[Arc Length and Surfaces of Revolution]]"
 tags:

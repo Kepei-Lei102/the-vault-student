@@ -90,7 +90,11 @@ $n = -1, 0, 1, 2, 3$ (not $4$ — the circle at $4$ is open).
 
 ### OxAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** A23 (9260) / E2.9 (0580). Questions typically: (a) solve a linear inequality [1–2 marks], (b) represent on a number line [1 mark], (c) list integer values [1 mark]. Double inequalities are common. The question "list the integers that satisfy $-2 < n \leq 3$" is almost guaranteed on every paper.
+**Syllabus ref:** A23 (9260) / E2.6 (0580). Questions typically: (a) solve a linear inequality [1–2 marks], (b) represent on a number line [1 mark], (c) list integer values [1 mark]. Double inequalities are common. The question "list the integers that satisfy $-2 < n \leq 3$" is almost guaranteed on every paper.
+
+### Cambridge 0606 Additional Maths
+
+Assumed from 0580 and not examined on its own — but it is the last line of most 0606 inequality questions: a quadratic, modulus or cubic inequality is *reduced* to a linear one and then finished exactly as above ([[Quadratic Inequalities]], [[Modulus Function]]).
 
 ---
 

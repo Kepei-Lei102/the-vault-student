@@ -282,6 +282,7 @@ But the run was extraordinary while it lasted: **eight major mathematicians from
 - [[Stories/The Calculus Priority Dispute]] — the brothers were Leibniz's strongest disciples; the brachistochrone was the moment Newton publicly outranked Bernoulli. Companion drama.
 - [[Stories/The Argument for i]] — 18th-century complex analysis owes Bernoulli-family preliminary work, especially in series and analytic-function development.
 - [[L'Hôpital's Rule]] — the deep card on the rule. The history footnote there points here for the full story.
+- [[Fun Is the Brachistochrone]] — the 1696 curve as a thesis about learning: the fastest path dips below the straight line, and so does the fastest way to learn anything.
 - [[Differentiation Rules]] — Bernoulli's role in establishing the chain and product rules in their modern form.
 - [[Mean Value Theorem]] — connections to Cauchy's MVT and Jacob's earlier mean-value ideas in the *Acta Eruditorum*.
 - [[Differential Equations]] — many specific ODEs (the **Bernoulli equation** as a 1st-order ODE, distinct from the fluid-dynamics one) are named after one or another Bernoulli.
