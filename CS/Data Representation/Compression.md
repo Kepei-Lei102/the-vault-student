@@ -7,6 +7,7 @@ prerequisites:
   - "[[Information Theory]]"
 leads_to:
   - "[[Encryption]]"
+  - "[[Compression Is Intelligence]]"
 tags:
   - subject/computer-science
   - domain/data-representation

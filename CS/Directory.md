@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **52 cards across 8 bays.** Last landed: [[User-Defined Data Types]] (2026-09-02) — 9618 Section 13 complete.
+> **59 cards across 10 bays.** Last landed: [[Networks]] (2026-09-09) — the rules, the pieces, and the number in the corner of the screen: the TCP/IP stack, packet switching watched, circuit switching weighed, serial/parallel/duplex and USB, and forty real pings from Chengdu.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -29,7 +29,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 3. **[[Half-Adder and Full-Adder]]** — a computer does arithmetic by doing logic: Sum = XOR, Carry = the majority function; the ripple-carry chain.
 4. **[[Flip-Flops]]** — memory bought with feedback: why one inverter in a loop oscillates and two remember; the SR and JK flip-flops; the SRAM cell.
 
-## Algorithms (6 — core arc closed, plus enrichment)
+## Algorithms (7 — core arc closed, plus enrichment and the paradigms)
 
 *Concrete first, analysis after: searching → sorting → Big-O, with program design and the exam dialect alongside.*
 
@@ -39,6 +39,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 4. **[[Sorting]]** — bubble, selection, insertion, merge and quicksort on one shared list, with the $n^2$-vs-$n\log n$ gap made tangible. *0478 §7.16 · 9618 §9.2 · AP CSA §4.15, §4.17*
 5. **[[Big-O Notation]]** — how cost grows with $n$: the class ladder from $O(1)$ to $O(n!)$, the $c, n_0$ definition, reading Big-O off code. *9618 §19.1 · AP CSA §2.12*
 6. **[[Parallel and External Sorting]]** — what sorting becomes with many cores or data too big for RAM: fork–join merge sort, Amdahl's law, the measured overhead crossover. 💎
+7. **[[Object-Oriented Programming]]** — the nine syllabus terms built in real Python: data and behaviour bundled, encapsulation as invariants living next to the data, inheritance as is-a, polymorphism as the loop that never asks, containment as has-a; the June 2025 Animal/Parrot/Wolf and Nov 2025 Station/Train Paper 4 questions worked against their schemes; ECS in Beyond as OOP's deliberate inverse — and the vault's own architecture. *9618 §20.1 · AP CSA Unit 3 · IB CS B3*
 
 ## Data Representation (12 — closed)
 
@@ -99,13 +100,31 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 *Enrichment shelf: [[Heaps and Priority Queues]].*
 
-## Data Transmission (1 — open)
+## Databases (3 — closed)
 
-*0478 Section 2. The first of its three subsections is written.*
+*One fact, one place — then what happens when the place is a thousand machines. 0478 §9, 9618 §8 and IB A3 end to end, every worked question a real Paper 1 or Paper 2 against its scheme.*
+
+1. **[[Relational Databases]]** — why files fail, Codd's tables linked by values, keys and E-R diagrams, normalisation to 3NF walked on a real order sheet and on real papers, the DBMS's features, ACID and the trillion SQLite instances in every pocket. *0478 §9.1 · 9618 §8.1–8.2 · IB A3.1–A3.2*
+2. **[[SQL]]** — DDL and DML with every paper statement run for real in SQLite (script beside the card); the FROM-first execution order that explains WHERE vs HAVING; joins, GROUP BY, nested queries; the injection attack and the parameterised query. *0478 §9.2 · 9618 §8.3 · IB A3.3*
+3. **[[NoSQL and Distributed Data]]** — the four families, sharding and replication, the CAP theorem proved in one paragraph, ACID vs BASE, 12306 and OceanBase, data warehouses and OLAP, and the NewSQL swing back. *IB A3.4 (HL) · 💎 for Cambridge*
+
+## Security (2 — open)
+
+*The threat/defence game, and the mechanism under the word "hacking". 0478 §5.3, 9618 §6, IB A2.4 — one real Paper 1 each against its scheme.*
+
+1. **[[Data Security]]** — security/privacy/integrity; every threat as mechanism → aim → property (malware, phishing vs pharming, brute-force, DDoS, social engineering); the defences with the *how*; validation vs verification (valid ≠ true); a crack-time chart; and Beyond, the buffer overflow with the three walls — canary, NX, ASLR — and why a hack-lab turns ASLR off. *0478 §5.3 · 9618 §6.1–6.2 · IB A2.4*
+2. **[[Encryption]]** — symmetric (Caesar → one-time pad → AES, Kerckhoffs) and asymmetric (Diffie–Hellman, RSA with $p=61,\ q=53$ walked and run, Euler's theorem, the factoring trapdoor); the two key directions and the who-holds-which-key table across HTTPS, mail, Signal, SSH, passkeys, updates, U 盾, wallets; hash-then-sign, certificates and CAs, TLS in five lines; key sizes, factoring records, QKD vs Shor and post-quantum; six real 9618 P3 / 0478 P1 questions. *9618 §17.1 · 0478 §2.3 · IB A2.4*
+
+*Next in the bay: [[Encryption]] (0478 §2.3 · 9618 §17 · IB A2.4) and the ethics/privacy law card.*
+
+## Data Transmission (2 — open)
+
+*0478 Section 2, and 9618 Section 14. Two of the three subsections are written; §2.3 encryption lives in the Security bay.*
 
 1. **[[Error Detection and Correction]]** — validation, verification and correction at three prices: parity and its honest limit, the parity block, checksums, check digits, the echo check. *0478 §2.2*
+2. **[[Networks]]** — why a protocol, the four-layer TCP/IP stack with encapsulation counted, packets and packet switching animated, circuit switching weighed, serial/parallel/duplex and USB, latency measured from Chengdu. *9618 §14 closed · 0478 §2.1 · IB A2.1–A2.3*
 
-*Next in the bay: serial/parallel transmission and the duplex modes (0478 §2.1); [[Encryption]] (0478 §2.3).*
+*Next in the bay: [[The Internet and the Web]] (0478 §5.1 — internet vs WWW, URLs, browsers, DNS).*
 
 ## Planned bays
 
@@ -114,8 +133,7 @@ Each closes rows across 0478, 9618 and AP CSA at once.
 - **Programming foundations** — variables, selection, iteration, procedures and functions, scope. *0478 §8 · 9618 §11 · AP CSA U2*
 - **[[Object-Oriented Programming]]** — classes, objects, encapsulation, inheritance, polymorphism. *9618 · AP CSA U1/U3*
 - **Networks and the internet** — protocol stack, packets, addressing, the web. *0478 §2/§5 · 9618 §2/§14*
-- **Databases** — relational model, normalisation, SQL. *0478 §9 · 9618 §8*
-- **Security and ethics** — encryption, integrity, privacy, professional ethics. *0478 §6 · 9618 §6/§7/§17*
+- **Ethics and encryption** — professional ethics, ownership, and the encryption depth ([[Encryption]]). *0478 §7 · 9618 §7/§17*
 - **Artificial intelligence** — the 9618 §18 unit; cross-links [[Information Theory]].
 - **Hardware enrichment** 💎 — [[Arithmetic Logic Unit]], [[How a Chip Is Made]], the modern CPU vs the textbook model, the GPU from triangles to tensors.
 

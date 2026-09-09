@@ -8,6 +8,7 @@ leads_to:
   - "[[Binomial Theorem]]"
   - "[[Combined Probability]]"
   - "[[Discrete Random Variables]]"
+  - "[[Ramanujan and Hardy]]"
 tags:
   - subject/mathematics
   - domain/probability

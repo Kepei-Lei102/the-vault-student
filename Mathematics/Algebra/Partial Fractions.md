@@ -375,7 +375,7 @@ One decomposition-side check is worth carrying over: **for a decomposition to be
 
 ### 1. Forgetting to check proper vs improper
 
-The most common 9709 P3 error: decomposing without checking $\deg P$ vs $\deg D$. The marker writes "must polynomial-divide first" in the margin, you lose 2–3 marks on a 5-mark question.
+The most common 9709 P3 error: decomposing without checking $\deg P$ vs $\deg D$. The marker writes "must polynomial-divide first" in the margin, you lose 2–3 marks on a 5-mark question. (Fine print from the syllabus itself: 9709 *excludes* cases where the numerator's degree **exceeds** the denominator's — so on that paper the improper case only ever appears with **equal** degrees, where the quotient is a single constant. The full division of §7 is for IAL, 9660 and university.)
 
 **Fix.** *First step, always*: count the degree of the numerator and denominator. If $\deg P \geq \deg D$, polynomial-divide. *Only then* set up the partial-fraction shape. This is a 5-second check that saves the question.
 
@@ -430,6 +430,8 @@ The decomposition is a long algebraic process with many places to drop a sign or
 
 The "hence" is the giveaway: partial fractions is the bridge between §3.1 algebra and §3.5 integration / §3.1 binomial expansion.
 
+**The syllabus's own exclusion clause:** *cases where the degree of the numerator exceeds that of the denominator* are off-syllabus at 9709 — so the improper case appears only with **equal** degrees (a constant quotient), never needing the full long division of §7. The binomial-expansion pairing is §3.4, the integration pairing §3.5.
+
 **Mark scheme patterns:**
 - M1 for setting up the correct shape (one mark just for writing the right form with correct numerator types).
 - M1 for clearing denominators correctly (the polynomial identity).
@@ -442,11 +444,17 @@ The "hence" is the giveaway: partial fractions is the bridge between §3.1 algeb
 
 Partial fractions is **not** in the 0606 syllabus. The 0606 student stops at [[Polynomial Division|polynomial division]] and the [[Remainder and Factor Theorems]]. Partial fractions is purely an A-Level / 9709 P3 topic at this stage. (The vocabulary card [[Algebraic Fractions (Vocab)]] mentions partial fractions as a forward bridge to A-Level, but the technique itself isn't tested at 0606.)
 
-### A-Level (Edexcel / AQA / OCR / MEI / OxAQA 9660)
+### Edexcel IAL (P4 §2.1 and §6.3)
 
-The same three cases, taught the same way. Edexcel and AQA Pure Mathematics A2 papers test partial fractions as a 4–7 mark question, often as the algebraic setup for a binomial-series or integration question. Mark schemes match the Cambridge patterns above.
+P4.2.1 — decomposition with **distinct and repeated linear** factors (no irreducible quadratic on IAL, unlike 9709); P4.6.3 — integration of rational expressions arising from partial fractions. Same decompose-then-"hence" question shape, 4–7 marks.
 
-OxAQA 9660 lists partial fractions in the algebra section of A2; it does not appear in OxAQA 9260 (IGCSE).
+### OxfordAQA 9660 (P2)
+
+Named in P2.1 *Rational functions* — partial fractions with denominators no more complicated than the 9709 list — and cashed in P2.2's *series expansion of rational functions* and in integration (*"including the use of partial fractions"*). Not in OxfordAQA 9260 (IGCSE).
+
+### Cambridge 9231
+
+Not re-examined; assumed from 9709. It reappears inside the **method of differences** ([[Summation of Series]]), where the telescoping term is usually a partial-fraction split.
 
 ### IB AA
 
@@ -456,7 +464,7 @@ The IB AA HL formula booklet does **not** give the partial-fraction shapes; you'
 
 ### AP Calculus
 
-**AP Calculus BC** explicitly includes partial fractions for integration: CED Topic 6.10, "Integration Using Partial Fractions." Restricted to **distinct linear factors only** at AP — repeated linear factors and irreducible quadratics are out of scope. So Case A only.
+**AP Calculus BC** explicitly includes partial fractions for integration: CED Topic 6.14, "Integration Using Partial Fractions." Restricted to **distinct linear factors only** at AP — repeated linear factors and irreducible quadratics are out of scope. So Case A only.
 
 **AP Calculus AB** does *not* include partial fractions.
 

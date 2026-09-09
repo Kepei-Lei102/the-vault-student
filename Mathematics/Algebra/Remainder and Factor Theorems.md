@@ -24,6 +24,10 @@ tags:
   - syllabus/0606-3-2
   - syllabus/0606-3-3
   - syllabus/9709-2-1
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/IAL-P2-2-1
   - type/theorem
   - type/proof
   - type/technique
@@ -289,13 +293,22 @@ The Remainder Theorem in this form only works for linear divisors $(x - a)$ or $
 
 **Mark scheme patterns:** (1) correct substitution, (2) equation setup from the condition, (3) quotient quadratic (from division), (4) quadratic factorisation, (5) all roots listed.
 
-### A-Level
+### Cambridge 9709 — §2.1 (Paper 2 and Paper 3)
 
-The theorems appear in **AS-Level Pure Maths** (Year 12) inside the Polynomials chapter. Expectations are the same as 0606, plus:
+- The remainder theorem, the factor theorem and polynomial division are one row, examined on **both** pure papers beyond P1. The recurring shapes: *show that $(x - a)$ is a factor and hence factorise*; *find the remainder when $f(x)$ is divided by $(ax + b)$* — the root is $-b/a$, and the substitution must be exact; *find $a$ and $b$ given a factor and a remainder* (two conditions, two unknowns); and, on Paper 3, the theorems as the first step of [[Partial Fractions]] and of solving a cubic that a later part of the question needs.
+- Division by a **quadratic** divisor appears on Paper 3 — the remainder is then linear, $px + q$, and two substitutions (or comparing coefficients) find it. The one-line proof in §2 is not itself examined but is the fastest way to remember which value to substitute.
 
-- Proof of the Remainder Theorem (the one-line argument in §2).
-- Division by any linear divisor, including awkward ones like $(3x + 4)$ (root $-\tfrac{4}{3}$).
-- Using the theorems to prove polynomial identities ($f(x) \equiv g(x)$ if they agree at enough points).
+### Edexcel IAL — P2.2.1
+
+- *Algebraic division; the factor and remainder theorems.* Same shapes as 9709, with a preference for long division written out in full for the quotient; the remainder theorem alone answers "find the remainder" in one line and is accepted.
+
+### OxfordAQA 9660 — P1.1
+
+- The remainder and factor theorems and the factorisation of cubics sit in the very first pure row of the specification. Expect the show-that-and-hence pattern.
+
+### Not examined on…
+
+- **Cambridge 0580** — no polynomial division; factorising stops at quadratics. **Cambridge 9231** — assumed from 9709. **AP Calculus** — polynomial factoring is prerequisite algebra, never a question in itself.
 
 ### Beyond — university
 

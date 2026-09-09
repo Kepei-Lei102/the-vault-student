@@ -10,6 +10,9 @@ leads_to:
   - "[[Fun Is the Brachistochrone]]"
   - "[[Why Probability and Statistics]]"
   - "[[Program Design]]"
+  - "[[Decouple and Recouple]]"
+  - "[[The True IO Bound]]"
+  - "[[Compression Is Intelligence]]"
 tags:
   - subject/methodology
   - subject/philosophy

@@ -4,6 +4,8 @@ prerequisites:
   - "[[Gödel's Incompleteness Theorems]]"
   - "[[The Feynman Technique]]"
   - "[[Fun Is the Brachistochrone]]"
+  - "[[Ramanujan and Hardy]]"
+  - "[[The True IO Bound]]"
 leads_to:
   - "[[The Gift of the Gradient]]"
 tags:

@@ -5,6 +5,7 @@ prerequisites:
   - "[[Determinants and Inverses]]"
   - "[[Planes in 3D]]"
   - "[[Simultaneous Equations (Vocab)]]"
+  - "[[Kirchhoff's Laws]]"
 leads_to: []
 tags:
   - subject/mathematics

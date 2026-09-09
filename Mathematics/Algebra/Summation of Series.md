@@ -10,6 +10,7 @@ leads_to:
   - "[[Maclaurin Series]]"
   - "[[De Moivre at Work]]"
   - "[[Bounding Sums with Integrals]]"
+  - "[[Ramanujan and Hardy]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -357,6 +358,7 @@ Edexcel places series and the method of differences in **Further Pure 1**; AQA a
 - **For 9231 students:** [[MF19 Reference (9231)]] — the three standard results are printed; the method itself is not.
 
 ---
+- **Story:** [[Ramanujan and Hardy]] — a clerk in Madras summing series without proof, and the professor who spent five years asking for them.
 
 ## LaTeX Reference
 

@@ -7,6 +7,8 @@ prerequisites:
   - "[[Big-O Notation]]"
 leads_to:
   - "[[Graphs]]"
+  - "[[NoSQL and Distributed Data]]"
+  - "[[Encryption]]"
 tags:
   - subject/computer-science
   - domain/data-structures

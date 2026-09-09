@@ -1,6 +1,6 @@
 # The Vault — Stories Directory 故事目录
 
-> **38 stories.** Last landed: [[A Rich Neighbor Named Xerox]] (2026-09-02) — a lab that built the whole desktop in 1973 and could not sell it.
+> **41 stories.** Last landed: [[Erdős the Wandering Mathematician]] (2026-09-08) — one suitcase, five hundred coauthors, and the proof that builds nothing.
 > Fun-first historical narratives: the folder where the human drama of mathematics, physics and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Meta/Directory|Meta]].
@@ -23,7 +23,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ---
 
-## Mathematics (13)
+## Mathematics (15)
 
 1. **[[The Calculus Priority Dispute]]** — Newton vs Leibniz, 1665–1727: the Royal Society's rigged committee, Britain's century in the notation wilderness, Babbage's 1812 fix.
 2. **[[The Hidden Number]]** — 250 years of $e$ from Napier to Hermite: "natural" means *unbidden* — five independent paths keep producing the same constant, nobody choosing it.
@@ -38,6 +38,8 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 11. **[[Gauss the Prodigy]]** — the bricklayer's son who calculated his own birthday; the 1-to-100 legend audited, because legends, too, deserve error bars.
 12. **[[The Lady Tasting Tea]]** — eight cups, seventy arrangements: Fisher inventing randomisation and the 5% line over tea, the Pearson feud, Gosset, and two honest edges.
 13. **[[Russell's Paradox in the Post]]** — the 1902 letter that broke Frege's life work while Volume II sat at the printer; the prequel to Gödel.
+14. **[[Ramanujan and Hardy]]** — the 1913 letter from a Madras clerk, the partition formula checked against MacMahon's hand-computed table, the taxi numbered 1729, and the notebook lost for fifty-six years.
+15. **[[Erdős the Wandering Mathematician]]** — no home, one suitcase, "my brain is open"; the six-person party and the pigeonhole, the probabilistic method that proves by refusing to construct; the bet and the feud, kept difficult.
 
 ## Physics (10)
 
@@ -52,7 +54,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 9. **[[Franklin's Coin Flip]]** — the printer who invented plus and minus, conserved charge by double-entry bookkeeping, and guessed the mobile carrier's sign wrong.
 10. **[[The Bookbinder's Apprentice]]** — Faraday: the blacksmith's son who learned science from the books he bound and, unable to afford mathematics, drew the field instead.
 
-## Computing (12)
+## Computing (13)
 
 1. **[[The Boolean-to-Silicon Bridge]]** — 112 years from Sheffer's NAND theorem to a model named after Shannon; the hinge is a 1937 Master's thesis.
 2. **[[Turing at Bletchley]]** — Enigma and the Bombe, the Poles who broke it first, the ten thousand at Bletchley, and the 1952 conviction told with dignity.
@@ -66,6 +68,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 10. **[[You Never Expect the Change of Needs]]** — prediction fails in both directions: the 640K sentence Gates never said, and the title that cuts both ways.
 11. **[[Space Travel]]** — an operating system exists because a video game cost $75 a play: Unix's origin in Ritchie's own words.
 12. **[[A Rich Neighbor Named Xerox]]** — PARC built the desktop in 1973 and could not sell it; Jobs's million-dollar ticket, the best comeback in the trade, the 1994 ruling.
+13. **[[Two Family Trees]]** — Unix's grafted oak (BSD, Mach, NeXT, Darwin; Minix, a Finnish hobby, Android, every supercomputer) beside VMS's single trunk (Cutler, NT); the 1992 "LINUX is obsolete" flame war, verbatim.
 
 ## Sound and speed (3)
 
@@ -75,7 +78,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ## Roadmap
 
-Titles waiting for their breath, not yet written: *Feynman — Famous for the Wrong Thing* · *Stats Lies Hall of Fame* · *Ramanujan and Hardy* · *Archimedes and the Soldier* · *Laplace and Napoleon* · *Cantor vs Kronecker* · *Hilbert vs Brouwer* · *Erdős the Wandering Mathematician*.
+Titles waiting for their breath, not yet written: *Feynman — Famous for the Wrong Thing* · *Stats Lies Hall of Fame* · *Archimedes and the Soldier* · *Laplace and Napoleon* · *Cantor vs Kronecker* · *Hilbert vs Brouwer* · *Erdős the Wandering Mathematician*.
 
 ---
 

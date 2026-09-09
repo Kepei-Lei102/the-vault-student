@@ -19,9 +19,14 @@ tags:
   - level/pre-AP
   - curriculum/A-Level
   - curriculum/IB-AA
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
   - syllabus/9709-3-6
   - syllabus/9709-2-6
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/IAL-P3-6-1
+  - syllabus/IAL-P3-6-2
+  - syllabus/IAL-FP1-3-1
   - type/algorithm
   - type/technique
   - notation/iteration
@@ -354,9 +359,22 @@ The student stops "when $x_n$ and $x_{n+1}$ agree to 4 decimal places" and think
 
 **Not in the 0606 syllabus.** Numerical methods is A-Level material; the 0606 student stops at closed-form solving (quadratics, cubics via factor theorem, etc.).
 
-### A-Level (Edexcel / AQA / OCR / MEI)
+### Cambridge 9709 P2 — §2.6
 
-Edexcel and AQA A-Level Pure include numerical methods in **Year 13 (A2) Pure**. Edexcel covers bisection, fixed-point iteration, and Newton-Raphson explicitly; AQA covers fixed-point iteration and Newton-Raphson, with bisection as a brief introductory technique. OCR's MEI Further Pure adds the **Secant method** (approximate Newton-Raphson where $f'(x_n)$ is replaced by a difference quotient).
+The same content sits on the AS paper as *§2.6 numerical solution of equations*: sign change to locate a root, an iteration $x_{n+1} = F(x_n)$ to a stated accuracy, and Newton–Raphson does **not** appear until P3. A P2 question is the fixed-point shape above without step 4.
+
+### Edexcel IAL — P3 §6.1–6.2 (and FP1 §3.1)
+
+- **P3.6.1** — location of roots by sign change (bisection is the tool the card teaches under §2); **P3.6.2** — iterative methods by a recurrence $x_{n+1} = f(x_n)$, with the cobweb/staircase reading of convergence. Question shape as for 9709 P3, minus Newton–Raphson.
+- **FP1.3.1** — interval bisection, **linear interpolation**, and Newton–Raphson. Linear interpolation (the secant step between two sign-change points) is the one method here the card treats only in its Beyond section — a Further candidate should learn the single-step formula $x = a - f(a)\,\dfrac{b-a}{f(b)-f(a)}$ from the Beyond section's secant method.
+
+### OxfordAQA 9660 — P2 §9
+
+*Location of roots by sign change* and *iterative methods $x_{n+1} = f(x_n)$ with staircase and cobweb diagrams* — the diagram is examined in its own right on this board: be able to draw $y = x$ and $y = f(x)$ and step between them.
+
+### Cambridge 9231
+
+No numerical-methods row on Further; the AS material is assumed.
 
 ### IB AA HL
 

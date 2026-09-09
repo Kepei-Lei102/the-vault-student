@@ -8,6 +8,7 @@ leads_to:
   - "[[Concurrency]]"
   - "[[Stories/Dual-Core Craft]]"
   - "[[Dual-Core Craft]]"
+  - "[[The True IO Bound]]"
 tags:
   - subject/computer-science
   - domain/algorithms

@@ -25,6 +25,10 @@ tags:
   - syllabus/9260-A25
   - syllabus/9260-A26
   - syllabus/0580-E2-7
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/IAL-P2-4-1
+  - syllabus/IAL-P2-4-3
   - type/definition
   - type/formula
   - notation/subscript
@@ -345,14 +349,32 @@ Both **arithmetic progressions** and **quadratic sequences** are named directly 
 > [!note] 9260 vs 0580 overlap
 > 0580 E2.7 is slightly broader (cubic, exponential listed explicitly). 9260 A25/A26 emphasise triangular/square/cube numbers as *named* sequences to recognise on sight. Both syllabi test the same core skill: compute differences, match the fingerprint, write the formula.
 
-### A-Level and Beyond
+### Edexcel IAL — P2.4.1 and P2.4.3
 
-A-Level (Cambridge Paper 3; the equivalent second pure paper elsewhere) and IB Mathematics AA both revisit sequences with more machinery:
+- **P2.4.1:** generate a sequence from its $n$th term *and* from a recurrence $x_{n+1} = f(x_n)$ with a given first term. The recurrence form is the one this card's difference method does not touch: the exam gives $x_1$ and the rule and asks for $x_2, x_3, x_4$ — pure substitution, but sign and bracket slips are where the marks go.
+- **P2.4.3:** classify a sequence as **increasing**, **decreasing** or **periodic** (state the period). A recurrence such as $x_{n+1} = 1 - x_n$ is the standard periodic example.
+- Sigma notation and arithmetic/geometric series sit in P2.4.2 and P2.4.4, under their own cards.
+
+### OxAQA 9660 — P1.5
+
+- Sequences from an $n$th term, recurrence relations $x_{n+1} = f(x_n)$, and the **limit of a convergent recurrence found from $L = f(L)$** — the one item here that is genuinely new: if the terms settle, the limit satisfies the rule with $x_{n+1} = x_n = L$. Solve that equation, then check the sequence really approaches it (a two-line justification is enough at this level). See [[Limit]] for why the substitution is legitimate.
+
+### Cambridge 9709
+
+- No sequences row of its own: §1.6 examines **arithmetic and geometric progressions** and the sum to infinity ([[Arithmetic and Geometric Progressions]]), and the difference method of this card is not set. Recognising a quadratic sequence is IGCSE (0580) territory; at 9709 the question will say "arithmetic" or "geometric" and expect the progression formulas.
+
+### Not examined on…
+
+- **Cambridge 9231** — nothing beyond 9709; sequences appear only inside proof by induction ([[Proof by Induction]]) and [[Summation of Series]].
+
+### Beyond these boards
+
+IB Mathematics AA and university courses add the machinery this card only gestures at:
 
 - Recurrence relations of higher order (solving $u_{n+2} = au_{n+1} + bu_n$ — Fibonacci-style).
 - Proof by induction that a proposed $n$th term is correct.
 - Convergence/divergence of infinite sequences — see [[Limit]].
-- Generating functions (university-level): a bijection between sequences and power series.
+- Generating functions: a bijection between sequences and power series.
 
 > [!info] Beyond syllabus — Newton's forward differences
 > The difference method you learned above is a special case of **Newton's forward difference formula**:

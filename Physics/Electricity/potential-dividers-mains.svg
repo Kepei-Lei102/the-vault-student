@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <text x="500" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">Where the divider meets the wall: live, neutral, earth — and the three things that save you</text>
+  <!-- supply -->
+  <text x="70" y="80" fill="#888" font-weight="bold">supply</text>
+  <line x1="70" y1="110" x2="330" y2="110" stroke="#dc2626" stroke-width="4"/><text x="70" y="96" fill="#dc2626" font-size="13">LIVE — 230 V (swings ±325 V, fifty times a second)</text>
+  <line x1="70" y1="230" x2="330" y2="230" stroke="#2563eb" stroke-width="4"/><text x="70" y="250" fill="#2563eb" font-size="13">NEUTRAL — about 0 V, the return path</text>
+  <line x1="70" y1="300" x2="330" y2="300" stroke="#059669" stroke-width="4" stroke-dasharray="8 4"/><text x="70" y="320" fill="#059669" font-size="13">EARTH — 0 V, a wire to the ground; carries nothing unless something is wrong</text>
+  <!-- switch and fuse on live -->
+  <line x1="150" y1="110" x2="185" y2="92" stroke="#dc2626" stroke-width="3"/><circle cx="150" cy="110" r="3" fill="#dc2626"/><circle cx="190" cy="110" r="3" fill="#dc2626"/>
+  <text x="150" y="135" text-anchor="middle" fill="#888" font-size="12">switch, on the LIVE wire</text><text x="150" y="149" text-anchor="middle" fill="#888" font-size="12">so "off" leaves nothing live</text>
+  <rect x="265" y="102" width="50" height="16" rx="3" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="290" y="135" text-anchor="middle" fill="#f59e0b" font-size="12">fuse: a thin wire</text><text x="290" y="149" text-anchor="middle" fill="#f59e0b" font-size="12">that melts above its rating</text>
+  <!-- appliance -->
+  <rect x="380" y="70" width="240" height="270" rx="10" fill="rgba(136,136,136,0.08)" stroke="#888" stroke-width="2"/>
+  <text x="500" y="60" text-anchor="middle" fill="#888" font-weight="bold">appliance with a metal case</text>
+  <rect x="460" y="130" width="80" height="80" fill="rgba(220,38,38,0.12)" stroke="#dc2626" stroke-width="2"/><text x="500" y="175" text-anchor="middle" fill="#888" font-size="13">heater</text>
+  <path d="M330 110 L400 110 L400 170 L460 170" stroke="#dc2626" stroke-width="3" fill="none"/>
+  <path d="M540 170 L600 170 L600 230 L330 230" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <path d="M330 300 L620 300" stroke="#059669" stroke-width="3" stroke-dasharray="8 4" fill="none"/><text x="632" y="292" fill="#059669" font-size="12">bolted to the case</text>
+  <!-- the fault -->
+  <path d="M440 160 L385 200" stroke="#f59e0b" stroke-width="2.5" fill="none"/><text x="470" y="250" text-anchor="middle" fill="#f59e0b" font-size="12">a fault: the live wire touches the case</text>
+  <!-- right panel -->
+  <text x="500" y="620" text-anchor="middle" fill="#888" font-size="12.5">the fuse protects the wiring from fire; the earth wire protects the person from the case; neither protects you from touching the live wire itself</text>
+  <line x1="60" y1="415" x2="940" y2="415" stroke="#888" stroke-width="0.8" stroke-dasharray="4 4"/>
+  <text x="500" y="445" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">what happens next</text>
+  <text x="60" y="475" fill="#888" font-size="12.5">1 · with an EARTH wire: the case is held at 0 V;</text>
+  <text x="60" y="492" fill="#888" font-size="12.5">a large fault current runs live to case to earth,</text>
+  <text x="60" y="509" fill="#888" font-size="12.5">and the fuse melts (or the trip switch opens).</text>
+  <text x="60" y="526" fill="#888" font-size="12.5">You touch the case: nothing.</text>
+  <text x="380" y="475" fill="#888" font-size="12.5">2 · no earth, metal case: the case sits at 230 V</text>
+  <text x="380" y="492" fill="#888" font-size="12.5">and waits for a hand. The fuse does not blow —</text>
+  <text x="380" y="509" fill="#888" font-size="12.5">30 mA through a person is far below 13 A.</text>
+  <text x="700" y="475" fill="#888" font-size="12.5">3 · DOUBLE-INSULATED (plastic case, the</text>
+  <text x="700" y="492" fill="#888" font-size="12.5">double-square symbol): no metal can go live, so</text>
+  <text x="700" y="509" fill="#888" font-size="12.5">no earth wire; the fuse still protects the cable.</text>
+  <text x="500" y="565" text-anchor="middle" fill="#f59e0b" font-size="12.5">fuse rating: the next size ABOVE the normal</text>
+  <text x="500" y="582" text-anchor="middle" fill="#f59e0b" font-size="12.5">current — a 2 kW heater draws 8.7 A, so 10 A.</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg width="100%" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <!-- left: five people, no monochromatic triangle -->
+  <text x="200" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Five people: it can fail</text>
+  <text x="200" y="46" text-anchor="middle" fill="#888" font-size="12">friends red, strangers blue — no three all-friends, no three all-strangers</text>
+  <g stroke-width="2.5">
+    <line x1="200" y1="90" x2="295" y2="159" stroke="#dc2626"/><line x1="295" y1="159" x2="259" y2="271" stroke="#dc2626"/><line x1="259" y1="271" x2="141" y2="271" stroke="#dc2626"/><line x1="141" y1="271" x2="105" y2="159" stroke="#dc2626"/><line x1="105" y1="159" x2="200" y2="90" stroke="#dc2626"/>
+    <line x1="200" y1="90" x2="259" y2="271" stroke="#2563eb"/><line x1="200" y1="90" x2="141" y2="271" stroke="#2563eb"/><line x1="295" y1="159" x2="141" y2="271" stroke="#2563eb"/><line x1="295" y1="159" x2="105" y2="159" stroke="#2563eb"/><line x1="259" y1="271" x2="105" y2="159" stroke="#2563eb"/>
+  </g>
+  <g fill="rgba(136,136,136,0.25)" stroke="#888" stroke-width="1.5">
+    <circle cx="200" cy="90" r="14"/><circle cx="295" cy="159" r="14"/><circle cx="259" cy="271" r="14"/><circle cx="141" cy="271" r="14"/><circle cx="105" cy="159" r="14"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle" fill="#888" font-size="12">the pentagon: each person has two friends and two strangers,</text>
+  <text x="200" y="346" text-anchor="middle" fill="#888" font-size="12">and every triangle mixes colours — R(3,3) &gt; 5</text>
+  <!-- right: six people, the pigeonhole -->
+  <text x="650" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Six people: it cannot fail</text>
+  <text x="650" y="46" text-anchor="middle" fill="#888" font-size="12">pick anyone — she has five relations, so at least three share a colour</text>
+  <g stroke-width="1.2" stroke="#888" stroke-dasharray="3 3" opacity="0.5">
+    <line x1="650" y1="90" x2="740" y2="140"/><line x1="650" y1="90" x2="740" y2="240"/><line x1="650" y1="90" x2="650" y2="290"/><line x1="650" y1="90" x2="560" y2="240"/><line x1="650" y1="90" x2="560" y2="140"/>
+    <line x1="740" y1="140" x2="740" y2="240"/><line x1="740" y1="240" x2="650" y2="290"/><line x1="650" y1="290" x2="560" y2="240"/><line x1="560" y1="240" x2="560" y2="140"/><line x1="560" y1="140" x2="740" y2="140"/>
+    <line x1="740" y1="140" x2="650" y2="290"/><line x1="740" y1="240" x2="560" y2="140"/><line x1="560" y1="240" x2="740" y2="140"/><line x1="560" y1="140" x2="650" y2="290"/><line x1="740" y1="240" x2="560" y2="240"/>
+  </g>
+  <g stroke-width="3">
+    <line x1="650" y1="90" x2="740" y2="140" stroke="#dc2626"/><line x1="650" y1="90" x2="740" y2="240" stroke="#dc2626"/><line x1="650" y1="90" x2="560" y2="240" stroke="#dc2626"/>
+  </g>
+  <g stroke-width="3" stroke-dasharray="6 4">
+    <line x1="740" y1="140" x2="740" y2="240" stroke="#7c3aed"/><line x1="740" y1="240" x2="560" y2="240" stroke="#7c3aed"/><line x1="560" y1="240" x2="740" y2="140" stroke="#7c3aed"/>
+  </g>
+  <g fill="rgba(136,136,136,0.25)" stroke="#888" stroke-width="1.5">
+    <circle cx="650" cy="90" r="14" fill="rgba(245,158,11,0.35)" stroke="#f59e0b"/><circle cx="740" cy="140" r="14"/><circle cx="740" cy="240" r="14"/><circle cx="650" cy="290" r="14"/><circle cx="560" cy="240" r="14"/><circle cx="560" cy="140" r="14"/>
+  </g>
+  <text x="650" y="330" text-anchor="middle" fill="#888" font-size="12">say three are friends (red). Among those three: any red edge closes a red triangle;</text>
+  <text x="650" y="346" text-anchor="middle" fill="#888" font-size="12">no red edge means all three are blue — a blue triangle. Either way, done: R(3,3) = 6</text>
+  <text x="450" y="385" text-anchor="middle" fill="#888" font-size="12">the pigeonhole principle, twice — the whole of Ramsey theory is this argument, grown up</text>
+</svg>

@@ -2,8 +2,10 @@
 chinese: 传感器与控制系统 (chuángǎnqì yǔ kòngzhì xìtǒng)
 prerequisites:
   - "[[Input and Output Devices]]"
+  - "[[Potential Dividers]]"
 leads_to:
   - "[[Embedded Systems]]"
+  - "[[Decouple and Recouple]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture

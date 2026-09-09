@@ -3,6 +3,7 @@ chinese: 乐趣是最速降线 (lèqù shì zuìsù jiàngxiàn) — 而乐趣�
 prerequisites:
   - "[[Forward Reading and Problem Discovery]]"
   - "[[Inertia and Bootstrapping]]"
+  - "[[Erdős the Wandering Mathematician]]"
 leads_to:
   - "[[The Love of Wisdom]]"
 tags:

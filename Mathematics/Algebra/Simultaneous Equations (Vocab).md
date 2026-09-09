@@ -23,6 +23,11 @@ tags:
   - syllabus/9260-A22
   - syllabus/0580-E2-5
   - syllabus/0606-5-1
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/9709-1-1
+  - syllabus/IAL-P1-1-6
   - type/vocabulary
   - misconception/substitution-sign-error
 ---
@@ -107,11 +112,25 @@ Geometrically: a line crossing a circle gives (at most) two intersection points.
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
+### OxfordAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** A21 (9260) / E2.8 (0580) — linear simultaneous equations. A22 (9260 Extension) — one linear, one non-linear. Expect 3–5 marks. For non-linear, the mark scheme typically gives 1 mark for correct substitution, 1 for simplifying to a quadratic, 1–2 for solving, 1 for both coordinate pairs.
+**Syllabus ref:** A21 (9260) / E2.5 (0580) — linear simultaneous equations, and one linear with one non-linear (9260 Extension A21; 0580 Extended). Expect 3–5 marks. For non-linear, the mark scheme typically gives 1 mark for correct substitution, 1 for simplifying to a quadratic, 1–2 for solving, 1 for both coordinate pairs. 9260's A22 asks you to *derive* the equations from a worded situation before solving them.
 
----
+### Cambridge 0606 — §5.1
+
+- Solve in two unknowns by elimination or substitution, **one linear and one non-linear**; the non-linear one may be a circle or a rectangular hyperbola ($xy = k$), not just a parabola. Give both solution pairs, and pair them correctly — a common lost mark is listing two $x$-values and two $y$-values without saying which goes with which.
+
+### Cambridge 9709 — Paper 1 quadratics
+
+- "Solve by substitution a pair of simultaneous equations of which one is linear and one is quadratic" is a named bullet of the P1 quadratics LO, usually as the algebra behind *find the points where the line meets the curve*, and often followed by the discriminant condition for a tangent (one solution) or no intersection.
+
+### Edexcel IAL — P1.1.6 · OxfordAQA 9660 — P1.1
+
+- Both name the same skill in the first pure unit: simultaneous equations by substitution, one linear and one quadratic, with the geometric reading (intersection of a line and a curve) expected alongside the algebra.
+
+### Not examined on…
+
+- **AP Calculus** — prerequisite algebra only. **Cambridge 9231** — assumed from 9709.
 
 ## Connections
 

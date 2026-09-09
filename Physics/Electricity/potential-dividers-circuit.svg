@@ -1,0 +1,43 @@
+<svg width="100%" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <!-- left: two-resistor divider -->
+  <text x="220" y="30" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">Two resistors share the supply</text>
+  <g stroke="#888" stroke-width="2.5" fill="none">
+    <path d="M110 70 L110 300"/><path d="M110 70 L330 70"/><path d="M330 70 L330 110"/><path d="M330 150 L330 210"/><path d="M330 250 L330 300"/><path d="M110 300 L330 300"/>
+  </g>
+  <!-- cell -->
+  <line x1="95" y1="175" x2="125" y2="175" stroke="#888" stroke-width="4"/><line x1="102" y1="195" x2="118" y2="195" stroke="#888" stroke-width="2.5"/><rect x="108" y="170" width="4" height="30" fill="#1e1e1e" fill-opacity="0"/>
+  <line x1="110" y1="160" x2="110" y2="175" stroke="#888" stroke-width="2.5"/><line x1="110" y1="195" x2="110" y2="210" stroke="#888" stroke-width="2.5"/>
+  <rect x="108" y="176" width="4" height="18" fill="#1e1e1e" fill-opacity="0"/>
+  <text x="80" y="190" text-anchor="end" fill="#888">E</text>
+  <!-- R1, R2 -->
+  <rect x="316" y="110" width="28" height="40" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/><text x="352" y="135" fill="#2563eb">R₁</text>
+  <rect x="316" y="210" width="28" height="40" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="2"/><text x="352" y="235" fill="#059669">R₂</text>
+  <!-- current arrow -->
+  <path d="M200 70 L230 70" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a)"/><text x="215" y="60" text-anchor="middle" fill="#f59e0b" font-size="13">I</text>
+  <!-- V out -->
+  <path d="M330 180 L420 180" stroke="#888" stroke-width="2"/><path d="M330 300 L420 300" stroke="#888" stroke-width="2"/>
+  <circle cx="420" cy="240" r="16" fill="none" stroke="#888" stroke-width="2"/><text x="420" y="245" text-anchor="middle" fill="#888">V</text>
+  <path d="M420 180 L420 222"/><path d="M420 258 L420 300"/>
+  <line x1="420" y1="180" x2="420" y2="224" stroke="#888" stroke-width="2"/><line x1="420" y1="256" x2="420" y2="300" stroke="#888" stroke-width="2"/>
+  <text x="448" y="245" fill="#059669" font-weight="bold">V_out across R₂</text>
+  <text x="220" y="335" text-anchor="middle" fill="#888" font-size="13">same I through both:  V₁ = IR₁,  V₂ = IR₂,  so  V₁ : V₂ = R₁ : R₂</text>
+  <text x="220" y="352" text-anchor="middle" fill="#888" font-size="13">and  V_out = E · R₂ / (R₁ + R₂)</text>
+  <!-- right: the same thing as a wire with a slider -->
+  <text x="690" y="30" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">The same thing as a wire and a slider</text>
+  <g stroke="#888" stroke-width="2.5" fill="none">
+    <path d="M560 70 L560 300"/><path d="M560 70 L820 70"/><path d="M820 70 L820 300"/><path d="M560 300 L820 300"/>
+  </g>
+  <line x1="545" y1="175" x2="575" y2="175" stroke="#888" stroke-width="4"/><line x1="552" y1="195" x2="568" y2="195" stroke="#888" stroke-width="2.5"/>
+  <text x="530" y="190" text-anchor="end" fill="#888">E</text>
+  <!-- wire as a resistor strip -->
+  <rect x="808" y="100" width="24" height="170" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="2"/>
+  <text x="845" y="112" fill="#888" font-size="13">A</text><text x="845" y="272" fill="#888" font-size="13">B</text>
+  <!-- slider -->
+  <path d="M775 200 L806 200" stroke="#f59e0b" stroke-width="3" marker-end="url(#a)"/><text x="768" y="205" text-anchor="end" fill="#f59e0b" font-size="13">slider C</text>
+  <path d="M700 200 L775 200" stroke="#f59e0b" stroke-width="2"/><path d="M700 200 L700 300" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="700" cy="250" r="18" fill="none" stroke="#f59e0b" stroke-width="2"/><text x="700" y="255" text-anchor="middle" fill="#f59e0b">V</text>
+  <line x1="700" y1="200" x2="700" y2="232" stroke="#f59e0b" stroke-width="2"/><line x1="700" y1="268" x2="700" y2="300" stroke="#f59e0b" stroke-width="2"/>
+  <text x="690" y="335" text-anchor="middle" fill="#888" font-size="13">a uniform wire: R is proportional to length, so  V_CB = E · (CB ÷ AB)</text>
+  <text x="690" y="352" text-anchor="middle" fill="#888" font-size="13">a potentiometer — the volume knob, the joystick, the fuel gauge</text>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/></marker></defs>
+</svg>

@@ -21,10 +21,14 @@ tags:
   - curriculum/A-Level
   - curriculum/IB-AA
   - curriculum/IB-AI
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - syllabus/0606-14-4
   - syllabus/9709-2-4
   - syllabus/9709-3-4
+  - syllabus/IAL-P3-4-2
+  - syllabus/AP-BC-2-9
   - type/theorem
   - type/proof
   - notation/derivative
@@ -262,11 +266,26 @@ $\dfrac{d}{dx}(5x^3) \neq 0 \cdot x^3 + 5 \cdot 3x^2$ — technically correct, b
 - **Paper 2 §2.4** and **Paper 3 §3.4:** chain, product, quotient rules are all listed together — expect a mixed problem.
 - Examiners frequently ask for the derivative at a specific point, or to solve $dy/dx = 0$ — so simplify before solving, often by factoring out the largest common term.
 
-### IB AA HL / AP Calculus BC
+### Edexcel IAL — P3 §4.2
 
-- Same rule, standard notation.
-- In IB AA HL, product rule is a base ingredient for higher-order derivative applications (optimisation, kinematics, related rates).
-- AP Calculus BC: product and quotient rules are assumed *and* tested; knowing the first-principles proof is not required but the add-subtract trick generalises to vector-valued derivatives later.
+- Chain, product and quotient rules together, with $\dfrac{dy}{dx} = 1\Big/\dfrac{dx}{dy}$ in the same row. P3 questions pair the product rule with $e^{kx}$, $\ln x$ and the trigonometric functions and then ask for a stationary point or a tangent — factorise the derivative before setting it to zero, and expect the quotient rule to appear as the same question in a different costume.
+
+### OxfordAQA 9660 — P2 §6
+
+- Same trio of rules, listed with the derivatives of $e^{kx}$ and $\ln x$; the questions are P3-shaped and the marks fall on the setup line (name $u$, $v$, $u'$, $v'$) as on Cambridge.
+
+### AP Calculus AB/BC — Unit 2.9
+
+- *The product rule* is its own unit. Multiple-choice items test recognition of a derivative written as $u'v + uv'$ in reverse; free-response uses it inside implicit differentiation and related rates. The first-principles proof is not required, but the add-subtract trick generalises to vector-valued and parametric derivatives later in BC.
+
+### IB Analysis and Approaches (SL and HL)
+
+- The product rule is a stated SL objective in the calculus topic and a base ingredient for HL's higher-order work (optimisation, kinematics, related rates, implicit differentiation). Paper 1 (no calculator) is where the algebraic simplification after differentiating is marked.
+
+### Not examined on…
+
+- **Cambridge 0580 IGCSE** — differentiation is of polynomials only (§E2.13); no product rule.
+- **Cambridge 9231 Further Mathematics** — assumed from 9709; never set as a topic in its own right.
 
 ### Beyond syllabus — the Leibniz rule for $n$th derivatives
 

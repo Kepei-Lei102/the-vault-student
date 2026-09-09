@@ -1,0 +1,14 @@
+<svg width="100%" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <text x="450" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">One packet: an envelope, the letter, and a seal</text>
+  <rect x="40" y="70" width="300" height="80" rx="6" fill="rgba(37,99,235,0.18)" stroke="#2563eb" stroke-width="2"/>
+  <rect x="340" y="70" width="330" height="80" rx="6" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="670" y="70" width="200" height="80" rx="6" fill="rgba(5,150,105,0.18)" stroke="#059669" stroke-width="2"/>
+  <text x="190" y="96" text-anchor="middle" fill="#888" font-weight="bold">header</text><text x="505" y="96" text-anchor="middle" fill="#888" font-weight="bold">payload</text><text x="770" y="96" text-anchor="middle" fill="#888" font-weight="bold">trailer</text>
+  <text x="190" y="118" text-anchor="middle" fill="#888" font-size="11">destination address · originator's address</text><text x="190" y="134" text-anchor="middle" fill="#888" font-size="11">packet number</text>
+  <text x="505" y="118" text-anchor="middle" fill="#888" font-size="11">the data itself — a slice of the file,</text><text x="505" y="134" text-anchor="middle" fill="#888" font-size="11">typically up to about 1 500 bytes</text>
+  <text x="770" y="118" text-anchor="middle" fill="#888" font-size="11">error check (checksum / CRC)</text><text x="770" y="134" text-anchor="middle" fill="#888" font-size="11">end marker</text>
+  <text x="190" y="185" text-anchor="middle" fill="#888" font-size="12">where it is going, where it came from,</text><text x="190" y="202" text-anchor="middle" fill="#888" font-size="12">and which piece of the message it is</text>
+  <text x="505" y="185" text-anchor="middle" fill="#888" font-size="12">the only part the sender actually wanted to send</text>
+  <text x="770" y="185" text-anchor="middle" fill="#888" font-size="12">lets the receiver tell</text><text x="770" y="202" text-anchor="middle" fill="#888" font-size="12">a damaged packet from a good one</text>
+  <text x="450" y="245" text-anchor="middle" fill="#888" font-size="12">the router reads only the header; the receiver checks the trailer, then keeps the payload and throws the rest away</text>
+</svg>

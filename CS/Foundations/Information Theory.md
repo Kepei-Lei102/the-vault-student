@@ -15,6 +15,8 @@ leads_to:
   - "[[Error-Correcting Codes]]"
   - "[[Hashing]]"
   - "[[Turing at Bletchley]]"
+  - "[[Encryption]]"
+  - "[[Compression Is Intelligence]]"
 tags:
   - subject/computer-science
   - subject/mathematics

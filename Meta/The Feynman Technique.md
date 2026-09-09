@@ -3,6 +3,8 @@ chinese: 费曼学习法 (Fèimàn xuéxí fǎ)
 prerequisites:
   - "[[Von Neumann machine]]"
   - "[[Chain of Thought]]"
+  - "[[The True IO Bound]]"
+  - "[[Compression Is Intelligence]]"
 leads_to:
   - "[[The Love of Wisdom]]"
 tags:

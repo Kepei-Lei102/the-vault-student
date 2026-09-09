@@ -1,0 +1,16 @@
+<svg width="100%" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="16">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888"/></marker></defs>
+  <rect x="10" y="10" width="880" height="360" rx="12" fill="rgba(37,99,235,0.06)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="450" y="46" text-anchor="middle" fill="#888" font-weight="bold" font-size="20">A private message TO Alice — confidentiality</text>
+  <text x="150" y="100" text-anchor="middle" fill="#888" font-weight="bold" font-size="18">Bob, the sender</text>
+  <text x="750" y="100" text-anchor="middle" fill="#888" font-weight="bold" font-size="18">Alice, the recipient</text>
+  <rect x="80" y="120" width="140" height="56" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/><text x="150" y="154" text-anchor="middle" fill="#888">plaintext m</text>
+  <rect x="380" y="250" width="140" height="56" rx="8" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.5"/><text x="450" y="284" text-anchor="middle" fill="#888">ciphertext c</text>
+  <rect x="680" y="120" width="140" height="56" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/><text x="750" y="154" text-anchor="middle" fill="#888">plaintext m</text>
+  <path d="M220 160 L385 262" stroke="#888" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M515 262 L680 160" stroke="#888" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="330" y="150" text-anchor="middle" fill="#2563eb" font-size="15">lock with</text><text x="330" y="172" text-anchor="middle" fill="#2563eb" font-weight="bold" font-size="16">Alice's PUBLIC key</text>
+  <text x="570" y="150" text-anchor="middle" fill="#f59e0b" font-size="15">unlock with</text><text x="570" y="172" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="16">Alice's PRIVATE key</text>
+  <text x="450" y="340" text-anchor="middle" fill="#888" font-size="15">anyone may lock (the padlock is public); only the recipient can unlock</text>
+  <text x="450" y="362" text-anchor="middle" fill="#dc2626" font-size="14">if Alice's private key leaks, everything ever sent to her becomes readable</text>
+</svg>

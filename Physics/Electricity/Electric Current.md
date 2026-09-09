@@ -8,6 +8,8 @@ leads_to:
   - "[[Resistance]]"
   - "[[Capacitors]]"
   - "[[Lorentz Force]]"
+  - "[[Kirchhoff's Laws]]"
+  - "[[Internal Resistance]]"
 tags:
   - subject/physics
   - domain/electromagnetism

@@ -30,10 +30,13 @@ tags:
   - level/pre-AP
   - curriculum/A-Level
   - curriculum/IB-AA
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
+  - curriculum/Cambridge-9231
+  - curriculum/Edexcel-IAL
   - syllabus/IB-AA-HL-5-19
   - syllabus/AP-Calculus-BC-10
   - syllabus/9231-2-3
+  - syllabus/IAL-FP2-6-1
   - type/theorem
   - type/definition
   - type/technique
@@ -441,9 +444,19 @@ Required mastery:
 
 The AP exam loves problems of the form: "the function $f$ has $f^{(n)}(0) = (-1)^n n!$ for all $n \geq 0$. (a) Find the Maclaurin series of $f$. (b) Find the interval of convergence. (c) Identify $f$ explicitly."
 
-### A-Level Further (FP1 / Cambridge 9231)
+### Cambridge 9231 Further Mathematics — Paper 2 (FP2) §2.3
 
-Maclaurin series appears in the Cambridge **Further Pure 1** module. Standard expansions (the six) are required; the Lagrange remainder is sometimes asked. Less depth than IB AA HL or AP BC but the same shape.
+Maclaurin series sits in **Further Pure 2**, §2.3 *Differentiation and integration*: derive and use the Maclaurin series of a function, including the standard series for $e^x$, $\ln(1+x)$, $\sin x$, $\cos x$, $(1+x)^n$ and $\tan^{-1}x$, and of composite or product functions built from them up to a stated power. The remainder term is **not** required; convergence is stated, not proved. Paper 2 questions ask for the first three or four non-zero terms of a composite (e.g. $e^{x}\sin 2x$, $\ln(1 + \sin x)$) and then an approximation or a limit.
+
+### Edexcel IAL — Further Pure 2 §6
+
+*FP2.6.1–6.4*: the Maclaurin series of a function; the standard series and their ranges of validity; series of composite functions; and — beyond Cambridge — the **Taylor series** about $x = a$ and the **series solution of differential equations** by repeated differentiation. The first three are this card; the differential-equation method is the half this card does not carry.
+
+### Not examined on…
+
+- **Cambridge 9709** — no power series at all; the binomial expansion of [[Binomial Series]] is the nearest row.
+- **Cambridge 0606 / 0580** — none.
+- **IB AA SL** — Maclaurin series is HL only (5.19).
 
 ### Cambridge 9709
 

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 720 172" font-family="Helvetica, Arial, sans-serif">
+<text x="10" y="20" font-size="13" font-weight="bold" fill="#888">1NF — one value per cell; the key is now (OrderID, Plant)</text>
+<rect x="10" y="26" width="355.79999999999995" height="122" rx="4" fill="rgba(245,158,11,0.10)" stroke="rgb(245,158,11)" stroke-width="1.2"/>
+<text x="16" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">OrderID</text>
+<text x="80.8" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">Plant</text>
+<text x="145.6" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">Qty</text>
+<text x="177.39999999999998" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">Customer</text>
+<text x="242.2" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">City</text>
+<text x="300.4" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">PlantCost</text>
+<line x1="10" y1="46" x2="365.79999999999995" y2="46" stroke="rgb(245,158,11)"/>
+<text x="16" y="60" font-size="11" fill="#888">1001</text>
+<text x="80.8" y="60" font-size="11" fill="#888">Rose</text>
+<text x="145.6" y="60" font-size="11" fill="#888">3</text>
+<text x="177.39999999999998" y="60" font-size="11" fill="#888">Mei</text>
+<text x="242.2" y="60" font-size="11" fill="#888">Chengdu</text>
+<text x="300.4" y="60" font-size="11" fill="#888">4.50</text>
+<text x="16" y="77" font-size="11" fill="#888">1001</text>
+<text x="80.8" y="77" font-size="11" fill="#888">Lavender</text>
+<text x="145.6" y="77" font-size="11" fill="#888">10</text>
+<text x="177.39999999999998" y="77" font-size="11" fill="#888">Mei</text>
+<text x="242.2" y="77" font-size="11" fill="#888">Chengdu</text>
+<text x="300.4" y="77" font-size="11" fill="#888">2.20</text>
+<text x="16" y="94" font-size="11" fill="#888">1002</text>
+<text x="80.8" y="94" font-size="11" fill="#888">Fern</text>
+<text x="145.6" y="94" font-size="11" fill="#888">1</text>
+<text x="177.39999999999998" y="94" font-size="11" fill="#888">Mei</text>
+<text x="242.2" y="94" font-size="11" fill="#888">Chengdu</text>
+<text x="300.4" y="94" font-size="11" fill="#888">6.00</text>
+<text x="16" y="111" font-size="11" fill="#888">1003</text>
+<text x="80.8" y="111" font-size="11" fill="#888">Rose</text>
+<text x="145.6" y="111" font-size="11" fill="#888">1</text>
+<text x="177.39999999999998" y="111" font-size="11" fill="#888">Ana</text>
+<text x="242.2" y="111" font-size="11" fill="#888">Xi'an</text>
+<text x="300.4" y="111" font-size="11" fill="#888">4.50</text>
+<text x="16" y="128" font-size="11" fill="#888">1003</text>
+<text x="80.8" y="128" font-size="11" fill="#888">Fern</text>
+<text x="145.6" y="128" font-size="11" fill="#888">2</text>
+<text x="177.39999999999998" y="128" font-size="11" fill="#888">Ana</text>
+<text x="242.2" y="128" font-size="11" fill="#888">Xi'an</text>
+<text x="300.4" y="128" font-size="11" fill="#888">6.00</text>
+<text x="10" y="164" font-size="11" fill="rgb(245,158,11)">atomic — but Customer depends on OrderID alone and PlantCost on Plant alone: partial dependencies on half the key</text>
+</svg>

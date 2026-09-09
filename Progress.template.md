@@ -8,8 +8,8 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-02` · built 2026-09-03 from commit `703a92d` + uncommitted changes  
-> 369 cards · 479 diagrams · 85 explainers · 109 illustrations
+> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
+> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
 
 ---
 
@@ -241,7 +241,7 @@
 
 ## Physics
 
-*44 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*47 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -266,7 +266,9 @@
 | [[Gravitational Fields]] | ? |  |  |
 | [[Hooke's Law for Springs]] | ? |  |  |
 | [[Internal Energy]] | ? |  |  |
+| [[Internal Resistance]] | ? |  |  |
 | [[Kinetic Theory and the Ideal Gas]] | ? |  |  |
+| [[Kirchhoff's Laws]] | ? |  |  |
 | [[Linear Momentum]] | ? |  |  |
 | [[Linear Motion under a Variable Force]] | ? |  |  |
 | [[Lorentz Force]] | ? |  |  |
@@ -276,6 +278,7 @@
 | [[Newton's Laws of Motion]] | ? |  |  |
 | [[Normal Force (Vocab)]] | ? |  |  |
 | [[Physical Quantities and Units]] | ? |  |  |
+| [[Potential Dividers]] | ? |  |  |
 | [[Projectile Motion]] | ? |  |  |
 | [[Repeated Measurements]] | ? |  |  |
 | [[Resistance]] | ? |  |  |
@@ -292,7 +295,7 @@
 
 ## CS
 
-*52 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*59 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -309,7 +312,9 @@
 | [[Compilers and Interpreters]] | ? |  |  |
 | [[Compression]] | ? |  |  |
 | [[CPU Architecture and the Fetch-Execute Cycle]] | ? |  |  |
+| [[Data Security]] | ? |  |  |
 | [[Embedded Systems]] | ? |  |  |
+| [[Encryption]] | ? |  |  |
 | [[Error Detection and Correction]] | ? |  |  |
 | [[File Handling]] | ? |  |  |
 | [[Flip-Flops]] | ? |  |  |
@@ -326,7 +331,10 @@
 | [[Karnaugh Maps]] | ? |  |  |
 | [[Linked List]] | ? |  |  |
 | [[Logic Gates]] | ? |  |  |
+| [[Networks]] | ? |  |  |
+| [[NoSQL and Distributed Data]] | ? |  |  |
 | [[Number Bases]] | ? |  |  |
+| [[Object-Oriented Programming]] | ? |  |  |
 | [[Operating Systems]] | ? |  |  |
 | [[Overflow and Underflow]] | ? |  |  |
 | [[P vs NP]] | ? |  |  |
@@ -335,11 +343,13 @@
 | [[Program Design]] | ? |  |  |
 | [[RAM and the Memory Hierarchy]] | ? |  |  |
 | [[Recursion]] | ? |  |  |
+| [[Relational Databases]] | ? |  |  |
 | [[Searching]] | ? |  |  |
 | [[Secondary Storage]] | ? |  |  |
 | [[Sensors and Control Systems]] | ? |  |  |
 | [[Sorting]] | ? |  |  |
 | [[Sound Encoding]] | ? |  |  |
+| [[SQL]] | ? |  |  |
 | [[Stacks and Queues]] | ? |  |  |
 | [[Storage Units (Vocab)]] | ? |  |  |
 | [[Text Encoding]] | ? |  |  |
@@ -351,13 +361,15 @@
 
 ## Meta
 
-*11 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*14 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[Chain of Thought]] | ? |  |  |
 | [[Choosing Effective Equations]] | ? |  |  |
+| [[Compression Is Intelligence]] | ? |  |  |
 | [[Credit Is the Currency]] | ? |  |  |
+| [[Decouple and Recouple]] | ? |  |  |
 | [[Forward Reading and Problem Discovery]] | ? |  |  |
 | [[Fun Is the Brachistochrone]] | ? |  |  |
 | [[Inertia and Bootstrapping]] | ? |  |  |
@@ -365,11 +377,12 @@
 | [[The Feynman Technique]] | ? |  |  |
 | [[The Gift of the Gradient]] | ? |  |  |
 | [[The Love of Wisdom]] | ? |  |  |
+| [[The True IO Bound]] | ? |  |  |
 | [[Why Probability and Statistics]] | ? |  |  |
 
 ## Stories
 
-*38 cards · 🔴 unread · 🟢 read*
+*41 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -381,6 +394,7 @@
 | [[Boltzmann's Tombstone]] | ? |  |  |
 | [[Courage]] | ? |  |  |
 | [[Dual-Core Craft]] | ? |  |  |
+| [[Erdős the Wandering Mathematician]] | ? |  |  |
 | [[Franklin's Coin Flip]] | ? |  |  |
 | [[From the Grid to the Garage]] | ? |  |  |
 | [[Galois at Twenty]] | ? |  |  |
@@ -389,6 +403,7 @@
 | [[Lewis Carroll the Mathematician]] | ? |  |  |
 | [[Newton vs Hooke]] | ? |  |  |
 | [[One Take, Many Tracks]] | ? |  |  |
+| [[Ramanujan and Hardy]] | ? |  |  |
 | [[Russell's Paradox in the Post]] | ? |  |  |
 | [[Space Travel]] | ? |  |  |
 | [[Stigler's Law of Eponymy]] | ? |  |  |
@@ -408,6 +423,7 @@
 | [[The Pendulum Story]] | ? |  |  |
 | [[The War of the Currents]] | ? |  |  |
 | [[Turing at Bletchley]] | ? |  |  |
+| [[Two Family Trees]] | ? |  |  |
 | [[von Neumann the Martian]] | ? |  |  |
 | [[Wolfgang Pauli and the Number 137]] | ? |  |  |
 | [[You Never Expect the Change of Needs]] | ? |  |  |

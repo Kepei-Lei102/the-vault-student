@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 172" font-family="Helvetica, Arial, sans-serif">
+<text x="10" y="20" font-size="13" font-weight="bold" fill="#888">2NF — what depended on part of the key has moved out, with that part as its key</text>
+<rect x="10" y="26" width="187.79999999999998" height="88" rx="4" fill="rgba(37,99,235,0.10)" stroke="rgb(37,99,235)" stroke-width="1.2"/>
+<text x="16" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">OrderID</text>
+<text x="80.8" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">Customer</text>
+<text x="145.6" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">City</text>
+<line x1="10" y1="46" x2="197.79999999999998" y2="46" stroke="rgb(37,99,235)"/>
+<text x="16" y="60" font-size="11" fill="#888">1001</text>
+<text x="80.8" y="60" font-size="11" fill="#888">Mei</text>
+<text x="145.6" y="60" font-size="11" fill="#888">Chengdu</text>
+<text x="16" y="77" font-size="11" fill="#888">1002</text>
+<text x="80.8" y="77" font-size="11" fill="#888">Mei</text>
+<text x="145.6" y="77" font-size="11" fill="#888">Chengdu</text>
+<text x="16" y="94" font-size="11" fill="#888">1003</text>
+<text x="80.8" y="94" font-size="11" fill="#888">Ana</text>
+<text x="145.6" y="94" font-size="11" fill="#888">Xi'an</text>
+<text x="10" y="130" font-size="11" fill="rgb(37,99,235)">City depends on Customer, not on OrderID — a transitive dependency; this table is exactly 2NF and not 3NF</text>
+<rect x="560" y="26" width="161.39999999999998" height="122" rx="4" fill="rgba(37,99,235,0.10)" stroke="rgb(37,99,235)" stroke-width="1.2"/>
+<text x="566" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">OrderID</text>
+<text x="630.8" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">Plant</text>
+<text x="695.5999999999999" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">Qty</text>
+<line x1="560" y1="46" x2="721.4" y2="46" stroke="rgb(37,99,235)"/>
+<text x="566" y="60" font-size="11" fill="#888">1001</text>
+<text x="630.8" y="60" font-size="11" fill="#888">Rose</text>
+<text x="695.5999999999999" y="60" font-size="11" fill="#888">3</text>
+<text x="566" y="77" font-size="11" fill="#888">1001</text>
+<text x="630.8" y="77" font-size="11" fill="#888">Lavender</text>
+<text x="695.5999999999999" y="77" font-size="11" fill="#888">10</text>
+<text x="566" y="94" font-size="11" fill="#888">1002</text>
+<text x="630.8" y="94" font-size="11" fill="#888">Fern</text>
+<text x="695.5999999999999" y="94" font-size="11" fill="#888">1</text>
+<text x="566" y="111" font-size="11" fill="#888">1003</text>
+<text x="630.8" y="111" font-size="11" fill="#888">Rose</text>
+<text x="695.5999999999999" y="111" font-size="11" fill="#888">1</text>
+<text x="566" y="128" font-size="11" fill="#888">1003</text>
+<text x="630.8" y="128" font-size="11" fill="#888">Fern</text>
+<text x="695.5999999999999" y="128" font-size="11" fill="#888">2</text>
+<rect x="790" y="26" width="136.2" height="88" rx="4" fill="rgba(37,99,235,0.10)" stroke="rgb(37,99,235)" stroke-width="1.2"/>
+<text x="796" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="underline">Plant</text>
+<text x="860.8" y="40" font-size="11" font-weight="bold" fill="#888" text-decoration="none">PlantCost</text>
+<line x1="790" y1="46" x2="926.2" y2="46" stroke="rgb(37,99,235)"/>
+<text x="796" y="60" font-size="11" fill="#888">Rose</text>
+<text x="860.8" y="60" font-size="11" fill="#888">4.50</text>
+<text x="796" y="77" font-size="11" fill="#888">Lavender</text>
+<text x="860.8" y="77" font-size="11" fill="#888">2.20</text>
+<text x="796" y="94" font-size="11" fill="#888">Fern</text>
+<text x="860.8" y="94" font-size="11" fill="#888">6.00</text>
+</svg>

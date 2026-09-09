@@ -11,6 +11,8 @@ leads_to:
   - "[[Space Travel]]"
   - "[[File Systems]]"
   - "[[The Ghost of Drive A]]"
+  - "[[Data Security]]"
+  - "[[Networks]]"
 tags:
   - subject/computer-science
   - domain/systems-software
@@ -68,6 +70,9 @@ And the honest boundary: some computers genuinely run **without** an OS — the 
 - **Firmware** — software stored *in* the hardware (flash ROM on the board): the code that runs first at power-on. The **bootstrap**: the CPU wakes pointing at firmware (BIOS/UEFI on a PC); firmware checks the hardware, finds the disk, loads the OS's loader into RAM, and jumps — each stage pulling in a bigger one, the system hoisting itself by its own straps. Firmware is the bridge in 0478's trio: *hardware runs firmware; firmware loads software.* (For decades, the first instants of that wake-up were spent impersonating a processor from 1978 — the fossil record inside every boot is [[The Ghost of Drive A]].)
 - **Operating system** — the kernel plus its services, loaded by firmware, resident until shutdown.
 - **System vs application software:** system software runs and maintains the machine itself (the OS, utilities, translators); **application software does the user's actual task** (browser, word processor, game). The test: *would you still need it if you used the computer for something completely different?* System software: yes. Application: no.
+
+> [!info] Two ways to build a kernel — monolithic vs microkernel
+> The kernel is the only code with full authority, and there are two schools on how *much* of the system should sit inside it. A **monolithic kernel** puts everything privileged — scheduler, memory manager, file systems, device drivers — in one address space: fast (a file-system call is a function call) and simple to build, but one bad driver can crash the whole machine. A **microkernel** keeps the privileged core tiny — memory, messaging, the bare minimum of I/O — and runs drivers and file systems as ordinary processes that talk to it by messages: crash-isolated and cleanly replaceable, at the price of every service call becoming a message exchange. Textbooks favour the microkernel on design grounds; the world runs mostly on monolithic kernels (Linux) and one large **hybrid** (Apple's XNU, a microkernel core with a Unix kernel welded on). The argument was fought in public, by name, in January 1992 — [[Two Family Trees]] has the transcript.
 
 ## The management portfolio
 
@@ -246,4 +251,5 @@ The kernel is not a process taking turns — it is the **turn-giver**: code that
 - **Kindred:** [[Embedded Systems]] — the honest contrast: the machine that needs no OS, and the real-time scheduling contract when it needs a small one; [[Input and Output Devices]] — drivers, buffers, and the interrupt-driven I/O the hardware-management section governs; [[Compression]] — the file-compression utility's engine.
 - **Stories:** [[The Ghost of Drive A]] — the fossil record inside every boot; [[Courage]] — the OS as where compatibility promises live and die: Classic, Carbon and the 32-bit cutoff, each bridge ended on a published schedule.
 - **Origin myth:** [[Space Travel]] — the file system, processes and shell this card governs were first built in one famous month, on a cast-off machine, to keep a $75-per-game video game running for free.
+- **The family trees:** [[Two Family Trees]] — where the kernels this card describes actually came from: Unix's grafted oak (BSD, Mach, XNU/Darwin; Minix, Linux, Android) and VMS's single trunk (Cutler, NT), with the 1992 microkernel-vs-monolithic flame war fought in public.
 - **The interface's origin myth:** [[A Rich Neighbor Named Xerox]] — the last abstraction this card presents to the user (windows, icons, menus, pointer) was built at PARC in 1973, carried out by two thieves, and ruled public ground by a court in 1994.

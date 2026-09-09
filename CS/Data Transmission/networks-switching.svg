@@ -1,0 +1,36 @@
+<svg width="100%" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <text x="240" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">Circuit switching: one path, reserved</text>
+  <text x="740" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">Packet switching: many paths, shared</text>
+  <!-- left mesh -->
+  <g fill="rgba(136,136,136,0.2)" stroke="#888" stroke-width="1.5">
+    <circle cx="60" cy="200" r="16"/><circle cx="160" cy="120" r="14"/><circle cx="160" cy="280" r="14"/><circle cx="260" cy="200" r="14"/><circle cx="360" cy="120" r="14"/><circle cx="360" cy="280" r="14"/><circle cx="440" cy="200" r="16"/>
+  </g>
+  <g stroke="#888" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <path d="M74 190 L146 128"/><path d="M74 210 L146 272"/><path d="M174 128 L246 192"/><path d="M174 272 L246 208"/><path d="M274 192 L346 128"/><path d="M274 208 L346 272"/><path d="M374 128 L426 190"/><path d="M374 272 L426 210"/><path d="M160 134 L160 266"/><path d="M360 134 L360 266"/>
+  </g>
+  <path d="M74 190 L146 128 L174 128 L246 192 L274 192 L346 128 L374 128 L426 190" stroke="#dc2626" stroke-width="5" fill="none" opacity="0.8"/>
+  <text x="60" y="235" text-anchor="middle" fill="#888" font-size="11">caller</text><text x="440" y="235" text-anchor="middle" fill="#888" font-size="11">callee</text>
+  <text x="240" y="330" text-anchor="middle" fill="#888" font-size="12">1 · set up a dedicated path end to end   2 · stream, in order, at a fixed rate</text>
+  <text x="240" y="350" text-anchor="middle" fill="#888" font-size="12">3 · tear it down. Nobody else may use the path meanwhile — even during silence</text>
+  <text x="240" y="380" text-anchor="middle" fill="#888" font-size="12">the old telephone network; still the right choice for a live voice call or a private link</text>
+  <!-- right mesh -->
+  <g fill="rgba(136,136,136,0.2)" stroke="#888" stroke-width="1.5">
+    <circle cx="540" cy="200" r="16"/><circle cx="640" cy="120" r="14"/><circle cx="640" cy="280" r="14"/><circle cx="740" cy="200" r="14"/><circle cx="840" cy="120" r="14"/><circle cx="840" cy="280" r="14"/><circle cx="920" cy="200" r="16"/>
+  </g>
+  <g stroke="#888" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <path d="M554 190 L626 128"/><path d="M554 210 L626 272"/><path d="M654 128 L726 192"/><path d="M654 272 L726 208"/><path d="M754 192 L826 128"/><path d="M754 208 L826 272"/><path d="M854 128 L906 190"/><path d="M854 272 L906 210"/><path d="M640 134 L640 266"/><path d="M840 134 L840 266"/>
+  </g>
+  <path d="M554 190 L626 128 L654 128 L726 192 L754 208 L826 272 L854 272 L906 210" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <path d="M554 210 L626 272 L654 272 L726 208 L754 192 L826 128 L854 128 L906 190" stroke="#059669" stroke-width="3" fill="none"/>
+  <path d="M554 190 L626 128 L640 134 L640 266 L654 272 L726 208 L754 208 L826 272 L854 272 L906 210" stroke="#7c3aed" stroke-width="2" fill="none" stroke-dasharray="5 3"/>
+  <g font-size="10" font-weight="bold">
+    <rect x="585" y="140" width="22" height="16" rx="3" fill="rgba(37,99,235,0.8)"/><text x="596" y="152" text-anchor="middle" fill="#fff">1</text>
+    <rect x="585" y="250" width="22" height="16" rx="3" fill="rgba(5,150,105,0.8)"/><text x="596" y="262" text-anchor="middle" fill="#fff">2</text>
+    <rect x="628" y="190" width="22" height="16" rx="3" fill="rgba(124,58,237,0.8)"/><text x="639" y="202" text-anchor="middle" fill="#fff">3</text>
+  </g>
+  <text x="540" y="235" text-anchor="middle" fill="#888" font-size="11">sender</text><text x="920" y="235" text-anchor="middle" fill="#888" font-size="11">receiver</text>
+  <text x="920" y="252" text-anchor="middle" fill="#888" font-size="10">arrive 2, 1, 3:</text><text x="920" y="264" text-anchor="middle" fill="#888" font-size="10">reorder by number</text>
+  <text x="740" y="330" text-anchor="middle" fill="#888" font-size="12">1 · chop the message into numbered packets   2 · each router forwards each packet</text>
+  <text x="740" y="350" text-anchor="middle" fill="#888" font-size="12">by its own best next hop, right now   3 · the receiver reorders and asks again for any missing</text>
+  <text x="740" y="380" text-anchor="middle" fill="#888" font-size="12">the internet: the links are shared by everyone, and a dead router is simply routed around</text>
+</svg>

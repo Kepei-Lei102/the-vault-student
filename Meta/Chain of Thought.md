@@ -2,6 +2,7 @@
 chinese: 思维链 (sīwéi liàn) / 解题思路 (jiětí sīlù)
 prerequisites:
   - "[[Set]]"
+  - "[[Compression Is Intelligence]]"
 leads_to:
   - "[[Logic]]"
   - "[[Algebraic Proof]]"

@@ -13,6 +13,12 @@ tags:
   - level/pre-AP
   - curriculum/Cambridge-0606
   - syllabus/0606-14-1
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - curriculum/AP-Calculus-BC
+  - curriculum/IB-AA
+  - syllabus/IAL-P1-4-1
   - type/definition
   - type/vocabulary
   - notation/limit
@@ -179,12 +185,30 @@ Students see $\dfrac{\delta y}{\delta x}$ and $\dfrac{dy}{dx}$ as interchangeabl
 - However, A13 says "gradient function" which implicitly requires the limit idea
 - Understanding limits helps students see why the power rule works — see [[Power Rule]]
 
-### AP / IB / A-Level
+### Cambridge 9709 — P1 §1.7
 
-- **AP Calculus AB/BC:** requires formal limit definition and evaluation
-- **IB Mathematics AA HL:** includes limits and the squeeze theorem
-- **A-Level Further Mathematics:** includes ε-δ definitions
-- The ε-δ definition in this note is college-level — it's here because understanding *why* calculus works makes the rules unforgettable
+The LO wording is *understand the gradient of a curve at a point as the limit of the gradients of a suitable sequence of chords*, with the note that *only an informal understanding of the idea of a limit is expected* and that the formal first-principles method is not required. A P1 question can ask for the gradient of the chord joining $x = 2$ and $x = 2 + h$ on $y = x^3$ and what it tends to — the limit idea in one calculation, never the ε–δ definition.
+
+### Edexcel IAL — P1 §4.1
+
+*The derivative as the gradient of the tangent, as a limit* — the same informal statement as 9709; differentiation from first principles for $x^n$ with small $n$ can be asked ("show from first principles that the derivative of $x^2$ is $2x$"), which is the one place the limit is written out on an A-Level paper.
+
+### OxfordAQA 9660 — P1 §3
+
+*Derivative as gradient / tangent / limit* — as IAL, including first principles for simple polynomials.
+
+### AP Calculus AB / BC — Unit 1
+
+The only board here that examines limits **as a topic**: Unit 1 (10–12 % of AB, 4–7 % of BC) covers the limit definition, computing limits algebraically and from tables and graphs, limit laws, limits at infinity, and then **continuity** — at a point, over an interval, types of discontinuity, and the connection of infinite limits to vertical asymptotes and limits at infinity to horizontal ones. This card carries the definition, the laws and the evaluation techniques; the continuity-and-asymptote half of the unit (1.9–1.15) is examined by graph reading and the three-part continuity test, and sits with [[Graphs of Functions]] and [[Differentiation]]'s differentiability-implies-continuity argument. The ε–δ definition is *not* on the AP syllabus either; it is here because it is why the rules work.
+
+### IB Analysis and Approaches HL
+
+Limits as the informal idea behind the derivative at SL; HL adds evaluating limits including the squeeze theorem and l'Hôpital's rule, with the ε–δ definition not required.
+
+### Not examined on…
+
+- **Cambridge 9231 Further Mathematics** — no limits row; the ε–δ definition is university material on every board the vault covers.
+- **Cambridge 0580** — the word does not appear; differentiation at 0580 Extended is the power rule as a recipe.
 
 ## Connections
 

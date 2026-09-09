@@ -8,6 +8,7 @@ leads_to:
   - "[[Operating Systems]]"
   - "[[Secondary Storage]]"
   - "[[Arrays]]"
+  - "[[The True IO Bound]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture

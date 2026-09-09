@@ -3,6 +3,7 @@ chinese: 勇气 (yǒngqì) — 按日程表违约的公司
 prerequisites:
   - "[[The Ghost of Drive A]]"
   - "[[A Rich Neighbor Named Xerox]]"
+  - "[[Two Family Trees]]"
 leads_to:
   - "[[You Never Expect the Change of Needs]]"
 tags:

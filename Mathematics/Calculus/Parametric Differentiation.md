@@ -20,9 +20,15 @@ tags:
   - curriculum/Cambridge-9709
   - curriculum/A-Level
   - curriculum/IB-AA
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - syllabus/9709-3-4
   - syllabus/9231-2-3
+  - syllabus/IAL-P4-3-1
+  - syllabus/IAL-P4-5-1
+  - syllabus/AP-BC-9-1
+  - syllabus/AP-BC-9-2
   - type/theorem
   - type/technique
   - notation/derivative
@@ -303,9 +309,17 @@ The §3.4 differentiation trio — Quotient, Implicit, Parametric — closes 970
 
 **Not on the 0606 syllabus.** Parametric is an A-Level topic.
 
-### A-Level (Edexcel / AQA / OCR)
+### Edexcel IAL — P4 §3.1 and §5.1
 
-**Standard A2 topic** in all three boards. Examined directly and often combined with [[Connected Rates of Change]] in physics-flavoured questions.
+*P4.3.1 parametric equations* asks for the cartesian ↔ parametric conversion (eliminate $t$, or parametrise a given curve) as well as the sketch; *P4.5.1* differentiates implicit and parametric forms and applies them to tangents and normals. The conversion questions are the half this card does not carry — a candidate should be able to eliminate the parameter by substitution or by a trig identity ($x = \cos t$, $y = \sin 2t$ → $y^2 = 4x^2(1 - x^2)$), and to recognise a circle, ellipse or parabola from its parametric form.
+
+### OxfordAQA 9660 — P2 §3 and §6
+
+*P2.3* is the same conversion material as IAL; *P2.6* the differentiation, with tangents and normals in the same LO. Question shape as for 9709 P3.
+
+### Cambridge 9231 — §2.3
+
+Parametric forms reappear on Further under the differentiation LO (implicit and parametric differentiation, with [[Maclaurin Series]] beside them) — the same first-derivative skill at a higher algebraic setting, plus the parametric integrals for arc length and surface area in [[Arc Length and Surfaces of Revolution]].
 
 ### IB AA HL
 

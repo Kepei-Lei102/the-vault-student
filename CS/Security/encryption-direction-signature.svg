@@ -1,0 +1,16 @@
+<svg width="100%" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="16">
+  <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888"/></marker></defs>
+  <rect x="10" y="10" width="880" height="360" rx="12" fill="rgba(245,158,11,0.06)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="46" text-anchor="middle" fill="#888" font-weight="bold" font-size="20">A verified message FROM Alice — a digital signature</text>
+  <text x="150" y="100" text-anchor="middle" fill="#888" font-weight="bold" font-size="18">Alice, the signer</text>
+  <text x="750" y="100" text-anchor="middle" fill="#888" font-weight="bold" font-size="18">anyone, the verifier</text>
+  <rect x="80" y="120" width="140" height="56" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/><text x="150" y="154" text-anchor="middle" fill="#888">message m</text>
+  <rect x="360" y="250" width="180" height="56" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.5"/><text x="450" y="276" text-anchor="middle" fill="#888">m + signature</text><text x="450" y="296" text-anchor="middle" fill="#888" font-size="13">the hash of m, sealed</text>
+  <rect x="680" y="120" width="140" height="56" rx="8" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/><text x="750" y="154" text-anchor="middle" fill="#888">accept / reject</text>
+  <path d="M220 160 L365 262" stroke="#888" stroke-width="2" fill="none" marker-end="url(#ar2)"/>
+  <path d="M535 262 L680 160" stroke="#888" stroke-width="2" fill="none" marker-end="url(#ar2)"/>
+  <text x="330" y="150" text-anchor="middle" fill="#f59e0b" font-size="15">hash, then seal with</text><text x="330" y="172" text-anchor="middle" fill="#f59e0b" font-weight="bold" font-size="16">Alice's PRIVATE key</text>
+  <text x="570" y="150" text-anchor="middle" fill="#2563eb" font-size="15">unseal with Alice's PUBLIC key,</text><text x="570" y="172" text-anchor="middle" fill="#2563eb" font-weight="bold" font-size="16">hash m again, compare</text>
+  <text x="450" y="340" text-anchor="middle" fill="#888" font-size="15">only the sender can seal (the key is private); anyone can check</text>
+  <text x="450" y="362" text-anchor="middle" fill="#dc2626" font-size="14">if Alice's private key leaks, anyone can forge her signature from now on</text>
+</svg>

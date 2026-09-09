@@ -10,6 +10,7 @@ leads_to:
   - "[[Error Detection and Correction]]"
   - "[[How a Chip Is Made]]"
   - "[[Input and Output Devices]]"
+  - "[[Decouple and Recouple]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture

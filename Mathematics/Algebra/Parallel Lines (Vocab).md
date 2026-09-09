@@ -97,9 +97,17 @@ Rearrange the second equation: $y = -\tfrac{3}{2}x + \tfrac{5}{2}$, so its gradi
 
 **Syllabus ref:** E3.6. Direct: "show that lines $\ell_1$ and $\ell_2$ are parallel" (compare gradients). Most often appears combined with [[Equation of a Straight Line (Vocab)|Equation of a Straight Line]]: "Find the line parallel to … passing through …".
 
-### OxAQA 9260 / Cambridge 0606
+### Cambridge 0606 Additional Maths
 
-Same usage; 0606 §7 (Straight-Line Graphs) integrates parallelism as part of finding line equations.
+**Syllabus ref:** §7.2 — *conditions for parallel or perpendicular lines*, examined as the setup for a line equation ("find the equation of the line through $P$ parallel to $\ell$") and inside perpendicular-bisector and coordinate-geometry problems.
+
+### OxAQA 9660 (International A-Level)
+
+P1.2 names parallel and perpendicular conditions with the straight line; same gradient test, same two-line answer.
+
+### Edexcel IAL
+
+P1.2.2 — *parallel and perpendicular conditions* — one of the first coordinate-geometry rows on P1; the gradient comparison is usually a one-mark step inside a longer question.
 
 ---
 

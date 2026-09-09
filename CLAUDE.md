@@ -4,8 +4,8 @@ This file is the operating manual for an AI agent working inside **The Vault —
 Student Edition** with Claude Code. Read it at the start of every session,
 before answering anything.
 
-> **Edition** `student-2026-09-02` · built 2026-09-03 from commit `703a92d` + uncommitted changes  
-> 369 cards · 479 diagrams · 85 explainers · 109 illustrations
+> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
+> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
 
 ---
 

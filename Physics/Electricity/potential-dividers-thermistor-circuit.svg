@@ -1,0 +1,27 @@
+<svg width="100%" viewBox="0 0 960 350" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <text x="480" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">The sensor divider: a thermistor in the top arm, a fixed resistor below, the voltmeter across the fixed resistor</text>
+  <!-- circuit -->
+  <g stroke="#888" stroke-width="2.5" fill="none">
+    <path d="M140 70 L140 300"/><path d="M140 70 L380 70"/><path d="M380 70 L380 105"/><path d="M380 155 L380 205"/><path d="M380 255 L380 300"/><path d="M140 300 L380 300"/>
+  </g>
+  <line x1="125" y1="175" x2="155" y2="175" stroke="#888" stroke-width="4"/><line x1="132" y1="195" x2="148" y2="195" stroke="#888" stroke-width="2.5"/>
+  <text x="110" y="190" text-anchor="end" fill="#888">5 V</text>
+  <!-- thermistor: rectangle with the diagonal bar -->
+  <rect x="366" y="105" width="28" height="50" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/><line x1="358" y1="160" x2="402" y2="100" stroke="#7c3aed" stroke-width="2"/><line x1="402" y1="100" x2="416" y2="100" stroke="#7c3aed" stroke-width="2"/>
+  <text x="420" y="135" fill="#7c3aed" font-size="13">thermistor R_th</text>
+  <rect x="366" y="205" width="28" height="50" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/><text x="400" y="235" fill="#2563eb" font-size="13">R = 10 kΩ</text>
+  <!-- voltmeter across the fixed resistor -->
+  <path d="M380 180 L560 180" stroke="#f59e0b" stroke-width="2"/><path d="M380 300 L560 300" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="560" y1="180" x2="560" y2="222" stroke="#f59e0b" stroke-width="2"/><line x1="560" y1="258" x2="560" y2="300" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="560" cy="240" r="18" fill="none" stroke="#f59e0b" stroke-width="2"/><text x="560" y="245" text-anchor="middle" fill="#f59e0b">V</text>
+  <text x="350" y="330" text-anchor="middle" fill="#f59e0b" font-weight="bold">V_out = 5 V · R / (R + R_th)</text>
+  <!-- right: the two readings -->
+  <text x="770" y="90" text-anchor="middle" fill="#888" font-weight="bold">read it at three temperatures</text>
+  <text x="770" y="120" text-anchor="middle" fill="#888" font-size="13">cold, 0 °C:  R_th ≈ 33 kΩ,  V_out = 5 × 10/43 ≈ 1.2 V</text>
+  <text x="770" y="145" text-anchor="middle" fill="#888" font-size="13">room, 25 °C:  R_th = 10 kΩ,  V_out = 5 × 10/20 = 2.5 V</text>
+  <text x="770" y="170" text-anchor="middle" fill="#888" font-size="13">hot, 60 °C:  R_th ≈ 2.5 kΩ,  V_out = 5 × 10/12.5 = 4.0 V</text>
+  <text x="770" y="215" text-anchor="middle" fill="#888" font-size="13">warmer: the thermistor's resistance falls, it takes a smaller</text>
+  <text x="770" y="233" text-anchor="middle" fill="#888" font-size="13">share of the 5 V, so V_out across the fixed resistor rises</text>
+  <text x="770" y="270" text-anchor="middle" fill="#888" font-size="13">swap the arms and V_out (now across the thermistor)</text>
+  <text x="770" y="288" text-anchor="middle" fill="#888" font-size="13">falls with temperature instead: same rule, other arm</text>
+</svg>

@@ -2,6 +2,7 @@
 chinese: 阿贝尔——另一个早逝的少年 (Ābèi'ěr) — 那封聘书，迟到了两天
 prerequisites:
   - "[[Cubic Graphs]]"
+  - "[[Ramanujan and Hardy]]"
 leads_to:
   - "[[Group Theory]]"
   - "[[Abelian Group]]"

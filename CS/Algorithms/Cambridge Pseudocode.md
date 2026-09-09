@@ -5,6 +5,7 @@ prerequisites:
 leads_to:
   - "[[The Arrow That Pointed the Other Way]]"
   - "[[User-Defined Data Types]]"
+  - "[[Object-Oriented Programming]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -180,6 +181,34 @@ DEFINE Vowels ('A','E','I','O','U') : Letters
 ```
 
 (Note the asymmetry the June 2024 scheme marks point by point: the *set's* values keep their normal literal quoting — these are `CHAR`s — while an *enumerated* list must not be quoted. The quote rule follows the values' nature, not the keyword.)
+
+**Classes (§20.1).** The concepts — objects, encapsulation, inheritance, polymorphism — are [[Object-Oriented Programming]]'s; the dialect is a `CLASS … ENDCLASS` block, attributes and methods each tagged `PUBLIC` or `PRIVATE` *only when the access level matters to the question* (the guide: "methods and properties can be assumed to be public unless otherwise stated"), a constructor that is always a procedure named `NEW`, and the object created with `NEW` on the right of an arrow:
+
+```
+CLASS Pet
+   PRIVATE Name : STRING
+   PUBLIC PROCEDURE NEW(GivenName : STRING)
+      Name ← GivenName
+   ENDPROCEDURE
+ENDCLASS
+
+MyPet ← NEW Pet("Dougal")
+MyPet.SetName("Sooty")
+```
+
+Inheritance is one keyword, and the parent's constructor is reached through `SUPER`:
+
+```
+CLASS Cat INHERITS Pet
+   PRIVATE Breed : STRING
+   PUBLIC PROCEDURE NEW(GivenName : STRING, GivenBreed : STRING)
+      SUPER.NEW(GivenName)
+      Breed ← GivenBreed
+   ENDPROCEDURE
+ENDCLASS
+```
+
+Methods are called with the dot, exactly as fields are read from a record — `Player.SetAttempts(5)`, `OUTPUT Player.GetAttempts()` — which is the dialect's way of saying an object *is* a record that carries its own procedures.
 
 
 **Procedures and functions.** The distinction is enforced by the syntax: a procedure is `CALL`ed and returns nothing, a function is used inside an expression and must declare what it `RETURNS`.

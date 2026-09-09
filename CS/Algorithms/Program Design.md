@@ -2,7 +2,9 @@
 chinese: 程序设计 (chéngxù shèjì)
 prerequisites:
   - "[[Forward Reading and Problem Discovery]]"
+  - "[[Decouple and Recouple]]"
 leads_to:
+  - "[[Object-Oriented Programming]]"
   - "[[Cambridge Pseudocode]]"
 tags:
   - subject/computer-science

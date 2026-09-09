@@ -6,6 +6,8 @@ prerequisites:
   - "[[Secondary Storage]]"
 leads_to:
   - "[[A Fight With the Inevitable Errors]]"
+  - "[[Data Security]]"
+  - "[[Networks]]"
 tags:
   - subject/computer-science
   - domain/data-transmission

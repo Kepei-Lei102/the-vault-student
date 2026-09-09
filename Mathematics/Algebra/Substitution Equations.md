@@ -16,10 +16,12 @@ tags:
   - level/IB
   - level/AP
   - curriculum/Cambridge-0606
+  - curriculum/Cambridge-9709
   - curriculum/A-Level
   - curriculum/IB-AA
   - curriculum/AP
   - syllabus/0606-4-3
+  - syllabus/9709-1-1
   - type/deep
   - type/technique
   - misconception/forgot-to-back-substitute
@@ -254,15 +256,24 @@ The substitution leaps off the page once you've seen a few:
 > [!tip] Show every step — the markscheme rewards bookkeeping
 > 0606 markschemes for §4.3 typically award marks for: (1) correct substitution, (2) correct quadratic in $u$, (3) correct $u$-roots, (4) translating back, (5) final $x$-values. Each step is a separate mark. Even if you make an arithmetic slip late, earlier marks are secured by clearly written work. Write "let $u = \ldots$" at the top and label every line.
 
-### A-Level / 9709 / IB AA / AP
+### Cambridge 9709 (Pure Mathematics 1)
 
-A-Level adds:
-- **Cubic-in-disguise via substitution** — e.g., $x^6 - 9x^3 + 8 = 0$ via $u = x^3$ becomes $u^2 - 9u + 8 = 0$.
-- **Tschirnhaus transformations** — substitutions that *eliminate* a term in a polynomial (e.g., reducing a general cubic to a depressed cubic). Critical machinery in Cardano's formula.
-- **Reciprocal substitutions** $u = x + 1/x$ for *palindromic* polynomials (those with coefficients reading the same forwards and backwards).
-- **Trigonometric substitutions** in integration ($x = \sin\theta$, $x = \tan\theta$) — same idea, different setting.
+**Syllabus ref:** P1 §1.1 Quadratics — *recognise and solve equations in $x$ which are quadratic in some function of $x$*. The syllabus's own examples are exactly the patterns above: $x^4 - 5x^2 + 4 = 0$ (Pattern A), $6x + \sqrt{x} - 1 = 0$ (a half-power version of Pattern B, with $u = \sqrt x$ and the negative $u$ rejected), and $\tan^2 x = 1 + \tan x$ (Pattern E, where the quadratic in $\tan x$ does not factorise and the formula gives two $u$-values, each turned into angles in the stated interval). Paper 1 usually asks this as a 4–5 mark question early in the paper, and the scheme marks the same five steps as 0606: substitution, quadratic in $u$, $u$-roots, back-substitution, final $x$-values — with a mark reserved for rejecting an impossible $u$ (a negative $\sqrt x$, $\lvert\cos x\rvert > 1$, $e^x \le 0$).
 
-AP Calculus and IB AA HL bring this technique into integration ([[Integration by Substitution]]), where the substitution turns one integrand into another more tractable one. The algebra here is the prequel.
+Beyond P1, the same move reappears in **P3** without being named: $e^{2x} - 5e^x + 6 = 0$ and $(\ln x)^2 - 5\ln x + 6 = 0$ inside §3.2 (logarithmic and exponential functions), and $2\cos^2 x + \cos x - 1 = 0$ inside §3.3 (trigonometry), where the quadratic in $\cos x$ is normally the *result* of a Pythagorean identity applied to a mixed equation.
+
+### Where the technique is examined without being named
+
+- **IB AA (SL and HL):** no learning outcome names "quadratic in a function of $x$", but SL 2.7 (solving quadratics) and SL 2.10 / HL 1.9 (solving exponential and logarithmic equations) are where it is tested — a Paper 1 exponential equation such as $4^x - 6 \cdot 2^x + 8 = 0$ expects the substitution $u = 2^x$ and is marked on the same steps.
+- **Edexcel IAL / 9660:** the equivalent appears inside P1 quadratics and P2 exponentials and trigonometry rather than as its own row.
+
+**Not examined on:** Cambridge 0580 (Extended solves quadratics by factorising, formula and completing the square only — no equation in a function of $x$); AP Calculus AB/BC (the algebra is assumed; what AP examines is the calculus descendant, [[Integration by Substitution]]).
+
+**A-Level extensions worth knowing** — none of these is a named learning outcome, but each appears as the harder part of a question:
+- **Cubic-in-disguise** — $x^6 - 9x^3 + 8 = 0$ via $u = x^3$ becomes $u^2 - 9u + 8 = 0$.
+- **Reciprocal substitutions** $u = x + 1/x$ for *palindromic* polynomials (coefficients reading the same forwards and backwards).
+- **Tschirnhaus translations** $x = y - b/3a$ that *remove* a term from a cubic — the machinery under Cardano's formula (Beyond Syllabus below).
+- **Trigonometric substitutions** in integration ($x = \sin\theta$, $x = \tan\theta$) — the same idea in a different setting, examined in 9709 P3 and IB AA HL.
 
 ---
 

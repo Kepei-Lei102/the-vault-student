@@ -110,9 +110,17 @@ The perpendicular bisector is the line through the midpoint, perpendicular to th
 - "Find the equation of the line perpendicular to $\ldots$ through the point $\ldots$"
 - "Find the equation of the perpendicular bisector of $AB$" (combines this card with [[Length and Midpoint (Vocab)]]).
 
-### Cambridge 0606 / 9260
+### Cambridge 0606 Additional Maths
 
-Same content within §7 (Straight-Line Graphs); appears in coordinate-geometry-of-the-circle problems where the **tangent is perpendicular to the radius** (see [[Coordinate Geometry of the Circle]]).
+**Syllabus ref:** §7.2 — *conditions for parallel or perpendicular lines*, almost always as a step inside a longer coordinate-geometry question: the perpendicular bisector (§7.3, with [[Length and Midpoint (Vocab)]]) and the circle, where the **tangent is perpendicular to the radius** (see [[Coordinate Geometry of the Circle]]).
+
+### OxAQA 9660 (International A-Level)
+
+P1.2 names parallel and perpendicular conditions with the straight line; same $m_1 m_2 = -1$ test.
+
+### Edexcel IAL
+
+P1.2.2 — *parallel and perpendicular conditions* — on P1, and again in P2.3.1 where the circle's tangent-perpendicular-to-radius property is the examined route.
 
 ### A-Level / IB / AP
 

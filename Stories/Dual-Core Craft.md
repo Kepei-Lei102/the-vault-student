@@ -1,6 +1,7 @@
 ---
 chinese: 双核星际 (shuānghé xīngjì)
 prerequisites:
+  - "[[Object-Oriented Programming]]"
   - "[[Parallel and External Sorting]]"
 leads_to:
   - "[[Pipelining and Simultaneous Multithreading]]"

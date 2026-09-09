@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 760 420" font-family="Helvetica, Arial, sans-serif">
+<polygon points="350,60 90,360 640,360" fill="rgba(124,58,237,0.08)" stroke="#888" stroke-width="1.5"/>
+<text x="350" y="44" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Consistency</text>
+<text x="350" y="30" text-anchor="middle" font-size="11" fill="#888">every read sees the latest write</text>
+<text x="80" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Availability</text>
+<text x="80" y="406" text-anchor="middle" font-size="11" fill="#888">every request gets an answer</text>
+<text x="640" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Partition tolerance</text>
+<text x="640" y="406" text-anchor="middle" font-size="11" fill="#888">works through a network split</text>
+<text x="190" y="200" text-anchor="middle" font-size="12" fill="#2563eb" transform="rotate(-49 190 200)">CA — one machine, no partition: classic single-server SQL</text>
+<text x="520" y="200" text-anchor="middle" font-size="12" fill="#059669" transform="rotate(47 520 200)">CP — refuse to answer rather than answer wrong: bank ledgers, Spanner</text>
+<text x="350" y="382" text-anchor="middle" font-size="12" fill="#dc2626">AP — always answer, reconcile later: Dynamo, Cassandra, a shopping cart</text>
+<text x="350" y="230" text-anchor="middle" font-size="13" fill="#888">the network WILL split —</text>
+<text x="350" y="250" text-anchor="middle" font-size="13" fill="#888">so P is not a choice, and the real</text>
+<text x="350" y="270" text-anchor="middle" font-size="13" fill="#888">question is C or A during the split</text>
+</svg>

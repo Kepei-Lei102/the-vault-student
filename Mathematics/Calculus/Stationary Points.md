@@ -22,6 +22,14 @@ tags:
   - syllabus/0580-E2-12
   - syllabus/0606-14-6
   - syllabus/9709-1-7
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - curriculum/AP-Calculus-BC
+  - syllabus/IAL-P2-7-1
+  - syllabus/AP-BC-5-2
+  - syllabus/AP-BC-5-3
+  - syllabus/AP-BC-5-6
   - type/definition
   - type/method
   - notation/derivative
@@ -306,11 +314,33 @@ In Example 3 above, the maximum is at $y = 11$ and the minimum is at $y = -16$. 
 - Still need the second derivative test — but it's always used for genuine maxima and minima, so $f''(a) = 0$ shouldn't arise on a 0606 paper
 - Scope extends to rational powers (e.g., $y = x + \dfrac{4}{x}$) — requires rewriting as $y = x + 4x^{-1}$ before differentiating
 
-### AP / IB / A-Level
+### Cambridge 9709 — §1.7 (Paper 1)
 
-- **AP Calculus:** first and second derivative tests required; full inflection point analysis (non-stationary inflections too); closed interval method for absolute (global) extrema
-- **IB Mathematics AA HL:** similar to AP; optimisation problems in context
-- **A-Level Mathematics:** full treatment including justification of nature using sign diagrams
+- Locate stationary points and **determine their nature**; the second derivative test is the expected tool, with the first-derivative sign check accepted. Increasing/decreasing intervals come from the sign of $\dfrac{dy}{dx}$. Points of inflexion are not listed in §1.7 and are not set at Paper 1.
+- Functions go beyond polynomials: $x^n$ for any rational $n$ and chain-rule composites such as $(2x - 1)^{-2}$ — the mark scheme gives a method mark for the derivative and separate marks for *each* stationary point's coordinates and nature.
+- The same LO feeds the optimisation questions of [[Optimisation]] (the "show that the maximum volume is…" family).
+
+### Edexcel IAL — P2.7.1
+
+- Maxima, minima and stationary points; **increasing and decreasing functions** phrased as "find the set of values of $x$ for which $f$ is increasing". Nature via the second derivative or a sign table — either is credited. Inflexion is not in P2; it enters at P3/P4 through the second derivative's own behaviour.
+
+### OxAQA 9660 — P1.3
+
+- Max/min via the **second derivative test, named explicitly** in the spec, alongside tangents, normals and increasing/decreasing. Expect a polynomial or a simple rational-power function, and expect the nature to be asked for every point found.
+
+### AP Calculus BC — Unit 5
+
+- **5.2** Extreme Value Theorem and the distinction between **global and local** extrema: on a closed interval, compare the critical points *and the endpoints* (the candidates test) — this card's worked examples stop at local extrema, so treat the endpoint check as the one extra step AP demands.
+- **5.3–5.5** the first derivative test and the candidates test; **5.6–5.7** concavity and the second derivative test, with **non-stationary inflection points** (where $f''$ changes sign but $f' \ne 0$) in scope — beyond every Cambridge board above.
+
+### IB Mathematics AA
+
+- HL: as AP, with optimisation in context; the second derivative test and inflexion points are both examined.
+
+### Not examined on…
+
+- **Cambridge 9231** — nothing beyond 9709.
+- **Cambridge 0580** never sets a point of inflexion; **0606** says so in its own words ("points of inflection NOT included").
 
 ## Connections
 

@@ -272,6 +272,7 @@ The PGF is the discrete member of a family. Replace $t^X$ by $e^{tX}$ and you ha
 - **For 9231 students:** [[MF19 Reference (9231)]] — $G_X(t) = E(t^X)$, $E(X) = G_X'(1)$ and the variance line are printed; the named PGFs, the product rule and $G_{aX+b}(t) = t^bG_X(t^a)$ are **not** — build them.
 
 ---
+- **Story:** [[Ramanujan and Hardy]] — Euler's partition product $\prod(1-x^k)^{-1}$ is the first famous generating function, and the 1918 Hardy–Ramanujan formula for its coefficients is the story's mathematics.
 
 ## LaTeX Reference
 

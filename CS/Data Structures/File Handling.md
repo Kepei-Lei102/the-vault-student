@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[File Systems]]"
   - "[[Hash Tables]]"
+  - "[[Relational Databases]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -354,7 +355,7 @@ The most consequential one, because it survives into professional work and fails
 **AP Computer Science A has no file I/O at all** — input arrives only through `Scanner`, and no free-response question can require reading a file. Buffering, flushing, encodings and line-ending conventions are examined on none of the four boards; they are here because they explain the rules that are.
 
 > [!info] Beyond syllabus — why "written" still doesn't mean "safe"
-> `close` empties your program's buffer into the operating system. The operating system then has a buffer of its own, and the drive has one after that. A power cut in between can still lose data that every layer reported as written. Programs that genuinely cannot afford this — databases, above all — call `fsync`, which asks the whole chain to commit before returning, and pay for it in speed. It is the same trade the whole topic runs on: buffering is fast because it is a promise about the future, and a promise is not a fact. The database's answer to *how do I keep a promise across a crash* is the transaction log, which is why [[Databases]] exist as something other than a tidy file format.
+> `close` empties your program's buffer into the operating system. The operating system then has a buffer of its own, and the drive has one after that. A power cut in between can still lose data that every layer reported as written. Programs that genuinely cannot afford this — databases, above all — call `fsync`, which asks the whole chain to commit before returning, and pay for it in speed. It is the same trade the whole topic runs on: buffering is fast because it is a promise about the future, and a promise is not a fact. The database's answer to *how do I keep a promise across a crash* is the transaction log, which is why [[Relational Databases]] exist as something other than a tidy file format.
 
 > [!info] Beyond syllabus — the formats that solved this once
 > Nobody hand-rolls serialisation any more, and the reason is that the three strategies above were argued to a conclusion decades ago. **CSV** is the delimiter approach with a quoting rule bolted on; **JSON** carries the structure explicitly, so nesting works and no field can be mistaken for a separator; **binary formats** like Parquet or protobuf use length prefixes for exactly the reason given above. Reading a modern format's specification is a good way to watch those three options being weighed by people who had to live with the answer.
@@ -366,7 +367,7 @@ The most consequential one, because it survives into professional work and fails
 - **Uses:** [[Stacks and Queues]] — the MOD ring, reused as a sliding window over a stream too long to hold; [[Text Encoding]] — the agreement that makes bytes into text.
 - **Managed by:** [[Operating Systems]] — the directory entry that turns a name into blocks *and records the length EOF is measured against*, the permissions checked at `open`, and the atomic `rename` that makes a real save survive a crash.
 - **The idea underneath:** in-band versus out-of-band framing. A file's boundaries live outside it in the directory; a network packet's live inside it in a header, because the wire keeps no index. The same choice reappears inside a single file as delimiter-versus-length-prefix — and reappears again as the difference between a self-describing format and one that needs a schema.
-- **Extends into:** [[File Systems]] — how those blocks are organised and found, and the serial / sequential / random access methods; [[Databases]] — what you reach for when files stop being enough.
+- **Extends into:** [[File Systems]] — how those blocks are organised and found, and the serial / sequential / random access methods; [[Relational Databases]] — what you reach for when files stop being enough.
 - **Exam dialect:** [[Cambridge Pseudocode]] — `OPENFILE`, `READFILE`, `WRITEFILE`, `EOF`, `CLOSEFILE`, and the undefined `FILE` type.
 
 ---

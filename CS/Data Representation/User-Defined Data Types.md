@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[Linked List]]"
   - "[[Object-Oriented Programming]]"
+  - "[[Relational Databases]]"
 tags:
   - subject/computer-science
   - domain/data-representation

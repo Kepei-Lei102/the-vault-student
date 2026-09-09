@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 900 470" font-family="Helvetica, Arial, sans-serif">
+<text x="450" y="24" text-anchor="middle" font-size="15" fill="#888">Birds (June 2023 Paper 11): two one-to-many relationships, each carried by a foreign key</text>
+<rect x="40" y="50" width="220" height="110" rx="6" fill="rgba(37,99,235,0.12)" stroke="rgb(37,99,235)" stroke-width="1.5"/>
+<text x="150.0" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">BIRD_TYPE</text>
+<line x1="40" y1="78" x2="260" y2="78" stroke="rgb(37,99,235)" stroke-width="1"/>
+<text x="50" y="96" font-size="12" fill="#888">PK <tspan font-weight="bold" text-decoration="underline">BirdID</tspan></text>
+<text x="50" y="114" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Name</tspan></text>
+<text x="50" y="132" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Size</tspan></text>
+<rect x="340" y="50" width="220" height="146" rx="6" fill="rgba(124,58,237,0.12)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+<text x="450.0" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">BIRD_SEEN</text>
+<line x1="340" y1="78" x2="560" y2="78" stroke="rgb(124,58,237)" stroke-width="1"/>
+<text x="350" y="96" font-size="12" fill="#888">PK <tspan font-weight="bold" text-decoration="underline">SeenID</tspan></text>
+<text x="350" y="114" font-size="12" fill="#888">FK <tspan font-weight="bold" text-decoration="none">BirdID</tspan></text>
+<text x="350" y="132" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Date</tspan></text>
+<text x="350" y="150" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Location</tspan></text>
+<text x="350" y="168" font-size="12" fill="#888">FK <tspan font-weight="bold" text-decoration="none">PersonID</tspan></text>
+<rect x="640" y="50" width="220" height="128" rx="6" fill="rgba(8,145,178,0.12)" stroke="rgb(8,145,178)" stroke-width="1.5"/>
+<text x="750.0" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">PERSON</text>
+<line x1="640" y1="78" x2="860" y2="78" stroke="rgb(8,145,178)" stroke-width="1"/>
+<text x="650" y="96" font-size="12" fill="#888">PK <tspan font-weight="bold" text-decoration="underline">PersonID</tspan></text>
+<text x="650" y="114" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">FirstName</tspan></text>
+<text x="650" y="132" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">LastName</tspan></text>
+<text x="650" y="150" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">EmailAddress</tspan></text>
+<line x1="260" y1="105" x2="340" y2="105" stroke="#888" stroke-width="1.5"/>
+<line x1="268" y1="97" x2="268" y2="113" stroke="#888" stroke-width="1.5"/>
+<path d="M328,105 L340,97 M328,105 L340,105 M328,105 L340,113" stroke="#888" stroke-width="1.5" fill="none"/>
+<line x1="560" y1="105" x2="640" y2="105" stroke="#888" stroke-width="1.5"/>
+<path d="M572,105 L560,97 M572,105 L560,105 M572,105 L560,113" stroke="#888" stroke-width="1.5" fill="none"/>
+<line x1="632" y1="97" x2="632" y2="113" stroke="#888" stroke-width="1.5"/>
+<text x="300" y="92" text-anchor="middle" font-size="11" fill="#888">1 : M</text>
+<text x="600" y="92" text-anchor="middle" font-size="11" fill="#888">M : 1</text>
+<text x="450" y="228" text-anchor="middle" font-size="12" fill="#888">one bird type is seen many times · one person makes many sightings · the foreign keys live on the many side</text>
+<text x="450" y="272" text-anchor="middle" font-size="15" fill="#888">PLANTSALES (Nov 2021 Paper 12): a many-to-many broken into two one-to-manys by a link table</text>
+<rect x="40" y="295" width="200" height="100" rx="6" fill="rgba(5,150,105,0.12)" stroke="rgb(5,150,105)" stroke-width="1.5"/>
+<text x="140.0" y="315" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">PLANT</text>
+<line x1="40" y1="323" x2="240" y2="323" stroke="rgb(5,150,105)" stroke-width="1"/>
+<text x="50" y="341" font-size="12" fill="#888">PK <tspan font-weight="bold" text-decoration="underline">PlantName</tspan></text>
+<text x="50" y="359" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">QuantityInStock</tspan></text>
+<text x="50" y="377" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Cost</tspan></text>
+<rect x="340" y="295" width="220" height="96" rx="6" fill="rgba(124,58,237,0.12)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+<text x="450.0" y="315" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">PURCHASE_ITEM</text>
+<line x1="340" y1="323" x2="560" y2="323" stroke="rgb(124,58,237)" stroke-width="1"/>
+<text x="350" y="341" font-size="12" fill="#888">FK <tspan font-weight="bold" text-decoration="none">PurchaseID</tspan></text>
+<text x="350" y="359" font-size="12" fill="#888">FK <tspan font-weight="bold" text-decoration="none">PlantName</tspan></text>
+<text x="350" y="377" font-size="12" fill="#888"><tspan font-weight="normal" text-decoration="none">Quantity</tspan></text>
+<rect x="660" y="295" width="200" height="84" rx="6" fill="rgba(37,99,235,0.12)" stroke="rgb(37,99,235)" stroke-width="1.5"/>
+<text x="760.0" y="315" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">PURCHASE</text>
+<line x1="660" y1="323" x2="860" y2="323" stroke="rgb(37,99,235)" stroke-width="1"/>
+<text x="670" y="341" font-size="12" fill="#888">PK <tspan font-weight="bold" text-decoration="underline">PurchaseID</tspan></text>
+<text x="670" y="359" font-size="12" fill="#888">FK <tspan font-weight="bold" text-decoration="none">CustomerID</tspan></text>
+<line x1="240" y1="345" x2="340" y2="345" stroke="#888" stroke-width="1.5"/>
+<line x1="248" y1="337" x2="248" y2="353" stroke="#888" stroke-width="1.5"/>
+<path d="M328,345 L340,337 M328,345 L340,345 M328,345 L340,353" stroke="#888" stroke-width="1.5" fill="none"/>
+<line x1="560" y1="345" x2="660" y2="345" stroke="#888" stroke-width="1.5"/>
+<path d="M572,345 L560,337 M572,345 L560,345 M572,345 L560,353" stroke="#888" stroke-width="1.5" fill="none"/>
+<line x1="652" y1="337" x2="652" y2="353" stroke="#888" stroke-width="1.5"/>
+<text x="450" y="420" text-anchor="middle" font-size="12" fill="#888">PURCHASE_ITEM has a composite primary key (PurchaseID, PlantName) — both halves are foreign keys</text>
+<text x="450" y="446" text-anchor="middle" font-size="12" fill="#888">a purchase holds many plants; a plant appears in many purchases; no table can say that alone, so a third one does</text>
+</svg>

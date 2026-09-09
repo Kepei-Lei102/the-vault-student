@@ -20,6 +20,13 @@ tags:
   - curriculum/IB-AA
   - curriculum/AP
   - syllabus/0606-2-5
+  - syllabus/9709-1-1
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/IAL-P1-1-7
+  - syllabus/IAL-P1-1-9
+  - syllabus/IAL-FP2-1-1
   - type/deep
   - type/technique
   - misconception/inequality-direction-by-leading-coeff
@@ -226,12 +233,22 @@ This is why the same 0606 paper that asks "find the value of $k$ for which $f(x)
 > [!tip] State both pieces of the "always positive" condition
 > 0606 markschemes typically award separate marks for: (i) noticing $a > 0$ (the parabola opens upward), and (ii) requiring $\Delta < 0$ (the parabola misses the $x$-axis). Forgetting either loses marks even with the right final answer.
 
-### A-Level / 9709 / IB AA / AP
+### Cambridge 9709 — Paper 1 quadratics
 
-A-Level extends to:
-- **Inequality manipulations involving fractions** — "$\dfrac{x-1}{x+2} > 1$" requires multiplying by $(x+2)^2$ (always positive) to clear the denominator without inequality flips.
-- **Modulus inequalities** — solved via squaring (both sides) when both sides are non-negative; otherwise via case-split. See [[Modulus Function]].
-- **Two-variable inequalities** ($ax^2 + bxy + cy^2 > 0$ for all $(x, y)$) — the *positive-definite quadratic form* test, requiring both $a > 0$ AND $b^2 - 4ac < 0$. This is the doorway to multivariable optimisation and matrix algebra (eigenvalues of a symmetric matrix).
+- "Solve quadratic equations, **and quadratic inequalities**, in one unknown" is a named bullet of the P1 quadratics LO. Patterns A and B above are the whole of it — and pattern B (the discriminant condition for *always positive* / *no real roots*) is the one that recurs, usually as "find the set of values of $k$ for which…". State both halves ($a > 0$ and $\Delta < 0$) as at 0606.
+
+### Edexcel IAL — P1.1.7, P1.1.9 and FP2.1.1
+
+- **P1.1.9** solutions of linear and quadratic inequalities; **P1.1.7** their *graphical* interpretation — shading the region above or below a parabola, and reading a solution set off a sketch. Set-notation answers are expected: $\{x : x < 3\} \cup \{x : x > 4\}$.
+- **FP2.1.1** is the Further-level extension — *manipulation and solution of algebraic inequalities*: those with fractions, where multiplying by $(x + 2)^2$ (always positive) clears a denominator without flipping the sign, and those with a modulus, solved by squaring both non-negative sides or by a case split ([[Modulus Function]]).
+
+### OxfordAQA 9660 — P1.1
+
+- Linear and quadratic inequalities together in the opening pure row; the sign chart or a sketch, and the answer as an interval.
+
+### Beyond these boards
+
+- **Two-variable inequalities** ($ax^2 + bxy + cy^2 > 0$ for all $(x, y)$) — the *positive-definite quadratic form* test, requiring both $a > 0$ and $b^2 - 4ac < 0$: the doorway to multivariable optimisation and to the eigenvalues of a symmetric matrix. IB AA HL and AP meet the one-variable case as a tool inside calculus questions, never as a topic.
 
 ---
 

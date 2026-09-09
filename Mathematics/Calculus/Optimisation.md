@@ -20,9 +20,15 @@ tags:
   - curriculum/Cambridge-0606
   - curriculum/A-Level
   - curriculum/IB-AA
-  - curriculum/AP
+  - curriculum/AP-Calculus-BC
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - syllabus/0606-14-8
   - syllabus/0606-14-9
+  - syllabus/IAL-P2-7-1
+  - syllabus/AP-BC-5-10
+  - syllabus/AP-BC-5-11
   - type/deep
   - type/technique
   - type/application
@@ -265,15 +271,35 @@ $$A(y) = (200 - 2y) \cdot y = 200y - 2y^2.$$
 > [!tip] 0606 markscheme is generous on classification — use the second derivative test
 > Cambridge gives 1 mark for "use of $f''$ to confirm max/min" even if the rest of the problem is tightly scored. Don't skip step 4: it's a free mark, and it's the step that proves you understood the question. The first-derivative-sign chart works too but is more verbose; $f''$ is faster.
 
-### A-Level / IB AA / AP Calculus
+### Cambridge 9709 — P1 §1.7
 
-A-Level extends the same framework to:
+The LO wording is *locate stationary points and determine their nature* (second derivative "for identifying maxima and minima; alternatives may be used"; points of inflexion excluded) — the board's own row is credited to [[Stationary Points]]. Practical maximum/minimum questions appear on P1 under that LO in the 0606 Pattern A shape (a wire bent into a shape, a box from a sheet, a cylinder in a cone), usually 5–7 marks: set up the single-variable objective from a constraint, differentiate, solve, *and classify* — the classification mark is the one most often dropped.
 
-- **Constrained optimisation in 2 variables** via *Lagrange multipliers* (A-Level Further, IB AA HL, AP BC) — the partial-derivative generalisation when you can't easily eliminate a variable.
-- **Optimisation under inequality constraints** — the KKT conditions, foundational for linear programming and convex optimisation.
-- **Implicit-function optimisation** — when the objective and constraint can't be solved for one variable explicitly; differentiate implicitly and solve the system.
+### Edexcel IAL — P2 §7.1
 
-AP Calculus AB/BC: identical 0606 framework, plus careful insistence on the *closed-interval method* (cashes the [[Extreme Value Theorem]]) for absolute max/min questions.
+*Maxima, minima, stationary points, increasing/decreasing functions* — the practical optimisation questions sit here, worded as "show that the volume is given by …" (an M-mark for the constraint substitution) followed by "find the maximum value" and "justify that it is a maximum". The *show that* half is where working must be complete: the printed target is the check, not the answer.
+
+### OxfordAQA 9660 — P1 §1.3
+
+*Tangents, normals, max/min, increasing/decreasing* — same shape as IAL; the classification is routinely one mark for a second-derivative sign or a first-derivative sign table.
+
+### AP Calculus AB/BC — Units 5.10–5.11
+
+*Optimization problems* is a named unit; the framework is identical to 0606, plus the board's insistence on the **closed-interval method** for absolute extrema (candidates + endpoints, then compare — Unit 5.2's [[Extreme Value Theorem]] cashed). Free-response optimisation questions ask for the *justification* explicitly ("justify that this gives the maximum") and award it separately.
+
+### IB Analysis and Approaches
+
+Optimisation is a stated SL objective in the differential-calculus topic, taught with the second-derivative test; HL adds nothing structural. Paper 2 questions are typically calculator-supported, so the derivative may be found by GDC but the *setup* from a constraint must be shown.
+
+### Beyond high school
+
+Constrained optimisation in two or more variables — Lagrange multipliers, the KKT conditions behind linear and convex programming, implicit-function optimisation when the constraint cannot be solved for one variable — is first-year university and is developed in the Beyond section below.
+
+### Not examined on…
+
+- **0580 IGCSE Extended** — differentiation reaches maxima and minima of a given function ([[Stationary Points]], §E2.12) but no practical optimisation word problems.
+- **9231 Further Mathematics** — no optimisation row; the topic is assumed from 9709.
+- **Physics and CS boards** — none; the nearest physics use is the minimum-time and least-action arguments in [[Fun Is the Brachistochrone]]'s parent mathematics.
 
 ---
 

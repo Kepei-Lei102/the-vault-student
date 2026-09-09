@@ -23,6 +23,10 @@ tags:
   - curriculum/Cambridge-0580
   - syllabus/9260-A16
   - syllabus/0580-E2-11
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/IAL-P1-1-3
+  - syllabus/IAL-P1-1-11
   - type/vocabulary
 ---
 
@@ -89,13 +93,21 @@ On an exam, "sketch" almost always means: draw the correct shape, label the inte
 
 ## Exam Notes
 
-### OxAQA 9260
+### OxfordAQA 9260 — A16
 
-**A16** — Sketch quadratic curves; identify roots, $y$-intercept, and turning point from the equation. Expect a prompt like "Sketch $y = x^2 - 4x + 3$, showing the coordinates of the turning point and any points where the curve meets the axes."
+Sketch quadratic curves; identify roots, $y$-intercept and turning point from the equation. Expect a prompt like "Sketch $y = x^2 - 4x + 3$, showing the coordinates of the turning point and any points where the curve meets the axes."
 
-### Cambridge 0580 Extended
+### Cambridge 0580 Extended — E2.11
 
-**E2.11** — Sketch familiar functions: linear, quadratic, cubic, reciprocal $(k/x)$, exponential $(a^x)$. Usually a 2–3 mark question: one mark for correct shape, one for intercepts, one for asymptotes (if any).
+Sketch familiar functions: linear, quadratic, cubic, reciprocal ($k/x$), exponential ($a^x$). Usually a 2–3 mark question: one mark for correct shape, one for intercepts, one for asymptotes (if any).
+
+### Edexcel IAL — P1.1.3 and P1.1.11 · OxfordAQA 9660 — P1.1 and P1.2
+
+- The A-Level version adds three things to the IGCSE sketch. **Completed-square form** gives the vertex and line of symmetry directly (IAL P1.1.3; 9660 P1.1 names *vertex, line of symmetry* outright). **Cubics and reciprocals** are sketched from their factors and asymptotes (IAL P1.1.11). And the sketch is used *geometrically*: the intersection of a line and a curve is the simultaneous-equations question in a picture, and *tangent* means the discriminant is zero (9660 P1.1, P1.2). [[Cubic Graphs]] and [[Graphs of Functions]] carry the fuller treatments; this card is the sketching habit itself.
+
+### Not examined on…
+
+- **Cambridge 0606** files sketching under the individual function rows (quadratics, cubics, modulus, trig) rather than as a skill of its own; **AP Calculus** expects it as prerequisite and never sets it.
 
 ## Connections
 

@@ -1,0 +1,65 @@
+<svg width="100%" viewBox="0 0 620 640" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/></marker></defs>
+  <!-- the world -->
+  <text x="310" y="26" text-anchor="middle" font-size="14" fill="#888" font-weight="bold">the world</text>
+  <text x="310" y="43" text-anchor="middle" font-size="10.5" fill="#888">what people say · what the paper shows · what the mark scheme says</text>
+  <g font-size="10.5">
+    <rect x="20" y="62" width="180" height="26" rx="5" fill="rgba(5,150,105,0.18)" stroke="#059669"/>
+    <text x="110" y="79" text-anchor="middle" fill="#888">"nice work on the proof"</text>
+    <rect x="220" y="62" width="180" height="26" rx="5" fill="rgba(5,150,105,0.18)" stroke="#059669"/>
+    <text x="310" y="79" text-anchor="middle" fill="#888">a fact that fits what I think</text>
+    <rect x="420" y="62" width="180" height="26" rx="5" fill="rgba(220,38,38,0.18)" stroke="#dc2626"/>
+    <text x="510" y="79" text-anchor="middle" fill="#888">"you misread the question"</text>
+    <rect x="120" y="100" width="180" height="26" rx="5" fill="rgba(220,38,38,0.18)" stroke="#dc2626"/>
+    <text x="210" y="117" text-anchor="middle" fill="#888">the talk's real thesis: restraint</text>
+    <rect x="320" y="100" width="180" height="26" rx="5" fill="rgba(220,38,38,0.18)" stroke="#dc2626"/>
+    <text x="410" y="117" text-anchor="middle" fill="#888">"wash your hands" (1847)</text>
+  </g>
+  <!-- arrows down into the filter -->
+  <g stroke="#888" stroke-width="1.2" fill="none">
+    <path d="M110 90 L280 210"/>
+    <path d="M310 90 L305 210"/>
+    <path d="M510 90 L335 210"/>
+    <path d="M210 128 L295 212"/>
+    <path d="M410 128 L322 212"/>
+  </g>
+  <!-- the filter -->
+  <ellipse cx="310" cy="270" rx="78" ry="52" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="310" y="262" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">the ego</text>
+  <text x="310" y="280" text-anchor="middle" font-size="10.5" fill="#888">"does this fit who I am?"</text>
+  <text x="310" y="294" text-anchor="middle" font-size="9.5" fill="#888">filters at read time, not just at write time</text>
+  <!-- passed: to working memory (right-down) -->
+  <g stroke="#059669" stroke-width="1.5" fill="none">
+    <path d="M370 300 L440 380"/>
+    <path d="M378 290 L460 372"/>
+  </g>
+  <!-- dropped: falling left-down -->
+  <g stroke="#dc2626" stroke-width="1.5" fill="none" stroke-dasharray="4 3">
+    <path d="M262 310 L150 420"/>
+    <path d="M250 300 L120 410"/>
+    <path d="M240 288 L95 398"/>
+  </g>
+  <text x="120" y="445" text-anchor="middle" font-size="11" fill="#888">dropped — and these were the</text>
+  <text x="120" y="460" text-anchor="middle" font-size="11" fill="#888" font-weight="bold">highest-value packets in the stream</text>
+  <!-- working memory -->
+  <text x="470" y="395" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">working memory</text>
+  <text x="470" y="410" text-anchor="middle" font-size="9.5" fill="#888">about four chunks, gone in twenty seconds</text>
+  <g stroke="#2563eb" stroke-width="1.5" fill="rgba(37,99,235,0.12)">
+    <rect x="352" y="420" width="54" height="40" rx="4"/>
+    <rect x="412" y="420" width="54" height="40" rx="4"/>
+    <rect x="472" y="420" width="54" height="40" rx="4"/>
+    <rect x="532" y="420" width="54" height="40" rx="4"/>
+  </g>
+  <text x="379" y="444" text-anchor="middle" font-size="10" fill="#888">praise</text>
+  <text x="439" y="444" text-anchor="middle" font-size="10" fill="#888">fits</text>
+  <text x="499" y="444" text-anchor="middle" font-size="10" fill="#888">—</text>
+  <text x="559" y="444" text-anchor="middle" font-size="10" fill="#888">—</text>
+  <!-- external memory -->
+  <rect x="60" y="520" width="500" height="88" rx="6" fill="rgba(245,158,11,0.14)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="310" y="546" text-anchor="middle" font-size="12.5" fill="#888" font-weight="bold">external memory — notes, this vault</text>
+  <text x="310" y="566" text-anchor="middle" font-size="10.5" fill="#888">a misconception callout is a dropped packet pinned on the page,</text>
+  <text x="310" y="581" text-anchor="middle" font-size="10.5" fill="#888">where the filter cannot lose it and the four slots need not hold it</text>
+  <path d="M120 468 C 130 495, 160 512, 200 520" stroke="#f59e0b" stroke-width="1.4" fill="none" marker-end="url(#a)"/>
+  <path d="M470 464 C 470 490, 450 508, 420 520" stroke="#2563eb" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
+  <text x="520" y="500" text-anchor="middle" font-size="9" fill="#888">spills over</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 420" font-family="Helvetica, Arial, sans-serif">
+<text x="480" y="22" text-anchor="middle" font-size="15" fill="#888">The same fact — Mei, in Chengdu, ordered roses — in the four non-relational shapes</text>
+<rect x="20" y="40" width="220" height="340" rx="8" fill="rgba(37,99,235,0.10)" stroke="rgb(37,99,235)" stroke-width="1.5"/>
+<text x="130" y="64" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Key–value</text>
+<text x="130" y="82" text-anchor="middle" font-size="11" fill="#888">Redis · DynamoDB</text>
+<text x="32" y="108" font-size="11" fill="#888" font-family="Menlo, monospace">user:C1 → "Mei"</text>
+<text x="32" y="125" font-size="11" fill="#888" font-family="Menlo, monospace">cart:C1 → [rose, rose,</text>
+<text x="32" y="142" font-size="11" fill="#888" font-family="Menlo, monospace">          rose]</text>
+<text x="32" y="159" font-size="11" fill="#888" font-family="Menlo, monospace">session:9f3 → {...}</text>
+<text x="32" y="176" font-size="11" fill="#888" font-family="Menlo, monospace"></text>
+<text x="32" y="193" font-size="11" fill="#888" font-family="Menlo, monospace">one key, one blob;</text>
+<text x="32" y="210" font-size="11" fill="#888" font-family="Menlo, monospace">no query but GET/SET;</text>
+<text x="32" y="227" font-size="11" fill="#888" font-family="Menlo, monospace">microseconds, in RAM</text>
+<rect x="260" y="40" width="220" height="340" rx="8" fill="rgba(124,58,237,0.10)" stroke="rgb(124,58,237)" stroke-width="1.5"/>
+<text x="370" y="64" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Document</text>
+<text x="370" y="82" text-anchor="middle" font-size="11" fill="#888">MongoDB · CouchDB</text>
+<text x="272" y="108" font-size="11" fill="#888" font-family="Menlo, monospace">{ _id: "C1",</text>
+<text x="272" y="125" font-size="11" fill="#888" font-family="Menlo, monospace">  name: "Mei",</text>
+<text x="272" y="142" font-size="11" fill="#888" font-family="Menlo, monospace">  city: "Chengdu",</text>
+<text x="272" y="159" font-size="11" fill="#888" font-family="Menlo, monospace">  orders: [</text>
+<text x="272" y="176" font-size="11" fill="#888" font-family="Menlo, monospace">    {plant:"Rose",qty:3},</text>
+<text x="272" y="193" font-size="11" fill="#888" font-family="Menlo, monospace">    {plant:"Lavender",</text>
+<text x="272" y="210" font-size="11" fill="#888" font-family="Menlo, monospace">     qty:10} ] }</text>
+<text x="272" y="227" font-size="11" fill="#888" font-family="Menlo, monospace"></text>
+<text x="272" y="244" font-size="11" fill="#888" font-family="Menlo, monospace">the whole order in one</text>
+<text x="272" y="261" font-size="11" fill="#888" font-family="Menlo, monospace">JSON — no join needed</text>
+<rect x="500" y="40" width="220" height="340" rx="8" fill="rgba(8,145,178,0.10)" stroke="rgb(8,145,178)" stroke-width="1.5"/>
+<text x="610" y="64" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Wide-column</text>
+<text x="610" y="82" text-anchor="middle" font-size="11" fill="#888">Cassandra · Bigtable · HBase</text>
+<text x="512" y="108" font-size="11" fill="#888" font-family="Menlo, monospace">row key: C1</text>
+<text x="512" y="125" font-size="11" fill="#888" font-family="Menlo, monospace">  name      → Mei</text>
+<text x="512" y="142" font-size="11" fill="#888" font-family="Menlo, monospace">  city      → Chengdu</text>
+<text x="512" y="159" font-size="11" fill="#888" font-family="Menlo, monospace">  ord:1001  → Rose×3</text>
+<text x="512" y="176" font-size="11" fill="#888" font-family="Menlo, monospace">  ord:1001b → Lav×10</text>
+<text x="512" y="193" font-size="11" fill="#888" font-family="Menlo, monospace">  ord:1002  → Fern×1</text>
+<text x="512" y="210" font-size="11" fill="#888" font-family="Menlo, monospace"></text>
+<text x="512" y="227" font-size="11" fill="#888" font-family="Menlo, monospace">columns per row vary;</text>
+<text x="512" y="244" font-size="11" fill="#888" font-family="Menlo, monospace">sorted by key; split</text>
+<text x="512" y="261" font-size="11" fill="#888" font-family="Menlo, monospace">across many machines</text>
+<rect x="740" y="40" width="220" height="340" rx="8" fill="rgba(5,150,105,0.10)" stroke="rgb(5,150,105)" stroke-width="1.5"/>
+<text x="850" y="64" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Graph</text>
+<text x="850" y="82" text-anchor="middle" font-size="11" fill="#888">Neo4j · Neptune</text>
+<text x="752" y="108" font-size="11" fill="#888" font-family="Menlo, monospace">(Mei)-[:LIVES_IN]->(Chengdu)</text>
+<text x="752" y="125" font-size="11" fill="#888" font-family="Menlo, monospace">(Mei)-[:ORDERED {qty:3}]</text>
+<text x="752" y="142" font-size="11" fill="#888" font-family="Menlo, monospace">      ->(Rose)</text>
+<text x="752" y="159" font-size="11" fill="#888" font-family="Menlo, monospace">(Ana)-[:ORDERED]->(Rose)</text>
+<text x="752" y="176" font-size="11" fill="#888" font-family="Menlo, monospace"></text>
+<text x="752" y="193" font-size="11" fill="#888" font-family="Menlo, monospace"></text>
+<text x="752" y="210" font-size="11" fill="#888" font-family="Menlo, monospace">the relationships are</text>
+<text x="752" y="227" font-size="11" fill="#888" font-family="Menlo, monospace">the data; "friends of</text>
+<text x="752" y="244" font-size="11" fill="#888" font-family="Menlo, monospace">friends who bought roses"</text>
+<text x="752" y="261" font-size="11" fill="#888" font-family="Menlo, monospace">is one hop, not a join</text>
+<text x="480" y="404" text-anchor="middle" font-size="12" fill="#888">relational keeps one copy of each fact and joins at read time; every family here trades that for a shape the read wants ready-made</text>
+</svg>

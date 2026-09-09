@@ -1,0 +1,23 @@
+<svg width="100%" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <text x="450" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">No scheme shrinks everything: there are more files than there are shorter files to put them in</text>
+  <!-- left: all files of length n -->
+  <text x="220" y="70" text-anchor="middle" fill="#888" font-weight="bold">every possible file of n bits</text>
+  <text x="220" y="90" text-anchor="middle" fill="#888" font-size="13">2ⁿ of them</text>
+  <g fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.2">
+    <rect x="120" y="110" width="200" height="22"/><rect x="120" y="138" width="200" height="22"/><rect x="120" y="166" width="200" height="22"/><rect x="120" y="194" width="200" height="22"/><rect x="120" y="222" width="200" height="22"/><rect x="120" y="250" width="200" height="22"/><rect x="120" y="278" width="200" height="22"/><rect x="120" y="306" width="200" height="22"/>
+  </g>
+  <text x="220" y="126" text-anchor="middle" fill="#888" font-size="11">0000…</text><text x="220" y="322" text-anchor="middle" fill="#888" font-size="11">1111…</text>
+  <!-- right: all shorter files -->
+  <text x="680" y="70" text-anchor="middle" fill="#888" font-weight="bold">every possible SHORTER file</text>
+  <text x="680" y="90" text-anchor="middle" fill="#888" font-size="13">1 + 2 + 4 + … + 2ⁿ⁻¹ = 2ⁿ − 1 of them</text>
+  <g fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.2">
+    <rect x="600" y="110" width="160" height="22"/><rect x="600" y="138" width="160" height="22"/><rect x="600" y="166" width="160" height="22"/><rect x="600" y="194" width="160" height="22"/><rect x="600" y="222" width="160" height="22"/><rect x="600" y="250" width="160" height="22"/><rect x="600" y="278" width="160" height="22"/>
+  </g>
+  <rect x="600" y="306" width="160" height="22" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/><text x="680" y="322" text-anchor="middle" fill="#dc2626" font-size="11">one short of enough</text>
+  <!-- arrows -->
+  <g stroke="#888" stroke-width="1.2" fill="none">
+    <path d="M322 121 L598 121"/><path d="M322 149 L598 149"/><path d="M322 177 L598 177"/><path d="M322 205 L598 205"/><path d="M322 233 L598 233"/><path d="M322 261 L598 261"/><path d="M322 289 L598 289"/>
+  </g>
+  <path d="M322 317 L598 317" stroke="#dc2626" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  <text x="460" y="345" text-anchor="middle" fill="#888" font-size="13">a lossless compressor is a one-to-one map, so at least one file must come out no shorter — and for most files, longer</text>
+</svg>

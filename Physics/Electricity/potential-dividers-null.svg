@@ -1,0 +1,33 @@
+<svg width="100%" viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <text x="450" y="28" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">The potentiometer as a comparator: a null method measures an e.m.f. without drawing current from it</text>
+  <g stroke="#888" stroke-width="2.5" fill="none">
+    <path d="M150 70 L150 200"/><path d="M150 70 L750 70"/><path d="M750 70 L750 200"/>
+  </g>
+  <!-- driver cell in the top wire -->
+  <line x1="430" y1="55" x2="430" y2="85" stroke="#888" stroke-width="4"/><line x1="450" y1="62" x2="450" y2="78" stroke="#888" stroke-width="2.5"/><rect x="432" y="60" width="16" height="20" fill="#1e1e1e" fill-opacity="0"/>
+  <line x1="150" y1="70" x2="428" y2="70" stroke="#888" stroke-width="2.5"/><line x1="452" y1="70" x2="750" y2="70" stroke="#888" stroke-width="2.5"/>
+  <rect x="428" y="62" width="24" height="16" fill="rgba(30,30,30,0)" stroke="none"/>
+  <text x="440" y="45" text-anchor="middle" fill="#888">driver cell, e.m.f. E₀ = 1.2 V — its + on the left, so the wire's A end is the high end</text><text x="416" y="64" fill="#888" font-size="13">+</text><text x="460" y="64" fill="#888" font-size="13">−</text>
+  <!-- uniform wire AB -->
+  <rect x="150" y="196" width="600" height="8" fill="rgba(136,136,136,0.2)" stroke="#888" stroke-width="1.5"/>
+  <text x="140" y="215" text-anchor="end" fill="#888">A</text><text x="760" y="215" fill="#888">B</text>
+  <text x="450" y="228" text-anchor="middle" fill="#888" font-size="13">uniform resistance wire, length L = 150 cm — the p.d. per centimetre is the same everywhere</text>
+  <!-- cell X and galvanometer below -->
+  <path d="M150 200 L150 290 L300 290" stroke="#7c3aed" stroke-width="2.5" fill="none"/>
+  <line x1="300" y1="275" x2="300" y2="305" stroke="#7c3aed" stroke-width="4"/><line x1="320" y1="282" x2="320" y2="298" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="250" y="325" text-anchor="middle" fill="#7c3aed">cell X, unknown e.m.f. E — its + also on the left</text><text x="290" y="270" fill="#7c3aed" font-size="12">+</text><text x="326" y="270" fill="#7c3aed" font-size="12">−</text>
+  <path d="M320 290 L358 290" stroke="#7c3aed" stroke-width="2.5" fill="none"/>
+  <circle cx="380" cy="290" r="22" fill="none" stroke="#7c3aed" stroke-width="2.5"/><text x="380" y="296" text-anchor="middle" fill="#7c3aed" font-size="15">G</text>
+  <path d="M477 290 L406 290" stroke="none"/>
+  <!-- jockey from G to the wire at C -->
+  <path d="M477 290 L406 290" stroke="none"/>
+  <path d="M402 290 L406 206" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#j)"/>
+  <text x="406" y="185" text-anchor="middle" fill="#f59e0b" font-weight="bold">C — the null point, AC = 64 cm</text>
+  <text x="450" y="105" text-anchor="middle" fill="#888" font-size="13">slide the jockey until G reads zero: then the p.d. across AC exactly balances E,</text>
+  <text x="450" y="124" text-anchor="middle" fill="#888" font-size="13">no current flows through cell X, its internal resistance drops nothing,</text>
+  <text x="450" y="143" text-anchor="middle" fill="#888" font-size="13">and the reading is the true e.m.f. — two sources back to back, cancelling:</text>
+  <text x="450" y="166" text-anchor="middle" fill="#f59e0b" font-size="15" font-weight="bold">E = E₀ · AC / AB = 1.2 V × 64 / 150 = 0.51 V</text>
+  <defs><marker id="j" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/></marker></defs>
+  <text x="640" y="282" text-anchor="middle" fill="#888" font-size="12.5">in the lower loop the two cells push against each other; G reads their difference</text><text x="640" y="300" text-anchor="middle" fill="#888" font-size="12.5">if the DRIVER cell has internal resistance, the p.d. across AB</text>
+  <text x="640" y="318" text-anchor="middle" fill="#888" font-size="12.5">is less than E₀, each centimetre carries less, and C moves right</text>
+</svg>

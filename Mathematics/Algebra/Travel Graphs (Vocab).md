@@ -21,6 +21,13 @@ tags:
   - syllabus/0625-1-2
   - syllabus/9702-2-1
   - syllabus/9260-A17
+  - curriculum/Cambridge-0606
+  - curriculum/Cambridge-9709
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
+  - syllabus/0606-14-15
+  - syllabus/9709-4-2
+  - syllabus/IAL-M1-3-1
   - type/vocabulary
   - type/application
   - misconception/horizontal-on-dt-vs-st
@@ -141,7 +148,13 @@ The whole story comes from gradients alone.
 
 **Cambridge 0580 §E2.9.** Read information off a travel graph. Compute speed (or acceleration) as a gradient between two named points. Identify segments where the object is stationary, accelerating, or moving at constant speed. Convert between units (km/h ↔ m/s; the factor is $\div 3.6$). Sketch a journey from a verbal description.
 
-**Forward to A-Level / IB / AP.** The graph-reading instincts you build here become *literal* derivatives and integrals at calculus level — see [[Kinematics Calculus]]. The "gradient = speed" intuition becomes $v = \dfrac{ds}{dt}$, and "area = distance" becomes $s = \int v \, dt$. Travel graphs are the visual prerequisite for the whole calculus-of-motion story.
+**OxfordAQA 9260 §A17 (graphs in real contexts).** The core bullet is this card — plot and interpret distance–time and speed–time graphs, and solve kinematic problems (distance, speed, acceleration) from them. The **Extension** bullet — estimate gradients of curves and areas under non-linear graphs — is [[Area Under a Graph (Vocab)]]: tangent for an instantaneous speed, trapezium strips for a distance.
+
+**Cambridge 0606 §14.15, 9709 §4.2 (Paper 4), Edexcel IAL M1.3.1, OxfordAQA 9660 M1.1.** Every mechanics paper opens on the same three graphs — $s$–$t$, $v$–$t$, $a$–$t$ — and marks the same two readings: gradient of $s$–$t$ is velocity, gradient of $v$–$t$ is acceleration, area under $v$–$t$ is displacement. The step up from IGCSE is *sign*: a velocity–time graph below the axis is motion the other way, and area below the axis subtracts. [[SUVAT]] carries the constant-acceleration algebra those graphs feed; [[Kinematics Calculus]] the general case.
+
+**Physics — Cambridge 0625 §1.2, 9702 §2.1.** The same readings in the physics boards' words: *speed–time graphs, deceleration, free fall* (0625 Core), and *graph methods* named outright in 9702 §2.1 (area under $v$–$t$ = displacement; gradients as velocity and acceleration). The physics papers add the qualitative case — a curve of decreasing gradient is a falling body reaching terminal velocity.
+
+**Not examined on…** Cambridge 9231 (assumed from 9709) and AP Calculus (assumed; its motion questions are [[Kinematics Calculus]] outright).
 
 ---
 

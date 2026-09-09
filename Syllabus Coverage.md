@@ -10,21 +10,23 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-02` · built 2026-09-03 from commit `703a92d` + uncommitted changes  
-> 369 cards · 479 diagrams · 85 explainers · 109 illustrations
+> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
+> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
 
 ---
 
 ## Cambridge IGCSE 0478 Computer Science
 
-*22 syllabus points · 36 card references*
+*27 syllabus points · 41 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.1 | [[Bitwise Operations]], [[Number Bases]], [[Overflow and Underflow]], [[Two's Complement]] |
 | 1.2 | [[Image Encoding]], [[Sound Encoding]], [[Text Encoding]] |
 | 1.3 | [[Compression]], [[Storage Units (Vocab)]] |
+| 2.1 | [[Networks]] |
 | 2.2 | [[Error Detection and Correction]] |
+| 2.3 | [[Encryption]] |
 | 3 | [[Pipelining and Simultaneous Multithreading]] |
 | 3.1 | [[Assembly Language]], [[CPU Architecture and the Fetch-Execute Cycle]], [[Embedded Systems]], [[RAM and the Memory Hierarchy]], [[Von Neumann machine]] |
 | 3.2 | [[Input and Output Devices]], [[Sensors and Control Systems]] |
@@ -32,6 +34,7 @@ is often taught under a different heading.
 | 4.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 4.2 | [[Compilers and Interpreters]] |
 | 4.2.1 | [[Assembly Language]] |
+| 5.3 | [[Data Security]] |
 | 7.1 | [[Program Design]] |
 | 7.2 | [[Program Design]] |
 | 7.3 | [[Program Design]] |
@@ -39,6 +42,8 @@ is often taught under a different heading.
 | 7.9 | [[Program Design]] |
 | 8.2 | [[Arrays]] |
 | 8.3 | [[File Handling]] |
+| 9.1 | [[Relational Databases]] |
+| 9.2 | [[SQL]] |
 | 10.1 | [[Logic Gates]] |
 | 10.2 | [[Logic Gates]] |
 | 10.3 | [[Logic Gates]] |
@@ -125,7 +130,7 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0606 Additional Mathematics
 
-*67 syllabus points · 82 card references*
+*67 syllabus points · 83 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -195,11 +200,11 @@ is often taught under a different heading.
 | 14.12 | [[Integration]] |
 | 14.13 | [[Integration]] |
 | 14.14 | [[Kinematics Calculus]] |
-| 14.15 | [[Kinematics Calculus]] |
+| 14.15 | [[Kinematics Calculus]], [[Travel Graphs (Vocab)]] |
 
 ## Cambridge IGCSE 0625 Physics
 
-*14 syllabus points · 34 card references*
+*16 syllabus points · 37 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -215,6 +220,8 @@ is often taught under a different heading.
 | 1.7 | [[Work, Energy and Power]] |
 | 2.2 | [[Specific Heat Capacity]] |
 | 4.2 | [[Electric Current]], [[Resistance]] |
+| 4.3 | [[Kirchhoff's Laws]], [[Potential Dividers]] |
+| 4.4 | [[Potential Dividers]] |
 | 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]] |
 | 6.1 | [[Gravitational Fields]] |
 
@@ -355,7 +362,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*34 syllabus points · 68 card references*
+*41 syllabus points · 78 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -369,7 +376,11 @@ is often taught under a different heading.
 | 4.3 | [[Assembly Language]], [[Bitwise Operations]] |
 | 5.1 | [[Operating Systems]] |
 | 5.2 | [[Compilers and Interpreters]] |
-| 6.2 | [[Error Detection and Correction]] |
+| 6.1 | [[Data Security]] |
+| 6.2 | [[Data Security]], [[Error Detection and Correction]] |
+| 8.1 | [[Relational Databases]] |
+| 8.2 | [[Relational Databases]] |
+| 8.3 | [[Relational Databases]], [[SQL]] |
 | 9.1 | [[Program Design]] |
 | 9.2 | [[Program Design]] |
 | 10.1 | [[Arrays]], [[Cambridge Pseudocode]] |
@@ -383,20 +394,23 @@ is often taught under a different heading.
 | 13.1 | [[User-Defined Data Types]] |
 | 13.2 | [[Hash Tables]] |
 | 13.3 | [[Floating-Point Representation]] |
+| 14.1 | [[Networks]] |
+| 14.2 | [[Networks]] |
 | 15.1 | [[CISC vs RISC]], [[Operating Systems]], [[Pipelining and Simultaneous Multithreading]] |
 | 15.2 | [[Boolean Algebra]], [[Flip-Flops]], [[Half-Adder and Full-Adder]], [[Karnaugh Maps]], [[Logic Gates]] |
 | 16.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 16.2 | [[Compilers and Interpreters]] |
+| 17.1 | [[Encryption]] |
 | 18.1 | [[Graphs]] |
 | 19.1 | [[Big-O Notation]], [[Binary Trees]], [[Graphs]], [[Hash Tables]], [[Linked List]], [[Stacks and Queues]] |
 | 19.1a | [[Searching]] |
 | 19.1b | [[Sorting]] |
 | 19.2 | [[Recursion]] |
-| 20.1 | [[Assembly Language]] |
+| 20.1 | [[Assembly Language]], [[Object-Oriented Programming]] |
 
 ## Cambridge A-Level 9702 Physics
 
-*40 syllabus points · 57 card references*
+*43 syllabus points · 60 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -417,6 +431,9 @@ is often taught under a different heading.
 | 9.1 | [[Electric Current]] |
 | 9.2 | [[Resistance]] |
 | 9.3 | [[Resistance]] |
+| 10.1 | [[Internal Resistance]] |
+| 10.2 | [[Kirchhoff's Laws]] |
+| 10.3 | [[Potential Dividers]] |
 | 12.1 | [[Circular Motion]] |
 | 12.2 | [[Circular Motion]] |
 | 13.1 | [[Gravitational Fields]] |
@@ -443,11 +460,11 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9709 Mathematics
 
-*38 syllabus points · 92 card references*
+*38 syllabus points · 96 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| 1.1 | [[Completing the Square]], [[Quadratic Equations]] |
+| 1.1 | [[Completing the Square]], [[Quadratic Equations]], [[Quadratic Inequalities]], [[Simultaneous Equations (Vocab)]], [[Substitution Equations]] |
 | 1.2 | [[Composite Function]], [[Function]], [[Graphs of Functions]], [[Inverse Function]] |
 | 1.3 | [[Coordinate Geometry of the Circle]], [[Equation of a Straight Line (Vocab)]], [[Gradient (Vocab)]], [[Length and Midpoint (Vocab)]], [[Linear Graphs (Vocab)]] |
 | 1.4 | [[Radians]] |
@@ -471,7 +488,7 @@ is often taught under a different heading.
 | 3.8 | [[Differential Equations]], [[Exponential Growth and Decay]] |
 | 3.9 | [[Complex Numbers]] |
 | 4.1 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Friction (Vocab)]], [[Normal Force (Vocab)]] |
-| 4.2 | [[Kinematics Calculus]], [[SUVAT]] |
+| 4.2 | [[Kinematics Calculus]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
 | 4.3 | [[Linear Momentum]] |
 | 4.4 | [[Force (Vocab)]], [[Newton's Laws of Motion]], [[Tension (Vocab)]] |
 | 4.5 | [[Work, Energy and Power]] |
@@ -488,11 +505,16 @@ is often taught under a different heading.
 
 ## AP Computer Science A
 
-*7 syllabus points · 9 card references*
+*12 syllabus points · 14 card references*
 
 | Syllabus point | Cards |
 |---|---|
+| 1.12 | [[Object-Oriented Programming]] |
 | 2.12 | [[Big-O Notation]] |
+| 3.1 | [[Object-Oriented Programming]] |
+| 3.3 | [[Object-Oriented Programming]] |
+| 3.4 | [[Object-Oriented Programming]] |
+| 3.5 | [[Object-Oriented Programming]] |
 | 4.3 | [[Arrays]] |
 | 4.4 | [[Arrays]] |
 | 4.14 | [[Searching]] |
@@ -597,17 +619,25 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*8 syllabus points · 16 card references*
+*16 syllabus points · 25 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | A1.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Input and Output Devices]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Secondary Storage]] |
 | A1.2 | [[Logic Gates]], [[Number Bases]] |
 | A1.3 | [[Sensors and Control Systems]] |
-| A2.3 | [[Compression]] |
+| A2.1 | [[Networks]] |
+| A2.2 | [[Networks]] |
+| A2.3 | [[Compression]], [[Networks]] |
+| A3.1 | [[Relational Databases]] |
+| A3.2 | [[Relational Databases]] |
+| A3.3 | [[SQL]] |
+| A3.4 | [[NoSQL and Distributed Data]] |
 | B2.2 | [[Arrays]] |
 | B2.4 | [[Big-O Notation]], [[Recursion]], [[Searching]], [[Sorting]] |
 | B2.5 | [[File Handling]] |
+| B3.1 | [[Object-Oriented Programming]] |
+| B3.2 | [[Object-Oriented Programming]] |
 | B4.1 | [[Binary Trees]] |
 
 ## IB Physics
