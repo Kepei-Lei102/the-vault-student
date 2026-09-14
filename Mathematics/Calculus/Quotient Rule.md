@@ -245,21 +245,21 @@ The Quotient Rule is on the formula list. Examined directly in §14.4 (different
 
 ### Cambridge 9709 — A-Level Mathematics
 
-**Paper 3 (§3.4)** examines the Quotient Rule on rational functions, trig quotients, and combinations involving $e^x$ and $\ln x$. The Quotient Rule formula is **given on the MF19 reference sheet** (under Differentiation), so memorisation is for speed only — the formula is in the room with you.
+**Paper 2 §2.4 and Paper 3 §3.4** — *differentiate products and quotients* — examine the Quotient Rule on rational functions, trig quotients, and combinations involving $e^x$ and $\ln x$; the formula is **given on the MF19 list**, so memorisation buys speed, not marks. **Paper 1 §1.7 does not reach it:** P1 differentiates $x^n$, sums and composite functions (the Chain Rule only); products and quotients begin at P2.
 
-**Paper 1** (§1.7) covers the Chain and Product Rules; Quotient Rule typically appears at Paper 2 / Paper 3 level.
+### Edexcel IAL and OxfordAQA 9660
 
-### A-Level (Edexcel / AQA / OCR)
+Edexcel IAL **P3 §4.2** and OxfordAQA 9660 **P2.6** both name the chain, product and quotient rules together; the rule is on both formula booklets, and the usual question is a quotient of an exponential or a trig function followed by a stationary point or a tangent.
 
-Quotient Rule is on the standard A-Level formula booklets. Examined in pure-mathematics differentiation questions and in mechanics where $v(t)$ or $a(t)$ is a quotient.
+### IB Mathematics
 
-### IB AA SL / HL
-
-SL: Topic 5 (calculus). HL: Topic 5 with the additional implicit-differentiation and logarithmic-differentiation extensions. Quotient Rule is on the IB AA formula booklet. HL students should be comfortable deriving it from Product + Chain.
+**AA SL 5.6 and HL:** the product and quotient rules are named outcomes, on the formula booklet; HL adds implicit and logarithmic differentiation and expects the rule to be derivable from the Product and Chain Rules. **AI:** the quotient rule is **HL only** (AI HL 5.9, alongside the product and chain rules); AI SL differentiates polynomials and simple sums only.
 
 ### AP Calculus AB / BC
 
-Quotient Rule appears in Unit 2 (Differentiation: Definitions and Fundamental Properties). It is on the AP Calculus reference sheet. AP graders care about clean notation — $\dfrac{u'v - uv'}{v^2}$ written precisely, no missing parentheses, no skipped factorisations.
+Unit 2 (differentiation: definitions and basic rules) names the product and quotient rules; both courses examine them on non-calculator multiple choice and inside free-response derivatives. Graders care about clean notation — $\dfrac{u'v - uv'}{v^2}$ written precisely, no missing parentheses, no skipped factorisation of the numerator.
+
+**Not examined on:** Cambridge 0580 and OxfordAQA 9260 (no calculus); IB AI SL.
 
 ### Beyond high school — University
 

@@ -1,56 +1,45 @@
-<svg width="100%" viewBox="0 0 760 375" xmlns="http://www.w3.org/2000/svg">
-  <!-- root -->
-  <rect x="290" y="16" width="180" height="40" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.5"/>
-  <text x="380" y="41" text-anchor="middle" font-size="16" fill="#888" font-weight="bold">Data types</text>
+<svg width="100%" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg">
+  <!-- the universe: every data type -->
+  <rect x="14" y="14" width="732" height="392" rx="12" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="30" y="38" font-size="13" fill="#888" font-weight="bold">all data types</text>
 
-  <!-- level 1 -->
-  <rect x="80" y="96" width="200" height="40" rx="8" fill="rgba(8,145,178,0.12)" stroke="#0891b2" stroke-width="1.5"/>
-  <text x="180" y="121" text-anchor="middle" font-size="14" fill="#888">built-in (the six)</text>
+  <!-- left circle: user-defined -->
+  <circle cx="310" cy="200" r="125" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.8"/>
+  <!-- right circle: composite -->
+  <circle cx="450" cy="200" r="125" fill="rgba(245,158,11,0.14)" stroke="#f59e0b" stroke-width="1.8"/>
 
-  <rect x="440" y="96" width="240" height="40" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="560" y="121" text-anchor="middle" font-size="14" fill="#888">user-defined</text>
+  <!-- circle labels, inside the tops -->
+  <text x="255" y="110" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">user-defined</text>
+  <text x="255" y="127" text-anchor="middle" font-size="11" fill="#888">you add it to the menu</text>
+  <text x="505" y="110" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">composite</text>
+  <text x="505" y="127" text-anchor="middle" font-size="11" fill="#888">built out of other types</text>
 
-  <line x1="380" y1="56" x2="180" y2="96" stroke="#888" stroke-width="1.2"/>
-  <line x1="380" y1="56" x2="560" y2="96" stroke="#888" stroke-width="1.2"/>
+  <!-- region: user-defined only (non-composite) -->
+  <text x="252" y="200" text-anchor="middle" font-size="14" fill="#888">enumerated</text>
+  <text x="252" y="222" text-anchor="middle" font-size="14" fill="#888">pointer</text>
+  <text x="252" y="250" text-anchor="middle" font-size="10.5" fill="#888">user-defined,</text>
+  <text x="252" y="264" text-anchor="middle" font-size="10.5" fill="#888">non-composite</text>
 
-  <!-- built-in list -->
-  <text x="180" y="160" text-anchor="middle" font-size="12" fill="#888">INTEGER · REAL · CHAR</text>
-  <text x="180" y="178" text-anchor="middle" font-size="12" fill="#888">STRING · BOOLEAN · DATE</text>
+  <!-- region: overlap -->
+  <text x="380" y="178" text-anchor="middle" font-size="14" fill="#888">record</text>
+  <text x="380" y="200" text-anchor="middle" font-size="14" fill="#888">set</text>
+  <text x="380" y="222" text-anchor="middle" font-size="14" fill="#888">class / object</text>
+  <text x="380" y="250" text-anchor="middle" font-size="10" fill="#888">and the ADTs: stack,</text>
+  <text x="380" y="263" text-anchor="middle" font-size="10" fill="#888">queue, linked list,</text>
+  <text x="380" y="276" text-anchor="middle" font-size="10" fill="#888">dictionary, tree</text>
 
-  <!-- level 2 -->
-  <rect x="330" y="196" width="190" height="56" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
-  <text x="425" y="218" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">non-composite</text>
-  <text x="425" y="238" text-anchor="middle" font-size="11.5" fill="#888">defined without referencing</text>
+  <!-- region: composite only (built-in composite) -->
+  <text x="512" y="205" text-anchor="middle" font-size="14" fill="#888">ARRAY</text>
+  <text x="512" y="232" text-anchor="middle" font-size="10.5" fill="#888">built-in, yet built</text>
+  <text x="512" y="246" text-anchor="middle" font-size="10.5" fill="#888">out of another type</text>
 
-  <rect x="560" y="196" width="190" height="56" rx="8" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
-  <text x="655" y="218" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">composite</text>
-  <text x="655" y="238" text-anchor="middle" font-size="11.5" fill="#888">built out of other types</text>
+  <!-- region: outside both = primitive -->
+  <text x="30" y="356" font-size="12.5" fill="#888" font-weight="bold">primitive (built-in, non-composite)</text>
+  <text x="30" y="376" font-size="12.5" fill="#888">INTEGER  REAL  CHAR  STRING  BOOLEAN  DATE</text>
 
-  <line x1="560" y1="136" x2="425" y2="196" stroke="#888" stroke-width="1.2"/>
-  <line x1="560" y1="136" x2="655" y2="196" stroke="#888" stroke-width="1.2"/>
+  <text x="730" y="356" text-anchor="end" font-size="11" fill="#888">non-composite = everything outside the amber circle,</text>
+  <text x="730" y="372" text-anchor="end" font-size="11" fill="#888">primitive or user-defined (a mark point, June 2024)</text>
 
-  <!-- leaves -->
-  <rect x="306" y="284" width="110" height="34" rx="6" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.2"/>
-  <text x="361" y="306" text-anchor="middle" font-size="13" fill="#888">enumerated</text>
-
-  <rect x="432" y="284" width="90" height="34" rx="6" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="1.2"/>
-  <text x="477" y="306" text-anchor="middle" font-size="13" fill="#888">pointer</text>
-
-  <rect x="548" y="284" width="60" height="34" rx="6" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="1.2"/>
-  <text x="578" y="306" text-anchor="middle" font-size="13" fill="#888">set</text>
-
-  <rect x="620" y="284" width="72" height="34" rx="6" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="1.2"/>
-  <text x="656" y="306" text-anchor="middle" font-size="13" fill="#888">record</text>
-
-  <rect x="704" y="284" width="52" height="34" rx="6" fill="rgba(245,158,11,0.10)" stroke="#f59e0b" stroke-width="1.2"/>
-  <text x="730" y="306" text-anchor="middle" font-size="13" fill="#888">class</text>
-
-  <line x1="425" y1="252" x2="361" y2="284" stroke="#888" stroke-width="1"/>
-  <line x1="425" y1="252" x2="477" y2="284" stroke="#888" stroke-width="1"/>
-  <line x1="655" y1="252" x2="578" y2="284" stroke="#888" stroke-width="1"/>
-  <line x1="655" y1="252" x2="656" y2="284" stroke="#888" stroke-width="1"/>
-  <line x1="655" y1="252" x2="730" y2="284" stroke="#888" stroke-width="1"/>
-
-  <text x="560" y="342" text-anchor="middle" font-size="11.5" fill="#888">(the ADTs — stack, queue, linked list, dictionary,</text>
-  <text x="560" y="358" text-anchor="middle" font-size="11.5" fill="#888">binary tree — count as composite types too)</text>
+  <!-- caption -->
+  <text x="380" y="428" text-anchor="middle" font-size="11.5" fill="#888">Two independent questions: who defined it, and is it built from other types</text>
 </svg>

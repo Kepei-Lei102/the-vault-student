@@ -1,0 +1,18 @@
+<svg width="100%" viewBox="0 0 960 330" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="480" y="24" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Three addresses on one laptop</text>
+<rect x="30" y="38" width="900" height="78" rx="8" fill="rgba(0,0,0,0)" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="45" y="60" fill="#f59e0b" font-weight="bold">MAC address</text><text x="190" y="60" fill="#f59e0b" font-family="Menlo, Consolas, monospace" font-size="17">3C:22:FB:9A:12:7E</text>
+<text x="45" y="82" fill="#888" font-size="11">48 bits · hexadecimal · burned into the NIC at the factory · first 3 bytes = manufacturer, last 3 = serial · never changes</text>
+<text x="45" y="102" fill="#f59e0b" font-family="Menlo, Consolas, monospace" font-size="12">3C:22:FB</text><text x="112.2" y="102" fill="#888" font-size="11">= manufacturer (Apple)</text>
+<text x="274.2" y="102" fill="#f59e0b" font-family="Menlo, Consolas, monospace" font-size="12">9A:12:7E</text><text x="341.4" y="102" fill="#888" font-size="11">= serial number</text>
+<rect x="30" y="130" width="900" height="78" rx="8" fill="rgba(0,0,0,0)" stroke="#2563eb" stroke-width="1.2"/>
+<text x="45" y="152" fill="#2563eb" font-weight="bold">IPv4 address</text><text x="190" y="152" fill="#2563eb" font-family="Menlo, Consolas, monospace" font-size="17">192.168.1.37</text>
+<text x="45" y="174" fill="#888" font-size="11">32 bits · four denary numbers 0–255 separated by dots · 4.3 billion in total, and the world ran out · here a PRIVATE one, handed out by the router (DHCP), never seen on the internet</text>
+<text x="45" y="194" fill="#2563eb" font-family="Menlo, Consolas, monospace" font-size="12">192.168.1</text><text x="119.60000000000001" y="194" fill="#888" font-size="11">= network</text>
+<text x="197.10000000000002" y="194" fill="#2563eb" font-family="Menlo, Consolas, monospace" font-size="12">37</text><text x="219.90000000000003" y="194" fill="#888" font-size="11">= host</text>
+<rect x="30" y="222" width="900" height="78" rx="8" fill="rgba(0,0,0,0)" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="45" y="244" fill="#7c3aed" font-weight="bold">IPv6 address</text><text x="190" y="244" fill="#7c3aed" font-family="Menlo, Consolas, monospace" font-size="17">2001:db8::8a2e:370</text>
+<text x="45" y="266" fill="#888" font-size="11">128 bits · eight groups of four hex digits separated by colons · a run of zero groups collapses to :: (once) · 3.4 × 10^38 addresses: enough for every device, forever</text>
+<text x="45" y="286" fill="#7c3aed" font-family="Menlo, Consolas, monospace" font-size="12">2001:0db8:0000:0000:0000:0000:8a2e:0370</text><text x="341.6" y="286" fill="#888" font-size="11">= the same address written in full</text>
+<text x="480" y="322" text-anchor="middle" fill="#888" font-size="12">the router holds the PUBLIC IPv4 for the whole house and rewrites addresses on the way out and back (NAT); the MAC works on one LAN hop, the IP across the world</text>
+</svg>

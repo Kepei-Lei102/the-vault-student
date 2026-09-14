@@ -1,6 +1,6 @@
 # The Vault — Physics Directory
 
-> **47 cards across 7 bays.** Last landed: [[Potential Dividers]] (2026-09-08) — two resistors share the supply in the ratio of their resistances; the sensor, the slider, the null method, and the fuse in the live wire. Topic 10 closes.
+> **49 cards across 7 bays.** Last landed: [[Resonance]] (2026-09-14) — push on the beat: the swing, the 90° lag, the peak Q times the static deflection, and the washing machine passing through.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations, the worked papers, and the graph of what to read first.
 
 **Reading the bays.** Bays follow the Cambridge 9702 chapter structure. *Closed* bays cover their stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0625 = Cambridge IGCSE, 9702 = Cambridge A Level, 9709/9231 = the Cambridge maths boards whose mechanics papers these cards also serve, IB = IB Physics, AP-1 / AP-2 / AP-C = the AP Physics courses.
@@ -49,11 +49,12 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *The 9231 §3.5 row rode the Mechanics bay ([[Linear Motion under a Variable Force]], 2026-09-02) — Further Mechanics is 6/6. Next here: the field-theoretic sibling [[Electric Field]] opens in Fields.*
 
-## Oscillations (1 — open)
+## Oscillations (2 — open)
 
 1. **[[Damped Oscillations]]** — SHM with the friction switched back on: light, critical and heavy damping as the three-case dial of a second-order ODE, with the decay envelope.
+2. **[[Resonance]]** — the driven oscillator: steady state at the driver's frequency, maximum amplitude at the natural one; the quarter-cycle lag, peak height $Q\,F_0/k$, width $f_0/Q$, build-up in $Q/\pi$ cycles; six real questions from two boards.
 
-*Next in the bay: [[Resonance]] (9702 §17.3 · IB C.4.3), then coupled oscillators as the bridge to Waves.*
+*Next in the bay: [[Coupled Oscillators]], the bridge to Waves.*
 
 ## Waves (0 — reserved)
 
@@ -71,7 +72,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *Left in the bay: thermometric properties (9702 §14.1) and thermal radiation (IB B.2).*
 
-## Electricity (5 — open)
+## Electricity (6 — closed)
 
 1. **[[Electric Current]]** — charge as the bottom of the tower; current as a rate; $I = nAvq$ by the slab count and the drift-velocity shock. *9702 §9.1 · 0625 §4.2*
 2. **[[Resistance]]** — $V = IR$ is a definition, Ohm's law is an empirical claim: the four $I$–$V$ characteristics, resistivity, p.d. vs e.m.f. *9702 Topic 9 closed*
@@ -80,7 +81,9 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 4. **[[Internal Resistance]]** — the source as a resistor: $V = \mathcal{E} - Ir$ derived from energy and from the loop rule, the $V$–$I$ line (intercept, gradient, short-circuit current), maximum power transfer at $R = r$ and its 50 % sting, the voltmeter as a load and the null method; six real questions (Cambridge P2 ×3, AP C 2015 linearised, IB ×2). *9702 §10.1 · AP-2/AP-C Unit 11 · IB B.5.4*
 5. **[[Potential Dividers]]** — $V_{\text{out}} = E R_2/(R_1+R_2)$ from both Kirchhoff laws; thermistor and LDR dividers, the loading effect plotted, the potentiometer and the null method; mains safety for 0625 §4.4. *9702 Topic 10 closed · 0625 §4.3–4.4 · IB B.5.4*
 
-*Next in the bay: [[Alternating Current]] (9702 §21 · 0625 §4.5's transformer half) — the bay's last planned card.*
+6. **[[Alternating Current]]** — the tide, not the river: r.m.s. from the heating definition and ⟨sin²⟩ = ½, mean power half the peak, the bridge rectifier in both half-cycles, smoothing as an $RC$ discharge simulated against the schemes; beyond syllabus, phasors and complex impedance verified against the differential equation. *9702 Topic 21 closed · 0625 §4.2.2*
+
+*Bay closed 2026-09-09: the planned run [[Electric Current]] → [[Alternating Current]] is complete; the field-theoretic side ([[Electric Field]], [[Energy Resources]]) belongs to Fields.*
 
 ## Fields (4 — open)
 

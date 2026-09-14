@@ -21,6 +21,7 @@ leads_to:
   - "[[The Argument for i]]"
   - "[[Polar Coordinates]]"
   - "[[De Moivre at Work]]"
+  - "[[Alternating Current]]"
 tags:
   - subject/mathematics
   - domain/algebra

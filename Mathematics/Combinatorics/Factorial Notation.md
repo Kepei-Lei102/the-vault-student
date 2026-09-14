@@ -217,10 +217,14 @@ $3.5!$ is undefined in the basic definition (though the Gamma function extends i
 
 Factorial notation is not in the Cambridge 0580 or OxAQA 9260 specification.
 
-### AP / IB / A-Level
+### Cambridge 9709 / 9231
 
-- **AP / IB:** factorials used in binomial expansion, probability distributions (binomial, Poisson)
-- **A-Level Further:** multinomial coefficients, Taylor series ($e^x = \sum \dfrac{x^n}{n!}$)
+- **9709 P1 §1.6 and P5 §5.2:** $n!$ appears inside the binomial coefficients $\binom{n}{r}$ and in permutations and combinations — never asked for on its own, always as the machinery of ${}^nC_r$ and ${}^nP_r$ ([[Permutations and Combinations]]).
+- **9231 FP2 §2.3:** Maclaurin series — $n!$ in every denominator of $e^x$, $\sin x$, $\cos x$; and in FP1's proof-by-induction questions on divisibility.
+
+### AP / IB
+
+- **AP Calculus BC:** Taylor and Maclaurin series (Unit 10) — $n!$ in the general term. **AP Statistics / IB AA and AI:** the binomial distribution's coefficient; IB AA HL adds the binomial theorem with $\binom{n}{r}$ expanded as factorials.
 
 ### Beyond high school — University
 

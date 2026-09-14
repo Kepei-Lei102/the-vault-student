@@ -6,6 +6,7 @@ prerequisites:
   - "[[Exponential Growth and Decay]]"
 leads_to:
   - "[[Maxwell's Equations]]"
+  - "[[Alternating Current]]"
 tags:
   - subject/physics
   - domain/electromagnetism

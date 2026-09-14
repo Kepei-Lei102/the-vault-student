@@ -10,14 +10,14 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
-> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
+> **Edition** `student-2026-09-14` · built 2026-09-14 from commit `1626064`  
+> 394 cards · 554 diagrams · 97 explainers · 131 illustrations
 
 ---
 
 ## Cambridge IGCSE 0478 Computer Science
 
-*27 syllabus points · 41 card references*
+*33 syllabus points · 48 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -31,14 +31,20 @@ is often taught under a different heading.
 | 3.1 | [[Assembly Language]], [[CPU Architecture and the Fetch-Execute Cycle]], [[Embedded Systems]], [[RAM and the Memory Hierarchy]], [[Von Neumann machine]] |
 | 3.2 | [[Input and Output Devices]], [[Sensors and Control Systems]] |
 | 3.3 | [[RAM and the Memory Hierarchy]], [[Secondary Storage]] |
+| 3.4 | [[The Internet and the Web]] |
 | 4.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 4.2 | [[Compilers and Interpreters]] |
 | 4.2.1 | [[Assembly Language]] |
+| 5.1 | [[The Internet and the Web]] |
 | 5.3 | [[Data Security]] |
-| 7.1 | [[Program Design]] |
+| 7.1 | [[Program Design]], [[Program Development Life Cycle and Testing]] |
 | 7.2 | [[Program Design]] |
 | 7.3 | [[Program Design]] |
 | 7.4 | [[Searching]], [[Sorting]] |
+| 7.5 | [[Program Development Life Cycle and Testing]] |
+| 7.6 | [[Program Development Life Cycle and Testing]] |
+| 7.7 | [[Program Development Life Cycle and Testing]] |
+| 7.8 | [[Program Development Life Cycle and Testing]] |
 | 7.9 | [[Program Design]] |
 | 8.2 | [[Arrays]] |
 | 8.3 | [[File Handling]] |
@@ -204,7 +210,7 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0625 Physics
 
-*16 syllabus points · 37 card references*
+*16 syllabus points · 38 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -219,7 +225,7 @@ is often taught under a different heading.
 | 1.6 | [[Linear Momentum]] |
 | 1.7 | [[Work, Energy and Power]] |
 | 2.2 | [[Specific Heat Capacity]] |
-| 4.2 | [[Electric Current]], [[Resistance]] |
+| 4.2 | [[Alternating Current]], [[Electric Current]], [[Resistance]] |
 | 4.3 | [[Kirchhoff's Laws]], [[Potential Dividers]] |
 | 4.4 | [[Potential Dividers]] |
 | 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]] |
@@ -362,13 +368,14 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*41 syllabus points · 78 card references*
+*44 syllabus points · 81 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.1 | [[Floating-Point Representation]], [[Number Bases]], [[Overflow and Underflow]], [[Storage Units (Vocab)]], [[Text Encoding]], [[Two's Complement]] |
 | 1.2 | [[Image Encoding]], [[Sound Encoding]] |
 | 1.3 | [[Compression]] |
+| 2.1 | [[The Internet and the Web]] |
 | 3.1 | [[Embedded Systems]], [[Input and Output Devices]], [[RAM and the Memory Hierarchy]], [[Secondary Storage]], [[Sensors and Control Systems]] |
 | 3.2 | [[Logic Gates]] |
 | 4.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Interrupt Handling]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Von Neumann machine]] |
@@ -390,7 +397,9 @@ is often taught under a different heading.
 | 11.1 | [[Cambridge Pseudocode]], [[Program Design]] |
 | 11.2 | [[Cambridge Pseudocode]] |
 | 11.3 | [[Cambridge Pseudocode]], [[Program Design]] |
+| 12.1 | [[Program Development Life Cycle and Testing]] |
 | 12.2 | [[Program Design]] |
+| 12.3 | [[Program Development Life Cycle and Testing]] |
 | 13.1 | [[User-Defined Data Types]] |
 | 13.2 | [[Hash Tables]] |
 | 13.3 | [[Floating-Point Representation]] |
@@ -410,7 +419,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9702 Physics
 
-*43 syllabus points · 60 card references*
+*44 syllabus points · 63 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -449,14 +458,15 @@ is often taught under a different heading.
 | 16.2 | [[First Law of Thermodynamics]] |
 | 17.1 | [[Simple Harmonic Motion]] |
 | 17.2 | [[Simple Harmonic Motion]] |
-| 17.3 | [[Damped Oscillations]] |
+| 17.3 | [[Damped Oscillations]], [[Resonance]] |
 | 19 | [[Capacitors]] |
 | 20.1 | [[Lorentz Force]] |
 | 20.2 | [[Lorentz Force]] |
 | 20.3 | [[Lorentz Force]] |
 | 20.4 | [[Lorentz Force]] |
 | 20.5 | [[Electromagnetic Induction]] |
-| 21.1 | [[Electromagnetic Induction]] |
+| 21.1 | [[Alternating Current]], [[Electromagnetic Induction]] |
+| 21.2 | [[Alternating Current]] |
 
 ## Cambridge A-Level 9709 Mathematics
 
@@ -524,13 +534,14 @@ is often taught under a different heading.
 
 ## AP Calculus BC
 
-*5 syllabus points · 5 card references*
+*6 syllabus points · 6 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.8 | [[Squeeze Theorem]] |
 | 5.1 | [[Mean Value Theorem]] |
 | 6.6 | [[Properties of Definite Integrals]] |
+| 8.1 | [[Properties of Definite Integrals]] |
 | 9 | [[Polar Coordinates]] |
 | 10 | [[Maclaurin Series]] |
 
@@ -619,7 +630,7 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*16 syllabus points · 25 card references*
+*16 syllabus points · 26 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -627,7 +638,7 @@ is often taught under a different heading.
 | A1.2 | [[Logic Gates]], [[Number Bases]] |
 | A1.3 | [[Sensors and Control Systems]] |
 | A2.1 | [[Networks]] |
-| A2.2 | [[Networks]] |
+| A2.2 | [[Networks]], [[The Internet and the Web]] |
 | A2.3 | [[Compression]], [[Networks]] |
 | A3.1 | [[Relational Databases]] |
 | A3.2 | [[Relational Databases]] |
@@ -642,7 +653,7 @@ is often taught under a different heading.
 
 ## IB Physics
 
-*21 syllabus points · 35 card references*
+*21 syllabus points · 36 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -660,7 +671,7 @@ is often taught under a different heading.
 | C.1.1 | [[Hooke's Law for Springs]], [[Simple Harmonic Motion]] |
 | C.1.2 | [[Simple Harmonic Motion]] |
 | C.1.3 | [[Simple Harmonic Motion]] |
-| C.4.3 | [[Damped Oscillations]] |
+| C.4.3 | [[Damped Oscillations]], [[Resonance]] |
 | D.1.1 | [[Gravitational Fields]] |
 | D.1.2 | [[Gravitational Fields]] |
 | D.1.3 | [[Gravitational Fields]] |

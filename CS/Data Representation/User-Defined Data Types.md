@@ -19,6 +19,7 @@ tags:
   - misconception/phone-numbers-are-not-integers
   - misconception/a-set-is-not-a-list
   - misconception/non-composite-means-no-referenced-type
+  - misconception/non-composite-is-not-user-defined
 ---
 
 # User-Defined Data Types 自定义数据类型
@@ -34,11 +35,13 @@ The syllabus splits them in two, and the split is a definition worth memorising 
 - **Non-composite** — a type defined **without referencing another data type**. Two of them: **enumerated** (a fixed, ordered list of named values) and **pointer** (a value that is the *address* of another value).
 - **Composite** — a type **built out of other types**, one or more of them, grouped under one identifier. Three named ones: **record** (different types, one identity), **set** (unordered collection, no duplicates), and **class/object** (a record that carries its own operations).
 
+Two things to keep apart, because the syllabus sentence tangles them. *Who defined the type* and *whether it is built from other types* are **independent questions**, so the picture is a Venn diagram, not a family tree. The six built-ins are non-composite too — `INTEGER` references no other type — which is why the schemes' own definition reads "*a non-composite type can be primitive or user-defined*" and gives a mark for saying so (June 2024, all three Paper 3s). Enumerated and pointer are the *user-defined* non-composite types; record, set and class are user-defined *and* composite; and `ARRAY` sits in the fourth corner, built-in yet plainly built out of another type.
+
 ![[udt-taxonomy.svg|720]]
 
 ### 中文锚点
 
-**奶茶单。** 你在奶茶店点单，店员打出一张小票——这张小票就是本卡的全部内容。整张小票是一个**记录（record）**：饮品是字符串、甜度是一档、配料是一组勾选——不同类型的数据，钉在同一个身份下面。**甜度是枚举（enumerated）**：三分糖、五分糖、七分糖、全糖——菜单上只有这几档，有顺序、不重复，点不出"六分半糖"。**配料是集合（set）**：珍珠、椰果随便勾，但同一种配料"勾两次"没有意义（加两份是数量，不是集合），而且先勾珍珠还是先勾椰果毫无区别。**取餐号是指针（pointer）**：47 号不是你的奶茶——它只是告诉你**去哪里拿**奶茶；拿着编号换到实物，这个动作就叫"解引用"。语言内置的六种类型说不出"甜度"这个词；自定义类型，就是教会语言**用你要解决的问题的词汇说话**。
+**奶茶单。** 你在奶茶店点单，店员打出一张小票——这张小票就是本卡的全部内容。整张小票是一个**记录（record）**：饮品名是字符串、甜度是一档、配料是一组勾选——不同类型的数据，钉在同一张小票上。**甜度是枚举（enumerated）**：三分糖、五分糖、七分糖、全糖——菜单上只有这几档，有顺序、不重复，点不出"六分半糖"。**配料是集合（set）**：珍珠、椰果随便勾，但同一种配料"勾两次"没有意义（加两份是数量，不是集合），而且先勾珍珠还是先勾椰果毫无区别。**取餐号是指针（pointer）**：47 号不是你的奶茶——它只是告诉你**去哪里拿**奶茶；拿着编号换到实物，这个动作就叫"解引用"。语言内置的六种类型说不出"甜度"这个词；自定义类型，就是教语言**用你手头那个问题的词汇说话**。
 
 | English                | 中文        | 一句话                   |
 | ---------------------- | --------- | --------------------- |
@@ -207,7 +210,7 @@ vowels & set("HELLO WORLD")       # {'E', 'O'} — intersection, union |, differ
 
 ## Class: the record that grew up
 
-A **class** is the fifth named type — composite, like a record, but bundling the *operations* in with the fields: a `Booking` that knows how to cancel itself. The syllabus names it here so the taxonomy is complete, then spends a whole later section on it — the objects, inheritance and polymorphism story is [[Object-Oriented Programming]]'s, along with the Paper 4 code that goes with it. For this row, know its place on the tree: **class/object is a composite user-defined type**.
+A **class** is the fifth named type — composite, like a record, but bundling the *operations* in with the fields: a `Booking` that knows how to cancel itself. The syllabus names it here so the taxonomy is complete, then spends a whole later section on it — the objects, inheritance and polymorphism story is [[Object-Oriented Programming]]'s, along with the Paper 4 code that goes with it. For this row, know its place on the map: **class/object is a composite user-defined type**.
 
 The pseudocode guide adds one more fact worth quoting: the ADTs — **stack, queue, linked list, dictionary, binary tree — are also defined as composite data types.** Every structure in the Data Structures bay is, formally, a citizen of this card's taxonomy.
 
@@ -248,6 +251,13 @@ The negative case is just as real: codebases that store everything in strings �
 
 ---
 
+## Hands-on
+
+- **Run the slip.** `python3 udt-demo.py` beside this card builds all four types in real Python and makes each one misbehave on purpose: the enumerated type refuses an off-menu sweetness the moment it is named; the set ignores a second tick of pearls and does not care which topping came first; the record copies whole, so changing the copy leaves the original alone, and `orders[1].sweetness` shows index-then-dot; the pointer is a slot number on the counter, two pointers to one slot see the same drink, and following a null one is the crash Hoare apologised for.
+- **Design one yourself.** Take the last three things you bought online and write the record each order slip needs, with a type per field; then find the one field that is a fixed menu (delivery slot, size, payment method) and make it an enumerated type. The exam's "choose and design" question is exactly this, with the shop chosen for you.
+
+---
+
 ## Misconceptions
 
 ### 1. Quotation marks around enumerated values
@@ -269,6 +279,8 @@ A list has order, indices and duplicates; a set has none of them. If the answer 
 ### 5. "Non-composite means it holds only one value"
 
 The definition is about **construction**, not capacity: non-composite = *defined without referencing another data type*. That is the sentence the 3-mark definitional questions want — an enumerated type holds a whole list of values and is still non-composite, because its definition names no other type.
+
+The twin mistake is **"non-composite means user-defined"** — the tree in your head hangs *composite / non-composite* underneath *user-defined*, so `INTEGER` ends up in neither box. It belongs in the non-composite one: primitive types are non-composite by the same definition, and the June 2024 schemes' first marking point for "describe a non-composite type" is exactly *primitive or user-defined*. Two axes, four corners; the enumerated and pointer types are only the user-defined corner of non-composite.
 
 ---
 
@@ -321,9 +333,23 @@ A record is a *layout contract*: field offsets fixed at definition time, so `boo
 ### Cambridge 9618 (Paper 3 §13.1; records recur in Paper 4 code)
 
 - The four LOs: **why** UDTs are necessary; define and use **non-composite** (enumerated, pointer); define and use **composite** (set, record, class/object); **choose and design** an appropriate UDT for a problem. A §13.1 question opens nearly every recent Paper 3.
-- The recurring shapes, from the real papers this card is built on: **declare an enumerated type** from a given list (June 2026 P32, Nov 2025 P33, June 2025 P31 — 2 marks: `TYPE <name> =` and the bracketed list, *order preserved, equals sign only, no quotes, no added punctuation*, per the schemes' own guidance columns); **state characteristics of the value list** (complete/all possible values · ordered/ordinal · no duplicates — two of those for 2 marks); **declare a record** from a field table (4 marks, split in the scheme as: `TYPE`/`ENDTYPE` pair · `DECLARE` on every field · the nested UDT used · remaining field types right); **declare a set** (June 2024 P32: the `TYPE … = SET OF` line, then `DEFINE` with the value list and the set type's identifier); **define terms** (Nov 2023 P31: enumerated and pointer for 4; June 2024 P32: *non-composite* for 3 — "defined without referencing another data type" is the scheme's own first marking point).
+- The recurring shapes, from the real papers this card is built on: **declare an enumerated type** from a given list (June 2026 P32, Nov 2025 P33, June 2025 P31 — 2 marks: `TYPE <name> =` and the bracketed list, *order preserved, equals sign only, no quotes, no added punctuation*, per the schemes' own guidance columns); **state characteristics of the value list** (complete/all possible values · ordered/ordinal · no duplicates — two of those for 2 marks); **declare a record** from a field table (4 marks, split in the scheme as: `TYPE`/`ENDTYPE` pair · `DECLARE` on every field · the nested UDT used · remaining field types right); **declare a set** (June 2024 P32: the `TYPE … = SET OF` line, then `DEFINE` with the value list and the set type's identifier); **define terms** (Nov 2023 P31: enumerated and pointer for 4; June 2024 P32: *non-composite* for 3 — the scheme's three points are "defined without referencing another data type", "can be a primitive type or a user-defined type", and an example, enumerated or pointer; P31/P33 word the same three as *user-defined or primitive · does not refer to other types in its definition · primitive / enumerated / pointer*).
 - Pointer questions are usually definitional here ("stores addresses/memory locations · indicates the type of data stored there"), but pointers do their real exam work inside §19's linked structures — head pointers, next pointers, null markers.
 - The exam dialect for every declaration above lives in [[Cambridge Pseudocode]], including the record's `TYPE … ENDTYPE` block and the set's two-line `TYPE`/`DEFINE` form.
+
+### Worked questions — real Paper 3, every mark named
+
+*The declarations below are written in the exam's pseudocode dialect because that is what the question asks for; the concepts are the card's, the syntax is [[Cambridge Pseudocode]]'s.*
+
+**November 2022 Paper 32 Q4 — the airport [2 + 4 + 1 + 3].** *(a) Declare the enumerated type Aircraft for C300, C350, D242, E757, X380.* **Trigger: a fixed list you can read aloud → enumerated.** `TYPE Aircraft = (C300, C350, D242, E757, X380)` — one mark for `TYPE Aircraft =`, one for the bracketed list in the given order, no quotes. *(b) Declare the composite type Flight: flight number "any combination of letters and numbers", destination, date of departure, type of aircraft.* **Trigger: several different-typed facts about one flight → record; read the example data for each field's type.** `TYPE Flight … ENDTYPE` [1]; `DECLARE FlightNumber : STRING` and `DECLARE Destination : STRING` [1] — letters-and-numbers is a string however number-ish; `DECLARE DepartureDate : DATE` [1]; `DECLARE AircraftType : Aircraft` [1] — the UDT from (a), nested. *(c)(i) A variable for one record:* `DECLARE Flight1 : Flight` [1]. *(ii) Store XA782, Cambridge, 12/12/2022, C350:* dot notation on each field — the two strings [1], the date [1], and the enumerated value **without quotes**, `Flight1.AircraftType ← C350` [1].
+
+**November 2025 Paper 31 Q1 — the club member [1 + 2 + 2 + 1].** Given the record `ClubMember` (Code : INTEGER … FeesPaid : BOOLEAN). *(a)(i)* `DECLARE Member1 : ClubMember` [1]. *(ii) Assign 984632 to Code and TRUE to FeesPaid:* `Member1.Code ← 984632`, `Member1.FeesPaid ← TRUE` [2] — the integer bare, the Boolean as the keyword. *(b)(i) An enumerated type Activity for Badminton, Football, Golf, Snooker, Swimming, Tennis:* `TYPE Activity = (Badminton, Football, Golf, Snooker, Swimming, Tennis)` [2]. *(ii) Update the declaration of the new field Choice:* `DECLARE Choice : Activity` [1] — a UDT used as a field type, which is the whole reason (b)(i) was asked.
+
+**November 2025 Paper 33 Q1 — the colours [2 + 2 + 4].** *(a)(i)* `TYPE Spectrum = (Red, Orange, Yellow, Green, Blue, Indigo, Violet)` [2]. *(ii) Two characteristics of the list of values in an enumerated declaration:* any two of **ordered (ordinal)**, **contains all possible values**, **no duplicates**, **all values the same data type** [2] — the three properties in this card's enumerated section, plus the fourth the scheme adds. *(b) Declare ColourData for ColourCode XYZ12345, Colour Red, Wavelength 650, Frequency 4.62, PrimaryColour Yes, using Spectrum.* **Trigger: read the example data, not the field name.** `TYPE ColourData … ENDTYPE` [1]; `DECLARE` on every field [1]; `Colour : Spectrum` [1]; the other four right — `ColourCode : STRING`, `Wavelength : INTEGER`, `Frequency : REAL`, `PrimaryColour : BOOLEAN` [1]. "Yes" in the example data is the tell for BOOLEAN; 4.62 is the tell for REAL.
+
+**November 2024 Paper 31 Q6(a) — describe the set type [3].** Any three of: *a composite data type; a list of unordered elements; set-theory operations such as intersection and union apply; the definition includes the data type of its elements; all elements are of the same type.* The first point is the one students miss: a set is **composite** because its definition names another type (the type of the elements).
+
+**June 2026 Paper 32 Q1 — the children's zoo [2 + 1 + 2].** *(a) Declare a non-composite type Animals for Alpaca, Chicken, Donkey, Duck, Goat, Pony, Sheep.* `TYPE Animals = (Alpaca, Chicken, Donkey, Duck, Goat, Pony, Sheep)` [2] — the scheme's guidance column: *only the equals sign; no quotation marks; the order must be as given; no extra punctuation between elements or across a line break.* *(b)(i) The type created:* **enumerated** [1]. *(ii) Two features of any list in such a type:* complete (all possible values, fixed once declared), ordinal, unique [2] — and the guidance refuses "chronological order" for the ordinal mark.
 
 ### Not examined on…
 
@@ -358,3 +384,10 @@ A record is a *layout contract*: field offsets fixed at definition time, so `boo
 - **The type-safety thread:** [[Floating-Point Representation]] — what the built-in `REAL` actually is underneath, and the precision contract you accept by choosing it; this card is about choosing types so the contract matches the data.
 
 - **Misconception traps cleared:** enum values are names, not strings; lying nouns (phone *numbers*) are strings; sets have no order and no indices; non-composite is about construction, not capacity; the example data decides the field type.
+
+## Sources
+
+- Cambridge International AS & A Level Computer Science 9618 syllabus 2027–29, §13.1; the *Pseudocode Guide for Teachers* (the six built-in types, `TYPE … ENDTYPE`, and the ADTs filed under composite types).
+- Cambridge 9618 November 2022 Paper 32 Q4, November 2024 Paper 31 Q6, June 2025 Paper 31 Q1, November 2025 Paper 31 Q1 and Paper 33 Q1, June 2026 Paper 32 Q1 — with their published mark schemes and guidance columns.
+- N. Wirth, *The Programming Language Pascal* (1971) — the type system the syllabus's taxonomy is lifted from. C. A. R. Hoare, *Null References: The Billion Dollar Mistake* (QCon, 2009).
+- The script beside this card: `udt-demo.py`.

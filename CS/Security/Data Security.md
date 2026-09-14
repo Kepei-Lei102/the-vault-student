@@ -4,6 +4,8 @@ prerequisites:
   - "[[Operating Systems]]"
   - "[[SQL]]"
   - "[[Error Detection and Correction]]"
+  - "[[Famous for the Wrong Thing]]"
+  - "[[The Internet and the Web]]"
 leads_to:
   - "[[Encryption]]"
 tags:

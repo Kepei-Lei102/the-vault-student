@@ -121,6 +121,16 @@ In $n(A \cup B) = n(A) + n(B) - n(A \cap B)$, students frequently forget the $- 
 - Very common question type: "Given $n(\xi) = 40$, $n(A) = 15$, $n(B) = 20$, $n(A \cap B) = 8$. Find $n((A \cup B)')$."
 - Typical marks: 3–6 per question (multi-step)
 
+### OxAQA 9260 (Extension)
+
+- **N9 Sets** — $n(A)$ alongside $\xi$, $A \cup B$, $A \cap B$, $A'$; the same two- and three-set Venn counting as 0580, with the same inclusion–exclusion trap ($n(A \cup B) \ne n(A) + n(B)$ when they overlap).
+
+### IB Mathematics AA / AI
+
+- **SL 4.5 (both routes):** Venn diagrams appear as a probability tool — $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ is inclusion–exclusion divided by $n(\xi)$. The counting is this card's; the wording is probability's.
+
+**Not examined on** Cambridge 0606 (no set theory at all — the 0606 map says so explicitly), 9709 or 9231.
+
 ## Connections
 
 - **Parent concepts:** [[Set]], [[Element]]

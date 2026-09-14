@@ -1,5 +1,7 @@
 ---
 chinese: 递归 (dīguī)
+aliases:
+  - 递归
 prerequisites:
   - "[[Logic]]"
   - "[[Factorial Notation]]"
@@ -382,6 +384,21 @@ The fix is one line of memoisation. See beyond-syllabus.
 5. **Confusing recursion with iteration.** Recursion and loops are *different programming patterns*, even though they're computationally equivalent. A loop reuses one frame; recursion uses a new frame per iteration. The choice affects readability, memory, and (in non-optimising languages) speed.
 
 ---
+
+## Check your understanding — calls, returns and termination
+
+Predict before running anything. Draw the active frames rather than listing only the final answer.
+
+1. **Trace both directions.** For the original `factorial(3)`, list the arguments on descent, the returned values on ascent, and the greatest number of simultaneously active factorial frames.
+2. **Transfer the trace.** For `gcd(30, 18)`, list every pair of arguments and the returned result. Explain which quantity decreases toward the base case for these positive inputs.
+3. **Distinguish depth from work.** For the original naive `fib(4)`, count all invocations, including the initial call, and the maximum number of simultaneously active Fibonacci frames. Explain why these counts differ and identify a repeated subproblem.
+
+> [!success]- Check your reasoning
+> 1. Arguments: $3, 2, 1, 0$; returns: $1, 1, 2, 6$. Peak: **4 factorial frames**. Each waiting frame retains a multiplication to perform after its child returns.
+> 2. $(30,18) \to (18,12) \to (12,6) \to (6,0)$; the result $6$ returns through the waiting calls. While the second argument is positive, the next second argument is a non-negative remainder strictly smaller than it.
+> 3. **9 invocations**, but only **4 active Fibonacci frames** at the deepest point. The two branches execute in turn; the stack does not contain the whole tree at once. `fib(2)` is computed twice. A correct final value alone does not demonstrate either count.
+
+These checks establish tracing and explaining termination on given code. Writing a new recursive solution and reasoning about memoisation require separate evidence.
 
 ## Java specifics for AP CSA
 

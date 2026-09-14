@@ -19,6 +19,7 @@ leads_to:
   - "[[Waves I: The Wave Equation]]"
   - "[[The Quantum Harmonic Oscillator]]"
   - "[[The Pendulum Story]]"
+  - "[[Alternating Current]]"
 tags:
   - subject/physics
   - subject/mathematics

@@ -301,11 +301,15 @@ When splitting into cases, the cases must be **mutually exclusive** — no overl
 
 Counting problems of this type are not in the Cambridge 0580 or OxAQA 9260 specification. However, the multiplication principle underlies sample space counting in [[Combined Probability]], which is tested in both.
 
-### AP / IB / A-Level
+### Cambridge 9709 (Probability & Statistics 1)
 
-- **AP Statistics:** counting rules (multiplication, permutations, combinations) for computing probabilities
-- **IB Mathematics AA HL:** combinatorics problems with constraints; links to binomial theorem and probability distributions
-- **A-Level Further Mathematics:** more complex counting including circular arrangements, items with repetition, and the inclusion-exclusion principle
+**Syllabus ref:** P5 §5.2 — *solve problems about arrangements of objects in a line, including those involving repetition (the letters of NEEDLESS) and restriction (two particular people must, or must not, stand together)*, plus *simple problems involving selections*. The 0606 rules above carry over with two additions the board names: **repetition** (the $\dfrac{n!}{n_1!\,n_2!\cdots}$ count below) and questions where people sit in **two or more rows**. The board also says what it will *not* ask: **objects arranged in a circle are excluded.** Paper 5 sets this as a 5–7 mark question with several parts, each a different restriction on the same set of objects; the formulas and the full treatment live in [[Permutations and Combinations]].
+
+### IB Mathematics AA (HL only)
+
+HL 1.10 — *counting principles, including permutations and combinations* — as the entry to the binomial theorem with negative and fractional exponents. SL has no counting outcome; the binomial coefficient appears there only as $\binom{n}{r}$ inside the expansion.
+
+**Not examined on:** Cambridge 0580 and OxAQA 9260 (the multiplication principle appears only as sample-space counting in [[Combined Probability]]); Cambridge 9231 (no combinatorics section — its Further Probability paper starts from distributions); Edexcel IAL (no permutations or combinations in S1–S3); AP Statistics (the CED requires no permutation or combination counting; the binomial formula is given on the formula sheet); AP Calculus.
 
 ### Beyond high school — University
 

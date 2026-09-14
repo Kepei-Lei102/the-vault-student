@@ -1,0 +1,31 @@
+<svg width="100%" viewBox="0 0 960 330" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="480" y="24" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Königsberg, 1736: the city, and the only thing about it that matters</text>
+<path d="M20 120 C120 100 200 100 300 130 L300 190 C200 220 120 220 20 200 Z" fill="rgba(37,99,235,0.15)" stroke="none"/>
+<rect x="150" y="135" width="110" height="50" rx="20" fill="rgba(245,158,11,0.25)" stroke="#f59e0b" stroke-width="1.5"/><text x="205" y="164" text-anchor="middle" fill="#f59e0b" font-weight="bold">A</text><text x="100" y="164" text-anchor="middle" fill="#888" font-size="11">Kneiphof island</text>
+<path d="M300 130 L420 130 L420 190 L300 190 Z" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/><text x="360" y="164" text-anchor="middle" fill="#f59e0b" font-weight="bold">D</text><text x="432" y="164" fill="#888" font-size="11">east island</text>
+<text x="160" y="80" fill="#888">north bank  B</text><text x="160" y="260" fill="#888">south bank  C</text>
+<line x1="175" y1="100" x2="175" y2="135" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="235" y1="100" x2="235" y2="135" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="175" y1="185" x2="175" y2="220" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="235" y1="185" x2="235" y2="220" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="260" y1="160" x2="300" y2="160" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="360" y1="100" x2="360" y2="130" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<line x1="360" y1="190" x2="360" y2="220" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+<text x="220" y="300" text-anchor="middle" fill="#888" font-size="11">seven bridges (purple); can you walk across each exactly once?</text>
+<path d="M590 165 Q663.3013563696906 138.69104421753647 700 70" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M590 165 Q626.6986436303094 96.30895578246353 700 70" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M590 165 Q626.6986436303094 233.69104421753647 700 260" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M590 165 Q663.3013563696906 191.30895578246353 700 260" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M590 165 Q700.0 165.0 810 165" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M700 70 Q755.0 117.5 810 165" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<path d="M700 260 Q755.0 212.5 810 165" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="700" cy="70" r="16" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/><text x="700" y="75" text-anchor="middle" fill="#f59e0b" font-weight="bold">B</text>
+<circle cx="590" cy="165" r="16" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/><text x="590" y="170" text-anchor="middle" fill="#f59e0b" font-weight="bold">A</text>
+<circle cx="810" cy="165" r="16" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/><text x="810" y="170" text-anchor="middle" fill="#f59e0b" font-weight="bold">D</text>
+<circle cx="700" cy="260" r="16" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/><text x="700" y="265" text-anchor="middle" fill="#f59e0b" font-weight="bold">C</text>
+<text x="728" y="75" fill="#dc2626" font-size="12">3 bridges</text>
+<text x="590" y="200" text-anchor="middle" fill="#dc2626" font-size="12">5 bridges</text>
+<text x="838" y="170" fill="#dc2626" font-size="12">3 bridges</text>
+<text x="728" y="265" fill="#dc2626" font-size="12">3 bridges</text>
+<text x="700" y="300" text-anchor="middle" fill="#888" font-size="11">shrink each land mass to a dot: four dots, seven lines. All four have an odd count, so no walk exists</text>
+</svg>

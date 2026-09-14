@@ -250,6 +250,28 @@ Students mix these up. At 9260, only the power rule appears. At 0606/AP, both ap
 - Students must rewrite expressions before differentiating (fractions, roots)
 - The power rule is one of many rules at 0606 — see [[Differentiation Rules]] for trig, $e^x$, $\ln x$
 
+### Cambridge 0580 Extended
+
+- **E2.12 (the 2025 syllabus onward):** differentiate $ax^n$ for integer $n \ge 0$ and sums of such terms; find gradients at a point and stationary points, and tell maxima from minima. The only differentiation at IGCSE, on the Extended papers only.
+
+### Cambridge 9709 — Paper 1 §1.7
+
+- $x^n$ for **any rational** $n$, sums, and the Chain Rule for composites; the Power Rule is assumed from the first question and is never examined alone — it arrives inside tangents, normals, stationary points and rates of change. Rewrite first ($\sqrt{x}$, $1/x^2$, $x\sqrt x$) is the recurring loss of marks.
+
+### Edexcel IAL and OxfordAQA 9660
+
+- IAL **P1 §4.2** and 9660 **P1.3** — differentiation of $x^n$ (rational $n$) and of polynomials; same rewrite-first discipline, same use inside tangent and stationary-point questions.
+
+### IB Mathematics AA and AI
+
+- **AA SL 5.3:** the derivative of $f(x) = ax^n$ and of sums; **AI SL 5.3** the same for integer $n$. Both on the formula booklet.
+
+### AP Calculus AB / BC
+
+- **Unit 2** (the map's row 2.6): derivatives of polynomials by the Power Rule, before the product and quotient rules; expected without hesitation on the non-calculator multiple choice.
+
+**Examined on every board the vault covers** — the differences are only in which exponents are allowed (whole numbers at 9260, 0580 and AI SL; rational $n$ from 0606 and 9709 upward).
+
 > [!tip] Physics bridge — the "$n$ times" rule for percentage uncertainties
 > Every Physics student has memorised: *"the percentage uncertainty in $V = \tfrac{4}{3}\pi r^3$ is **three times** the percentage uncertainty in $r$."* Where does that 3 come from? Power rule.
 >

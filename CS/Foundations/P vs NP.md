@@ -3,7 +3,8 @@ chinese: P 与 NP 问题 (P yǔ NP wèntí)
 prerequisites:
   - "[[Turing Machine]]"
   - "[[Big-O Notation]]"
-leads_to: []
+leads_to:
+  - "[[Learning as Verification]]"
 tags:
   - subject/computer-science
   - subject/mathematics

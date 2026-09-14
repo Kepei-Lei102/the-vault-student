@@ -141,6 +141,12 @@ Students sometimes think elements must be numbers. Elements can be letters, orde
 - However, understanding element membership is essential for working with sets, Venn diagrams, and probability (N9, S16)
 - Students benefit from knowing the notation even if it won't appear explicitly on the 9260 paper
 
+### IB Mathematics AA / AI and AP
+
+- Neither IB route has a set-theory topic; $\in$ is used as notation in probability and function work (SL 4.5 Venn diagrams; domains written as $x \in \mathbb{R}$) but membership is never examined on its own. AP Calculus uses $x \in$ an interval as notation only.
+
+**Not examined on** Cambridge 0606 (no set theory), 9709 or 9231.
+
 ## Connections
 
 - **Parent:** [[Set]] — an element only makes sense in the context of a set

@@ -3,6 +3,7 @@ chinese: 哥德尔不完备定理 (Gēdé'ěr bù wánbèi dìnglǐ)
 prerequisites:
   - "[[Turing Machine]]"
   - "[[Russell's Paradox in the Post]]"
+  - "[[Hilbert vs Brouwer]]"
 leads_to:
   - "[[The Love of Wisdom]]"
 tags:

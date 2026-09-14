@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<text x="480" y="24" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Four topologies, and how a packet from A reaches D in each</text>
+<text x="130" y="52" text-anchor="middle" fill="#888" font-weight="bold">bus</text>
+<line x1="30" y1="150" x2="230" y2="150" stroke="#f59e0b" stroke-width="3"/>
+<line x1="55" y1="150" x2="55" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="55" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="55" y="102" text-anchor="middle" fill="#f59e0b" font-size="11">A</text>
+<line x1="105" y1="150" x2="105" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="105" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="105" y="102" text-anchor="middle" fill="#888" font-size="11">B</text>
+<line x1="155" y1="150" x2="155" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="155" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="155" y="102" text-anchor="middle" fill="#888" font-size="11">C</text>
+<line x1="205" y1="150" x2="205" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="205" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="205" y="102" text-anchor="middle" fill="#f59e0b" font-size="11">D</text>
+<text x="130" y="178" text-anchor="middle" fill="#888" font-size="11">one cable; A broadcasts, all hear,</text>
+<text x="130" y="192" text-anchor="middle" fill="#888" font-size="11">only D accepts; two talk at once</text>
+<text x="130" y="206" text-anchor="middle" fill="#888" font-size="11">= collision (CSMA/CD)</text>
+<text x="370" y="52" text-anchor="middle" fill="#888" font-weight="bold">star</text>
+<line x1="309.4" y1="95.7" x2="370.0" y2="132.0" stroke="#f59e0b" stroke-width="2.5"/>
+<line x1="430.6" y1="95.7" x2="370.0" y2="132.0" stroke="#888" stroke-width="1.5"/>
+<line x1="309.4" y1="169.2" x2="370.0" y2="132.0" stroke="#888" stroke-width="1.5"/>
+<line x1="430.6" y1="169.2" x2="370.0" y2="132.0" stroke="#f59e0b" stroke-width="2.5"/>
+<rect x="352" y="122" width="36" height="20" rx="3" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/><text x="370" y="136" text-anchor="middle" fill="#2563eb" font-size="9">switch</text>
+<circle cx="300" cy="90" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="300" y="94" text-anchor="middle" fill="#f59e0b" font-size="11">A</text>
+<circle cx="440" cy="90" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="440" y="94" text-anchor="middle" fill="#888" font-size="11">B</text>
+<circle cx="300" cy="175" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="300" y="179" text-anchor="middle" fill="#888" font-size="11">C</text>
+<circle cx="440" cy="175" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="440" y="179" text-anchor="middle" fill="#f59e0b" font-size="11">D</text>
+<text x="370" y="205" text-anchor="middle" fill="#888" font-size="11">every node to one switch;</text>
+<text x="370" y="219" text-anchor="middle" fill="#888" font-size="11">A to switch to D, nobody else hears;</text>
+<text x="370" y="233" text-anchor="middle" fill="#888" font-size="11">switch dies, network dies</text>
+<text x="620" y="52" text-anchor="middle" fill="#888" font-weight="bold">mesh (full)</text>
+<line x1="561.0" y1="90.0" x2="679.0" y2="90.0" stroke="#888" stroke-width="1"/>
+<line x1="550.0" y1="101.0" x2="550.0" y2="164.0" stroke="#888" stroke-width="1"/>
+<line x1="559.4" y1="95.7" x2="680.6" y2="169.3" stroke="#f59e0b" stroke-width="2.5"/>
+<line x1="680.6" y1="95.7" x2="559.4" y2="169.3" stroke="#888" stroke-width="1"/>
+<line x1="690.0" y1="101.0" x2="690.0" y2="164.0" stroke="#888" stroke-width="1"/>
+<line x1="561.0" y1="175.0" x2="679.0" y2="175.0" stroke="#888" stroke-width="1"/>
+<circle cx="550" cy="90" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="550" y="94" text-anchor="middle" fill="#f59e0b" font-size="11">A</text>
+<circle cx="690" cy="90" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="690" y="94" text-anchor="middle" fill="#888" font-size="11">B</text>
+<circle cx="550" cy="175" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="550" y="179" text-anchor="middle" fill="#888" font-size="11">C</text>
+<circle cx="690" cy="175" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="690" y="179" text-anchor="middle" fill="#f59e0b" font-size="11">D</text>
+<text x="620" y="205" text-anchor="middle" fill="#888" font-size="11">every node to every other;</text>
+<text x="620" y="219" text-anchor="middle" fill="#888" font-size="11">A to D direct, or round via B or C;</text>
+<text x="620" y="233" text-anchor="middle" fill="#888" font-size="11">n(n−1)/2 cables — costly, robust</text>
+<text x="850" y="52" text-anchor="middle" fill="#888" font-weight="bold">hybrid</text>
+<line x1="770" y1="150" x2="840" y2="150" stroke="#f59e0b" stroke-width="3"/>
+<line x1="785" y1="150" x2="785" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="785" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="785" y="102" text-anchor="middle" fill="#f59e0b" font-size="11">A</text>
+<line x1="825" y1="150" x2="825" y2="109" stroke="#888" stroke-width="1.5"/>
+<circle cx="825" cy="98" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="825" y="102" text-anchor="middle" fill="#888" font-size="11">B</text>
+<line x1="840" y1="150" x2="874" y2="150" stroke="#f59e0b" stroke-width="2.5"/>
+<rect x="874" y="141" width="28" height="18" rx="3" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+<line x1="902.0" y1="150.0" x2="922.0" y2="119.2" stroke="#888" stroke-width="1.5"/>
+<circle cx="928" cy="110" r="11" fill="rgba(136,136,136,0.12)" stroke="#888" stroke-width="1.5"/><text x="928" y="114" text-anchor="middle" fill="#888" font-size="11">C</text>
+<line x1="902.0" y1="150.0" x2="922.0" y2="180.8" stroke="#f59e0b" stroke-width="2.5"/>
+<circle cx="928" cy="190" r="11" fill="rgba(136,136,136,0.12)" stroke="#f59e0b" stroke-width="1.5"/><text x="928" y="194" text-anchor="middle" fill="#f59e0b" font-size="11">D</text>
+<text x="850" y="218" text-anchor="middle" fill="#888" font-size="11">a bus segment joined to a star:</text>
+<text x="850" y="232" text-anchor="middle" fill="#888" font-size="11">most real LANs are hybrids</text>
+<text x="480" y="280" text-anchor="middle" fill="#888" font-size="12">amber = the path A to D; 9618 asks you to trace it and to justify the choice — cost and cabling against robustness and collisions</text>
+</svg>

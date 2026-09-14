@@ -1,9 +1,11 @@
 ---
 chinese: 罗素悖论
-prerequisites: []
+prerequisites:
+  - "[[Cantor vs Kronecker]]"
 leads_to:
   - "[[Gödel's Incompleteness Theorems]]"
   - "[[Universal Set]]"
+  - "[[Hilbert vs Brouwer]]"
 tags:
   - type/story
   - subject/mathematics

@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+  </defs>
+  <text x="500" y="24" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">Two electrons repel: the picture, the rule, and the number it computes</text>
+  <!-- left: tree-level Moller scattering -->
+  <text x="190" y="52" text-anchor="middle" fill="#888" font-weight="bold">one photon exchanged</text>
+  <g stroke="#2563eb" stroke-width="2" fill="none">
+    <path d="M60 300 L190 210" marker-end="url(#ah)"/><path d="M190 210 L320 300" marker-end="url(#ah)"/>
+    <path d="M60 90 L190 150" marker-end="url(#ah)"/><path d="M190 150 L320 90" marker-end="url(#ah)"/>
+  </g>
+  <path d="M190 150 q8 7.5 0 15 q-8 7.5 0 15 q8 7.5 0 15 q-8 7.5 0 15" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <circle cx="190" cy="150" r="4" fill="#7c3aed"/><circle cx="190" cy="210" r="4" fill="#7c3aed"/>
+  <text x="48" y="84" text-anchor="middle" fill="#888">e</text><text x="48" y="318" text-anchor="middle" fill="#888">e</text>
+  <text x="332" y="84" text-anchor="middle" fill="#888">e</text><text x="332" y="318" text-anchor="middle" fill="#888">e</text>
+  <text x="212" y="184" fill="#888" font-size="12">photon</text>
+  <text x="190" y="336" text-anchor="middle" fill="#888" font-size="11">time runs left to right; each vertex is one factor of the charge</text>
+  <!-- middle: the rule -->
+  <text x="530" y="52" text-anchor="middle" fill="#888" font-weight="bold">the rule</text>
+  <text x="530" y="110" text-anchor="middle" fill="#888" font-size="12">draw every way the event can happen</text>
+  <text x="530" y="132" text-anchor="middle" fill="#888" font-size="12">each vertex costs a factor of about 1/137</text>
+  <text x="530" y="154" text-anchor="middle" fill="#888" font-size="12">add the diagrams up, then square</text>
+  <text x="530" y="200" text-anchor="middle" fill="#888" font-size="12">two vertices: the size of the effect</text>
+  <text x="530" y="222" text-anchor="middle" fill="#888" font-size="12">four vertices: a correction 137 times smaller</text>
+  <text x="530" y="244" text-anchor="middle" fill="#888" font-size="12">six vertices: smaller again by 137</text>
+  <text x="530" y="280" text-anchor="middle" fill="#888" font-size="12">the sum over histories,</text><text x="530" y="298" text-anchor="middle" fill="#888" font-size="12">drawn one history at a time</text>
+  <!-- right: Schwinger loop -->
+  <text x="840" y="52" text-anchor="middle" fill="#888" font-weight="bold">the electron's own photon</text>
+  <g stroke="#2563eb" stroke-width="2" fill="none">
+    <path d="M720 250 L790 250" marker-end="url(#ah)"/><path d="M790 250 L890 250" marker-end="url(#ah)"/><path d="M890 250 L960 250" marker-end="url(#ah)"/>
+  </g>
+  <path d="M790 250 q-10 -30 12 -45 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q22 15 16 45" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <circle cx="790" cy="250" r="4" fill="#7c3aed"/><circle cx="890" cy="250" r="4" fill="#7c3aed"/>
+  <path d="M840 120 L840 175" stroke="#059669" stroke-width="2" stroke-dasharray="5 4"/><text x="840" y="112" text-anchor="middle" fill="#888" font-size="11">magnetic field</text>
+  <text x="840" y="290" text-anchor="middle" fill="#888" font-size="11">Schwinger 1948: this one loop adds</text><text x="840" y="306" text-anchor="middle" fill="#888" font-size="11">0.001161 to the magnetic moment</text>
+  <text x="840" y="322" text-anchor="middle" fill="#888" font-size="11">measured 0.001160; five orders of</text><text x="840" y="338" text-anchor="middle" fill="#888" font-size="11">diagrams agree to eleven digits</text>
+  <text x="840" y="362" text-anchor="middle" fill="#888" font-size="11" font-weight="bold">this is what the Nobel was for</text>
+</svg>

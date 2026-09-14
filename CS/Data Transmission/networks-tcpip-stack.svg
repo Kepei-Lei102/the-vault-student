@@ -1,31 +1,49 @@
-<svg width="100%" viewBox="0 0 960 470" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
-  <text x="480" y="26" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">The TCP/IP stack: each layer wraps the one above, and only two of them are opened along the way</text>
-  <!-- sender stack -->
-  <text x="150" y="60" text-anchor="middle" fill="#888" font-weight="bold">sending host</text>
-  <g stroke-width="1.5">
-    <rect x="40" y="75" width="220" height="60" rx="6" fill="rgba(124,58,237,0.15)" stroke="#7c3aed"/>
-    <rect x="40" y="145" width="220" height="60" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb"/>
-    <rect x="40" y="215" width="220" height="60" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669"/>
-    <rect x="40" y="285" width="220" height="60" rx="6" fill="rgba(245,158,11,0.15)" stroke="#f59e0b"/>
-  </g>
-  <text x="150" y="98" text-anchor="middle" fill="#888" font-weight="bold">Application</text><text x="150" y="116" text-anchor="middle" fill="#888" font-size="11">HTTP · FTP · SMTP · POP3 · IMAP · BitTorrent</text>
-  <text x="150" y="168" text-anchor="middle" fill="#888" font-weight="bold">Transport</text><text x="150" y="186" text-anchor="middle" fill="#888" font-size="11">TCP (reliable, ordered) · UDP (fast, no promises)</text>
-  <text x="150" y="238" text-anchor="middle" fill="#888" font-weight="bold">Internet</text><text x="150" y="256" text-anchor="middle" fill="#888" font-size="11">IP — addresses, routing, hop by hop</text>
-  <text x="150" y="308" text-anchor="middle" fill="#888" font-weight="bold">Link</text><text x="150" y="326" text-anchor="middle" fill="#888" font-size="11">Ethernet · Wi-Fi · 5G — one physical hop</text>
-  <!-- the message growing -->
-  <text x="450" y="60" text-anchor="middle" fill="#888" font-weight="bold">the message as it goes down</text>
-  <rect x="400" y="88" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="450" y="108" text-anchor="middle" fill="#888" font-size="11">100 B data</text>
-  <rect x="370" y="158" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><rect x="400" y="158" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="385" y="178" text-anchor="middle" fill="#888" font-size="9">TCP</text><text x="450" y="178" text-anchor="middle" fill="#888" font-size="11">segment 120 B</text>
-  <rect x="340" y="228" width="30" height="30" fill="rgba(5,150,105,0.35)" stroke="#059669"/><rect x="370" y="228" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><rect x="400" y="228" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="355" y="248" text-anchor="middle" fill="#888" font-size="9">IP</text><text x="450" y="248" text-anchor="middle" fill="#888" font-size="11">packet 140 B</text>
-  <rect x="310" y="298" width="30" height="30" fill="rgba(245,158,11,0.35)" stroke="#f59e0b"/><rect x="340" y="298" width="30" height="30" fill="rgba(5,150,105,0.35)" stroke="#059669"/><rect x="370" y="298" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><rect x="400" y="298" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><rect x="500" y="298" width="20" height="30" fill="rgba(245,158,11,0.35)" stroke="#f59e0b"/><text x="325" y="318" text-anchor="middle" fill="#888" font-size="9">Eth</text><text x="450" y="318" text-anchor="middle" fill="#888" font-size="11">frame 158 B</text><text x="510" y="318" text-anchor="middle" fill="#888" font-size="8">CRC</text>
-  <text x="450" y="365" text-anchor="middle" fill="#888" font-size="11">each layer adds a header the same layer on the far side will strip: 37 % of this frame is addressing and checking</text>
-  <!-- router in the middle -->
-  <text x="700" y="60" text-anchor="middle" fill="#888" font-weight="bold">a router on the way</text>
-  <rect x="610" y="215" width="180" height="60" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/><text x="700" y="238" text-anchor="middle" fill="#888" font-weight="bold">Internet</text><text x="700" y="256" text-anchor="middle" fill="#888" font-size="11">reads the IP address, picks the next hop</text>
-  <rect x="610" y="285" width="180" height="60" rx="6" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/><text x="700" y="308" text-anchor="middle" fill="#888" font-weight="bold">Link</text><text x="700" y="326" text-anchor="middle" fill="#888" font-size="11">new frame for the next cable</text>
-  <text x="700" y="120" text-anchor="middle" fill="#888" font-size="11">a router never opens the TCP</text><text x="700" y="136" text-anchor="middle" fill="#888" font-size="11">header or the data: it works</text><text x="700" y="152" text-anchor="middle" fill="#888" font-size="11">at the Internet layer and below</text>
-  <path d="M260 315 L305 315" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/><path d="M525 315 L610 315" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/><path d="M790 315 L930 315" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
-  <text x="415" y="345" text-anchor="middle" fill="#888" font-size="10">one Ethernet / Wi-Fi hop</text><text x="860" y="345" text-anchor="middle" fill="#888" font-size="10">next hop…</text>
-  <text x="480" y="410" text-anchor="middle" fill="#888" font-size="12">the two ends speak Application-to-Application and Transport-to-Transport; only the Internet and Link layers are touched at every hop between</text>
-  <text x="480" y="432" text-anchor="middle" fill="#888" font-size="12">that split is why the internet can change every router and cable underneath a web page without the web page noticing</text>
+<svg width="100%" viewBox="0 0 980 570" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="490" y="26" text-anchor="middle" fill="#888" font-weight="bold" font-size="16">The TCP/IP stack: each layer wraps the one above, and only two of them are opened along the way</text>
+<text x="165" y="60" text-anchor="middle" fill="#888" font-weight="bold">sending host</text>
+<rect x="30" y="78" width="270" height="80" rx="6" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="165" y="102" text-anchor="middle" fill="#888" font-weight="bold">Application</text>
+<text x="165" y="122" text-anchor="middle" fill="#888" font-size="11">HTTP · FTP · SMTP</text>
+<text x="165" y="138" text-anchor="middle" fill="#888" font-size="11">POP3 · IMAP · BitTorrent</text>
+<rect x="30" y="172" width="270" height="80" rx="6" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1.5"/>
+<text x="165" y="196" text-anchor="middle" fill="#888" font-weight="bold">Transport</text>
+<text x="165" y="216" text-anchor="middle" fill="#888" font-size="11">TCP — reliable, ordered</text>
+<text x="165" y="232" text-anchor="middle" fill="#888" font-size="11">UDP — fast, no promises</text>
+<rect x="30" y="266" width="270" height="80" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/>
+<text x="165" y="290" text-anchor="middle" fill="#888" font-weight="bold">Internet</text>
+<text x="165" y="310" text-anchor="middle" fill="#888" font-size="11">IP — addresses and routing,</text>
+<text x="165" y="326" text-anchor="middle" fill="#888" font-size="11">one hop at a time</text>
+<rect x="30" y="360" width="270" height="80" rx="6" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="165" y="384" text-anchor="middle" fill="#888" font-weight="bold">Link</text>
+<text x="165" y="404" text-anchor="middle" fill="#888" font-size="11">Ethernet · Wi-Fi · 5G</text>
+<text x="165" y="420" text-anchor="middle" fill="#888" font-size="11">one physical hop</text>
+<text x="470" y="60" text-anchor="middle" fill="#888" font-weight="bold">the message as it goes down</text>
+<rect x="420" y="103" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="470.0" y="123" text-anchor="middle" fill="#888" font-size="11">100 B data</text>
+<rect x="390" y="197" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><text x="405.0" y="217" text-anchor="middle" fill="#888" font-size="9">TCP</text>
+<rect x="420" y="197" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="470.0" y="217" text-anchor="middle" fill="#888" font-size="11">segment 120 B</text>
+<rect x="360" y="291" width="30" height="30" fill="rgba(5,150,105,0.35)" stroke="#059669"/><text x="375.0" y="311" text-anchor="middle" fill="#888" font-size="9">IP</text>
+<rect x="390" y="291" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><text x="405.0" y="311" text-anchor="middle" fill="#888" font-size="9">TCP</text>
+<rect x="420" y="291" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="470.0" y="311" text-anchor="middle" fill="#888" font-size="11">packet 140 B</text>
+<rect x="330" y="385" width="30" height="30" fill="rgba(245,158,11,0.35)" stroke="#f59e0b"/><text x="345.0" y="405" text-anchor="middle" fill="#888" font-size="9">Eth</text>
+<rect x="360" y="385" width="30" height="30" fill="rgba(5,150,105,0.35)" stroke="#059669"/><text x="375.0" y="405" text-anchor="middle" fill="#888" font-size="9">IP</text>
+<rect x="390" y="385" width="30" height="30" fill="rgba(37,99,235,0.35)" stroke="#2563eb"/><text x="405.0" y="405" text-anchor="middle" fill="#888" font-size="9">TCP</text>
+<rect x="420" y="385" width="100" height="30" fill="rgba(124,58,237,0.25)" stroke="#7c3aed"/><text x="470.0" y="405" text-anchor="middle" fill="#888" font-size="11">frame 158 B</text>
+<rect x="520" y="385" width="26" height="30" fill="rgba(245,158,11,0.35)" stroke="#f59e0b"/><text x="533.0" y="405" text-anchor="middle" fill="#888" font-size="8">CRC</text>
+<text x="470" y="442" text-anchor="middle" fill="#888" font-size="11">each layer adds a header the same layer on the far side will strip:</text>
+<text x="470" y="458" text-anchor="middle" fill="#888" font-size="11">37 % of this frame is addressing and checking</text>
+<text x="780" y="60" text-anchor="middle" fill="#888" font-weight="bold">a router on the way</text>
+<rect x="660" y="266" width="240" height="80" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.5"/>
+<text x="780" y="290" text-anchor="middle" fill="#888" font-weight="bold">Internet</text>
+<text x="780" y="310" text-anchor="middle" fill="#888" font-size="11">reads the IP address,</text><text x="780" y="326" text-anchor="middle" fill="#888" font-size="11">picks the next hop</text>
+<rect x="660" y="360" width="240" height="80" rx="6" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="780" y="384" text-anchor="middle" fill="#888" font-weight="bold">Link</text>
+<text x="780" y="404" text-anchor="middle" fill="#888" font-size="11">a new frame for</text><text x="780" y="420" text-anchor="middle" fill="#888" font-size="11">the next cable</text>
+<text x="780" y="108" text-anchor="middle" fill="#888" font-size="11">a router never opens the TCP header</text>
+<text x="780" y="125" text-anchor="middle" fill="#888" font-size="11">or the data: it works at the</text>
+<text x="780" y="142" text-anchor="middle" fill="#888" font-size="11">Internet layer and below</text>
+<path d="M300 400 L325 400" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/><path d="M551 400 L660 400" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/><path d="M900 400 L960 400" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="598" y="392" text-anchor="middle" fill="#888" font-size="10">one Ethernet / Wi-Fi hop</text><text x="930" y="392" text-anchor="middle" fill="#888" font-size="10">next hop…</text>
+<text x="490" y="520" text-anchor="middle" fill="#888" font-size="12">the two ends speak Application-to-Application and Transport-to-Transport;</text>
+<text x="490" y="538" text-anchor="middle" fill="#888" font-size="12">only the Internet and Link layers are touched at every hop between — which is why the internet can change</text>
+<text x="490" y="556" text-anchor="middle" fill="#888" font-size="12">every router and cable underneath a web page without the web page noticing</text>
 </svg>

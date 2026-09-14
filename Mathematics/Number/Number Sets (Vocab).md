@@ -13,6 +13,7 @@ leads_to:
   - "[[Decimals (Vocab)]]"
   - "[[Ordering and Inequalities Notation (Vocab)]]"
   - "[[Set-Builder Notation]]"
+  - "[[Cantor vs Kronecker]]"
 tags:
   - subject/mathematics
   - domain/number

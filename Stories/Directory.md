@@ -1,6 +1,6 @@
 # The Vault — Stories Directory 故事目录
 
-> **41 stories.** Last landed: [[Erdős the Wandering Mathematician]] (2026-09-08) — one suitcase, five hundred coauthors, and the proof that builds nothing.
+> **44 stories.** Last landed: [[Hilbert vs Brouwer]] (2026-09-12) — the excluded middle on trial: theology, the revolution, the Putsch, the frog-mouse war over a journal, and Gödel in Königsberg the day before *we must know*.
 > Fun-first historical narratives: the folder where the human drama of mathematics, physics and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Meta/Directory|Meta]].
@@ -23,7 +23,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ---
 
-## Mathematics (15)
+## Mathematics (17)
 
 1. **[[The Calculus Priority Dispute]]** — Newton vs Leibniz, 1665–1727: the Royal Society's rigged committee, Britain's century in the notation wilderness, Babbage's 1812 fix.
 2. **[[The Hidden Number]]** — 250 years of $e$ from Napier to Hermite: "natural" means *unbidden* — five independent paths keep producing the same constant, nobody choosing it.
@@ -40,8 +40,10 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 13. **[[Russell's Paradox in the Post]]** — the 1902 letter that broke Frege's life work while Volume II sat at the printer; the prequel to Gödel.
 14. **[[Ramanujan and Hardy]]** — the 1913 letter from a Madras clerk, the partition formula checked against MacMahon's hand-computed table, the taxi numbered 1729, and the notebook lost for fifty-six years.
 15. **[[Erdős the Wandering Mathematician]]** — no home, one suitcase, "my brain is open"; the six-person party and the pigeonhole, the probabilistic method that proves by refusing to construct; the bet and the feud, kept difficult.
+16. **[[Cantor vs Kronecker]]** — teacher against student, 1874–1891: the fractions counted by zigzag and the reals uncounted by diagonal (both run here), "I see it but I do not believe it", *God made the integers*, the Halle clinic kept separate from the feud, and Kronecker given his due through Turing.
+17. **[[Hilbert vs Brouwer]]** — the same war a generation on, 1888–1931: "this is theology", consistency-is-existence versus build-it-or-it-isn't-there, Weyl's revolution and Hilbert's Putsch, the *Annalen* purge Einstein called the war of the frogs and the mice, and Gödel announcing incompleteness in Königsberg the day before *Wir müssen wissen*; the excluded-middle example run both ways, and the settlement inside every proof assistant.
 
-## Physics (10)
+## Physics (11)
 
 1. **[[Newton vs Hooke]]** — the first Newton priority fight, 1672–1703: the "Giants" letter as a barbed pun, the inverse-square letter, the missing portrait.
 2. **[[The 1919 Eclipse]]** — Eddington at Príncipe, Crommelin at Sobral: the Sobral plates discarded, and why that was calibration rather than cheating.
@@ -53,6 +55,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 8. **[[The Blue LED]]** — thirty years of red and green; Nakamura's unhedged bet on gallium nitride, and the Nobel that Alfred Nobel's will was written for.
 9. **[[Franklin's Coin Flip]]** — the printer who invented plus and minus, conserved charge by double-entry bookkeeping, and guessed the mobile carrier's sign wrong.
 10. **[[The Bookbinder's Apprentice]]** — Faraday: the blacksmith's son who learned science from the books he bound and, unable to afford mathematics, drew the field instead.
+11. **[[Famous for the Wrong Thing]]** — Feynman: famous for the safes, the plate, the bongos, the ice water and a study method he never wrote; not for the diagrams that compute the electron's magnetism to eleven digits — run here, with the O-ring chart the engineers never drew.
 
 ## Computing (13)
 
@@ -78,7 +81,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ## Roadmap
 
-Titles waiting for their breath, not yet written: *Feynman — Famous for the Wrong Thing* · *Stats Lies Hall of Fame* · *Archimedes and the Soldier* · *Laplace and Napoleon* · *Cantor vs Kronecker* · *Hilbert vs Brouwer* · *Erdős the Wandering Mathematician*.
+Titles waiting for their breath, not yet written: *Stats Lies Hall of Fame* · *Archimedes and the Soldier* · *Laplace and Napoleon* · *Erdős the Wandering Mathematician*.
 
 ---
 

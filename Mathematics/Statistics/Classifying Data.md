@@ -165,7 +165,7 @@ Values that can take **any value within a range** — including all decimals.
 > The difference between the true continuous value and the nearest discrete value the computer can store is called the **quantisation error** (量化误差, liànghuà wùchā). This is "arbitrarily close" in action: with enough bits and enough samples, the quantisation error becomes negligibly small — the discrete approximation becomes indistinguishable from the continuous original — but it never actually *becomes* continuous. The gap between discrete and continuous is fundamental, and every digital device you use is a compromise across it.
 
 > [!info] Beyond syllabus — Continuous data is always rounded
-> When we write "height = 170.3 cm," what we really mean is "height is between 170.25 cm and 170.35 cm." Every measurement of continuous data is an approximation — limited by the measuring instrument. The true value has infinitely many decimal places. This connects to [[Power Rule#Upper and lower bounds|upper and lower bounds]] in the Number topic.
+> When we write "height = 170.3 cm," what we really mean is "height is between 170.25 cm and 170.35 cm." Every measurement of continuous data is an approximation — limited by the measuring instrument. The true value has infinitely many decimal places. This connects to [[Upper and Lower Bounds#1. Finding Bounds from Rounded Values|upper and lower bounds]] in the Number topic.
 
 ### Primary vs Secondary Data
 

@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **59 cards across 10 bays.** Last landed: [[Networks]] (2026-09-09) — the rules, the pieces, and the number in the corner of the screen: the TCP/IP stack, packet switching watched, circuit switching weighed, serial/parallel/duplex and USB, and forty real pings from Chengdu.
+> **61 cards across 10 bays.** Last landed: [[Program Development Life Cycle and Testing]] (2026-09-14) — cooking for six on Saturday: five stages, three models, three kinds of error, nine testing methods, four kinds of data, the trace table filled live; nine real Paper 2 questions from both boards.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -29,7 +29,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 3. **[[Half-Adder and Full-Adder]]** — a computer does arithmetic by doing logic: Sum = XOR, Carry = the majority function; the ripple-carry chain.
 4. **[[Flip-Flops]]** — memory bought with feedback: why one inverter in a loop oscillates and two remember; the SR and JK flip-flops; the SRAM cell.
 
-## Algorithms (7 — core arc closed, plus enrichment and the paradigms)
+## Algorithms (8 — core arc closed, plus enrichment, the paradigms and the life cycle)
 
 *Concrete first, analysis after: searching → sorting → Big-O, with program design and the exam dialect alongside.*
 
@@ -40,6 +40,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 5. **[[Big-O Notation]]** — how cost grows with $n$: the class ladder from $O(1)$ to $O(n!)$, the $c, n_0$ definition, reading Big-O off code. *9618 §19.1 · AP CSA §2.12*
 6. **[[Parallel and External Sorting]]** — what sorting becomes with many cores or data too big for RAM: fork–join merge sort, Amdahl's law, the measured overhead crossover. 💎
 7. **[[Object-Oriented Programming]]** — the nine syllabus terms built in real Python: data and behaviour bundled, encapsulation as invariants living next to the data, inheritance as is-a, polymorphism as the loop that never asks, containment as has-a; the June 2025 Animal/Parrot/Wolf and Nov 2025 Station/Train Paper 4 questions worked against their schemes; ECS in Beyond as OOP's deliberate inverse — and the vault's own architecture. *9618 §20.1 · AP CSA Unit 3 · IB CS B3*
+8. **[[Program Development Life Cycle and Testing]]** — the cycle from coding onward and the three models (waterfall, iterative, RAD); syntax, run-time and logic errors by who finds them; nine testing methods, the strategy and the plan; normal / abnormal / extreme / boundary data and the six validation checks; trace tables done by hand and by machine; three kinds of maintenance. *0478 §7.1, §7.5–7.8 · 9618 §12.1, §12.3*
 
 ## Data Representation (12 — closed)
 
@@ -117,14 +118,14 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 *Next in the bay: [[Encryption]] (0478 §2.3 · 9618 §17 · IB A2.4) and the ethics/privacy law card.*
 
-## Data Transmission (2 — open)
+## Data Transmission (3 — open)
 
 *0478 Section 2, and 9618 Section 14. Two of the three subsections are written; §2.3 encryption lives in the Security bay.*
 
 1. **[[Error Detection and Correction]]** — validation, verification and correction at three prices: parity and its honest limit, the parity block, checksums, check digits, the echo check. *0478 §2.2*
 2. **[[Networks]]** — why a protocol, the four-layer TCP/IP stack with encapsulation counted, packets and packet switching animated, circuit switching weighed, serial/parallel/duplex and USB, latency measured from Chengdu. *9618 §14 closed · 0478 §2.1 · IB A2.1–A2.3*
 
-*Next in the bay: [[The Internet and the Web]] (0478 §5.1 — internet vs WWW, URLs, browsers, DNS).*
+3. **[[The Internet and the Web]]** — the internet is not the web: URL anatomy, the DNS chain sent by hand and animated, HTTP vs HTTPS with a certificate read live, session and persistent cookies fetched from a real site, MAC/IPv4/IPv6, the router, LAN topologies with a packet's path, client-server vs P2P, cloud, bit streaming. *0478 §3.4 + §5.1 · 9618 §2.1 · IB A2.2*
 
 ## Planned bays
 

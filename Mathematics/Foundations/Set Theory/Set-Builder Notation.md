@@ -139,6 +139,13 @@ $\{x : x + 3 = 7\} = \{4\}$ — this set has exactly one element. Students somet
 - Sets in 9260 are typically defined by roster or verbal description
 - Still valuable for building understanding, especially when linking to inequalities (A23) and function domains (A9)
 
+### IB Mathematics AA / AI and AP
+
+- No set-theory topic on either IB route, but the notation is *used*: domains and ranges are written as $\{x \in \mathbb{R} : x \ne 2\}$ or in interval form throughout the functions topic (SL 2), and solution sets of inequalities the same way. Read it fluently; it is never examined for itself.
+- **AP Calculus:** interval notation is the house style; set-builder appears only in the definition of a function's domain.
+
+**Not examined on** Cambridge 0606 (no set theory), 9709 or 9231 — 9709 writes domains in words or intervals.
+
 ## Connections
 
 - **Parent:** [[Set]], [[Element]]

@@ -5,6 +5,7 @@ prerequisites:
   - "[[Cambridge Pseudocode]]"
   - "[[Program Design]]"
   - "[[A Rich Neighbor Named Xerox]]"
+  - "[[Program Development Life Cycle and Testing]]"
 leads_to:
   - "[[Declarative Programming]]"
   - "[[Dual-Core Craft]]"

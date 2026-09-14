@@ -1,0 +1,22 @@
+<svg width="100%" viewBox="0 0 900 250" xmlns="http://www.w3.org/2000/svg">
+  <text x="450" y="26" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">Four kinds of test data for "an integer from 5 to 10 inclusive"</text>
+  <!-- number line -->
+  <line x1="60" y1="130" x2="840" y2="130" stroke="#888" stroke-width="1.5"/>
+  <rect x="290" y="112" width="360" height="36" rx="6" fill="rgba(5,150,105,0.15)" stroke="#059669" stroke-width="1.2"/>
+  <text x="470" y="106" text-anchor="middle" font-size="11" fill="#059669">accepted</text>
+  <g font-size="12" fill="#888" text-anchor="middle">
+    <text x="130" y="152">1</text><text x="190" y="152">2</text><text x="250" y="152">4</text><text x="310" y="152">5</text><text x="370" y="152">6</text><text x="430" y="152">7</text><text x="490" y="152">8</text><text x="550" y="152">9</text><text x="630" y="152">10</text><text x="690" y="152">11</text><text x="760" y="152">31</text>
+  </g>
+  <g stroke="#888" stroke-width="1"><line x1="130" y1="126" x2="130" y2="134"/><line x1="190" y1="126" x2="190" y2="134"/><line x1="250" y1="126" x2="250" y2="134"/><line x1="310" y1="126" x2="310" y2="134"/><line x1="370" y1="126" x2="370" y2="134"/><line x1="430" y1="126" x2="430" y2="134"/><line x1="490" y1="126" x2="490" y2="134"/><line x1="550" y1="126" x2="550" y2="134"/><line x1="630" y1="126" x2="630" y2="134"/><line x1="690" y1="126" x2="690" y2="134"/><line x1="760" y1="126" x2="760" y2="134"/></g>
+  <!-- markers -->
+  <circle cx="430" cy="130" r="7" fill="#059669"/><text x="430" y="82" text-anchor="middle" font-size="11.5" fill="#059669" font-weight="bold">normal: 7</text><text x="430" y="66" text-anchor="middle" font-size="10" fill="#888">any accepted value</text>
+  <circle cx="310" cy="130" r="7" fill="#2563eb"/><circle cx="630" cy="130" r="7" fill="#2563eb"/>
+  <text x="310" y="185" text-anchor="middle" font-size="11.5" fill="#2563eb" font-weight="bold">extreme: 5</text><text x="630" y="185" text-anchor="middle" font-size="11.5" fill="#2563eb" font-weight="bold">extreme: 10</text>
+  <text x="470" y="185" text-anchor="middle" font-size="10" fill="#888">the largest and smallest values still accepted</text>
+  <circle cx="250" cy="130" r="7" fill="none" stroke="#f59e0b" stroke-width="2.5"/><circle cx="690" cy="130" r="7" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="250" y="210" text-anchor="middle" font-size="11.5" fill="#f59e0b" font-weight="bold">boundary: 4 | 5</text><text x="690" y="210" text-anchor="middle" font-size="11.5" fill="#f59e0b" font-weight="bold">boundary: 10 | 11</text>
+  <text x="470" y="210" text-anchor="middle" font-size="10" fill="#888">each extreme paired with its neighbour just outside</text>
+  <circle cx="760" cy="130" r="7" fill="#dc2626"/><circle cx="130" cy="130" r="7" fill="#dc2626"/>
+  <text x="760" y="82" text-anchor="middle" font-size="11.5" fill="#dc2626" font-weight="bold">abnormal: 31</text><text x="130" y="82" text-anchor="middle" font-size="11.5" fill="#dc2626" font-weight="bold">abnormal: "six", 7.5</text><text x="130" y="66" text-anchor="middle" font-size="10" fill="#888">rejected: wrong range or wrong type</text>
+  <text x="450" y="240" text-anchor="middle" font-size="10.5" fill="#888">0478 March 2024 Paper 22 Q2: the scheme's own examples are normal 6, extreme 5 or 10, boundary 4 and 5 or 10 and 11, abnormal 31</text>
+</svg>

@@ -1,6 +1,6 @@
 # The Vault — Mathematics Directory
 
-> **219 cards** — 214 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Eigenvalues and Eigenvectors]] (2026-08-20).
+> **220 cards** — 215 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Topology]] (2026-09-12) — the geometry that survives stretching: the metro map, Königsberg, the mug that is a doughnut, the Möbius cut.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations and the graph of what to read first.
 
 **Reading the domains.** Folders are decorative; this index and each card's frontmatter are the map. *(Vocab)* cards are short definition-first entries; the rest are deep cards. Board codes: 0580 = Cambridge IGCSE, 0606 = Cambridge Additional Maths, 9709 = Cambridge A Level (P1–P6), 9231 = Cambridge Further (FP1, FP2, FM, FS), 9260 = OxAQA IGCSE, IB, AP.
@@ -175,7 +175,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 
 1. **[[Exam Command Words (Vocab)]]** — official Cambridge definitions: sketch vs plot, state vs describe vs explain, show that vs prove vs verify; per-board differences.
 
-## Geometry (36)
+## Geometry (37)
 
 1. **[[Pythagoras Theorem]]** — $a^2 + b^2 = c^2$ with three proofs (赵爽弦图, rearrangement, similar triangles); triples; the converse; the 3D extension.
 2. **[[Angle Properties (Vocab)]]** — acute/obtuse/reflex, complementary/supplementary, vertically opposite, angles on a line and at a point.
@@ -213,6 +213,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 34. **[[Cross Product]]** — the vector product perpendicular to both inputs with magnitude = parallelogram area; the determinant formula; built as the dot product's mirror. *9231 FP1*
 35. **[[Planes in 3D]]** — point → line → plane, each anchor + span; the three costumes converted both ways; the normal as flagpole; distances and angles, every tool named. *9231 FP1*
 36. **[[Polar Coordinates]]** — a polar sketch is an ordinary $r$–$\theta$ graph read while turning; tangents at the pole; the sector-area integral $\tfrac12 \int r^2\,d\theta$. *9231 FP1 §1.6*
+37. **[[Topology]]** — throw away the ruler: what survives stretching is the number of holes; Euler's $V-E+F$ computed on the Platonic solids and a glued torus, Königsberg's seven bridges counted, planarity and Kirchhoff's loop count as invariants, the metro map, the Möbius strip cut in Manim, the hairy ball, the fixed point, the 2016 Nobel. *Enrichment — no board*
 
 ## Trigonometry (9)
 

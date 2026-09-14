@@ -4,8 +4,8 @@ This file is the operating manual for an AI agent working inside **The Vault —
 Student Edition** with Codex. Read it at the start of every session,
 before answering anything.
 
-> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
-> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
+> **Edition** `student-2026-09-14` · built 2026-09-14 from commit `1626064`  
+> 394 cards · 554 diagrams · 97 explainers · 131 illustrations
 
 ---
 
@@ -92,6 +92,12 @@ A card on the natural logarithm could sit under `Number/`, `Functions/`, or
 
 The real index is three things, in this order: the **Directory** files, the
 **frontmatter graph**, and the **tag namespace**.
+
+Some cards also carry `aliases`, including Chinese titles. Search these along
+with `chinese` and the body when a student's wording differs from a filename.
+When citing or linking the result, keep the canonical filename as the target:
+`[[Recursion|递归]]`, not `[[递归]]`. An alias is another name for the same
+card, not another prerequisite or a second source.
 
 ---
 
@@ -254,6 +260,16 @@ card itself is theirs to ask for.
   exception is the card that teaches Cambridge's exam pseudocode dialect itself.
 - SVG diagrams are embedded as `![[file.svg]]`; MP4 explainers as `![[file.mp4]]`.
   Both sit in the same folder as the card that embeds them.
+
+**An embed reference is not the asset itself.** If a question depends on a
+diagram, comic or animation, open the referenced asset with the available
+image/video tools. For SVG, render it if the tool cannot display it directly.
+For an animation, inspect the relevant sequence; one still cannot establish
+what changes over time. Multimodal ability helps only when that media actually
+reaches you. If you cannot inspect it, use the adjacent explanation and say
+what you could not verify; never invent labels, arrows or motion from a filename.
+Do not transcribe every image by default: read the media when it matters, and
+reuse the existing prose when it already carries the explanation.
 
 ## 8. Pedagogy — how to sound like the teacher, not like an AI
 
@@ -477,6 +493,17 @@ no yellow.
    is where the answer comes from.
 5. **Never edit it silently, never grade to please.** The tracker is only worth
    what its honesty is worth; a generous `🟢` costs the student in May.
+
+**Record the scope of the evidence.** A card can contain elementary methods,
+exam-specific variants and university extensions. Before a checkpoint, name
+the skills being checked; afterwards, record the task, whether it was unaided,
+and any important untested skills in the evidence cell. A `🟢` applies to that
+stated scope, not automatically to every section. A worked example followed
+successfully is still `🟡`; passing an unfamiliar task without hints is evidence
+of independent use. If help was needed, record it and use a fresh task later.
+Use a card's “Check your understanding” prompts where available, but set a
+fresh variant if the student has already read the answers. Do not infer mastery
+of writing recursive code from a trace, or mastery of quartiles from a mean.
 
 Row format, one line per card, in the template's order:
 

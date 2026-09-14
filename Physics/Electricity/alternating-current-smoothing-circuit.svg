@@ -1,0 +1,45 @@
+<svg width="100%" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker></defs>
+<text x="250" y="22" text-anchor="middle" fill="#888" font-weight="bold">near a peak: the supply charges C and feeds R</text>
+<circle cx="60" cy="140" r="14" fill="none" stroke="#888" stroke-width="1.5"/><path d="M50 140 q5 -8 10 0 t10 0" fill="none" stroke="#888" stroke-width="1.5"/>
+<line x1="74" y1="140" x2="150" y2="140" stroke="#888" stroke-width="1.5"/>
+<path d="M60 154 L60 262 L350 262 L350 140" fill="none" stroke="#888" stroke-width="1.5"/>
+<line x1="150" y1="140" x2="250" y2="50" stroke="#059669" stroke-width="3"/>
+<polygon points="206.6896473162245,88.97931741539796 200.14865882924943,105.62910629133448 189.44522312329025,93.73639995137982" fill="#059669"/><line x1="212.04136516920408" y1="94.92567058537529" x2="201.3379294632449" y2="83.03296424542063" stroke="#059669" stroke-width="2"/>
+<line x1="250" y1="230" x2="150" y2="140" stroke="#888" stroke-width="1.5"/>
+<polygon points="193.3103526837755,178.97931741539796 210.55477687670975,183.7363999513798 199.85134117075057,195.62910629133447" fill="#888"/><line x1="198.6620705367551" y1="173.03296424542063" x2="187.95863483079592" y2="184.9256705853753" stroke="#888" stroke-width="2"/>
+<line x1="350" y1="140" x2="250" y2="50" stroke="#888" stroke-width="1.5"/>
+<polygon points="293.3103526837755,88.97931741539796 310.5547768767098,93.73639995137982 299.8513411707506,105.62910629133448" fill="#888"/><line x1="298.6620705367551" y1="83.03296424542063" x2="287.95863483079586" y2="94.92567058537529" stroke="#888" stroke-width="2"/>
+<line x1="250" y1="230" x2="350" y2="140" stroke="#059669" stroke-width="3"/>
+<polygon points="306.6896473162245,178.97931741539796 300.1486588292494,195.62910629133447 289.4452231232902,183.7363999513798" fill="#059669"/><line x1="312.04136516920414" y1="184.9256705853753" x2="301.3379294632449" y2="173.03296424542063" stroke="#059669" stroke-width="2"/>
+<line x1="250" y1="50" x2="225" y2="68" stroke="#059669" stroke-width="3"/><line x1="225" y1="68" x2="225" y2="115" stroke="#059669" stroke-width="3"/>
+<rect x="215" y="115" width="20" height="50" fill="none" stroke="#059669" stroke-width="2"/><text x="209" y="144" text-anchor="end" fill="#888" font-size="12">R</text>
+<line x1="225" y1="165" x2="225" y2="212" stroke="#059669" stroke-width="3"/><line x1="225" y1="212" x2="250" y2="230" stroke="#059669" stroke-width="3"/>
+<path d="M225 92 L225 108" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="250" y1="50" x2="278" y2="68" stroke="#f59e0b" stroke-width="2"/><line x1="278" y1="68" x2="278" y2="132" stroke="#f59e0b" stroke-width="2"/>
+<line x1="264" y1="132" x2="292" y2="132" stroke="#f59e0b" stroke-width="3"/><line x1="264" y1="148" x2="292" y2="148" stroke="#f59e0b" stroke-width="3"/><text x="298" y="144" fill="#888" font-size="12">C</text>
+<line x1="278" y1="148" x2="278" y2="212" stroke="#f59e0b" stroke-width="2"/><line x1="278" y1="212" x2="250" y2="230" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="42" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="bold">+</text><text x="250" y="250" text-anchor="middle" fill="#2563eb" font-size="13" font-weight="bold">−</text>
+<text x="710" y="22" text-anchor="middle" fill="#888" font-weight="bold">after the peak: diodes off, C discharges through R</text>
+<circle cx="520" cy="140" r="14" fill="none" stroke="#888" stroke-width="1.5"/><path d="M510 140 q5 -8 10 0 t10 0" fill="none" stroke="#888" stroke-width="1.5"/>
+<line x1="534" y1="140" x2="610" y2="140" stroke="#888" stroke-width="1.5"/>
+<path d="M520 154 L520 262 L810 262 L810 140" fill="none" stroke="#888" stroke-width="1.5"/>
+<line x1="610" y1="140" x2="710" y2="50" stroke="#888" stroke-width="1.5"/>
+<polygon points="666.6896473162245,88.97931741539796 660.1486588292495,105.62910629133448 649.4452231232902,93.73639995137982" fill="#888"/><line x1="672.0413651692041" y1="94.92567058537529" x2="661.3379294632449" y2="83.03296424542063" stroke="#888" stroke-width="2"/>
+<line x1="710" y1="230" x2="610" y2="140" stroke="#888" stroke-width="1.5"/>
+<polygon points="653.3103526837755,178.97931741539796 670.5547768767098,183.7363999513798 659.8513411707505,195.62910629133447" fill="#888"/><line x1="658.6620705367551" y1="173.03296424542063" x2="647.9586348307959" y2="184.9256705853753" stroke="#888" stroke-width="2"/>
+<line x1="810" y1="140" x2="710" y2="50" stroke="#888" stroke-width="1.5"/>
+<polygon points="753.3103526837755,88.97931741539796 770.5547768767098,93.73639995137982 759.8513411707505,105.62910629133448" fill="#888"/><line x1="758.6620705367551" y1="83.03296424542063" x2="747.9586348307959" y2="94.92567058537529" stroke="#888" stroke-width="2"/>
+<line x1="710" y1="230" x2="810" y2="140" stroke="#888" stroke-width="1.5"/>
+<polygon points="766.6896473162245,178.97931741539796 760.1486588292495,195.62910629133447 749.4452231232902,183.7363999513798" fill="#888"/><line x1="772.0413651692041" y1="184.9256705853753" x2="761.3379294632449" y2="173.03296424542063" stroke="#888" stroke-width="2"/>
+<line x1="710" y1="50" x2="685" y2="68" stroke="#dc2626" stroke-width="3"/><line x1="685" y1="68" x2="685" y2="115" stroke="#dc2626" stroke-width="3"/>
+<rect x="675" y="115" width="20" height="50" fill="none" stroke="#dc2626" stroke-width="2"/><text x="669" y="144" text-anchor="end" fill="#888" font-size="12">R</text>
+<line x1="685" y1="165" x2="685" y2="212" stroke="#dc2626" stroke-width="3"/><line x1="685" y1="212" x2="710" y2="230" stroke="#dc2626" stroke-width="3"/>
+<path d="M685 92 L685 108" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="710" y1="50" x2="738" y2="68" stroke="#f59e0b" stroke-width="2"/><line x1="738" y1="68" x2="738" y2="132" stroke="#f59e0b" stroke-width="2"/>
+<line x1="724" y1="132" x2="752" y2="132" stroke="#f59e0b" stroke-width="3"/><line x1="724" y1="148" x2="752" y2="148" stroke="#f59e0b" stroke-width="3"/><text x="758" y="144" fill="#888" font-size="12">C</text>
+<line x1="738" y1="148" x2="738" y2="212" stroke="#f59e0b" stroke-width="2"/><line x1="738" y1="212" x2="710" y2="230" stroke="#f59e0b" stroke-width="2"/>
+<path d="M738 160 L738 195" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+<text x="710" y="42" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="bold">+</text><text x="710" y="250" text-anchor="middle" fill="#2563eb" font-size="13" font-weight="bold">−</text>
+<text x="450" y="290" text-anchor="middle" fill="#888" font-size="12">the capacitor is in parallel with the load; between peaks the only path for its charge is the resistor, so V = V0 exp(−t/RC)</text>
+</svg>

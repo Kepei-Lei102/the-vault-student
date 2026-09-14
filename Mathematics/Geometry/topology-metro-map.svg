@@ -1,0 +1,43 @@
+<svg width="100%" viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<text x="480" y="26" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">The metro map is a topological map: every distance is wrong, every connection is right</text>
+<text x="480" y="56" text-anchor="middle" fill="#888" font-weight="bold">on the ground</text>
+<path d="M60 95 L150 130 L230 190 L330 165 L410 215 L500 250 L560 285 L620 305 L720 270 L860 300" fill="none" stroke="#2563eb" stroke-width="4"/>
+<path d="M300 300 L400 265 L500 250 L600 215 L760 205" fill="none" stroke="#059669" stroke-width="4"/><text x="770" y="209" fill="#059669" font-size="11">Line 2</text>
+<circle cx="60" cy="95" r="5" fill="#2563eb"/><text x="68" y="88" fill="#888" font-size="11">韦家碾</text>
+<circle cx="150" cy="130" r="5" fill="#2563eb"/><text x="158" y="123" fill="#888" font-size="11">升仙湖</text>
+<circle cx="230" cy="190" r="5" fill="#2563eb"/><text x="238" y="183" fill="#888" font-size="11">火车北站</text>
+<circle cx="330" cy="165" r="5" fill="#2563eb"/><text x="338" y="158" fill="#888" font-size="11">文殊院</text>
+<circle cx="410" cy="215" r="5" fill="#2563eb"/><text x="418" y="208" fill="#888" font-size="11">骡马市</text>
+<circle cx="500" cy="250" r="5" fill="#2563eb"/><text x="508" y="243" fill="#888" font-size="11">天府广场</text>
+<circle cx="560" cy="285" r="5" fill="#2563eb"/><text x="568" y="278" fill="#888" font-size="11">锦江宾馆</text>
+<circle cx="620" cy="305" r="5" fill="#2563eb"/><text x="628" y="298" fill="#888" font-size="11">华西坝</text>
+<circle cx="720" cy="270" r="5" fill="#2563eb"/><text x="728" y="263" fill="#888" font-size="11">省体育馆</text>
+<circle cx="860" cy="300" r="5" fill="#2563eb"/><text x="868" y="293" fill="#888" font-size="11">倪家桥</text>
+<circle cx="500" cy="250" r="8" fill="none" stroke="#888" stroke-width="2"/>
+<text x="480" y="340" text-anchor="middle" fill="#888" font-size="11">the river, the bends, the real spacing: true, and useless for changing trains</text>
+<text x="480" y="378" text-anchor="middle" fill="#888" font-weight="bold">on the wall of the station</text>
+<path d="M80 470 L170 470 L260 470 L350 470 L440 470 L530 470 L600 505 L670 540 L740 575 L810 610" fill="none" stroke="#2563eb" stroke-width="4"/>
+<path d="M530 400 L530 470 L530 560" fill="none" stroke="#059669" stroke-width="4"/><text x="540" y="404" fill="#059669" font-size="11">Line 2</text>
+<circle cx="80" cy="470" r="5" fill="#2563eb"/>
+<text x="80" y="456" text-anchor="middle" fill="#888" font-size="11">韦家碾</text>
+<circle cx="170" cy="470" r="5" fill="#2563eb"/>
+<text x="170" y="456" text-anchor="middle" fill="#888" font-size="11">升仙湖</text>
+<circle cx="260" cy="470" r="5" fill="#2563eb"/>
+<text x="260" y="456" text-anchor="middle" fill="#888" font-size="11">火车北站</text>
+<circle cx="350" cy="470" r="5" fill="#2563eb"/>
+<text x="350" y="456" text-anchor="middle" fill="#888" font-size="11">文殊院</text>
+<circle cx="440" cy="470" r="5" fill="#2563eb"/>
+<text x="440" y="456" text-anchor="middle" fill="#888" font-size="11">骡马市</text>
+<circle cx="530" cy="470" r="5" fill="#2563eb"/>
+<text x="530" y="456" text-anchor="middle" fill="#888" font-size="11">天府广场</text>
+<circle cx="600" cy="505" r="5" fill="#2563eb"/>
+<text x="610" y="509" fill="#888" font-size="11">锦江宾馆</text>
+<circle cx="670" cy="540" r="5" fill="#2563eb"/>
+<text x="680" y="544" fill="#888" font-size="11">华西坝</text>
+<circle cx="740" cy="575" r="5" fill="#2563eb"/>
+<text x="750" y="579" fill="#888" font-size="11">省体育馆</text>
+<circle cx="810" cy="610" r="5" fill="#2563eb"/>
+<text x="820" y="614" fill="#888" font-size="11">倪家桥</text>
+<circle cx="530" cy="470" r="8" fill="none" stroke="#888" stroke-width="2"/>
+<text x="480" y="628" text-anchor="middle" fill="#888" font-size="11">Beck, London 1933: keep what survives stretching — the order of stops, and where the lines meet</text>
+</svg>

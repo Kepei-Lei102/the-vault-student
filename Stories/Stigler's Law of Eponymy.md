@@ -6,6 +6,7 @@ prerequisites:
   - "[[Stories/The Bernoulli Family]]"
   - "[[Stories/The 1919 Eclipse]]"
   - "[[Stories/Aristotle to Apollo]]"
+  - "[[Famous for the Wrong Thing]]"
 leads_to: []
 tags:
   - type/story

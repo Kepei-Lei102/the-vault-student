@@ -1,0 +1,53 @@
+<svg width="100%" viewBox="0 0 980 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="490" y="26" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">Three ways round the same five stages</text>
+  <!-- WATERFALL -->
+  <text x="160" y="58" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">Waterfall</text>
+  <text x="160" y="74" text-anchor="middle" font-size="10.5" fill="#888">each stage finished and signed off before the next</text>
+  <g font-size="11" fill="#888">
+    <rect x="30" y="90" width="90" height="26" rx="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb"/><text x="75" y="107" text-anchor="middle">analysis</text>
+    <rect x="70" y="132" width="90" height="26" rx="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb"/><text x="115" y="149" text-anchor="middle">design</text>
+    <rect x="110" y="174" width="90" height="26" rx="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb"/><text x="155" y="191" text-anchor="middle">coding</text>
+    <rect x="150" y="216" width="90" height="26" rx="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb"/><text x="195" y="233" text-anchor="middle">testing</text>
+    <rect x="190" y="258" width="100" height="26" rx="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb"/><text x="240" y="275" text-anchor="middle">maintenance</text>
+  </g>
+  <g stroke="#888" stroke-width="1.2" fill="none">
+    <path d="M120 103 L135 103 L135 132"/><path d="M160 145 L175 145 L175 174"/><path d="M200 187 L215 187 L215 216"/><path d="M240 229 L255 229 L255 258"/>
+  </g>
+  <text x="160" y="310" text-anchor="middle" font-size="10.5" fill="#059669">predictable cost and timeline; all requirements fixed first</text>
+  <text x="160" y="326" text-anchor="middle" font-size="10.5" fill="#dc2626">late changes cannot be accommodated; the client waits till the end</text>
+  <text x="160" y="346" text-anchor="middle" font-size="10.5" fill="#888">for: fixed, well-understood requirements; safety-critical work</text>
+
+  <!-- ITERATIVE -->
+  <text x="490" y="58" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">Iterative</text>
+  <text x="490" y="74" text-anchor="middle" font-size="10.5" fill="#888">a working version, then a better one, round and round</text>
+  <circle cx="490" cy="185" r="78" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <g font-size="11" fill="#888">
+    <rect x="450" y="92" width="80" height="24" rx="5" fill="rgba(124,58,237,0.14)" stroke="#7c3aed"/><text x="490" y="108" text-anchor="middle">analysis</text>
+    <rect x="536" y="150" width="70" height="24" rx="5" fill="rgba(124,58,237,0.14)" stroke="#7c3aed"/><text x="571" y="166" text-anchor="middle">design</text>
+    <rect x="516" y="236" width="70" height="24" rx="5" fill="rgba(124,58,237,0.14)" stroke="#7c3aed"/><text x="551" y="252" text-anchor="middle">coding</text>
+    <rect x="396" y="236" width="70" height="24" rx="5" fill="rgba(124,58,237,0.14)" stroke="#7c3aed"/><text x="431" y="252" text-anchor="middle">testing</text>
+    <rect x="374" y="150" width="70" height="24" rx="5" fill="rgba(124,58,237,0.14)" stroke="#7c3aed"/><text x="409" y="166" text-anchor="middle">review</text>
+  </g>
+  <polygon points="404,140 412,132 412,148" fill="#7c3aed"/>
+  <text x="490" y="190" text-anchor="middle" font-size="10.5" fill="#888">version 1, 2, 3 ...</text>
+  <text x="490" y="310" text-anchor="middle" font-size="10.5" fill="#059669">something usable early; each loop can change requirements</text>
+  <text x="490" y="326" text-anchor="middle" font-size="10.5" fill="#dc2626">harder to cost; can drift if no loop is ever the last</text>
+  <text x="490" y="346" text-anchor="middle" font-size="10.5" fill="#888">for: large problems broken into steps; requirements that will change</text>
+
+  <!-- RAD -->
+  <text x="820" y="58" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">Rapid application development</text>
+  <text x="820" y="74" text-anchor="middle" font-size="10.5" fill="#888">prototypes shown to the client, modules built in parallel</text>
+  <g font-size="11" fill="#888">
+    <rect x="700" y="96" width="240" height="24" rx="5" fill="rgba(245,158,11,0.16)" stroke="#f59e0b"/><text x="820" y="112" text-anchor="middle">brief requirements (minimal planning)</text>
+    <rect x="700" y="140" width="72" height="60" rx="5" fill="rgba(245,158,11,0.14)" stroke="#f59e0b"/><text x="736" y="165" text-anchor="middle">module A</text><text x="736" y="182" text-anchor="middle" font-size="9.5">prototype</text>
+    <rect x="784" y="140" width="72" height="60" rx="5" fill="rgba(245,158,11,0.14)" stroke="#f59e0b"/><text x="820" y="165" text-anchor="middle">module B</text><text x="820" y="182" text-anchor="middle" font-size="9.5">prototype</text>
+    <rect x="868" y="140" width="72" height="60" rx="5" fill="rgba(245,158,11,0.14)" stroke="#f59e0b"/><text x="904" y="165" text-anchor="middle">module C</text><text x="904" y="182" text-anchor="middle" font-size="9.5">prototype</text>
+    <rect x="700" y="222" width="240" height="24" rx="5" fill="rgba(245,158,11,0.16)" stroke="#f59e0b"/><text x="820" y="238" text-anchor="middle">client tries it, asks for changes, again</text>
+    <rect x="700" y="264" width="240" height="24" rx="5" fill="rgba(245,158,11,0.16)" stroke="#f59e0b"/><text x="820" y="280" text-anchor="middle">assemble and release</text>
+  </g>
+  <g stroke="#888" stroke-width="1.2" fill="none"><path d="M736 200 L736 222"/><path d="M820 200 L820 222"/><path d="M904 200 L904 222"/><path d="M820 246 L820 264"/><path d="M948 234 L960 234 L960 170 L948 170"/></g>
+  <text x="820" y="310" text-anchor="middle" font-size="10.5" fill="#059669">fastest to a usable product; client steers throughout</text>
+  <text x="820" y="326" text-anchor="middle" font-size="10.5" fill="#dc2626">needs the client available; easy to keep changing one's mind</text>
+  <text x="820" y="346" text-anchor="middle" font-size="10.5" fill="#888">for: time-critical work; a client who cannot specify up front</text>
+  <text x="490" y="384" text-anchor="middle" font-size="11" fill="#888">the stages are the same in all three; what differs is whether you may go back, and how soon the client sees something</text>
+</svg>

@@ -295,12 +295,23 @@ Actual value: $\sqrt{102} = 10.0995...$ — the tangent approximation is off by 
 - "Find where the normal meets the curve again" is a classic 0606 question type.
 - Often combined with 14.6 (stationary points): "find the stationary point, then find the normal there."
 
-### AP / IB / A-Level
+### Cambridge 9709
 
-- Tangent and normal equations are prerequisite skills for: related rates, optimisation, curve sketching.
-- The linear approximation $f(x) \approx f(a) + f'(a)(x - a)$ appears formally in AP Calculus as "linearisation."
-- **IB Mathematics AA HL:** tangent lines used in Newton's method for finding roots (iterative approximation).
-- **A-Level Further Mathematics:** tangent and normal concepts extend to parametric curves and implicit differentiation.
+**Paper 1 §1.7** — the equation of the tangent and of the normal at a point on a curve, on the P1 differentiation scope (polynomials, rational powers, composites via the Chain Rule); the classic follow-ups are "find where the normal meets the curve again" and "find the point where the tangent is parallel to a given line". **Paper 3 §3.4** returns to it on curves given implicitly or parametrically — the same two-line method with a harder gradient.
+
+### Edexcel IAL and OxfordAQA 9660
+
+IAL **P1 §4.3** (tangents and normals at a point) and 9660 **P1.3** name the skill directly; 9660 **PP1.1** uses it for the tangent to a circle at a point, and 9660's P3 row for implicit and parametric curves.
+
+### IB Mathematics AA and AI
+
+**AA SL 5.4 and AI SL 5.4** both name *tangents and normals at a given point, and their equations*; AA HL adds them on implicit and parametric curves. The linear approximation $f(x) \approx f(a) + f'(a)(x-a)$ is the tangent used as a calculator, and AA HL's Newton–Raphson is the tangent used as a root-finder.
+
+### AP Calculus AB / BC
+
+Not named as an outcome; the tangent line appears as **linearisation** (Unit 4) and in the tangent-line approximation of a function value, and the normal does not appear at all.
+
+**Not examined on:** Cambridge 0580 (no tangent equations — gradients of curves are estimated from a drawn tangent only); OxfordAQA 9260 has the tangent (A14) but not the normal, as noted above.
 
 ## Connections
 

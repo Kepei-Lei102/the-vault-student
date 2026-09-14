@@ -1,0 +1,44 @@
+<svg width="100%" viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg">
+  <text x="380" y="26" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">What counts as a proof of ...</text>
+  <!-- header -->
+  <rect x="20" y="42" width="180" height="30" rx="6" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="110" y="62" text-anchor="middle" font-size="12.5" fill="#888" font-weight="bold">the statement</text>
+  <rect x="212" y="42" width="258" height="30" rx="6" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="341" y="62" text-anchor="middle" font-size="12.5" fill="#888" font-weight="bold">Hilbert: show it cannot be false</text>
+  <rect x="482" y="42" width="258" height="30" rx="6" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.2"/>
+  <text x="611" y="62" text-anchor="middle" font-size="12.5" fill="#888" font-weight="bold">Brouwer: hand over the construction</text>
+
+  <g font-size="12" fill="#888">
+    <text x="110" y="100" text-anchor="middle">A and B</text>
+    <text x="341" y="100" text-anchor="middle">both are true</text>
+    <text x="611" y="100" text-anchor="middle">a proof of A, and a proof of B</text>
+
+    <text x="110" y="138" text-anchor="middle">A or B</text>
+    <text x="341" y="138" text-anchor="middle">at least one is true</text>
+    <text x="611" y="131" text-anchor="middle">a proof of one of them,</text>
+    <text x="611" y="146" text-anchor="middle" font-weight="bold">and it says which</text>
+
+    <text x="110" y="176" text-anchor="middle">A implies B</text>
+    <text x="341" y="176" text-anchor="middle">never A true with B false</text>
+    <text x="611" y="176" text-anchor="middle">a method turning any proof of A into one of B</text>
+
+    <text x="110" y="214" text-anchor="middle">some x has property P</text>
+    <text x="341" y="214" text-anchor="middle">"none has it" leads to a contradiction</text>
+    <text x="611" y="207" text-anchor="middle">a particular x, named,</text>
+    <text x="611" y="222" text-anchor="middle">with a proof that it has P</text>
+
+    <text x="110" y="252" text-anchor="middle">not A</text>
+    <text x="341" y="252" text-anchor="middle">A is false</text>
+    <text x="611" y="252" text-anchor="middle">a method turning any proof of A into absurdity</text>
+  </g>
+
+  <line x1="20" y1="270" x2="740" y2="270" stroke="#888" stroke-width="0.8" stroke-dasharray="4 4"/>
+
+  <rect x="20" y="282" width="180" height="48" rx="6" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="110" y="302" text-anchor="middle" font-size="12" fill="#888">A or not A</text>
+  <text x="110" y="319" text-anchor="middle" font-size="10.5" fill="#888">(the law of excluded middle)</text>
+  <text x="341" y="302" text-anchor="middle" font-size="12" fill="#888">always true, no matter what A is</text>
+  <text x="341" y="319" text-anchor="middle" font-size="10.5" fill="#888">the astronomer's telescope, the boxer's fists</text>
+  <text x="611" y="302" text-anchor="middle" font-size="12" fill="#dc2626">a way to decide A, for every A</text>
+  <text x="611" y="319" text-anchor="middle" font-size="10.5" fill="#dc2626">no such thing exists (Turing, 1936)</text>
+</svg>

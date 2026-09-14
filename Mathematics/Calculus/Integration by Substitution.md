@@ -192,7 +192,7 @@ This is the first pattern to check whenever you see a fraction.
 
 ### Pattern 2 — Linear-Inside (the Baby Case)
 
-Covered in [[Integration#The Linear-Inside Rule $(ax + b)^n$|Integration]]. Here, $u = ax + b$, so $du = a \, dx$. This is substitution with its training wheels on: the chain-rule coefficient is always the constant $a$, so the answer always picks up a $/a$.
+Covered in [[Integration#The Linear-Inside Rule — $(ax + b)^n$|Integration]]. Here, $u = ax + b$, so $du = a \, dx$. This is substitution with its training wheels on: the chain-rule coefficient is always the constant $a$, so the answer always picks up a $/a$.
 
 ### Pattern 3 — Power-of-a-Function
 

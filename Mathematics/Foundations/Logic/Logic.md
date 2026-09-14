@@ -18,6 +18,7 @@ leads_to:
   - "[[Information Theory]]"
   - "[[Lewis Carroll the Mathematician]]"
   - "[[The Boolean-to-Silicon Bridge]]"
+  - "[[Hilbert vs Brouwer]]"
 tags:
   - subject/mathematics
   - domain/logic
@@ -279,13 +280,16 @@ Every proof type from [[Chain of Thought]] has a logical skeleton:
 **Syllabus ref:** Cross-curricular; 0606 makes heavier use of "Hence" chains.
 
 - "Hence" means "use the result you just proved" — a direct application of modus ponens: you've established $p$ and $p \Rightarrow q$, now state $q$.
-- Proof by contradiction appears in selected topics (e.g., irrationality proofs).
+- 0606 names **no** proof technique: the nearest thing is §10.6, "prove trigonometric relationships", which is a chain of equalities, not a contradiction. Irrationality proofs are not on it.
 
 ### AP / IB / A-Level
 
 - **IB Mathematics AA HL:** Formal proof by contradiction and counterexample are explicitly assessed (Topic 1: Number and Algebra). Notation $\Rightarrow$, $\Leftrightarrow$ expected.
-- **A-Level Further Mathematics:** Proof by induction, contradiction, and exhaustion are named topics. Logic symbols are standard notation.
+- **Cambridge A-Level:** 9709 names no proof topic at all; 9231 FP1 §1.7 names **proof by induction** only ([[Proof by Induction]]). Contradiction and exhaustion are *used* in 9231 answers but never set as a topic.
+- **Edexcel IAL:** the one board that examines the logic of proof by name — P2 §1.1–1.3 (proof structure, exhaustion, disproof by counterexample) and P4 §1.1 (proof by contradiction: irrationality of $\sqrt2$, infinity of primes). Logic symbols are standard notation there.
 - **AP Calculus:** Logical structure tested through epsilon-delta definitions and "justify your answer" free-response prompts. Quantifiers are used implicitly: "for every $\varepsilon > 0$, there exists $\delta > 0$..."
+
+**Not examined on** Cambridge 0606 (no proof topic), 9709 (no proof topic) — and on 0580 and 9260 only as the reasoning inside "show that" questions, never as notation.
 
 ## Connections
 

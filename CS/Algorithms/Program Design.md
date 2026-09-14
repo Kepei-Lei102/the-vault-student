@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[Object-Oriented Programming]]"
   - "[[Cambridge Pseudocode]]"
+  - "[[Program Development Life Cycle and Testing]]"
 tags:
   - subject/computer-science
   - domain/algorithms

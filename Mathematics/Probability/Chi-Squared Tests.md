@@ -9,6 +9,7 @@ prerequisites:
 leads_to:
   - "[[Non-Parametric Tests]]"
   - "[[The Lady Tasting Tea]]"
+  - "[[Learning as Verification]]"
 tags:
   - subject/mathematics
   - domain/statistics

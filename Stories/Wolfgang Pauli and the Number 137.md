@@ -1,6 +1,7 @@
 ---
 chinese: 沃尔夫冈·泡利与数字 137 (wò'ěrfūgāng pàolì yǔ shùzì 137)
-prerequisites: []
+prerequisites:
+  - "[[Famous for the Wrong Thing]]"
 leads_to:
   - "[[Pauli Exclusion Principle]]"
 tags:

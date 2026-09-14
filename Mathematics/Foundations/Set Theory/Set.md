@@ -127,6 +127,12 @@ Chinese math uses $\{ \}$ too, so the symbol transfer is smooth. But watch for:
 - Same core concepts: $n(A)$, $A'$, $\cup$, $\cap$, $\xi$, Venn diagrams
 - Formal notation ($\in$, $\emptyset$, $\subseteq$) is not in the 9260 notation list but understanding them builds stronger foundations
 
+### IB Mathematics AA / AI and AP
+
+- Neither IB route has a set-theory topic. Sets appear as the language of probability (SL 4.5: Venn diagrams, $P(A \cup B)$, mutually exclusive events) and of domains and ranges; the notation is read, never examined for itself. AP Calculus does not examine sets.
+
+**Not examined on** Cambridge 0606 (no set theory — the 0606 map says so explicitly), 9709 or 9231.
+
 ## Connections
 
 - **Components:** [[Element]], [[Subset]], [[Empty Set]], [[Universal Set]]

@@ -7,6 +7,8 @@ prerequisites:
   - "[[Compression Is Intelligence]]"
 leads_to:
   - "[[The Love of Wisdom]]"
+  - "[[Famous for the Wrong Thing]]"
+  - "[[Learning as Verification]]"
 tags:
   - subject/methodology
   - subject/philosophy

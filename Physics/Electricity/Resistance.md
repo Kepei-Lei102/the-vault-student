@@ -6,6 +6,7 @@ leads_to:
   - "[[Kirchhoff's Laws]]"
   - "[[Potential Dividers]]"
   - "[[Internal Resistance]]"
+  - "[[Alternating Current]]"
 tags:
   - subject/physics
   - domain/electromagnetism

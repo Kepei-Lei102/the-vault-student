@@ -9,6 +9,7 @@ leads_to:
   - "[[Heaps and Priority Queues]]"
   - "[[NoSQL and Distributed Data]]"
   - "[[Erdős the Wandering Mathematician]]"
+  - "[[Topology]]"
 tags:
   - subject/computer-science
   - domain/data-structures

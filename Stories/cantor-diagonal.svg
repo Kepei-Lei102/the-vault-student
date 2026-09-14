@@ -1,0 +1,129 @@
+<svg width="100%" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="Menlo, Consolas, monospace" font-size="14">
+<text x="380" y="24" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="14">The diagonal: change the k-th digit of the k-th number, and the result is on no line of the list</text>
+<text x="40" y="55" fill="#888" font-size="12">#0</text><text x="80" y="55" fill="#888">0.</text>
+<rect x="140" y="39" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="150" y="55" text-anchor="middle" fill="#dc2626">1</text>
+<text x="184" y="55" text-anchor="middle" fill="#888">4</text>
+<text x="218" y="55" text-anchor="middle" fill="#888">2</text>
+<text x="252" y="55" text-anchor="middle" fill="#888">8</text>
+<text x="286" y="55" text-anchor="middle" fill="#888">5</text>
+<text x="320" y="55" text-anchor="middle" fill="#888">7</text>
+<text x="354" y="55" text-anchor="middle" fill="#888">1</text>
+<text x="388" y="55" text-anchor="middle" fill="#888">4</text>
+<text x="422" y="55" text-anchor="middle" fill="#888">2</text>
+<text x="456" y="55" fill="#888">...</text>
+<text x="40" y="81" fill="#888" font-size="12">#1</text><text x="80" y="81" fill="#888">0.</text>
+<text x="150" y="81" text-anchor="middle" fill="#888">2</text>
+<rect x="174" y="65" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="184" y="81" text-anchor="middle" fill="#dc2626">5</text>
+<text x="218" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="252" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="286" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="320" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="354" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="388" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="422" y="81" text-anchor="middle" fill="#888">0</text>
+<text x="456" y="81" fill="#888">...</text>
+<text x="40" y="107" fill="#888" font-size="12">#2</text><text x="80" y="107" fill="#888">0.</text>
+<text x="150" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="184" y="107" text-anchor="middle" fill="#888">3</text>
+<rect x="208" y="91" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="218" y="107" text-anchor="middle" fill="#dc2626">3</text>
+<text x="252" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="286" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="320" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="354" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="388" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="422" y="107" text-anchor="middle" fill="#888">3</text>
+<text x="456" y="107" fill="#888">...</text>
+<text x="40" y="133" fill="#888" font-size="12">#3</text><text x="80" y="133" fill="#888">0.</text>
+<text x="150" y="133" text-anchor="middle" fill="#888">4</text>
+<text x="184" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="218" y="133" text-anchor="middle" fill="#888">0</text>
+<rect x="242" y="117" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="252" y="133" text-anchor="middle" fill="#dc2626">0</text>
+<text x="286" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="320" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="354" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="388" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="422" y="133" text-anchor="middle" fill="#888">0</text>
+<text x="456" y="133" fill="#888">...</text>
+<text x="40" y="159" fill="#888" font-size="12">#4</text><text x="80" y="159" fill="#888">0.</text>
+<text x="150" y="159" text-anchor="middle" fill="#888">4</text>
+<text x="184" y="159" text-anchor="middle" fill="#888">5</text>
+<text x="218" y="159" text-anchor="middle" fill="#888">4</text>
+<text x="252" y="159" text-anchor="middle" fill="#888">5</text>
+<rect x="276" y="143" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="286" y="159" text-anchor="middle" fill="#dc2626">4</text>
+<text x="320" y="159" text-anchor="middle" fill="#888">5</text>
+<text x="354" y="159" text-anchor="middle" fill="#888">4</text>
+<text x="388" y="159" text-anchor="middle" fill="#888">5</text>
+<text x="422" y="159" text-anchor="middle" fill="#888">4</text>
+<text x="456" y="159" fill="#888">...</text>
+<text x="40" y="185" fill="#888" font-size="12">#5</text><text x="80" y="185" fill="#888">0.</text>
+<text x="150" y="185" text-anchor="middle" fill="#888">5</text>
+<text x="184" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="218" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="252" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="286" y="185" text-anchor="middle" fill="#888">0</text>
+<rect x="310" y="169" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="320" y="185" text-anchor="middle" fill="#dc2626">0</text>
+<text x="354" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="388" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="422" y="185" text-anchor="middle" fill="#888">0</text>
+<text x="456" y="185" fill="#888">...</text>
+<text x="40" y="211" fill="#888" font-size="12">#6</text><text x="80" y="211" fill="#888">0.</text>
+<text x="150" y="211" text-anchor="middle" fill="#888">5</text>
+<text x="184" y="211" text-anchor="middle" fill="#888">3</text>
+<text x="218" y="211" text-anchor="middle" fill="#888">8</text>
+<text x="252" y="211" text-anchor="middle" fill="#888">4</text>
+<text x="286" y="211" text-anchor="middle" fill="#888">6</text>
+<text x="320" y="211" text-anchor="middle" fill="#888">1</text>
+<rect x="344" y="195" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="354" y="211" text-anchor="middle" fill="#dc2626">5</text>
+<text x="388" y="211" text-anchor="middle" fill="#888">3</text>
+<text x="422" y="211" text-anchor="middle" fill="#888">8</text>
+<text x="456" y="211" fill="#888">...</text>
+<text x="40" y="237" fill="#888" font-size="12">#7</text><text x="80" y="237" fill="#888">0.</text>
+<text x="150" y="237" text-anchor="middle" fill="#888">5</text>
+<text x="184" y="237" text-anchor="middle" fill="#888">7</text>
+<text x="218" y="237" text-anchor="middle" fill="#888">1</text>
+<text x="252" y="237" text-anchor="middle" fill="#888">4</text>
+<text x="286" y="237" text-anchor="middle" fill="#888">2</text>
+<text x="320" y="237" text-anchor="middle" fill="#888">8</text>
+<text x="354" y="237" text-anchor="middle" fill="#888">5</text>
+<rect x="378" y="221" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="388" y="237" text-anchor="middle" fill="#dc2626">7</text>
+<text x="422" y="237" text-anchor="middle" fill="#888">1</text>
+<text x="456" y="237" fill="#888">...</text>
+<text x="40" y="263" fill="#888" font-size="12">#8</text><text x="80" y="263" fill="#888">0.</text>
+<text x="150" y="263" text-anchor="middle" fill="#888">6</text>
+<text x="184" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="218" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="252" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="286" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="320" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="354" y="263" text-anchor="middle" fill="#888">0</text>
+<text x="388" y="263" text-anchor="middle" fill="#888">0</text>
+<rect x="412" y="247" width="22" height="22" fill="rgba(220,38,38,0.15)" stroke="#dc2626" stroke-width="1.2"/>
+<text x="422" y="263" text-anchor="middle" fill="#dc2626">0</text>
+<text x="456" y="263" fill="#888">...</text>
+<line x1="70" y1="287" x2="476" y2="287" stroke="#888" stroke-width="1"/>
+<text x="40" y="311" fill="#059669" font-size="12">new</text><text x="80" y="311" fill="#059669">0.</text>
+<text x="150" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="184" y="311" text-anchor="middle" fill="#059669" font-weight="bold">6</text>
+<text x="218" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="252" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="286" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="320" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="354" y="311" text-anchor="middle" fill="#059669" font-weight="bold">6</text>
+<text x="388" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="422" y="311" text-anchor="middle" fill="#059669" font-weight="bold">5</text>
+<text x="456" y="311" fill="#059669">...</text>
+<text x="496" y="133" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">rule: if the boxed</text>
+<text x="496" y="149" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">digit is 5, write 6;</text>
+<text x="496" y="165" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">otherwise write 5</text>
+<text x="496" y="211" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">the new number differs</text>
+<text x="496" y="227" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">from line k at digit k,</text>
+<text x="496" y="243" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">for every k at once</text>
+</svg>

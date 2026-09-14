@@ -1,5 +1,7 @@
 ---
 chinese: 平均数与离散程度 (píngjūnshù yǔ lísàn chéngdù)
+aliases:
+  - 平均数与离散程度
 prerequisites:
   - "[[Classifying Data]]"
   - "[[Greek Letters (Vocab)]]"
@@ -494,6 +496,21 @@ Mode: £25,000 (17 out of 20 employees)
 The mean (£33,250) is misleadingly high — 17 out of 20 employees earn less than it. The **median** (£25,000) or **mode** (£25,000) better represents the "typical" salary. The director's salary is an **outlier** that pulls the mean upward.
 
 ---
+
+## Check your understanding — choosing and combining averages
+
+Try these without looking back. Explain the choice of method as well as the number.
+
+1. **Choose and interpret.** For $2, 4, 4, 6, 9$, find the mean, median, mode and range. Predict which change when $9$ is replaced by $39$, then calculate. Which average best describes the cluster of four small values, and why?
+2. **Combine groups.** Ten observations have mean $6$; thirty more have mean $10$. Find the combined mean by recovering the two totals. Explain why averaging $6$ and $10$ gives the wrong answer.
+3. **Recognise an estimate.** Two observations lie in $0 \leq x < 10$ and three in $10 \leq x < 20$. Estimate the mean and state the assumption. Can the exact mean be recovered from these frequencies alone?
+
+> [!success]- Check your reasoning
+> 1. Initially: mean $5$, median $4$, mode $4$, range $7$. After replacement: mean $11$, median $4$, mode $4$, range $37$. The median is a defensible centre because the extreme value does not pull it upward; the mode also identifies the most common value. Explain what “typical” means in the context.
+> 2. Total $= 10(6) + 30(10) = 360$ across $40$ observations, so mean $9$. The two groups have unequal sizes; an unweighted mean of their means gives them equal influence.
+> 3. Midpoints $5$ and $15$ give $(2(5) + 3(15))/5 = 11$. This represents each class by its midpoint. The individual values are unknown, so the exact mean is not determined.
+
+These checks establish choosing an average, weighting groups and recognising grouped-data estimates. Quartile conventions and comparisons using IQR need their own check.
 
 ## Exam Notes
 

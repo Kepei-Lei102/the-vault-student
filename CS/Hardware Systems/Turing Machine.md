@@ -4,6 +4,7 @@ prerequisites:
   - "[[Recursion]]"
   - "[[Turing at Bletchley]]"
   - "[[von Neumann the Martian]]"
+  - "[[Hilbert vs Brouwer]]"
 leads_to:
   - "[[Von Neumann machine]]"
   - "[[P vs NP]]"

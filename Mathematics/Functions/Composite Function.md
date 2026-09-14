@@ -298,7 +298,7 @@ Function composition is a fundamental operation in programming. In functional la
 compose f g x = f (g x)
 ```
 
-This is identical to the mathematical definition $fg(x) = f(g(x))$. The Unix pipe operator works the same way: `cat file | sort | uniq` composes three functions in sequence (though the reading order is left-to-right, opposite to mathematical convention). See the [[Function#Everything is IO — 媒介学 (méijiè xué)|媒介学 section in the Function card]] — composition is the mathematical formalisation of IO chaining, the idea that the output of one process becomes the input of the next.
+This is identical to the mathematical definition $fg(x) = f(g(x))$. The Unix pipe operator works the same way: `cat file | sort | uniq` composes three functions in sequence (though the reading order is left-to-right, opposite to mathematical convention). See [[Function#Everything is IO — 媒介学 (méijiè xué)|the 媒介学 explanation of input/output chains]] — composition is the mathematical formalisation of IO chaining, the idea that the output of one process becomes the input of the next.
 
 **Function composition in category theory** provides the foundation for all of abstract mathematics: a "category" is any collection of objects with composable arrows (morphisms) between them, where composition is associative and every object has an identity arrow.
 

@@ -15,6 +15,7 @@ tags:
   - curriculum/IB-AA
   - curriculum/AP
   - syllabus/AP-Calculus-BC-6-6
+  - syllabus/AP-Calculus-BC-8-1
   - type/deep
   - type/theorem
   - type/proof
@@ -195,13 +196,23 @@ The general pattern: every property is a one-line manipulation; chaining them is
 
 Examined directly. Common prompt: *"Given $\int_0^5 f(x)\, dx = 12$ and $\int_0^3 f(x)\, dx = 7$, find $\int_3^5 f(x)\, dx$."* Pure additivity; one-line answer ($12 - 7 = 5$). More advanced prompts mix linearity with sign-flip. The *average value* and *MVT for integrals* appear at least once per BC exam.
 
-### IB AA HL & A-Level Further
+### AP Calculus AB / BC — Topic 8.1 (average value)
 
-Stated and applied. Average-value problems are common; comparison-theorem-as-bound is occasionally tested. MVT for integrals is in the curriculum at HL but rarely at SL.
+The **average value** $\dfrac{1}{b-a}\int_a^b f(x)\,\mathrm dx$ is its own outcome, set as a calculator question with a given $f$ or a table; it is the Mean Value Theorem for integrals in exam clothing.
+
+### Edexcel IAL and OxfordAQA 9660
+
+IAL **P2 §8.1** and 9660 **P1.4** both name the definite integral with its properties — additivity over adjacent intervals, the sign flip on reversed limits, and area below the axis as a negative integral. The examined form is the split integral across a root of $f$ to find total area.
+
+### IB Mathematics AA
+
+No named outcome for the properties; they are used inside **SL 5.5 and 5.11** (definite integrals and areas, including areas between curves and below the axis). Average value and the Mean Value Theorem for integrals appear at **HL** only, occasionally.
 
 ### Cambridge 0606 / 9709
 
-Linearity, additivity, and sign-flip are *used implicitly* — students apply them without naming them. Average value is not on either syllabus. The "bounded above and below" estimation form (Property 5 special case) shows up rarely.
+Linearity, additivity and the sign flip are *used implicitly* — students apply them without naming them, most often in splitting an area at an axis crossing. Average value is on neither syllabus. The "bounded above and below" estimation (Property 5) shows up only as a Paper 3 trapezium-rule over/under-estimate remark.
+
+**Not examined on:** Cambridge 0580 and 9231 (no definite-integral properties as such); AP Physics uses the average value of a function without naming it.
 
 ---
 

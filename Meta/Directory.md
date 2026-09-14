@@ -1,13 +1,13 @@
 # The Vault — Meta Directory
 
-> **14 cards.** Last landed: [[Compression Is Intelligence]] (2026-09-09) — a compressor is exactly as good as its predictor, and a predictor exactly as good as its model of the world; measured on the vault's own prose.
+> **15 cards.** Last landed: [[Learning as Verification]] (2026-09-14) — the engineer's calculus: when machines produce the answer, the retained skill is checking it; a ladder of eight checks, the produce-versus-verify asymmetry timed, ν by counting confirmed by simulation, the verifier who nods.
 > Cards whose subject is *how to think across domains* — methods that apply to mathematics, physics, computer science and ordinary life alike. One line per card; the card carries the argument.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Stories/Directory|Stories]].
 
 ---
 
-## Methodology (9)
+## Methodology (10)
 
 1. **[[Chain of Thought]]** — Pólya's four phases, the "show that" chain, command and signal words, and the rule that a worked example names its trigger, not just its technique.
 2. **[[Choosing Effective Equations]]** — framework recognition (SUVAT / N2 / momentum / energy / power / friction at the limit) plus forward reading for what each clause of a question locks down.
@@ -18,6 +18,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 7. **[[Credit Is the Currency]]** 信用即货币 — announced moves that always come true become currency: 庞统's three-moves paradox, 阳谋, and a computer as a tower of kept promises.
 8. **[[Fun Is the Brachistochrone]]** 乐趣是最速降线 — the cycloid beats the straight line by a fifth; play is the early drop that builds velocity, and fun needs a target you chose yourself.
 9. **[[Decouple and Recouple]]** 解耦与再耦合 — four axes of coupling, the decoupler kit with a buffer simulation, the couplings that are the product, and six inventions made by recoupling a part a constraint forced loose.
+10. **[[Learning as Verification]]** 学习即验证 — checking is a different and cheaper skill than producing (P vs NP, signatures, the proof kernel, the trial balance); the eight-rung ladder of checks; *minus one, minus one* as a count confirmed by simulation; the check digit in your wallet; and the verifier who nods.
 
 ## Productivity / Cognitive Models (1)
 

@@ -1,5 +1,7 @@
 ---
 chinese: 洛伦兹力 (luòlúnzī lì)
+aliases:
+  - 洛伦兹力
 prerequisites:
   - "[[Cross Product]]"
   - "[[Electric Field]]"

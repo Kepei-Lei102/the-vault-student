@@ -2,6 +2,7 @@
 chinese: 信用即货币 (xìnyòng jí huòbì)
 prerequisites:
   - "[[Text Encoding]]"
+  - "[[Learning as Verification]]"
 leads_to: []
 tags:
   - subject/methodology

@@ -1,0 +1,51 @@
+<svg width="100%" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="480" y="26" text-anchor="middle" fill="#888" font-weight="bold" font-size="15">The internet is the road network; the World Wide Web is one of the things that travels on it</text>
+<rect x="40" y="250" width="880" height="120" rx="10" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/>
+<text x="60" y="275" fill="#2563eb" font-weight="bold">THE INTERNET — hardware plus TCP/IP</text>
+<text x="60" y="296" fill="#888" font-size="12">a network of networks: cables, fibre, radio, satellites; routers and switches; every device with an IP address</text>
+<text x="60" y="314" fill="#888" font-size="12">rules for moving packets from any address to any other (IP), reliably (TCP) or fast (UDP) — see the Networks card</text>
+<text x="60" y="340" fill="#888" font-size="12">it carries anything: it does not know or care what the bytes mean</text>
+<circle cx="700" cy="308" r="9" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<circle cx="760" cy="332" r="9" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<circle cx="830" cy="308" r="9" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<circle cx="890" cy="332" r="9" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<path d="M700 308 L760 332 L830 308 L890 332" fill="none" stroke="#2563eb" stroke-width="1.2"/><text x="795" y="358" text-anchor="middle" fill="#888" font-size="10">routers passing packets</text>
+<rect x="40" y="70" width="300" height="130" rx="8" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1.5"/><text x="52" y="95" fill="#7c3aed" font-weight="bold">THE WORLD WIDE WEB</text>
+<text x="52" y="118" fill="#888" font-size="12">pages of HTML, linked by URLs,</text>
+<text x="52" y="134" fill="#888" font-size="12">fetched with HTTP or HTTPS,</text>
+<text x="52" y="150" fill="#888" font-size="12">displayed by a browser;</text>
+<text x="52" y="166" fill="#888" font-size="12">born 1990 at CERN (Berners-Lee),</text>
+<text x="52" y="182" fill="#888" font-size="12">twenty years after the internet</text>
+<rect x="352" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="394.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">email</text>
+<text x="394.0" y="142" text-anchor="middle" fill="#888" font-size="10">SMTP</text>
+<text x="394.0" y="157" text-anchor="middle" fill="#888" font-size="10">IMAP</text>
+<rect x="448" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="490.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">video calls</text>
+<text x="490.0" y="142" text-anchor="middle" fill="#888" font-size="10">WebRTC</text>
+<text x="490.0" y="157" text-anchor="middle" fill="#888" font-size="10">UDP</text>
+<rect x="544" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="586.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">online games</text>
+<text x="586.0" y="142" text-anchor="middle" fill="#888" font-size="10">game protocols</text>
+<rect x="640" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="682.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">app back-ends</text>
+<text x="682.0" y="142" text-anchor="middle" fill="#888" font-size="10">APIs</text>
+<text x="682.0" y="157" text-anchor="middle" fill="#888" font-size="10">HTTPS</text>
+<rect x="736" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="778.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">file sharing</text>
+<text x="778.0" y="142" text-anchor="middle" fill="#888" font-size="10">FTP</text>
+<text x="778.0" y="157" text-anchor="middle" fill="#888" font-size="10">BitTorrent</text>
+<rect x="832" y="70" width="84" height="130" rx="8" fill="rgba(5,150,105,0.12)" stroke="#059669" stroke-width="1.5"/>
+<text x="874.0" y="120" text-anchor="middle" fill="#059669" font-weight="bold" font-size="11">streaming</text>
+<text x="874.0" y="142" text-anchor="middle" fill="#888" font-size="10">DASH</text>
+<text x="874.0" y="157" text-anchor="middle" fill="#888" font-size="10">HLS</text>
+<text x="480" y="228" text-anchor="middle" fill="#888" font-size="12">services that USE the internet — the web is the biggest, and it is not the only one; all of them ride on the layer below</text>
+<path d="M190 232 L190 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M394 232 L394 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M490 232 L490 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M586 232 L586 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M682 232 L682 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M778 232 L778 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M874 232 L874 248" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="480" y="390" text-anchor="middle" fill="#888" font-size="12">no web without the internet; plenty of internet without the web — an email, a game, a video call never touch a web page</text>
+</svg>

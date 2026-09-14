@@ -382,7 +382,7 @@ The relationship between $y = f(x)$ and transformed versions:
 
 This is a major topic in 0606 (tested in 1.4 with modulus) and central in IB/AP. The key insight: changes *inside* $f(\ldots)$ affect $x$ (horizontal, opposite direction); changes *outside* $f(\ldots)$ affect $y$ (vertical, same direction).
 
-**Everything is IO — 媒介学 (méijiè xué)**
+#### Everything is IO — 媒介学 (méijiè xué)
 
 Step back from the formula for a moment. A function takes an input, transforms it, and produces an output. But here's the deeper observation: **the output of one function becomes the input of the next.** That's exactly what [[Composite Function|composition]] is — $f(g(x))$ means $g$ transforms $x$ into something, and $f$ picks up where $g$ left off.
 

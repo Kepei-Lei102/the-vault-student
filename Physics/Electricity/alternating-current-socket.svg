@@ -1,0 +1,19 @@
+<svg width="100%" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="450" y="24" text-anchor="middle" fill="#888" font-weight="bold">The socket does not know: each appliance draws V / R, and the supply keeps V fixed</text>
+<circle cx="60" cy="150" r="16" fill="none" stroke="#888" stroke-width="1.5"/><path d="M48 150 q6 -9 12 0 t12 0" fill="none" stroke="#888" stroke-width="1.5"/><text x="8" y="146" fill="#888" font-size="11">220 V</text><text x="8" y="160" fill="#888" font-size="11">r.m.s.</text>
+<line x1="60" y1="134" x2="60" y2="70" stroke="#888" stroke-width="1.5"/><line x1="60" y1="70" x2="120" y2="70" stroke="#888" stroke-width="1.5"/>
+<rect x="120" y="60" width="60" height="20" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/><text x="150" y="52" text-anchor="middle" fill="#f59e0b" font-size="11">wiring r ≈ 0.1 Ω</text>
+<line x1="180" y1="70" x2="820" y2="70" stroke="#888" stroke-width="2"/><text x="500" y="60" text-anchor="middle" fill="#888" font-size="11">live — one wire, every socket in the house</text>
+<line x1="60" y1="166" x2="60" y2="240" stroke="#888" stroke-width="1.5"/><line x1="60" y1="240" x2="820" y2="240" stroke="#888" stroke-width="2"/><text x="130" y="256" text-anchor="middle" fill="#888" font-size="11">neutral</text>
+<line x1="300" y1="70" x2="300" y2="120" stroke="#888" stroke-width="1.5"/><rect x="288" y="120" width="24" height="70" fill="none" stroke="#2563eb" stroke-width="2"/><line x1="300" y1="190" x2="300" y2="240" stroke="#888" stroke-width="1.5"/>
+<text x="320" y="140" fill="#888" font-size="12">kettle</text><text x="320" y="156" fill="#888" font-size="11">2000 W so R = 24 Ω</text><text x="320" y="172" fill="#2563eb" font-size="11">I = V/R = 9.1 A</text>
+<circle cx="300" cy="70" r="3" fill="#888"/><circle cx="300" cy="240" r="3" fill="#888"/>
+<line x1="480" y1="70" x2="480" y2="120" stroke="#888" stroke-width="1.5"/><rect x="468" y="120" width="24" height="70" fill="none" stroke="#2563eb" stroke-width="2"/><line x1="480" y1="190" x2="480" y2="240" stroke="#888" stroke-width="1.5"/>
+<text x="500" y="140" fill="#888" font-size="12">laptop charger</text><text x="500" y="156" fill="#888" font-size="11">65 W so R = 740 Ω</text><text x="500" y="172" fill="#2563eb" font-size="11">I = V/R = 0.3 A</text>
+<circle cx="480" cy="70" r="3" fill="#888"/><circle cx="480" cy="240" r="3" fill="#888"/>
+<line x1="660" y1="70" x2="660" y2="120" stroke="#888" stroke-width="1.5"/><rect x="648" y="120" width="24" height="70" fill="none" stroke="#2563eb" stroke-width="2"/><line x1="660" y1="190" x2="660" y2="240" stroke="#888" stroke-width="1.5"/>
+<text x="680" y="140" fill="#888" font-size="12">lamp</text><text x="680" y="156" fill="#888" font-size="11">10 W so R = 4.8 kΩ</text><text x="680" y="172" fill="#2563eb" font-size="11">I = V/R = 0.05 A</text>
+<circle cx="660" cy="70" r="3" fill="#888"/><circle cx="660" cy="240" r="3" fill="#888"/>
+<text x="470" y="272" text-anchor="middle" fill="#888" font-size="12">total ≈ 9.5 A, the sum — and the 0.1 Ω of wiring drops only 0.95 V, so every socket still sees ≈ 219 V</text>
+<text x="470" y="288" text-anchor="middle" fill="#888" font-size="12">no divider: the loads are in parallel, so adding one does not change what the others get (until the fuse, or the wiring, says stop)</text>
+</svg>

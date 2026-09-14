@@ -12,6 +12,7 @@ leads_to:
   - "[[The Feynman Technique]]"
   - "[[Choosing Effective Equations]]"
   - "[[Forward Reading and Problem Discovery]]"
+  - "[[Learning as Verification]]"
 tags:
   - subject/mathematics
   - domain/problem-solving

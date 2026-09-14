@@ -1,0 +1,29 @@
+<svg width="100%" viewBox="0 0 960 250" xmlns="http://www.w3.org/2000/svg" font-family="Menlo, Consolas, monospace" font-size="20">
+<text x="480" y="28" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="15">Anatomy of a URL — the three parts the exam names, and the two it does not</text>
+<rect x="26" y="66" width="105.6" height="34" rx="4" fill="rgba(0,0,0,0)" stroke="#dc2626" stroke-width="1.5"/>
+<text x="30" y="90" fill="#dc2626">https://</text>
+<rect x="135.6" y="66" width="203.2" height="34" rx="4" fill="rgba(0,0,0,0)" stroke="#2563eb" stroke-width="1.5"/>
+<text x="139.6" y="90" fill="#2563eb">www.bilibili.com</text>
+<rect x="342.79999999999995" y="66" width="239.79999999999998" height="34" rx="4" fill="rgba(0,0,0,0)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="346.79999999999995" y="90" fill="#7c3aed">/video/BV1xx411c7mD</text>
+<rect x="586.5999999999999" y="66" width="56.8" height="34" rx="4" fill="rgba(0,0,0,0)" stroke="#059669" stroke-width="1.5"/>
+<text x="590.5999999999999" y="90" fill="#059669">?p=1</text>
+<rect x="647.3999999999999" y="66" width="117.8" height="34" rx="4" fill="rgba(0,0,0,0)" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="651.3999999999999" y="90" fill="#f59e0b">#comments</text>
+<path d="M78.8 102 L78.8 122" stroke="#dc2626" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="78.8" y="140" text-anchor="middle" fill="#dc2626" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="13">protocol</text>
+<text x="78.8" y="156" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="11">how to talk: HTTP or HTTPS</text>
+<path d="M237.2 102 L237.2 177" stroke="#2563eb" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="237.2" y="195" text-anchor="middle" fill="#2563eb" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="13">domain name</text>
+<text x="237.2" y="211" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="11">which server: DNS turns it into an IP address</text>
+<path d="M462.69999999999993 102 L462.69999999999993 122" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="462.69999999999993" y="140" text-anchor="middle" fill="#7c3aed" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="13">path / file name</text>
+<text x="462.69999999999993" y="156" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="11">which page on that server</text>
+<path d="M614.9999999999999 102 L614.9999999999999 177" stroke="#059669" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="614.9999999999999" y="195" text-anchor="middle" fill="#059669" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="13">query</text>
+<text x="614.9999999999999" y="211" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="11">extra data for the server</text>
+<path d="M706.2999999999998 102 L706.2999999999998 122" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="706.2999999999998" y="140" text-anchor="middle" fill="#f59e0b" font-family="Helvetica, Arial, sans-serif" font-weight="bold" font-size="13">fragment</text>
+<text x="706.2999999999998" y="156" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="11">where on the page to scroll; never sent</text>
+<text x="480" y="238" text-anchor="middle" fill="#888" font-family="Helvetica, Arial, sans-serif" font-size="12">Cambridge marks protocol, domain name and web-page (file) name; a browser also reads the query and the fragment</text>
+</svg>

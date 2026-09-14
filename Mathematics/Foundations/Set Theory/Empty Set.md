@@ -133,6 +133,12 @@ Common notation error. Remind students: if the answer is "no elements," write $\
 - The concept still appears implicitly: "there are no elements in $A \cap B$" is common in Venn diagram problems (N9)
 - Students may write "no members" or "none" rather than $\emptyset$ on the 9260 paper
 
+### IB Mathematics AA / AI and AP
+
+- Neither IB route has a set-theory topic; $\emptyset$ appears only inside probability work (SL 4.5 — Venn diagrams, mutually exclusive events as $A \cap B = \emptyset$). AP Calculus does not examine set notation.
+
+**Not examined on** Cambridge 0606 (no set theory — the 0606 map says so explicitly), 9709 or 9231.
+
 ## Connections
 
 - **Parent concepts:** [[Set]], [[Element]], [[Subset]]

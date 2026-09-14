@@ -8,14 +8,14 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-09` · built 2026-09-09 from commit `f479c62`  
-> 385 cards · 525 diagrams · 91 explainers · 120 illustrations
+> **Edition** `student-2026-09-14` · built 2026-09-14 from commit `1626064`  
+> 394 cards · 554 diagrams · 97 explainers · 131 illustrations
 
 ---
 
 ## Mathematics
 
-*219 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*220 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -222,6 +222,7 @@
 | [[Tangents and Normals]] | ? |  |  |
 | [[TI-84 CE Reference]] | ? |  |  |
 | [[Time Calculations (Vocab)]] | ? |  |  |
+| [[Topology]] | ? |  |  |
 | [[Transformations (Vocab)]] | ? |  |  |
 | [[Travel Graphs (Vocab)]] | ? |  |  |
 | [[Triangles (Vocab)]] | ? |  |  |
@@ -241,11 +242,12 @@
 
 ## Physics
 
-*47 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*49 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[Accuracy vs Precision]] | ? |  |  |
+| [[Alternating Current]] | ? |  |  |
 | [[Angular Momentum]] | ? |  |  |
 | [[Braking Systems]] | ? |  |  |
 | [[Calibration of Instruments]] | ? |  |  |
@@ -282,6 +284,7 @@
 | [[Projectile Motion]] | ? |  |  |
 | [[Repeated Measurements]] | ? |  |  |
 | [[Resistance]] | ? |  |  |
+| [[Resonance]] | ? |  |  |
 | [[Significant Figures]] | ? |  |  |
 | [[Simple Harmonic Motion]] | ? |  |  |
 | [[Specific Heat Capacity]] | ? |  |  |
@@ -295,7 +298,7 @@
 
 ## CS
 
-*59 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*61 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -341,6 +344,7 @@
 | [[Parallel and External Sorting]] | ? |  |  |
 | [[Pipelining and Simultaneous Multithreading]] | ? |  |  |
 | [[Program Design]] | ? |  |  |
+| [[Program Development Life Cycle and Testing]] | ? |  |  |
 | [[RAM and the Memory Hierarchy]] | ? |  |  |
 | [[Recursion]] | ? |  |  |
 | [[Relational Databases]] | ? |  |  |
@@ -353,6 +357,7 @@
 | [[Stacks and Queues]] | ? |  |  |
 | [[Storage Units (Vocab)]] | ? |  |  |
 | [[Text Encoding]] | ? |  |  |
+| [[The Internet and the Web]] | ? |  |  |
 | [[The Turing Test]] | ? |  |  |
 | [[Turing Machine]] | ? |  |  |
 | [[Two's Complement]] | ? |  |  |
@@ -361,7 +366,7 @@
 
 ## Meta
 
-*14 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*15 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -374,6 +379,7 @@
 | [[Fun Is the Brachistochrone]] | ? |  |  |
 | [[Inertia and Bootstrapping]] | ? |  |  |
 | [[Laws and Theorems]] | ? |  |  |
+| [[Learning as Verification]] | ? |  |  |
 | [[The Feynman Technique]] | ? |  |  |
 | [[The Gift of the Gradient]] | ? |  |  |
 | [[The Love of Wisdom]] | ? |  |  |
@@ -382,7 +388,7 @@
 
 ## Stories
 
-*41 cards · 🔴 unread · 🟢 read*
+*44 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -392,13 +398,16 @@
 | [[Abel the Other Boy Who Died Young]] | ? |  |  |
 | [[Aristotle to Apollo]] | ? |  |  |
 | [[Boltzmann's Tombstone]] | ? |  |  |
+| [[Cantor vs Kronecker]] | ? |  |  |
 | [[Courage]] | ? |  |  |
 | [[Dual-Core Craft]] | ? |  |  |
 | [[Erdős the Wandering Mathematician]] | ? |  |  |
+| [[Famous for the Wrong Thing]] | ? |  |  |
 | [[Franklin's Coin Flip]] | ? |  |  |
 | [[From the Grid to the Garage]] | ? |  |  |
 | [[Galois at Twenty]] | ? |  |  |
 | [[Gauss the Prodigy]] | ? |  |  |
+| [[Hilbert vs Brouwer]] | ? |  |  |
 | [[Inventing Variance]] | ? |  |  |
 | [[Lewis Carroll the Mathematician]] | ? |  |  |
 | [[Newton vs Hooke]] | ? |  |  |
