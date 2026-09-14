@@ -16,6 +16,7 @@ leads_to:
   - "[[Stories/The 1919 Eclipse]]"
   - "[[Repeated Measurements]]"
   - "[[The 1919 Eclipse]]"
+  - "[[Density and Pressure]]"
 teach_together:
   - "[[Accuracy vs Precision]]"
 tags:

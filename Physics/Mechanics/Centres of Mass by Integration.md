@@ -4,6 +4,7 @@ prerequisites:
   - "[[Centre of Mass]]"
   - "[[Integration]]"
   - "[[Areas and Volumes by Integration]]"
+  - "[[Archimedes and the Soldier]]"
 leads_to: []
 tags:
   - subject/physics

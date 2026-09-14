@@ -1,0 +1,42 @@
+<svg width="100%" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="450" y="26" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">Where Δp = ρgΔh comes from: the weight of the column above you</text>
+  <!-- tank -->
+  <rect x="60" y="70" width="300" height="300" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="60" y1="70" x2="360" y2="70" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="210" y="62" text-anchor="middle" font-size="11" fill="#888">surface, pressure p₀ (the air above)</text>
+  <!-- the column / slab -->
+  <rect x="180" y="70" width="60" height="180" fill="rgba(245,158,11,0.20)" stroke="#f59e0b" stroke-width="1.2"/>
+  <rect x="180" y="250" width="60" height="14" fill="rgba(220,38,38,0.25)" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="250" y="160" font-size="11" fill="#f59e0b">column of fluid</text>
+  <text x="250" y="175" font-size="11" fill="#f59e0b">area A, height Δh</text>
+  <text x="250" y="190" font-size="11" fill="#f59e0b">weight = ρ (A Δh) g</text>
+  <text x="250" y="262" font-size="11" fill="#dc2626">the slab it rests on</text>
+  <!-- arrows -->
+  <line x1="210" y1="80" x2="210" y2="120" stroke="#888" stroke-width="1.5"/><polygon points="210,126 205,116 215,116" fill="#888"/>
+  <text x="150" y="105" text-anchor="end" font-size="11" fill="#888">p₀ A pushes down</text>
+  <line x1="210" y1="240" x2="210" y2="200" stroke="#059669" stroke-width="2"/><polygon points="210,194 205,204 215,204" fill="#059669"/>
+  <text x="150" y="222" text-anchor="end" font-size="11" fill="#059669">p A pushes up</text>
+  <line x1="120" y1="70" x2="120" y2="250" stroke="#888" stroke-width="1"/><polygon points="120,256 115,246 125,246" fill="#888"/>
+  <text x="112" y="165" text-anchor="end" font-size="11" fill="#888">Δh</text>
+  <!-- equation -->
+  <text x="210" y="300" text-anchor="middle" font-size="12" fill="#888">the slab holds the column up, so</text>
+  <text x="210" y="320" text-anchor="middle" font-size="12" fill="#888">p A = p₀ A + ρ A Δh g</text>
+  <text x="210" y="340" text-anchor="middle" font-size="13" fill="#059669" font-weight="bold">p − p₀ = ρ g Δh</text>
+  <text x="210" y="358" text-anchor="middle" font-size="10.5" fill="#888">A cancels: the width of the column never mattered</text>
+  <!-- right: pressure arrows at three depths -->
+  <rect x="520" y="70" width="180" height="300" fill="rgba(37,99,235,0.12)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="610" y="62" text-anchor="middle" font-size="11" fill="#888">pressure acts in every direction</text>
+  <g stroke="#7c3aed" stroke-width="2" fill="#7c3aed">
+    <line x1="610" y1="120" x2="590" y2="120"/><polygon points="586,120 594,116 594,124"/><line x1="610" y1="120" x2="630" y2="120"/><polygon points="634,120 626,116 626,124"/>
+    <line x1="610" y1="120" x2="610" y2="104"/><polygon points="610,100 606,108 614,108"/><line x1="610" y1="120" x2="610" y2="136"/><polygon points="610,140 606,132 614,132"/>
+    <line x1="610" y1="220" x2="575" y2="220"/><polygon points="571,220 579,216 579,224"/><line x1="610" y1="220" x2="645" y2="220"/><polygon points="649,220 641,216 641,224"/>
+    <line x1="610" y1="220" x2="610" y2="189"/><polygon points="610,185 606,193 614,193"/><line x1="610" y1="220" x2="610" y2="251"/><polygon points="610,255 606,247 614,247"/>
+    <line x1="610" y1="330" x2="560" y2="330"/><polygon points="556,330 564,326 564,334"/><line x1="610" y1="330" x2="660" y2="330"/><polygon points="664,330 656,326 656,334"/>
+    <line x1="610" y1="330" x2="610" y2="284"/><polygon points="610,280 606,288 614,288"/><line x1="610" y1="330" x2="610" y2="366"/><polygon points="610,370 606,362 614,362"/>
+  </g>
+  <text x="720" y="124" font-size="11" fill="#888">shallow: small, equal in all directions</text>
+  <text x="720" y="224" font-size="11" fill="#888">deeper: larger, still equal in all directions</text>
+  <text x="720" y="334" font-size="11" fill="#888">deepest: p = p₀ + ρgh</text>
+  <text x="720" y="352" font-size="10.5" fill="#888">10 m of water adds one atmosphere</text>
+  <text x="450" y="392" text-anchor="middle" font-size="11" fill="#888">a scalar: no direction of its own; the force it makes is always normal to whatever surface it meets</text>
+</svg>

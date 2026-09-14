@@ -340,9 +340,9 @@ The 9260 is notably more demanding than 0580 on circle theorems — it requires 
 
 ### Cambridge 0580
 
-**Core (C4.7):** Only Theorem 2 (angle in semicircle = 90°) is required at Core level, plus tangent ⊥ radius (covered in [[Circle Theorems II]]).
+**Core (C4.7):** two properties only — the angle in a semicircle is 90°, and the angle between a tangent and a radius is 90° — used to *calculate unknown angles and give explanations*.
 
-**Extended (E4.7):** Adds chord properties (perpendicular bisector, equal chords equidistant from centre) — but notably does NOT require Theorems 1, 3, or 4. The 0580 Extended is significantly less demanding than 9260 on circle theorems.
+**Extended (E4.7 — the syllabus's own "Circle theorems I"):** all four theorems on this card plus the two Core ones, by name: angle in a semicircle; tangent ⟂ radius; angle at the centre is twice the angle at the circumference; angles in the same segment are equal; opposite angles of a cyclic quadrilateral sum to 180°; the alternate segment theorem. The notes say candidates *are expected to use the geometrical properties listed when giving reasons* — so the theorem must be named, not just applied. The chord and tangent symmetry properties are E4.8, in [[Circle Theorems II]]. (Checked against the 2025–27 syllabus, which lists E4.7 and E4.8 separately; an earlier version of this note understated Extended.)
 
 ### A-Level
 

@@ -21,6 +21,7 @@ tags:
   - level/pre-IB
   - level/pre-AP
   - curriculum/Cambridge-0580
+  - curriculum/Edexcel-IAL
   - curriculum/IB-AA
   - curriculum/IB-AI
   - curriculum/AP
@@ -171,6 +172,18 @@ Draw both side by side. Union = "colour everything that's in at least one." Inte
 - Combined with cardinality algebra: "Given $n(A) = 12$, $n(B) = 15$, $n(A \cap B) = x$, $n(\xi) = 30$. Find $x$."
 - Shading of compound expressions: $(A \cap B') \cup C$
 - Usually 4–6 marks, multi-step
+
+### OxAQA 9260 (N9)
+
+- *Understand and use Venn diagrams* alongside the set notation $n(A)$, $A'$, $A \cup B$, $A \cap B$ and $\xi$; two- and three-set diagrams with shading and cardinality, the same shapes as 0580 Extended.
+
+### Edexcel IAL (S1 §3.4)
+
+- Venn diagrams appear as a **probability tool** — *use of tree diagrams and Venn diagrams* for the sum and product laws — so the regions carry probabilities rather than element counts, and $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ is read straight off the picture.
+
+### IB (AA / AI) and AP
+
+- **Not examined as a set-theory topic.** Both IB courses and AP Statistics use Venn diagrams inside probability — $P(A \cap B)$, complements, independence — exactly as IAL does; the shading and counting skills here are the prerequisite.
 
 ## Connections
 

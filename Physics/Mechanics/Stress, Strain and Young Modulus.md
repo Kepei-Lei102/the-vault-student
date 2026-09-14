@@ -10,7 +10,7 @@ leads_to:
   - "[[Beam Bending]]"
   - "[[Material Failure]]"
   - "[[Composite Materials]]"
-  - "[[Waves I: The Wave Equation]]"
+  - "[[Progressive Waves]]"
   - "[[Elastic Strings and Springs]]"
 tags:
   - subject/physics
@@ -370,7 +370,7 @@ The $k = EA/L_0$ relation is essential for connecting Hooke's Law to materials, 
 
 - **Forward bridges into oscillations:**
    - [[Simple Harmonic Motion]] — the SHM equation $a = -\omega^2 x$ has $\omega = \sqrt{k/m}$, and now we know $k$ comes from $E$, $A$, $L_0$. The frequency of a wire's longitudinal vibration is $\omega \propto \sqrt{E/\rho}$ — pure material property.
-   - [[Waves I: The Wave Equation]] — the speed of sound in a solid is $v_s = \sqrt{E/\rho}$, exactly the same combination of material properties. Wave speeds are Young-modulus signatures.
+   - [[Progressive Waves]] — the speed of sound in a solid is $v_s = \sqrt{E/\rho}$, exactly the same combination of material properties. Wave speeds are Young-modulus signatures.
 
 - **Misconceptions cleared:** stress is **not** force (it's force per unit area); strain is **not** an extension in metres (it's dimensionless); the spring constant $k$ is **not** a material property (it depends on $A$ and $L_0$ too); the elastic limit is **not** the same as the yield stress or the ultimate tensile strength (three distinct points on the stress-strain curve).
 

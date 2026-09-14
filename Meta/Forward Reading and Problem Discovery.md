@@ -1,6 +1,7 @@
 ---
 chinese: 向前阅读与问题发现 (xiàng qián yuèdú yǔ wèntí fāxiàn) / 追因之术 (zhuī yīn zhī shù)
 prerequisites:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Choosing Effective Equations]]"
   - "[[Chain of Thought]]"
   - "[[Product Rule]]"

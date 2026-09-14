@@ -5,6 +5,7 @@ prerequisites:
   - "[[Radians]]"
   - "[[Graphs of Functions]]"
 leads_to:
+  - "[[Progressive Waves]]"
   - "[[Trigonometric Equations]]"
 tags:
   - subject/mathematics

@@ -10,7 +10,7 @@ prerequisites:
 leads_to:
   - "[[Simple Harmonic Motion]]"
   - "[[Stress, Strain and Young Modulus]]"
-  - "[[Waves I: The Wave Equation]]"
+  - "[[Progressive Waves]]"
   - "[[The Quantum Harmonic Oscillator]]"
   - "[[Stories/The Pendulum Story]]"
   - "[[The Pendulum Story]]"
@@ -463,7 +463,7 @@ Two takeaways for exam strategy:
 - **Children:**
    - [[Simple Harmonic Motion]] — solves $\ddot{x} = -(k/m)x$ explicitly, builds the full sin/cos solution, derives period and frequency rigorously.
    - [[Stress, Strain and Young Modulus]] — explains *why* a spring has the spring constant it does, in terms of the material's microscopic structure.
-   - [[Waves I: The Wave Equation]] — the spatial generalisation of mass-spring → coupled mass-springs → wave equation.
+   - [[Progressive Waves]] — the spatial generalisation of mass-spring → coupled mass-springs → wave equation.
    - [[The Quantum Harmonic Oscillator]] — the deepest payoff of the Taylor-expansion argument.
 
 - **Cross-domain math bridges:**

@@ -1,6 +1,7 @@
 ---
 chinese: 编译器与解释器 (biānyìqì yǔ jiěshìqì)
 prerequisites:
+  - "[[Four Colour Theorem]]"
   - "[[Assembly Language]]"
   - "[[CISC vs RISC]]"
   - "[[Operating Systems]]"

@@ -353,11 +353,7 @@ Syllabus reference: **G8** (Circle Theorems). The 9260 specification requires al
 
 ### Cambridge 0580 Extended
 
-Syllabus reference: **E4.7** (Circle Theorems). Required theorems at Extended:
-- Tangent perpendicular to radius (Theorem 1) ✓
-- Tangents from an external point are equal (Theorem 2) ✓
-- Perpendicular from centre to chord bisects the chord (Theorem 3) ✓
-- **Alternate segment theorem (Theorem 4) is NOT on 0580 Extended**
+Syllabus reference: **E4.8 Circle theorems II** — the syllabus's own title for this card's content: *use the following symmetry properties of circles*: equal chords are equidistant from the centre; the perpendicular bisector of a chord passes through the centre; tangents from an external point are equal in length. Tangent ⟂ radius is on **E4.7** (with the angle theorems of [[Circle Theorems I]]), and so is the **alternate segment theorem** — it *is* examined at Extended, under E4.7, not E4.8. The notes for both rows say candidates are expected to use the listed properties, by name, when giving reasons. (An earlier version of this note put the alternate segment theorem off-syllabus; checked against the 2025–27 PDF.)
 
 Paper 4 typically has one circle theorem problem worth 3–5 marks.
 

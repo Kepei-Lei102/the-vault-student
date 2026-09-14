@@ -16,6 +16,7 @@ tags:
   - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
   - curriculum/Cambridge-0606
+  - curriculum/Edexcel-IAL
   - syllabus/9260-A9
   - syllabus/9260-A9-Ext
   - syllabus/0580-E2-13
@@ -241,6 +242,16 @@ Note: $f^2(x) = 4x + 3$, whereas $[f(x)]^2 = (2x+1)^2 = 4x^2 + 4x + 1$. These ar
 - "Form and use composite functions. Understand that order of functions is important, i.e. $fg$ may not be the same as $gf$."
 - $f^2(x) = f(f(x))$ notation is used (but not with trig functions).
 - Domain restrictions may be tested: the domain of $gf$ requires $f(x) \in \text{Dom}(g)$.
+
+### Cambridge 9709 (P1 §1.2)
+
+- *Find the composition of two given functions*, with the syllabus's stated condition: **$gf$ can only be formed when the range of $f$ is within the domain of $g$** — a one-mark explanation question asks exactly this.
+- Typical shape: $f(x) = 2x - 1$, $g(x) = x^2 + 3$; find $gf(x)$, solve $gf(x) = k$, or find the range of $fg$ over a stated domain.
+
+### Edexcel IAL (P3 §1.2)
+
+- *Composition of functions* with the specification's own reading rule: **$fg$ means "do $g$ first, then $f$"**.
+- Questions combine composition with the modulus function and with inverses on the same paper — expect $fg(x)$ followed by $(fg)^{-1}$ or a sketch.
 
 ### Common exam phrasing
 

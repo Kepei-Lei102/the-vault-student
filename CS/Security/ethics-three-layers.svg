@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 900 400" font-family="Helvetica, Arial, sans-serif">
+  <!-- Three layers of obligation on a computing professional, and the four BCS principles -->
+  <text x="450" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#888">Three layers of obligation, and who enforces each</text>
+
+  <!-- LEFT: the stack -->
+  <g stroke-width="1.5">
+    <rect x="40" y="60" width="380" height="80" rx="6" stroke="#dc2626" fill="rgba(220,38,38,0.12)"/>
+    <rect x="40" y="160" width="380" height="80" rx="6" stroke="#2563eb" fill="rgba(37,99,235,0.12)"/>
+    <rect x="40" y="260" width="380" height="80" rx="6" stroke="#059669" fill="rgba(5,150,105,0.12)"/>
+  </g>
+  <g fill="#888">
+    <text x="56" y="84" font-size="13" font-weight="bold">THE LAW</text>
+    <text x="56" y="102" font-size="10">copyright, data protection (GDPR, PIPL), safety, fraud</text>
+    <text x="56" y="118" font-size="10">enforced by courts; the floor, not the standard</text>
+    <text x="56" y="134" font-size="10" fill="#dc2626">"legal" and "right" are different words</text>
+
+    <text x="56" y="184" font-size="13" font-weight="bold">THE PROFESSION'S CODE</text>
+    <text x="56" y="202" font-size="10">BCS Code of Conduct, IEEE Code of Ethics, ACM Code</text>
+    <text x="56" y="218" font-size="10">enforced by the body: complaints, expulsion, the register</text>
+    <text x="56" y="234" font-size="10" fill="#2563eb">written down so you need not decide alone under pressure</text>
+
+    <text x="56" y="284" font-size="13" font-weight="bold">YOUR OWN JUDGEMENT</text>
+    <text x="56" y="302" font-size="10">the case the code did not foresee; the order you refuse</text>
+    <text x="56" y="318" font-size="10">enforced by no one but you, which is the point</text>
+    <text x="56" y="334" font-size="10" fill="#059669">the layer that decided Horizon, Dieselgate and MCAS</text>
+  </g>
+  <text x="230" y="368" text-anchor="middle" font-size="11" fill="#888">each layer catches what the one above missed; none replaces the one below it</text>
+
+  <!-- RIGHT: BCS four principles -->
+  <text x="680" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#888">The BCS Code of Conduct: four duties</text>
+  <g stroke="#7c3aed" stroke-width="1.5" fill="rgba(124,58,237,0.12)">
+    <rect x="480" y="84" width="400" height="56" rx="6"/>
+    <rect x="480" y="150" width="400" height="56" rx="6"/>
+    <rect x="480" y="216" width="400" height="56" rx="6"/>
+    <rect x="480" y="282" width="400" height="56" rx="6"/>
+  </g>
+  <g fill="#888" font-size="10">
+    <text x="494" y="104" font-size="12" font-weight="bold">1  Public interest</text>
+    <text x="494" y="121">health, privacy, security and wellbeing of others and the environment;</text>
+    <text x="494" y="134">the rights of third parties; no discrimination</text>
+
+    <text x="494" y="170" font-size="12" font-weight="bold">2  Professional competence and integrity</text>
+    <text x="494" y="187">only work you are competent to do; keep skills current; no bribery;</text>
+    <text x="494" y="200">accept and offer honest criticism; do not misrepresent</text>
+
+    <text x="494" y="236" font-size="12" font-weight="bold">3  Duty to the relevant authority</text>
+    <text x="494" y="253">carry out the work with care; avoid conflicts of interest; no misuse</text>
+    <text x="494" y="266">of information; accept responsibility for your work</text>
+
+    <text x="494" y="302" font-size="12" font-weight="bold">4  Duty to the profession</text>
+    <text x="494" y="319">uphold the profession's reputation; support and encourage colleagues;</text>
+    <text x="494" y="332">act with integrity towards members of other professions</text>
+  </g>
+  <text x="680" y="368" text-anchor="middle" font-size="11" fill="#888">the exam's 'towards colleagues' answers come from 2 and 4; 'towards the public' from 1</text>
+</svg>

@@ -4,6 +4,7 @@ prerequisites:
   - "[[Differentiation]]"
   - "[[Integration]]"
   - "[[Fundamental Theorem of Calculus]]"
+  - "[[Archimedes and the Soldier]]"
 leads_to:
   - "[[Stories/The Bernoulli Family]]"
 tags:

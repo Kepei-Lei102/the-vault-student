@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[File Systems]]"
   - "[[Hash Tables]]"
+  - "[[File Processing and Exception Handling]]"
   - "[[Relational Databases]]"
 tags:
   - subject/computer-science

@@ -18,6 +18,8 @@ tags:
   - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
   - curriculum/Cambridge-0606
+  - curriculum/Edexcel-IAL
+  - curriculum/OxAQA-9660
   - syllabus/9260-A9
   - syllabus/9260-A9-Ext
   - syllabus/0580-E2-13
@@ -285,6 +287,19 @@ Therefore $f(f(x)) = x$, so $f$ is self-inverse: $f^{-1} = f$. ✓
 - **1.6:** "Find the inverse of a one-to-one function" — correct notation required ($f^{-1}(x) = \ldots$).
 - **1.8:** "Use sketch graphs to show the relationship between a function and its inverse" — the graph of $f^{-1}$ is the reflection of $f$ in $y = x$. You may be asked to sketch both on the same axes.
 - Domain/range swaps are explicitly tested.
+
+### Cambridge 9709 (P1 §1.2)
+
+- *Determine whether or not a given function is one-one, and find the inverse of a one-one function in simple cases* — the syllabus's own example is $h: x \mapsto (2x+3)^2 - 4$ for $x \geq -\tfrac{3}{2}$, i.e. a completed-square quadratic whose domain has been cut to make it one-one; the inverse involves a square root and the sign is decided by the domain.
+- *Illustrate in graphical terms the relation between a one-one function and its inverse* — the scheme wants the mirror line $y = x$ drawn and labelled on the sketch.
+
+### Edexcel IAL (P3 §1.2)
+
+- *Inverse functions and their graphs*, with the specification's own identity: if $f^{-1}$ exists then $f^{-1}f(x) = ff^{-1}(x) = x$. Domain of $f^{-1}$ = range of $f$ is asked directly, and the same paper carries the modulus function and inverse trigonometric functions (§2.1), so the restricted-domain idea reappears there.
+
+### OxAQA 9660 (P2.1)
+
+- *Inverse functions and their graphs*; the notation $f^{-1}$ is used, and reflection in $y = x$ is explicitly included. P2.4 takes the same idea to $\sin^{-1}$, $\cos^{-1}$, $\tan^{-1}$ — the graphs of these as reflections of the relevant *parts* of the trigonometric graphs, which is the domain-restriction story again.
 
 ### Common exam phrasing
 

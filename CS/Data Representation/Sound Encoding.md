@@ -1,6 +1,7 @@
 ---
 chinese: 声音编码 (shēngyīn biānmǎ)
 prerequisites:
+  - "[[Progressive Waves]]"
   - "[[Number Bases]]"
   - "[[Text Encoding]]"
   - "[[Storage Units (Vocab)]]"
@@ -164,7 +165,7 @@ Sound representation is **not a named statement**: A1.2's published wording stop
 - **Sibling:** [[Image Encoding]] — the same two dials in space instead of time; aliasing ↔ moiré; sample resolution ↔ colour depth. Read the two cards as one idea, sampled twice.
 - **Sequel:** [[Compression]] — sound is where compression gets *perceptual*: MP3 discards real data your ear masks anyway, the boldest version of "remove what won't be noticed."
 - **Cross-domain:** [[Information Theory]] — Shannon of Nyquist–Shannon; the sampling theorem is the bridge between continuous physics and discrete bits, and bits-per-second here is literally his channel currency. [[Floating-Point Representation]] — quantisation error *is* rounding error, caught at the microphone instead of the ALU.
-- **Physics:** [[Waves I: The Wave Equation]] and [[Sound Waves]] — amplitude, frequency, superposition: the physical thing every sample measures. The microphone's diaphragm is doing mechanics before the ADC does mathematics.
+- **Physics:** [[Progressive Waves]] and [[Sound Waves]] — amplitude, frequency, superposition: the physical thing every sample measures. The microphone's diaphragm is doing mechanics before the ADC does mathematics.
 - **Mathematics:** [[Fourier Series]] — the theorem beneath the theorem: *every* wave decomposes into pure sines, which is why "contains no frequency above $f$" is even a meaningful sentence, and why Nyquist can promise perfection below it. [[Logarithms]] — the decibel is a log scale, which is why each bit of resolution adds a constant $6$ dB.
 - **Story:** [[Stories/One Take, Many Tracks]] — a century of studios fighting for what these numbers finally delivered: random access to time. Wax discs allowed no mistakes; tape met the razor blade; Les Paul stacked a dozen guitars on parallel tracks; digital made every edit a reversible pointer. The reason samples-are-numbers mattered, told through the people who needed it.
 

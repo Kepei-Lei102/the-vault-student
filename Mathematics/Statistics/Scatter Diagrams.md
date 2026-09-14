@@ -5,6 +5,7 @@ prerequisites:
   - "[[Statistical Charts]]"
   - "[[Averages and Spread]]"
 leads_to:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Cumulative Frequency]]"
   - "[[Interpreting Data]]"
 tags:

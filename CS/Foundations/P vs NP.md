@@ -1,6 +1,7 @@
 ---
 chinese: P 与 NP 问题 (P yǔ NP wèntí)
 prerequisites:
+  - "[[Four Colour Theorem]]"
   - "[[Turing Machine]]"
   - "[[Big-O Notation]]"
 leads_to:

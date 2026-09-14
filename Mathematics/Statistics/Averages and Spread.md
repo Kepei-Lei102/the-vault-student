@@ -6,6 +6,7 @@ prerequisites:
   - "[[Classifying Data]]"
   - "[[Greek Letters (Vocab)]]"
 leads_to:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Statistical Charts]]"
   - "[[Scatter Diagrams]]"
   - "[[Cumulative Frequency]]"

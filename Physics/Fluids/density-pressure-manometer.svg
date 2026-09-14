@@ -1,0 +1,29 @@
+<svg width="100%" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+  <text x="450" y="26" text-anchor="middle" font-size="15" fill="#888" font-weight="bold">Two instruments that read pressure as a height</text>
+  <!-- manometer -->
+  <text x="230" y="68" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">U-tube manometer: gauge pressure</text>
+  <path d="M150 90 L150 300 Q150 330 180 330 L280 330 Q310 330 310 300 L310 90" fill="none" stroke="#888" stroke-width="2"/>
+  <path d="M158 90 L158 300 Q158 322 180 322 L280 322 Q302 322 302 300 L302 90" fill="none" stroke="#888" stroke-width="1" opacity="0"/>
+  <!-- liquid: left level lower, right level higher -->
+  <path d="M152 220 L152 300 Q152 328 180 328 L280 328 Q308 328 308 300 L308 150 L302 150 L302 300 Q302 322 280 322 L180 322 Q158 322 158 300 L158 220 Z" fill="rgba(37,99,235,0.35)" stroke="none"/>
+  <text x="150" y="86" text-anchor="middle" font-size="11" fill="#888">gas supply, p</text>
+  <text x="310" y="86" text-anchor="middle" font-size="11" fill="#888">open, p₀</text>
+  <line x1="330" y1="150" x2="380" y2="150" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="330" y1="220" x2="380" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="370" y1="150" x2="370" y2="220" stroke="#059669" stroke-width="1.5"/><polygon points="370,146 366,154 374,154" fill="#059669"/><polygon points="370,224 366,216 374,216" fill="#059669"/>
+  <text x="380" y="190" font-size="12" fill="#059669">h</text>
+  <text x="230" y="352" text-anchor="middle" font-size="11.5" fill="#888">p − p₀ = ρ g h  (the gas pushes the liquid down on its side)</text>
+  <!-- barometer -->
+  <text x="650" y="68" text-anchor="middle" font-size="13" fill="#888" font-weight="bold">Mercury barometer: absolute pressure</text>
+  <rect x="560" y="280" width="180" height="50" fill="rgba(124,58,237,0.30)" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="632" y="90" width="36" height="240" fill="none" stroke="#888" stroke-width="2"/>
+  <rect x="634" y="130" width="32" height="200" fill="rgba(124,58,237,0.35)" stroke="none"/>
+  <text x="676" y="112" font-size="10.5" fill="#888">vacuum</text>
+  <line x1="690" y1="130" x2="770" y2="130" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="690" y1="300" x2="770" y2="300" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="760" y1="130" x2="760" y2="300" stroke="#059669" stroke-width="1.5"/><polygon points="760,126 756,134 764,134" fill="#059669"/><polygon points="760,304 756,296 764,296" fill="#059669"/>
+  <text x="770" y="220" font-size="12" fill="#059669">760 mm</text>
+  <text x="575" y="270" font-size="11" fill="#888">air pushes on the open surface, p₀</text>
+  <text x="650" y="352" text-anchor="middle" font-size="11.5" fill="#888">p₀ = ρ_Hg g h = 13 600 × 9.81 × 0.760 = 1.01 × 10⁵ Pa</text>
+  <text x="450" y="44" text-anchor="middle" font-size="10.5" fill="#888">gauge = above atmospheric · absolute = above vacuum · absolute = gauge + p₀</text>
+</svg>

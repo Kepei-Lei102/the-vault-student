@@ -6,6 +6,7 @@ prerequisites:
   - "[[Continuous Random Variables]]"
   - "[[Inventing Variance]]"
 leads_to:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Hypothesis Tests]]"
   - "[[t-Tests]]"
 tags:

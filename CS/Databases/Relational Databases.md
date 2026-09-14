@@ -2,6 +2,7 @@
 chinese: 关系型数据库 (guānxì xíng shùjùkù)
 prerequisites:
   - "[[File Handling]]"
+  - "[[File Processing and Exception Handling]]"
   - "[[User-Defined Data Types]]"
 leads_to:
   - "[[SQL]]"

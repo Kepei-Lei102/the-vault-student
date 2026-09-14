@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-14` · built 2026-09-14 from commit `1626064`  
-> 394 cards · 554 diagrams · 97 explainers · 131 illustrations
+> **Edition** `student-2026-09-14b` · built 2026-09-14 from commit `f18aa35`  
+> 401 cards · 580 diagrams · 102 explainers · 139 illustrations
 
 ---
 
@@ -210,7 +210,7 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0625 Physics
 
-*16 syllabus points · 38 card references*
+*19 syllabus points · 41 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -221,10 +221,13 @@ is often taught under a different heading.
 | 1.1 | [[Physical Quantities and Units]], [[Repeated Measurements]], [[Vectors in Physics]] |
 | 1.2 | [[Kinematics Calculus]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
 | 1.3 | [[Forces and Equilibrium]], [[Gravitational Fields]], [[Newton's Laws of Motion]] |
+| 1.4 | [[Density and Pressure]] |
 | 1.5 | [[Circular Motion]], [[Force (Vocab)]], [[Forces and Equilibrium]], [[Friction (Vocab)]], [[Hooke's Law for Springs]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[The Friction Limit]] |
 | 1.6 | [[Linear Momentum]] |
 | 1.7 | [[Work, Energy and Power]] |
+| 1.8 | [[Density and Pressure]] |
 | 2.2 | [[Specific Heat Capacity]] |
+| 3.1 | [[Progressive Waves]] |
 | 4.2 | [[Alternating Current]], [[Electric Current]], [[Resistance]] |
 | 4.3 | [[Kirchhoff's Laws]], [[Potential Dividers]] |
 | 4.4 | [[Potential Dividers]] |
@@ -368,7 +371,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*44 syllabus points · 81 card references*
+*46 syllabus points · 83 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -385,6 +388,7 @@ is often taught under a different heading.
 | 5.2 | [[Compilers and Interpreters]] |
 | 6.1 | [[Data Security]] |
 | 6.2 | [[Data Security]], [[Error Detection and Correction]] |
+| 7.1 | [[Ethics and Ownership]] |
 | 8.1 | [[Relational Databases]] |
 | 8.2 | [[Relational Databases]] |
 | 8.3 | [[Relational Databases]], [[SQL]] |
@@ -416,10 +420,11 @@ is often taught under a different heading.
 | 19.1b | [[Sorting]] |
 | 19.2 | [[Recursion]] |
 | 20.1 | [[Assembly Language]], [[Object-Oriented Programming]] |
+| 20.2 | [[File Processing and Exception Handling]] |
 
 ## Cambridge A-Level 9702 Physics
 
-*44 syllabus points · 63 card references*
+*47 syllabus points · 66 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -433,10 +438,13 @@ is often taught under a different heading.
 | 3.3 | [[Linear Momentum]] |
 | 4.1 | [[Forces and Equilibrium]], [[Torque]] |
 | 4.2 | [[Forces and Equilibrium]] |
+| 4.3 | [[Density and Pressure]] |
 | 5.1 | [[Work, Energy and Power]] |
 | 5.2 | [[Work, Energy and Power]] |
 | 6.1 | [[Stress, Strain and Young Modulus]] |
 | 6.2 | [[Hooke's Law for Springs]] |
+| 7.1 | [[Progressive Waves]] |
+| 7.2 | [[Progressive Waves]] |
 | 9.1 | [[Electric Current]] |
 | 9.2 | [[Resistance]] |
 | 9.3 | [[Resistance]] |
@@ -515,16 +523,18 @@ is often taught under a different heading.
 
 ## AP Computer Science A
 
-*12 syllabus points · 14 card references*
+*14 syllabus points · 16 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.12 | [[Object-Oriented Programming]] |
 | 2.12 | [[Big-O Notation]] |
 | 3.1 | [[Object-Oriented Programming]] |
+| 3.2 | [[Ethics and Ownership]] |
 | 3.3 | [[Object-Oriented Programming]] |
 | 3.4 | [[Object-Oriented Programming]] |
 | 3.5 | [[Object-Oriented Programming]] |
+| 4.1 | [[Ethics and Ownership]] |
 | 4.3 | [[Arrays]] |
 | 4.4 | [[Arrays]] |
 | 4.14 | [[Searching]] |
@@ -547,7 +557,7 @@ is often taught under a different heading.
 
 ## AP Physics 1
 
-*30 syllabus points · 49 card references*
+*34 syllabus points · 53 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -581,6 +591,19 @@ is often taught under a different heading.
 | 7.2 | [[Hooke's Law for Springs]], [[Simple Harmonic Motion]] |
 | 7.3 | [[Simple Harmonic Motion]] |
 | 7.4 | [[Simple Harmonic Motion]] |
+| 8.1 | [[Density and Pressure]] |
+| 8.2 | [[Density and Pressure]] |
+| 8.3 | [[Density and Pressure]] |
+| 8.4 | [[Density and Pressure]] |
+
+## AP Physics 2
+
+*2 syllabus points · 2 card references*
+
+| Syllabus point | Cards |
+|---|---|
+| 14.1 | [[Progressive Waves]] |
+| 14.2 | [[Progressive Waves]] |
 
 ## AP Physics C: Mechanics
 
@@ -653,7 +676,7 @@ is often taught under a different heading.
 
 ## IB Physics
 
-*21 syllabus points · 36 card references*
+*23 syllabus points · 38 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -671,6 +694,8 @@ is often taught under a different heading.
 | C.1.1 | [[Hooke's Law for Springs]], [[Simple Harmonic Motion]] |
 | C.1.2 | [[Simple Harmonic Motion]] |
 | C.1.3 | [[Simple Harmonic Motion]] |
+| C.2.1 | [[Progressive Waves]] |
+| C.2.2 | [[Progressive Waves]] |
 | C.4.3 | [[Damped Oscillations]], [[Resonance]] |
 | D.1.1 | [[Gravitational Fields]] |
 | D.1.2 | [[Gravitational Fields]] |

@@ -246,6 +246,18 @@ CLOSEFILE "Data.txt"
 
 The modes are `READ`, `WRITE` and `APPEND`, and `EOF("Data.txt")` tests for the end of file.
 
+**Random files** (A2 only) add a fourth mode and three commands. Records are fixed length, and the file pointer is *moved by arithmetic* to a record's address before it is read or written:
+
+```
+OPENFILE "Accounts.dat" FOR RANDOM
+SEEK "Accounts.dat", Hash(AccountNumber)     // move the pointer to a record address
+GETRECORD "Accounts.dat", Customer            // read the record there into a variable
+PUTRECORD "Accounts.dat", Customer            // write the variable's record there, replacing it
+CLOSEFILE "Accounts.dat"
+```
+
+The address is an integer — usually the number of records from the start — and the guide says explaining *how* it is computed is good practice; the variable in `GETRECORD` / `PUTRECORD` is normally a user-defined record type. [[File Processing and Exception Handling]] builds the same four operations in Python and shows what they cost.
+
 ## The functions you are given — and why the guide is not the list
 
 This is where candidates waste the most revision time, and where the honest answer is more useful than the tidy one.
@@ -416,3 +428,6 @@ Backwards. Real code is checked by a machine in seconds; pseudocode is checked b
 | `ENDIF` `ENDWHILE` `ENDCASE` | explicit block terminators | *(dedent)* |
 | `OTHERWISE` | the default case | `else` |
 | `EOF("file.txt")` | end-of-file test | `for line in f` |
+| `OPENFILE "f.dat" FOR RANDOM` | open a random-access file of fixed-length records | `open("f.dat", "r+b")` |
+| `SEEK "f.dat", Address` | move the file pointer to a record address | `f.seek(Address * RECORD_SIZE)` |
+| `GETRECORD` / `PUTRECORD "f.dat", Rec` | read / write the record at the pointer | `f.read(RECORD_SIZE)` / `f.write(...)` with `struct` |

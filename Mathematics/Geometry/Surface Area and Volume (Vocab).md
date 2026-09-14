@@ -9,6 +9,7 @@ prerequisites:
   - "[[Units of Measure (Vocab)]]"
 leads_to:
   - "[[Compound Shapes (Vocab)]]"
+  - "[[Archimedes and the Soldier]]"
 tags:
   - subject/mathematics
   - domain/geometry

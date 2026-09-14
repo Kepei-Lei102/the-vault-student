@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **61 cards across 10 bays.** Last landed: [[Program Development Life Cycle and Testing]] (2026-09-14) — cooking for six on Saturday: five stages, three models, three kinds of error, nine testing methods, four kinds of data, the trace table filled live; nine real Paper 2 questions from both boards.
+> **63 cards across 10 bays.** Last landed: [[Ethics and Ownership]] (2026-09-14) — the delivery rider trapped in the algorithm: three layers of obligation, the BCS four duties, Horizon and Dieselgate, copyright as a right not a lock, the licence spectrum, and the bias you cannot delete; 9618 has no red rows left.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -29,7 +29,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 3. **[[Half-Adder and Full-Adder]]** — a computer does arithmetic by doing logic: Sum = XOR, Carry = the majority function; the ripple-carry chain.
 4. **[[Flip-Flops]]** — memory bought with feedback: why one inverter in a loop oscillates and two remember; the SR and JK flip-flops; the SRAM cell.
 
-## Algorithms (8 — core arc closed, plus enrichment, the paradigms and the life cycle)
+## Algorithms (9 — core arc closed, plus enrichment, the paradigms, the life cycle and A2 file processing)
 
 *Concrete first, analysis after: searching → sorting → Big-O, with program design and the exam dialect alongside.*
 
@@ -41,6 +41,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 6. **[[Parallel and External Sorting]]** — what sorting becomes with many cores or data too big for RAM: fork–join merge sort, Amdahl's law, the measured overhead crossover. 💎
 7. **[[Object-Oriented Programming]]** — the nine syllabus terms built in real Python: data and behaviour bundled, encapsulation as invariants living next to the data, inheritance as is-a, polymorphism as the loop that never asks, containment as has-a; the June 2025 Animal/Parrot/Wolf and Nov 2025 Station/Train Paper 4 questions worked against their schemes; ECS in Beyond as OOP's deliberate inverse — and the vault's own architecture. *9618 §20.1 · AP CSA Unit 3 · IB CS B3*
 8. **[[Program Development Life Cycle and Testing]]** — the cycle from coding onward and the three models (waterfall, iterative, RAD); syntax, run-time and logic errors by who finds them; nine testing methods, the strategy and the plan; normal / abnormal / extreme / boundary data and the six validation checks; trace tables done by hand and by machine; three kinds of maintenance. *0478 §7.1, §7.5–7.8 · 9618 §12.1, §12.3*
+9. **[[File Processing and Exception Handling]]** — records out to a file and back; serial, sequential and random organisation with every operation run on a real file and the scan-vs-seek cost measured; the exception as a message that travels up the call stack, `try`/`except`/`finally`/`raise`, when handling is appropriate and the examiners' close-outside-the-try bug. *9618 §20.2*
 
 ## Data Representation (12 — closed)
 
@@ -109,14 +110,16 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 2. **[[SQL]]** — DDL and DML with every paper statement run for real in SQLite (script beside the card); the FROM-first execution order that explains WHERE vs HAVING; joins, GROUP BY, nested queries; the injection attack and the parameterised query. *0478 §9.2 · 9618 §8.3 · IB A3.3*
 3. **[[NoSQL and Distributed Data]]** — the four families, sharding and replication, the CAP theorem proved in one paragraph, ACID vs BASE, 12306 and OceanBase, data warehouses and OLAP, and the NewSQL swing back. *IB A3.4 (HL) · 💎 for Cambridge*
 
-## Security (2 — open)
+## Security (3 — open)
 
 *The threat/defence game, and the mechanism under the word "hacking". 0478 §5.3, 9618 §6, IB A2.4 — one real Paper 1 each against its scheme.*
 
 1. **[[Data Security]]** — security/privacy/integrity; every threat as mechanism → aim → property (malware, phishing vs pharming, brute-force, DDoS, social engineering); the defences with the *how*; validation vs verification (valid ≠ true); a crack-time chart; and Beyond, the buffer overflow with the three walls — canary, NX, ASLR — and why a hack-lab turns ASLR off. *0478 §5.3 · 9618 §6.1–6.2 · IB A2.4*
 2. **[[Encryption]]** — symmetric (Caesar → one-time pad → AES, Kerckhoffs) and asymmetric (Diffie–Hellman, RSA with $p=61,\ q=53$ walked and run, Euler's theorem, the factoring trapdoor); the two key directions and the who-holds-which-key table across HTTPS, mail, Signal, SSH, passkeys, updates, U 盾, wallets; hash-then-sign, certificates and CAs, TLS in five lines; key sizes, factoring records, QKD vs Shor and post-quantum; six real 9618 P3 / 0478 P1 questions. *9618 §17.1 · 0478 §2.3 · IB A2.4*
 
-*Next in the bay: [[Encryption]] (0478 §2.3 · 9618 §17 · IB A2.4) and the ethics/privacy law card.*
+3. **[[Ethics and Ownership]]** — the three layers of obligation (law, code, judgement); the BCS four duties with IEEE and ACM beside them; Horizon, Dieselgate, MCAS as the exam's small scenarios at scale; copyright as a right not a lock; the licence spectrum (FSF, OSI, shareware, commercial, and freeware kept out); AI's applications and impact, with the proxy-variable bias run live. *9618 §7.1 · AP CSA 3.2, 4.1 · IB A4.4*
+
+*Next in the bay: [[Data Protection and Privacy]] (GDPR and PIPL in full).*
 
 ## Data Transmission (3 — open)
 

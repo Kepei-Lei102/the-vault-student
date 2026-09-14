@@ -6,7 +6,8 @@ prerequisites:
   - "[[Chi-Squared Tests]]"
   - "[[Non-Parametric Tests]]"
   - "[[Why Probability and Statistics]]"
-leads_to: []
+leads_to:
+  - "[[Stats Lies Hall of Fame]]"
 tags:
   - type/story
   - subject/mathematics

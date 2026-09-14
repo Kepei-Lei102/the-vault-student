@@ -210,6 +210,16 @@ Students remember "the complement distributes" but forget that $\cup$ and $\cap$
 - Combined with cardinality: "Find $n((A \cup B)')$"
 - De Morgan's is not explicitly named but is tested through shading and listing
 
+### OxAQA 9260
+
+- **N9 Sets:** the same three operations and the complement $A'$, two- and three-set Venn diagrams, shading and listing — the row this card is credited on.
+
+### IB Mathematics AA / AI and AP
+
+- No set-theory topic on either IB route; $\cup$ and $\cap$ are the language of probability (SL 4.5: $P(A \cup B)$, $P(A \cap B)$, Venn diagrams) and are read, not examined for themselves. AP Calculus does not examine set operations.
+
+**Not examined on** Cambridge 0606 (no set theory — the 0606 map says so explicitly), 9709 or 9231.
+
 ## Connections
 
 - **Parent concepts:** [[Set]], [[Element]], [[Subset]], [[Universal Set]], [[Empty Set]]

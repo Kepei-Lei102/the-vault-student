@@ -8,14 +8,14 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-14` · built 2026-09-14 from commit `1626064`  
-> 394 cards · 554 diagrams · 97 explainers · 131 illustrations
+> **Edition** `student-2026-09-14b` · built 2026-09-14 from commit `f18aa35`  
+> 401 cards · 580 diagrams · 102 explainers · 139 illustrations
 
 ---
 
 ## Mathematics
 
-*220 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*221 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -97,6 +97,7 @@
 | [[Factorising (Vocab)]] | ? |  |  |
 | [[Factors and Multiples (Vocab)]] | ? |  |  |
 | [[Financial Literacy (Life)]] | ? |  |  |
+| [[Four Colour Theorem]] | ? |  |  |
 | [[Four Operations (Vocab)]] | ? |  |  |
 | [[Fractional Equations (Vocab)]] | ? |  |  |
 | [[Fractions (Vocab)]] | ? |  |  |
@@ -242,7 +243,7 @@
 
 ## Physics
 
-*49 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*51 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -256,6 +257,7 @@
 | [[Centres of Mass by Integration]] | ? |  |  |
 | [[Circular Motion]] | ? |  |  |
 | [[Damped Oscillations]] | ? |  |  |
+| [[Density and Pressure]] | ? |  |  |
 | [[Elastic Strings and Springs]] | ? |  |  |
 | [[Electric Current]] | ? |  |  |
 | [[Electromagnetic Induction]] | ? |  |  |
@@ -281,6 +283,7 @@
 | [[Normal Force (Vocab)]] | ? |  |  |
 | [[Physical Quantities and Units]] | ? |  |  |
 | [[Potential Dividers]] | ? |  |  |
+| [[Progressive Waves]] | ? |  |  |
 | [[Projectile Motion]] | ? |  |  |
 | [[Repeated Measurements]] | ? |  |  |
 | [[Resistance]] | ? |  |  |
@@ -298,7 +301,7 @@
 
 ## CS
 
-*61 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*63 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -319,7 +322,9 @@
 | [[Embedded Systems]] | ? |  |  |
 | [[Encryption]] | ? |  |  |
 | [[Error Detection and Correction]] | ? |  |  |
+| [[Ethics and Ownership]] | ? |  |  |
 | [[File Handling]] | ? |  |  |
+| [[File Processing and Exception Handling]] | ? |  |  |
 | [[Flip-Flops]] | ? |  |  |
 | [[Floating-Point Representation]] | ? |  |  |
 | [[Graphs]] | ? |  |  |
@@ -388,7 +393,7 @@
 
 ## Stories
 
-*44 cards · 🔴 unread · 🟢 read*
+*46 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -396,6 +401,7 @@
 | [[A Rich Neighbor Named Xerox]] | ? |  |  |
 | [[A, B, C]] | ? |  |  |
 | [[Abel the Other Boy Who Died Young]] | ? |  |  |
+| [[Archimedes and the Soldier]] | ? |  |  |
 | [[Aristotle to Apollo]] | ? |  |  |
 | [[Boltzmann's Tombstone]] | ? |  |  |
 | [[Cantor vs Kronecker]] | ? |  |  |
@@ -415,6 +421,7 @@
 | [[Ramanujan and Hardy]] | ? |  |  |
 | [[Russell's Paradox in the Post]] | ? |  |  |
 | [[Space Travel]] | ? |  |  |
+| [[Stats Lies Hall of Fame]] | ? |  |  |
 | [[Stigler's Law of Eponymy]] | ? |  |  |
 | [[The 1919 Eclipse]] | ? |  |  |
 | [[The Argument for i]] | ? |  |  |

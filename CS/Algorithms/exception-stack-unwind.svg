@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 900 360" font-family="Helvetica, Arial, sans-serif">
+  <!-- An exception raised deep in the call stack travels UP, frame by frame, until a handler takes it -->
+  <defs>
+    <marker id="su-arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="su-arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: no handler -->
+  <text x="220" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">No handler anywhere</text>
+  <g stroke="#888" stroke-width="1.5" fill="rgba(136,136,136,0.08)">
+    <rect x="100" y="48" width="240" height="44" rx="4"/>
+    <rect x="100" y="108" width="240" height="44" rx="4"/>
+    <rect x="100" y="168" width="240" height="44" rx="4"/>
+  </g>
+  <rect x="100" y="228" width="240" height="44" rx="4" stroke="#dc2626" stroke-width="2" fill="rgba(220,38,38,0.12)"/>
+  <g font-size="12" fill="#888">
+    <text x="112" y="66">main()</text>
+    <text x="112" y="82" font-size="10">load(lines)</text>
+    <text x="112" y="126">load(lines)</text>
+    <text x="112" y="142" font-size="10">[parse_line(l) for l in lines]</text>
+    <text x="112" y="186">parse_line("pear,ten")</text>
+    <text x="112" y="202" font-size="10">return name, int(qty)</text>
+  </g>
+  <text x="112" y="246" font-size="12" fill="#dc2626">int("ten")</text>
+  <text x="112" y="262" font-size="10" fill="#dc2626">raise ValueError</text>
+  <!-- the exception climbing -->
+  <line x1="360" y1="250" x2="360" y2="60" stroke="#dc2626" stroke-width="2.5" marker-end="url(#su-arrow-red)"/>
+  <text x="368" y="160" font-size="10" fill="#dc2626">unwinds</text>
+  <text x="368" y="172" font-size="10" fill="#dc2626">every frame</text>
+  <text x="220" y="300" text-anchor="middle" font-size="11" fill="#dc2626">past main: the interpreter prints the traceback</text>
+  <text x="220" y="316" text-anchor="middle" font-size="11" fill="#dc2626">and the program halts, exit code 1</text>
+  <text x="220" y="340" text-anchor="middle" font-size="10" fill="#888">the traceback lists exactly these frames, bottom one last</text>
+
+  <!-- RIGHT: handler in main -->
+  <text x="660" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">Handler two frames up</text>
+  <rect x="540" y="48" width="240" height="44" rx="4" stroke="#059669" stroke-width="2" fill="rgba(5,150,105,0.12)"/>
+  <g stroke="#888" stroke-width="1.5" fill="rgba(136,136,136,0.08)">
+    <rect x="540" y="108" width="240" height="44" rx="4"/>
+    <rect x="540" y="168" width="240" height="44" rx="4"/>
+  </g>
+  <rect x="540" y="228" width="240" height="44" rx="4" stroke="#dc2626" stroke-width="2" fill="rgba(220,38,38,0.12)"/>
+  <g font-size="12" fill="#888">
+    <text x="552" y="66">main()</text>
+    <text x="552" y="126">load(lines)</text>
+    <text x="552" y="142" font-size="10">no try here: it passes through</text>
+    <text x="552" y="186">parse_line("pear,ten")</text>
+    <text x="552" y="202" font-size="10">no try here either</text>
+  </g>
+  <text x="552" y="82" font-size="10" fill="#059669">try: load(lines)  except ValueError: ...</text>
+  <text x="552" y="246" font-size="12" fill="#dc2626">int("ten")</text>
+  <text x="552" y="262" font-size="10" fill="#dc2626">raise ValueError</text>
+  <line x1="800" y1="250" x2="800" y2="96" stroke="#dc2626" stroke-width="2.5" marker-end="url(#su-arrow-red)"/>
+  <text x="808" y="160" font-size="10" fill="#dc2626">two frames</text>
+  <text x="808" y="172" font-size="10" fill="#dc2626">discarded</text>
+  <circle cx="800" cy="80" r="9" fill="rgba(5,150,105,0.25)" stroke="#059669" stroke-width="2"/>
+  <text x="800" y="84" text-anchor="middle" font-size="11" fill="#059669">!</text>
+  <text x="660" y="300" text-anchor="middle" font-size="11" fill="#059669">caught where a decision can be made:</text>
+  <text x="660" y="316" text-anchor="middle" font-size="11" fill="#059669">report the bad line, skip it, keep the rest</text>
+  <text x="660" y="340" text-anchor="middle" font-size="10" fill="#888">detection and decision are different places; the exception carries the news between them</text>
+</svg>

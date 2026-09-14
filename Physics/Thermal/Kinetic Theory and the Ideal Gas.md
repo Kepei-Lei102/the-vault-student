@@ -5,6 +5,7 @@ prerequisites:
   - "[[Linear Momentum]]"
   - "[[Work, Energy and Power]]"
   - "[[Vectors in Physics]]"
+  - "[[Density and Pressure]]"
 leads_to:
   - "[[Internal Energy]]"
   - "[[First Law of Thermodynamics]]"

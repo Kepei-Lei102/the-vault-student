@@ -1,6 +1,6 @@
 # The Vault — Mathematics Directory
 
-> **220 cards** — 215 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Topology]] (2026-09-12) — the geometry that survives stretching: the metro map, Königsberg, the mug that is a doughnut, the Möbius cut.
+> **221 cards** — 216 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Four Colour Theorem]] (2026-09-14) — a question a child could ask, answered by a computer 124 years later: Euler's lever, six colours in a minute, Heawood's chain, Kempe's eleven-year mistake, and the proof nobody can read but a small checker can.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations and the graph of what to read first.
 
 **Reading the domains.** Folders are decorative; this index and each card's frontmatter are the map. *(Vocab)* cards are short definition-first entries; the rest are deep cards. Board codes: 0580 = Cambridge IGCSE, 0606 = Cambridge Additional Maths, 9709 = Cambridge A Level (P1–P6), 9231 = Cambridge Further (FP1, FP2, FM, FS), 9260 = OxAQA IGCSE, IB, AP.
@@ -41,11 +41,12 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 2. **[[Composite Function]]** — $fg(x) = f(g(x))$, order matters, $f^2(x)$.
 3. **[[Inverse Function]]** — $f^{-1}(x)$, swap-and-rearrange, reflection in $y = x$.
 
-## Combinatorics (3)
+## Combinatorics (4)
 
 1. **[[Factorial Notation]]** — $n!$, the recursive definition, why $0! = 1$.
 2. **[[Permutations and Combinations]]** — $^nP_r$, $^nC_r$, order matters vs doesn't.
 3. **[[Counting Problems]]** — strategies: complement, block, gap, digit constraints.
+4. **[[Four Colour Theorem]]** — maps to planar graphs, Euler's $V - E + F = 2$ forcing a vertex of degree ≤ 5, six colours by induction, five by Kempe chains, Kempe's flawed four and Heawood's catch, Appel–Haken's 1,936 configurations and the argument about computer proof; register allocation as the working tool. 💎
 
 ## Probability (15)
 

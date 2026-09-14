@@ -1,6 +1,6 @@
 # The Vault — Physics Directory
 
-> **49 cards across 7 bays.** Last landed: [[Resonance]] (2026-09-14) — push on the beat: the swing, the 90° lag, the peak Q times the static deflection, and the washing machine passing through.
+> **51 cards across 9 bays.** Last landed: [[Progressive Waves]] (2026-09-14) — the stadium wave: the pattern travels and the particles stay home; coupled SHM handed down a rope, v = fλ from the definitions, the photograph and the film, phase, I ∝ A², the CRO, the ripple tank; the Waves bay opens.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations, the worked papers, and the graph of what to read first.
 
 **Reading the bays.** Bays follow the Cambridge 9702 chapter structure. *Closed* bays cover their stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0625 = Cambridge IGCSE, 9702 = Cambridge A Level, 9709/9231 = the Cambridge maths boards whose mechanics papers these cards also serve, IB = IB Physics, AP-1 / AP-2 / AP-C = the AP Physics courses.
@@ -56,9 +56,21 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *Next in the bay: [[Coupled Oscillators]], the bridge to Waves.*
 
-## Waves (0 — reserved)
+## Fluids (1 — open)
 
-*Planned: progressive and stationary waves, diffraction, interference, polarisation, the Doppler effect, [[Electromagnetic Spectrum]]. 9702 §7–8 · 0625 §3.*
+*Statics first, then flow: density and pressure through Archimedes, continuity and Bernoulli; the bridge from Mechanics to Thermal's gas laws.*
+
+1. **[[Density and Pressure]]** — ρ = m/V and p = F/A, the hydrostatic derivation from a column of slabs, upthrust as a pressure difference (Archimedes without magic), floating as the density balance, manometer and barometer, continuity and Bernoulli; seven real questions from 9702, 0625 and AP Physics 1. *9702 §4.3 · 0625 §1.4, §1.8 · AP-1 Unit 8*
+
+*Next in the bay: [[Drag and Terminal Velocity]] (9702 §3.2's last item, viscosity and Stokes), then surface tension as enrichment.*
+
+## Waves (1 — open)
+
+*The pattern travels, the medium stays: progressive waves first, then what happens when they meet each other and things.*
+
+1. **[[Progressive Waves]]** — a wave as coupled SHM handed down a line; displacement, amplitude, wavelength, period, frequency, phase and the two graphs that carry them; v = fλ derived from the definitions; transverse vs longitudinal with the longitudinal graph decoded; I = P/A and I ∝ A²; the CRO; the ripple tank's reflection, refraction and diffraction. *9702 §7.1–7.2 · 0625 §3.1 · IB C.2 · AP-2 §14.1–14.2*
+
+*Next in the bay: [[Stationary Waves]] and [[Superposition and Interference]] (9702 §8), then [[Doppler Effect]], [[Electromagnetic Spectrum]], [[Polarisation]].*
 
 ## Thermal (5)
 

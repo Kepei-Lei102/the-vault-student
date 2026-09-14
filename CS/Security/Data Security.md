@@ -7,6 +7,7 @@ prerequisites:
   - "[[Famous for the Wrong Thing]]"
   - "[[The Internet and the Web]]"
 leads_to:
+  - "[[Ethics and Ownership]]"
   - "[[Encryption]]"
 tags:
   - subject/computer-science

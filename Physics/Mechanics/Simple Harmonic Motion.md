@@ -16,7 +16,7 @@ leads_to:
   - "[[Resonance]]"
   - "[[Coupled Oscillators]]"
   - "[[Pendulums]]"
-  - "[[Waves I: The Wave Equation]]"
+  - "[[Progressive Waves]]"
   - "[[The Quantum Harmonic Oscillator]]"
   - "[[The Pendulum Story]]"
   - "[[Alternating Current]]"
@@ -384,7 +384,7 @@ The vault's full treatment lives in [[Resonance]].
 
 Two pendulums connected by a soft spring. Each one's natural frequency is altered by its neighbour; the result is **two coupled second-order ODEs** whose solutions decompose into **normal modes** — collective oscillations of definite frequency. For two identical pendulums coupled symmetrically, the two modes are *in-phase* (both swing together, frequency = pendulum frequency) and *anti-phase* (opposite, frequency = slightly higher because the spring also contributes restoring force).
 
-Three pendulums give three modes; a million atoms in a crystal lattice give a million modes; a continuous string gives infinitely many — and that's how SHM generalises into **wave motion** (see [[Waves I: The Wave Equation]]). Every wave is a coupled SHM of infinitely many neighbours.
+Three pendulums give three modes; a million atoms in a crystal lattice give a million modes; a continuous string gives infinitely many — and that's how SHM generalises into **wave motion** (see [[Progressive Waves]]). Every wave is a coupled SHM of infinitely many neighbours.
 
 ### The quantum harmonic oscillator
 
@@ -470,7 +470,7 @@ $$\mathcal{L} = \tfrac{1}{2}m v^2 - \tfrac{1}{2}kx^2 = \text{KE} - \text{PE}.$$
    - [[Resonance]] — driven oscillator with sinusoidal forcing; the peak at $\omega_d = \omega_0$.
    - [[Coupled Oscillators]] — two-pendulum normal-mode decomposition; the bridge to waves.
    - [[Pendulums]] — the simple pendulum, the physical pendulum, the conical pendulum; large-angle anharmonicity.
-   - [[Waves I: The Wave Equation]] — coupled SHM of infinitely many neighbours; the spatial generalisation.
+   - [[Progressive Waves]] — coupled SHM of infinitely many neighbours; the spatial generalisation.
    - [[The Quantum Harmonic Oscillator]] — the quantum version; energy levels $(n + \tfrac{1}{2})\hbar\omega$; the prototype of quantum field theory.
 
 - **Cross-domain bridges:**

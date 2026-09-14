@@ -6,6 +6,7 @@ prerequisites:
   - "[[Stacks and Queues]]"
   - "[[Big-O Notation]]"
 leads_to:
+  - "[[Four Colour Theorem]]"
   - "[[Heaps and Priority Queues]]"
   - "[[NoSQL and Distributed Data]]"
   - "[[Erdős the Wandering Mathematician]]"

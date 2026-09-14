@@ -1,11 +1,13 @@
 ---
 chinese: "学习即验证 (xuéxí jí yànzhèng) — 会检查，比会做重要"
 prerequisites:
+  - "[[Four Colour Theorem]]"
   - "[[The Feynman Technique]]"
   - "[[Chain of Thought]]"
   - "[[P vs NP]]"
   - "[[Chi-Squared Tests]]"
 leads_to:
+  - "[[Ethics and Ownership]]"
   - "[[Credit Is the Currency]]"
   - "[[Program Development Life Cycle and Testing]]"
 tags:

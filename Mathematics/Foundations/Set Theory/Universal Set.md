@@ -115,6 +115,14 @@ It's just a set — it follows all the same rules. It has elements, subsets, car
 - Essential for: Venn diagram problems, complement questions, "find $n(\xi)$"
 - Usually appears in the first line of a set theory question
 
+### OxAQA 9260 (N9)
+
+- The universal set is part of the N9 set-notation row alongside $\cup$, $\cap$, complement and Venn diagrams; as at 0580 it is always stated in the question, and $\xi$ is the symbol used.
+
+### IB (AA / AI) and AP
+
+- **Not examined as a topic.** Neither IB Mathematics course nor AP has a set-theory unit; the universal set appears only as the sample space $U$ inside probability questions, where $P(A') = 1 - P(A)$ is the complement relative to it. Learn the symbol here; meet it there.
+
 ## Connections
 
 - **Parent concepts:** [[Set]], [[Subset]]

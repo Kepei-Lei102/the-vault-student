@@ -1,6 +1,7 @@
 ---
 chinese: 一位叫施乐的有钱邻居 (yī wèi jiào Shīlè de yǒuqián línjū) — 图形界面的两个小偷、一个睡着的巨人，和科技史上最好的一句回嘴
 prerequisites:
+  - "[[Ethics and Ownership]]"
   - "[[Space Travel]]"
 leads_to:
   - "[[Courage]]"

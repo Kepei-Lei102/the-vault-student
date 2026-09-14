@@ -5,6 +5,7 @@ prerequisites:
   - "[[Discrete Random Variables]]"
   - "[[Forward Reading and Problem Discovery]]"
 leads_to:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Normal Distribution]]"
   - "[[Poisson Distribution]]"
   - "[[Stories/Inventing Variance]]"
@@ -238,7 +239,7 @@ When a stat is presented stripped of its reference frame, it has hidden a critic
 
 ## Three classic stats lies
 
-A short tour of cases where a perfectly correct statistical statement misleads, because a hunter wasn't watching what got thrown away.
+A short tour of cases where a perfectly correct statistical statement misleads, because a hunter wasn't watching what got thrown away. The full museum — Farr's elevation law and Snow's water companies, Nightingale's two charts, the *Literary Digest*, Wald's memoranda, Huff for the tobacco industry, Anscombe, Berkeley — is [[Stats Lies Hall of Fame]]; the three below stay here as the method's illustrations.
 
 ### Lie 1 — Survivorship bias (Wald's bombers)
 

@@ -23,6 +23,7 @@ tags:
   - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
   - curriculum/Cambridge-0606
+  - curriculum/Edexcel-IAL
   - syllabus/9260-A9
   - syllabus/0580-E2-13
   - syllabus/0606-1-1
@@ -313,6 +314,17 @@ $$= 2a^2 - 5a + 6$$
 - Includes explaining in words **why** a given rule is or is not a function (1.1 note).
 - Domain restrictions and range-finding are tested explicitly.
 - The distinction between one-to-one and many-to-one matters here because it determines whether an inverse exists.
+
+### Cambridge 9709 (P1 §1.2)
+
+- *Understand the terms function, domain, range, one-one function, inverse function and composition of functions* — the vocabulary is examined as vocabulary, and "one-one" is the word the scheme looks for when asking whether an inverse exists.
+- *Identify the range of a given function in simple cases* — the syllabus's own examples are $f: x \mapsto \frac{1}{x}$ for $x \geq 1$ and $g: x \mapsto x^2 + 1$ for $x \in \mathbb{R}$; a completed-square form or a sketch is the expected route.
+- Domain restrictions are set so that a many-one rule becomes one-one (e.g. $x \geq k$ on a quadratic) — the question then asks for the least such $k$.
+
+### Edexcel IAL (P3 §1.2)
+
+- The function *as a one-one or many-one mapping from $\mathbb{R}$ (or a subset) to $\mathbb{R}$*; both $f: x \mapsto$ and $f(x)$ notations are used, and domain and range are asked for directly.
+- The same paper carries the modulus function (§1.3) and inverse and composite functions, so a P3 question typically chains them.
 
 ### Common exam phrasing
 

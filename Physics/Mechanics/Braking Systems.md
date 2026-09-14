@@ -8,6 +8,7 @@ prerequisites:
   - "[[SUVAT]]"
   - "[[Friction (Vocab)]]"
   - "[[Circular Motion]]"
+  - "[[Density and Pressure]]"
 leads_to:
   - "[[Stories/From the Grid to the Garage]]"
   - "[[From the Grid to the Garage]]"

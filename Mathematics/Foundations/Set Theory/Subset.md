@@ -156,6 +156,12 @@ $A \subseteq B$ means $A$ is inside $B$ — the "open" side of $\subseteq$ faces
 - The concept of subset is still implicit in Venn diagram reasoning (N9) — e.g., when one set is entirely contained in another
 - Useful background knowledge but students will not be asked to use the notation on the 9260 paper
 
+### IB Mathematics AA / AI and AP
+
+- No set-theory topic on either IB route; a subset appears only as one Venn circle inside another in probability work (SL 4.5), never with the $\subseteq$ notation. AP Calculus does not examine subsets.
+
+**Not examined on** Cambridge 0606 (no set theory), 9709 or 9231.
+
 ## Connections
 
 - **Parent concepts:** [[Set]], [[Element]]

@@ -113,7 +113,7 @@ Most bearing questions at Extension involve a triangle formed by two points and 
 
 ### OxAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** G12 (9260) / E4.7 (0580). Bearings appear as standalone "find the bearing" questions (2 marks) and as part of trigonometry problems (4–6 marks). At Extension, expect: multi-leg journeys (A → B → C), combined with sine/cosine rules, and "find the bearing of the return journey." Always draw a North line at every point mentioned.
+**Syllabus ref:** G12 (9260) / E4.3 Scale drawings (0580) — *use and interpret three-figure bearings*, measured clockwise from north, 000° to 360°; the syllabus's own example is the back-bearing: find the bearing of A from B given that the bearing of B from A is 025°, and it includes the terms north, east, south and west ("D is due east of C"). (E4.7 is Circle theorems I; an earlier version of this note had the wrong row.) Bearings appear as standalone "find the bearing" questions (2 marks) and as part of trigonometry problems (4–6 marks). At Extension, expect: multi-leg journeys (A → B → C), combined with sine/cosine rules, and "find the bearing of the return journey." Always draw a North line at every point mentioned.
 
 ---
 

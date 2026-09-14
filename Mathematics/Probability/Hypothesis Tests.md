@@ -1,6 +1,7 @@
 ---
 chinese: 假设检验 (jiǎshè jiǎnyàn)
 prerequisites:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Sampling and Estimation]]"
   - "[[Normal Distribution]]"
   - "[[Discrete Random Variables]]"

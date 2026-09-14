@@ -1,6 +1,6 @@
 # The Vault — Stories Directory 故事目录
 
-> **44 stories.** Last landed: [[Hilbert vs Brouwer]] (2026-09-12) — the excluded middle on trial: theology, the revolution, the Putsch, the frog-mouse war over a journal, and Gödel in Königsberg the day before *we must know*.
+> **46 stories.** Last landed: [[Stats Lies Hall of Fame]] (2026-09-14) — eight correct numbers that misled, and the people who asked what was thrown away: Farr's elevation law and Snow's water companies, Nightingale's chart drawn twice, the 2.4 million ballots, Wald's clean engines, Huff for the tobacco industry, Anscombe's quartet, Berkeley's departments.
 > Fun-first historical narratives: the folder where the human drama of mathematics, physics and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Meta/Directory|Meta]].
@@ -23,7 +23,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ---
 
-## Mathematics (17)
+## Mathematics (19)
 
 1. **[[The Calculus Priority Dispute]]** — Newton vs Leibniz, 1665–1727: the Royal Society's rigged committee, Britain's century in the notation wilderness, Babbage's 1812 fix.
 2. **[[The Hidden Number]]** — 250 years of $e$ from Napier to Hermite: "natural" means *unbidden* — five independent paths keep producing the same constant, nobody choosing it.
@@ -42,6 +42,8 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 15. **[[Erdős the Wandering Mathematician]]** — no home, one suitcase, "my brain is open"; the six-person party and the pigeonhole, the probabilistic method that proves by refusing to construct; the bet and the feud, kept difficult.
 16. **[[Cantor vs Kronecker]]** — teacher against student, 1874–1891: the fractions counted by zigzag and the reals uncounted by diagonal (both run here), "I see it but I do not believe it", *God made the integers*, the Halle clinic kept separate from the feud, and Kronecker given his due through Turing.
 17. **[[Hilbert vs Brouwer]]** — the same war a generation on, 1888–1931: "this is theology", consistency-is-existence versus build-it-or-it-isn't-there, Weyl's revolution and Hilbert's Putsch, the *Annalen* purge Einstein called the war of the frogs and the mice, and Gödel announcing incompleteness in Königsberg the day before *Wir müssen wissen*; the excluded-middle example run both ways, and the settlement inside every proof assistant.
+18. **[[Archimedes and the Soldier]]** — Syracuse, 287–212 BC: Vitruvius's bath recomputed and found wanting, Galileo's balance that must have replaced it, π trapped by a 96-gon (rerun), the sphere two-thirds of its cylinder, $10^{63}$ grains of sand, the *Method* read through a prayer book, the claw at the siege, Plutarch's three deaths and the Roman last words, and Cicero finding the tomb the city had lost.
+19. **[[Stats Lies Hall of Fame]]** — every exhibit a *correct* number that misled: Farr's elevation law, Nightingale's radius-scaled chart, the *Literary Digest*, Wald's bombers, Huff at the tobacco hearing, Anscombe's quartet, Berkeley's departments; six hunter's questions at the end. *Also a Meta card.*
 
 ## Physics (11)
 
@@ -81,7 +83,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ## Roadmap
 
-Titles waiting for their breath, not yet written: *Stats Lies Hall of Fame* · *Archimedes and the Soldier* · *Laplace and Napoleon* · *Erdős the Wandering Mathematician*.
+Titles waiting for their breath, not yet written: *Stats Lies Hall of Fame* · *Laplace and Napoleon* · *Erdős the Wandering Mathematician*.
 
 ---
 

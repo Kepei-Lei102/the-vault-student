@@ -6,6 +6,7 @@ prerequisites:
   - "[[Compilers and Interpreters]]"
   - "[[Learning as Verification]]"
 leads_to:
+  - "[[Ethics and Ownership]]"
   - "[[File Processing and Exception Handling]]"
   - "[[Object-Oriented Programming]]"
 tags:

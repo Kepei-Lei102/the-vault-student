@@ -1,6 +1,7 @@
 ---
 chinese: 解读数据 (jiědú shùjù)
 prerequisites:
+  - "[[Stats Lies Hall of Fame]]"
   - "[[Classifying Data]]"
   - "[[Averages and Spread]]"
   - "[[Statistical Charts]]"
