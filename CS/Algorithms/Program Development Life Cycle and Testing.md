@@ -1,6 +1,7 @@
 ---
 chinese: 程序开发生命周期与测试 (chéngxù kāifā shēngmìng zhōuqī yǔ cèshì)
 prerequisites:
+  - "[[Programming Fundamentals]]"
   - "[[Program Design]]"
   - "[[Cambridge Pseudocode]]"
   - "[[Compilers and Interpreters]]"

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 820 430">
+<style>text{font-family:Arial,sans-serif;fill:#888;font-size:20px}.title{font-size:25px;font-weight:bold}.note{font-size:18px}</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#888"/></marker></defs>
+<text x="410" y="35" text-anchor="middle" class="title">The first four conditions allow too much</text>
+<rect x="65" y="65" width="690" height="125" rx="15" fill="rgba(5,150,105,0.12)" stroke="#059669"/>
+<text x="85" y="95" class="note">A: contains 0 and every successor of its members</text>
+<g fill="none" stroke="#888" stroke-width="2" marker-end="url(#arrow)"><path d="M155 143H252"/><path d="M310 143H407"/><path d="M465 143H562"/><path d="M620 143H712"/></g>
+<g text-anchor="middle"><text x="130" y="150">0</text><text x="285" y="150">1</text><text x="440" y="150">2</text><text x="595" y="150">3</text><text x="730" y="150">…</text></g>
+<text x="85" y="230" class="note">Disjoint extra chain: no connection to A</text>
+<g fill="none" stroke="#888" stroke-width="2" marker-end="url(#arrow)"><path d="M85 275H172"/><path d="M238 275H325"/><path d="M393 275H480"/><path d="M548 275H635"/><path d="M702 275H755"/></g>
+<g text-anchor="middle"><text x="65" y="282">…</text><text x="205" y="282">z(-1)</text><text x="360" y="282">z(0)</text><text x="515" y="282">z(1)</text><text x="670" y="282">z(2)</text><text x="780" y="282">…</text></g>
+<path d="M70 325H750" stroke="#dc2626" stroke-width="2"/>
+<text x="410" y="363" text-anchor="middle">Induction requires A to be the WHOLE domain.</text>
+<text x="410" y="400" text-anchor="middle" class="note">The extra chain fails that requirement, despite passing conditions 1–4.</text>
+</svg>

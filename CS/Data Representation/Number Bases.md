@@ -158,7 +158,7 @@ Only in denary. `10` is two in binary, sixteen in hex. Whenever a base isn't obv
 
 ### Cambridge 0478 (IGCSE CS)
 
-**§1.1.1–1.1.2** — binary as the universal representation; convert between **denary, binary, and hex** in any direction (up to 16-bit); and explain the **use of hex** in CS (readability, colour codes, addresses, error codes). Those rows close here. Binary **addition, overflow, logical shifts** (§1.1.4–5) and **two's complement** for signed integers (§1.1.6) live in [[Two's Complement]] and [[Overflow and Underflow]].
+**§1.1.1–1.1.3** — binary as the universal representation; convert between **denary, binary, and hex** in any direction (up to 16-bit); and explain the **use of hex** in CS (readability, colour codes, addresses, error codes). Those rows close here. Binary **addition, overflow, logical shifts** (§1.1.4–5) and **two's complement** for signed integers (§1.1.6) live in [[Two's Complement]] and [[Overflow and Underflow]].
 
 ### Cambridge 9618 (A-Level CS)
 

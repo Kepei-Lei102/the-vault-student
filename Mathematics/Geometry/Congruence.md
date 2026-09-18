@@ -331,7 +331,7 @@ Some students write "the triangles are congruent by SAS" but never explicitly li
 
 ### Cambridge 0580 Extended
 
-**Syllabus reference:** E4.1 (similar and congruent shapes). At 0580 Extended, formal congruence conditions (SSS/SAS/ASA/RHS) are **not examined** — students just need to identify when figures are congruent ("tick the congruent pair") and state that corresponding sides and angles are equal.
+**Syllabus reference:** E4.1 Geometrical terms, where *congruent* and *similar* are vocabulary items and the notes state outright that *candidates are not expected to show that two shapes are congruent* (checked against the 2025–27 PDF). So at 0580 Extended, formal congruence conditions (SSS/SAS/ASA/RHS) are **not examined** — students just need to identify when figures are congruent ("tick the congruent pair") and state that corresponding sides and angles are equal.
 
 **Contrast with 9260:** this is a real difference between the two boards. OxAQA pushes into proofs that Cambridge 0580 avoids. Students who moved from 0580 to 9260 mid-course need explicit teaching on SSS/SAS/ASA/RHS — they will not have seen it.
 

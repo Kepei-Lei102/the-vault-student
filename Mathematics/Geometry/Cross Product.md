@@ -279,7 +279,7 @@ Trying to cross two 2D vectors and expecting a 2D vector back, or crossing two v
 
 ### A-Level Further (Cambridge 9231)
 
-**Syllabus ref:** Further Pure Mathematics 1 (Paper 1), Vectors. Examinable content: the vector product $\mathbf{a}\times\mathbf{b}$, its magnitude as area, the **scalar triple product** for volume and coplanarity, normals to planes, the line of intersection of two planes, and the **common perpendicular / shortest distance between two skew lines** (where the cross product does the heavy lifting). Typical question: "find the area of triangle $ABC$" (3–4 marks) or "find the shortest distance between the skew lines $\ell_1, \ell_2$" (5–6 marks, set up $\mathbf{d}_1\times\mathbf{d}_2$ then project the connecting vector onto it).
+**Syllabus ref:** Further Pure Mathematics 1 (Paper 1), **§1.6 Vectors**. The syllabus asks for the vector product in **both forms** — $\lvert\mathbf{a}\rvert\lvert\mathbf{b}\rvert\sin\theta\,\hat{\mathbf{n}}$ and the component form — and for its use with equations of lines and planes (in the forms $ax + by + cz = d$, $\mathbf{r}\cdot\mathbf{n} = p$ and $\mathbf{r} = \mathbf{a} + \lambda\mathbf{b} + \mu\mathbf{c}$) to solve problems of distances, angles and intersections: whether a line lies in, is parallel to or meets a plane; the foot of the perpendicular from a point to a plane; the angle between a line and a plane and between two planes; the line of intersection of two planes; the shortest distance between two skew lines and their common perpendicular. **The scalar triple product is not named on 9231**: volume and coplanarity by $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$ is enrichment here, though a normal found by a cross product and a distance found by a dot product do the same work in two steps.
 
 ### IB AA HL
 
@@ -289,7 +289,7 @@ Trying to cross two 2D vectors and expecting a 2D vector back, or crossing two v
 
 ### A-Level Further (Edexcel / AQA / OCR)
 
-The vector product sits in **Further Pure** content across all UK boards (Edexcel places it in Further Pure 1 / Core Pure; the legacy FP3 module is the older home). Same content as 9231: vector product, scalar triple product, planes, skew-line distance.
+The vector product sits in **Further Pure** content across all UK boards (Edexcel places it in Further Pure 1; the legacy FP3 module is the older home). Edexcel's FP1 goes one step beyond 9231: it names the **triple scalar product** and its use for volumes, which 9231 does not.
 
 ### AP
 

@@ -1,6 +1,6 @@
 # The Vault — Mathematics Directory
 
-> **221 cards** — 216 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Four Colour Theorem]] (2026-09-14) — a question a child could ask, answered by a computer 124 years later: Euler's lever, six colours in a minute, Heawood's chain, Kempe's eleven-year mistake, and the proof nobody can read but a small checker can.
+> **222 cards** — 217 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Natural Numbers]] (2026-09-17) — zero, successor, sets, recursive arithmetic and why a countdown stops.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations and the graph of what to read first.
 
 **Reading the domains.** Folders are decorative; this index and each card's frontmatter are the map. *(Vocab)* cards are short definition-first entries; the rest are deep cards. Board codes: 0580 = Cambridge IGCSE, 0606 = Cambridge Additional Maths, 9709 = Cambridge A Level (P1–P6), 9231 = Cambridge Further (FP1, FP2, FM, FS), 9260 = OxAQA IGCSE, IB, AP.
@@ -228,7 +228,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 8. **[[Trigonometric Equations]]** — reduce to one trig of one argument; the second solution per period from CAST; four families; the $R\sin(x + \alpha)$ form. *0606 §10.5*
 9. **[[Trigonometric Graphs]]** — the three parent graphs and the transformations of $y = a\sin(bx) + c$; reading $a, b, c$ off a given graph; tan's asymptotes. *0606 §10.2–10.3*
 
-## Number (38)
+## Number (39)
 
 1. **[[Upper and Lower Bounds]]** — error intervals, combining bounds in calculations, truncation vs rounding.
 2. **[[Laws of Indices]]** — seven laws with *why* proofs; zero, negative and fractional indices; index equations.
@@ -268,6 +268,8 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 36. **[[TI-84 CE Reference]]** — the graphing calculator for AP and IB: graphing, tables, solvers, statistics; it doesn't simplify surds.
 37. **[[Logarithms]]** — $\log_b x = y \iff b^y = x$; the three laws proved from the index laws; change of base; $\ln$ and calculus; log scales, Napier, Shannon.
 38. **[[Exponential Function]]** — $y = e^x$ as a function: the exp laws, $(e^x)' = e^x$ from the power series, $b^x = e^{x\ln b}$, disguised-quadratic exponential equations.
+
+39. **[[Natural Numbers]]** — Peano-style axioms, von Neumann construction, recursive addition/multiplication, proved arithmetic laws and termination measures.
 
 ---
 

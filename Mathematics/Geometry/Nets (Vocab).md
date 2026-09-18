@@ -126,12 +126,12 @@ So the rectangle is $10 \text{ cm} \times 8\pi \text{ cm}$, area $80\pi \approx 
 
 ### Cambridge 0580
 
-**Syllabus ref:** E4.2 — recognise nets of solids; sketch nets of simple solids. Standard patterns:
+**Syllabus ref:** E4.2 point 3 — "draw, use and interpret nets": the syllabus's examples are nets of cubes, cuboids, prisms and pyramids, and using measurements taken from a net to calculate a volume or a surface area. Standard patterns:
 
 - "Sketch the net of a triangular prism with the given dimensions."
 - "Which of these are valid nets of a cube? Tick all that apply."
 - "On the net below, mark which face is opposite to the shaded face when folded into a cube."
-- "A cylinder has radius $5$ cm and height $12$ cm. Calculate the area of the rectangle in its net." (Answer: $5 \times 2\pi \times 12 = 120\pi$ cm² — wait, that's not right — let me recompute: width = $2\pi(5) = 10\pi$, height = $12$, area = $120\pi$ cm².)
+- "A cylinder has radius $5$ cm and height $12$ cm. Calculate the area of the rectangle in its net." (The rectangle's width is the circumference, $2\pi \times 5 = 10\pi$ cm, and its height is $12$ cm, so the area is $120\pi$ cm².)
 
 ---
 

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 720 410">
+<style>text{font-family:system-ui,sans-serif;fill:#888}.mono{font-family:monospace}</style>
+<text x="28" y="30" font-size="22" text-anchor="start" class="">Same three characters. Different coordinates.</text>
+<text x="28" y="68" font-size="17" text-anchor="start" class="">Cambridge: start + length</text>
+<rect x="230" y="85" width="58" height="48" rx="5" stroke="#888" fill="rgba(136,136,136,0.10)"/>
+<text x="259" y="117" font-size="25" text-anchor="middle" class="mono">H</text>
+<text x="259" y="156" font-size="16" text-anchor="middle" class="mono">1</text>
+<rect x="295" y="85" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="324" y="117" font-size="25" text-anchor="middle" class="mono">e</text>
+<text x="324" y="156" font-size="16" text-anchor="middle" class="mono">2</text>
+<rect x="360" y="85" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="389" y="117" font-size="25" text-anchor="middle" class="mono">l</text>
+<text x="389" y="156" font-size="16" text-anchor="middle" class="mono">3</text>
+<rect x="425" y="85" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="454" y="117" font-size="25" text-anchor="middle" class="mono">l</text>
+<text x="454" y="156" font-size="16" text-anchor="middle" class="mono">4</text>
+<rect x="490" y="85" width="58" height="48" rx="5" stroke="#888" fill="rgba(136,136,136,0.10)"/>
+<text x="519" y="117" font-size="25" text-anchor="middle" class="mono">o</text>
+<text x="519" y="156" font-size="16" text-anchor="middle" class="mono">5</text>
+<text x="28" y="190" font-size="20" text-anchor="start" class="mono">SUBSTRING(&quot;Hello&quot;, 2, 3)</text>
+<text x="505" y="190" font-size="20" text-anchor="start" class="mono">= &quot;ell&quot;</text>
+<text x="28" y="248" font-size="17" text-anchor="start" class="">Python: start + exclusive stop</text>
+<rect x="230" y="265" width="58" height="48" rx="5" stroke="#888" fill="rgba(136,136,136,0.10)"/>
+<text x="259" y="297" font-size="25" text-anchor="middle" class="mono">H</text>
+<text x="259" y="336" font-size="16" text-anchor="middle" class="mono">0</text>
+<rect x="295" y="265" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="324" y="297" font-size="25" text-anchor="middle" class="mono">e</text>
+<text x="324" y="336" font-size="16" text-anchor="middle" class="mono">1</text>
+<rect x="360" y="265" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="389" y="297" font-size="25" text-anchor="middle" class="mono">l</text>
+<text x="389" y="336" font-size="16" text-anchor="middle" class="mono">2</text>
+<rect x="425" y="265" width="58" height="48" rx="5" stroke="#7c3aed" fill="rgba(124,58,237,0.15)"/>
+<text x="454" y="297" font-size="25" text-anchor="middle" class="mono">l</text>
+<text x="454" y="336" font-size="16" text-anchor="middle" class="mono">3</text>
+<rect x="490" y="265" width="58" height="48" rx="5" stroke="#888" fill="rgba(136,136,136,0.10)"/>
+<text x="519" y="297" font-size="25" text-anchor="middle" class="mono">o</text>
+<text x="519" y="336" font-size="16" text-anchor="middle" class="mono">4</text>
+<text x="28" y="370" font-size="20" text-anchor="start" class="mono">&quot;Hello&quot;[1:4]</text>
+<text x="505" y="370" font-size="20" text-anchor="start" class="mono">= &quot;ell&quot;</text>
+<text x="28" y="219" font-size="18" text-anchor="start" class="">Start shifts by one. Length stays three.</text>
+</svg>

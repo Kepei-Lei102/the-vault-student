@@ -6,7 +6,8 @@ prerequisites:
   - "[[Hash Tables]]"
   - "[[Graphs]]"
   - "[[Networks]]"
-leads_to: []
+leads_to:
+  - "[[Digital Currency and Blockchain]]"
 tags:
   - subject/computer-science
   - domain/databases

@@ -3,6 +3,8 @@ chinese: 一遍过与多轨录音 (yī biàn guò yǔ duō guǐ lùyīn)
 prerequisites: []
 leads_to:
   - "[[Sound Encoding]]"
+teach_together:
+  - "[[Layers]]"
 tags:
   - type/story
   - subject/computer-science
@@ -155,6 +157,8 @@ Read the whole card at once and the shape is clear. Each act bought a new freedo
 - **The concert inverted.** For Caruso, the record was a souvenir of the performance. For a modern pop act touring an assembled studio production, the performance is a re-enactment of the record — click tracks and backing stems holding the live show to the session's grid.
 
 ## Where this surfaces in the vault
+
+- **[[Layers]]** — the visual companion: combination printing, repeated performances, multiplane animation and editable image projects.
 
 - **[[Sound Encoding]]** — dual residency. That card carries the machinery: sampling, quantisation, Nyquist, and the 44,100-videotape hack that launched digital audio; the analogue-copies-decay vs digital-copies-are-exact asymmetry that powers Act VI is its samples-are-numbers thesis, acted out by history.
 - **[[Information Theory]]** — *why* the hundredth digital copy is identical to the first: discrete symbols reject small errors, which analogue ribbons cannot. Generation loss is what a channel does to you without Shannon's armour.

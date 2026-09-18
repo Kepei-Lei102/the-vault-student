@@ -77,7 +77,7 @@ One co-interior angle and the alternate angle on the other side are supplementar
 
 ## Exam Notes
 
-**9260 G3 / 0580 E4.2.** "Understand and use the angle properties of parallel lines." Questions often combine these with angles on a straight line or vertically opposite to find unknown angles in multi-step problems. Always state which property you use at each step.
+**Cambridge 0580 E4.6 *Angles*, point 2** — "calculate unknown angles and give geometric explanations for angles formed within parallel lines: corresponding angles are equal; alternate angles are equal; co-interior angles sum to 180° (supplementary)". The syllabus adds that candidates are **expected to use the correct geometrical terminology when giving reasons** and must know three-letter angle notation (angle $ABC$). **OxfordAQA 9260 G3** — "understand and use the angle properties of parallel and intersecting lines, triangles and quadrilaterals"; its note says students should know the meaning and properties of *alternate*, *corresponding* and *interior* angles. Questions on both boards combine these with angles on a straight line or vertically opposite angles (0580 E4.6 point 1) in multi-step problems: always state which property you use at each step, in the syllabus's words.
 
 ---
 

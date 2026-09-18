@@ -2,7 +2,8 @@
 chinese: 需求的变化，总在意料之外 (xūqiú de biànhuà, zǒng zài yìliào zhī wài)
 prerequisites:
   - "[[Courage]]"
-leads_to: []
+leads_to:
+  - "[[The Perceptron and Move 78]]"
 tags:
   - type/story
   - subject/computer-science
@@ -95,6 +96,7 @@ And the quote? Still floating, still uncited, still "enough for anybody." It sur
 - [[RAM and the Memory Hierarchy]] — the pyramid whose zero-latency tip this story's windfall enlarges; spills as forced trips down the pyramid.
 - [[Two's Complement]] — the 2038 exhibit's mechanics: signed overflow, the sign bit's flip, and why the wrap lands in 1901.
 - [[Averages and Spread]] — mean versus variance, the distinction "smoother" hides and Act IV teaches.
+- [[Stories/The Perceptron and Move 78]] — what the two gaming cards were for: AlexNet, and the marriage of the lineages that followed.
 
 ## Receipts
 

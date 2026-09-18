@@ -5,6 +5,7 @@ prerequisites:
 leads_to:
   - "[[NoSQL and Distributed Data]]"
   - "[[Data Security]]"
+  - "[[Programming Paradigms]]"
 tags:
   - subject/computer-science
   - domain/databases
@@ -15,7 +16,7 @@ tags:
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
   - curriculum/IB-CS
-  - syllabus/0478-9-2
+  - syllabus/0478-9-4
   - syllabus/9618-8-3
   - syllabus/IB-CS-A3-3
   - type/deep
@@ -355,7 +356,7 @@ You never told the database to loop. That is not a convenience; it is the reason
 - **Parent:** [[Relational Databases]] — the tables, keys and normal forms every statement here operates on; its worked schemas are this card's test data.
 - **Children:** [[NoSQL and Distributed Data]] — the stores that gave up joins and then mostly grew a query language back; [[Data Security]] — SQL injection as the canonical input-validation failure, and the parameterised query as its fix.
 - **Uses:** [[Hash Tables]] and [[Sorting]] — the join algorithms the query processor chooses between; [[Balanced Trees]] — the index a `WHERE` on a keyed column walks.
-- **Same idea elsewhere:** [[Declarative Programming]] — SQL as the declarative language every student already speaks; [[Program Design]] — say what, not how, as a design principle; [[Decouple and Recouple]] — the query's *how* left to the engine, so the same statement runs on one machine or a thousand.
+- **Same idea elsewhere:** [[Programming Paradigms]] — SQL as the declarative language every student already speaks, beside Prolog's facts and rules; [[Program Design]] — say what, not how, as a design principle; [[Decouple and Recouple]] — the query's *how* left to the engine, so the same statement runs on one machine or a thousand.
 - **The script:** `sql-worked-examples.py`, beside this card — every statement above, run against SQLite, with the outputs quoted here.
 
 - **Misconception traps cleared:** queries execute FROM-first, not top to bottom; WHERE cannot see totals; COUNT(*) ≠ COUNT(field); two tables in FROM is a product until joined; ORDER BY defaults ascending; text is quoted; UPDATE/DELETE act on every matched row.

@@ -7,9 +7,11 @@ prerequisites:
   - "[[P vs NP]]"
   - "[[Chi-Squared Tests]]"
 leads_to:
+  - "[[You're the Architect, the AI is the Bricklayer]]"
   - "[[Ethics and Ownership]]"
   - "[[Credit Is the Currency]]"
   - "[[Program Development Life Cycle and Testing]]"
+  - "[[You Are a Reinforcement Learner]]"
 tags:
   - subject/methodology
   - subject/philosophy
@@ -162,6 +164,8 @@ Feynman's rule for scientists, from the 1974 lecture on cargo-cult science, is t
 
 ## Connections
 
+- **Directing a build:** [[You're the Architect, the AI is the Bricklayer]] — invariants, selection triggers and verification become a method for supervising implementation.
+
 - **Parents:**
    - [[The Feynman Technique]] — rebuilding from scratch is how a method is verified *once*; this card is what to keep afterwards.
    - [[Chain of Thought]] — the trigger, not the technique: naming what selected a tool is the certificate a verifier reads first.
@@ -174,6 +178,7 @@ Feynman's rule for scientists, from the 1974 lecture on cargo-cult science, is t
 - **Cross-domain:** [[Encryption]] — the digital signature as producing-versus-checking made into infrastructure; [[Physical Quantities and Units]] — rung 1 and the Mars Climate Orbiter; [[Kirchhoff's Laws]] — the loop count as a rung-4 check; [[Resonance]] — rungs 3, 6 and 7 all run on one formula; [[Hilbert vs Brouwer]] — where the small trusted kernel got its logic; [[Program Design]] — testing as the software profession's ladder; [[Compression Is Intelligence]] — the sibling: that card says understanding is *prediction*, this one says the retained skill is *checking*, and a good predictor is the cheapest verifier there is.
 
 - **Misconception traps cleared:** verifying is redoing; if I can check it I could have done it; AI removes the need to understand; confident answers are probably right; a check that always passes is reassuring; verification is for exams.
+- **Leads to:** [[You Are a Reinforcement Learner]] — the task's own signal as the one reward that cannot lie, and what to do when an institution's signal is broken.
 
 ## Sources
 

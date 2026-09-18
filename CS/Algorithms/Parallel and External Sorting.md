@@ -9,6 +9,8 @@ leads_to:
   - "[[Stories/Dual-Core Craft]]"
   - "[[Dual-Core Craft]]"
   - "[[The True IO Bound]]"
+teach_together:
+  - "[[Heaps and Priority Queues]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -179,7 +181,7 @@ The point of external sorting is not the comparisons — it is **minimising disk
 This is **enrichment** — it sits beyond every A-Level/IGCSE/AP syllabus row, and no exam will ask you to implement a parallel or external sort.
 
 ### Cambridge 9618 (A-Level CS) — the understanding behind §15.1
-The required sorting (bubble, insertion, merge, quicksort) is closed by [[Sorting]] and [[Big-O Notation]]. This card is the *why* behind **§15.1** (processors and **parallel processing** — multi-core, SISD/SIMD/MISD/MIMD, massively parallel). The syllabus treats that as vocabulary to memorise; **Amdahl's law and the overhead crossover are the actual ideas** those words point at, and knowing them turns rote acronyms into something you understand. Worth reading for any A2 student who wants the concepts beneath §15.1 to make sense.
+The required sorts are **bubble sort and insertion sort**, taught in [[Sorting]] with complexity in [[Big-O Notation]]. Merge sort and quicksort are enrichment for 9618. This card is the *why* behind **§15.1** (processors and **parallel processing** — multi-core, SISD/SIMD/MISD/MIMD, massively parallel). The syllabus treats that as vocabulary to memorise; **Amdahl's law and the overhead crossover are the actual ideas** those words point at, and knowing them turns rote acronyms into something you understand. Worth reading for any A2 student who wants the concepts beneath §15.1 to make sense.
 
 ### Cambridge 0478 (IGCSE CS)
 

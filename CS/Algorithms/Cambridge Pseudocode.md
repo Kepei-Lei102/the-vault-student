@@ -7,6 +7,8 @@ leads_to:
   - "[[User-Defined Data Types]]"
   - "[[Object-Oriented Programming]]"
   - "[[Program Development Life Cycle and Testing]]"
+teach_together:
+  - "[[Programming Fundamentals]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -14,6 +16,7 @@ tags:
   - level/A-Level
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
+  - syllabus/0478-7-9
   - syllabus/9618-10-1
   - syllabus/9618-10-3
   - syllabus/9618-11-1
@@ -32,6 +35,10 @@ tags:
 > *A language you cannot execute is a language you cannot check, which is why runnable code beats a dialect almost everywhere. Here is the exception, and it is worth being straight about why it earns one. Cambridge pseudocode is a **consistent hybrid of program code and structured English** — and the whole of its value is in that one word, **consistent**. It is not more readable than Python. It is not more precise than Java. It exists so that a marker in one country reads a script from another and arrives at exactly the same meaning the candidate intended. That is a real problem, honestly solved. It is also the only problem this dialect solves.*
 
 ## 中文锚点
+
+把菜谱交给一个从没做过饭的人，“炒熟就行”很容易让他发愣；写成“加热，检查是否熟透；没熟就继续”，步骤和判断才有了着落。伪代码做的也是这件事：把先做什么、遇到什么情况要换路、哪些动作要重复，写给人看。约定好一套写法，是为了让不同的人读出同样的流程；它本身通常不能直接运行，还要翻译成真正的程序，让电脑照着做。
+
+## Key Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -62,11 +69,13 @@ Read the middle column downwards and the design becomes obvious. Cambridge must 
 That is a genuine problem and this is a reasonable answer to it. Worth saying plainly, because everything below is about the costs.
 
 > [!warning] A language with no implementation
-> Cambridge pseudocode has keywords, data types, declarations, scope rules, parameter-passing modes and a published grammar. It has everything a programming language has **except a compiler**. Nothing anywhere will ever run it.
+> Cambridge pseudocode has keywords, data types, declarations, scope rules, parameter-passing modes and a published grammar. It has everything a programming language has **except a compiler**. Cambridge does not provide an official runtime as part of this specification. Unofficial interpreters exist, but their behaviour is not the authority for marking.
 >
 > That single fact causes most of the difficulty students have with it. In Python, a misunderstanding produces an error message within seconds and you fix it. Here there is no oracle at all — no interpreter to contradict you, no test to fail. The only thing that can tell you your pseudocode is wrong is a human being reading it, and in an exam that human is marking it. You therefore have to be **more** careful than you would in a real language, not less, which is the exact opposite of what "pseudo" sounds like it should mean.
 >
 > The practical defence, and it is the one professionals use: **write it in Python first, run it, then transcribe.** The thinking gets checked by a machine; only the spelling is done by hand.
+
+For the introductory concepts with **0478 pseudocode and runnable Python side by side**, use [[Programming Fundamentals]]. The dialect below is the broader **9618** version; the two specifications differ.
 
 ## The grammar, in one pass
 
@@ -230,6 +239,8 @@ Total ← Area(3.0, 4.0)
 
 **Which of the two, and where** — a **function** is appropriate when the sub-task's whole point is to *produce a value* that the caller then uses, because a function call can stand inside an expression: `Total ← Area(3.0, 4.0) * Quantity` works, and the return value simply replaces the call. A **procedure** is appropriate when the sub-task's point is to *do* something — display a report, write a file, swap two values — and there is no single answer to hand back. If you find yourself writing a procedure whose last act is to store one result somewhere the caller will read, you wanted a function.
 
+**Name the parts of the call.** In the example above, `FUNCTION Area(Width : REAL, Height : REAL) RETURNS REAL` is the **header**: the opening declaration. `Width` and `Height` are **parameters**, the names used inside the function. In `Area(3.0, 4.0)`, `3.0` and `4.0` are **arguments**, the actual values supplied by the caller. The **return value** is `12.0`, which replaces the call in the expression. The **interface** is the information the caller needs to use the subprogram: its name, inputs (including their types and passing modes), and any returned result. The header states that interface; the body implements it. A caller can use `Area` without knowing how its body obtains the answer.
+
 **Parameter passing** is explicit, which most real languages hide: `BYREF` means the callee gets the original and changes stick; the default is by value, where it gets a copy.
 
 ```
@@ -346,10 +357,10 @@ But "exam furniture" is not the same as "optional". At IGCSE the furniture is th
 **Three things it does teach that survive contact with reality**, and they are not nothing:
 
 - **Declare before you use.** Writing `DECLARE Counter : INTEGER` builds a habit that Python's dynamic typing lets you skip and that every large Python codebase then reintroduces by hand, as type hints. The dialect enforces at pen-and-paper level what serious projects re-adopt voluntarily.
-- **Say how a parameter is passed.** `BYREF` versus by value is invisible in most modern languages and bites everybody eventually — the function that mutated the list you passed it. Here it is compulsory to state, which is a better first encounter with the idea than discovering it through a bug.
+- **Say how a parameter is passed.** `BYREF` versus by value exposes an important distinction, but it must not be confused with Python object sharing — mutating a passed list is not the same as aliasing the caller’s variable. Here it is compulsory to state, which is a better first encounter with the idea than discovering it through a bug.
 - **Close your blocks explicitly.** `ENDIF`, `ENDWHILE`, `NEXT`. Python closes blocks by dedent, which is elegant and occasionally catastrophic; every other language in wide use closes them with a brace or a keyword. The habit transfers to more languages than it doesn't.
 
-And the honest verdict on the cost. The dialect asks you to be precise in a notation with **no way to check precision** — no interpreter, no test, no error message, nothing but a marker weeks later. That is a genuinely poor learning loop, and it is the reason to do the thinking in a language that can run and to treat the transcription as the last step rather than the first. **Write it so it runs. Then write it so it marks.**
+And the honest verdict on the cost. The dialect asks you to be precise in a notation without an **official executable reference** to check it against. Unofficial interpreters can help, but a passing run does not establish conformity with a particular paper’s dialect. That is a genuinely poor learning loop, and it is the reason to do the thinking in a language that can run and to treat the transcription as the last step rather than the first. **Write it so it runs. Then write it so it marks.**
 
 ## Common Misconceptions (Teaching Notes)
 
@@ -359,11 +370,11 @@ That is true of pseudocode as a general idea and **false of this dialect**, whic
 
 ### 2. "I have to memorise all the built-in functions"
 
-The guide states that string manipulation functions are always provided, and the syllabus adds that any function not in the guide will be given in the question. **Fix:** learn to *read* an unfamiliar function signature — `MID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING` tells you everything without memory. Spend the revision time on tracing instead.
+**For 9618**, the guide states that string manipulation functions are always provided, and the syllabus adds that any function not in the guide will be given in the question. **Fix:** learn to *read* an unfamiliar function signature — `MID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING` tells you everything without memory. Practise using the signature in both tracing and writing. **0478 has no corresponding insert:** learn its syllabus conventions and use any definitions a question supplies.
 
 ### 3. "The pseudocode guide lists the functions I get"
 
-It does not. The guide is a teachers' document; the **insert** stapled to the paper is the specification for that paper, it is longer, and it has changed between series — `LEFT` is on every insert and in no version of the guide, while `LCASE`/`UCASE` are in the guide and were dropped from the papers after November 2022. **Fix:** read the insert before question one. It is a fact on the desk; anything remembered from a textbook is a guess.
+**For 9618**, it does not. The guide is a teachers' document; the **insert** stapled to the paper is the specification for that paper, it is longer, and it has changed between series — `LEFT` is on every insert and in no version of the guide, while `LCASE`/`UCASE` are in the guide and were dropped from the papers after November 2022. **Fix:** read the insert before question one. It is a fact on the desk; anything remembered from a textbook is a guess.
 
 ### 4. "Pseudocode is easier than real code because it doesn't have to be exact"
 
@@ -371,26 +382,26 @@ Backwards. Real code is checked by a machine in seconds; pseudocode is checked b
 
 ## Exam Notes
 
-### Cambridge 9618 — where the dialect is actually used
+### Cambridge 9618 — written pseudocode and a separate practical
 
-- **Papers 1 and 3 (written)** are where you *read* pseudocode: trace it, find the error, state the output, complete a partially written algorithm. This is the majority of the contact you will have with it, and it is a reading skill.
-- **Papers 2 and 4 (practical)** are answered in a **real programming language** — Python, Java or VB.NET — not in pseudocode. Question stems may present an algorithm in pseudocode, but your answer is code that runs.
-- So the honest allocation of effort is: **read fluently, write competently, and do neither at the expense of the language you will actually be examined in.**
-- The guide is published as *Pseudocode Guide for Teachers*, version 1, for exams in 2027–29. It is a public document; reading its index of keywords once is worth more than any summary.
-- **§20.2 exception handling and §20.1's polymorphism and containment are language-side objectives** — the dialect cannot express them, so they are met in your chosen language.
-- **Papers 2 and 3 carry an insert** reprinting every function you may use. It is longer than the published guide and it has changed across series — so the first two minutes of the exam belong to reading it, not to question one. Past inserts are the best possible revision material for exactly this, because they show you what *that* year's paper actually assumed.
+- **Paper 2 is written, not practical.** It assesses §§9–12 (problem-solving and programming) and explicitly asks candidates to write pseudocode; the 2027–29 syllabus says candidates are not required to write programming code. **§11.1** covers declarations, assignment, expressions, I/O and built-ins; **§11.2** covers constructs and loop-choice justification; **§11.3** covers procedures/functions, interfaces, parameters/arguments, return values, and pass-by-value/reference. **§10.1 / §10.3** add data types/records and file handling.
+- **Paper 3 is written** and can require construction as well as reading/tracing of advanced pseudocode. Its §19.1 ADT algorithms and §20.1 class examples make “pseudocode is only a reading skill at A-Level” unsafe advice. Paper 1 assesses §§1–8 theory.
+- **Paper 4 is the practical**, completed on a computer in Python, Java or Visual Basic .NET. An algorithm in a question may be expressed in pseudocode; the submitted program must run in the chosen language.
+- **Papers 2 and 3 supply inserts** with built-in functions/operators. Their function lists have differed from the teacher guide and between series; read the actual insert. The syllabus guarantees provision of string-manipulation functions and functions absent from the guide, not an exemption from learning all keywords.
+- **§20.1 / §20.2:** polymorphism, containment and exception handling need real-language implementations for the practical. The guide's class syntax supplies some written forms; it is not the complete runtime machinery.
+- **Allocation of effort:** learn to **read and write** pseudocode for Papers 2/3 and write, run and debug real programs for Paper 4. Neither replaces the other.
 
 ### Cambridge 0478 IGCSE — a smaller dialect, and a much bigger role
 
-- **This is the reversal, and it matters more than any syntax on this page.** At A-Level, pseudocode is mostly something you *read* and the practical papers are answered in a real language. At IGCSE it is the opposite: in **Paper 2, where the solution to a problem involves coding, candidates are required to write solutions in pseudocode — and solutions written in programming code will not be awarded marks.** The single exception is the 15-mark scenario question, where pseudocode *or* Python, Visual Basic or Java is accepted.
-- So an IGCSE candidate who has been practising in Python, and who writes Python in the wrong question, scores zero for otherwise-correct work. Nobody discovers that comfortably in an exam hall. It is the strongest possible argument for treating the dialect as a **writing** skill at IGCSE and a **reading** skill at A-Level, and for knowing which paper you are sitting.
+- **This is the reversal, and it matters more than any syntax on this page.** Both levels require pseudocode writing, but 0478 has an especially explicit answer-language rule: in **Paper 2, where the solution to a problem involves coding, candidates are required to write solutions in pseudocode — and solutions written in programming code will not be awarded marks.** The single exception is the 15-mark scenario question, where pseudocode *or* Python, Visual Basic or Java is accepted.
+- So an IGCSE candidate who has been practising in Python, and who writes Python in the wrong question, scores zero for otherwise-correct work. Nobody discovers that comfortably in an exam hall. It is a reason to practise **writing** the dialect at both IGCSE and A-Level, and to know which paper and question you are sitting.
 - **And 0478 issues no insert.** Where an A-Level paper hands you a function list on the day, an IGCSE paper hands you nothing — so the pseudocode section printed in the syllabus is the complete and final specification, and it is worth knowing rather than looking up. The two boards therefore want opposite habits: *read what you are given* at A-Level, *know what exists* at IGCSE.
 - 0478 publishes **its own pseudocode conventions**, in its own syllabus rather than in the A-Level guide, and they are close but smaller: **five data types** — `INTEGER`, `REAL`, `CHAR`, `STRING`, `BOOLEAN` — with **no `DATE`**, no user-defined record types and no object orientation. Its examples pass parameters without a `BYREF` keyword.
 - §7.9 treats pseudocode, program code and flowcharts as interchangeable ways of expressing an algorithm; where a question names one, that is the one that earns marks.
 
 ### IB Computer Science and AP Computer Science A
 
-- **IB CS** uses its own pseudocode conventions for examination, again close in spirit and different in detail — the same idea (a neutral dialect so no language is privileged), a different vocabulary.
+- **IB CS, last assessment 2026:** the outgoing course uses its own pseudocode conventions. **First assessment 2027:** the new Theme B Paper 2 accepts **Java or Python**, according to the [official IB update](https://ibo.org/university-admission/latest-curriculum-updates/computer-science-updates/). Do not carry the outgoing answer-language advice into the new course.
 - **AP CSA** does not use pseudocode at all. The exam is Java, and questions are asked in Java. There is nothing here to transfer except the habit of reading a specification carefully.
 
 ## Beyond the syllabus
@@ -405,7 +416,7 @@ Backwards. Real code is checked by a machine in seconds; pseudocode is checked b
 
 - **Builds on:** [[Program Design]] — the notations you think in; this is the dialect you write the result down in for one specific audience. Its structured English is this dialect's nearest relative, and the two together are the whole of the design-to-code path.
 - **Where it gets used:** [[Searching]] and [[Sorting]] — the standard algorithms exam stems present in this dialect; [[Stacks and Queues]] and [[Linked List]] — where §19.1's *write an algorithm to* questions expect it.
-- **Kindred:** [[Compilers and Interpreters]] — what a real language's grammar is *for*, and the clearest way to see what is missing here: this is a grammar with nothing to parse it. It also carries **BNF**, the `< >` meta-variable notation the guide borrows to describe itself — a grammar describing a grammar.
+- **Kindred:** [[Compilers and Interpreters]] — what a real language's grammar is *for*, and the clearest way to see what is missing here: the published dialect is not an official executable implementation. It also carries **BNF**, the `< >` meta-variable notation the guide borrows to describe itself — a grammar describing a grammar.
 - **When to reach for which:** think in the notations of [[Program Design]], check the thinking by writing and running real code, and transcribe into this dialect only when the reader is an examiner. It is a delivery format, not a workspace.
 
 ## Notation Reference
@@ -423,7 +434,7 @@ Backwards. Real code is checked by a machine in seconds; pseudocode is checked b
 | `ARRAY[1:30] OF STRING` | fixed-length array, bounds stated | `list` |
 | `PROCEDURE` / `CALL` | subprogram returning nothing | `def` + statement call |
 | `FUNCTION` / `RETURNS` | subprogram returning a value | `def` + `return` |
-| `BYREF` | pass by reference | *(mutable objects, implicitly)* |
+| `BYREF` | callee can update caller’s variable through an alias | no direct parameter-mode equivalent; object sharing differs |
 | `NEXT <identifier>` | closes a `FOR` loop | *(dedent)* |
 | `ENDIF` `ENDWHILE` `ENDCASE` | explicit block terminators | *(dedent)* |
 | `OTHERWISE` | the default case | `else` |

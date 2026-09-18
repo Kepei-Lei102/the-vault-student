@@ -6,14 +6,14 @@
   <rect x="350" y="60" width="90" height="50" rx="6" fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="1.5"/><text x="395" y="90" text-anchor="middle" fill="#888" font-size="12">receiver</text>
   <line x1="130" y1="85" x2="350" y2="85" stroke="#2563eb" stroke-width="2.5"/>
   <g font-size="12" fill="#2563eb" font-weight="bold"><text x="160" y="80">1</text><text x="190" y="80">0</text><text x="220" y="80">1</text><text x="250" y="80">1</text><text x="280" y="80">0</text><text x="310" y="80">1</text></g>
-  <text x="240" y="130" text-anchor="middle" fill="#888" font-size="12">serial: one wire, one bit after another — cheap, long distances, no skew; slower per wire</text>
+  <text x="240" y="130" text-anchor="middle" fill="#888" font-size="12">serial: bits follow one another on a lane; fewer signal paths</text>
   <!-- parallel -->
   <rect x="40" y="170" width="90" height="110" rx="6" fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="1.5"/><text x="85" y="230" text-anchor="middle" fill="#888" font-size="12">sender</text>
   <rect x="350" y="170" width="90" height="110" rx="6" fill="rgba(136,136,136,0.15)" stroke="#888" stroke-width="1.5"/><text x="395" y="230" text-anchor="middle" fill="#888" font-size="12">receiver</text>
   <g stroke="#059669" stroke-width="2"><line x1="130" y1="185" x2="350" y2="185"/><line x1="130" y1="200" x2="350" y2="200"/><line x1="130" y1="215" x2="350" y2="215"/><line x1="130" y1="230" x2="350" y2="230"/><line x1="130" y1="245" x2="350" y2="245"/><line x1="130" y1="260" x2="350" y2="260"/><line x1="130" y1="275" x2="350" y2="275"/></g>
   <g font-size="11" fill="#059669" font-weight="bold"><text x="235" y="181">1</text><text x="235" y="196">0</text><text x="235" y="211">1</text><text x="235" y="226">1</text><text x="235" y="241">0</text><text x="235" y="256">1</text><text x="235" y="271">0</text></g>
-  <text x="240" y="305" text-anchor="middle" fill="#888" font-size="12">parallel: eight wires, a byte at a time — fast over a few centimetres (inside the computer),</text>
-  <text x="240" y="322" text-anchor="middle" fill="#888" font-size="12">but the bits drift apart (skew) and the wires interfere over any distance</text>
+  <text x="240" y="305" text-anchor="middle" fill="#888" font-size="12">parallel: several bits at once on separate signal paths</text>
+  <text x="240" y="322" text-anchor="middle" fill="#888" font-size="12">different arrival times cause skew; nearby wires can interfere</text>
   <!-- duplex modes -->
   <g stroke="#888" stroke-width="1.5" fill="rgba(136,136,136,0.15)">
     <rect x="520" y="60" width="80" height="44" rx="6"/><rect x="840" y="60" width="80" height="44" rx="6"/>
@@ -21,10 +21,10 @@
     <rect x="520" y="240" width="80" height="44" rx="6"/><rect x="840" y="240" width="80" height="44" rx="6"/>
   </g>
   <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/></marker><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7c3aed"/></marker></defs>
-  <path d="M600 82 L838 82" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ah)"/><text x="720" y="118" text-anchor="middle" fill="#888" font-size="12">simplex: one way only — a keyboard to a computer, a broadcast</text>
+  <path d="M600 82 L838 82" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ah)"/><text x="720" y="118" text-anchor="middle" fill="#888" font-size="12">simplex: one way only — a broadcast</text>
   <path d="M600 165 L838 165" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ah)"/><path d="M838 185 L602 185" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah2)" stroke-dasharray="6 4"/><text x="720" y="212" text-anchor="middle" fill="#888" font-size="12">half-duplex: both ways, one at a time — a walkie-talkie, "over"</text>
-  <path d="M600 255 L838 255" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ah)"/><path d="M838 275 L602 275" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah2)"/><text x="720" y="302" text-anchor="middle" fill="#888" font-size="12">full-duplex: both ways at once — a phone call, a video call, every network cable</text>
-  <text x="740" y="350" text-anchor="middle" fill="#888" font-size="12">the two choices are independent: USB is serial, half-duplex (USB 2) or full-duplex (USB 3);</text>
-  <text x="740" y="368" text-anchor="middle" fill="#888" font-size="12">an old disk's ribbon cable was parallel; Ethernet is serial full-duplex on four pairs</text>
-  <text x="500" y="410" text-anchor="middle" fill="#888" font-size="12">the exam pairs one word from each column and asks why: "serial full-duplex, because the kitchen is 30 m away and must answer back"</text>
+  <path d="M600 255 L838 255" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ah)"/><path d="M838 275 L602 275" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ah2)"/><text x="720" y="302" text-anchor="middle" fill="#888" font-size="12">full-duplex: both ways at once — a phone call</text>
+  <text x="740" y="350" text-anchor="middle" fill="#888" font-size="12">USB is serial: USB 2 half-duplex; USB 3 SuperSpeed full-duplex.</text>
+  <text x="740" y="368" text-anchor="middle" fill="#888" font-size="12">Old parallel ribbon cables carry several bits at once.</text>
+  <text x="500" y="410" text-anchor="middle" fill="#888" font-size="12">Serial for distance; full-duplex when sending and receiving must happen simultaneously.</text>
 </svg>

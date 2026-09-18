@@ -396,7 +396,7 @@ $$\angle 1 = 70°, \quad \angle 2 = 70°, \quad \angle 3 = 40°, \quad \angle 4 
 
 **Syllabus reference:** G9 Extension — *use standard theorems to justify results in geometric contexts*.
 
-This is a **9260-unique** topic — Cambridge 0580 does not examine formal geometrical proof. Typical G9 Ext question types:
+This is a **9260-unique** topic as *proof*: Cambridge 0580 never asks for a formal proof, though it does ask for **geometric reasons** — in angle work (E4.6, E4.7: "give geometric explanations", using the syllabus's own terminology) and in showing that two triangles are similar (E4.4) — so the reason-citing habit below pays on both boards. Typical G9 Ext question types:
 
 1. **Angle chase with reasons** (3–4 marks) — Find an angle via a chain of 2–4 angle facts; every step must cite its theorem.
 2. **Congruence proof** (4–5 marks) — Prove two triangles are congruent, then use CPCTC to deduce an equal length or angle (follows the [[Congruence]] four-line skeleton).

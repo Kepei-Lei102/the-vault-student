@@ -58,11 +58,13 @@ The deep idea — **the program is just data in memory** — is what makes a com
 
 ![[vonneumann-cpu.svg|720]]
 
+A **microprocessor** is a CPU implemented on a single integrated circuit. Main memory is also called the **immediate access store (IAS)**: it holds the instructions and data currently available to the processor, unlike backing storage such as an SSD. “Immediate” distinguishes direct access by the processor from loading a file; it does not mean zero delay.
+
 The CPU and main memory (RAM) are separate; they talk over three **buses**:
 
 | Bus | Direction | Carries | Width matters because… |
 |-----|-----------|---------|------------------------|
-| **Address bus** (地址总线) | one-way (CPU → memory) | the address to read/write | $n$ lines address $2^n$ locations — a 32-bit address bus reaches 4 GB |
+| **Address bus** (地址总线) | one-way (CPU → memory) | the address to read/write | $n$ lines address $2^n$ locations — a 32-bit address bus reaches 4 GiB **if each location holds one byte** |
 | **Data bus** (数据总线) | two-way (bidirectional) | the data or instruction itself | wider bus = more bits moved per transfer (often = the word size) |
 | **Control bus** (控制总线) | two-way | control signals (read/write, clock tick, interrupt) | coordinates *when* and *which way* data moves |
 
@@ -70,7 +72,7 @@ The single shared path between CPU and memory is the architecture's one weakness
 
 ## The registers — where the work in progress lives
 
-Registers are the fastest storage in the machine — faster than cache, far faster than RAM — because they sit *inside* the CPU. The five (plus a status register) you must know:
+Registers are the fastest storage in the machine — faster than cache, far faster than RAM — because they sit *inside* the CPU. The named registers have distinct jobs:
 
 | Register | Name | Holds |
 |----------|------|-------|
@@ -79,7 +81,10 @@ Registers are the fastest storage in the machine — faster than cache, far fast
 | **MDR** | Memory Data Register (存储器数据寄存器) | the data or instruction just read from (or about to be written to) memory |
 | **CIR** | Current Instruction Register (当前指令寄存器) | the instruction currently being decoded and executed |
 | **ACC** | Accumulator (累加器) | the working value — the result of the latest ALU operation |
+| **IX** | Index Register (变址寄存器) | an offset added to a base address to walk through array elements — see [[Assembly Language]] |
 | **Status register** | flags (状态寄存器) | condition flags — carry, zero, negative, **overflow** (→ [[Overflow and Underflow]]) |
+
+**General-purpose registers** can hold a range of operands and intermediate results. **Special-purpose registers** have architectural jobs: PC selects the next instruction, MAR addresses memory, and CIR holds the current instruction. An accumulator is a working register with a designated arithmetic role in this teaching architecture; register names and restrictions vary between processors.
 
 > **The single most common mistake:** the **PC holds an *address*, the CIR holds the *instruction*.** The PC is a bookmark ("read next from here"); the CIR is the page you're currently reading. And **MAR vs MDR**: the MAR is the *address* (which mailbox), the MDR is the *contents* (what's in it).
 
@@ -104,6 +109,18 @@ This is the loop. Follow the data moving between registers — that register-tra
 Then the cycle repeats from the (now incremented) PC — billions of times a second.
 
 > **Jumps are where the PC earns its name.** A branch instruction like `JMP x` simply does `operand x → PC`: the next fetch reads from `x` instead of the next-in-line address. That one move is the entire basis of loops, `if`, and function calls — and it is exactly the *control hazard* the [[Pipelining and Simultaneous Multithreading|pipeline]] has to predict, because the CPU wants to fetch the next instruction *before* it knows where the jump leads.
+
+## Ports — connecting the processor's world to yours
+
+A **port** connects a peripheral to the computer. Its connector shape and its signalling rules are different things: a plug fitting does not establish every capability.
+
+| Port | What it carries | Typical use and limitation |
+|---|---|---|
+| **USB** | digital data and, where supported, electrical power | keyboards, storage, cameras and charging; speed and power depend on the USB version, cable and devices |
+| **HDMI** | digital video and audio | a laptop connected to a monitor, television or projector; one connection can carry picture and sound |
+| **VGA** | analogue video | an older monitor or projector; audio needs a separate connection |
+
+A classroom laptop can show a film through VGA while the room stays silent: the video connection carries **no audio**. Converting digital HDMI output to analogue VGA also requires signal conversion, not merely a differently shaped plug.
 
 ## Clock speed, cores, and cache (briefly)
 

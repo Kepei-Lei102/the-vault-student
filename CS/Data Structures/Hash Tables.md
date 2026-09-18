@@ -162,7 +162,18 @@ Access follows organisation: serial and sequential files are read sequentially; 
 *Tool: the engine above, reshaped to the paper's contract.* The parts that carry the marks:
 
 ```python
-HashTable = [[None] * 10 for i in range(100)]   # (b) 100 rows of 10 — all null
+class Record:                               # (a) public attributes
+    def __init__(self, Key, Data):
+        self.Key = Key                      # Integer
+        self.Data = Data                    # String
+
+HashTable = []                              # global table
+
+def InitialiseHashTable():                  # (b) 100 independent rows
+    global HashTable
+    HashTable = [[None] * 10 for _ in range(100)]
+
+InitialiseHashTable()
 
 def Hash(Key):
     return Key % 100                            # (c) the paper states the formula
@@ -179,10 +190,16 @@ def GetRecord(Key):                             # (f) same walk, comparing keys
     for i in range(10):
         if HashTable[Row][i] is not None and HashTable[Row][i].Key == Key:
             return HashTable[Row][i].Data
-    return ""                                   # honest miss
+    return "Not found"                          # the paper specifies this exact string
+
+def ReadData():                             # (e) key,string on each line
+    with open("HashTableData.txt", encoding="utf-8") as source:
+        for line in source:
+            key, data = line.rstrip("\n").split(",", 1)
+            InsertData(Record(int(key), data))
 ```
 
-The recurring joints: **hash once, store the row, then loop the row** (recomputing the hash inside the loop is the classic flapping answer); the free-slot test against the null record; and `GetRecord` needing *both* conditions — slot occupied **and** key matching — because a row holds several keys by design. `ReadData()` is [[File Handling]]'s lifecycle verbatim: open, read each line, `split(",")` into key and data, construct, insert, close. This exact engine, loaded with 200 records, passed a full retrieval check in this card's battery.
+The recurring joints: **hash once, store the row, then loop the row** (recomputing the hash inside the loop is the classic flapping answer); the free-slot test against the null record; and `GetRecord` needing *both* conditions — slot occupied **and** key matching — because a row holds several keys by design. `ReadData()` is [[File Handling]]'s lifecycle verbatim: open, read each line, `split(",")` into key and data, construct, insert, close. The audit checks this displayed code with a 200-record fixture, collisions through the last bucket position, reinitialisation and absent-key searches. The miss result must be exactly `"Not found"`, as the question specifies; an empty string is a different contract.
 
 ### Example 2 (June 2025 Paper 42 Q2 — the overflow area)
 

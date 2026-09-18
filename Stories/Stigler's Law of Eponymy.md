@@ -7,6 +7,7 @@ prerequisites:
   - "[[Stories/The 1919 Eclipse]]"
   - "[[Stories/Aristotle to Apollo]]"
   - "[[Famous for the Wrong Thing]]"
+  - "[[Laplace and Napoleon]]"
 leads_to: []
 tags:
   - type/story
@@ -201,6 +202,7 @@ The same principle applies anywhere a name persists past its discovery: brand na
 - **[[Pascal's Triangle (Vocab)]]** — the vocabulary card uses the Western name but cross-references Yang Hui in the 中文锚点.
 
 The eponymy thread is now fully tied off: the meta-card here points back to every individual case study, and every case-study card points back here.
+- **Story:** [[Stories/Laplace and Napoleon]] — Bayes's theorem, rediscovered and made useful by Laplace, is one of the law's standard cases; so is the rule of succession he gave it.
 
 ## Receipts
 

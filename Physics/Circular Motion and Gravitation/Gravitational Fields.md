@@ -9,8 +9,11 @@ prerequisites:
   - "[[Integration]]"
   - "[[Differentiation]]"
 leads_to:
-  - "[[Electric Field]]"
   - "[[Angular Momentum]]"
+  - "[[Laplace and Napoleon]]"
+teach_together:
+  - "[[Electric Potential]]"
+  - "[[Electric Field]]"
 tags:
   - subject/physics
   - domain/mechanics
@@ -346,6 +349,7 @@ Not on Cambridge 9709 (no gravitation beyond $W = mg$), not on OxAQA 9260, 0580 
 - **Kinship:** [[Simple Harmonic Motion]] — the tunnel through the Earth; [[Vectors in Physics]] — field strengths add as vectors, potentials as scalars.
 - **Stories:** [[Newton vs Hooke]] — who had the inverse square first, and what "standing on the shoulders of giants" was really about; [[The 1919 Eclipse]] — the day Newton's gravity met its successor.
 - **For 9702 students:** the data sheet gives $G$ and $\varphi = -GM/r$; $F = Gm_1m_2/r^2$ and $g = GM/r^2$ are yours to recall — or to re-derive from the law and the definition, which §13.3 asks for anyway.
+- **Story:** [[Stories/Laplace and Napoleon]] — Newton's law applied to Sun, Jupiter and Saturn: Halley's drift, Laplace's 900-year wave, and the God who no longer had a job.
 
 ---
 

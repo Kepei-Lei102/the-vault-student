@@ -171,7 +171,7 @@ This is essentially "volume = outer − hole," the same logic as the 2D washer s
 
 ### Cambridge 0580
 
-**Syllabus ref:** E5.5 — find the surface area and volume of compound 3D shapes; find perimeter and area of compound 2D shapes. Standard patterns:
+**Syllabus ref:** E5.5 *Compound shapes and parts of shapes* — point 1: "calculations and problems involving perimeters and areas of **compound shapes** and **parts of shapes**"; point 2: the same for "surface areas and volumes of **compound solids** and **parts of solids**", with the syllabus's own example: *find the surface area and volume of a frustum*. Answers may be asked for in terms of $\pi$. The "parts of" half is easy to miss: a frustum, a hemisphere, a quarter-circle corner are E5.5 as much as an L-shape is. Standard patterns:
 
 - "Find the area of the L-shape." (Decompose; show working.)
 - "A water trough has the cross-section of a semicircle of radius $r$ on top of a rectangle of width $2r$ and height $h$. Find its volume in terms of $r$, $h$, and the trough's length $L$." (Cross-section area = $\tfrac{1}{2}\pi r^2 + 2rh$; volume = cross-section × $L$.)

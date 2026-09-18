@@ -6,6 +6,8 @@ prerequisites:
   - "[[Repeated Measurements]]"
   - "[[Upper and Lower Bounds]]"
   - "[[The Pendulum Story]]"
+teach_together:
+  - "[[Temperature and Thermometry]]"
 leads_to:
   - "[[Significant Figures]]"
   - "[[Error Propagation]]"
@@ -26,11 +28,11 @@ tags:
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-2
+  - curriculum/AP-Physics-C-Mechanics
+  - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-3
   - syllabus/0625-P4
   - syllabus/0625-P6
-  - syllabus/IB-Physics-PRAC-1
-  - syllabus/AP-Physics-1-SP-3
   - type/deep
   - type/definition
   - notation/zero-error
@@ -51,7 +53,7 @@ The first images came back **blurred**.
 
 Stars were not points. They sat inside soft halos that no amount of refocusing could remove. The telescope had spherical aberration — the centre of the mirror focused light to one point and the edge focused it to another, $40~\text{mm}$ apart along the optical axis. By June 1990 the inquiry board had its answer. The mirror was *not* miscut by accident. It had been polished — precisely, methodically, beautifully — *to the wrong shape*. The figure was off by roughly $2~\mu\text{m}$ at the edges; a tiny error by the standards of any other engineering, a catastrophe at this scale.
 
-How does that happen? Perkin-Elmer's main test instrument was a **reflective null corrector** — a device that produces an interference pattern showing where the mirror's actual curvature deviates from the designed parabolic shape. The null corrector contained a small metering rod whose length set the device's reference. During assembly in 1981, a technician had set the rod's position using a measuring tool that *was itself uncalibrated*: a tiny chip of anti-reflective coating on a lens had been mistaken for the actual lens edge, and the rod ended up positioned $1.3~\text{mm}$ wrong.
+How does that happen? Perkin-Elmer's main test instrument was a **reflective null corrector** — a device that produces an interference pattern showing where the mirror's actual curvature deviates from the designed optical figure. The null corrector contained a small metering rod whose length set the device's reference. During assembly in 1981, a technician had set the rod's position using a measuring tool that *was itself uncalibrated*: a tiny chip of anti-reflective coating on a lens had been mistaken for the actual lens edge, and the rod ended up positioned $1.3~\text{mm}$ wrong.
 
 **Every subsequent measurement of the mirror's shape used a reference that was off by 1.3 mm.** The mirror was then polished, repeatedly and accurately, to match what the null corrector said was correct. The aberration was not introduced during polishing; the aberration was *defined* by the null corrector before polishing began. The mirror was a perfect realisation of an imperfect target.
 
@@ -59,49 +61,27 @@ Worse: Perkin-Elmer *had* two other null correctors, both of which would have ca
 
 The fix arrived three and a half years later. **December 1993, Servicing Mission 1**: astronauts installed COSTAR (the Corrective Optics Space Telescope Axial Replacement) — a set of compensating mirrors that effectively gave Hubble a pair of corrective glasses. The science programme finally began. Total cost of the calibration error: roughly $\$1.5$ billion in additional missions, hardware, and lost productivity.
 
-The lesson is unforgiving and pedagogically permanent. **Calibration error is the one error you cannot detect by repeating the measurement**, because the instrument that does the repeating is the instrument with the error. The mirror was polished a thousand times against the same null corrector; every check said it was perfect; every check was based on the same lie. The fix had to come from *outside the chain* — a different instrument, a different test rig, a different observer. This card is about the protocols that prevent this.
+The lesson is unforgiving and pedagogically permanent. **Repeating the same biased measurement does not by itself reveal the calibration error**, because the instrument that does the repeating is the instrument with the error. The mirror was polished a thousand times against the same null corrector; every check said it was perfect; every check was based on the same lie. The fix had to come from *outside the chain* — a different instrument, a different test rig, a different observer. Independent reference checks help prevent this failure.
 
 ## Definition
 
-**Calibration** (仪器校准 yíqì xiàozhǔn) is the process of comparing an instrument's reading against a known reference value, called a *standard*, and either:
+**Calibration** establishes the relationship between reference values and an instrument's indications, including the associated uncertainties. That relationship lets a later indication be converted into a measurement result. **Adjustment** physically or electronically changes the instrument; it is a different operation and should be followed by a calibration check. [International Vocabulary of Metrology](https://jcgm.bipm.org/vim/en/2.39.html)
 
-- (a) recording the discrepancy as a **correction** to apply to all future readings, *or*
-- (b) physically **adjusting** the instrument until its reading matches the standard.
-
-Both modes leave a *calibration certificate*: a written record stating the calibration date, the reference used, the discrepancy found, and the uncertainty in the standard itself.
-
-The crucial constraint: **the standard must be more accurate than the instrument being calibrated**. Calibrating a kitchen scale against another kitchen scale is theatre. Calibration requires a *more trusted reference* — and that reference has, in turn, been calibrated against something even more trusted, and so on up the chain.
+A useful record states the references, conditions, range, results and uncertainties. A certificate is evidence of a particular calibration, not a promise that the instrument is accurate forever. Choose references whose uncertainty is suitable for the intended measurement; comparing two uncharacterised instruments cannot establish which is correct.
 
 ### 中文锚点
 
-**仪器校准** (yíqì xiàozhǔn) = calibration of instruments. 测量界最严肃的一道工序，因为这是 **唯一能消除系统误差 (systematic error)** 的方法。重复测量 (Repeated Measurements) 消除随机误差，校准消除系统误差，两者正交，缺一不可。
+厨房秤放上标着一百克的标准砝码，却显示九十五克，以后每次都加五克就行了吗？先别急，再换几个不同质量的砝码试试：它可能总少五克，也可能放得越多，偏得越多。校准就是拿可信的参考来比较，摸清仪器的读数究竟怎样对应实际量值、这个对应关系有多可靠。查清它怎么偏，和动手把它调准，是两件事；多称几遍，也不能自动把偏差称没。
 
-| English | 中文 | 含义 |
-|---|---|---|
-| Calibration | 校准 / 标定 (xiàozhǔn / biāodìng) | 用已知标准检查或调整仪器 |
-| Reference standard | 参考标准 (cānkǎo biāozhǔn) | 已知精确值的物体或信号 |
-| Traceability | 可追溯性 (kě zhuīsù xìng) | 一条从仪器到基本常数的校准链 |
-| Zero error | 零点误差 (língdiǎn wùchā) | 仪器在零状态时读数不为零 |
-| Correction factor | 修正系数 (xiūzhèng xìshù) | 应用到所有后续读数上的偏差修正 |
-| Drift | 漂移 (piāoyí) | 校准后仪器读数随时间逐渐偏离 |
-| Recalibration interval | 校准周期 (xiàozhǔn zhōuqī) | 两次校准之间的时间间隔 |
-| Primary standard | 基准 (jīzhǔn) | 国家级或国际级的最高参考标准 |
+## Why repetition alone cannot establish a correction
 
-**核心原则**: 平均测量值 ($\bar X$) 之所以靠近真值，是因为 (1) 通过 [[Repeated Measurements]] 把随机误差 (random error) 通过 $\sigma/\sqrt{N}$ 压低 + (2) 通过校准把系统误差 (systematic error) 找出来并扣除。两个机制相互独立，无法互相替代。
+The central measurement lesson is the same point [[Accuracy vs Precision]] makes from the *diagnosis* side: random and systematic errors live on orthogonal axes. [[Repeated Measurements]] shows that averaging $N$ readings divides the random uncertainty by $\sqrt{N}$ but **leaves systematic error untouched**. The student who takes 100 readings with a balance whose zero is offset by 0.5 g will report a mean that is *very precisely* 0.5 g wrong.
 
-## Why calibration is the *only* fix for systematic error
-
-This card's load-bearing message is the same point [[Accuracy vs Precision]] makes from the *diagnosis* side: random and systematic errors live on orthogonal axes. The [[Repeated Measurements]] card showed that averaging $N$ readings divides the random uncertainty by $\sqrt{N}$ but **leaves systematic error untouched**. The student who takes 100 readings with a balance whose zero is offset by 0.5 g will report a mean that is *very precisely* 0.5 g wrong.
-
-The reason is structural, not procedural. Random errors are zero-mean noise; their average tends to zero as $N$ grows because the central limit theorem says so (see [[Normal Distribution]] §"Central Limit Theorem (the why)" for the statement). Systematic errors are *non-zero-mean*; their average tends to the bias itself, not to zero. **There is no statistical operation that can move a bias to zero, because zero is not where the bias lives.** Bias has to be *found* — by comparison against an independent reference — and then either subtracted from future readings or eliminated at the source.
-
-That is what calibration does. It introduces a measurement made with a *more trusted* instrument (the standard) and uses the discrepancy as the estimate of the bias. The bias then *becomes a known correction*, applied to all subsequent readings, and the instrument's *accuracy* improves to the standard's accuracy. (Its *precision* — the spread of its random noise — is unchanged.)
-
-This is the third leg of the measurement stool. Repeated Measurements crushes random uncertainty; calibration crushes systematic uncertainty; together, they bring the *total* uncertainty in a measurement down to the level of *the calibration uncertainty itself* — the **systematic floor**, below which neither technique can dig further.
+Under independent, zero-mean noise of finite variance, averaging reduces random uncertainty approximately as $1/\sqrt N$. A shared bias survives that average. Reference measurements, a corrected physical model, reversal methods or redesign can reveal or reduce systematic effects; averaging the same biased setup cannot establish the correction by itself.
 
 ## The traceability chain
 
-A school balance reading 0.01 g looks impressive. *In what sense* is it 0.01 g? In the sense that, at some point in the past, the balance was placed on a level surface and a small mass labelled "100.00 g" was placed on its pan, and the balance was either adjusted to read 100.00 g or its 0.08 g offset was recorded for future correction. The 100.00 g calibration mass had been weighed by a more accurate scale at the manufacturer's plant. That scale had been checked against a working reference mass certified by a regional metrology lab. That regional reference traces, ultimately, back to **the international prototype kilogram (IPK)** in Sèvres — and now, since the **2019 SI redefinition** (see [[Physical Quantities and Units]] §"Beyond syllabus — the 2019 SI redefinition"), back to **Planck's constant** $h$, fixed by definition at exactly $6.62607015 \times 10^{-34}~\text{J·s}$.
+A school balance reading 0.01 g looks impressive. *In what sense* is it 0.01 g? In the sense that, at some point in the past, the balance was placed on a level surface and a small mass labelled "100.00 g" was placed on its pan, and the balance was either adjusted to read 100.00 g or its indication error at that load was recorded for correction. The 100.00 g calibration mass had been weighed by a more accurate scale at the manufacturer's plant. That scale had been checked against a working reference mass certified by a regional metrology lab. That regional reference traces, ultimately, back to **the international prototype kilogram (IPK)** in Sèvres — and now, since the **2019 SI redefinition** (see [[Physical Quantities and Units]] §"Beyond syllabus — the 2019 SI redefinition"), back to **Planck's constant** $h$, fixed by definition at exactly $6.62607015 \times 10^{-34}\,\mathrm{J\,s}$.
 
 Every measurement, from school physics to particle physics, lives on a **traceability chain** that terminates at one of the seven SI base unit definitions. Break any link in the chain — a recalibration overdue, a reference mass dropped, a power supply mis-marked — and every measurement downstream silently inherits the break.
 
@@ -111,8 +91,8 @@ Every measurement, from school physics to particle physics, lives on a **traceab
 
 The chain has two practical consequences students rarely see:
 
-- **Even at the top, the standard has uncertainty.** Planck's constant is *defined* exactly, but its *physical realisation* by a Kibble balance has its own uncertainty — currently a few parts in $10^8$. So the IPK had its drift; the post-2019 anchor has its measurement noise. There is no zero-uncertainty calibration; there is only the smallest *achievable* uncertainty given the current state of physics.
-- **The chain is fragile in the way long chains are fragile.** Each link adds its own uncertainty, and the lab at the bottom inherits all of them in quadrature (see [[Error Propagation]] §"Rule 1 — sums and differences" for why uncertainties add in quadrature when independent). A school balance reading 0.01 g typically has total uncertainty around 0.05 g once you walk back up the chain — because every transfer between labs added its bit.
+- **Even at the top, the standard has uncertainty.** Planck's constant is *defined* exactly, but its *physical realisation* by a Kibble balance has its own uncertainty — specified for the particular realisation. So the IPK had its drift; the post-2019 anchor has its measurement noise. There is no zero-uncertainty calibration; there is only the smallest *achievable* uncertainty given the current state of physics.
+- **The chain is fragile in the way long chains are fragile.** Each link adds its own uncertainty, and the lab at the bottom inherits contributions that must be propagated, including correlations (see [[Error Propagation]] §"Rule 1 — sums and differences" for why uncertainties add in quadrature when independent). Display resolution alone does not determine the combined uncertainty of a school balance.
 
 ## Calibration in the school physics lab
 
@@ -125,36 +105,28 @@ The single most common calibration mistake at AS-level. **Always read the instru
 - **Vernier callipers / micrometer screw gauge** — close the jaws fully and check the scale reads zero. If it reads $+0.04~\text{mm}$, every reading is $0.04~\text{mm}$ too high.
 - **Top-pan balance** — press the *tare* button with the pan empty. Many balances drift over the day with temperature; re-zero before each set of weighings.
 - **Voltmeter / ammeter** — with no current flowing, the needle should rest on zero. Mechanical meters often have a small adjustment screw under the dial.
-- **Thermometer** — at $0\,^{\circ}\text{C}$ in an ice-water bath, a calibrated thermometer reads zero. Mercury thermometers can lose accuracy if shocked.
+- **Thermometer** — at 0 °C in an ice-water bath, a calibrated thermometer reads zero. Mercury thermometers can lose accuracy if shocked.
 
 ### Two-point calibration
 
 A more demanding move that catches *gain* errors (the instrument reads correctly at zero but wrong at full scale). Apply two known references that span the working range and check both:
 
 - **Vernier calipers / micrometer:** check at $0$ mm (closed jaws) and against a certified **gauge block** of known thickness, often $25.000$ mm or $50.000$ mm. If closed jaws read $+0.04$ mm and the $50.000$ mm gauge reads $50.06$ mm, both the zero AND the gain are off. Gauge blocks are the school-lab gold standard for length calibration — manufactured to traceable tolerance, often class-1 or class-2 with stated uncertainty.
-- **Balance:** check at zero (no load) and at a certified $100.00~\text{g}$ mass. If the reading at the certified mass is $99.92~\text{g}$, the correction is $+0.08~\text{g}$.
+- **Balance:** check at zero (no load) and at a certified $100.00~\text{g}$ mass. If the reading at the certified mass is $99.92~\text{g}$, the correction **at that load** is $+0.08~\text{g}$; do not apply it as a constant correction across the range without evidence.
 - **Voltmeter:** check at $0~\text{V}$ (shorted leads) and at a known voltage reference (a calibrated standard cell or a dedicated voltage-reference chip such as the LM399 or LTZ1000, certified at the millivolt level).
 
-> [!warning] Why "boiling water at $100\,^{\circ}\text{C}$" is a tempting but unreliable reference
-> Every textbook in the world suggests calibrating a thermometer at the boiling point of water. It *sounds* perfect: water boils at $100\,^{\circ}\text{C}$, you have a kettle, done. Try it in **Lhasa, Tibet** (altitude 3656 m, atmospheric pressure ≈ 64 kPa): water boils at $87\,^{\circ}\text{C}$. In **Denver, Colorado** (1600 m): $95\,^{\circ}\text{C}$. On **Everest summit** (8848 m, ≈ 31 kPa): $71\,^{\circ}\text{C}$. The boiling point of water depends on atmospheric pressure via the Clausius-Clapeyron relation $\mathrm{d}T/\mathrm{d}P \approx +28~\text{K/atm}$ near $100\,^{\circ}\text{C}$ — so a $50\%$ drop in pressure shifts the boil by $\sim 14\,^{\circ}\text{C}$. A Lhasa student who "calibrates" their thermometer against boiling water is calibrating it to *the wrong number*, and every subsequent measurement carries the offset.
+> [!warning] Why "boiling water at 100 °C" is a tempting but unreliable reference
+> Water boils when its saturation vapour pressure matches the surrounding pressure. At lower atmospheric pressure, it boils below 100 °C. Assigning 100 °C to an unmeasured local boiling point can build a systematic error into a thermometer's scale.
 >
-> The freezing point of water is more forgiving — the solid-liquid transition has $\mathrm{d}T/\mathrm{d}P \approx -7.5~\text{mK/atm}$ (negative because ice expands when it freezes, a quirk we get to thank for floating icebergs), so altitude shifts the ice-water $0\,^{\circ}\text{C}$ point by mK at most. Ice-water is a robust zero reference; boiling water is *not* a robust $100\,^{\circ}\text{C}$ reference.
+> A carefully prepared pure ice–water mixture near atmospheric pressure is a useful approximate 0 °C reference. Its realisation still depends on purity, preparation, immersion and heat exchange. Reference procedures and uncertainties matter.
 >
-> **The meta-lesson is the entire point of this card.** Your calibration reference *itself* can have a hidden systematic error. If you don't know what physics governs your reference's uncertainty, you cannot bound your own measurement's accuracy. The honest fixed points for high-altitude thermometer calibration are the **triple point of water** ($273.16~\text{K}$, exact by definition, pressure-independent because it's a thermodynamic invariant) realised in a sealed cell, or a **NIST-traceable certified PRT** (platinum resistance thermometer). The textbook ice-and-boiling-water recipe assumes sea-level atmospheric pressure and is a great example of a hidden assumption that *only fails for some users*.
+> The triple point of water remains a valuable laboratory reference, but **273.16 K is no longer an exact SI definition of its thermodynamic temperature**: since 2019 the kelvin is defined through the fixed Boltzmann constant. A practical scale's assigned fixed-point value and a measured thermodynamic temperature are different concepts. [BIPM kelvin history](https://www.bipm.org/en/history-si/kelvin)
+
+[[Temperature and Thermometry]] explains signal conversion, thermal equilibrium and response time.
 
 ### Recalibration intervals
 
-**Calibrated does not mean calibrated forever.** Every instrument drifts. Common rough intervals:
-
-| Instrument | Typical recalibration interval |
-|---|---|
-| School analytical balance | Re-zero every use; full re-cal annually |
-| Industrial thermometer | 6 months for safety-critical; 1 year otherwise |
-| Multimeter | 1 year for precision work; 2-5 years for utility use |
-| Surveyor's distance equipment | Annual against a baseline range |
-| NIST primary standards | Continuous monitoring; cross-comparison every few months |
-
-The drift mechanism depends on the instrument: thermal expansion of reference springs, ageing of voltage references, hysteresis in mechanical pivots, accumulation of contaminants on electrode surfaces. For school labs the practical rule is: *re-zero before each session; treat last year's calibration certificate as approximate; if the result looks wrong, suspect drift before suspecting your physics*.
+**Calibrated does not mean calibrated forever.** Choose verification and recalibration intervals from instrument stability, use, environment, required uncertainty and reference-check history. There is no universal annual interval for every balance or thermometer. Check after damage, adjustment or suspicious drift; routine zero checks do not replace calibration across the working range.
 
 ## Worked example — calibrating a school balance
 
@@ -163,31 +135,30 @@ A student needs to find the density of a brass cylinder. They will weigh it on t
 **Step 1 — Zero check.** Pan empty, tare. Balance reads $0.00~\text{g}$. ✓
 **Step 2 — Reference check.** Place a certified $100.000~\text{g}$ standard mass on the pan (the lab has one certified to $\pm 0.005~\text{g}$, calibration certificate on file). Balance reads $99.92~\text{g}$.
 
-The balance shows a systematic offset of $-0.08~\text{g}$. The student now has a choice. Either:
+**Step 3 — diagnose the model before correcting.** Zero is right, but the 100.000 g reference reads 99.92 g. The discrepancy is −0.08 g **at that load**; it does not establish a constant offset for every load. If further reference points validate a pure gain model through zero, then
 
-- *Mode (a):* record the correction as $+0.08~\text{g}$, apply it to every brass measurement and report results with a *corrected* mass. The balance's working accuracy is now $\pm 0.01~\text{g}$ (random, from precision) + $\pm 0.005~\text{g}$ (systematic, from the calibration certificate) $= \pm 0.012~\text{g}$ in quadrature.
-- *Mode (b):* adjust the balance's internal calibration (most digital balances have a CAL function that walks the user through this). After adjustment, the balance reads $100.00~\text{g}$ and the offset is zero. Working accuracy is $\pm 0.01~\text{g}$ random plus $\pm 0.005~\text{g}$ residual systematic.
+$$m_{\rm corrected}=m_{\rm indicated}\frac{100.000}{99.92}.$$
 
-**Both modes give the same total uncertainty.** Mode (a) is preferred in school labs where adjusting the instrument requires teacher authority; Mode (b) is preferred in research labs where adjustments are routine. Either way, the calibration certificate stays in a binder near the balance.
+For an indicated 42.39 g this model gives 42.424 g before final rounding. A blanket +0.08 g would instead give 42.47 g and is unsupported by the evidence. A nonlinear response requires a different calibration function.
 
-The student then weighs the brass cylinder and reports, say, $42.39 \pm 0.012~\text{g}$ (Mode (a), corrected) — with the certified mass's uncertainty propagating into the final density result via the rules in [[Error Propagation]].
+**Step 4 — report uncertainty honestly.** The quoted ±0.01 g specification and ±0.005 g certificate value cannot automatically be combined as if both were independent standard uncertainties. Establish what each means, include repeatability, resolution, calibration fit and relevant correlations, then propagate through the chosen model. Adjustment does not guarantee the same uncertainty as applying a correction; verify again afterward. [[Error Propagation]] supplies the mathematical framework.
 
-> [!warning] The certified mass is not exact either
-> A common student error is to treat the certified $100.000~\text{g}$ standard mass as if it were exactly $100.000~\text{g}$ with zero uncertainty. **It isn't.** The calibration certificate quotes an uncertainty (here, $\pm 0.005~\text{g}$) — and that uncertainty enters every measurement performed with the calibrated balance. The systematic floor is *the calibration mass's uncertainty*, not zero. You cannot measure with more accuracy than your most trusted reference.
+> [!warning] The certified mass is not exact
+> Its certificate has an uncertainty. That uncertainty contributes to the result alongside the instrument and method; successful calibration does not reduce every remaining error to zero.
 
-## Where the systematic floor lives — the bay's synthesis
+## Following uncertainty through a measurement
 
-The Foundations bay is now complete. Together its seven cards lay out a coherent decision tree for handling uncertainty:
+A measurement requires several complementary decisions:
 
 1. **[[Physical Quantities and Units]]** — every measurement is *number × unit*. The unit traces to a calibration standard. (The foundation.)
 2. **[[Vectors in Physics]]** — for vector measurements, decompose along axes of the problem's geometry. (The foundation, vector-edition.)
 3. **[[Accuracy vs Precision]]** — *diagnose* the uncertainty: random or systematic? They live on orthogonal axes.
 4. **[[Error Propagation]]** — *track* uncertainty through downstream calculations using the variance-additivity machinery.
 5. **[[Repeated Measurements]]** — *act on the random axis*: average $N$ readings, uncertainty in the mean shrinks as $\sigma/\sqrt{N}$.
-6. **Calibration of Instruments** (this card) — *act on the systematic axis*: compare against a traceable reference, record the correction or adjust the instrument.
+6. **Calibration of Instruments** — *act on the systematic axis*: compare against a traceable reference, record the correction or adjust the instrument.
 7. **[[Significant Figures]]** — *report* the final answer with the right precision: match the s.f. to the uncertainty.
 
-The deep observation: the total uncertainty in any reported measurement is the **quadrature combination of the surviving random and systematic uncertainties** — and *both* can be driven down, but by different techniques. Random by averaging; systematic by calibration. *Once you've done as much as you can of each, what's left is the floor below which the present apparatus cannot dig*. That floor is set by the calibration uncertainty of the reference standard you used.
+The deep observation: independent standard-uncertainty contributions combine in quadrature; correlated contributions require covariance terms — and *both* can be driven down, but by different techniques. Random by averaging; systematic by calibration. *Once you've done as much as you can of each, what's left is the floor below which the present apparatus cannot dig*. That floor depends on the reference, instrument and measurement method together.
 
 This is why metrology — the science of measurement itself — has been a thousand-year project. Every improvement in primary-standard calibration (Cavendish 1798 weighing the Earth, Michelson 1893 wavelength-of-light metre, the 1967 caesium-clock second, the 2019 SI redefinition pinning every base unit to a fixed fundamental constant) **moves the floor down** for every measurement that traces to it. Generations of progress are stored in your school balance reading $0.01~\text{g}$.
 
@@ -198,15 +169,15 @@ This is why metrology — the science of measurement itself — has been a thous
 
 ### 1. "Averaging will fix it"
 
-The single most persistent misconception, drilled in [[Accuracy vs Precision]] §3 "Averaging fixes everything" and again in [[Repeated Measurements]] §"The systematic-error trap." Averaging eats *random* noise; bias survives. Calibration is the only mechanism that targets the systematic axis. If you can't calibrate, you can't fix it.
+The single most persistent misconception, drilled in [[Accuracy vs Precision]] §3 "Averaging fixes everything" and again in [[Repeated Measurements]] §"The systematic-error trap." Averaging eats *random* noise; bias survives. Calibration can establish corrections; reversal, improved physical models and redesigned measurements can also reveal or reduce systematic effects. Repeating the same unchecked setup alone cannot.
 
 ### 2. "Calibrated once, calibrated forever"
 
-Drift is real. Mechanical pivots flex; voltage references age; thermometers' fluid columns separate; balances pick up dust. **Every instrument's calibration is good for a stated interval, after which it must be repeated.** A school lab that never recalibrates its balances is silently accumulating offsets across the year. Re-zero every session; full recalibration on the lab's annual schedule.
+Drift is real. Mechanical pivots flex; voltage references age; thermometers' fluid columns separate; balances pick up dust. A previous calibration is evidence for its stated conditions, not a guarantee against later drift. Use reference checks and a recalibration interval justified by stability, use and required uncertainty; recheck after adjustment or suspected damage.
 
 ### 3. "The certified mass is exact"
 
-Every reference standard has its own uncertainty, stated on the calibration certificate. **You cannot measure with more accuracy than your most trusted reference.** The systematic floor is the certified-mass uncertainty, not zero. This bites in worked-example marking when students propagate the certified mass's uncertainty into their final result; many forget and report a final precision that the calibration chain can't deliver.
+Every reference standard has its own uncertainty, stated on the calibration certificate. The reference uncertainty contributes to the final uncertainty through the measurement model; it must not be silently treated as zero. This bites in worked-example marking when students propagate the certified mass's uncertainty into their final result; many forget and report a final precision that the calibration chain can't deliver.
 
 ### 4. "Precise means accurate"
 
@@ -218,41 +189,39 @@ Hubble's institutional lesson. Perkin-Elmer had *two* additional null correctors
 
 ## Exam Notes
 
-### Cambridge 9702 (AS Level)
+### Cambridge 9702 — §1.3 and practical assessment
 
-**Syllabus ref:** 1.3 — uncertainty types (random / systematic), *zero error* explicitly called out as a systematic-error example to identify and correct.
+§1.3 names systematic errors (including zero errors), random errors and their effects. The practical-assessment guidance for Paper 5 explicitly includes obtaining calibration curves as a possible relevant procedural detail. Explain the reference, the comparison and the correction appropriate to the actual apparatus; naming “calibration” alone does not establish that the method works.
 
-What 9702 expects:
-- **Paper 3 (Practical):** Routine zero-checks before every recorded measurement. Marks are awarded for the *act* of zeroing or stating the offset, not just for using the corrected value.
-- **Paper 5 (PAE):** Design questions reward candidates who include "calibrate the instrument using a known reference" in their procedure. *"To minimise systematic error, the thermometer is calibrated at $0\,^{\circ}\text{C}$ and $100\,^{\circ}\text{C}$ using ice-water and boiling water"* is a one-mark answer to a P5 procedure question.
-- **Common trap:** a question lists three sources of error and asks the candidate to classify each as random or systematic and propose a correction. *Random → repeat and average; Systematic → calibrate or replace the apparatus.* Getting the classification right is the gateway to the marks; offering "average more readings" for a systematic error is a guaranteed miss.
+The syllabus does not award a universal mark for zeroing before every reading, nor a fixed mark for a memorised two-temperature sentence. Marks depend on the experiment and question. A boiling-water reference must account for pressure; simply assuming 100 °C is not generally valid.
 
-### Cambridge 0625 (IGCSE Physics)
+### Cambridge 0625 — Papers 5 and 6, practical skills
 
-This is **practical-paper** material — Paper 5 or Paper 6 — not one of the six numbered topics, and it is there in the syllabus's own words: *correct for zero errors where required*. The expectation is exactly that and no more — check the instrument reads zero before use; if it does not, subtract the offset from every reading. Zero error is also the cleanest example of a **systematic** error, the category the practical papers ask candidates to name and distinguish from random error. The full traceability discussion is not tested here; that lands at AS.
+The assessment guidance explicitly requires correcting for zero errors where required and identifying sources of measurement, random and systematic error. State a measured offset and apply the correct sign. Full traceability chains and certified-reference uncertainty budgets are enrichment, not separately named IGCSE outcomes. The bookkeeping map's P4/P6 labels denote practical-skill groups, not examination Paper 4/Paper 6.
 
-### IB Physics
+### IB Physics — coursewide skills and scientific investigation
 
-**Theme A / PRAC.1** — apparatus selection includes calibration check; **PRAC.2** — systematic vs random errors. The Internal Assessment (20% of total grade) rewards an explicit calibration step in the procedure, including a statement of the reference's certified uncertainty. IB markschemes are explicit that a candidate who calibrates *and quotes the reference's uncertainty* earns full marks; one who calibrates without quoting the reference uncertainty loses one band.
+The current guide's **Tools 1: Experimental techniques** explicitly includes calibrating measuring apparatus, including sensors. Inquiry skills include considering random/systematic errors, limitations and realistic improvements. This is coursewide skills content, not invented “Theme A / PRAC.1 / PRAC.2” syllabus sections.
 
-### AP Physics 1 & 2
+The scientific investigation is assessed through Research design, Data analysis, Conclusion and Evaluation. Appropriate consideration of uncertainties matters, but the rubric does not guarantee full marks for quoting a standard's uncertainty or automatically remove a band when that phrase is absent. Explain the uncertainty's actual significance to the investigation.
 
-Science Practice 3 (Experimental Design and Analysis) — FRQ 3 frequently includes "describe how you would check your instrument is reading correctly" as an implicit requirement. The College Board's mark schemes accept "use a known standard, e.g. a certified mass / a known voltage reference" as the procedural answer.
+### AP Physics 1, 2, C: Mechanics and C: Electricity and Magnetism
 
-### A-Level (other boards)
+The current CEDs use **Science Practice 3: Scientific Questioning and Argumentation** for experimental questions and evidence-based reasoning. “Experimental Design and Analysis” names an FRQ type, not Science Practice 3. A suitable reference/check can be part of a justified experimental method; there is no universal calibration sentence or automatic mark independent of the question.
 
-Edexcel, AQA, OCR all expect zero-error correction and traceable-reference calibration at the practical-coursework level. The 9702 framework is the gold standard; the others converge on the same content with notation variations.
+### Boundary of these claims
+
+Calibration is an experimental skill, not a separately examined mathematical theorem in Cambridge 0580/0606/9709/9231, IB mathematics or AP Calculus. Do not infer board-specific certification procedures or question frequencies from the metrology enrichment. Edexcel/AQA/OCR Physics placement is not mapped here; check the particular specification before attaching a paper or mark allocation.
 
 ## Connections
 
-- **Prerequisite:** [[Accuracy vs Precision]] — defines the random-vs-systematic factorisation. This card is the *technique that acts on the systematic axis*; Repeated Measurements is the *technique that acts on the random axis*. Orthogonal, both required.
+- **Prerequisite:** [[Accuracy vs Precision]] — defines the random-vs-systematic factorisation. Calibration checks the systematic part of the measurement; Repeated Measurements is the *technique that acts on the random axis*. Orthogonal, both required.
 - **Prerequisite:** [[Physical Quantities and Units]] — every unit traces to a calibration standard. The 2019 SI redefinition discussion in that card's beyond-syllabus callout is the direct setup for the traceability chain section here.
 - **Prerequisite:** [[Repeated Measurements]] — the companion technique. Closing one of the two uncertainty axes is necessary but not sufficient; the bay's value comes from doing both.
 - **Prerequisite:** [[Upper and Lower Bounds]] — the mathematics-side card that first introduces "systematic errors require calibration" at IGCSE level.
 - **Leads to:** [[Significant Figures]] — once the calibration uncertainty is known, the answer's reported significant figures must match it. A balance certified to $\pm 0.005~\text{g}$ cannot honestly report masses to four decimal places.
 - **Leads to:** [[Error Propagation]] — the calibration uncertainty enters downstream calculations via the standard quadrature-addition rules.
 - **Real-world anchor (Stories):** [[Stories/The 1919 Eclipse]] — Eddington's identification of the Sobral astrographic plates as systematically compromised (focus drift), and the decision to *exclude* rather than calibrate, is the canonical "what to do when calibration isn't possible" case study. *Calibrate if you can; exclude if you can't; never average bias.*
-- **Bay closure:** With this card, **Physics/Foundations is complete at 7/7 deep cards** — the full measurement-foundations curriculum for AS Physics, IB Physics PRAC.1+PRAC.2, and AP Physics 1+2 Lab Requirement.
 
 ## LaTeX Reference
 
@@ -263,4 +232,4 @@ Edexcel, AQA, OCR all expect zero-error correction and traceable-reference calib
 | $h$ | `h` | Planck's constant — kg-anchor since 2019 |
 | $\Delta\nu_{\rm Cs}$ | `\Delta\nu_{\rm Cs}` | Caesium hyperfine frequency — second-anchor since 1967 |
 | $c$ | `c` | Speed of light — metre-anchor since 1983 |
-| $\,^{\circ}\text{C}$ | `\,^{\circ}\text{C}` | Degrees Celsius (note the thin space) |
+| °C | `{}^\circ\mathrm{C}` | Degrees Celsius |

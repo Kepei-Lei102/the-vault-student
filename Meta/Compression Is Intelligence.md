@@ -5,6 +5,8 @@ prerequisites:
   - "[[Compression]]"
   - "[[Forward Reading and Problem Discovery]]"
   - "[[The True IO Bound]]"
+  - "[[Artificial Intelligence]]"
+  - "[[The Perceptron and Move 78]]"
 leads_to:
   - "[[The Feynman Technique]]"
   - "[[Chain of Thought]]"
@@ -210,6 +212,8 @@ The identity has one more consequence, and it is the practical one. If compressi
 - **Cross-domain:** [[Hash Tables]] and [[Graphs]] — nothing directly, except that the compression distance in the script clusters this vault's cards by subject with no notion of subject in the code; [[Sensors and Control Systems]] — prediction error as the signal in a control loop; [[Fun Is the Brachistochrone]] — the slow preset that makes every later metre cheaper is the cycloid's early plunge; [[Credit Is the Currency]] — a theorem as a proof compressed to a promise.
 
 - **Misconception traps cleared:** compression is a disk-space trick; the model compresses because it was told to; good memory is more storage; lossy compression cheats; general intelligence is right everywhere; compression is understanding.
+- **Prerequisite:** [[Artificial Intelligence]] — the learners this card's thesis is about, from a regression line to a deep network trained to predict the next token.
+- **Story:** [[Stories/The Perceptron and Move 78]] — the lineage that ends in next-word prediction, told from the perceptron to the reasoning models.
 
 ## Sources
 

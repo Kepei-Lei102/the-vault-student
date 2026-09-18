@@ -167,10 +167,17 @@ which, converted to bits, is $N = 6.0\times10^{23}$ bits — one per molecule, t
 
 ## Exam Notes
 
-- **IB Physics — B.4.3 + B.4.4 (HL only).** B.4.3: the second law in Clausius, Kelvin, and entropy forms; entropy change $\Delta S = \Delta Q / T$; the entropy of an isolated system cannot decrease. B.4.4: heat engines and thermal efficiency $\eta = W/Q_h$; the Carnot cycle and Carnot efficiency $\eta_C = 1 - T_c/T_h$. Always work in **kelvin**, and remember $\Delta S = Q/T$ is for a *reversible* transfer.
-- **AP Physics 2 — §9.6 (Entropy and the Second Law).** Qualitative and semi-quantitative: entropy as a measure of the number of microstates / energy dispersal, $\Delta S \ge 0$ for an isolated system, why heat engines cannot be 100% efficient, and reading the direction of spontaneous processes from entropy. AP writes internal energy as $E_{\text{int}}$.
-- **Not on Cambridge 9702** — the 9702 thermodynamics topic stops at the [[First Law of Thermodynamics|first law]] (§16.2). Entropy and the second law are an IB HL and AP topic only.
-- **Traps:** entropy *can* fall locally (refrigerators, life) as long as it rises more elsewhere; efficiency and $\Delta S$ demand absolute temperature; "disorder" is a metaphor, "microstate count / energy spread" is the physics.
+### IB Physics — B.4, HL only
+
+Entropy and the second law are explicit HL requirements. Know $S=k_B\ln\Omega$, entropy changes using $\Delta S=Q_{\rm rev}/T$ for reversible isothermal transfer, and simple equally probable microstate models. Distinguish a closed system (energy can cross its boundary) from an isolated system (neither energy nor matter crosses). Explain the second law in Clausius, Kelvin and entropy forms; local entropy can fall if the surroundings compensate. Heat engines, the Carnot cycle and $\eta_C=1-T_c/T_h$ are also named. Use kelvin. The $Q/T$ expression is not a general recipe for every irreversible process.
+
+### AP Physics 2 — §9.6
+
+The CED explicitly limits the second law to a **qualitative treatment**. Explain entropy as energy dispersal/unavailability for work, entropy as a state function, thermodynamic equilibrium, and why isolated-system entropy never decreases. A closed system can lose entropy by exchanging energy with its surroundings. Numerical entropy and microstate calculations here are enrichment, not §9.6 requirements.
+
+### Where it is not examined
+
+Entropy and the second law are not named topics in Cambridge **9702** (Topic 16 examines internal energy and the first law), **0625**, **AP Physics 1**, **AP Physics C: Mechanics**, or **AP Physics C: Electricity and Magnetism**. Everyday efficiency and energy-transfer questions do not by themselves imply an entropy requirement.
 
 ## Connections
 

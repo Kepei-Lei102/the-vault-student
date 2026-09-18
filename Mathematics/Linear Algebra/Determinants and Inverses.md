@@ -4,6 +4,7 @@ prerequisites:
   - "[[Matrix]]"
   - "[[Identity Matrix]]"
   - "[[Matrix Transformations]]"
+  - "[[Laplace and Napoleon]]"
 leads_to:
   - "[[Invariant Points and Lines]]"
   - "[[Eigenvalues and Eigenvectors]]"
@@ -368,6 +369,7 @@ The determinant scales to $n \times n$ as signed $n$-volume, but cofactor expans
 - **Same expansion elsewhere:** [[Cross Product]] — the $\mathbf{i}, \mathbf{j}, \mathbf{k}$ formula is a $3\times3$ cofactor expansion, and the scalar triple product is det-as-volume in vector clothing.
 - **Extension:** [[Eigenvalues and Eigenvectors]] — $\det(\mathbf{A} - \lambda\mathbf{I}) = 0$ turns the singularity test into a search: *for which $\lambda$ does $\mathbf{A} - \lambda\mathbf{I}$ collapse?*
 - **For 9231 students:** [[MF19 Reference (9231)]] — nothing from this card is on the formula sheet; the $2\times2$ inverse formula and the cofactor method live in your head.
+- **Story:** [[Stories/Laplace and Napoleon]] — cofactor expansion is Laplace expansion, from his 1772 planetary equations; the rest of his life, seven regimes and one famous sentence.
 
 ---
 

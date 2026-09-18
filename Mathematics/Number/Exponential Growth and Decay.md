@@ -16,6 +16,7 @@ leads_to:
   - "[[Capacitors]]"
   - "[[Damped Oscillations]]"
   - "[[Linearisation]]"
+  - "[[Nuclear Physics]]"
 tags:
   - subject/mathematics
   - domain/number

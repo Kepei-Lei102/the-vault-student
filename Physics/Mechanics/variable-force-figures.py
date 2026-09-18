@@ -5,17 +5,20 @@
   variable-force-tanh-vs-exp.svg — free fall with v² drag (tanh) vs linear drag (1−e^{−t}) at the same terminal speed
 Run: python3 variable-force-figures.py   (from Physics/Mechanics/)
 """
+from pathlib import Path
+import re
 import numpy as np, matplotlib as mpl, matplotlib.pyplot as plt
 mpl.rcParams.update({"svg.hashsalt": "vault", "font.size": 12, "text.color": "#888888", "axes.edgecolor": "#888888",
                      "axes.labelcolor": "#888888", "xtick.color": "#888888", "ytick.color": "#888888", "svg.fonttype": "none"})
 G = "#888888"; BLUE = "#2563eb"; RED = "#dc2626"; GREEN = "#059669"; AMBER = "#f59e0b"; PURPLE = "#7c3aed"
 def save(fig, name):
-    fig.savefig(name, format="svg", bbox_inches="tight", transparent=True, metadata={"Date": None}); plt.close(fig); print("wrote", name)
+    fig.savefig(name, format="svg", bbox_inches="tight", transparent=True, metadata={"Date": None}); plt.close(fig)
+    p=Path(name); s=p.read_text(); s=re.sub(r'<svg[^>]*',lambda m:re.sub(r'width="[^"]*"','width="100%"',re.sub(r' height="[^"]*"','',m[0])),s,count=1); p.write_text("\n".join(l.rstrip() for l in s.splitlines())+"\n"); print("wrote", name)
 
-# ---- figure 1: J26/31 — v(x) = 4 sqrt(1 - e^{-x/6.4})  and  v(t) = 4 tanh(t/1.6)
+# ---- figure 1: J26/31 — v(x) = 4 sqrt(1 - e^{-x/6.4})  and  v(t) = 4 tanh(t/3.2)
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(11, 4.2))
 xs = np.linspace(0, 25, 400); vx = 4*np.sqrt(1 - np.exp(-xs/6.4))
-ts = np.linspace(0, 8, 400); vt = 4*np.tanh(ts/1.6)
+ts = np.linspace(0, 8, 400); vt = 4*np.tanh(ts/3.2)
 for ax, X, V, lab, col in [(a1, xs, vx, "distance x (m)", BLUE), (a2, ts, vt, "time t (s)", PURPLE)]:
     ax.plot(X, V, color=col, lw=2.6)
     ax.axhline(4, color=RED, lw=1.2, ls="--"); ax.text(X[-1], 4.08, "terminal speed 4 m/s", color=G, ha="right", fontsize=10)
@@ -24,7 +27,7 @@ for ax, X, V, lab, col in [(a1, xs, vx, "distance x (m)", BLUE), (a2, ts, vt, "t
 a1.plot([0.8], [4*np.sqrt(1-np.exp(-0.8/6.4))], "o", color=AMBER, ms=8); a1.annotate("x = 0.8 m gives v = 1.37", xy=(0.8, 1.37), xytext=(5, 1.0), color=G, fontsize=10, arrowprops=dict(arrowstyle="->", color=AMBER))
 a1.set_title(r"asked for $v$ at a distance:  use  $v\,\frac{dv}{dx}$", color=G, fontsize=11)
 a2.set_title(r"asked for $v$ at a time:  use  $\frac{dv}{dt}$", color=G, fontsize=11)
-a1.text(12, 2.0, r"$v^2 = 16\left(1-e^{-x/6.4}\right)$", color=G, fontsize=12); a2.text(3.6, 2.0, r"$v = 4\tanh\frac{t}{1.6}$", color=G, fontsize=12)
+a1.text(12, 2.0, r"$v^2 = 16\left(1-e^{-x/6.4}\right)$", color=G, fontsize=12); a2.text(3.6, 2.0, r"$v = 4\tanh\frac{t}{3.2}$", color=G, fontsize=12)
 fig.suptitle("Same particle, two questions: 8 N drive, 0.5v² drag, 6.4 kg, from rest", color=G, fontsize=12)
 save(fig, "variable-force-two-views.svg")
 

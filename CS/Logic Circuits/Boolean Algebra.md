@@ -101,7 +101,7 @@ That **second distributive law**, $A + BC = (A+B)(A+C)$, is the one with no arit
 
 $$A + AB = A \qquad\qquad A(A+B) = A \qquad\text{(absorption)}$$
 $$A + \overline{A}B = A + B \qquad\qquad A(\overline{A}+B) = AB \qquad\text{(absorption, 2nd form)}$$
-$$AB + \overline{A}C + BC = AB + \overline{A}C \qquad\text{(consensus — the middle term is redundant)}$$
+$$AB + \overline{A}C + BC = AB + \overline{A}C \qquad\text{(consensus — the BC term is redundant)}$$
 
 ### Why they hold — two proofs instead of a table
 

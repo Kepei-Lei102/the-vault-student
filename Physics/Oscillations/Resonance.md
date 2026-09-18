@@ -6,9 +6,10 @@ prerequisites:
   - "[[Second-Order Differential Equations]]"
   - "[[Alternating Current]]"
 leads_to:
+  - "[[Ultrasound]]"
   - "[[Coupled Oscillators]]"
   - "[[Suspension]]"
-  - "[[Standing Waves]]"
+  - "[[Stationary Waves]]"
 tags:
   - subject/physics
   - domain/oscillations
@@ -16,6 +17,7 @@ tags:
   - level/IB
   - curriculum/Cambridge-9702
   - curriculum/IB-Physics
+  - curriculum/AP-Physics-C-Mechanics
   - syllabus/9702-17-3
   - syllabus/IB-Physics-C-4-3
   - type/deep
@@ -325,11 +327,11 @@ Neither. The 1940 bridge collapse was **aeroelastic flutter**, a feedback betwee
 ### Cambridge 9702 (§17.3 — the resonance half; Paper 4)
 
 - **The learning objective, verbatim:** *understand that resonance involves a maximum amplitude of oscillations and that this occurs when an oscillating system is forced to oscillate at its natural frequency.* The two damping LOs of the same section are [[Damped Oscillations]]'.
-- **The definition question (2 marks, every year):** *oscillation at maximum amplitude* + *when driving frequency = natural frequency* — June 2022, June 2024 (both variants), June 2026, identically worded in every scheme. The 2026 guidance column tolerates *vibration*, *platform / motor / external / forced* for driving, and *matches* for equals; it does not tolerate a missing "maximum".
-- **The sketch (2 marks):** a curve that is non-zero at $f = 0$, rises continuously to a **single** peak and falls continuously [B1]; the peak at the natural frequency found earlier in the question [B1] — which is always found earlier, from a period on a graph (June 2024) or from $v_0 = \omega x_0$ (June 2026). Read the tolerance: one small square horizontally.
+- **The definition question (2 marks in the cited examples):** *oscillation at maximum amplitude* + *when driving frequency = natural frequency* — June 2022, June 2024 (both variants), June 2026, with the same two-part structure in the cited schemes. The 2026 guidance column tolerates *vibration*, *platform / motor / external / forced* for driving, and *matches* for equals; it does not tolerate a missing "maximum".
+- **The sketch (2 marks):** a curve that is non-zero at $f = 0$, rises continuously to a **single** peak and falls continuously [B1]; the peak at the natural frequency found earlier in the question [B1] — which is found earlier in these examples, from a period on a graph (June 2024) or from $v_0 = \omega x_0$ (June 2026). Read the tolerance: one small square horizontally.
 - **The energy explanation (2 marks, June 2021):** the driver supplies energy continuously; the amplitude is constant, so energy is dissipated at the same rate (or: without dissipation the amplitude would grow without limit).
 - **The effect of damping on the curve** is not named in the current LO but was examined for years on the previous syllabus and remains fair game as an *explain* or *sketch a second curve*: lower peak, broader peak, peak at a slightly lower frequency. Give all three.
-- **Resonance turns up outside §17:** MRI in the medical-physics topic (March 2021 Paper 42 Q8(b): *radio-frequency waves are used because their frequency equals the natural frequency of the protons; resonance occurs, the protons absorb energy*) and the piezoelectric ultrasound transducer (June 2025 Paper 44 Q10(a): *when the frequency of the applied p.d. equals the natural frequency of the crystal, the crystal resonates*). Same two clauses.
+- **Current application outside §17:** the piezoelectric [[Ultrasound]] transducer in §24.1. June 2025 Paper 44 Q10(a) credits alternating p.d., driving at the crystal's natural frequency, and an ultrasonic natural frequency. **Legacy extension:** March 2021 Paper 42 Q8(b) examines MRI resonance; MRI is absent from the current §24 ultrasound/X-ray/CT/PET syllabus. Do not treat that old question as current medical-topic coverage.
 - **Formula sheet:** nothing. The sheet carries $x = x_0\sin\omega t$ and $v = \pm\omega\sqrt{x_0^2 - x^2}$ for SHM and no damping or resonance formulas; everything in Parts II–IV is the *why*, not required working.
 
 ### IB Physics (C.4.3 — the resonance half; Papers 1 and 2)
@@ -338,15 +340,21 @@ Neither. The 1940 bridge collapse was **aeroelastic flutter**, a feedback betwee
 - Favourite graph: displacement against time with the driver switched on at $t = 0$ and off at $t_B$ — amplitude *increasing as energy is added*, then steady because *energy input equals energy lost to damping*, then the damped decay (November 2016 Paper 3 Q14, whose scheme is those exact phrases).
 - The **2016–2023 HL Option B** papers examined $Q$ quantitatively (Examples 5 and 6). $Q$ is not on the 2025 syllabus, but those questions are the best practice for this card that any board has printed.
 
+### AP Physics C: Mechanics — §7.3.A.4
+
+The current CED explicitly requires resonance under a sinusoidal external force: the drive acts at the natural frequency, the amplitude increases, and the natural frequency is the frequency of free oscillation after displacement. This is qualitative resonance within §7.3; the full forced-response derivation and quantitative bandwidth/$Q$ machinery go beyond that stated requirement.
+
 ### Where it is *not* examined
 
 - **0625 IGCSE:** no oscillations topic; resonance does not appear.
-- **AP Physics 1, 2 and C:** SHM only; forced oscillations and resonance are not assessed.
+- **AP Physics 1, AP Physics 2 and AP Physics C: Electricity and Magnetism:** these current CEDs do not name mechanical forced-oscillator resonance as a required topic. AP-2 standing-wave modes use related ideas; AP-C Mechanics explicitly requires resonance as stated above.
 - **9709 / 9231:** no forced oscillations in the mechanics papers; the *driven* second-order equation appears only as a modelling context in 9231 FP2 §2.6 — [[Second-Order Differential Equations]] territory, where "the trial form already lives in the complementary function" is the maths name for resonance.
 
 ---
 
 ## Connections
+
+- **Imaging application:** [[Ultrasound]] — pulse timing, impedance matching and attenuation turn sound into an internal image.
 
 - **Parent:** [[Simple Harmonic Motion]] — supplies $\omega_0$, $v_0 = \omega x_0$ (Example 2), and the fact that velocity leads displacement by a quarter cycle, on which Part I rests. Its §"Driven oscillations and resonance" is a preview; this card is the treatment.
 - **Parent:** [[Damped Oscillations]] — the transient of Part IV *is* that card's ring; $\gamma$ and $Q$ are defined there and reused here as peak height, peak width and build-up time. Its §"The atom's ring" linewidth $2\gamma$ is this card's resonance width.
@@ -385,7 +393,7 @@ Real springs stiffen or soften at large amplitude, so $\omega_0$ itself depends 
 
 ### MRI: resonance you have probably lain inside
 
-A proton in a magnetic field $B$ precesses at the Larmor frequency $f = 42.58\ \text{MHz T}^{-1}\times B$ — about $64$ MHz in a $1.5$ T scanner. A radio pulse at *exactly* that frequency is a driver at resonance: the protons absorb it and tip; when the pulse stops they relax and re-emit at the same frequency, and that echo is the signal. A *gradient* field makes $B$, hence the resonant frequency, vary across the body, so that only one slice resonates with a given pulse — which is how the scanner knows where the signal came from. The Cambridge medical-physics questions (March 2021 Paper 42) and the IB imaging option (November 2016 Paper 3 Q20) both examine it in exactly those words: *frequency equals natural frequency, resonance occurs, energy is absorbed*.
+A proton in a magnetic field $B$ precesses at the Larmor frequency $f = 42.58\ \text{MHz T}^{-1}\times B$ — about $64$ MHz in a $1.5$ T scanner. A radio pulse at *exactly* that frequency is a driver at resonance: the protons absorb it and tip; when the pulse stops they relax and re-emit at the same frequency, and that echo is the signal. A *gradient* field makes $B$, hence the resonant frequency, vary across the body, so that only one slice resonates with a given pulse — which is how the scanner knows where the signal came from. The legacy Cambridge medical-physics question (March 2021 Paper 42) and the former IB imaging option (November 2016 Paper 3 Q20) examined it in exactly those words: *frequency equals natural frequency, resonance occurs, energy is absorbed*. These are historical exam contexts, not MRI requirements in the current Cambridge or IB guides.
 
 ---
 

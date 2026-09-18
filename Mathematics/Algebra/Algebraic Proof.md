@@ -25,6 +25,7 @@ tags:
   - level/pre-IB
   - level/pre-AP
   - curriculum/OxAQA-9260
+  - syllabus/9260-N4
   - syllabus/9260-A8
   - type/proof
   - type/exam-technique

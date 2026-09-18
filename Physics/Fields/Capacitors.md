@@ -1,6 +1,7 @@
 ---
 chinese: 电容器 (diànróngqì)
 prerequisites:
+  - "[[Electric Potential]]"
   - "[[Electric Field]]"
   - "[[Electric Current]]"
   - "[[Exponential Growth and Decay]]"
@@ -32,7 +33,7 @@ tags:
 
 ## Definition
 
-A **capacitor** is two conductors (the **plates**) separated by an insulator. Move charge $+Q$ onto one plate and $-Q$ onto the other, and a potential difference $V$ appears between them. Across all capacitors, that stored charge is **proportional** to the voltage, and the constant of proportionality is the **capacitance**:
+A **capacitor** is two conductors (the **plates**) separated by an insulator. Move charge $+Q$ onto one plate and $-Q$ onto the other, and a potential difference $V$ appears between them. For an ideal linear capacitor with fixed geometry and dielectric, that stored charge is **proportional** to the voltage, and the constant of proportionality is the **capacitance**:
 
 $$\boxed{\;C = \dfrac{Q}{V}\;}\qquad\text{unit: the farad, } 1\ \text{F} = 1\ \text{C V}^{-1}.$$
 
@@ -184,16 +185,20 @@ The mnemonic writes itself once you see *why*: parallel = more area = add direct
 ## Exam Notes
 
 ### Cambridge 9702 (A Level, Topic 19)
-Directly and fully examinable, end to end. **§19.1:** $C = Q/V$, the parallel-plate and (data-sheet) spherical formulas, and series $\tfrac1C=\sum\tfrac1{C_i}$ / parallel $C=\sum C_i$. **§19.2:** energy $W = \tfrac12 QV = \tfrac12 CV^2$ as the **area under the $Q$–$V$ graph** (a favourite "explain the one-half" question). **§19.3:** discharge $Q = Q_0 e^{-t/RC}$ and the time constant $\tau = RC$. It also underpins the **§21.2** smoothing capacitor in a rectifier. Expect a graph-reading or a log-linearisation of the exponential.
+
+**§19.1:** define capacitance for an isolated spherical conductor and a parallel-plate capacitor; recall $C=Q/V$; derive and use series and parallel combination rules. The geometry formulas can be obtained from the corresponding electric-field/potential models; do not mistake them for separate recall outcomes in §19.1. **§19.2:** energy is the area under a **potential–charge graph** ($V$ vertically, $Q$ horizontally): $W=\int V\,dQ=\tfrac12QV=\tfrac12CV^2$ for a constant capacitance. **§19.3:** analyse charge, potential difference and current against time during discharge; recall $\tau=RC$ and use $x=x_0e^{-t/RC}$. This is A-Level Paper 4 content. Smoothing also appears in **§21.2**.
 
 ### AP Physics 2
-**§10.6** capacitors ($C = Q/V$, $C = \varepsilon_0 A/d$, energy $\tfrac12 CV^2$) and **§11.8** RC circuits (qualitative charging/discharging, $\tau = RC$) — algebra-based, no calculus required for the exponential.
 
-### AP Physics C: E&M
-**Unit 10** (Conductors and Capacitors, §10.3) with the full energy set $U = \tfrac12 CV^2 = \tfrac12 Q^2/C$; **§11.8** treats the RC circuit as a **first-order ODE** (derive the exponential, as above); **§13.6** extends to the **LC circuit**, a second-order ODE with $\omega = 1/\sqrt{LC}$ — undamped oscillation identical in form to a mass on a spring ([[Simple Harmonic Motion]]).
+**§10.6:** parallel-plate capacitance, dielectric effects and stored energy. **§11.8:** equivalent capacitance, initial/final circuit states and qualitative RC charging/discharging; $\tau=RC$, 63% charged and 37% remaining after one time constant. The CED explicitly excludes **mathematically modelling the time dependence** of charging/discharging: exponential functions here build understanding, but arbitrary-time exponential RC calculations are not a Physics 2 requirement. This differs from the radioactive-decay equations in §15.7.
 
-### IB Physics / IGCSE 0625
-**Not in the current IB syllabus** — capacitance was dropped from the HL course in the 2023 guide (first exams 2025), so it is enrichment for an IB student, not exam content. Not part of 0625 core physics either. This is a Cambridge-A-Level and AP topic.
+### AP Physics C: Electricity and Magnetism
+
+**§10.3:** capacitors, dielectrics and energy, including $U=\tfrac12CV^2=Q^2/(2C)$. **§11.8:** derive the first-order RC differential equation from Kirchhoff's loop rule and use the exponential behaviour. **§13.6:** LC energy exchange and the second-order equation giving $\omega=1/\sqrt{LC}$, connected to [[Simple Harmonic Motion]]. Calculus is part of this course's treatment.
+
+### Where it is not examined
+
+Capacitance is not a topic in the current **IB Physics guide (first assessment 2025)**, **Cambridge 0625** (Core or Supplement), **AP Physics 1**, or **AP Physics C: Mechanics**. For these students it is enrichment. The shared energy and exponential ideas remain useful without making capacitor circuits an exam requirement.
 
 ---
 

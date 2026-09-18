@@ -177,11 +177,13 @@ Two supporting rules the mark schemes reward:
 
 > A 800 × 600 bitmap uses a colour depth of 8 bits per pixel. (a) Calculate its raw file size in MB. (b) Lossless compression reduces the file to 40% of its original size; state the compressed size. (c) Explain one situation where lossy compression of this image would be inappropriate.
 
-**(a)** Following the [[Image Encoding]] recipe and the [[Storage Units (Vocab)]] discipline (Cambridge uses decimal units: 1 MB = 1 000 000 bytes):
+**(a)** Following the [[Image Encoding]] recipe and the [[Storage Units (Vocab)]] discipline (using decimal MB here: 1 MB = 1 000 000 bytes; 9618 distinguishes decimal and binary prefixes):
 
 $$800 \times 600 \times 8 \text{ bits} = 3\,840\,000 \text{ bits} = 480\,000 \text{ bytes} = 0.48 \text{ MB}.$$
 
 **(b)** $0.48 \times 0.40 = 0.192$ MB — and note the phrasing trap: "reduces *to* 40%" and "reduces *by* 40%" differ; read the preposition.
+
+**Binary-unit translation:** 0478 uses the 1024-based ladder. The same raw file is $480000/1024 = 468.75$ KiB, and the compressed file is $192000/1024 = 187.5$ KiB. The byte counts do not change when the units change.
 
 **(c)** If the image is a medical scan / legal evidence / a master file for further editing — any context where detail that looks imperceptible today may matter tomorrow — the information lossy compression discards is unrecoverable, so lossless must be used.
 

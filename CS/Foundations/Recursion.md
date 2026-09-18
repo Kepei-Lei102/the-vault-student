@@ -8,6 +8,7 @@ prerequisites:
   - "[[Sequences]]"
   - "[[Proof by Induction]]"
   - "[[Logic Gates]]"
+  - "[[Programming Paradigms]]"
 leads_to:
   - "[[Dynamic Programming]]"
   - "[[Searching]]"
@@ -19,6 +20,8 @@ leads_to:
   - "[[Turing Machine]]"
   - "[[Parallel and External Sorting]]"
   - "[[The Boolean-to-Silicon Bridge]]"
+teach_together:
+  - "[[Natural Numbers]]"
 tags:
   - subject/computer-science
   - subject/mathematics
@@ -564,6 +567,7 @@ What this means: **recursion is not one programming feature among many. It is on
    - [[Fractals]] — self-similar geometric structures.
 
 - **Misconception traps cleared:** recursion is **not** just "iteration with extra steps" (the call stack changes the memory model); a recursive function **must** have a base case (else stack overflow); the recursive call **must** make progress toward the base case (or it never terminates); naive recursion can be **exponentially** slow without memoisation (Fibonacci); and recursion and induction are **the same idea**, just used for different goals.
+- **Prerequisite:** [[Programming Paradigms]] — the declarative `ancestor` rule is recursion with no loop anywhere, and left recursion is the infinite-loop trap.
 
 ---
 

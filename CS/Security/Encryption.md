@@ -6,6 +6,7 @@ prerequisites:
   - "[[Hash Tables]]"
   - "[[Compression]]"
 leads_to:
+  - "[[Digital Currency and Blockchain]]"
   - "[[Networks]]"
   - "[[Data Protection and Privacy]]"
   - "[[The Internet and the Web]]"
@@ -267,7 +268,7 @@ The public record shows the arms race. The RSA-129 challenge, set in 1977 with a
 
 The syllabus says *quantum cryptography*, and two unrelated ideas hide under the phrase.
 
-**Quantum key distribution (QKD)** — BB84, Bennett and Brassard 1984 — sends the bits of a *symmetric key* as single photons polarised in one of two bases. An eavesdropper who measures a photon in the wrong basis disturbs it, so listening leaves a statistical fingerprint the two ends can detect before they use the key; and a photon cannot be copied. It is a key-delivery method with a physical guarantee against interception. Its **benefits**: eavesdropping is detectable, and the key can be as long as you like (a fresh one-time pad on demand). Its **drawbacks**: it needs a dedicated optical fibre or line of sight, range is limited by photon loss (China's Micius satellite, 墨子号, extended it to 1 200 km in 2017 by going through space), it is expensive, and it distributes keys only — the data is still encrypted classically. This is what the exam means.
+**Quantum key distribution (QKD)** — BB84, Bennett and Brassard 1984 — sends the bits of a *symmetric key* as single photons polarised in one of two bases. An eavesdropper who measures a photon in the wrong basis disturbs it, so listening leaves a statistical fingerprint the two ends can detect before they use the key; and an arbitrary unknown quantum state cannot be copied perfectly. This supports a security proof under stated assumptions; it does not make every physical implementation secure. Its **benefits**: eavesdropping is detectable, and repeated exchanges can generate fresh secret key material, limited by the equipment's key-generation rate. Its **drawbacks**: it needs a dedicated optical fibre or line of sight, range is limited by photon loss (China's Micius satellite, 墨子号, extended it to 1 200 km in 2017 by going through space), it is expensive, and it distributes keys only — the data is still encrypted classically. The classical channel also needs authentication, and imperfect sources or detectors can introduce vulnerabilities. See [NSA’s QKD limitations](https://www.nsa.gov/Cybersecurity/Quantum-Key-Distribution-QKD-and-Quantum-Cryptography-QC/).
 
 **Quantum computing versus RSA** — the other thing — is Peter Shor's 1994 algorithm, which factors and takes discrete logarithms in polynomial time on a large enough quantum computer. No such machine exists yet; the one built would break RSA, Diffie–Hellman and elliptic curves at once, and would not touch AES-256 beyond halving its strength. The response is **post-quantum cryptography**: new public-key schemes built on lattice problems that Shor does not solve. NIST standardised the first of them (ML-KEM, ML-DSA) in 2024, and Chrome and Cloudflare already run a hybrid post-quantum key exchange on a large share of https connections — because an adversary who *records* today's traffic can decrypt it the day the machine arrives ("harvest now, decrypt later"), and some secrets need to last longer than that.
 

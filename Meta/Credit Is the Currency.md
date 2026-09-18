@@ -3,6 +3,7 @@ chinese: 信用即货币 (xìnyòng jí huòbì)
 prerequisites:
   - "[[Text Encoding]]"
   - "[[Learning as Verification]]"
+  - "[[You Are a Reinforcement Learner]]"
 leads_to: []
 tags:
   - subject/methodology
@@ -117,3 +118,5 @@ The thesis lands on schoolwork with almost embarrassing precision.
 - **Methodology siblings:** [[Forward Reading and Problem Discovery]] — auditing credit *is* forward reading applied to people and institutions (trace announced moves to outcomes); [[The Feynman Technique]] — teaching as the announced move that proves the understanding exists; [[Inertia and Bootstrapping]] — the public announcement as activation-energy hack.
 - **The founder:** [[Stories/von Neumann the Martian]] — game theory itself (1928/1944) is his mathematics; Schelling and Axelrod built the commitment-and-cooperation wing on his foundation.
 - **Philosophy floor:** [[The Love of Wisdom]] — that card asks why we reach; the reaching becomes *shared* the moment we announce it and keep our word about it. Credit is how incomplete beings compose into something larger than any of them.
+- **Prerequisite:** [[You Are a Reinforcement Learner]] — why accurate credit is a reward term in other people's learning, measured: help that is not credited goes extinct in a few hundred rounds.
+

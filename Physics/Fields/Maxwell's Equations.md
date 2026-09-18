@@ -1,6 +1,7 @@
 ---
 chinese: 麦克斯韦方程组 (Màikèsīwéi fāngchéngzǔ)
 prerequisites:
+  - "[[Electric Field]]"
   - "[[Electromagnetic Induction]]"
   - "[[Lorentz Force]]"
   - "[[Capacitors]]"

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 700 420">
+<style>text{font-family:Arial,sans-serif;fill:#888;text-anchor:middle;font-size:20px}.small{font-size:15px}</style>
+<text x="350" y="25">Same keys, two views: a tree stored as an array</text>
+<line x1="328.534" y1="80.733" x2="201.466" y2="144.267" stroke="#888" stroke-width="2"/>
+<line x1="371.466" y1="80.733" x2="498.534" y2="144.267" stroke="#888" stroke-width="2"/>
+<line x1="163.029" y1="171.971" x2="111.971" y2="223.029" stroke="#888" stroke-width="2"/>
+<line x1="196.971" y1="171.971" x2="248.029" y2="223.029" stroke="#888" stroke-width="2"/>
+<line x1="503.029" y1="171.971" x2="451.971" y2="223.029" stroke="#888" stroke-width="2"/>
+<line x1="536.971" y1="171.971" x2="588.029" y2="223.029" stroke="#888" stroke-width="2"/>
+<circle cx="350" cy="70" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="350" y="77">2</text>
+<text class="small" x="388" y="75">i=0</text>
+<circle cx="180" cy="155" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="180" y="162">5</text>
+<text class="small" x="218" y="160">i=1</text>
+<circle cx="520" cy="155" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="520" y="162">3</text>
+<text class="small" x="558" y="160">i=2</text>
+<circle cx="95" cy="240" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="95" y="247">9</text>
+<text class="small" x="133" y="245">i=3</text>
+<circle cx="265" cy="240" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="265" y="247">7</text>
+<text class="small" x="303" y="245">i=4</text>
+<circle cx="435" cy="240" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="435" y="247">8</text>
+<text class="small" x="473" y="245">i=5</text>
+<circle cx="605" cy="240" r="24" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
+<text x="605" y="247">4</text>
+<text class="small" x="643" y="245">i=6</text>
+<rect x="50" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="82" y="337">2</text>
+<text class="small" x="82" y="377">i=0</text>
+<rect x="139" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="171" y="337">5</text>
+<text class="small" x="171" y="377">i=1</text>
+<rect x="228" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="260" y="337">3</text>
+<text class="small" x="260" y="377">i=2</text>
+<rect x="317" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="349" y="337">9</text>
+<text class="small" x="349" y="377">i=3</text>
+<rect x="406" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="438" y="337">7</text>
+<text class="small" x="438" y="377">i=4</text>
+<rect x="495" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="527" y="337">8</text>
+<text class="small" x="527" y="377">i=5</text>
+<rect x="584" y="307" width="64" height="46" rx="5" fill="rgba(8,145,178,0.15)" stroke="#0891b2" stroke-width="2"/>
+<text x="616" y="337">4</text>
+<text class="small" x="616" y="377">i=6</text>
+<text x="350" y="408" class="small">Children of i: 2i + 1 and 2i + 2 • valid indices only • root has no parent</text></svg>

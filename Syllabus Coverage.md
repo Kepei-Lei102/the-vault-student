@@ -10,14 +10,14 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-14b` · built 2026-09-14 from commit `f18aa35`  
-> 401 cards · 580 diagrams · 102 explainers · 139 illustrations
+> **Edition** `student-2026-09-18` · built 2026-09-18 from commit `29a7c09`  
+> 432 cards · 658 diagrams · 130 explainers · 148 illustrations
 
 ---
 
 ## Cambridge IGCSE 0478 Computer Science
 
-*33 syllabus points · 48 card references*
+*37 syllabus points · 57 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -32,37 +32,41 @@ is often taught under a different heading.
 | 3.2 | [[Input and Output Devices]], [[Sensors and Control Systems]] |
 | 3.3 | [[RAM and the Memory Hierarchy]], [[Secondary Storage]] |
 | 3.4 | [[The Internet and the Web]] |
-| 4.1 | [[Interrupt Handling]], [[Operating Systems]] |
+| 4.1 | [[File Systems]], [[Interrupt Handling]], [[Operating Systems]] |
 | 4.2 | [[Compilers and Interpreters]] |
 | 4.2.1 | [[Assembly Language]] |
 | 5.1 | [[The Internet and the Web]] |
+| 5.2 | [[Digital Currency and Blockchain]] |
 | 5.3 | [[Data Security]] |
+| 6.1 | [[Automated Systems and Robotics]] |
+| 6.2 | [[Automated Systems and Robotics]] |
+| 6.3 | [[Artificial Intelligence]] |
 | 7.1 | [[Program Design]], [[Program Development Life Cycle and Testing]] |
 | 7.2 | [[Program Design]] |
-| 7.3 | [[Program Design]] |
-| 7.4 | [[Searching]], [[Sorting]] |
+| 7.3 | [[Program Design]], [[Programming Fundamentals]] |
+| 7.4 | [[Programming Fundamentals]], [[Searching]], [[Sorting]] |
 | 7.5 | [[Program Development Life Cycle and Testing]] |
 | 7.6 | [[Program Development Life Cycle and Testing]] |
 | 7.7 | [[Program Development Life Cycle and Testing]] |
 | 7.8 | [[Program Development Life Cycle and Testing]] |
-| 7.9 | [[Program Design]] |
+| 7.9 | [[Cambridge Pseudocode]], [[Program Design]], [[Programming Fundamentals]] |
+| 8.1 | [[Programming Fundamentals]] |
 | 8.2 | [[Arrays]] |
 | 8.3 | [[File Handling]] |
 | 9.1 | [[Relational Databases]] |
-| 9.2 | [[SQL]] |
+| 9.4 | [[SQL]] |
 | 10.1 | [[Logic Gates]] |
 | 10.2 | [[Logic Gates]] |
 | 10.3 | [[Logic Gates]] |
-| 10.4 | [[Logic Gates]] |
 
 ## Cambridge IGCSE 0580 Mathematics (Extended)
 
-*72 syllabus points · 121 card references*
+*72 syllabus points · 122 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | C4.7 | [[Circle Theorems I]], [[Circle Theorems II]] |
-| E1.1 | [[Factors and Multiples (Vocab)]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Reciprocals (Vocab)]] |
+| E1.1 | [[Factors and Multiples (Vocab)]], [[Natural Numbers]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Reciprocals (Vocab)]] |
 | E1.2 | [[Cardinality]], [[Complement]], [[Element]], [[Empty Set]], [[Intersection]], [[Set]], [[Set Operations]], [[Set-Builder Notation]], [[Subset]], [[Union]], [[Universal Set]], [[Venn Diagram]] |
 | E1.3 | [[Powers and Roots (Vocab)]] |
 | E1.4 | [[Decimals (Vocab)]], [[Fractions (Vocab)]], [[Percentages (Vocab)]], [[Recurring Decimals (Vocab)]] |
@@ -210,7 +214,7 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0625 Physics
 
-*19 syllabus points · 41 card references*
+*26 syllabus points · 53 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -227,12 +231,19 @@ is often taught under a different heading.
 | 1.7 | [[Work, Energy and Power]] |
 | 1.8 | [[Density and Pressure]] |
 | 2.2 | [[Specific Heat Capacity]] |
+| 2.3 | [[Heat Transfer]] |
 | 3.1 | [[Progressive Waves]] |
-| 4.2 | [[Alternating Current]], [[Electric Current]], [[Resistance]] |
+| 3.2 | [[Lenses and Image Formation]], [[Reflection and Refraction]] |
+| 3.3 | [[Electromagnetic Spectrum]], [[X-rays and CT]] |
+| 3.4 | [[Ultrasound]] |
+| 4.2 | [[Alternating Current]], [[Electric Current]], [[Electric Field]], [[Electric Potential]], [[Resistance]] |
 | 4.3 | [[Kirchhoff's Laws]], [[Potential Dividers]] |
 | 4.4 | [[Potential Dividers]] |
 | 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]] |
+| 5.1 | [[Nuclear Physics]] |
+| 5.2 | [[Nuclear Physics]] |
 | 6.1 | [[Gravitational Fields]] |
+| 6.2 | [[Doppler Effect]], [[Hubble's Law and the Expanding Universe]] |
 
 ## Cambridge A-Level 9231 Further Mathematics
 
@@ -267,7 +278,7 @@ is often taught under a different heading.
 
 ## Oxford AQA 9260 International Mathematics (Extension)
 
-*97 syllabus points · 150 card references*
+*97 syllabus points · 153 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -341,8 +352,8 @@ is often taught under a different heading.
 | N2 | [[Four Operations (Vocab)]], [[Order of Operations (Vocab)]] |
 | N20 | [[Direct and Inverse Proportion (Vocab)]], [[Exponential Growth and Decay]] |
 | N20.Ext | [[Exponential Growth and Decay]] |
-| N3 | [[Inverse Operations (Vocab)]], [[Order of Operations (Vocab)]] |
-| N4 | [[Factors and Multiples (Vocab)]], [[Prime Factorisation (Vocab)]] |
+| N3 | [[Inverse Operations (Vocab)]], [[Order of Operations (Vocab)]], [[Reciprocals (Vocab)]] |
+| N4 | [[Algebraic Proof]], [[Factors and Multiples (Vocab)]], [[Number Sets (Vocab)]], [[Prime Factorisation (Vocab)]] |
 | N5 | [[Powers and Roots (Vocab)]] |
 | N6 | [[Laws of Indices]] |
 | N6.Ext | [[Laws of Indices]] |
@@ -371,7 +382,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*46 syllabus points · 83 card references*
+*46 syllabus points · 88 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -384,7 +395,7 @@ is often taught under a different heading.
 | 4.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Interrupt Handling]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Von Neumann machine]] |
 | 4.2 | [[Assembly Language]] |
 | 4.3 | [[Assembly Language]], [[Bitwise Operations]] |
-| 5.1 | [[Operating Systems]] |
+| 5.1 | [[File Systems]], [[Operating Systems]] |
 | 5.2 | [[Compilers and Interpreters]] |
 | 6.1 | [[Data Security]] |
 | 6.2 | [[Data Security]], [[Error Detection and Correction]] |
@@ -398,8 +409,8 @@ is often taught under a different heading.
 | 10.2 | [[Arrays]], [[Searching]], [[Sorting]] |
 | 10.3 | [[Cambridge Pseudocode]], [[File Handling]] |
 | 10.4 | [[Linked List]], [[Stacks and Queues]] |
-| 11.1 | [[Cambridge Pseudocode]], [[Program Design]] |
-| 11.2 | [[Cambridge Pseudocode]] |
+| 11.1 | [[Cambridge Pseudocode]], [[Program Design]], [[Programming Fundamentals]] |
+| 11.2 | [[Cambridge Pseudocode]], [[Programming Fundamentals]] |
 | 11.3 | [[Cambridge Pseudocode]], [[Program Design]] |
 | 12.1 | [[Program Development Life Cycle and Testing]] |
 | 12.2 | [[Program Design]] |
@@ -414,17 +425,17 @@ is often taught under a different heading.
 | 16.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 16.2 | [[Compilers and Interpreters]] |
 | 17.1 | [[Encryption]] |
-| 18.1 | [[Graphs]] |
+| 18.1 | [[Artificial Intelligence]], [[Graphs]] |
 | 19.1 | [[Big-O Notation]], [[Binary Trees]], [[Graphs]], [[Hash Tables]], [[Linked List]], [[Stacks and Queues]] |
 | 19.1a | [[Searching]] |
 | 19.1b | [[Sorting]] |
 | 19.2 | [[Recursion]] |
-| 20.1 | [[Assembly Language]], [[Object-Oriented Programming]] |
+| 20.1 | [[Assembly Language]], [[Object-Oriented Programming]], [[Programming Paradigms]] |
 | 20.2 | [[File Processing and Exception Handling]] |
 
 ## Cambridge A-Level 9702 Physics
 
-*47 syllabus points · 66 card references*
+*74 syllabus points · 97 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -434,7 +445,7 @@ is often taught under a different heading.
 | 1.4 | [[Force (Vocab)]], [[Vectors]], [[Vectors in Physics]] |
 | 2.1 | [[Kinematics Calculus]], [[Projectile Motion]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
 | 3.1 | [[Force (Vocab)]], [[Linear Momentum]], [[Newton's Laws of Motion]], [[Normal Force (Vocab)]], [[Tension (Vocab)]] |
-| 3.2 | [[Braking Systems]], [[Force (Vocab)]], [[Friction (Vocab)]], [[The Friction Limit]] |
+| 3.2 | [[Braking Systems]], [[Force (Vocab)]], [[Friction (Vocab)]], [[Linear Motion under a Variable Force]], [[The Friction Limit]] |
 | 3.3 | [[Linear Momentum]] |
 | 4.1 | [[Forces and Equilibrium]], [[Torque]] |
 | 4.2 | [[Forces and Equilibrium]] |
@@ -445,19 +456,29 @@ is often taught under a different heading.
 | 6.2 | [[Hooke's Law for Springs]] |
 | 7.1 | [[Progressive Waves]] |
 | 7.2 | [[Progressive Waves]] |
+| 7.3 | [[Doppler Effect]] |
+| 7.4 | [[Electromagnetic Spectrum]] |
+| 7.5 | [[Polarisation]] |
+| 8.1 | [[Stationary Waves]] |
+| 8.2 | [[Diffraction]] |
+| 8.3 | [[Superposition and Interference]] |
+| 8.4 | [[Diffraction]] |
 | 9.1 | [[Electric Current]] |
 | 9.2 | [[Resistance]] |
 | 9.3 | [[Resistance]] |
 | 10.1 | [[Internal Resistance]] |
 | 10.2 | [[Kirchhoff's Laws]] |
 | 10.3 | [[Potential Dividers]] |
+| 11.1 | [[Nuclear Physics]] |
+| 11.2 | [[Nuclear Physics]] |
 | 12.1 | [[Circular Motion]] |
 | 12.2 | [[Circular Motion]] |
 | 13.1 | [[Gravitational Fields]] |
 | 13.2 | [[Gravitational Fields]] |
 | 13.3 | [[Gravitational Fields]] |
 | 13.4 | [[Gravitational Fields]] |
-| 14.2 | [[Kinetic Theory and the Ideal Gas]] |
+| 14.1 | [[Specific Heat Capacity]], [[Temperature and Thermometry]] |
+| 14.2 | [[Kinetic Theory and the Ideal Gas]], [[Temperature and Thermometry]] |
 | 14.3 | [[Specific Heat Capacity]] |
 | 15.1 | [[Kinetic Theory and the Ideal Gas]] |
 | 15.2 | [[Kinetic Theory and the Ideal Gas]] |
@@ -467,6 +488,11 @@ is often taught under a different heading.
 | 17.1 | [[Simple Harmonic Motion]] |
 | 17.2 | [[Simple Harmonic Motion]] |
 | 17.3 | [[Damped Oscillations]], [[Resonance]] |
+| 18.1 | [[Electric Field]] |
+| 18.2 | [[Electric Field]] |
+| 18.3 | [[Electric Field]] |
+| 18.4 | [[Electric Field]] |
+| 18.5 | [[Electric Potential]] |
 | 19 | [[Capacitors]] |
 | 20.1 | [[Lorentz Force]] |
 | 20.2 | [[Lorentz Force]] |
@@ -475,10 +501,22 @@ is often taught under a different heading.
 | 20.5 | [[Electromagnetic Induction]] |
 | 21.1 | [[Alternating Current]], [[Electromagnetic Induction]] |
 | 21.2 | [[Alternating Current]] |
+| 22.1 | [[Wave-Particle Duality]] |
+| 22.2 | [[Wave-Particle Duality]] |
+| 22.3 | [[Wave-Particle Duality]] |
+| 22.4 | [[Energy Levels and Line Spectra]] |
+| 23.1 | [[Nuclear Physics]] |
+| 23.2 | [[Nuclear Physics]] |
+| 24.1 | [[Ultrasound]] |
+| 24.2 | [[X-rays and CT]] |
+| 24.3 | [[PET Scanning]] |
+| 25.1 | [[Stellar Luminosity and Size]] |
+| 25.2 | [[Stellar Luminosity and Size]] |
+| 25.3 | [[Doppler Effect]], [[Hubble's Law and the Expanding Universe]] |
 
 ## Cambridge A-Level 9709 Mathematics
 
-*38 syllabus points · 96 card references*
+*38 syllabus points · 98 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -491,13 +529,13 @@ is often taught under a different heading.
 | 1.7 | [[Chain Rule]], [[Differentiation]], [[Differentiation Rules]], [[Power Rule]], [[Stationary Points]], [[Tangents and Normals]] |
 | 1.8 | [[Integration]] |
 | 2.1 | [[Modulus Function]], [[Polynomial Division]], [[Remainder and Factor Theorems]] |
-| 2.2 | [[Exponential Function]], [[Logarithms]] |
+| 2.2 | [[Exponential Function]], [[Linearisation]], [[Logarithms]] |
 | 2.3 | [[Trigonometric Equations]], [[Trigonometric Identities]] |
 | 2.4 | [[Chain Rule]], [[Differentiation Rules]], [[Implicit Differentiation]], [[Product Rule]], [[Quotient Rule]] |
 | 2.5 | [[Area Under a Graph (Vocab)]], [[Integration]] |
 | 2.6 | [[Numerical Methods]] |
 | 3.1 | [[Binomial Series]], [[Modulus Function]], [[Partial Fractions]], [[Polynomial Division]] |
-| 3.2 | [[Exponential Function]], [[Logarithms]] |
+| 3.2 | [[Exponential Function]], [[Linearisation]], [[Logarithms]] |
 | 3.3 | [[Trigonometric Equations]], [[Trigonometric Identities]] |
 | 3.4 | [[Chain Rule]], [[Differentiation Rules]], [[Implicit Differentiation]], [[Parametric Differentiation]], [[Product Rule]], [[Quotient Rule]] |
 | 3.5 | [[Integration]], [[Integration by Parts]], [[Integration by Substitution]], [[Standard Integrals]] |
@@ -544,26 +582,33 @@ is often taught under a different heading.
 
 ## AP Calculus BC
 
-*6 syllabus points · 6 card references*
+*14 syllabus points · 14 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | 1.8 | [[Squeeze Theorem]] |
+| 2.9 | [[Product Rule]] |
 | 5.1 | [[Mean Value Theorem]] |
+| 5.2 | [[Stationary Points]] |
+| 5.3 | [[Stationary Points]] |
+| 5.6 | [[Stationary Points]] |
+| 5.10 | [[Optimisation]] |
+| 5.11 | [[Optimisation]] |
 | 6.6 | [[Properties of Definite Integrals]] |
 | 8.1 | [[Properties of Definite Integrals]] |
 | 9 | [[Polar Coordinates]] |
+| 9.1 | [[Parametric Differentiation]] |
+| 9.2 | [[Parametric Differentiation]] |
 | 10 | [[Maclaurin Series]] |
 
 ## AP Physics 1
 
-*34 syllabus points · 53 card references*
+*33 syllabus points · 48 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| SP.1 | [[Accuracy vs Precision]], [[Error Propagation]], [[Physical Quantities and Units]], [[Repeated Measurements]], [[Significant Figures]], [[Vectors in Physics]] |
-| SP.3 | [[Calibration of Instruments]] |
-| 1.1 | [[SUVAT]] |
+| SP.1 | [[Repeated Measurements]] |
+| 1.1 | [[SUVAT]], [[Vectors in Physics]] |
 | 1.2 | [[SUVAT]] |
 | 1.5 | [[Projectile Motion]] |
 | 2.1 | [[Centre of Mass]], [[Force (Vocab)]], [[Newton's Laws of Motion]] |
@@ -598,20 +643,35 @@ is often taught under a different heading.
 
 ## AP Physics 2
 
-*2 syllabus points · 2 card references*
+*17 syllabus points · 19 card references*
 
 | Syllabus point | Cards |
 |---|---|
+| 13.1 | [[Reflection and Refraction]] |
+| 13.3 | [[Reflection and Refraction]] |
+| 13.4 | [[Lenses and Image Formation]] |
 | 14.1 | [[Progressive Waves]] |
 | 14.2 | [[Progressive Waves]] |
+| 14.3 | [[Polarisation]] |
+| 14.5 | [[Doppler Effect]] |
+| 14.6 | [[Stationary Waves]], [[Superposition and Interference]] |
+| 14.7 | [[Diffraction]] |
+| 14.8 | [[Diffraction]], [[Superposition and Interference]] |
+| 14.9 | [[Superposition and Interference]] |
+| 15.1 | [[Wave-Particle Duality]] |
+| 15.2 | [[Energy Levels and Line Spectra]] |
+| 15.3 | [[Energy Levels and Line Spectra]] |
+| 15.5 | [[Wave-Particle Duality]] |
+| 15.7 | [[Nuclear Physics]] |
+| 15.8 | [[Nuclear Physics]] |
 
 ## AP Physics C: Mechanics
 
-*31 syllabus points · 45 card references*
+*31 syllabus points · 46 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| 1.1 | [[SUVAT]] |
+| 1.1 | [[SUVAT]], [[Vectors in Physics]] |
 | 1.2 | [[SUVAT]] |
 | 1.5 | [[Projectile Motion]] |
 | 2.1 | [[Centre of Mass]], [[Centres of Mass by Integration]], [[Force (Vocab)]], [[Newton's Laws of Motion]] |
@@ -643,6 +703,32 @@ is often taught under a different heading.
 | 7.3 | [[Simple Harmonic Motion]] |
 | 7.4 | [[Simple Harmonic Motion]] |
 
+## Edexcel International A Level Mathematics
+
+*19 syllabus points · 20 card references*
+
+| Syllabus point | Cards |
+|---|---|
+| FP1.3.1 | [[Numerical Methods]] |
+| FP2.1.1 | [[Quadratic Inequalities]] |
+| FP2.6.1 | [[Maclaurin Series]] |
+| M1.3.1 | [[Travel Graphs (Vocab)]] |
+| P1.1.3 | [[Sketching Curves (Vocab)]] |
+| P1.1.6 | [[Simultaneous Equations (Vocab)]] |
+| P1.1.7 | [[Quadratic Inequalities]] |
+| P1.1.9 | [[Quadratic Inequalities]] |
+| P1.1.11 | [[Sketching Curves (Vocab)]] |
+| P1.4.1 | [[Limit]] |
+| P2.2.1 | [[Remainder and Factor Theorems]] |
+| P2.4.1 | [[Sequences]] |
+| P2.4.3 | [[Sequences]] |
+| P2.7.1 | [[Optimisation]], [[Stationary Points]] |
+| P3.4.2 | [[Product Rule]] |
+| P3.6.1 | [[Numerical Methods]] |
+| P3.6.2 | [[Numerical Methods]] |
+| P4.3.1 | [[Parametric Differentiation]] |
+| P4.5.1 | [[Parametric Differentiation]] |
+
 ## IB Mathematics: Analysis & Approaches
 
 *1 syllabus point · 1 card reference*
@@ -653,21 +739,25 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*16 syllabus points · 26 card references*
+*20 syllabus points · 35 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | A1.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Input and Output Devices]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Secondary Storage]] |
 | A1.2 | [[Logic Gates]], [[Number Bases]] |
-| A1.3 | [[Sensors and Control Systems]] |
-| A2.1 | [[Networks]] |
-| A2.2 | [[Networks]], [[The Internet and the Web]] |
+| A1.3 | [[File Systems]], [[Operating Systems]], [[Sensors and Control Systems]] |
+| A2.1 | [[Digital Currency and Blockchain]], [[Networks]] |
+| A2.2 | [[Digital Currency and Blockchain]], [[Networks]], [[The Internet and the Web]] |
 | A2.3 | [[Compression]], [[Networks]] |
 | A3.1 | [[Relational Databases]] |
 | A3.2 | [[Relational Databases]] |
 | A3.3 | [[SQL]] |
 | A3.4 | [[NoSQL and Distributed Data]] |
-| B2.2 | [[Arrays]] |
+| A4.1 | [[Artificial Intelligence]] |
+| A4.3 | [[Artificial Intelligence]] |
+| B2.1 | [[Programming Fundamentals]] |
+| B2.2 | [[Arrays]], [[Stacks and Queues]] |
+| B2.3 | [[Programming Fundamentals]] |
 | B2.4 | [[Big-O Notation]], [[Recursion]], [[Searching]], [[Sorting]] |
 | B2.5 | [[File Handling]] |
 | B3.1 | [[Object-Oriented Programming]] |
@@ -676,11 +766,11 @@ is often taught under a different heading.
 
 ## IB Physics
 
-*23 syllabus points · 38 card references*
+*46 syllabus points · 57 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| A.1 | [[Physical Quantities and Units]], [[Vectors in Physics]] |
+| A.1 | [[Vectors in Physics]] |
 | A.1.1 | [[SUVAT]] |
 | A.1.2 | [[Projectile Motion]] |
 | A.2.1 | [[Force (Vocab)]], [[Forces and Equilibrium]], [[Newton's Laws of Motion]] |
@@ -696,10 +786,33 @@ is often taught under a different heading.
 | C.1.3 | [[Simple Harmonic Motion]] |
 | C.2.1 | [[Progressive Waves]] |
 | C.2.2 | [[Progressive Waves]] |
+| C.3.1 | [[Reflection and Refraction]] |
+| C.3.2 | [[Diffraction]] |
+| C.3.3 | [[Superposition and Interference]] |
+| C.3.4 | [[Superposition and Interference]] |
+| C.3.5 | [[Diffraction]] |
+| C.3.6 | [[Diffraction]] |
+| C.4.1 | [[Stationary Waves]] |
 | C.4.3 | [[Damped Oscillations]], [[Resonance]] |
+| C.5.1 | [[Doppler Effect]] |
+| C.5.2 | [[Doppler Effect]] |
 | D.1.1 | [[Gravitational Fields]] |
 | D.1.2 | [[Gravitational Fields]] |
 | D.1.3 | [[Gravitational Fields]] |
 | D.1.4 | [[Gravitational Fields]] |
-| PRAC.1 | [[Calibration of Instruments]] |
-| PRAC.2 | [[Accuracy vs Precision]], [[Error Propagation]], [[Repeated Measurements]], [[Significant Figures]] |
+| E.1.1 | [[Nuclear Physics]] |
+| E.1.2 | [[Energy Levels and Line Spectra]] |
+| E.1.3 | [[Nuclear Physics]] |
+| E.1.4 | [[Energy Levels and Line Spectra]] |
+| E.2.1 | [[Wave-Particle Duality]] |
+| E.2.2 | [[Wave-Particle Duality]] |
+| E.2.3 | [[Wave-Particle Duality]] |
+| E.3.1 | [[Nuclear Physics]] |
+| E.3.2 | [[Nuclear Physics]] |
+| E.3.3 | [[Nuclear Physics]] |
+| E.3.4 | [[Nuclear Physics]] |
+| E.4.1 | [[Nuclear Physics]] |
+| E.4.2 | [[Nuclear Physics]] |
+| E.5.1 | [[Nuclear Physics]] |
+| E.5.4 | [[Energy Levels and Line Spectra]] |
+| PRAC.2 | [[Repeated Measurements]] |

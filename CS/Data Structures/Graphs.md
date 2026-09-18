@@ -11,6 +11,8 @@ leads_to:
   - "[[NoSQL and Distributed Data]]"
   - "[[Erdős the Wandering Mathematician]]"
   - "[[Topology]]"
+  - "[[Artificial Intelligence]]"
+  - "[[The Perceptron and Move 78]]"
 tags:
   - subject/computer-science
   - domain/data-structures
@@ -306,6 +308,8 @@ Graphs sit on the A2 theory side, in two places with one shared boundary — **n
 - **Builds on:** [[Binary Trees]] — the last constraint standing (one parent, no cycles), dropped here; [[Hash Tables]] — the dictionary-of-neighbours adjacency list, that card's closing promise cashed; [[Stacks and Queues]] — the queue and stack as BFS's and DFS's engines, the twin disciplines' graduation; [[Big-O Notation]] — the $O(V^2)$-vs-$O(V+E)$ representation trade; [[Recursion]] — DFS's other costume.
 - **Leads to:** [[Heaps and Priority Queues]] — the frontier's efficient engine for Dijkstra and A*, and the bay's promised enrichment gateway.
 - **Kindred:** [[Arrays]] — the adjacency matrix; [[Linked List]] — the path graph in a straitjacket, and chains as the other adjacency-list build; [[Compilers and Interpreters]] — dependency DAGs and evaluation order; [[Operating Systems]] — resource-allocation graphs and the deadlock cycle; [[P vs NP]] — every-edge-once against every-vertex-once, one click apart on the same map.
+- **Leads to:** [[Artificial Intelligence]] — what the search is *for*: graphs as an AI's memory of relationships, A* and Dijkstra as its route-finding, and the neural network as a weighted graph trained by back propagation.
+- **Story:** [[Stories/The Perceptron and Move 78]] — Monte Carlo tree search as the symbolic lineage's last trick, and the tree under AlphaGo.
 
 ## LaTeX Reference
 

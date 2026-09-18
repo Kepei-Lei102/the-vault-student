@@ -7,6 +7,8 @@ prerequisites:
   - "[[Simultaneous Equations (Vocab)]]"
   - "[[Kirchhoff's Laws]]"
 leads_to: []
+teach_together:
+  - "[[X-rays and CT]]"
 tags:
   - subject/mathematics
   - domain/matrices
@@ -147,7 +149,7 @@ This case is the deepest lesson in the topic: *the determinant never changed*. C
 ## Where this is the working tool
 
 - **$\mathbf{A}\mathbf{x} = \mathbf{b}$ is, by volume, the most-solved problem in computing.** Simulating a bridge under load, a wing in airflow, tomorrow's weather, or a phone's antenna means chopping the object into millions of small elements whose interactions are linear — one gigantic linear system per time-step, solved by refined descendants of exactly the elimination above (the $O(n^3)$ elimination that [[Determinants and Inverses]] notes made matrices computable). A supercomputer's headline benchmark, LINPACK, is literally "how fast can you solve $\mathbf{A}\mathbf{x} = \mathbf{b}$".
-- **A CT scanner solves an inconsistent system on purpose.** Each X-ray beam through the body contributes one linear equation (the densities along its path sum to the measured attenuation); a scan collects hundreds of thousands of equations in the unknown pixel densities. Measurement noise makes the system *inconsistent* — no image satisfies every reading exactly — and the machine answers with **least squares**: the image that misses all the equations by the least total amount. Inconsistency, which the exam treats as an endpoint ("no solutions"), is where real engineering starts negotiating.
+- **A CT scanner solves an inconsistent system on purpose.** Each X-ray beam through the body contributes one linear equation in an ideal monochromatic model (attenuation coefficients weighted by path lengths sum to the logarithmic transmission); a scan collects many equations in the unknown pixel attenuation coefficients. [[X-rays and CT]] derives the measurement model. Measurement noise makes the system *inconsistent* — no image satisfies every reading exactly — and the machine answers with **least squares**: the image that misses all the equations by the least total amount. Inconsistency, which the exam treats as an endpoint ("no solutions"), is where real engineering starts negotiating.
 - **Circuit analysis is this topic wearing physics clothing.** Kirchhoff's laws turn any resistor network into a linear system — one equation per loop and junction, the currents as unknowns — and a circuit simulator is a linear-system solver in a trench coat. The [[Electric Current]] side of the vault meets this algebra from the other direction.
 
 ## Common Misconceptions (Teaching Notes)
@@ -194,6 +196,8 @@ AHL 1.14 includes solving systems of up to three linear equations as $\mathbf{A}
 Not on Cambridge 9709 or Edexcel IAL Mathematics (both stop at two equations in two unknowns — IAL P1 solves simultaneous equations "by substitution", and even IAL Further's FP3 matrices unit runs determinants → inverses → eigenvalues without ever classifying systems); not on OxAQA 9660 (no matrix content); not on AP Calculus or AP Precalculus; IB AA has no matrices at any level. Like its sibling topic, a Further-Mathematics marker.
 
 ## Connections
+
+- **Imaging companion:** [[X-rays and CT]] — measured projections become constraints on an unknown interior.
 
 - **Parent:** [[Planes in 3D]] — supplies the planes, their normals, and the two-planes-meet-in-a-line fact; its three-floors-pin-a-corner picture is Question 1's geometry, and the sheaf/prism configurations named there get their full algebra here.
 - **Proof ingredient:** [[Determinants and Inverses]] — Question 1 *is* the singularity test, and $\mathbf{x} = \mathbf{A}^{-1}\mathbf{b}$ is the unique-case solution; the vanishing determinant as coplanar rows is the scalar triple product of [[Cross Product]].

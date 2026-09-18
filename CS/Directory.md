@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **63 cards across 10 bays.** Last landed: [[Ethics and Ownership]] (2026-09-14) — the delivery rider trapped in the algorithm: three layers of obligation, the BCS four duties, Horizon and Dieselgate, copyright as a right not a lock, the licence spectrum, and the bias you cannot delete; 9618 has no red rows left.
+> **70 cards across 11 bays.** Last landed: [[Heaps and Priority Queues]] (2026-09-17) — the array-packed tree, local repairs, linear heap construction and a runnable event scheduler.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -29,12 +29,12 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 3. **[[Half-Adder and Full-Adder]]** — a computer does arithmetic by doing logic: Sum = XOR, Carry = the majority function; the ripple-carry chain.
 4. **[[Flip-Flops]]** — memory bought with feedback: why one inverter in a loop oscillates and two remember; the SR and JK flip-flops; the SRAM cell.
 
-## Algorithms (9 — core arc closed, plus enrichment, the paradigms, the life cycle and A2 file processing)
+## Algorithms (11 — core arc closed, plus enrichment, the paradigms, the life cycle and A2 file processing)
 
 *Concrete first, analysis after: searching → sorting → Big-O, with program design and the exam dialect alongside.*
 
 1. **[[Program Design]]** — a flowchart is a causality trace someone already drew for you; the five design notations as five questions about one program; top-down design and the identifier table.
-2. **[[Cambridge Pseudocode]]** — the one card that speaks the exam dialect — every keyword, declaration form and the `←` convention — so every other card can write real Python and point here.
+2. **[[Cambridge Pseudocode]]** — the broader exam-dialect reference — keywords, declaration forms, parameter modes and paper-specific built-ins; paired introductory implementations in [[Programming Fundamentals]].
 3. **[[Searching]]** — linear vs binary search; why halving means a million items fall in twenty looks; the sorted precondition that sorting pays for.
 4. **[[Sorting]]** — bubble, selection, insertion, merge and quicksort on one shared list, with the $n^2$-vs-$n\log n$ gap made tangible. *0478 §7.16 · 9618 §9.2 · AP CSA §4.15, §4.17*
 5. **[[Big-O Notation]]** — how cost grows with $n$: the class ladder from $O(1)$ to $O(n!)$, the $c, n_0$ definition, reading Big-O off code. *9618 §19.1 · AP CSA §2.12*
@@ -42,6 +42,9 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 7. **[[Object-Oriented Programming]]** — the nine syllabus terms built in real Python: data and behaviour bundled, encapsulation as invariants living next to the data, inheritance as is-a, polymorphism as the loop that never asks, containment as has-a; the June 2025 Animal/Parrot/Wolf and Nov 2025 Station/Train Paper 4 questions worked against their schemes; ECS in Beyond as OOP's deliberate inverse — and the vault's own architecture. *9618 §20.1 · AP CSA Unit 3 · IB CS B3*
 8. **[[Program Development Life Cycle and Testing]]** — the cycle from coding onward and the three models (waterfall, iterative, RAD); syntax, run-time and logic errors by who finds them; nine testing methods, the strategy and the plan; normal / abnormal / extreme / boundary data and the six validation checks; trace tables done by hand and by machine; three kinds of maintenance. *0478 §7.1, §7.5–7.8 · 9618 §12.1, §12.3*
 9. **[[File Processing and Exception Handling]]** — records out to a file and back; serial, sequential and random organisation with every operation run on a real file and the scan-vs-seek cost measured; the exception as a message that travels up the call stack, `try`/`except`/`finally`/`raise`, when handling is appropriate and the examiners' close-outside-the-try bug. *9618 §20.2*
+10. **[[Programming Paradigms]]** — what a paradigm is; low-level, imperative, object-oriented and declarative solving one problem side by side; the five addressing modes executed on a register machine; facts, rules and goals run on a 120-line Prolog engine with backtracking drawn; seven real Paper 3 questions against their schemes. *9618 §20.1*
+
+11. **[[Programming Fundamentals]]** — state and invariants through sixteen 0478-pseudocode/Python pairs: types, I/O, operators, branches, loops, strings, scope and subprograms; real Paper 2 questions and a tested sales stream. *0478 §8.1 · §7.3–7.4, §7.9*
 
 ## Data Representation (12 — closed)
 
@@ -78,16 +81,17 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 12. **[[Assembly Language]]** — machine code with names on; the Cambridge instruction set, addressing modes as hop-counting, traced programs.
 13. **[[CISC vs RISC]]** — the ISA is a contract, not a blueprint: why pipelines love RISC, how x86 decodes to micro-ops, and why the ecosystem still decides.
 
-## Systems Software (2 — open)
+## Systems Software (3 — open)
 
 *The software that runs the machine itself. 0478 §4, 9618 §5 and §16 complete.*
 
 1. **[[Operating Systems]]** — part government, part illusionist: process states and scheduling, paging vs segmentation, files, drivers, utilities, and virtual machines. *0478 §4.1 · 9618 §5.1, §15.1, §16.1*
 2. **[[Compilers and Interpreters]]** — translate the book once or interpret live: the three translators, the four compilation stages, BNF, and RPN on a stack. *0478 §4.2 · 9618 §5.2, §16.2*
+3. **[[File Systems]]** — names are not bytes: allocation, links, deletion, SSD discard, formatting, snapshots and sanitisation; an open-file experiment and 4K animation. *0478 §4.1 · 9618 §5.1 · IB A1.3; internals are enrichment.*
 
-*Next in the bay: [[The Call Stack]] · [[File Systems]].*
+*Next in the bay: [[The Call Stack]].*
 
-## Data Structures (8 — closed)
+## Data Structures (9 — syllabus core closed)
 
 *From the array to the graph, each structure bought by restricting who may connect to whom. 9618 §10 and §19 complete, with §13.2 and the graph half of §18.1.*
 
@@ -100,7 +104,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 7. **[[Hash Tables]]** — don't store where things are, calculate where they must be; collisions as certainty (the birthday paradox), chaining and probing.
 8. **[[Graphs]]** — delete every rule and the graph remains: adjacency matrix vs list, BFS and DFS, Dijkstra and A* worked on real papers. *9618 §18.1*
 
-*Enrichment shelf: [[Heaps and Priority Queues]].*
+9. **[[Heaps and Priority Queues]]** — keep the next event ready: sift-up/down, linear-time heap construction, stable ties and rescheduling; Python and a rendered array/tree animation. 💎
 
 ## Databases (3 — closed)
 
@@ -121,25 +125,33 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 *Next in the bay: [[Data Protection and Privacy]] (GDPR and PIPL in full).*
 
-## Data Transmission (3 — open)
+## Artificial Intelligence (2 — open)
 
-*0478 Section 2, and 9618 Section 14. Two of the three subsections are written; §2.3 encryption lives in the Security bay.*
+*The two ways to build a mind: rules written by people, or rules learned from data — and the calculus that does the learning.*
+
+1. **[[Artificial Intelligence]]** — the IGCSE's four characteristics; expert systems (knowledge base, rule base, inference engine, interface) with a forward-chaining engine run for real; machine learning as parameters adjusted to shrink error — regression, k-means and Q-learning from scratch; the neuron that cannot learn XOR and the layer that can; back propagation as the chain rule, checked numerically; deep beats wide at equal weight budget; nine real 9618 and 0478 questions against their schemes. *9618 §18.1 · 0478 §6.3 · IB-CS A4.1/A4.3 (amber)*
+
+2. **[[Automated Systems and Robotics]]** — sensor → microprocessor → actuator as three roles in one ring with no human in it; what makes a robot a robot (mechanical structure, electrical components, programmable — not autonomy, not intelligence), run forwards on a tractor and backwards on a smart speaker; the seven scenarios and six roles with advantages and disadvantages from the named seat; the exam's robot simulated in a room, one sensor against a vote, and a break-even with its assumptions stated; seven real Paper 1 questions against their schemes. *0478 §6.1–§6.2*
+
+*Next in the bay: the enrichment [[How a Language Model Works]]; [[Data Protection and Privacy]] sits in Security.*
+
+---
+
+## Data Transmission (4 — core closed)
+
+*0478 Sections 2 and 5, with encryption and cyber security in the Security bay; 9618 Sections 2 and 14. The core run is complete.*
 
 1. **[[Error Detection and Correction]]** — validation, verification and correction at three prices: parity and its honest limit, the parity block, checksums, check digits, the echo check. *0478 §2.2*
 2. **[[Networks]]** — why a protocol, the four-layer TCP/IP stack with encapsulation counted, packets and packet switching animated, circuit switching weighed, serial/parallel/duplex and USB, latency measured from Chengdu. *9618 §14 closed · 0478 §2.1 · IB A2.1–A2.3*
 
 3. **[[The Internet and the Web]]** — the internet is not the web: URL anatomy, the DNS chain sent by hand and animated, HTTP vs HTTPS with a certificate read live, session and persistent cookies fetched from a real site, MAC/IPv4/IPv6, the router, LAN topologies with a packet's path, client-server vs P2P, cloud, bit streaming. *0478 §3.4 + §5.1 · 9618 §2.1 · IB A2.2*
 
-## Planned bays
+4. **[[Digital Currency and Blockchain]]** — double spending makes ordering necessary; hashes reveal edits, signatures authorise spending, consensus chooses a history; three real Paper 1 questions and an offline ledger with a separate real-signature experiment. *0478 §5.2 · IB A2.1.2/A2.2.3 applications*
 
-Each closes rows across 0478, 9618 and AP CSA at once.
+## Enrichment directions
 
-- **Programming foundations** — variables, selection, iteration, procedures and functions, scope. *0478 §8 · 9618 §11 · AP CSA U2*
-- **[[Object-Oriented Programming]]** — classes, objects, encapsulation, inheritance, polymorphism. *9618 · AP CSA U1/U3*
-- **Networks and the internet** — protocol stack, packets, addressing, the web. *0478 §2/§5 · 9618 §2/§14*
-- **Ethics and encryption** — professional ethics, ownership, and the encryption depth ([[Encryption]]). *0478 §7 · 9618 §7/§17*
-- **Artificial intelligence** — the 9618 §18 unit; cross-links [[Information Theory]].
-- **Hardware enrichment** 💎 — [[Arithmetic Logic Unit]], [[How a Chip Is Made]], the modern CPU vs the textbook model, the GPU from triangles to tensors.
+- **Hardware** — [[How a Chip Is Made]], [[The Modern CPU vs the Textbook Model]], [[The GPU — From Triangles to Tensors]], [[RAID]].
+- **Software engineering** — [[Anatomy of a Tech Stack]], version control, APIs and deployment.
 
 ---
 

@@ -31,7 +31,6 @@ tags:
   - syllabus/0478-10-1
   - syllabus/0478-10-2
   - syllabus/0478-10-3
-  - syllabus/0478-10-4
   - syllabus/9618-3-2
   - syllabus/9618-15-2
   - type/deep
@@ -432,7 +431,7 @@ Recall that DNF guarantees a circuit but doesn't minimise it. **Karnaugh maps** 
 | AQA / OCR / Edexcel A-Level CS | Yes, similar to Cambridge | Yes | Yes |
 
 Exam notes:
-- **0478 §10 questions are highly stereotyped:** either "draw the truth table for this circuit" (forward trace) or "draw a circuit for this truth table / description" (backward trace via DNF or simplification). The vault's hunter framing maps directly: master both directions.
+- **0478 §10:** complete truth tables, construct circuits and write expressions from the given representation. Circuits have **at most three inputs and one output**; NOT gates have one input, the other gates have two. When translating a given statement into a circuit, **draw it without simplification**, as the syllabus requires. Follow each operation directly; an algebraically equivalent simpler circuit may not answer that instruction. For a truth-table starting point, build the required output row by row, using two-input gates to combine terms.
 - **9618 §3.2 expects familiarity with the six standard gates** plus the ability to read a complex multi-input circuit. §15.2 raises the bar to Boolean simplification and Karnaugh maps.
 - **IB CS A1.2** frames gates as *processing encoded data* — expect a circuit fed by binary values from a data-representation context (the same forward/backward traces as 0478, wearing an IB scenario); the six standard gates and truth tables are the working set.
 - The **NAND-universality proof** is not directly examined on either board, but it's a 5-mark question on every UK A-Level paper that asks "Explain how AND can be built from only NAND gates." Knowing this prepares you for that question and for first-year university digital-electronics modules.

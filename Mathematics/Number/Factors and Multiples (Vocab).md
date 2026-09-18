@@ -55,13 +55,16 @@ $$d \text{ is a factor of } n \iff n \div d \text{ has remainder } 0$$
 ## Exam Notes
 
 ### OxAQA 9260
-**Syllabus ref:** N4 — identify and use HCF/LCM; use prime factorisation to find them.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.1 — HCF and LCM, including by prime factorisation.
+**N4, Core:** identify and use factors/divisors, multiples, common factors/multiples, HCF, LCM and prime factorisation, including product notation. The specification's note explicitly includes prime factors written in index form. These are not Extension-only requirements.
 
-> [!warning] Exam phrasing trap
-> "Find the **highest** common factor" — students sometimes give a common factor that isn't the highest. Always check you've found the largest one.
+### Cambridge 0580 Core and Extended
+
+**C1.1 / E1.1:** both tiers include common factors/multiples and tasks finding the HCF or LCM of two numbers, as well as prime factorisation. Typical work: express a number as prime factors, choose the shared smallest powers for HCF or the union of greatest powers for LCM, and interpret the result in context. “Common factor” alone does not answer a request for the **highest** one.
+
+### Beyond IGCSE
+
+**0606:** IGCSE mathematics is assumed; inherited content not separately listed is not tested directly, though it may be needed inside another topic (the syllabus's §3 preamble). **9709 / 9231:** factor arithmetic is prerequisite knowledge, not a standalone HCF/LCM topic. The tracked IAL/9660 and AP Calculus maps likewise have algebraic factorisation rather than standalone HCF/LCM rows. For IB AA/AI and AP Statistics, use this as prerequisite arithmetic support; detailed current-guide placement has not been verified here. Euclid's algorithm and number-theoretic proofs are further topics, not implied requirements of the two IGCSE rows above.
 
 ## Connections
 

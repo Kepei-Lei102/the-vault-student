@@ -273,9 +273,10 @@ A locus, after all, doesn't *have* to be a path traced in time (we made that poi
 
 **Syllabus refs:** §8.1, §8.2, §8.3, §8.4 — the entire 0606 §8 cluster. Expect 5–8 mark questions covering:
 
-- (§8.1, §8.2) Convert between standard and general form. Find centre and radius from a given equation.
-- (§8.3) Find the equation of a tangent at a given point. Find where a line meets a circle. Determine whether a line is a tangent (use the discriminant).
-- (§8.4) Find the equation of a circle given specific information: three points, centre and one point, two ends of a diameter, etc.
+- **§8.1** — know and use the equation of a circle with radius $r$ and centre $(a, b)$; identify centre and radius from an equation **in any form**, $(x-a)^2 + (y-b)^2 = r^2$ or $x^2 + y^2 + 2gx + 2fy + c = 0$ (the formula is given in the list of formulas). Finding a circle from three points, or from a diameter's ends, is this row.
+- **§8.2** — the intersection of a circle and a **straight line**: find the points of intersection, and determine whether a line **is a tangent, is a chord, or does not meet the circle** (the discriminant test lives *here*, not in §8.3).
+- **§8.3** — tangents to a circle, including finding their equations; the syllabus notes that **no use of calculus is expected**, so the gradient comes from the radius, not from differentiation.
+- **§8.4** — the intersection of **two circles**: points of intersection, the equation of the **common chord**, and whether two circles intersect, touch or do not meet.
 
 > [!tip] 0606-specific tip
 > Cambridge often phrases questions as "the line $y = mx + k$ is a tangent to the circle ... — find $k$." The standard solution is *substitute, set the discriminant to zero*. They love this template — practise it in both forms (line tangent to circle given, find $m$; or vice versa).

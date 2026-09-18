@@ -66,7 +66,7 @@ Everything a CPU does is the repetition of one loop. The textbook three beats ar
 The **clock speed** is simply how fast this loop ticks: 3 GHz means three billion stage-ticks per second. One instruction passing through all five stages takes five ticks — that is its **latency**, and pipelining does *not* shorten it.
 
 > [!info] Scope — where the register detail lives
-> This card teaches the cycle at the level pipelining needs. The full register-transfer story of §4.1 — the **PC, MAR, MDR, CIR, ACC** registers, the address/data/control buses, and instruction sets — is its own card, reserved as [[CPU Architecture and the Fetch-Execute Cycle]]. Here we care about the *stages*, because the stages are what we overlap.
+> For the **PC, MAR, MDR, CIR, ACC** registers, the address/data/control buses, and instruction sets, see [[CPU Architecture and the Fetch-Execute Cycle]]. Pipelining overlaps the *stages* of that cycle.
 
 ## Pipelining — the laundromat that runs the world
 
@@ -111,7 +111,7 @@ The three tricks, side by side — all chasing the same prize, *find independent
 ![[superscalar-ooo-speculative.svg|760]]
 
 > [!info] Beyond the textbook CPU model
-> Cambridge's CPU is deliberately spare — one **CU**, one **ALU**, a handful of named registers, three buses. A real modern core has *several* fetch and decode units, **many** parallel execution units (multiple ALUs plus separate floating-point, load, store, and branch units — the row in the diagram above), a reorder buffer to track the out-of-order work, and a branch predictor that is itself a small learning machine. The gap between the exam model and the silicon in your phone is wide enough to be its own card — reserved as [[The Modern CPU vs the Textbook Model]].
+> Cambridge's CPU is deliberately spare — one **CU**, one **ALU**, a handful of named registers, three buses. A real modern core has *several* fetch and decode units, **many** parallel execution units (multiple ALUs plus separate floating-point, load, store, and branch units — the row in the diagram above), a reorder buffer to track the out-of-order work, and a branch predictor that is itself a small learning machine. Compare [[The Modern CPU vs the Textbook Model]] for the gap between that simple model and the silicon in your phone.
 
 This is what a "fast core" really is: a deep, **superscalar**, **out-of-order**, **speculative** engine whose entire purpose is to scavenge enough independent instructions to keep its execution units fed. It is also why **clock speed alone is a terrible measure** of a CPU — a 3 GHz core today does several times the work per tick of a 3 GHz core from 2005, because its IPC is far higher.
 
@@ -161,6 +161,12 @@ The catch is **branch divergence**. If the 32 lanes of a warp hit an `if` and so
 > [!info] Why GPUs sort with networks, not merge sort
 > [[Parallel and External Sorting]] notes that GPUs sort using **bitonic sorting networks** — a *fixed*, data-independent pattern of compare-and-swap operations — rather than merge sort. Now you can see why: a fixed pattern has **no data-dependent branches**, so all 32 lanes of a warp do the same compare-swap in lockstep with zero divergence. The "best" algorithm depends on the machine, and SIMD is the reason.
 
+## Massively parallel processing — divide the world into pieces
+
+A **massively parallel system** uses a very large number of processors to work on parts of a problem concurrently. A common design is a cluster of nodes, each with processors and local memory, joined by a fast interconnect. Nodes exchange messages and synchronise when one stage needs another's results. “Massively parallel” describes scale; Flynn's categories describe instruction and data streams. A distributed simulation commonly uses MIMD, while its individual nodes may also use SIMD accelerators.
+
+**Weather forecasting makes the machinery concrete.** Divide the atmosphere into a grid and give each node a region. Nodes update their regions together, then exchange boundary conditions with neighbouring regions because air crosses the boundaries. More processors can reduce computation time, but communication, synchronisation and the remaining serial work limit the speed-up. A task whose next step depends on the previous result cannot simply be split a thousand ways. [[Parallel and External Sorting]] derives that limit with Amdahl's law.
+
 ## Worked Examples
 
 **1 — Pipeline throughput.** A 5-stage pipeline runs a loop of 100 instructions. Sequential cost: $100 \times 5 = 500$ ticks. Pipelined: $5 + (100 - 1) = 104$ ticks. Speed-up $= 500/104 \approx \mathbf{4.8\times}$, already near the 5× ceiling — and for 10,000 instructions it is $50{,}000 / 10{,}004 \approx 5.0\times$. *More instructions amortise the fill cost.*
@@ -186,7 +192,7 @@ The on-syllabus home. For **§15.1** be able to:
 - **Explain how pipelining improves performance** — overlapping the fetch/decode/execute stages of successive instructions so that, once the pipeline is full, *one instruction completes per clock cycle*; it raises throughput, not the speed of a single instruction.
 - State **parallel-processing categories** — **SISD, SIMD, MISD, MIMD** (Flynn). Understand the 2×2 (instruction streams × data streams); a GPU/vector unit is SIMD, a multi-core CPU is MIMD. *Understand the grid — don't merely memorise the four acronyms.*
 - Distinguish **RISC vs CISC** and know what **multi-core** and **massively parallel** systems are.
-- (**Virtual machines**, the other half of §15.1, is separate-card territory.)
+- **Virtual machines** — their operation, uses, benefits and limitations — are taught in [[Operating Systems]].
 
 **§4.1** supplies the foundation used here — the **fetch–decode–execute cycle** and the roles of **cores, cache, and clock speed**. The register-transfer detail (PC/MAR/MDR/CIR/ACC, buses, instruction sets) is examined separately → [[CPU Architecture and the Fetch-Execute Cycle]].
 
@@ -205,11 +211,11 @@ Cover pipelining, Flynn's taxonomy, and parallel processing with the same concep
 ## Connections
 
 - **Prerequisite:** [[Logic Gates]] — gates build the adders and the ALU; this card pipelines the **datapath** those gates form. The execution stage *is* combinational logic doing arithmetic.
-- **Sibling (reserved):** [[CPU Architecture and the Fetch-Execute Cycle]] — the register-transfer-level §4.1 card (PC, MAR, MDR, CIR, ACC, buses, instruction sets) that this card sits on top of.
+- **Sibling:** [[CPU Architecture and the Fetch-Execute Cycle]] — the register-transfer mechanism (PC, MAR, MDR, CIR, ACC, buses and instruction sets).
 - **Application / cross-domain:** [[Parallel and External Sorting]] — multi-core and **Amdahl's law** from the algorithm's side; its GPU/bitonic-sort note is this card's SIMD section seen in practice. [[Big-O Notation]] — Amdahl's ceiling is the asymptotic limit of parallel speed-up.
 - **Story:** [[Stories/Dual-Core Craft]] — *why* one fast core does so much, the multicore-wall history (Dennard scaling, Herb Sutter's "free lunch is over"), and the SMT / "Dual-Core Craft" meme in full.
-- **Leads to (reserved):** [[Concurrency]] — once many cores/threads share work, coordinating them safely is its own subject. [[Floating-Point Representation]] — the FPU and vector units these pipelines feed.
-- **Extensions (reserved enrichment):** [[The Modern CPU vs the Textbook Model]] — the exam's spare CU/ALU/registers/buses model vs a real core's many fetch/decode/execution units (the "lone ALU, multiplied"). [[The GPU — From Triangles to Tensors]] — the GPU's invention, its SIMT architecture, and its rise to the engine of modern AI.
+- **Leads to:** [[Concurrency]] — once many cores/threads share work, coordinating them safely is its own subject. [[Floating-Point Representation]] — the FPU and vector units these pipelines feed.
+- **Extensions:** [[The Modern CPU vs the Textbook Model]] — the exam's spare CU/ALU/registers/buses model vs a real core's many fetch/decode/execution units (the "lone ALU, multiplied"). [[The GPU — From Triangles to Tensors]] — the GPU's invention, its SIMT architecture, and its rise to the engine of modern AI.
 - *No exam formula-sheet relevance — this is an architecture/throughput concept, not a formula card.*
 
 ## Beyond Syllabus

@@ -26,10 +26,10 @@ tags:
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-2
+  - curriculum/AP-Physics-C-Mechanics
+  - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-3
   - syllabus/0625-P4
-  - syllabus/IB-Physics-PRAC-2
-  - syllabus/AP-Physics-1-SP-1
   - type/deep
   - type/vocabulary
   - notation/significant-figures
@@ -48,13 +48,13 @@ $$55.35$$
 
 You write *that* down on your lab sheet. Four significant figures. Looks precise. Looks scientific.
 
-It is *not* scientific. It is a lie. Both your measurements have three (and two!) significant figures — neither side was measured to four. Where did the fourth digit of $55.35$ come from? The calculator made it up. It dutifully ran the arithmetic and reported every digit the floating-point unit happened to hold, without any clue what your measurements actually mean. **The trailing "5" is not data; it is noise that the calculator dressed up to look like data.**
+The arithmetic is correct, but a measurement report needs one more decision: **how many of those digits does the evidence support?** The calculator knows the numbers you entered; it does not know the ruler's resolution, the scatter in repeated readings, or any calibration error.
 
-A reader who knows the conventions takes one look at "$55.35~\text{cm}^2$" and infers: *this person measured both sides to the nearest hundredth of a centimetre.* You didn't. Your ruler is to the nearest millimetre. Writing $55.35$ is *misrepresenting* the precision of your apparatus.
+Writing $55.35~\text{cm}^2$ without an uncertainty suggests more precision than the input measurements justify. It does not tell a reader exactly which ruler was used, and the extra digits were not created by a floating-point error: they are the correct product of the written inputs.
 
-The honest answer is $\boxed{55~\text{cm}^2}$ — two significant figures, matching the *weaker* of the two inputs. This card is about why.
+Using the usual fewest-significant-figures convention gives $\boxed{55~\text{cm}^2}$. With explicit uncertainty estimates, propagate those uncertainties and report the result accordingly instead.
 
-> Significant figures are not a precision convention. They are an **honesty contract** between the writer and the reader: *the digits I print are the digits I actually know.* Print more and you have lied; print fewer and you have understated your work.
+> Significant figures are a compact **reporting convention**. They communicate the precision you intend to claim; they do not replace an uncertainty estimate or prove that a measurement is accurate.
 
 ## Definition and counting rules
 
@@ -85,59 +85,45 @@ This is one of the quiet jobs scientific notation does: every time you write a n
 | Scientific notation / standard form | 科学记数法 / 标准形式 | — |
 | Round to *n* s.f. | 保留 $n$ 位有效数字 | — |
 | Trailing zero (significant) | 末尾零 (有效) | — |
-| Leading zero (not significant) | 首位零 (无效) | — |
+| Leading zero (not significant) | 前导零 (无效) | — |
 
-中国高中物理课本和数学课本都用 **有效数字** — 与英文 "significant figures" 完全对应。"保留三位有效数字" 就是 "round to 3 s.f." 的标准翻译。
-
-中文物理课本的一个重点：**末尾零的有效性**。$4.50$ 和 $4.5$ 在数学上相等，在物理测量中却传达不同信息——前者声称测到 $0.01$ 的精度，后者只声称测到 $0.1$。这一点在 Cambridge / IB / AP 物理课本中**完全一致**。
-
-> [!warning] Sig figs are *not* decimal places
-> "$0.00450$" has 3 s.f. but 5 d.p. — sig figs and decimal places count different things. Mixing them is the #1 sig-figs mistake on exams. "Round to 3 s.f." and "round to 3 d.p." are different instructions, and getting them confused costs the mark.
+有效数字说的是你打算在测量结果里保留多少位有效信息，而不是计算器屏幕上能显示多少位。厨房秤只能显示到整克，算平均值时冒出的 $12.34782~\mathrm g$ 也不会因此变成毫克级的测量结果；要先结合秤的分辨率和多次测量的波动估计不确定度，再决定保留几位。$4.50$ 和 $4.5$ 在数学上相等，但写出的末位不同，传达的精度也不同；不过光凭写出的末位，并不能保证实际误差就有那么小。**有效数字**从第一个非零数字开始数，**小数位**从小数点后开始数，所以 $0.00450$ 有三位有效数字，却有五位小数。
 
 ---
 
 ## The weakest-link rule for arithmetic
 
-When you combine measurements, the result's allowed precision is limited by the *weakest* input. There are two flavours of the rule depending on the operation:
+When explicit uncertainties are unavailable, two common rounding conventions prevent a calculated result from appearing much more precise than its inputs. These are useful approximations, not exact laws of uncertainty propagation. Keep extra digits during working and round the final report:
 
 **Multiplication / division — match the fewest *sig figs*.**
 
 $$\text{output s.f.} = \min(\text{input s.f.})$$
 
-Example: $12.3 \times 4.5 = 55.35$ → but the inputs have 3 s.f. and 2 s.f., so the answer must be quoted to 2 s.f.: $\boxed{55}$.
+Example: $12.3 \times 4.5 = 55.35$ → but the inputs have 3 s.f. and 2 s.f., so this convention quotes the answer to 2 s.f.: $\boxed{55}$.
 
 **Addition / subtraction — match the fewest *decimal places*.**
 
 $$\text{output d.p.} = \min(\text{input d.p.})$$
 
-Example: $12.34 + 4.5 = 16.84$ → but the inputs have 2 d.p. and 1 d.p., so the answer must be quoted to 1 d.p.: $\boxed{16.8}$.
+Example: $12.34 + 4.5 = 16.84$ → but the inputs have 2 d.p. and 1 d.p., so this convention quotes the answer to 1 d.p.: $\boxed{16.8}$.
 
-The two rules look different. Why? They come from the *same* deeper principle — the uncertainty in the result must dominate the precision of the result. [[Error Propagation]] does the full derivation; the abbreviated version:
+Why two rules? [[Error Propagation]] explains the underlying distinction: sums involve absolute uncertainties, whereas products and quotients involve fractional uncertainties. A very uncertain input often dominates, which motivates the shortcuts. But several comparable contributions add up, and the first digit changes the relationship between a significant-figure count and fractional precision. **The minimum count is not a derivation of the actual uncertainty.**
 
-- For products and quotients, *percentage* uncertainties add. The weakest input — the one with the largest fractional uncertainty — dominates the percentage uncertainty in the output. Significant figures encode percentage precision, so they obey the same rule.
-- For sums and differences, *absolute* uncertainties add. The weakest input — the one with the largest absolute uncertainty — dominates the absolute uncertainty in the output. Decimal places encode absolute precision, so they obey the same rule.
-
-> [!info] Why two rules, not one?
-> Significant figures and decimal places are not interchangeable, because they encode *different kinds* of precision. Sig figs are scale-invariant — "3 s.f." means "uncertain at the 0.1% level" no matter whether the number is $4.5$ or $4500000$. Decimal places are absolute — "1 d.p." means "uncertain at the $\pm 0.05$ level" no matter whether the number is $4.5$ or $4500000$. Multiplication preserves scale-invariant precision (sig figs); addition preserves absolute precision (d.p.). The rules differ because the operations preserve different kinds of information.
+For example, if a last digit represents rounding to the nearest unit, $100$ and $999$, both specified to three significant figures, have rounding half-widths of $0.5$ but very different relative half-widths: $0.5\%$ and about $0.05\%$. Likewise, rounding to one decimal place gives a rounding interval of $\pm0.05$ units; that need not be the instrument's total measurement uncertainty.
 
 ### A worked example
 
 > A student measures the period of a pendulum five times and gets $T = 2.01, 2.03, 2.00, 2.02, 2.04~\text{s}$ (each reading to 2 d.p., 3 s.f.). They also measure its length once: $L = 1.234~\text{m}$ (4 s.f.). Compute $g = 4\pi^2 L / T^2$.
 
-**Step 1.** Average the timings: $\bar{T} = 2.020~\text{s}$. (4 s.f. — averaging *does not* increase the sig-fig count of any single reading, but the *mean* can legitimately carry one extra sig fig because of $\sqrt{N}$ shrinking; see [[Repeated Measurements]]. For a rough school-lab card, treat the mean as carrying the same sig figs as one reading.)
+**Step 1 — tool: arithmetic mean; trigger: repeated timings of the same period.** The mean is $\bar T=2.02~\mathrm s$. Retain the unrounded mean in subsequent calculation. Averaging can reduce random uncertainty, but there is no automatic entitlement to one extra significant figure; the scatter and other uncertainties decide that.
 
-**Step 2.** Plug in: $g = 4\pi^2 (1.234) / (2.020)^2$. The calculator says $g = 11.948\ldots~\text{m s}^{-2}$. (A calculator-vomit answer like this is your first warning sign — you typed numbers with 3-4 sig figs in, and out came a number you could quote to 10. Don't.)
+**Step 2 — tool: the pendulum-period relation, rearranged for $g$.**
 
-**Step 3.** Find the weakest input:
-- $L = 1.234~\text{m}$ → 4 s.f.
-- $\bar{T} = 2.020~\text{s}$ → 3 s.f. (per the rule of thumb above)
-- $4\pi^2$ is *exact* (a defined mathematical constant, see Misconception 3) → infinite s.f., doesn't constrain
+$$g=\frac{4\pi^2(1.234)}{(2.02)^2}=11.9391156\ldots~\mathrm{m\,s^{-2}}.$$
 
-Weakest input is $\bar{T}$ at 3 s.f. Answer must be quoted to 3 s.f.
+**Step 3 — tool: the fewest-significant-figures convention; trigger: no explicit uncertainty budget was supplied.** $L$ has 4 s.f., $\bar T$ is being reported to 3 s.f., and $4\pi^2$ is exact. This convention gives $\boxed{g=11.9~\mathrm{m\,s^{-2}}}$.
 
-**Step 4.** Quote: $g = 11.9~\text{m s}^{-2}$.
-
-Sanity check: $9.81~\text{m s}^{-2}$ is the accepted value, so the measurement is biased a little high — that's an *accuracy* issue (see [[Accuracy vs Precision]]) and would be reported separately. The *sig figs* of the answer are not about whether the answer is right; they are about how many digits we can honestly claim from our inputs.
+The result is about $22\%$ above $9.81~\mathrm{m\,s^{-2}}$, a substantial discrepancy. These numbers alone do not diagnose whether it comes from bias, procedure or an unsuitable model. Appropriate significant figures do not make an inaccurate result accurate; see [[Accuracy vs Precision]].
 
 ---
 
@@ -147,7 +133,7 @@ The "weakest-link" rule above is the **input-side** rule — what's allowed give
 
 If you computed $g = 11.95 \pm 0.13~\text{m s}^{-2}$ from a full [[Error Propagation]] calculation, then:
 
-- The uncertainty is at the $0.1$ place (its first significant figure is in the tenths column).
+- If the uncertainty is rounded to one significant figure, $0.13$ becomes $0.1$.
 - The value must be rounded to the same place: $g = 12.0 \pm 0.1~\text{m s}^{-2}$, or kept to one more digit if quoting two s.f. of uncertainty: $g = 11.95 \pm 0.13~\text{m s}^{-2}$.
 
 The rule of thumb: **quote uncertainty to 1–2 sig figs, then round the value to match.**
@@ -156,7 +142,7 @@ Bad: $g = 11.95821 \pm 0.13$ — the value has digits beyond where the uncertain
 
 Good: $g = 11.96 \pm 0.13$ — value and uncertainty terminate at the same decimal place.
 
-This is the rule that makes the connection to [[Accuracy vs Precision]] tight. The uncertainty number $\Delta x$ is the *quantitative* version of "precision"; the sig figs of the value are its *typographic* version. The two must agree, or the reader gets a false story.
+This is the rule that makes the connection to [[Accuracy vs Precision]] tight. An uncertainty budget can include both random effects and imperfectly known systematic corrections. The displayed digits should agree with that budget; a significant-figure count alone does not specify it.
 
 ---
 
@@ -166,7 +152,7 @@ This is the rule that makes the connection to [[Accuracy vs Precision]] tight. T
 
 **The mistake.** Writing every digit the calculator shows because "the calculator computed it correctly."
 
-**Why it's wrong.** The calculator did compute it correctly *given* your inputs — but the inputs themselves were measurements, with finite precision. The calculator has no idea your inputs were measurements. It would happily print 10 digits if you typed in two-digit inputs. The extra digits are *fabricated by floating-point arithmetic*, not by your apparatus. They look authoritative; they aren't.
+**Why it's wrong.** The calculator did compute it correctly *given* your inputs — but the inputs themselves were measurements, with finite precision. The calculator has no idea your inputs were measurements. It would happily print 10 digits if you typed in two-digit inputs. The extra digits can be arithmetically correct while being unsupported as measurement precision. This is a reporting problem, not necessarily a floating-point problem.
 
 **Fix.** Always finish a calculation by asking: "what is the weakest input, and how many sig figs does it have?" Round to that.
 
@@ -202,39 +188,39 @@ Big difference, especially for small numbers.
 
 ## Exam Notes
 
-### Cambridge 9702 (A-Level Physics)
+### Cambridge 9702 — numerical work and Papers 3/5
 
-§1.3 and across every paper. Examiners are unforgiving about this — a numerical answer quoted to the wrong number of sig figs typically loses 1 mark (often called the "consistency mark" or "precision mark"). Standard expectations:
+The practical-assessment guidance specifies consistent raw-data precision matched to the instrument. For calculated quantities other than sums/differences, if the least precise measured input has $n$ significant figures, **$n$ or $n+1$** figures are appropriate. The syllabus's own example allows 2 or 3 s.f. for resistance calculated from p.d. at 2 s.f. and current at 4 s.f. This is more permissive than a rigid minimum-count rule.
 
-- Final numerical answers should be given to 2 or 3 sig figs unless the question specifies otherwise.
-- If the question gives data to varying precision, match the weakest input. ($s = 12.34~\text{m}$, $t = 5.6~\text{s}$ → $v$ to 2 s.f.)
-- Paper 3 (Practical) and Paper 5 (Planning & Analysis): when *uncertainty* is calculated, the value must match the uncertainty's place — see "Round the answer to match its uncertainty" above. This is the most common precision-mark loss on P5.
+Paper 5 explicitly follows the Paper 3 conventions. Its logarithm example allows $\lg(76.5)=1.884$ or $1.8837$: decimal places in the logarithm track the input's significant figures. The mathematical requirements also say not to lose digits unnecessarily or retain unjustified ones. Do not assume a universal one-mark penalty; the question's mark scheme determines the award. §1.3 supplies the uncertainty context, rather than a standalone list of rounding rules.
 
-### IB Physics (2025 syllabus)
+### Cambridge 0625 — calculations and practical work
 
-Tools 1: PRAC.2 includes "significant figures" as an explicit syllabus point. The IB Data Booklet does not contain rules — students must internalise them. The IA (Scientific Investigation) is graded in part on whether students present data and results with appropriate precision. A common IA criticism: tables with 8-digit calculator outputs where 3 s.f. would be more honest.
+The syllabus's mathematical requirements say to round **only the final answer** and use significant figures and decimal places appropriately. Its presentation-of-data rules require measured precision suited to the instrument and calculated quantities with **the same number of significant figures as the least count in the raw data used**. Thus the minimum-count convention is explicitly present; it is not merely an unexamined extension.
 
-### AP Physics 1 / 2
+Papers 5/6 also require measurements recorded to appropriate precision, including half-scale readings where required. The graphical guidance specifies 2–3 s.f. for calculated gradients. Keep that context separate from an invented universal 2–3-s.f. rule for every result.
 
-Less aggressive than Cambridge or IB on sig-fig mark deduction — AP rubrics typically allow $\pm 1$ s.f. on either side of "correct" before marking down. But sig figs *do* appear in FRQ 3 (Experimental Design and Analysis) when students are asked to "report your final answer to an appropriate number of significant figures." Getting this wrong on FRQ 3 is a 1-point loss.
+### IB Physics — skills across the course
 
-### Cambridge 0625 (IGCSE Physics)
+Under **Skills in the study of physics**, “Using units, symbols and numerical values” and “Processing uncertainties” require appropriate significant figures/decimal places for quantities and uncertainties. This is coursewide at SL/HL, not a numbered “PRAC.2” topic. In the scientific investigation, the data-analysis criterion includes precise communication through units, decimal places and significant figures. It does not prescribe one automatic penalty for each misplaced digit.
 
-This lands on the **practical papers** — Paper 5 or Paper 6 — not in one of the six numbered topics: record observations and measurements *to an appropriate degree of precision*, and take readings *with appropriate precision, to the nearest half-scale division where required*. In practice that means 2–3 significant figures in numerical answers, and never letting an answer claim more precision than the measurements behind it. The formal weakest-link rule is not required at IGCSE — but the spirit of "don't write more digits than your ruler earns you" is exactly what is being marked.
+### AP Physics 1 / 2 / C: Mechanics / C: Electricity & Magnetism
 
-### Cambridge 0580 / 0606 / OxAQA 9260
+Use sensible numerical precision in calculations and data analysis, retaining working digits until the end. AP Physics 2's **Calculate** command explicitly mentions units and significant figures. None of the reviewed course frameworks supports a universal “plus or minus one significant figure” marking allowance or a guaranteed one-point deduction on a particular FRQ. Follow the instructions and released rubric for the actual question.
 
-Maths-side: see [[Rounding (Vocab)]] for the counting rules and the bare arithmetic of "round to 3 s.f." These cards live in `Mathematics/Number/` and are 🟢. The Physics-side application (weakest-link rule, match-the-uncertainty rule) is unique to this card.
+### Mathematics and the scope boundary
+
+[[Rounding (Vocab)]] supplies the mathematical counting and rounding conventions. Measurement uncertainty and uncertainty-matched reporting are the physics application. These are practical/numerical skills rather than a separate content unit on the current IB or AP course maps.
 
 ---
 
 ## Connections
 
-- **Parent:** [[Rounding (Vocab)]] — the maths-side card with the basic counting rules. This Physics card layers the weakest-link arithmetic + uncertainty-matching rules on top.
+- **Parent:** [[Rounding (Vocab)]] — the maths-side card with the basic counting rules. Measurement reporting adds arithmetic conventions and uncertainty matching.
 - **Sibling:** [[Accuracy vs Precision]] — the typographic version of precision. The sig-fig count of a written value claims a precision; that claim must be honest.
-- **Sibling:** [[Error Propagation]] — the derivation of the weakest-link rule lives here. Sig figs are the rule-of-thumb shortcut for "match the fractional uncertainty"; error propagation gives you the exact formula.
-- **Components:** [[Standard Form (Vocab)]] — scientific notation is the unique unambiguous way to write a number with a *given* sig-fig count. The two cards travel together.
-- **Application:** [[Casio fx-991 Reference]] — calculator settings for displaying answers to a chosen number of sig figs (SHIFT-MODE-7 on the fx-991; equivalent shortcuts on Texas Instruments / HP).
+- **Sibling:** [[Error Propagation]] — propagation quantifies how input uncertainties affect a result; significant figures are a reporting shortcut, not a substitute.
+- **Components:** [[Standard Form (Vocab)]] — scientific notation is an unambiguous way to write a number with a *given* sig-fig count. The two cards travel together.
+- **Application:** [[Casio fx-991 Reference]] — calculator display settings; showing fewer digits does not improve measurement accuracy.
 
 ---
 
@@ -246,4 +232,4 @@ Maths-side: see [[Rounding (Vocab)]] for the counting rules and the bare arithme
 | s.f. | `s.f.` | Abbreviation for "significant figures." Cambridge mark schemes use this. |
 | d.p. | `d.p.` | Abbreviation for "decimal places." Not interchangeable with s.f. |
 | $\pm$ | `\pm` | Plus-minus, for uncertainty. The value's sig figs must terminate at the same place as the uncertainty. |
-| $\boxed{\text{result}}$ | `\boxed{...}` | Box the final answer at the *correct* sig-fig count, not the calculator's vomit. |
+| $\boxed{\text{result}}$ | `\boxed{...}` | Box the final answer at the *correct* sig-fig count, after retaining working digits. |

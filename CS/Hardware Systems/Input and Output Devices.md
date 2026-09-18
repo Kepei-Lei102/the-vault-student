@@ -8,6 +8,7 @@ leads_to:
   - "[[Embedded Systems]]"
   - "[[Interrupt Handling]]"
   - "[[The Blue LED]]"
+  - "[[Automated Systems and Robotics]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -205,6 +206,7 @@ Not examined — AP CSA is a programming course; I/O hardware is out of scope.
 - **Leads to:** [[Sensors and Control Systems]] — the *world*-facing twin of this *human*-facing card: sensors and actuators in the monitoring/control loop (where the 0478 actuator and the VR headset's motion sensors properly live); [[Embedded Systems]] — a whole computer built around that sense-decide-act loop; [[Interrupt Handling]] — the ISR / vector-table / priority machinery in full.
 - **Physics bridge:** the microphone/speaker and camera/screen pairs are transducers in the [[Damped Oscillations|oscillation]] and wave sense — a voice coil pushing a cone is a driven mechanical system.
 - **Story:** [[Stories/The Blue LED]] — the "LED screen" rows have a human story: thirty years of red-and-green, a phosphor company from Tokushima, and the Nobel that Alfred Nobel's will was actually written for.
+- **Leads to:** [[Automated Systems and Robotics]] — sensors and actuators as the boundary devices of a system with no human in it.
 
 ## Glossary
 

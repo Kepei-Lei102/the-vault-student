@@ -7,6 +7,7 @@ prerequisites:
   - "[[Force (Vocab)]]"
   - "[[Area Under a Graph (Vocab)]]"
 leads_to:
+  - "[[Electric Potential]]"
   - "[[Choosing Effective Equations]]"
   - "[[Conservation of Energy]]"
   - "[[Kinetic Theory and the Ideal Gas]]"
@@ -25,6 +26,7 @@ leads_to:
   - "[[Projectile Motion]]"
   - "[[Elastic Strings and Springs]]"
   - "[[Linear Motion under a Variable Force]]"
+  - "[[Wave-Particle Duality]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -450,6 +452,7 @@ A-Level Mechanics 2 (M2) extends to power and energy with variable force, integr
 - **Cross-domain:** **[[Conservation of Energy]]** — the master conservation law of physics; one of the three in Noether's trio.
 - **Cross-domain:** [[Thermodynamics]] — first law of thermodynamics is energy conservation including heat; entropy and the second law are the *next* deep idea.
 - **Cross-domain:** [[Lagrangian Mechanics]] — the energy-based reformulation of all of classical mechanics; lives at the university-level end of the bridge.
+- **Leads to:** [[Wave-Particle Duality]] — the electronvolt as the work done by one volt on one electron, and the photoelectric energy ledger hf = Φ + ½mv².
 
 ---
 

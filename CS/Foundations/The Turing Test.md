@@ -2,6 +2,8 @@
 chinese: 图灵测试 (Túlíng cèshì)
 prerequisites:
   - "[[Turing Machine]]"
+  - "[[Artificial Intelligence]]"
+  - "[[The Perceptron and Move 78]]"
 leads_to: []
 tags:
   - subject/computer-science
@@ -168,6 +170,8 @@ The Turing Test is **not a named, examinable topic** on Cambridge IGCSE 0478 or 
 - **The shared hard edge:** [[Gödel's Incompleteness Theorems]] — the Mathematical Objection (#3) rests on it; Turing's reply (humans share the limit) is the bridge.
 - **What LLMs are made of:** [[Information Theory]] — a language model is Shannon's 1948 framework at scale (cross-entropy, perplexity); the thing now passing the test is built out of the bit.
 - **How they reason:** [[Chain of Thought]] — the card spans both senses of the phrase: Pólya's human reasoning chain, and the LLM *"think step by step"* prompting (Google, 2022) that sharpened the very models now clearing Turing's bar.
+- **Prerequisite:** [[Artificial Intelligence]] — the machinery the question is asked about: expert systems, machine learning, neural networks and back propagation, built from scratch and measured.
+- **Story:** [[Stories/The Perceptron and Move 78]] — move 37 as the case the test never anticipated: a machine creative in a way its makers did not put in.
 
 ## Glossary / Notation Reference
 

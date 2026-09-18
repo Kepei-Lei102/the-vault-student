@@ -39,7 +39,7 @@ The **internet** is the global network of networks: the physical infrastructure 
 
 A **URL** (uniform resource locator) names a page by protocol, domain name and file path. The **domain name service (DNS)** is the distributed system of servers that translates a domain name into an **IP address**, without which no packet can be delivered. A **cookie** is a small text file a web server asks the browser to store and return on later requests; a **session** cookie is deleted when the browser closes, a **persistent** cookie has an expiry date.
 
-Every device on a network has a **MAC address** (48 bits, fixed by the manufacturer of its **network interface card**) and, when connected, an **IP address** (**IPv4**: 32 bits; **IPv6**: 128 bits), which may be **static** or **dynamic**, **public** or **private**. A **router** forwards packets toward their destination, assigns IP addresses on its own network, and joins a **LAN** to the internet.
+Every device on a network has a **MAC address** (normally a 48-bit link-layer identifier; a factory address is assigned by the manufacturer of its **network interface card**) and, when connected, an **IP address** (**IPv4**: 32 bits; **IPv6**: 128 bits), which may be **static** or **dynamic**, **public** or **private**. A **router** forwards packets toward their destination, assigns IP addresses on its own network, and joins a **LAN** to the internet.
 
 ### Intuitive
 
@@ -47,7 +47,7 @@ The internet is the road system: tarmac, bridges, junctions, and the highway cod
 
 ### 中文锚点
 
-想想今天早上。醒来先看微信：用的是互联网，没有任何网页参与。打开浏览器上 B 站看了个视频：那是万维网，跑在互联网上。登录游戏：又是互联网，不是万维网——游戏用自己的一套话跟服务器聊，根本没有"页面"。跟国外的朋友视频通话：互联网，不是万维网。然后你在聊天里点了一个链接，微信内部打开了一个网页：那是万维网，套在一个 App 里，跑在互联网上。你一整天两样都在用，而它们**不是一回事**。**互联网**是路网：电缆、光纤、基站、路由器，加上把一个数据包从任何一个地址送到另一个地址的规则。**万维网**是路上跑的东西之一——用 HTML 写的页面，每个页面都有一个 URL，由浏览器取回——而且只是"之一"：邮件、游戏、通话、App 更新、付款，都走同一张路网，却从来不是一个页面。最好认的记号是**地址栏**：看得见地址栏，你就在万维网上；看不见，你多半还在互联网上，只是不在万维网上。这张卡剩下的一切都从这个早上长出来。你敲的那个名字得先变成一个数字才能发出去（这就是 **DNS**，这张卡里会带你亲手把这个查询发一遍）；跳出来的那把锁是服务器在证明自己是它自称的那个（**HTTPS**）；网站明天还记得你的购物车，是因为它留下了一个小文本文件（**cookie**）；你手机里带着的那两个号码——一个出厂时烧在 Wi-Fi 芯片里，一个是路由器借给它的——就是考试要问的**地址**。互联网和万维网：你今天两样都用了，而它们是两回事。
+想想今天早上。醒来先看微信：用的是互联网，没有任何网页参与。打开浏览器上 B 站看了个视频：那是万维网，跑在互联网上。登录游戏：又是互联网，不是万维网——游戏用自己的一套话跟服务器聊，根本没有"页面"。跟国外的朋友视频通话：互联网，不是万维网。然后你在聊天里点了一个链接，微信内部打开了一个网页：那是万维网，套在一个 App 里，跑在互联网上。你一整天两样都在用，而它们**不是一回事**。**互联网**是路网：电缆、光纤、基站、路由器，加上把一个数据包从任何一个地址送到另一个地址的规则。**万维网**是路上跑的东西之一——用 HTML 写的页面，每个页面都有一个 URL，由浏览器取回——而且只是"之一"：邮件、游戏、通话、App 更新、付款，都走同一张路网，却从来不是一个页面。最好认的记号是**地址栏**：看得见地址栏，你就在万维网上；看不见，你多半还在互联网上，只是不在万维网上。这张卡剩下的一切都从这个早上长出来。你敲的那个名字得先变成一个数字才能发出去（这就是 **DNS**，这张卡里会带你亲手把这个查询发一遍）；跳出来的那把锁是服务器在证明自己是它自称的那个（**HTTPS**）；网站明天还记得你的购物车，是因为它留下了一个小文本文件（**cookie**）；MAC 地址用于本地链路上的通信，IP 地址用于 IP 网络上的通信。出厂 MAC 地址由制造商分配，但设备也可以用软件指定的本地管理地址，比如连 Wi-Fi 时为了保护隐私而生成的随机 MAC 地址。互联网和万维网：你今天两样都用了，而它们是两回事。
 
 | English | 中文 | 今天早上的哪一件事 |
 |---|---|---|
@@ -56,7 +56,7 @@ The internet is the road system: tarmac, bridges, junctions, and the highway cod
 | URL · domain name · DNS | 网址 · 域名 · 域名解析 | 你敲的名字，和把它变成数字的那一步 |
 | HTTP / HTTPS | 网页传输协议 / 加密版 | 地址栏里的那把锁 |
 | Cookie (session / persistent) | Cookie（会话 / 持久） | 明天还在的购物车 |
-| MAC address · IP address | MAC 地址 · IP 地址 | 芯片里烧死的号码 · 路由器借来的号码 |
+| MAC address · IP address | MAC 地址 · IP 地址 | 本地链路上的地址 · IP 网络上的地址 |
 
 ---
 
@@ -163,15 +163,17 @@ One of each kind on the first visit. The 0478 scheme's list of uses — *saving 
 
 ![[internet-addresses.svg|960]]
 
-*Three addresses on one laptop. The MAC address belongs to the hardware and never changes; the IP address belongs to the network and is lent. The script `internet-addresses.py` counts the address spaces and splits a subnet.*
+*Three addresses on one laptop. A factory MAC address identifies a network interface; software can use a different local address. An IP address identifies an interface on an IP network. The script `internet-addresses.py` counts the address spaces and splits a subnet.*
 
-**The NIC and the MAC address.** A computer joins a network through a **network interface card** (wired or wireless). Each NIC is given a **MAC address** at manufacture: 48 bits, written as six pairs of hexadecimal digits, the first three pairs identifying the **manufacturer** and the last three a **serial number** — so no two NICs share one. The MAC address is used on the local link: an Ethernet frame is delivered to a MAC address, an IP packet to an IP address ([[Networks]] Part I, the link layer and the internet layer).
+**The NIC and the MAC address.** A computer joins a network through a **network interface card** (wired or wireless). Each NIC is given a **MAC address** at manufacture: 48 bits, written as six pairs of hexadecimal digits, the first three pairs identifying the **manufacturer** and the last three a **serial number** — the conventional manufacturer-assigned format is intended to provide unique addresses. The MAC address is used on the local link: an Ethernet frame is delivered to a MAC address, an IP packet to an IP address ([[Networks]] Part I, the link layer and the internet layer).
 
 **IPv4 and IPv6.** An IP address identifies a device on the internet so packets can be routed to it. **IPv4** uses 32 bits, written as four denary numbers from 0 to 255 separated by dots: about 4.3 billion addresses, and the world ran out of unallocated ones between 2011 and 2019. **IPv6** uses 128 bits, written as eight groups of four hexadecimal digits separated by colons, with one run of zero groups allowed to collapse to `::` — $3.4 \times 10^{38}$ addresses, enough that every device can have a permanent public one. China has the largest IPv6 deployment in the world: over half of its internet traffic has run on IPv6 since 2023.
 
-**Static or dynamic; public or private.** A **static** address is fixed; a **dynamic** one is lent by the network for a while (through **DHCP**) and may change on the next connection. A **public** address is globally unique and reachable from anywhere; a **private** address (ranges such as `192.168.x.x`, `10.x.x.x`, `172.16–31.x.x`) is valid only inside one LAN and is never routed on the internet. Your laptop almost certainly has a private, dynamic IPv4 address; your **router** holds the household's single public one and rewrites the addresses in every packet going out and coming back (**NAT**). This is also why a device with a private address cannot be reached directly from outside, which is a security feature as much as an inconvenience. **Subnetting** splits one network into smaller ones by reserving the leading bits of the address for the sub-network: `192.168.1.0/24` is 256 addresses; four `/26` subnets of 64 each keep a school's staff, students, printers and servers apart, reduce broadcast traffic and collisions, contain faults, and make the whole easier to manage.
+**The real-world qualification:** software can use a **locally administered MAC address**, including a randomised private Wi-Fi address. It can vary by network or rotate, so a MAC is not an unchangeable identity or proof of who is connecting. [Apple documents private Wi-Fi addresses](https://support.apple.com/en-ie/102509) as a protection against tracking.
 
-**The router.** Three roles the boards list: it **forwards packets** toward their destination by reading the destination IP address and choosing the next hop; it **assigns IP addresses** to devices on its own network; and it **connects the LAN to the internet**, holding the public address on one side and the private ones on the other. The other LAN hardware 9618 names: a **switch** (delivers frames to the right MAC address within the LAN), a **wireless access point** (the LAN's radio), a **bridge** (joins two LAN segments), a **repeater** (regenerates a fading signal), and the cables themselves. On the internet side: **modems** (which turn digital data into a form a telephone line, cable or fibre can carry), the **PSTN**, **dedicated leased lines**, and the **cell-phone network**.
+**Static or dynamic; public or private.** A **static** address is fixed; a **dynamic** one is lent by the network for a while (through **DHCP**) and may change on the next connection. A **public** address is globally routable, though firewalls and routing policy may prevent access; a **private** address (ranges such as `192.168.x.x`, `10.x.x.x`, `172.16–31.x.x`) is valid only inside one LAN and is never routed on the internet. Your laptop almost certainly has a private, dynamic IPv4 address; your **router** holds the household's single public one and rewrites the addresses in every packet going out and coming back (**NAT**). This is also why a device with a private address cannot be reached directly from outside, which is a security feature as much as an inconvenience. **Subnetting** splits one network into smaller ones by reserving the leading bits of the address for the sub-network: `192.168.1.0/24` is 256 addresses; four `/26` subnets of 64 each keep a school's staff, students, printers and servers apart, reduce broadcast traffic and collisions, contain faults, and make the whole easier to manage.
+
+**The router.** Three roles the boards list: it **forwards packets** toward their destination by reading the destination IP address and choosing the next hop; a home router commonly **assigns IP addresses through a DHCP service** to devices on its own network; and it **connects the LAN to the internet**, holding the public address on one side and the private ones on the other. The other LAN hardware 9618 names: a **switch** (delivers frames to the right MAC address within the LAN), a **wireless access point** (the LAN's radio), a **bridge** (joins two LAN segments), a **repeater** (regenerates a fading signal), and the cables themselves. On the internet side: **modems** (which turn digital data into a form a telephone line, cable or fibre can carry), the **PSTN**, **dedicated leased lines**, and the **cell-phone network**.
 
 ---
 
@@ -232,7 +234,7 @@ A **thin client** does little itself — it needs the server for processing and 
 
 ### Cambridge 0478 November 2025 Paper 11 — IPv6 and the MAC address [3 + 1]
 
-*(c) Three characteristics of the IPv6 format:* **128 bits; hexadecimal; eight groups separated by colons; each group four digits; consecutive zero groups written as `::` once** [3]. *(d) A MAC address is assigned by* **the manufacturer** [B1] — never the router, the user or the network; that is the IP address's story.
+*(c) Three characteristics of the IPv6 format:* **128 bits; hexadecimal; eight groups separated by colons; each group four digits; consecutive zero groups written as `::` once** [3]. *(d) A MAC address is assigned by* **the manufacturer** [B1] — the question is about the factory-assigned address. Locally administered addresses are the qualification explained above.
 
 ### Cambridge 9618 June 2026 Paper 11 Q7 — a bus with Ethernet, a static private IP, subnetting [4 + 2 + 1 + 3]
 
@@ -256,10 +258,10 @@ A **thin client** does little itself — it needs the server for processing and 
 
 - **"The internet and the web are the same thing."** The internet is the network (1969); the web is one service on it (1990). Email, games and video calls are internet, not web. Both boards ask for this distinction directly.
 - **"DNS is a server."** It is a hierarchy of servers with caches at every level; the one your machine talks to usually does not know the answer and asks upward. Write "higher-level DNS" and the mark is there.
-- **"The IP address identifies the person, or the computer permanently."** It identifies a device *on a network, for now*. Most devices have private, dynamic addresses; a household shares one public address through NAT; the permanent identifier is the MAC address, and it never leaves the LAN.
+- **"The IP address identifies the person, or the computer permanently."** It identifies a device *on a network, for now*. Most devices have private, dynamic addresses; a household shares one public address through NAT; the MAC address is used for delivery on the local link, but can be locally administered or randomised. Routers do not preserve the original Ethernet header across links.
 - **"A cookie is a program, or a virus."** It is a text file, written by the browser at the server's request, that cannot execute anything. Its risk is tracking, not infection.
 - **"HTTPS means the site is safe."** It means the connection is encrypted and the server is who its certificate says. A fraudulent site can have a perfect certificate for its own fraudulent name. Check the domain name, not the padlock.
-- **"A MAC address is assigned by the router."** By the manufacturer, at the factory. The router assigns IP addresses.
+- **"A MAC address is assigned by the router."** The factory MAC address is manufacturer-assigned; private Wi-Fi addresses are a separate software-controlled case. A home router commonly supplies IP addresses through its DHCP service.
 - **"Mesh means wireless."** Mesh is a topology — every node to several others — and can be cabled; the home "mesh Wi-Fi" is a partial mesh of access points.
 
 ---

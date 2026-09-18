@@ -4,6 +4,7 @@ prerequisites:
   - "[[Arrays]]"
   - "[[Compilers and Interpreters]]"
 leads_to:
+  - "[[Heaps and Priority Queues]]"
   - "[[Graphs]]"
   - "[[Linked List]]"
   - "[[The Call Stack]]"
@@ -14,6 +15,8 @@ tags:
   - curriculum/Cambridge-9618
   - syllabus/9618-10-4
   - syllabus/9618-19-1
+  - curriculum/IB-CS
+  - syllabus/IB-CS-B2-2
   - type/deep
   - misconception/top-starts-at-zero
   - misconception/pop-erases-the-value
@@ -28,7 +31,10 @@ tags:
 
 ## 中文锚点
 
-食堂里两样东西天天在演示这张卡片：洗净的餐盘**摞**成一摞——新盘子放最上面，取也从最上面取，最底下那只可能一学期没见过天日（**后进先出**）；打饭的**队**——新来的站队尾，打到饭的从队头走，谁先来谁先走（**先进先出**）。栈和队列不是两件新家具，而是**同一个数组加上两条不同的纪律**：东西还是那样放，规矩只管"从哪端进、从哪端出"——这正是"抽象数据类型"的意思：数据加上**允许的操作**，纪律本身就是结构的一半。栈只要一个栈顶指针，压入弹出全在同一端；队列一头进一头出，得记队头队尾两个指针——而队头不断前移，会把数组前段白白空出来，于是把直队伍**绕成一圈**（`MOD` 回绕的循环队列），走空的格子转一圈又能用。这两句大实话，考卷最爱拿它挖坑：往满的结构里塞是**上溢**，从空的结构里取是**下溢**。还有一件事眼见才为实：**"弹出"的盘子并没有被搬走**——指针退了一格、不再承认它而已，它还留在原格里当幽灵。你其实早就在用这两条纪律：程序的函数调用栈（递归为什么能"原路返回"）、打印机的任务队列，还有你打字超前时替你排队的键盘缓冲——一个野生的循环队列。
+
+食堂里，洗好的餐盘摞在一起：新盘子放在最上面，取的时候也先取最上面那只，所以最后放的最先走。这就是栈。打饭的队伍正好相反：新来的站队尾，先来的先打到饭，这就是队列。关键不在东西装进了什么容器，而在下一次该轮到谁：撤销刚才的操作，要先退回最近那一步；按顺序打印作业，就该先处理最早交来的那份。
+
+## Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -110,7 +116,7 @@ The fix is not to shuffle every item down one cell per dequeue (correct, but eve
 TailPointer ← (TailPointer + 1) MOD Max
 ```
 
-This is the **circular queue**, and the wrap creates one famous new problem: if the ring can fill completely, then *"full" and "empty" look identical* — in both, `HeadPointer` and `TailPointer` collide. The standard exam fix is honest bookkeeping: keep a third variable, `NumberInQueue`, incremented on enqueue and decremented on dequeue; empty is `NumberInQueue = 0`, full is `NumberInQueue = Max`. (The alternative — sacrifice one slot and call the ring full at `Max − 1` — trades a cell for a variable; real systems use both conventions.)
+This is the **circular queue**. Pointer conventions matter: if the tail denotes the *next free slot*, full and empty can both give `head == tail`. In the code below the tail instead denotes the *last occupied slot*, and enqueue advances it **before** storing. We keep `count` explicitly: empty means `count == 0`, full means `count == max`. This removes ambiguity whichever pointer convention is used. Another design reserves one slot to distinguish full from empty, trading capacity for simpler state; do not mix its tests with this implementation.
 
 ```python
 class CircularQueue:
@@ -251,21 +257,25 @@ Then reversal-vs-order doesn't matter in the scenario, which is almost never tru
 
 ## Exam Notes
 
-### Cambridge 9618 — §10.4 (AS)
+### Cambridge 9618 — §10.4 (AS), 2027–29
 
-- The ADT definition verbatim: *a collection of data and a set of operations on those data*; stack, queue and linked list are the three named examples. **Describe key features and justify the choice for a scenario** (the recency-vs-arrival table is the answer bank); **use** the structures — add, edit, delete data in given diagrams/traces (Example 1's shape); **describe the array implementation** (this card's pointers-and-array pictures). The AS promise, stated in the syllabus: *candidates will not be required to write pseudocode for these structures* — describing and tracing suffice.
-- Trace questions are pointer-bookkeeping: state `Top` / `HeadPointer` / `TailPointer` values, not just contents. The mark scheme's variable names are the ones used here.
+The named ADTs are stacks, queues and linked lists. Explain their features, justify their use for a scenario, use them to store/add/edit/delete data, and describe their array implementations. The syllabus explicitly excludes writing pseudocode for these structures at this AS stage. Trace the supplied pointer convention: a top index and a next-free index have different empty values.
 
 ### Cambridge 9618 — §19.1 (A2)
 
-- The AS promise expires: §19.1c requires **writing** the algorithms — insert (push/enqueue) and delete (pop/dequeue) for stack and queue, with the overflow/underflow guards carrying early marks (Examples 2–3 are the examined shape; recent Paper 4s have asked for `Enqueue` against a given signature, judged mark-point by mark-point). §19.1d asks how these ADTs are **built from built-in types or other ADTs** — the array implementations here, the built-in-list engine of the abstraction-proof section, the linked-list implementations in [[Linked List]], and the two-stacks queue in Beyond.
-- **On dialect:** Paper 2/3 answers are written in Cambridge's strict-grammar pseudocode; this card — like the whole vault — writes real, runnable Python, because the logic is the knowledge and the dialect is a formality. [[Cambridge Pseudocode]] is the one card that owns the exam dialect (keywords, `←`, `ENDFUNCTION`, declaration forms); translate at the exam door.
-- The circular queue is main-line A2 material: the `MOD` wrap, and the full-vs-empty disambiguation via a count.
+Construct insertion and deletion algorithms for stacks and queues; explain implementations using built-in types or other ADTs. The circular-queue implementation above provides a concrete bounded-array example. Include full/empty handling when required by the task, and trace the given count and pointer conventions consistently. §19.2 also names stacks and unwinding in the implementation of recursion.
 
-### Other boards
+Use the language or notation requested by the question. [[Cambridge Pseudocode]] supplies the examination dialect; the runnable Python here teaches the operations. Examples 1–3 above are teaching examples, with no specific paper or mark scheme attributed to them; neither a fixed mark allocation nor a particular variable name is guaranteed by the syllabus.
 
-- **AP CSA:** stacks and queues are not in the exam's Java subset (lists and 2-D arrays are its ceiling) — this card is depth behind its recursion unit's call-stack reasoning.
-- **IB CS:** named stack/queue objects were examined under the legacy HL syllabus's abstract-data-structures topic; in the 2027 outline they sit inside the programming themes rather than as named statements — treat this card as depth behind that strand.
+### IB Computer Science — first assessment 2027
+
+**B2.2.3 explicitly names stacks**, including push, pop, peek and isEmpty, their performance/memory implications and selection for a problem. **B2.2.4 explicitly names FIFO queues**, including enqueue, dequeue, front and isEmpty, with the same evaluation and selection requirements. These are in the shared SL/HL programming content, not merely a legacy-HL topic or unnamed enrichment.
+
+For the fixed-array examples, `isEmpty` means `top == -1` for the stack and `count == 0` for the queue. `peek` reads `contents[top]`; `front` reads `contents[head]`; both require an empty check and leave state unchanged. Fixed-capacity operations take constant time and reserve storage proportional to capacity; the dynamic-list implementation has amortised append cost and may reallocate. Do not confuse FIFO queue operations with heap-based priority selection in [[Heaps and Priority Queues]].
+
+### Cambridge 0478; AP Computer Science A / Principles
+
+The checked 0478 2026–28 syllabus does not prescribe stacks or queues as named ADTs. AP CSA's current course framework does not prescribe their implementation or library APIs; recursion is adjacent, not an ADT requirement. AP CSP's lists and data abstraction likewise do not prescribe stack/queue machinery. These remain useful examples of ordered processing; a question can supply an unfamiliar context without making the entire implementation a memorisation requirement.
 
 ## Beyond the syllabus
 

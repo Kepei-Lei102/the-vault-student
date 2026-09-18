@@ -6,12 +6,16 @@ prerequisites:
   - "[[Stress, Strain and Young Modulus]]"
   - "[[Trigonometric Graphs]]"
 leads_to:
+  - "[[Reflection and Refraction]]"
+  - "[[Stellar Luminosity and Size]]"
+  - "[[Ultrasound]]"
   - "[[Stationary Waves]]"
   - "[[Superposition and Interference]]"
   - "[[Doppler Effect]]"
   - "[[Electromagnetic Spectrum]]"
   - "[[Polarisation]]"
   - "[[Sound Encoding]]"
+  - "[[Diffraction]]"
 tags:
   - subject/physics
   - domain/waves
@@ -227,6 +231,16 @@ The middle bullet carries the one rule that transfers everywhere: **at a boundar
 - **`progressive-waves-manim.py`** — the two scenes: particles staying home while the pattern travels, and the photograph beside the film.
 - **A phone and a rope.** Film a slow wave on a skipping rope at 240 fps; step through frames to see one knot in the rope rise and fall in place while the hump passes. It is the cheapest demonstration in physics and the most convincing.
 
+## Where it is the working tool
+
+- **Choosing an ultrasound probe.** In soft tissue sound travels at about $1540\ \text{m s}^{-1}$, and a scanner cannot resolve detail much smaller than a wavelength. So $v = f\lambda$ is the design equation: a $5\ \text{MHz}$ probe gives $\lambda = 0.31\ \text{mm}$, a $2\ \text{MHz}$ probe $0.77\ \text{mm}$. Higher frequency is sharper — but attenuation grows with frequency, so the deep abdominal scan uses $2$–$3\ \text{MHz}$ and the eye or the skin uses $10$–$15\ \text{MHz}$. Every probe on the trolley is a point on that trade-off.
+- **Locating an earthquake.** Part III's two families arrive separately: the longitudinal P wave at about $6\ \text{km s}^{-1}$, the transverse S wave at about $3.5\ \text{km s}^{-1}$. A seismogram shows the lag between them, and the lag gives the distance without knowing the origin time: $d = \Delta t\,/\,(1/v_S - 1/v_P)$, so a $10\ \text{s}$ lag means $84\ \text{km}$. Three stations, three circles, one epicentre. And because transverse waves cannot travel through a liquid, S waves vanish in a shadow zone on the far side of the Earth — which is how Richard Oldham inferred a liquid outer core in 1906, from a wave that failed to arrive.
+- **Sizing an antenna.** A dipole radiates best when it is half a wavelength long, so the aerial's *size* is $v = f\lambda$ with $v = c$: FM radio at $100\ \text{MHz}$ has $\lambda = 3.0\ \text{m}$ and wants a $1.5\ \text{m}$ dipole; Wi-Fi at $2.4\ \text{GHz}$ has $\lambda = 12.5\ \text{cm}$ and a $6\ \text{cm}$ element hides inside the router. Frequencies go up, radios shrink — the phone in your pocket is a wavelength argument.
+- **The decibel on a mixing desk.** A fader marked $+6\ \text{dB}$ doubles the *amplitude* of the signal, and Part IV says that is four times the intensity. That is exactly why the same decibel has two definitions — $20\log_{10}$ for amplitudes, $10\log_{10}$ for powers — and why they agree: $20\log_{10} 2 = 10\log_{10} 4 = 6.0$. Every sound engineer uses $I \propto A^2$ a hundred times a day without naming it.
+- **Phase difference as a measuring instrument.** Two microphones a known distance apart, the phase difference between them read off a CRO exactly as in Part V, and the direction of the source follows from $\Delta\phi = 2\pi\,\Delta x/\lambda$. Sonar arrays, radio-telescope interferometers and the two ears on your head all do this; it is Part II's phase relation run backwards.
+
+---
+
 ## Common Misconceptions (Teaching Notes)
 
 ### 1. "The particles travel along with the wave"
@@ -281,9 +295,11 @@ Crest to trough is half a wavelength. Wavelength is the distance between adjacen
 
 ## Connections
 
+- **Imaging application:** [[Ultrasound]] — pulse timing, impedance matching and attenuation turn sound into an internal image.
+
 - **Built on:** [[Simple Harmonic Motion]] — what every particle in a wave is doing, and the source of $\tfrac12 m\omega^2A^2$; [[Hooke's Law for Springs]] — the neighbours as springs, the coupled chain; [[Stress, Strain and Young Modulus]] — where $\sqrt{E/\rho}$ comes from as the speed of sound in a solid; [[Trigonometric Graphs]] — the sinusoid read two ways.
 - **Same idea elsewhere:** [[Alternating Current]] — a displacement–time graph with volts on the vertical axis, read off the same CRO; [[Circular Motion]] — phase as an angle round a circle, and the radian measure $\Delta\phi$ is quoted in.
-- **Extends into:** [[Stationary Waves]] — two progressive waves meeting head-on; [[Superposition and Interference]] — phase difference doing work, path difference and the two-source pattern; [[Doppler Effect]] — what happens to $f$ when the source moves; [[Electromagnetic Spectrum]] — the transverse waves that need no medium; [[Polarisation]] — the property only transverse waves have; [[Sound Encoding]] — the microphone diaphragm's oscillation sampled into bits.
+- **Extends into:** [[Diffraction]] — the spreading past a gap that Part VI's ripple tank showed, made quantitative from Huygens' wavelets; [[Stationary Waves]] — two progressive waves meeting head-on; [[Superposition and Interference]] — phase difference doing work, path difference and the two-source pattern; [[Doppler Effect]] — what happens to $f$ when the source moves; [[Electromagnetic Spectrum]] — the transverse waves that need no medium; [[Polarisation]] — the property only transverse waves have; [[Sound Encoding]] — the microphone diaphragm's oscillation sampled into bits.
 - **Physics of the medium:** [[Kinetic Theory of Gases]] — why the speed of sound in air rises with temperature.
 
 ## Beyond Syllabus

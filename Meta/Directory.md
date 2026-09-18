@@ -1,13 +1,13 @@
 # The Vault — Meta Directory
 
-> **15 cards.** Last landed: [[Learning as Verification]] (2026-09-14) — the engineer's calculus: when machines produce the answer, the retained skill is checking it; a ladder of eight checks, the produce-versus-verify asymmetry timed, ν by counting confirmed by simulation, the verifier who nods.
+> **17 cards.** Last landed: [[You're the Architect, the AI is the Bricklayer]] (2026-09-16) — responsibility from requirements to evidence, with a missing-penny app and runnable fault-rejecting checks.
 > Cards whose subject is *how to think across domains* — methods that apply to mathematics, physics, computer science and ordinary life alike. One line per card; the card carries the argument.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Stories/Directory|Stories]].
 
 ---
 
-## Methodology (10)
+## Methodology (12)
 
 1. **[[Chain of Thought]]** — Pólya's four phases, the "show that" chain, command and signal words, and the rule that a worked example names its trigger, not just its technique.
 2. **[[Choosing Effective Equations]]** — framework recognition (SUVAT / N2 / momentum / energy / power / friction at the limit) plus forward reading for what each clause of a question locks down.
@@ -19,6 +19,8 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 8. **[[Fun Is the Brachistochrone]]** 乐趣是最速降线 — the cycloid beats the straight line by a fifth; play is the early drop that builds velocity, and fun needs a target you chose yourself.
 9. **[[Decouple and Recouple]]** 解耦与再耦合 — four axes of coupling, the decoupler kit with a buffer simulation, the couplings that are the product, and six inventions made by recoupling a part a constraint forced loose.
 10. **[[Learning as Verification]]** 学习即验证 — checking is a different and cheaper skill than producing (P vs NP, signatures, the proof kernel, the trial balance); the eight-rung ladder of checks; *minus one, minus one* as a count confirmed by simulation; the check digit in your wallet; and the verifier who nods.
+11. **[[You Are a Reinforcement Learner]]** 你是一个强化学习者 — the loop you are in, with dopamine's prediction error as the proof; credit assignment and Skinner's pigeons; lever one, reward the environment that helps you (uncredited help extinguishes in a few hundred rounds, measured); lever two, stand where the signal is proper (the proxy, the late, the missing and the inverted signal, each named; a good learner in a broken environment learns the broken thing or leaves); four marks of a proper reward.
+12. **[[You're the Architect, the AI is the Bricklayer]]** — delegating implementation preserves the need for judgment: requirements, interfaces, causal debugging and tests that reject a plausible wrong answer.
 
 ## Productivity / Cognitive Models (1)
 

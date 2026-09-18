@@ -91,7 +91,7 @@ Each shape below is a **special case** of the ones above it. Moving down adds co
 
 ### OxAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** G5 (9260) / E4.1 (0580). Questions typically: identify a quadrilateral from its properties, use diagonal properties to find missing angles or lengths, or prove a shape is a particular type by establishing its defining properties. The properties table above covers everything tested.
+**Syllabus ref:** G5 (9260: recall the properties and definitions of square, rectangle, parallelogram, trapezium, kite and rhombus) / E4.1 (0580: the vocabulary of special quadrilaterals — the same six), with their line and rotational symmetry examined under E4.5 and 9260 G6. Questions typically: identify a quadrilateral from its properties, use diagonal properties to find missing angles or lengths, or prove a shape is a particular type by establishing its defining properties. The properties table above covers everything tested.
 
 ---
 

@@ -23,6 +23,9 @@ tags:
   - curriculum/Cambridge-0606
   - curriculum/A-Level
   - curriculum/IB-AA
+  - curriculum/IB-AI
+  - curriculum/OxAQA-9260
+  - syllabus/9260-N4
   - syllabus/0580-E1-1
   - type/vocabulary
   - type/reference
@@ -41,7 +44,7 @@ $$\mathbb{N} \;\subset\; \mathbb{Z} \;\subset\; \mathbb{Q} \;\subset\; \mathbb{R
 
 | Symbol | Name | What's in it |
 |---|---|---|
-| $\mathbb{N}$ | **Natural numbers** | $0, 1, 2, 3, \ldots$ — the counting numbers (some authors start at $1$; Cambridge usually includes $0$) |
+| $\mathbb{N}$ | **Natural numbers** | $0, 1, 2, 3, \ldots$ — the counting numbers (some authors start at $1$; check the source's convention) |
 | $\mathbb{Z}$ | **Integers** | $\ldots, -2, -1, 0, 1, 2, \ldots$ — naturals plus their negatives |
 | $\mathbb{Q}$ | **Rational numbers** | every $\dfrac{p}{q}$ with $p, q \in \mathbb{Z}$ and $q \ne 0$ — the *fractions* |
 | $\mathbb{R}$ | **Real numbers** | every point on the number line — rationals plus *irrationals* like $\sqrt{2}$, $\pi$, $e$ |
@@ -51,21 +54,7 @@ A separate "set" of importance: **prime numbers** $\mathbb{P} = \{2, 3, 5, 7, 11
 
 ### 中文锚点
 
-数集 (shùjí) = number sets. 数学的"数"分层逐步扩展：
-
-| 符号 | 中文名 | 内容 |
-|---|---|---|
-| $\mathbb{N}$ | **自然数** (zìránshù) | $0, 1, 2, 3, \ldots$（数数用的） |
-| $\mathbb{Z}$ | **整数** (zhěngshù) | $\ldots, -2, -1, 0, 1, 2, \ldots$（加上负数） |
-| $\mathbb{Q}$ | **有理数** (yǒulǐshù) | 形如 $p/q$ 的分数（$q \ne 0$） |
-| $\mathbb{R}$ | **实数** (shíshù) | 数轴上所有点（包括 $\sqrt{2}, \pi, e$ 等无理数） |
-| $\mathbb{C}$ | **复数** (fùshù) | $a + bi$（虚数单位 $i = \sqrt{-1}$） |
-
-**质数 (zhìshù) / 素数 (sùshù)** = prime number. 集合 $\mathbb{P} = \{2, 3, 5, 7, 11, \ldots\}$ — 大于 1，只有 $1$ 和它本身两个因数的自然数。
-
-考试常用记号：
-- $x \in \mathbb{Q}$ = $x$ 是有理数
-- $x \in \mathbb{R}$ but $x \notin \mathbb{Q}$ = $x$ 是无理数 (wúlǐshù)
+数苹果时，一、二、三就够用了；可要记下“还欠朋友两元”，就得让负数出场。一个蛋糕分给三个人，每人拿三分之一，光靠一个一个地数又不够了。自然数、整数、有理数这些名字，背后是同一件事：遇到原来的数说不清的问题，就把能用的数扩充一些。新工具也不会把旧工具赶走——二仍然是二，也可以写成一分之二。所以这些数集不是互不相干的几个盒子，而是一层套着一层；关键是看眼前的问题，需要哪一套数才说得清。
 
 ---
 
@@ -196,25 +185,27 @@ Within the irrationals, there's a finer distinction:
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 — C1.1 / E1.1
 
-**Syllabus ref:** E1.1 — natural numbers, integers, primes, square/cube numbers, rational and irrational numbers, reciprocals. Standard exam phrasing:
+The 2025–2027 syllabus requires identifying and using natural numbers, integers, primes, square/cube numbers, common factors/multiples, rational/irrational numbers and reciprocals. Prime factorisation, HCF and LCM also belong here. Recognising an irrational number is required; the specification does not name a general proof-by-contradiction method or prescribe the square-root irrationality proof as a separate outcome. Do not infer paper frequency or guaranteed marks from these examples.
 
-- "Identify which of the following are: (a) natural numbers (b) integers (c) prime numbers."
-- "Show that $\sqrt{3}$ is irrational." (rare on 0580, common on A-Level — the proof template above transfers directly)
-- "Write down a rational number between $\sqrt{2}$ and $\sqrt{3}$." (Just pick a decimal in that range, e.g. $1.5$; *any* finite-decimal answer works.)
+**Original example:** a rational number between $\sqrt2$ and $\sqrt3$ is $1.5$, since $2<1.5^2<3$. A terminating decimal must still lie inside the requested interval.
 
-> [!tip] Read primality carefully: 1 is **not** prime
-> The definition requires *exactly two* divisors. $1$ has only one divisor (itself), so it's not prime. $1$ is also not composite — it's the *unit*, in its own category. Including $1$ as prime would break the Fundamental Theorem of Arithmetic (which says every integer factors uniquely into primes).
+### OxfordAQA 9260
 
-### A-Level / IB / AP
+**N4** covers even/odd/prime vocabulary, factors, multiples, HCF/LCM and prime factorisation; **N7** covers exact fractions and, at Extension tier, surds. The deeper construction of number systems, transcendence and infinite cardinalities are enrichment. One is neither prime nor composite; unique prime factorisation concerns integers **greater than one**.
 
-A-Level extends to:
-- **Rigorous irrationality proofs** for $\sqrt{n}$ when $n$ is not a perfect square; $\log_a b$ when $b/a$ ratios are not powers; $e$ via series.
-- **Complex numbers** $\mathbb{C}$ as the next level above $\mathbb{R}$ — see [[Complex Numbers]].
-- **Number theory proper** — congruences modulo $n$, Chinese remainder theorem, Fermat's Little Theorem; the integers $\mathbb{Z}$ start to look much richer.
+### Cambridge 0606 and A-Level
 
-IB AA HL touches Cantor's countability arguments lightly. AP doesn't formally cover this beyond "what kind of number is this?" pre-cal sanity.
+0606 requires set language, surds and algebra, but not the axiomatic number-system constructions or Cantorian cardinalities. At A-Level, separate the qualifications: **9709** uses real-number algebra and surds; **9231** explicitly includes complex numbers and proof by induction. **Edexcel IAL** introduces complex numbers in Further Pure; its notation list defines $\mathbb N=\{1,2,3,\ldots\}$. **OxfordAQA 9660** includes surds and, in its Pure2 proof content, contradiction and counterexamples. These are not a blanket requirement to prove transcendence of $e$, study the Chinese remainder theorem or derive all number-system constructions.
+
+### IB AA and AI
+
+Both guides list natural/integer/rational/irrational/real number systems as prior learning. **AA HL AHL1.15** explicitly includes contradiction with irrationality examples and **AHL1.12–1.14** covers complex numbers. These placements do not require Cantor's countability argument; retain it as enrichment. AI's complex-number and matrix content has its own HL placement; see [[Complex Numbers]] for that scope. [IB AA guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-guide-en.pdf) · [IB AI guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-applications-and-interpretation-guide-en.pdf)
+
+### AP Calculus AB/BC — boundary
+
+Real-number and algebra fluency supports the course, but the inspected CED does not prescribe Peano axioms, Cantor's countability proof or proofs of transcendence. No claim is made here about a universal “AP number-systems unit”: course-specific requirements differ.
 
 ---
 
@@ -230,7 +221,7 @@ IB AA HL touches Cantor's countability arguments lightly. AP doesn't formally co
 
 ## Connections
 
-- **Forward (deep):** [[Natural Numbers]] — Peano axioms construction of $\mathbb{N}$ (planned A-Level / IB enrichment)
+- **Forward (deep):** [[Natural Numbers]] — Peano axioms construction of $\mathbb{N}$ (axiomatic foundations)
 - **Forward (deep):** [[Integers]] — extending naturals; the slick proof that $(-1)\times(-1) = 1$
 - **Forward (deep):** [[Prime Numbers]] — Euclid's infinitude proof, Fundamental Theorem of Arithmetic
 - **Forward:** [[Surds]] — manipulating irrational $\sqrt{n}$ expressions

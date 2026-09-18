@@ -6,6 +6,7 @@ prerequisites:
   - "[[Erdős the Wandering Mathematician]]"
 leads_to:
   - "[[The Love of Wisdom]]"
+  - "[[You Are a Reinforcement Learner]]"
 tags:
   - subject/methodology
   - subject/philosophy
@@ -190,3 +191,5 @@ This is not a trick to make homework palatable. It is the method of [[Forward Re
 - **Worked instances of the thesis:** [[Space Travel]] (a game as the chosen target that built an operating system); [[A Rich Neighbor Named Xerox]] (hunters with no one to deliver to); [[Vectors in Physics]] (the river current you already solved in *Breath of the Wild* — a shrine placed in a physics card); [[Credit Is the Currency]] (the teacher's side of the ledger: promises kept are what let a student trust a placed hint).
 
 - **Misconception traps cleared:** the fastest path is the shortest; fun is a reward for work rather than the engine of it; any task can be gamified with points; the fetch-quest feeling is a character flaw rather than a diagnostic.
+- **Leads to:** [[You Are a Reinforcement Learner]] — fun as the intrinsic reward that keeps exploration alive, from the reinforcement-learning side.
+

@@ -6,6 +6,7 @@ prerequisites:
   - "[[Venn Diagram]]"
 leads_to:
   - "[[Discrete Random Variables]]"
+  - "[[Laplace and Napoleon]]"
 tags:
   - subject/mathematics
   - domain/probability
@@ -316,6 +317,7 @@ You cannot condition on an event that has zero probability — $P(A \mid B)$ is 
 > - $P(\text{car behind Door 1} \mid \text{host opens Door 3}) = \dfrac{1}{3}$
 >
 > Your original choice had a $\dfrac{1}{3}$ chance of being right. The host didn't change that — he just concentrated the remaining $\dfrac{2}{3}$ onto one door. This problem has famously confused mathematicians and is a perfect example of why conditional probability requires careful thinking about what information you have.
+- **Story:** [[Stories/Laplace and Napoleon]] — Bayes's theorem rediscovered, the rule of succession, and the 1 826 214-to-1 sunrise.
 
 ---
 

@@ -129,7 +129,7 @@ For a **cube**: $6$ faces, $12$ edges, $8$ vertices. For a **tetrahedron** ($4$-
 
 ### Cambridge 0580
 
-**Syllabus ref:** E4.1. Same vocabulary as 9260 G1, examined the same way — embedded in geometry problems. Cambridge typically uses concise wording: "$ABCD$ is a quadrilateral with vertex $A$ at the origin and side $AB$ parallel to the $x$-axis."
+**Syllabus ref:** E4.1 *Geometrical terms* — a much longer list than 9260 G1, in three points. (1) Use and interpret: point, vertex, line, plane, parallel, perpendicular, perpendicular bisector, bearing, right angle, acute/obtuse/reflex angles, interior and exterior angles, **similar, congruent, scale factor** (the syllabus notes candidates are *not* expected to show two shapes congruent). (2) The vocabulary of triangles (equilateral, isosceles, scalene, right-angled), special quadrilaterals (square, rectangle, kite, rhombus, parallelogram, trapezium), polygons (regular/irregular, pentagon to decagon), **nets**, and solids (cube, cuboid, prism, cylinder, pyramid, cone, sphere, hemisphere, **frustum**, face, surface, edge). (3) The vocabulary of a circle — centre, radius, diameter, circumference, semicircle, chord, tangent, major and minor arc, sector, segment ([[Circle Vocabulary (Vocab)]]). Examined the same way as 9260: embedded in problem wording, never as a standalone definition. Cambridge typically uses concise wording: "$ABCD$ is a quadrilateral with vertex $A$ at the origin and side $AB$ parallel to the $x$-axis."
 
 ---
 

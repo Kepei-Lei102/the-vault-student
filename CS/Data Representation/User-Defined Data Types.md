@@ -186,7 +186,7 @@ bookings = [b, b2]             # the array-of-records shape
 bookings[0].client_name       # index picks the record, dot picks the field
 ```
 
-Two structural facts carry marks. **Dot notation is the whole access story** — `Batch[7].Reject` composes an index chosen at run time with a field name fixed at design time ([[Arrays]] §"why those are different in kind"). And **records assign whole** — one statement copies every field, which is a genuine difference from arrays.
+Two structural facts carry marks. **Dot notation is the whole access story** — `Batch[7].Reject` composes an index chosen at run time with a field name fixed at design time ([[Arrays]] §"why those are different in kind"). In Cambridge pseudocode, **record assignment copies the record as a whole**. Python assignment behaves differently: `b2 = b` makes another reference to the same object. The explicit `replace(b)` above creates a new dataclass instance with the same field values; it is a shallow copy, so nested mutable objects would still be shared.
 
 ---
 

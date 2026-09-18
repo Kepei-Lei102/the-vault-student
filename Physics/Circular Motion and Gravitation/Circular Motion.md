@@ -10,6 +10,7 @@ prerequisites:
   - "[[Differentiation]]"
   - "[[Projectile Motion]]"
 leads_to:
+  - "[[Energy Levels and Line Spectra]]"
   - "[[Gravitational Fields]]"
   - "[[Simple Harmonic Motion]]"
   - "[[Lorentz Force]]"

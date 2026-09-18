@@ -7,6 +7,7 @@ prerequisites:
   - "[[Vectors in Physics]]"
   - "[[Density and Pressure]]"
 leads_to:
+  - "[[Temperature and Thermometry]]"
   - "[[Internal Energy]]"
   - "[[First Law of Thermodynamics]]"
   - "[[Specific Heat Capacity]]"

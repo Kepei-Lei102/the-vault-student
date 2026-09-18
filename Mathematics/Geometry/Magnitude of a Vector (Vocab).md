@@ -123,7 +123,7 @@ Check: $\sqrt{0.6^2 + 0.8^2} = \sqrt{0.36 + 0.64} = \sqrt{1} = 1$ ✓.
 
 ### Cambridge 0580 / 0606
 
-**Syllabus ref:** E7.3 (0580) and §13.3 (0606). Standard patterns:
+**Syllabus ref:** 0580 **E7.3** *Magnitude of a vector* — calculate $\lvert\overrightarrow{AB}\rvert$; the syllabus fixes the notation, $\lvert\mathbf{a}\rvert$ for the magnitude of $\mathbf{a}$ and $\lvert\overrightarrow{AB}\rvert$ for that of $\overrightarrow{AB}$, and 0580 examines only two-dimensional column vectors. 0606 **13.3** — "find the magnitude of a vector; add and subtract vectors and multiply vectors by scalars", with unit vectors in 13.2. Standard patterns:
 
 - "Find the magnitude of the vector $\begin{pmatrix} 5 \\ -12 \end{pmatrix}$." ($\sqrt{25 + 144} = 13$.)
 - "A and B are points with position vectors $\mathbf{a} = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} 4 \\ 6 \end{pmatrix}$. Find $\lvert \overrightarrow{AB} \rvert$." ($\overrightarrow{AB} = \mathbf{b} - \mathbf{a} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}$, magnitude $5$.)

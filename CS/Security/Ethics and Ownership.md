@@ -5,6 +5,7 @@ prerequisites:
   - "[[Program Development Life Cycle and Testing]]"
   - "[[Learning as Verification]]"
   - "[[Stats Lies Hall of Fame]]"
+  - "[[Automated Systems and Robotics]]"
 leads_to:
   - "[[Data Protection and Privacy]]"
   - "[[Artificial Intelligence]]"
@@ -128,7 +129,7 @@ Copyright makes every licence enforceable; the licence is the permission the own
 - **Free software (Free Software Foundation).** Richard Stallman's 1985 definition is four **freedoms**: to *run* the program for any purpose, to *study* and change it (which requires the source), to *redistribute* copies, and to *distribute modified versions*. The GPL adds **copyleft**: anyone who redistributes must pass on the same freedoms, so a GPL library cannot be absorbed into a closed product. "Free" is about liberty, not price — the FSF's own line is *free as in speech, not as in beer*.
 - **Open source (Open Source Initiative).** Defined in 1998 by ten criteria — free redistribution, source available, modifications allowed, no discrimination against persons or fields of use — chosen to make the idea acceptable to business. Most open-source licences (MIT, BSD, Apache) are **permissive**: keep the copyright notice, otherwise do as you like, closed products included. The FSF and OSI lists overlap almost entirely; the difference is philosophy, and the exam treats the two as one answer.
 - **Shareware.** Closed source, distributed free for a **trial** — a time limit, or missing features — after which a fee is due. The programmer's benefits (an exam question in its own right): users try before buying, so distribution is cheap and wide; the developer keeps the source and the copyright. The examiners note the standing confusion: **shareware does not mean the source is shared.**
-- **Commercial (proprietary).** Sold for a fee under an end-user licence agreement; no source; no right to alter, copy or redistribute; usually limits on installations or users; usually support and updates included.
+- **Commercial software.** Developed as a business activity. Cambridge commonly contrasts a paid proprietary package with free/open-source alternatives: its licence may restrict modification, redistribution and installations, with support sold alongside it. But **commercial and proprietary are not synonyms**: free/open-source software can also be sold, while proprietary software can be supplied at no charge. [The GNU classification](https://www.gnu.org/philosophy/categories.en.html) makes this distinction explicit. Choose by the permissions and support actually offered, not the price alone.
 
 **Freeware** — free of charge, closed source, no right to modify — is none of the four, and the examiners' reports name freeware-versus-free-software as the confusion they see most.
 
@@ -249,6 +250,7 @@ They are answered from the codes. "Explain why he acted unethically" wants *whic
 - **Built on:** [[Data Security]] — the technical half of privacy, and the difference between preventing copying and forbidding it; [[Program Development Life Cycle and Testing]] — Therac-25, Ariane and CrowdStrike as what skipping a stage costs, and the testing that the Horizon engineers' duty required; [[Learning as Verification]] — the machine's output as a claim to be checked, the proof-kernel argument applied to people; [[Stats Lies Hall of Fame]] — Simpson's paradox and the missing data are the same audit this card runs on a model.
 - **Same idea elsewhere:** [[Credit Is the Currency]] — a profession's code as a standing promise that makes its members trustworthy; [[Courage]] — the company that tells the truth about breakage; [[Compression]] — lossy is a licensing question too (patents on codecs).
 - **Extends into:** [[Data Protection and Privacy]] — GDPR and PIPL in full; [[Artificial Intelligence]] — the mechanics of the systems whose ethics this card audits; [[A Rich Neighbor Named Xerox]] — ownership of an idea versus its expression, litigated.
+- **Builds on:** [[Automated Systems and Robotics]] — the jobs, deskilling and accountability questions arrive with the machines that sense, decide and act without a person in the ring.
 
 ## Beyond Syllabus
 

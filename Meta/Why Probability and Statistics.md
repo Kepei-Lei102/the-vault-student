@@ -4,6 +4,7 @@ prerequisites:
   - "[[Probability Basics]]"
   - "[[Discrete Random Variables]]"
   - "[[Forward Reading and Problem Discovery]]"
+  - "[[Laplace and Napoleon]]"
 leads_to:
   - "[[Stats Lies Hall of Fame]]"
   - "[[Normal Distribution]]"
@@ -349,6 +350,7 @@ None of this was in the syllabus that ordered the cards. It emerged because each
 - **For students taking 9709:** [[MF19 Reference (9709)]] — the formula-sheet audit. The technical formulas behind every statement in this card are listed there as "given" or "memorise" depending on the paper.
 - **Cross-domain:** Survivorship bias, Simpson's paradox, mean-vs-typical confusions live everywhere data is summarised — public health, economics, sports analytics, AI evaluation, social science. The hunter's questions ("what was thrown away to produce this summary?", "what's the reference frame?") apply identically across all of them.
 - **Story partner:** [[Stories/The Lady Tasting Tea|The Lady Tasting Tea]] — Fisher, Pearson, Gosset and Neyman: the people behind *the trace and the threshold*, and the Epilogue where the hunter stopped tracing.
+- **Story:** [[Stories/Laplace and Napoleon]] — the astronomer for whom least squares and the central limit theorem were working tools, and the Essai that defined probability as measured ignorance.
 
 ---
 

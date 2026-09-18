@@ -376,7 +376,7 @@ AP Precalculus covers the Pythagorean trio, reciprocal/quotient, sum/difference,
 - **Leads to:** [[Differentiation Rules]] — $\frac{d}{dx}\sin x = \cos x$ and the rest of the trig derivative table; the proof uses $\sin(A+B)$ and the small-angle limit
 - **Leads to:** [[Coordinate Geometry of the Circle]] — the parametric form $(a + r\cos\theta, b + r\sin\theta)$ uses $\cos^2 + \sin^2 = 1$ to verify the equation
 - **Application:** [[Integration by Substitution]] — trig substitutions like $x = a\sin\theta$ rely on $1 - \sin^2\theta = \cos^2\theta$
-- **Application:** physics — wave superposition uses sum-to-product identities; AC circuit analysis uses $R\sin(x + \alpha)$ form
+- **Application:** physics — wave superposition uses sum-to-product identities ([[Superposition and Interference]] turns $\sin 2\pi f_1 t + \sin 2\pi f_2 t$ into a carrier times a beat envelope with exactly this formula); AC circuit analysis uses $R\sin(x + \alpha)$ form
 - **Beyond high school:** Fourier series — every periodic function is a sum of $\sin$ and $\cos$, and the orthogonality of $\sin nx$, $\cos mx$ is itself an identity (integrals of products vanish unless $n = m$)
 
 ---

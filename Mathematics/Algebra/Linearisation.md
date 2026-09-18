@@ -18,8 +18,8 @@ tags:
   - level/AP
   - curriculum/Cambridge-0606
   - curriculum/A-Level
-  - curriculum/IB-AA
-  - curriculum/AP
+  - syllabus/9709-2-2
+  - syllabus/9709-3-2
   - syllabus/0606-7-4
   - type/deep
   - type/technique
@@ -34,7 +34,7 @@ tags:
 
 ## Definition
 
-**Linearisation** is the trick of changing variables so that a non-linear relationship becomes a *straight line*. The most common change of variables — and the only one Cambridge 0606 asks for — is **taking logarithms of one or both axes**.
+**Linearisation** is the trick of changing variables so that a non-linear relationship becomes a *straight line*. The most common change of variables — though far from the only useful choice — is **taking logarithms of one or both axes**.
 
 If your data fits a power law
 
@@ -48,26 +48,19 @@ $$y = A b^x,$$
 
 then plotting $\log y$ against $x$ gives a **straight line** of gradient $\log b$ and $y$-intercept $\log A$.
 
-Why is this useful? Because the human eye is *very good* at spotting straight lines and *very bad* at spotting whether a curve is a quadratic, a cubic, or a power-of-2.7 — they all look like "some upward bend." Once the data is on a straight line, you can read off the constants with a ruler. This is exactly how 19th- and 20th-century scientists discovered every empirical power law in physics, chemistry, and biology — long before nonlinear regression existed in any computer.
+Why is this useful? Because the human eye is *very good* at spotting straight lines and *very bad* at spotting whether a curve is a quadratic, a cubic, or a power-of-2.7 — they all look like "some upward bend." Once the data is on a straight line, you can read off the constants with a ruler. Straightened plots also make model parameters and departures from a proposed relationship easier to inspect.
 
 ### 中文锚点
 
-**线性化 (xiànxìnghuà)** = 把一个非线性关系，通过**取对数**（或别的代换），变成**直线**。
-
-两个标准型：
-
-| 原始模型 | 取对数 | 直线方程 | $x$ 轴 | $y$ 轴 | 斜率 | 截距 |
-|---|---|---|---|---|---|---|
-| 幂函数 $y = Ax^n$ | $\lg y = \lg A + n \lg x$ | $Y = c + n X$ | $\lg x$ | $\lg y$ | $n$ | $\lg A$ |
-| 指数函数 $y = Ab^x$ | $\lg y = \lg A + x \lg b$ | $Y = c + (\lg b) X$ | $x$ | $\lg y$ | $\lg b$ | $\lg A$ |
-
-考试套路：给一组实验数据，要求**判断是哪种模型**（$y = Ax^n$ 还是 $y = Ab^x$？），然后**画出合适的对数坐标图**，再**从图上斜率和截距求 $A, n$ 或 $A, b$**。
+**线性化**是换一套坐标，让原本弯曲的关系变成直线。关键不是机械地取对数，而是先把模型改写成“一个量 = 常数 × 另一个量 + 常数”，再让这两个量充当纵、横坐标。比如观察细菌数量：如果每小时都按同一倍数增长，原始曲线会越来越陡；对数量取对数后，每小时的增量就相同了，于是图像变成直线。对数把“相乘的倍数”变成了“相加的差值”。幂函数则要对两个坐标都取对数，这样直线的斜率正好就是原来的指数。换坐标也改变了斜率和截距的含义：截距若是 $\lg A$，还要算 $10^{\lg A}$ 才能找回 $A$。实验数据接近直线，是支持某个模型的证据；光凭这一点，既不能证明模型一定正确，也不能排除其他模型。
 
 ---
 
 ## Why It Works — the algebra
 
 ### Power law $y = Ax^n$
+
+Assume $x>0$, $y>0$, $A>0$. Use one logarithm base $q>0$, $q\ne1$ throughout. For measured quantities, logs apply to numerical values in stated units (equivalently, ratios to reference units); changing units can change the intercept.
 
 This is three small steps, each one a single move you already know.
 
@@ -95,16 +88,16 @@ Let $Y = \log y$, $X = \log x$, $c = \log A$. Then $\log A$ is *just a number* (
 
 > [!info] Numerical sanity check — see the line emerge
 > Take $y = 2x^3$ (so $A = 2$, $n = 3$) and three points:
->
-> | $x$ | $y = 2x^3$ | $\lg x$ | $\lg y$ |
-> |---|---|---|---|
-> | $1$ | $2$ | $0$ | $0.301$ |
-> | $10$ | $2{,}000$ | $1$ | $3.301$ |
-> | $100$ | $2{,}000{,}000$ | $2$ | $6.301$ |
->
-> In the raw $(x, y)$ columns the numbers explode — $1, 10, 100$ on the left, $2, 2{,}000, 2{,}000{,}000$ on the right. No straight line on Earth could fit that. But the $(\lg x, \lg y)$ columns are equally spaced: $\lg x$ goes up by $1$ each row, $\lg y$ goes up by *exactly* $3$ each row. The gradient is $\Delta(\lg y) / \Delta(\lg x) = 3/1 = 3 = n$ ✓, and the intercept (the $\lg y$ value when $\lg x = 0$) is $0.301 = \lg A$ ✓.
 
-**Read off the constants.** Plot $Y$ against $X$, draw the line, then $n$ is the gradient and $\log A$ is the $y$-intercept. Recover $A = 10^{\log A}$ at the end.
+| $x$ | $y = 2x^3$ | $\lg x$ | $\lg y$ |
+|---|---|---|---|
+| $1$ | $2$ | $0$ | $0.301$ |
+| $10$ | $2{,}000$ | $1$ | $3.301$ |
+| $100$ | $2{,}000{,}000$ | $2$ | $6.301$ |
+
+In the raw $(x, y)$ columns the numbers explode — $1, 10, 100$ on the left, $2, 2{,}000, 2{,}000{,}000$ on the right. No straight line on Earth could fit that. But the $(\lg x, \lg y)$ columns are equally spaced: $\lg x$ goes up by $1$ each row, $\lg y$ goes up by *exactly* $3$ each row. The gradient is $\Delta(\lg y) / \Delta(\lg x) = 3/1 = 3 = n$ ✓, and the intercept (the $\lg y$ value when $\lg x = 0$) is $0.301 = \lg A$ ✓.
+
+**Read off the constants.** Plot $Y$ against $X$, draw the line, then $n$ is the gradient and $\log A$ is the $y$-intercept. For base 10, recover $A = 10^{\lg A}$; in base $q$, recover $A=q^c$.
 
 > [!info] The deep reason this works — logs translate ratios into differences
 > A power law has the property that *multiplying* $x$ by some factor *multiplies* $y$ by a related factor: if you replace $x$ with $kx$, then $y$ becomes $A(kx)^n = k^n \cdot Ax^n = k^n y$. So multiplicative changes in $x$ become multiplicative changes in $y$.
@@ -113,7 +106,7 @@ Let $Y = \log y$, $X = \log x$, $c = \log A$. Then $\log A$ is *just a number* (
 
 ### Exponential $y = Ab^x$
 
-Same three moves — but watch which side gets logged: only $y$, not $x$.
+Assume $A>0$ and $b>0$; $b=1$ gives a constant function. The same three moves apply, but only the vertical coordinate is logged.
 
 **Step 1 — log of both sides.**
 
@@ -133,10 +126,10 @@ $$\underbrace{\log y}_{\;Y\;} \;=\; \underbrace{\log A}_{\;c\;} \;+\; \underbrac
 
 The crucial difference from the power-law case: $X = x$ here, *not* $\log x$. We only logged the $y$-axis. That's why this is called a **semi-log** plot — only one axis got the log treatment, because only one side of the equation needed a power law applied.
 
-**Why is this a straight line?** Because once again, after relabelling, we have $Y = mX + c$ with $m = \log b$ and $c = \log A$ — both constants set by the model parameters. Plot $\log y$ on the vertical and $x$ on the horizontal, and the data lines up. Gradient $= \log b$ (recover $b = 10^{\log b}$); intercept $= \log A$ (recover $A = 10^{\log A}$).
+**Why is this a straight line?** Because once again, after relabelling, we have $Y = mX + c$ with $m = \log b$ and $c = \log A$ — both constants set by the model parameters. Plot $\log y$ on the vertical and $x$ on the horizontal, and the data lines up. Gradient $= \log_q b$ (recover $b=q^m$); intercept $= \log_q A$ (recover $A=q^c$).
 
 > [!tip] Why power → log–log, exponential → semi-log
-> The pattern is: **log the side(s) where the variable is in an exponent**. In $y = Ax^n$, the variable is $x$ inside an exponent, so logging the right side pulls $n$ out — but to make the resulting $\log x$ behave linearly we have to also use $\log x$ on the horizontal axis. In $y = Ab^x$, the variable is $x$ inside an exponent already (the exponent *is* $x$), so logging the right side pulls $x$ out as a clean linear term — no need to log the horizontal axis. One log on the vertical is enough.
+> **Derive the transformed equation, then name its variables.** For $y=Ax^n$, taking logs produces $n\log x$, so choose $X=\log x$. For $y=Ab^x$, it produces $x\log b$, so choose $X=x$. In both cases choose $Y=\log y$. The algebra selects the axes.
 
 ### The names of the two coordinate systems
 
@@ -145,14 +138,14 @@ The crucial difference from the power-law case: $X = x$ here, *not* $\log x$. We
 | $\log y$ vs $\log x$ | **log–log plot** | power law $y = Ax^n$ |
 | $\log y$ vs $x$ | **semi-log plot** (or "log-linear") | exponential $y = Ab^x$ |
 
-A power law on linear–linear axes looks like a curving sweep. On log–log paper, it's a straight line. An exponential on linear–linear axes looks like a curving sweep. On semi-log paper, *that* one's a straight line. Each model has its own coordinate system that "straightens it out" — and the *converse* is also true: if your data straightens on log–log, it's a power law; if it straightens on semi-log, it's an exponential. The choice of axes is the diagnostic.
+A general power law curves on linear axes (the constant and $n=1$ cases are exceptions), but becomes straight on log–log axes. A positive exponential becomes straight on semi-log axes. Exact straightness over an interval is equivalent to the corresponding model there; finite noisy data only support a model, and several models can look similar over a short range.
 
 ![[linearisation-loglog-semilog.svg]]
 
 Above: top row is a power law $y = 1.3\,x^{1.5}$ — curved on linear axes (left), straight on log–log (right). Bottom row is an exponential $N = 5.0 \cdot 1.5^{t}$ — curved on linear axes (left), straight on semi-log (right). The gradient and intercept of each straight-line plot directly hand you $A$ and $n$ (or $A$ and $b$).
 
-> [!info] Why this is the most exam-tested log application at A-Level
-> Logarithms only show up on 0606 in three or four flavours: solve $a^x = b$, simplify with the log laws, and *this*. Linearisation is where the log laws actually *do work* — the product/power laws are what convert $\log(Ax^n)$ into $\log A + n \log x$. Every step of the technique is a one-line application of a law you already know. That's why it shows up year after year: it's the cleanest test of whether you understand what the laws *for*.
+> [!info] Why the log laws matter
+> Product and power laws turn multiplicative structure into an additive straight-line equation. Derive that equation first; the labels on the new axes then follow from it.
 
 ---
 
@@ -194,7 +187,7 @@ You're given a table of data and asked: "find $A$ and $n$." The recipe:
 | $20$ | $1.301$ | $113.1$ | $2.054$ |
 | $50$ | $1.699$ | $447.2$ | $2.650$ |
 
-**Step 3 — gradient.** Pick two well-separated points (rounding to read off a graph; here we use first and last for a clean computation):
+**Step 3 — gradient. Tool: $\Delta Y/\Delta X$.** These teaching data are rounded from an almost exact power law. An endpoint estimate illustrates the arithmetic below; with genuinely noisy experimental data, first fit a line and use two well-separated points on that line.
 
 $$
 n = \frac{\lg y_5 - \lg y_1}{\lg x_5 - \lg x_1} = \frac{2.650 - 0.556}{1.699 - 0.301} = \frac{2.094}{1.398} \approx 1.50.
@@ -213,7 +206,7 @@ So $A \approx \boxed{1.3}$.
 **Final answer.** $y \approx 1.3 \, x^{1.5}$. (Indeed: $1.3 \cdot 10^{1.5} = 1.3 \cdot 31.62 \approx 41.1$, very close to the observed $40.0$. ✓)
 
 > [!info] Why this $A$ and $n$ are *insightful*, not just numbers
-> A power $n = 1.5 = 3/2$ usually means a square-root times a linear factor — common in physics: kinetic energy at constant momentum scales as $v^{3/2}$ in some wave systems; Kepler's third law gives orbital period $T \propto a^{3/2}$ where $a$ is semi-major axis. When linearisation hands you $n = 3/2$ or $n = 2$ or $n = -1$, that's a *signature* — the underlying physics is telling you something about the system's geometry. Half-integer exponents almost always indicate "energy related to amplitude squared" or "geometric mean of two scales."
+> An exponent can suggest a physical model: Kepler's third law gives $T\propto a^{3/2}$ for orbits around a fixed dominant mass, with $a$ the semi-major axis. But an exponent alone does not identify the mechanism. Units, assumptions and independent evidence must also agree.
 
 ### Example 2 — Exponential (0606-style)
 
@@ -254,13 +247,13 @@ If the question doesn't tell you which model holds, the test is simple: plot bot
 
 (In fact the data is exactly $y = 2^x$, which is $A = 1, b = 2$. The semi-log slope is $\lg 2 \approx 0.301$, perfectly matching what we read off.)
 
-**Lesson.** If neither linearisation works, the model is something else (polynomial of degree $> 1$ but not a clean power, logistic, etc.). For 0606, the question always picks one of the two standard models for you.
+**Lesson.** If neither linearisation works, the model is something else (polynomial of degree $> 1$ but not a clean power, logistic, etc.). Start from any supplied model; other transformations may be needed.
 
 ---
 
-## Beyond Logs — other linearisations (beyond syllabus)
+## Beyond Logs — other linearisations
 
-Logs aren't the only change of variables that linearises. Three others worth knowing for A-Level / IB / AP:
+Logs aren't the only change of variables that linearises. For example:
 
 | Model | Substitute | Linear in |
 |---|---|---|
@@ -272,11 +265,13 @@ Logs aren't the only change of variables that linearises. Three others worth kno
 The pattern is *always*: pick a substitution that turns the model into "(linear function of new variables) = constant + constant × (other new variable)." Then plot in the new variables. The linearisation trick generalises to *any* model where one transformation makes things linear.
 
 > [!info] Linearisation in physics — three places it shows up
-> 1. **Hubble's law.** Distance vs recession velocity of galaxies on a *linear* plot looks scattered; on a log–log plot you can see two regimes ("nearby" linear, "far" with cosmological corrections), and the slope hands you the Hubble constant.
-> 2. **Allometric scaling in biology.** Animal metabolic rate vs body mass: on log–log paper the data falls on a line with slope $3/4$ (Kleiber's law). Without logs, an elephant and a mouse couldn't even share the same chart.
+> 1. **Hubble’s law.** Plot recession speed $v$ vertically against distance $d$ horizontally on ordinary axes: the gradient of $v=H_0d$ is $H_0$. On log–log axes, $\log v=\log H_0+\log d$: the gradient is **1**, while the intercept encodes the numerical $H_0$ in stated units. Taking logs does not remove peculiar-velocity scatter.
+> 2. **Allometric scaling in biology.** Animal metabolic rate vs body mass: on log–log paper a classic approximate model has slope $3/4$ (Kleiber's law); the fitted exponent depends on the organisms and conditions. Without logs, an elephant and a mouse couldn't even share the same chart.
 > 3. **Lens equation.** $\dfrac{1}{f} = \dfrac{1}{u} + \dfrac{1}{v}$ — already linear in the *reciprocals*. Plot $1/v$ against $1/u$ and read off $1/f$ as the intercept. This is a homework standard in optics labs.
 >
 > Whenever an empirical relationship has a *power*, an *exponential*, or a *reciprocal* in it, linearisation is the first move. Computers have made nonlinear regression cheap, but the *insight* — "this is a power law of exponent $3/2$" — comes most clearly from a straight line.
+
+The distance–velocity derivation and calibration limits are developed in [[Hubble's Law and the Expanding Universe]].
 
 ---
 
@@ -285,7 +280,7 @@ The pattern is *always*: pick a substitution that turns the model into "(linear 
 1. **Reporting $\log A$ as $A$.** The intercept is $\log A$, *not* $A$ itself. Always exponentiate at the end: $A = 10^{\text{intercept}}$ (if using base $10$) or $A = e^{\text{intercept}}$ (if using $\ln$).
 2. **Computing gradient from raw $(x, y)$ instead of $(\log x, \log y)$.** The whole point is that the *transformed* data is on a line. Gradients on the original plot will vary across the data — they're not what the question is asking for.
 3. **Mixing $\lg$ and $\ln$ mid-problem.** Pick one and stick with it. If you take $\lg y$ at the start, every "log" in the working is $\lg$ until the end. Switching halfway turns gradients and intercepts into garbage (because $\ln 10 \approx 2.303$, the conversion factor).
-4. **Assuming the wrong model.** If the question doesn't specify, *check* — both linearisations take five seconds, and only one will be straight.
+4. **Assuming the wrong model.** If the question doesn't specify, *check* — inspect the plots and residuals; a short or noisy dataset may not distinguish the alternatives.
 5. **Reading gradient from raw data points instead of from the line of best fit.** Use *line* points (well-separated), not data points.
 6. **Forgetting the $y$-intercept matters.** The gradient gives you $n$ (or $\log b$); the intercept gives you $A$. Both are needed to specify the model. Common loss-of-marks: students nail the gradient but never compute $A$.
 
@@ -293,42 +288,33 @@ The pattern is *always*: pick a substitution that turns the model into "(linear 
 
 ## Exam Notes
 
-### Cambridge 0606
+### Cambridge 0606 — §7.4
 
-**Syllabus ref:** §7.4. The format is consistent year after year:
+The 2025–2027 syllabus requires interpreting a supplied relationship by reducing it to straight-line form. It explicitly includes $y=Ax^n$ and $y=Ab^x$, **and other transformations**, such as $y^2=Ax^3+B$, $e^{2y}=Ax^2+B$ and $y^3=A\ln x+B$. For the last example, plot $Y=y^3$ against $X=\ln x$: gradient $A$, intercept $B$. Taking logs of both sides indiscriminately would not help.
 
-- Question gives a model: "$y = Ax^n$" or "$y = Ab^x$" (occasionally a variant like $y = a + b/x$).
-- Question gives a small data table (typically 4–6 rows).
-- Question asks for: a suitable straight-line graph, the values of the constants, and sometimes a prediction at an unseen $x$.
-- Marks are typically allocated: 1–2 for the log table, 2–3 for the plot/best-fit line, 1 for the gradient, 1 for the intercept, 1–2 for the constants $A$ and $n$ (or $A$ and $b$).
+State the transformed variables, identify the gradient and intercept algebraically, and recover the original constants. For a graph question, use the best-fit line and a large gradient triangle. Keep guard digits; follow the requested precision rather than assuming one universal decimal-place or mark-allocation rule. The examples above are original teaching problems, not transcriptions of past papers.
 
-> [!tip] If the model is given, you don't need to "discover" which logs to take
-> Cambridge always tells you the model. Reading "the relationship $y = Ax^n$ holds" → take $\lg$ of both sides → plot $\lg y$ vs $\lg x$. Reading "the model is $y = Ab^x$" → plot $\lg y$ vs $x$. The model is the road sign; just follow it.
+### Cambridge 9709 — Pure Mathematics 2 §2.2 and Pure Mathematics 3 §3.2
 
-> [!warning] Use enough decimal places in the log column
-> 0606 markschemes often want $\lg$ values to *three* decimal places. Two isn't enough — small differences in $\lg y$ feed into the gradient with high leverage, and rounding to $0.55$ instead of $0.556$ can shift the gradient by $5\%$ or more. Calculate to four, report to three.
+Both log/exp sections include using logarithms to transform a relationship into straight-line form and determining unknown constants. These are **Paper 2 and Paper 3**, not Pure Mathematics 1. The log laws select the axes; an intercept representing a logarithm must be exponentiated. Cambridge 9231 assumes the relevant 9709 mathematics; it does not add a separate logarithmic-graph-fitting topic.
 
-### Cambridge 9709 (P1 §2.2)
+### Edexcel IAL — Pure Mathematics 3 §3.3
 
-Named inside the logarithms row — *laws, solving, natural log, $e$, graphs, linearisation* — so it arrives as an application of [[Logarithms]] rather than as its own topic: given $y = Ax^n$ data, take logs and read $n$ and $A$ off the line. Same craft as 0606 §7.4 with the log laws now examinable alongside.
+The specification explicitly requires estimating the parameters of power and exponential relationships using logarithmic graphs. The two derivations above explain the required transformations and parameter recovery.
 
-### Edexcel IAL (P3 §3.3)
+### IB Mathematics: Analysis and Approaches
 
-The spec names it directly: *use logarithmic graphs to estimate parameters in relationships of the form $y = ax^n$ and $y = kb^x$* — the two 0606 models exactly, so this card is the whole row.
+In the first-assessment-2021 guide, SL 2.9 covers exponential/logarithmic functions and SL 4.4 covers linear regression. These support the algebra and data interpretation, but do **not** establish a separate mandatory log–log/semi-log fitting unit or an HL-only nonlinear-regression requirement. Treat this technique as a useful modelling extension. [IB AA guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-guide-en.pdf)
 
-### A-Level, beyond the rows
+### AP — distinguish the course and the year
 
-A-Level extends linearisation to:
+**AP Statistics through the May 2026 exam:** former Topic 2.9 covered transformations for departures from linearity. **For 2026–2027 onward, that topic has been removed.** It remains useful enrichment, not a current required topic. [College Board: AP Statistics revisions](https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions)
 
-- **Other transformations** (the table above) — $1/x$, $y^2$, etc.
-- **Differential equation modelling** — given $\dfrac{dy}{dt} = ky$, the solution is exponential, and fitting $y$ vs $t$ data via log linearisation extracts $k$.
-- **Error analysis** — the spread of linearised data quantifies how good the model is. Log axes change *what* error means (relative vs absolute) — a fact that becomes important in physics labs.
+**AP Calculus AB/BC Topic 4.6** uses “linearization” for a *local tangent-line approximation*, $f(x)\approx f(a)+f'(a)(x-a)$. That is a different operation from changing axes to straighten a model; the word alone does not imply this graph-fitting technique is required.
 
-### IB AA / AP
+### Where this particular technique is not prescribed
 
-IB AA SL covers the technique under "Modelling." HL extends to nonlinear regression (with calculator support), but the linearisation by logs remains the conceptual foundation.
-
-AP Calculus and AP Statistics both make linearisation explicit. AP Stats has a whole unit on transformations to achieve linearity — log–log for power, semi-log for exponential, plus the residual analysis to confirm the choice.
+**Cambridge 0580, OxfordAQA 9260 and OxfordAQA 9660** do not name this logarithmic graph-fitting technique as a separate requirement in the specifications checked. Their graph skills, and 9660's logarithms/exponential modelling, are related foundations. This is not a claim that those boards never supply a transformed graph to interpret.
 
 ---
 

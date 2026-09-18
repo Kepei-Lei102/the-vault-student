@@ -38,8 +38,6 @@ tags:
   - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-3
   - syllabus/0625-P5
-  - syllabus/IB-Physics-PRAC-2
-  - syllabus/AP-Physics-1-SP-1
   - type/deep
   - type/theorem
   - type/proof
@@ -73,21 +71,8 @@ In all of this, "uncertainty" and "error" are used interchangeably for the *spre
 
 ### 中文锚点
 
-**误差传播 (wùchā chuánbō)**：测量量 $x$ 有不确定度 $\Delta x$，由它算出的量 $z = f(x)$ 也有不确定度 $\Delta z$；求出 $\Delta z$ 的过程就叫误差传播。
 
-物理实验里有三条 *表面上* 看起来不相关的规则：
-
-| 运算 | 误差规则 | 中文术语 |
-|---|---|---|
-| $z = x \pm y$ | **绝对误差相加**：$\Delta z = \Delta x + \Delta y$ | 加减用绝对误差 |
-| $z = xy$ 或 $z = x/y$ | **百分比误差相加**：$\dfrac{\Delta z}{z} = \dfrac{\Delta x}{x} + \dfrac{\Delta y}{y}$ | 乘除用百分比误差 |
-| $z = x^n$ | **指数乘以百分比误差**：$\dfrac{\Delta z}{z} = \lvert n \rvert \dfrac{\Delta x}{x}$ | 幂次方相对误差放大 $n$ 倍 |
-
-中国高中物理课本通常只列这三条规则，不解释为什么。**英文 A-Level / IB / AP 物理也只列这三条规则**。这张卡的目标就是说清楚：三条规则不是三件事，是**对数微分**这一件事的三个面。
-
-A common misreading — even by exam-savvy students — is that "subtraction subtracts errors." It doesn't. $z = x - y$ obeys $\Delta z = \Delta x + \Delta y$ (absolute errors *add*), because errors are unsigned worst-case bounds and the subtraction could conspire either way. More on this in the Misconceptions section.
-
----
+买地板前，你量了房间的长和宽，再相乘算面积。可卷尺没拉得完全笔直，读数也只能估到某一格，两个长度都不是钉死的数。如果长和宽都比实际多量了一点，算出来的面积就会被两边一起推大。计算器能报出一长串小数，却不能替你把房间量得更准。误差传播关心的就是：起初那一点拿不准，经过计算后，会让答案有多拿不准。
 
 ## The master rule — first-order Taylor
 
@@ -108,7 +93,7 @@ with partial derivatives in place of the ordinary derivative. The absolute-value
 >
 > In real lab work and in university, when errors are random and *independent*, they combine **in quadrature** ($\Delta z = \sqrt{\sum (\partial f / \partial x_i)^2 (\Delta x_i)^2}$). Independent random errors partly cancel, so the quadrature sum is smaller than the worst-case sum.
 >
-> Exam expectation through 9702 / IB Physics / AP: use the worst-case (add absolutes). Quadrature is a beyond-syllabus refinement. The *rules* below — sum, product, power — have the same algebraic form in both conventions; only the way you ultimately combine the contributions differs.
+> The rules below use a first-order worst-case model. Independent standard uncertainties instead combine in quadrature; correlated inputs require covariance. These are different assumptions about what an uncertainty represents, not interchangeable ways of reporting the same bound.
 
 That single line $\Delta z \approx \lvert f'(x) \rvert \, \Delta x$ is **the master rule**. The three propagation rules are special cases. Let's derive them.
 
@@ -296,38 +281,29 @@ A square root *halves* the percentage uncertainty. This is the same square-root 
 
 ## Exam Notes
 
-### Cambridge 9702 (A-Level Physics)
+### Cambridge 9702 — §1.3 and practical skills
 
-§1.3 (As level, Paper 1 / 2). Examined every session. Expect:
+The 2028–30 syllabus explicitly requires assessment of uncertainty in a derived quantity by simple addition of absolute or percentage uncertainties. For sums/differences, combine absolute uncertainties; for products/quotients, combine percentage contributions; a power multiplies the first-order percentage contribution by the magnitude of its exponent. Convert back to absolute uncertainty when requested, and report compatible precision.
 
-- One MCQ checking whether you apply the right rule (sum vs product) for a given formula.
-- A structured-question rider: "given $L = \dots \pm \dots$ and $T = \dots \pm \dots$, calculate the value of $g$ and its absolute uncertainty." Standard expected steps: (i) compute percentage uncertainties, (ii) combine using the propagation rules, (iii) convert back to absolute, (iv) round to match the uncertainty.
-- Paper 3 (Practical) and Paper 5 (Planning and Analysis): error propagation features in *every* question. P5 especially asks for percentage uncertainty in gradient or intercept of a linearised graph — closely tied to [[Linearisation for Lab Analysis]].
+Practical analysis also includes uncertainties in measurements and graphical results; gradient uncertainty connects to [[Linearisation for Lab Analysis]]. The syllabus does not guarantee a particular question or mark allocation in every paper. Quadrature and covariance are extensions beyond the specified simple-addition treatment.
 
-Worst-case (absolute) addition is the expected convention. Quadrature is **not** required.
+### IB Physics — first assessment 2025
 
-### IB Physics (2025 syllabus — first exams 2025)
+The coursewide **Skills in the study of physics → Processing uncertainties** section explicitly includes propagation through addition, subtraction, multiplication, division and powers; absolute, fractional and percentage forms; appropriate precision; and maximum/minimum gradients and intercept uncertainties. These are practical and data-analysis skills, not a numbered “PRAC.2” syllabus topic or a subtopic within Tools 1.
 
-PRAC.2 within the Tools strand: "Tools 1 — Experimental techniques." Tested via the Internal Assessment and via Paper 1B/2 short-answer questions on uncertainty.
+Apply the stated measurement assumptions and distinguish a propagated estimate from a statistical confidence interval. The first-order derivations provide the reason for the rules; the detailed statistical treatment below is enrichment.
 
-IB's framing is slightly more explicit about random vs systematic, and IB asks students to consider *propagated absolute uncertainty in a graphical analysis* — slope and intercept uncertainties from max/min gradient lines, which is the closest a typical exam comes to a real statistical treatment.
+### AP Physics 1 / 2 / C: Mechanics / C: Electricity and Magnetism
 
-Worst-case addition is the default; the IB Data Booklet does not list quadrature.
+The current CEDs place experimental reasoning under **Science Practice 3: Scientific Questioning and Argumentation**, alongside representation and mathematical skills. Students should identify sources of uncertainty, explain their effects, improve a procedure and judge the evidence supporting a conclusion.
 
-### AP Physics 1 / 2
+Do not treat Cambridge's three formal propagation rules as a prescribed AP rule set. The AP Physics 2 CED explicitly says detailed error analysis is unnecessary for its exam while encouraging reasoned estimates of percent error or percent difference where appropriate. Such comparisons are not the same as propagating measurement uncertainty. The calculus and quadrature treatment is useful enrichment for these courses, not a guaranteed free-response calculation requirement.
 
-Science Practice 1 ("Modelling and Representations") + Science Practice 4 ("Data Analysis"). The CED does not assign error propagation to a specific Unit number — it is woven through the lab requirement (≥25% of instructional time on hands-on labs).
+### Cambridge 0625 — practical assessment
 
-AP Physics expects students to:
-- Identify dominant sources of uncertainty in a measurement.
-- Estimate fractional uncertainty in a derived quantity using the same rules as 9702 (the CED uses the same "absolute errors add for sums, fractional for products" framing).
-- Comment on whether two values agree "within uncertainty."
+The 2026–28 syllabus requires appropriate measurement precision and comparisons allowing for experimental accuracy. In its comparison guidance it assumes **±10%** at this level; that is not a universal uncertainty assigned to every instrument or result.
 
-AP Physics C (Mechanics and E&M) treats this as background — error analysis appears in the free-response lab questions but rarely as a standalone item. Calculus-based: students may use the master rule $\Delta z = \lvert f'(x) \rvert \Delta x$ directly rather than memorising the three special cases.
-
-### Cambridge 0625 (IGCSE Physics)
-
-Formal error propagation by the three rules is **not** a 0625 topic — it appears for the first time at AS level (9702 §1.3), so a student meeting this card at IGCSE is getting a head start rather than closing a row. What 0625 does ask, on the practical papers, is to record measurements to an appropriate degree of precision and to judge whether results agree **within ±10%**, the limit of experimental accuracy it fixes at this level. Flag it in the lesson: 0625 students need only Rule 1 (absolute errors add in sums) and the awareness that a derived quantity like a volume carries a larger fractional uncertainty than any of the lengths it came from.
+**Not prescribed:** the formal sum/product/power propagation rules. There is no separate requirement to learn only the sum rule. Use the practical measurement and evaluation guidance for 0625; the algebraic propagation treatment extends beyond that scope.
 
 ---
 

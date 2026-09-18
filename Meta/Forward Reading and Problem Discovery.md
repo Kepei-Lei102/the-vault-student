@@ -7,6 +7,7 @@ prerequisites:
   - "[[Product Rule]]"
   - "[[Chain Rule]]"
 leads_to:
+  - "[[You're the Architect, the AI is the Bricklayer]]"
   - "[[Inertia and Bootstrapping]]"
   - "[[Fun Is the Brachistochrone]]"
   - "[[Why Probability and Statistics]]"
@@ -256,6 +257,8 @@ A short field guide. None of this is original; all of it is the same skill rephr
 ---
 
 ## Connections
+
+- **Directing a build:** [[You're the Architect, the AI is the Bricklayer]] — invariants, selection triggers and verification become a method for supervising implementation.
 
 - **Sibling — also in Meta/:** [[Choosing Effective Equations]] (the M1-applied version of forward reading), [[Chain of Thought]] (the within-topic version of structured reasoning), [[Why Probability and Statistics]] (the same hunter framing applied to the specific question of when to trust statistical thinking — *stats lie, causality tends not to*), [[Inertia and Bootstrapping]] (the *execution* counterpart — *that* card asks how the hunter actually starts doing the thing every morning, treating Newton's First Law as a literal description of the human nervous system; pair them as "what kind of person solves problems" + "how that person initiates the act").
 - **Direct application:** every problem-solving card in the vault — particularly the worked examples in [[Newton's Laws of Motion]], [[Linear Momentum]], [[Forces and Equilibrium]], [[SUVAT]], [[Work, Energy and Power]] — is an instance of forward-reading in the small. This card is the explanation of *why* those worked-example narrations are written in the order they're written.

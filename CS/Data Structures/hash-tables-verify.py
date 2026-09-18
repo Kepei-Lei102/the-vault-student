@@ -163,7 +163,7 @@ def GetRecord(Key):
     for i in range(10):
         if HashTable[row][i] is not None and HashTable[row][i][0] == Key:
             return HashTable[row][i][1]
-    return ""
+    return "Not found"
 data = {}
 keys = random.sample(range(10000), 200)
 for k in keys:
@@ -171,7 +171,7 @@ for k in keys:
     InsertData((k, data[k]))
 for k in keys:
     assert GetRecord(k) == data[k]
-assert GetRecord(99999) == ""
+assert GetRecord(99999) == "Not found"
 print("exam engine OK: 200 records into the N25/41 100x10 table, every GetRecord correct")
 
 # ---------- birthday numbers for the card ----------

@@ -33,10 +33,13 @@ tags:
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-2
+  - curriculum/AP-Physics-C-Mechanics
+  - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-4
   - syllabus/0625-1-1
   - syllabus/IB-Physics-A-1
-  - syllabus/AP-Physics-1-SP-1
+  - syllabus/AP-Physics-1-1-1
+  - syllabus/AP-Physics-C-Mechanics-1-1
   - type/deep
   - type/definition
   - notation/bold-vector
@@ -63,7 +66,7 @@ That choice is the central skill of mechanics. This card teaches it.
 
 ## Definition — scalar vs vector, the physicist's taxonomy
 
-Every measurable physical quantity is either a **scalar** (has only magnitude) or a **vector** (has magnitude *and* direction).
+The elementary quantities considered here are **scalars** (no spatial direction) or **vectors** (magnitude and direction). More general physical quantities can require tensors; a scalar can also be signed, as electric charge is.
 
 The test is exactly one question: ***if I add direction to this quantity, does the meaning change?*** If yes, it's a vector. If no, it's a scalar.
 
@@ -100,7 +103,9 @@ The bold ($\mathbf{F}$) and arrow ($\vec{F}$) conventions mean the same thing. A
 
 ### 中文锚点
 
-**物理中的向量** = vectors in physics. 中文物理用「矢量 (shǐliàng)」表示向量；中学数学用「向量 (xiàngliàng)」。两者完全等价。
+斜拉着行李箱走时，你的手只施加了一股拉力，却既把箱子往前拉，又稍稍向上提。把这股力“分解”，就是分别看它在向前和向上两个方向上起多大作用，并没有凭空多出两股力。换一套方向来描述，分量的数值会变，手上的拉力却没变。向量——物理里也叫矢量——记住的就是这股作用有多大、朝哪里。
+
+## Key Vocabulary
 
 | English | 中文 | 含义 |
 |---|---|---|
@@ -111,7 +116,7 @@ The bold ($\mathbf{F}$) and arrow ($\vec{F}$) conventions mean the same thing. A
 | Component | 分量 (fēnliàng) | 矢量在某方向上的投影 |
 | Perpendicular | 垂直 (chuízhí) | 互相成 90° |
 | Parallelogram law | 平行四边形法则 (píngxíng sìbiānxíng fǎzé) | 矢量加法的几何方法 |
-| Triangle of forces | 三力平衡三角形 (sānlì pínghéng sānjiǎoxíng) | 三力平衡时首尾相连成三角形 |
+| Triangle of forces | 三力平衡三角形 (sānlì pínghéng sānjiǎoxíng) | 三力平衡时依次从上一箭头的终点接到下一箭头的起点，组成闭合三角形 |
 
 ## The choice-of-axes principle
 
@@ -149,14 +154,14 @@ The Foundations card stops here at the principle. The full worked μ = tan θ de
 
 The mathematics-side [[Vectors]] card carries the full machinery. Here is the physics-side compact version, two equivalent geometric pictures:
 
-1. **Head-to-tail / triangle method.** To compute $\mathbf{a} + \mathbf{b}$: draw $\mathbf{a}$, then start $\mathbf{b}$ at the end of $\mathbf{a}$, then draw the resultant from the start of $\mathbf{a}$ to the end of $\mathbf{b}$. The three vectors form a triangle.
-2. **Parallelogram method.** To compute $\mathbf{a} + \mathbf{b}$: draw both starting from the same point, complete the parallelogram, the resultant is the diagonal from the common start to the opposite corner. Equivalent to head-to-tail because the parallelogram contains two copies of the triangle.
+1. **Start-to-end / triangle method.** To compute $\mathbf{a} + \mathbf{b}$: draw $\mathbf{a}$, then start $\mathbf{b}$ at the end of $\mathbf{a}$, then draw the resultant from the start of $\mathbf{a}$ to the end of $\mathbf{b}$. The three vectors form a triangle.
+2. **Parallelogram method.** To compute $\mathbf{a} + \mathbf{b}$: draw both starting from the same point, complete the parallelogram, the resultant is the diagonal from the common start to the opposite corner. Equivalent to start-to-end because the parallelogram contains two copies of the triangle.
 
 Cambridge 9702 §1.4 lists both methods. Most exam mark schemes will accept either — *some* questions explicitly call for the parallelogram law, in which case use it. For *calculation*, both reduce to: resolve each vector into components, add the components separately ($x$ with $x$, $y$ with $y$), then recombine using Pythagoras (for magnitude) and arctangent (for direction).
 
 $$\mathbf{a} + \mathbf{b} \;=\; (a_x + b_x, \; a_y + b_y), \qquad |\mathbf{a}+\mathbf{b}| = \sqrt{(a_x+b_x)^2 + (a_y+b_y)^2}$$
 
-For three or more vectors in equilibrium, the head-to-tail method gives the **triangle of forces** (three vectors) or **polygon of forces** (more), in which the vectors close up into a closed shape because their sum is zero. This is the geometric statement of $\sum \mathbf{F} = \mathbf{0}$. Lami's theorem and the sine rule give algebraic shortcuts; see [[Forces and Equilibrium]] §"Triangle of forces and Lami's theorem."
+For three or more vectors in equilibrium, the start-to-end method gives the **triangle of forces** (three vectors) or **polygon of forces** (more), in which the vectors close up into a closed shape because their sum is zero. This is the geometric statement of $\sum \mathbf{F} = \mathbf{0}$. Lami's theorem and the sine rule give algebraic shortcuts; see [[Forces and Equilibrium]] §"Triangle of forces and Lami's theorem."
 
 > [!warning] Magnitude does NOT add unless vectors are parallel
 > If $|\mathbf{a}| = 3$ and $|\mathbf{b}| = 4$, you cannot say $|\mathbf{a} + \mathbf{b}| = 7$. The resultant magnitude depends on the angle between them. Examples:
@@ -165,6 +170,12 @@ For three or more vectors in equilibrium, the head-to-tail method gives the **tr
 > - Opposite (180°): $|\mathbf{a}+\mathbf{b}| = 1$
 >
 > The magnitude is bounded: $\big| |\mathbf{a}| - |\mathbf{b}| \big| \le |\mathbf{a}+\mathbf{b}| \le |\mathbf{a}|+|\mathbf{b}|$. This is the **triangle inequality**, which has the same name and same content in geometry, real analysis, and physics — it lives [[Magnitude of a Vector (Vocab)]].
+
+### Signed components and unit vectors
+
+Choose east as positive. A 5 N force east and a 3 N force west sum to $+5+(-3)=+2$ N: 2 N east. The sign describes direction along the chosen axis; it is not an extra magnitude.
+
+In three dimensions, write $\mathbf{F}=F_x\hat{\mathbf{i}}+F_y\hat{\mathbf{j}}+F_z\hat{\mathbf{k}}$, where each hatted basis vector has unit length along its axis. Add vectors by adding matching components. For position $\mathbf{r}=3\hat{\mathbf{i}}+4\hat{\mathbf{j}}$ metres, $r=5$ m and the dimensionless radial unit vector is $\hat{\mathbf{r}}=\mathbf{r}/r=(3/5)\hat{\mathbf{i}}+(4/5)\hat{\mathbf{j}}$. It preserves direction while stripping away length.
 
 ## Worked Example — the swimmer across the river
 
@@ -225,29 +236,33 @@ The *magnitude* $|\mathbf{F}|$ is the length of the arrow — always non-negativ
 
 ## Exam Notes
 
-### Cambridge 9702 (AS Level)
+### Cambridge 9702 — §1.4
 
-**Syllabus ref:** 1.4 — scalars vs vectors; coplanar vector addition/subtraction; resolution into perpendicular components. What 9702 tests:
-- "Which of these quantities is a vector?" — multiple-choice, every paper. Common traps: *momentum* (vector — the velocity inside it carries direction), *work* (scalar — a dot product), *kinetic energy* (scalar — $\tfrac{1}{2}mv^2$ has no direction information because $v^2$ is a magnitude squared).
-- "Resolve the force $F$ at angle $\theta$ into components along and perpendicular to a given direction." Standard $F\cos\theta$ / $F\sin\theta$ work.
-- "Add two coplanar vectors by the parallelogram method; find the magnitude and direction of the resultant." Either drawn-to-scale geometric, or component-based calculation.
-- Reverse direction: "Two forces, $5~\text{N}$ at $030°$ and $8~\text{N}$ at $120°$. Find the resultant." Pure resolution exercise.
+The 2028–30 syllabus requires distinguishing scalars from vectors and giving examples, adding and subtracting coplanar vectors, and representing a vector as two perpendicular components. Use a scale diagram or component calculation as appropriate to the question. An explicit instruction to use a particular method takes precedence. The syllabus does not guarantee a question on every paper or a fixed mark allocation.
 
-### Cambridge 0625 (IGCSE Physics)
+### Cambridge 0625 — §1.1 Supplement
 
-§1.1, the Supplement half, and it is more than an intro: know that a scalar has magnitude only and a vector has magnitude *and* direction, know which quantities are which (scalars — distance, speed, time, mass, energy, temperature; vectors — force, weight, velocity, acceleration, momentum, electric field strength, gravitational field strength), and find the resultant of **two vectors at right angles**, by calculation or by scale drawing, limited to forces or velocities. Resolving a vector *into* components is not asked for here — that's 9702 / 9709 P4 / IB / AP.
+Know the scalar/vector distinction and the named examples: scalars include distance, speed, time, mass, energy and temperature; vectors include force, weight, velocity, acceleration, momentum, electric field strength and gravitational field strength. Determine the resultant of two perpendicular forces or velocities by calculation or a scale drawing. General oblique resolution is beyond this particular outcome.
 
-### IB Physics
+### IB Physics — shared mathematical skills, SL and HL
 
-Theme A is built on vectors. A.1 (Kinematics) uses scalar/vector throughout; A.2 (Forces and Momentum) lives or dies on vector decomposition. HL adds A.4 (Rigid Body Mechanics) where angular vectors enter and A.5 (Galilean and Special Relativity) where the *boost* transformations of velocity reveal that even simple "addition" isn't quite Galilean at relativistic speeds.
+The guide's “Skills in the study of physics”, pp. 29–30, explicitly requires identifying scalars/vectors, drawing labelled vectors, coplanar addition/subtraction of up to three vectors, scalar multiplication and resolution into two perpendicular components. These skills support A.1/A.2 and field topics; they are not an HL-only extension. A.4's rotational treatment explicitly does not require the vector nature of torque or angular momentum. Do not infer an examined formal vector treatment merely because an angular quantity appears in a topic title.
 
-### AP Physics 1
+### AP Physics 1 — 1.1 and 1.5
 
-Vector resolution appears in every Unit (1 Kinematics, 2 Dynamics, 3 Circular and Gravitation, 5 Torque and Rotational Dynamics). The CED explicitly tests both the conceptual (scalar/vector taxonomy) and the procedural (resolve and add) aspects under Science Practice 1 — Creating Representations.
+1.1 explicitly requires scalar/vector descriptions, magnitude-proportional arrows, opposite signs for opposite one-dimensional directions, and vector sums. 1.5 develops two-dimensional components and motion. Representations and mathematical routines are different science-practice categories; vector content is specified in these topic outcomes, not a standalone “SP1 vector syllabus”. [[Projectile Motion]] supplies the motion application.
 
-### A-Level (other boards)
+### AP Physics C: Mechanics — 1.1
 
-Edexcel, AQA, OCR — all expect vector resolution at the Mechanics chapter opening. The only board variation is in *how* the vector is presented (some use bold, some arrows, some specify "horizontal and vertical components") — the underlying technique is universal.
+The current framework also specifies Cartesian unit-vector notation, position vectors and radial unit vectors, component sums, and signed one-dimensional directions. The short notation example below makes those conventions explicit. Calculus enters later kinematics; it is not needed merely to add vectors.
+
+### AP Physics 2 and AP Physics C: Electricity and Magnetism
+
+Vectors remain working tools: the current frameworks explicitly require electric-field vectors and vector superposition (AP2 10.3; AP-C E&M 8.3). Potential is scalar and superposes as a signed scalar. A general vector introduction supports those topics but does not by itself complete their field physics.
+
+### Scope boundary
+
+None of these inspected school frameworks requires general tensor calculus. Beyond the named examples, physical quantities need not all be scalars or vectors: stress, for example, requires a tensor description. Other exam boards' exact vector requirements have not been audited here.
 
 ## Connections
 

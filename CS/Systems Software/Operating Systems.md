@@ -20,8 +20,10 @@ tags:
   - level/A-Level
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
+  - curriculum/IB-CS
   - syllabus/0478-4-1
   - syllabus/9618-5-1
+  - syllabus/IB-CS-A1-3
   - syllabus/9618-15-1
   - syllabus/9618-16-1
   - type/deep
@@ -164,8 +166,8 @@ Software is built *on* software: a **program library** is a collection of pre-wr
 The OS's whole craft is giving each *process* a private pretend machine. A **virtual machine** takes the trick one level up: software that emulates an *entire computer* — virtual CPU, memory, disk, devices — so faithfully that a complete **guest OS** runs inside it, unaware, while the **host** system carries it as just another set of processes.
 
 - **Roles (give examples):** run Windows software on a Mac; test an app across many OS versions on one desk; let one physical server carry many isolated virtual servers (the shape of the entire cloud — "renting a server" nearly always means renting a VM); contain malware for safe study; keep a legacy system alive after its hardware dies.
-- **Benefits:** isolation (a crashed or infected guest can't touch the host), consolidation (fewer physical machines), snapshots (freeze a machine, restore it after disaster), hardware independence.
-- **Limitations:** overhead — a guest runs slower than the same OS on real hardware, and each guest duplicates a whole OS's memory appetite; imperfect access to exotic hardware; and a licence per guest is still a licence.
+- **Benefits:** isolation (a guest normally cannot access the host outside the interfaces granted to it; hypervisor flaws or unsafe sharing can break that boundary), consolidation (fewer physical machines), snapshots (freeze a machine, restore it after disaster), hardware independence.
+- **Limitations:** overhead — virtualisation can add overhead, though hardware support can make some workloads close to native speed, and each guest duplicates a whole OS's memory appetite; imperfect access to exotic hardware; and a licence per guest is still a licence.
 
 *(One name, two ideas: these system VMs virtualise hardware. The "virtual machines" inside language runtimes — bytecode interpreters — are [[Compilers and Interpreters]]' story.)*
 
@@ -227,9 +229,13 @@ The kernel is not a process taking turns — it is the **turn-giver**: code that
 - **§16.1:** the resource-maximising and complexity-hiding purposes; **process states** (running/ready/blocked) with the *transition causes*; the **four scheduling policies** with function *and* benefit each; **the kernel as interrupt handler** driving low-level scheduling ([[Interrupt Handling]] + this card's process section); **paging vs segmentation** (fixed-physical vs variable-logical), page replacement, and **how disk thrashing occurs** (Example 2's spiral is the mark scheme's shape).
 - **§15.1 (the VM bullets):** the concept of a virtual machine (guest system on emulated hardware), **examples of the role** (testing, consolidation/cloud, legacy, isolation), and benefits vs limitations (isolation and snapshots vs overhead and imperfect hardware access).
 
-### Other boards
+### IB Computer Science — first assessment 2027, A1.3
 
-- **AP CSP:** operating systems appear only as background computing-systems vocabulary — no management-task depth. **IB CS 2027:** A1's hardware statements stop at CPU/memory/FDE; OS process/memory machinery is not a named statement list — treat this card as the deeper story behind their systems fundamentals.
+The full guide explicitly names OS abstraction (A1.3.1), OS functions including file systems, memory management, scheduling, security and virtualisation (A1.3.2), scheduling comparisons (A1.3.3), and polling versus interrupts (A1.3.4). A1.3.5 adds HL multitasking/resource allocation, contention and deadlock. Use [[File Systems]] for the file-management mechanism and [[Interrupt Handling]] for polling/interrupt comparisons. IB's scheduling list includes **multilevel queues**, so the Cambridge four-policy treatment alone does not establish complete IB coverage; the A1.3 topic-map row remains partial. Control systems (A1.3.6–7, HL) also belong to [[Sensors and Control Systems]].
+
+### AP Computer Science A — effective Fall 2025
+
+OS management, scheduling and virtual-memory mechanisms are **not examined** on AP CSA. Its Java text-file input in Topic 4.6 operates above this layer. This is a CSA scope statement, not a claim about the separate AP Computer Science Principles course.
 
 ## Beyond the syllabus
 

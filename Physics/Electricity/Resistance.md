@@ -327,7 +327,7 @@ Only in series. In series the shared quantity is current, so $P = I^2R$ makes th
 
 ## Exam Notes
 
-### Cambridge 9702 — §9.2 and §9.3 (AS)
+### Cambridge 9702 — §9.2 and §9.3 (AS, Papers 1/2)
 
 - **§9.2** is three LOs: *define* p.d. as energy transferred per unit charge; *recall and use* $V = W/Q$; *recall and use* $P = VI$, $P = I^2R$ and $P = V^2/R$. The definition is worth marks in words — "energy transferred per unit charge" — and the trio is examined by making you choose the right member for the quantities you were given.
 - **§9.3** is eight LOs: *define* resistance; *recall and use* $V = IR$; *sketch* the $I$–$V$ characteristics of a metallic conductor at constant temperature, a semiconductor diode and a filament lamp; *explain* the filament lamp's rise in resistance via its temperature; *state* Ohm's law; *recall and use* $R = \rho L/A$; and understand that an LDR's resistance falls as light intensity rises and a thermistor's falls as temperature rises (NTC is assumed throughout).
@@ -338,18 +338,28 @@ Only in series. In series the shared quantity is current, so $P = I^2R$ makes th
 ### Cambridge 0625 IGCSE — §4.2.3 to §4.2.5
 
 - **§4.2.3 Core:** define e.m.f. as the electrical work done by a source in moving unit charge round a complete circuit, and p.d. as the work done by unit charge passing through a component; both are measured in **volts**; describe the use of analogue and digital **voltmeters** with different ranges. **Supplement:** recall and use $E = W/Q$ and $V = W/Q$. Both definitions must name *unit charge* — that is where the mark is.
-- **§4.2.4 Core:** recall and use $R = V/I$; **describe an experiment to determine resistance** using a voltmeter and an ammeter with the appropriate calculations (the bench method above — component in series with an ammeter, voltmeter across it, sweep the supply, and either average $V/I$ or take the gradient of the graph); state *qualitatively* how the resistance of a metallic wire depends on its length and cross-sectional area. **Supplement:** sketch **and explain** the $I$–$V$ graphs for a resistor of constant resistance, a filament lamp and a diode; and use the two proportionalities — resistance directly proportional to length, inversely proportional to cross-sectional area. Note that IGCSE stops at the proportionalities: the constant $\rho$ and the equation $R = \rho L/A$ are A-Level, but the reasoning behind them is identical and is worth having early.
+- **§4.2.4 Core:** recall and use $R = V/I$; **describe an experiment to determine resistance** using a voltmeter and an ammeter with the appropriate calculations (the bench method above — component in series with an ammeter, voltmeter across it, sweep the supply, and for an ohmic component at constant temperature, use the best-fit gradient of a $V$-against-$I$ graph (or its reciprocal for $I$ against $V$); for a non-ohmic component, use $V/I$ at the specified operating point); state *qualitatively* how the resistance of a metallic wire depends on its length and cross-sectional area. **Supplement:** sketch **and explain** the $I$–$V$ graphs for a resistor of constant resistance, a filament lamp and a diode; and use the two proportionalities — resistance directly proportional to length, inversely proportional to cross-sectional area. Note that IGCSE stops at the proportionalities: the constant $\rho$ and the equation $R = \rho L/A$ are A-Level, but the reasoning behind them is identical and is worth having early.
 - **§4.2.5 Core:** understand that circuits transfer energy from a source to the components and then to the surroundings; recall and use $P = IV$ and $E = IVt$; define the **kilowatt-hour** and calculate the cost of running appliances in kW h (Example 1 is exam-shaped).
 - The rest of §4.2 — the electrostatics experiments and the field patterns of §4.2.1 — sits with [[Electric Field]]. Circuits proper (§4.3) follow with series and parallel rules, [[Potential Dividers]] and the action of circuit components.
 
 ### AP Physics 2 / AP Physics C: E&M
 
 - **AP-2** §11.3–11.4 are exactly this material: $R = \rho L/A$, $V = IR$, and $P = IV = I^2R = V^2/R$, plus the ohmic/non-ohmic distinction. The CED leans hard on qualitative reasoning — "the wire is replaced by one of twice the diameter and the same length; describe the effect on the current" — which is Example 2 in words.
-- **AP-C E&M** dresses the same physics in field language: resistivity is defined through **Ohm's law at a point**, $\mathbf{J} = \sigma \mathbf{E}$ with $\sigma = 1/\rho$, and $R = \rho L/A$ is derived from it for a uniform wire rather than assumed. The Beyond callout below is that derivation.
+- **AP-C E&M 11.3–11.4** covers resistance and power, including a uniform-cross-section resistor whose resistivity varies along its length: $R=\int \rho(x)\,dx/A$. The slice derivation below supplies that additional calculus requirement. **11.1** also expresses the physics in field language: resistivity is defined through **Ohm's law at a point**, $\mathbf{J} = \sigma \mathbf{E}$ with $\sigma = 1/\rho$, and $R = \rho L/A$ is derived from it for a uniform wire rather than assumed. The Drude discussion derives the local relation; the slice argument connects it to measured resistance.
 
 ### IB Physics
 
-- Theme B.5.1 and B.5.3 cover e.m.f. and p.d., ideal versus real meters, $R = V/I$, Ohm's law, the ohmic/non-ohmic characteristics and $\rho = RA/L$. B.5.4's potential dividers, combination rules and internal resistance follow from here.
+- **B.5, SL and HL:** e.m.f./p.d., $R=V/I$, resistivity, Ohm’s law, ohmic/non-ohmic behaviour and power. The guide has **no additional-HL B.5 content**. Meters are ideal unless stated otherwise; non-ideal meter resistance is constant. Variable resistors are limited to thermistors, LDRs and potentiometers; a.c. circuits are not required. Combination rules and internal resistance continue in [[Kirchhoff's Laws]] and [[Internal Resistance]].
+
+**Not examined:** electrical resistance is outside current AP Physics 1 and AP Physics C: Mechanics. The material-level calculus is not required by Cambridge 0625; its Core/Extended paper routes are 1/3 and 2/4 respectively, with practical Paper 5 or 6.
+
+## Calculus extension — when resistivity varies along the wire
+
+Recall that a uniform thin slice has resistance $dR=\rho(x)\,dx/A$. Indeed, $J=I/A$ and $dV=E\,dx=\rho J\,dx$ give $dR=dV/I=\rho\,dx/A$. In steady current, slices along a wire carry the same current and their voltage drops add, so they act in series:
+
+$$R=\int_0^L\frac{\rho(x)}A\,dx.$$
+
+**Trigger: material varies with position. Tool: add the series slices.** If the cross-section is constant and $\rho(x)=\rho_0(1+\alpha x/L)$, where $\alpha>-1$ is dimensionless, then $R=(\rho_0L/A)(1+\alpha/2)$. The average resistivity works here because $A$ is constant; inserting the resistivity at only one end would miss the rest of the wire. This is AP C E&M 11.3 calculus, beyond the Cambridge uniform-wire requirement.
 
 ## Beyond the syllabus
 

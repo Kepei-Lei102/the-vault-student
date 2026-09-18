@@ -140,7 +140,7 @@ Draw segment $AB$. With compass set to $AB$, draw an arc from $A$. With the same
 
 ### Cambridge 0580 Extended
 
-**Syllabus ref:** E4.2. Cambridge 0580 is *less* demanding than 9260 here — it requires construction of triangles given specific dimensions and scale drawings, but does **not** require compass bisector constructions. If a 0580 paper says "construct the triangle with sides $5\,\text{cm}$, $6\,\text{cm}$, $7\,\text{cm}$," it means: draw one side with a ruler, then use compasses to swing arcs of $6\,\text{cm}$ and $7\,\text{cm}$ from the two endpoints — the intersection is the third vertex. That much *is* required. (The technique is the same one used in [[Congruence]] for SSS.)
+**Syllabus ref:** E4.2 *Geometrical constructions*, three points: (1) measure and draw lines and angles — a ruler for every straight edge, and the syllabus states outright that **constructions of perpendicular bisectors and angle bisectors are not required**; (2) construct a triangle given the lengths of all three sides using a ruler and a pair of compasses only, with **construction arcs shown** (the syllabus's example: a rhombus as two triangles); (3) draw, use and interpret **nets** of cubes, cuboids, prisms and pyramids, including taking measurements from a net to find a volume or surface area. Scale drawings are the next row, **E4.3**, not this one. So 0580 is *less* demanding than 9260 on compass work: if a 0580 paper says "construct", it means the three-sides triangle with its arcs left visible.
 
 ---
 

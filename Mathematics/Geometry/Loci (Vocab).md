@@ -148,7 +148,7 @@ This means: shade the intersection of (a) the rectangle, (b) the side of the per
 
 ### OxAQA 9260
 
-**Syllabus ref:** G13. Loci appear as 4–6 mark questions, almost always combined with [[Geometrical Constructions (Vocab)]]. The standard exam pattern: a diagram is given (a rectangular field, a triangle, a map of a town), and the candidate must construct two or three loci, then shade the region satisfying all conditions. Marks are awarded for: visible construction arcs, correct loci drawn accurately, correct boundary type (dashed/solid), and the right region shaded.
+**Syllabus ref:** G13 — the ruler-and-compass constructions, "use these to construct given figures and **solve loci problems**", and "know that the perpendicular distance from a point to a line is the shortest distance to the line". Loci appear as 4–6 mark questions, almost always combined with [[Geometrical Constructions (Vocab)]]. The standard exam pattern: a diagram is given (a rectangular field, a triangle, a map of a town), and the candidate must construct two or three loci, then shade the region satisfying all conditions. Marks are awarded for: visible construction arcs, correct loci drawn accurately, correct boundary type (dashed/solid), and the right region shaded.
 
 > [!tip] 9260 specifically tests "perpendicular distance = shortest distance"
 > The G13 syllabus explicitly mentions this. Expect at least one phrase like "the locus of points whose shortest distance from line $AB$ is $3\,\text{cm}$" — translate immediately to "perpendicular distance $= 3\,\text{cm}$" and draw the two parallel lines.

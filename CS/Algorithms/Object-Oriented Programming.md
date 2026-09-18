@@ -7,7 +7,7 @@ prerequisites:
   - "[[A Rich Neighbor Named Xerox]]"
   - "[[Program Development Life Cycle and Testing]]"
 leads_to:
-  - "[[Declarative Programming]]"
+  - "[[Programming Paradigms]]"
   - "[[Dual-Core Craft]]"
 tags:
   - subject/computer-science
@@ -53,7 +53,9 @@ Four more words name what classes let you *do*:
 
 ### 中文锚点
 
-打开《英雄联盟》(League of Legends)，选一个英雄。每个英雄都有**属性**（生命值、攻击力、法强、移速）和**技能**（Q、W、E，还有大招 R）——一个英雄就是**一个对象**：数据和能对这份数据做的操作，绑在一起。所有英雄共有的那份"说明书"——有哪些属性、哪些技能——就是**类**；你锁定、正在操控的那个，是类的**一个实例**，由**构造器**在读条结束、进入峡谷的那一刻造出来。你不能直接改生命值（那是外挂），只能通过"受到伤害""回复"这些方法去改——这就是**封装**：数据藏在里面，只留方法在外面（**getter** 读，**setter** 改）。法师、射手、坦克都是英雄，各自还会多出一些自己的属性——**继承**：射手*是一个*英雄（is-a）。每个英雄都有 R 这个技能位，按下去实际触发的效果却各不相同——**多态**：同一个调用，由对象自己决定做什么，画技能栏的代码从来不需要知道你选了谁。一支队伍*拥有*五个英雄（has-a）——那不是继承，是**包含**。这张卡把这九个词在真实的 Python 里各造一遍，再用两道真的 Paper 4 原题（动物园的动物类、车站与火车的包含关系）走一遍考试要你写的每一行；理论卷 Paper 3 考的是把词和定义连线——连线题的九个词，就是上面这九个。
+想象你在写一个游戏，场上站着两个长得一模一样的英雄。一个挨了打，另一个的血条当然不该跟着掉。写程序时，就可以让每个英雄把自己的生命值和“受伤”“回血”这些操作放在一起：叫谁受伤，就由谁去改自己的状态。这样的一个整体，就是一个对象。数据不再是散落在各处、分不清属于谁的数字，而是跟着具体的那个角色走。
+
+## Key Vocabulary
 
 | English | 中文 | 一句话 |
 |---|---|---|
@@ -387,7 +389,7 @@ Python's loop over `zoo` never checked that every element was an `Animal`; it ch
    - [[Program Design]] — the design step; a class diagram is the fourth design notation.
 
 - **Children:**
-   - [[Declarative Programming]] — the fourth paradigm of §20.1: facts and rules instead of objects and methods.
+   - [[Programming Paradigms]] — the four paradigms of §20.1 side by side, the declarative quarter (facts, rules, goals) run on a small Prolog engine.
    - [[Dual-Core Craft]] — where inheritance trees broke under real-time load and entity–component–system (ECS) replaced them; this card's Beyond explains ECS as OOP's deliberate inverse, and why the vault itself is built on it.
 
 - **The bay that is already OOP:** [[Stacks and Queues]], [[Linked List]], [[Binary Trees]], [[Hash Tables]], [[Graphs]] — every structure a class, every operation a method, every invariant guarded by encapsulation.

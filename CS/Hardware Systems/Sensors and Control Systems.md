@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[Embedded Systems]]"
   - "[[Decouple and Recouple]]"
+  - "[[Automated Systems and Robotics]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -82,7 +83,7 @@ Three flags worth pinning to the table:
 
 - **Humidity is not moisture.** Humidity is water vapour *in the air*; moisture is water *in the soil or on a surface*. An irrigation system wants a **moisture** sensor — a humid evening can hang over bone-dry soil. This near-synonym is the single most reliable trap in the topic.
 - **Sensors hunt in packs.** A greenhouse runs temperature *and* humidity *and* light *and* moisture; a phone carries an accelerometer, proximity, light and magnetic sensor without you ever noticing. Exam questions rarely want one sensor — they want the *right set*, each justified.
-- **The pressure sensor closes an old loop:** it is the working heart of the resistive touchscreen from [[Input and Output Devices]] — the same physics, promoted from sensing a finger to sensing the world.
+- **Pressure and touch are related inputs, but the mechanisms differ.** A resistive touchscreen detects contact position when two conductive layers meet; it need not measure pressure magnitude like a calibrated strain-gauge pressure sensor. See [[Input and Output Devices]].
 - **How an accelerometer knows *tilt*:** it cannot tell gravity from acceleration — and that is the trick. At rest, the proof mass sags under gravity's steady 1 g; tilt the chip and that 1 g redistributes across its three axes (a component $g\sin\theta$ appears along the tilted axis), so reading the axes reads *the direction of down*. Fine print: in a turning car the same confusion fools it — extra acceleration masquerades as tilt — which is why real devices get their orientation from sensor fusion (see Beyond).
 
 ## From smear to number — the ADC
@@ -203,6 +204,7 @@ Not examined — AP CSA is a programming course; hardware control is out of scop
 - **Leads to:** [[Embedded Systems]] — seal the loop and its processor into one box and it disappears into a washing machine, a thermostat, a pacemaker: a computer whose entire life is one ring; [[Interrupt Handling]] — the loop's *measure* step is implemented either as a polling loop or as a sensor raising an interrupt.
 - **Physics bridge:** the sensor's electrical half is the potential divider of A-Level physics — a thermistor or LDR as the variable leg, read out as a voltage; the magnetic-field row's Hall probe is [[Lorentz Force]] machinery (carriers shoved sideways until a steady voltage reports the field); and **negative feedback** is the same idea biology calls homeostasis.
 - **Meta:** [[Decouple and Recouple]] — feedback is engineering's great *deliberate coupling*: output wired back to input on purpose, because here the coupling *is* the product.
+- **Leads to:** [[Automated Systems and Robotics]] — the ring given a body: the three characteristics of a robot, the scenario-by-scenario advantages and disadvantages, and the exam's six-mark sensor → microprocessor → actuator skeleton.
 
 ## Glossary
 

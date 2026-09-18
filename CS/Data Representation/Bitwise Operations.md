@@ -133,7 +133,7 @@ On an unsigned value they agree. On a *signed negative* value they wildly disagr
 *Right-shifting −8 (`1111 1000`) by one. A **logical** shift pulls a 0 into the top bit, giving `0111 1100` = +124 — the sign was destroyed, the answer is garbage. An **arithmetic** shift copies the sign bit (1) back in, giving `1111 1100` = −4 — a correct halving. The only difference is the single bit shifted *into* the top; that one bit is the whole distinction.*
 
 > [!info] Arithmetic shift is *not* the same as ÷ for negatives
-> Arithmetic right shift rounds **toward −∞** (it floors), while integer division in most languages rounds **toward zero** (it truncates). So `−7 >> 1` is `−4` (`1111 1001 → 1111 1100`), but `−7 / 2` is `−3`. They match for non-negative numbers and differ by one for negatives — a subtle, real bug when people use `>> 1` as a drop-in for `÷ 2` on signed data.
+> Arithmetic right shift rounds **toward −∞** (it floors). For example, `-7 >> 1` is `-4` (`1111 1001 → 1111 1100`). In **Python**, `-7 // 2` is also `-4`, while `/` gives `-3.5`. In **Java integer arithmetic**, `-7 / 2` truncates toward zero and gives `-3`. A right shift therefore cannot replace truncating integer division blindly: they differ for negative values with a nonzero remainder.
 
 (Languages name these differently: Java has `>>` for arithmetic and a separate `>>>` for logical; C's `>>` on a signed type is arithmetic on most compilers but technically implementation-defined; Python's integers are arbitrary-precision so `>>` always behaves arithmetically.)
 
@@ -151,7 +151,7 @@ A **rotate** (circular shift) takes the bit that would fall off one end and **wr
 
 ## Worked examples
 
-**1 — Unpack a colour.** From `0x2563EB`: red = `(0x2563EB >> 16) & 0xFF` = `0x25` = 37; green = `(>> 8) & 0xFF` = `0x63` = 99; blue = `& 0xFF` = `0xEB` = 235. Three channels, extracted with shifts and one mask each.
+**1 — Unpack a colour.** **Tool and trigger:** each colour occupies one byte → shift that byte into the lowest eight positions, then AND with `0xFF` to keep only those positions. From `0x2563EB`: red = `(0x2563EB >> 16) & 0xFF` = `0x25` = 37; green = `(>> 8) & 0xFF` = `0x63` = 99; blue = `& 0xFF` = `0xEB` = 235. Three channels, extracted with shifts and one mask each.
 
 **2 — Toggle a single flag.** A settings byte is `1011 0010`. To flip the "bit 2" setting: XOR with `0000 0100` → `1011 0110`. Run it again and you're back — XOR is its own inverse.
 
@@ -187,11 +187,11 @@ XOR is one of the most useful operators in computing: it toggles bits, compares 
 
 ### Cambridge 0478 (IGCSE CS)
 
-**§1.1.5** — **logical binary shifts** (left and right), their effect (×2 / ÷2 by powers of two), and that bits shifted off the end are lost. This card closes the shift row and adds the surrounding bit-manipulation context. (Overflow from a left shift is in [[Overflow and Underflow]].)
+**§1.1.5, Paper 1** — perform single or multiple **logical left/right shifts on a positive 8-bit integer**. Track the bit positions and discard bits shifted out. A left shift multiplies by a power of two only if no significant bits are lost; a right shift discards the remainder. Explain the effect on the value as well as writing the result. Arithmetic and cyclic shifts and general masking are enrichment at 0478. See [[Overflow and Underflow]] for lost high bits.
 
 ### Cambridge 9618 (A-Level CS)
 
-**§4.3 Bit manipulation** is this card's row, and it names the whole of it. Shifts come in **three** families — **logical, arithmetic and cyclic**, left and right — so all three are fair game, not just the logical pair. The second objective is masking, and it is framed as *using bit manipulation to monitor or control a device*: **test and set a bit**. The four recipes above are that answer — `AND` to test, `OR` to set, `AND` with the inverted mask to clear, `XOR` to toggle — and a device-control question is asking for exactly these with a mask you design.
+**§4.3 Bit manipulation, AS Paper 1:** Shifts come in **three** families — **logical, arithmetic and cyclic**, left and right — so all three are fair game, not just the logical pair. The second objective is masking, and it is framed as *using bit manipulation to monitor or control a device*: **test and set a bit**. The four recipes above are that answer — `AND` to test, `OR` to set, `AND` with the inverted mask to clear, `XOR` to toggle — and a device-control question is asking for exactly these with a mask you design.
 
 The same operations return in the **§4.2 instruction set**, acting on the accumulator: `AND`, `OR` and `XOR`, each taking either an immediate operand (`#n`, `Bn`, `&n`) or an `<address>`, plus `LSL #n` and `LSR #n` for the shifts — see [[Assembly Language]]. Note that the Cambridge set provides the **logical** shifts only; arithmetic and cyclic shifts are examined as understanding, not as instructions you are given.
 
@@ -199,9 +199,11 @@ Logical operators **AND / OR / NOT** also appear as gates in §3.2 ([[Logic Gate
 
 ### IB Computer Science
 
-Not a named statement: A1.2's confirmed wording stops at **binary/hexadecimal conversion and logic gates** — bit-level operators, masking and shifts are beyond every published outline. They remain quiet allies in IB programming work (any flag-packing or parity trick), but carry no marks of their own.
+**First assessment 2027:** the full February 2025 guide p.29 prescribes binary/hexadecimal conversion, binary data encoding, gates, Boolean operators, truth tables and circuits in A1.2. It does **not prescribe word-level bitwise operators, shifts or masking** as named objectives. Distinguish a gate/truth-table question from operations on every bit of an integer; the latter are useful programming enrichment, not an extra A1.2 requirement.
 
-*(AP CSA: Java has `& | ^ ~`, the arithmetic `>>`, and the logical `>>>`; the operators behave exactly as here on Java's two's-complement `int`.)*
+### AP Computer Science A
+
+**Bitwise operations and shifts are not part of the assessed operator set in the current course description.** Java provides `&`, `|`, `^`, `~`, arithmetic `>>` and logical `>>>` on integers, but language availability is not an exam requirement. Boolean expressions and logical operators remain examinable; array-element shifting is a different operation from shifting an integer's bits.
 
 ## Connections
 

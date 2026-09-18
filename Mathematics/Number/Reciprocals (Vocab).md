@@ -10,6 +10,8 @@ tags:
   - subject/mathematics
   - domain/number
   - level/IGCSE
+  - curriculum/OxAQA-9260
+  - syllabus/9260-N3
   - curriculum/Cambridge-0580
   - syllabus/0580-E1-1
   - type/vocabulary
@@ -36,7 +38,7 @@ The reciprocal of $x$ is written $\dfrac{1}{x}$ or $x^{-1}$.
 | $-1$ | $-1$ (its own reciprocal) | $(-1)(-1) = 1$ ✓ |
 | $0$ | **undefined** | nothing times $0$ equals $1$ |
 
-For a fraction $\tfrac{p}{q}$, the reciprocal is $\tfrac{q}{p}$ — *swap numerator and denominator*. That's the universal mnemonic: **flip the fraction**.
+For a fraction $\tfrac{p}{q}$ with $p\ne0$ and $q\ne0$, the reciprocal is $\tfrac{q}{p}$ — *swap numerator and denominator*. That's the universal mnemonic: **flip the fraction**.
 
 ### 中文锚点
 
@@ -63,7 +65,7 @@ For a fraction $\tfrac{p}{q}$, the reciprocal is $\tfrac{q}{p}$ — *swap numera
 | dividing by | 除以 | dividing by $x$ = multiplying by $\dfrac{1}{x}$ |
 
 > [!info] Why $0$ has no reciprocal
-> Suppose $0$ had a reciprocal, called $r$. By definition $0 \cdot r = 1$. But $0$ times *anything* is $0$, so $0 \cdot r = 0 \ne 1$. Contradiction — no such $r$ exists. This is the deep reason **division by zero is undefined** throughout mathematics: division by $x$ *is* multiplication by $1/x$, and when $x = 0$, $1/x$ doesn't exist.
+> Suppose $0$ had a reciprocal, called $r$. By definition $0 \cdot r = 1$. But $0$ times *anything* is $0$, so $0 \cdot r = 0 \ne 1$. Contradiction — no such $r$ exists. This is the deep reason **division by zero is undefined** in ordinary real and complex arithmetic: division by $x$ *is* multiplication by $1/x$, and when $x = 0$, $1/x$ doesn't exist.
 
 ---
 
@@ -105,30 +107,32 @@ Reciprocal of $7$ is $\tfrac{1}{7}$. Reciprocal of $\tfrac{1}{7}$ is $7$.
 1. **Saying $0$'s reciprocal is $0$ or $\infty$.** Neither. The bare symbol $\dfrac{1}{0}$ is **undefined, period** — there is no real number that, multiplied by $0$, gives $1$.
    - The "$\infty$" answer comes from a *different* question: not "what is $\dfrac{1}{0}$?" but "what does $\dfrac{1}{x}$ do as $x$ approaches $0$?" That's a **limit**, and the answer depends on *which function* and *from which side*: $\dfrac{1}{x} \to +\infty$ as $x \to 0^+$, but $\dfrac{1}{x} \to -\infty$ as $x \to 0^-$. Same "$\dfrac{1}{0}$" shape, *opposite* limits — because the function is doing different things on the two sides.
    - Worse: $\dfrac{\sin x}{x} \to 1$ as $x \to 0$ (a $\tfrac{0}{0}$ form, but the limit is $1$). And $\dfrac{x^2}{x} \to 0$ as $x \to 0$ (also $\tfrac{0}{0}$, but the limit is $0$). The same indeterminate form gives wildly different answers depending on the function.
-   - **Lesson.** A bare expression like $\dfrac{1}{0}$ has no meaning until you supply a *context* — a function, a process, a limit. Mathematical symbols don't carry meaning by themselves; they get meaning from the setting they live in. At 0580 there's no context, so $\dfrac{1}{0}$ is undefined. Calculus brings the context (a function and a limit), and even then the answer depends entirely on *which* function you chose.
-2. **Forgetting to flip the sign.** Reciprocal of $-5$ is $-\tfrac{1}{5}$, *not* $\tfrac{1}{5}$.
+   - **Lesson.** $\dfrac10$ is undefined in real and complex arithmetic, including calculus. A limit describes nearby values of a function; it does not assign a value to division by zero. The notation “$0/0$ form” describes a limit whose numerator and denominator both tend to zero, not a number equal to a chosen answer.
+2. **Dropping the minus sign.** Reciprocal of $-5$ is $-\tfrac{1}{5}$, *not* $\tfrac{1}{5}$.
 3. **Reciprocal vs negative.** Reciprocal of $5$ is $\tfrac{1}{5}$ ($= 0.2$). *Negative* of $5$ is $-5$. Different operations, different results.
 4. **Forgetting to convert mixed numbers.** Reciprocal of $1\tfrac{2}{3}$ is *not* "$1\tfrac{3}{2}$" — convert to improper $\tfrac{5}{3}$ first, then flip to $\tfrac{3}{5}$.
 
 ---
 
+## Beyond Syllabus — different kinds of inverse
+
+Recall that a reciprocal undoes multiplication. An inverse function instead undoes **composition**: $f^{-1}$ is not generally $1/f$. A nonsingular square matrix has an inverse under matrix multiplication. In modular arithmetic, $a$ has a multiplicative inverse modulo $n$ exactly when $\gcd(a,n)=1$; that last topic is enrichment here, not a blanket A-Level/IB/AP requirement.
+
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 — C1.1 / E1.1 Types of number
 
-**Syllabus ref:** N1 — recognise reciprocals. Often appears in fraction-arithmetic chains:
+Both Core and Extended explicitly require identifying and using **reciprocals**. The reference is C1.1/E1.1, not “N1”. Recognise the reciprocal of a negative number, decimal or mixed number; verify the product is one. Fraction division uses the same multiplicative-inverse idea.
 
-- "Find the reciprocal of $\dfrac{4}{7}$."
-- "Calculate $\dfrac{2}{3} \div \dfrac{5}{6}$." (Multiply by reciprocal.)
-- "Use a calculator to find the reciprocal of $0.625$." (The $1/x$ button is dedicated to this.)
+### OxfordAQA 9260 — N3 Core
 
-### A-Level / IB / AP
+N3 explicitly includes reciprocals in conventional notation for operations, alongside brackets, powers and roots. This is Core content, also assumed on Extension; no Extension-only reciprocal rule is introduced.
 
-The reciprocal idea generalises:
+### Later mathematics courses
 
-- **Functions:** $f^{-1}$ is the *inverse function* — its composition with $f$ gives identity. The reciprocal is the inverse for the *multiplication operation* specifically.
-- **Matrices:** $A^{-1}$ is the *inverse matrix* — the analogue of reciprocal in linear algebra.
-- **Modular arithmetic:** in $\mathbb{Z}/n\mathbb{Z}$, $a$ has a reciprocal iff $\gcd(a, n) = 1$ (the multiplicative-inverse condition that powers RSA cryptography).
+Cambridge 0606 and 9709, IB mathematics, and AP Calculus use this as prior numerical/algebraic knowledge rather than a new standalone reciprocal-arithmetic unit. Cambridge 9231 §1.1 explicitly includes polynomial transformations whose new roots are reciprocals of old roots; that is an application with nonzero roots, not a different definition.
+
+**Not implied by these placements:** modular inverses are not a required reciprocal-arithmetic outcome of 0580 C1.1/E1.1 or 9260 N3. The lens equation and optical power are physical applications, not mathematics-board requirements.
 
 ---
 

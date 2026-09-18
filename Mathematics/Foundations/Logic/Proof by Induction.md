@@ -8,6 +8,7 @@ leads_to:
   - "[[Four Colour Theorem]]"
   - "[[Summation of Series]]"
   - "[[Recursion]]"
+teach_together:
   - "[[Natural Numbers]]"
 tags:
   - subject/mathematics
@@ -286,12 +287,13 @@ Starting from the target equality at $k+1$ and manipulating both sides until som
 > Recall that induction climbs $\mathbb{N}$ along the $+1$ steps every integer is built from. But *any* recursively built world supports the same argument: prove the claim for the atoms, prove each construction rule preserves it, and the claim holds for everything constructible. That is **structural induction** — induction on shape rather than size — and it is how one proves facts about [[Recursion]] (a recursive function's correctness proof *is* an induction on its argument — the twin claim, made from the other side), about [[Binary Trees]] (every non-empty tree has one more node than edge), about every grammar written in BNF ([[Compilers and Interpreters]]). When a computer scientist says "by induction on the structure of the tree," this card is what they mean.
 
 > [!info] The axiom at the bottom — and the edge of the method
-> Why does the relay argument get to call itself an *axiom*-grade truth? Peano's answer: it doesn't rest on anything deeper — **induction is one of the axioms that define $\mathbb{N}$** ([[Natural Numbers]]). "The naturals are exactly what induction reaches" is the fence that keeps out rogue numbers sitting beyond every finite chain of $+1$s. And the fence has a famous gate: **Goodstein's theorem**, a concrete statement about ordinary integers, is *true* but *unprovable* from Peano's axioms — proving it requires induction along orderings longer than $\mathbb{N}$ itself (transfinite induction). It is the concrete face of [[Gödel's Incompleteness Theorems]]: the method of this card proves essentially everything you will meet for years, and the exceptions are landmarks of logic, not potholes.
+> Recall that induction follows the zero-and-successor structure of [[Natural Numbers]]. A condition ranging over **all subsets**, with full second-order semantics, rules out unreachable extra elements. **First-order Peano arithmetic (PA)** instead uses an induction schema for formulas and admits nonstandard models; the two formulations must be distinguished. **Goodstein's theorem** is true in the standard naturals but unprovable in PA. This is a limit of that formal system, not a failure of the induction method used in ordinary proofs. [[Gödel's Incompleteness Theorems]] develops the truth-versus-provability distinction. [Open Logic Text, §39.2](https://builds.openlogicproject.org/open-logic-complete.pdf#page=609)
+
 
 ## Connections
 
 - **Builds on:** [[Logic]] — the step is an implication proved the way implications are proved, the whole method is chained modus ponens, and Example 5's vacuous-truth subtlety is Logic's umbrella promise; [[Sequences]] — recurrences supply the conjecture-then-prove habitat, and this card is the cure for the pattern-spotting trap that card warns about.
-- **Leads to:** [[Summation of Series]] — the standard results $\sum r, \sum r^2, \sum r^3$ this method certifies; [[Recursion]] — induction made executable: same base, same step, computing instead of proving; [[Natural Numbers]] — induction promoted from method to axiom.
+- **Leads to:** [[Summation of Series]] — the standard results $\sum r, \sum r^2, \sum r^3$ this method certifies; [[Recursion]] — induction made executable: same base, same step, computing instead of proving; [[Natural Numbers]] — induction promoted from method to axiom (teach together).
 - **Proof in the wild:** [[Power Rule]] — the rule every calculus student uses daily, in three lines (Example 6); [[Euler's Formula and De Moivre's Theorem]] — de Moivre for integer $n$, proved by induction; [[Binomial Theorem]] — the classic inductive proof via Pascal's rule, and the other road to the power rule.
 - **Proof ingredient:** [[Product Rule]] — proved from first principles, so the inductive step of Example 6 borrows nothing it is trying to prove.
 - **Kindred:** [[Matrix]] — the multiplication engine under Example 3; [[Eigenvalues and Eigenvectors]] — why Example 3's answer is built from $1^n$ and $2^n$; [[Proof by Contradiction]] — the minimal-criminal lens; [[Chain of Thought]] — where induction sits among the proof structures; [[Gödel's Incompleteness Theorems]] — the method's outer edge.

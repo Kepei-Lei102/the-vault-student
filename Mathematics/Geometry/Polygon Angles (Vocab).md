@@ -100,7 +100,7 @@ And at every vertex: interior $+$ exterior $= 180°$ (they're supplementary — 
 
 ## Exam Notes
 
-**9260 G4 / 0580 E4.3.** "Calculate unknown angles using properties of regular and irregular polygons." Common question types: "The interior angle of a regular polygon is $156°$. How many sides does it have?" Method: exterior $= 180° - 156° = 24°$, so $n = 360° / 24° = 15$ sides.
+**Cambridge 0580 E4.6 point 3** — "know and use angle properties of regular and irregular polygons", which the syllabus says includes exterior and interior angles and the angle sum (the polygon *names* are E4.1). **OxfordAQA 9260 G4** — "calculate and use the sums of the interior and exterior angles of polygons". Common question types: "The interior angle of a regular polygon is $156°$. How many sides does it have?" Method: exterior $= 180° - 156° = 24°$, so $n = 360° / 24° = 15$ sides.
 
 ---
 

@@ -107,7 +107,7 @@ This is a common confusion: a $1:1000$ map is *larger-scale* (more detail) than 
 
 ### Cambridge 0580
 
-**Syllabus ref:** E4.3 — read and use scales on maps and diagrams; convert between scale forms; use scales to find real distances. Standard patterns:
+**Syllabus ref:** E4.3 *Scale drawings*, two points — (1) "draw and interpret scale drawings", with the note that **a ruler must be used for all straight edges**; (2) "use and interpret **three-figure bearings**", measured clockwise from north, 000° to 360°, including the reverse bearing (the syllabus's example: the bearing of A from B when the bearing of B from A is 025°) and the words north, east, south and west ([[Bearings (Vocab)]]). Reading and converting scales is the first point in practice. Standard patterns:
 
 - "On a map with scale $1 : 200{,}000$, the distance between two cities is $7.5$ cm. Find the real distance in km."
 - "A bedroom in a flat is $4.5$ m by $3.2$ m. Draw a scale plan using a scale of $1 : 50$." (Drawing: $9 \text{ cm} \times 6.4 \text{ cm}$.)

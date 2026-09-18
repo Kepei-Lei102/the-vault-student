@@ -1,6 +1,6 @@
 # The Vault — Stories Directory 故事目录
 
-> **46 stories.** Last landed: [[Stats Lies Hall of Fame]] (2026-09-14) — eight correct numbers that misled, and the people who asked what was thrown away: Farr's elevation law and Snow's water companies, Nightingale's chart drawn twice, the 2.4 million ballots, Wald's clean engines, Huff for the tobacco industry, Anscombe's quartet, Berkeley's departments.
+> **52 stories.** Last landed: [[Ibn al-Haytham and the Question of Seeing]] (2026-09-18) — two lamps, one opening and an author willing to question his own book.
 > Fun-first historical narratives: the folder where the human drama of mathematics, physics and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Meta/Directory|Meta]].
@@ -23,7 +23,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ---
 
-## Mathematics (19)
+## Mathematics (20)
 
 1. **[[The Calculus Priority Dispute]]** — Newton vs Leibniz, 1665–1727: the Royal Society's rigged committee, Britain's century in the notation wilderness, Babbage's 1812 fix.
 2. **[[The Hidden Number]]** — 250 years of $e$ from Napier to Hermite: "natural" means *unbidden* — five independent paths keep producing the same constant, nobody choosing it.
@@ -44,8 +44,9 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 17. **[[Hilbert vs Brouwer]]** — the same war a generation on, 1888–1931: "this is theology", consistency-is-existence versus build-it-or-it-isn't-there, Weyl's revolution and Hilbert's Putsch, the *Annalen* purge Einstein called the war of the frogs and the mice, and Gödel announcing incompleteness in Königsberg the day before *Wir müssen wissen*; the excluded-middle example run both ways, and the settlement inside every proof assistant.
 18. **[[Archimedes and the Soldier]]** — Syracuse, 287–212 BC: Vitruvius's bath recomputed and found wanting, Galileo's balance that must have replaced it, π trapped by a 96-gon (rerun), the sphere two-thirds of its cylinder, $10^{63}$ grains of sand, the *Method* read through a prayer book, the claw at the siege, Plutarch's three deaths and the Roman last words, and Cicero finding the tomb the city had lost.
 19. **[[Stats Lies Hall of Fame]]** — every exhibit a *correct* number that misled: Farr's elevation law, Nightingale's radius-scaled chart, the *Literary Digest*, Wald's bombers, Huff at the tobacco hearing, Anscombe's quartet, Berkeley's departments; six hunter's questions at the end. *Also a Meta card.*
+20. **[[Laplace and Napoleon]]** — Malmaison, 1802: "I had no need of that hypothesis" as the legend has it and as Herschel's diary has it; the 900-year Jupiter–Saturn wave that fired Newton's clock-mending God, reproduced from Newton's law; the examiner who passed cadet Bonaparte, the six-week minister, seven regimes served, and the determinist who invented the mathematics of doubt.
 
-## Physics (11)
+## Physics (13)
 
 1. **[[Newton vs Hooke]]** — the first Newton priority fight, 1672–1703: the "Giants" letter as a barbed pun, the inverse-square letter, the missing portrait.
 2. **[[The 1919 Eclipse]]** — Eddington at Príncipe, Crommelin at Sobral: the Sobral plates discarded, and why that was calibration rather than cheating.
@@ -59,7 +60,11 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 10. **[[The Bookbinder's Apprentice]]** — Faraday: the blacksmith's son who learned science from the books he bound and, unable to afford mathematics, drew the field instead.
 11. **[[Famous for the Wrong Thing]]** — Feynman: famous for the safes, the plate, the bongos, the ice water and a study method he never wrote; not for the diagrams that compute the electron's magnetism to eleven digits — run here, with the O-ring chart the engineers never drew.
 
-## Computing (13)
+12. **[[Henrietta Leavitt and the Cosmic Yardstick]]** — a glass-and-wire measuring tool, twenty-five variable stars, and the difference between finding a relationship and calibrating a cosmic ruler.
+
+13. **[[Ibn al-Haytham and the Question of Seeing]]** — the Nile legend kept uncertain, the dark-room experiment made testable, and a scholar who withdrew an earlier argument of his own.
+
+## Computing (15)
 
 1. **[[The Boolean-to-Silicon Bridge]]** — 112 years from Sheffer's NAND theorem to a model named after Shannon; the hinge is a 1937 Master's thesis.
 2. **[[Turing at Bletchley]]** — Enigma and the Bombe, the Poles who broke it first, the ten thousand at Bletchley, and the 1952 conviction told with dignity.
@@ -74,16 +79,21 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 11. **[[Space Travel]]** — an operating system exists because a video game cost $75 a play: Unix's origin in Ritchie's own words.
 12. **[[A Rich Neighbor Named Xerox]]** — PARC built the desktop in 1973 and could not sell it; Jobs's million-dollar ticket, the best comeback in the trade, the 1994 ruling.
 13. **[[Two Family Trees]]** — Unix's grafted oak (BSD, Mach, NeXT, Darwin; Minix, a Finnish hobby, Android, every supercomputer) beside VMS's single trunk (Cutler, NT); the 1992 "LINUX is obsolete" flame war, verbatim.
+14. **[[The Perceptron and Move 78]]** — 1958–2025: Rosenblatt's perceptron and the Navy's press conference, Minsky and Papert's XOR, two winters, back propagation's four inventors, Monte Carlo tree search, AlexNet on two gaming cards, AlphaGo's move 37 and Lee Sedol's move 78, and the transformer as the same recipe again.
 
-## Sound and speed (3)
+15. **[[Grace Hopper and the Nanosecond]]** — clocks taken apart, programs assembled from routines, FLOW-MATIC and COBOL with their collaborators, the moth legend checked, and a teacher handing out pieces of time.
+
+## Media and speed (4)
 
 1. **[[One Take, Many Tracks]]** — the history of recording as the history of gaining random access to time: Caruso's wax, Mullin's Magnetophons, Les Paul's overdubs.
 2. **[[The Loudness War]]** — what producers did with total control: the lacquer groove as referee, the CD removing the governor, and the race that followed.
 3. **[[From the Grid to the Garage]]** — how racing technology reaches the road, and where the road finally overtook: disc brakes at Le Mans, ground effect, the turbo.
 
+4. **[[Layers]]** — Rejlander’s assembled photograph, Muybridge’s frozen gallop, Méliès’s seven selves, Reiniger and the multiplane camera, and the Knoll brothers: keeping the parts so you can change your mind.
+
 ## Roadmap
 
-Titles waiting for their breath, not yet written: *Stats Lies Hall of Fame* · *Laplace and Napoleon* · *Erdős the Wandering Mathematician*.
+No unwritten Story brief remains in the current queue.
 
 ---
 

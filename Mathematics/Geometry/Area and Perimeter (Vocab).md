@@ -126,7 +126,7 @@ $A = \tfrac{1}{2}(5 + 9)(4) = \tfrac{1}{2}(14)(4) = 28$ cm². ✓
 
 ### Cambridge 0580
 
-**Syllabus ref:** E5.2 — find areas of triangles, parallelograms, trapezia, and circles; find perimeters of these shapes (including circumference of a circle). Standard patterns:
+**Syllabus ref:** E5.2 *Area and perimeter* — "carry out calculations involving the perimeter and area of a rectangle, triangle, parallelogram and trapezium"; the syllabus notes that **except for the area of a triangle, formulas are not given**, so the parallelogram and trapezium formulas must be known. Circles, arcs and sectors are the next row, **E5.3** (circle formulas *are* given in the list of formulas). Standard patterns:
 
 - "Find the area of a triangle with base $7$ cm and perpendicular height $5$ cm." ($17.5$ cm²)
 - "Find the circumference of a circle with diameter $14$ cm." ($14\pi \approx 43.98$ cm)

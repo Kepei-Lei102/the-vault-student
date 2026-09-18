@@ -10,6 +10,7 @@ tags:
   - subject/mathematics
   - domain/geometry
   - level/IGCSE
+  - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
   - syllabus/0580-E5-1
   - syllabus/9260-G14
@@ -21,7 +22,7 @@ tags:
 
 ## Definition
 
-A **unit of measure** is a standard quantity used to express measurements (length, mass, time, area, volume, etc.). The **SI (Système International)** is the global standard; Cambridge 0580 also tests imperial / US customary in some contexts (mostly UK 0580 papers).
+A **unit of measure** is a standard quantity used to express measurements (length, mass, time, area, volume, etc.). The **SI (Système International)** is the global standard; the named conversion content in Cambridge 0580 is metric. Imperial units below are useful context, not a separate UK version of the syllabus.
 
 The big mathematical fact: when you change units, you *multiply by a conversion factor*, not by an arbitrary number. Length conversion factors are exact powers of $10$ in metric; area scales by the *square* of length; volume by the *cube*.
 
@@ -29,7 +30,7 @@ The big mathematical fact: when you change units, you *multiply by a conversion 
 
 **度量单位 (dùliàng dānwèi)** = unit of measure. **国际单位制 (guójì dānwèizhì)** = SI (the global metric system).
 
-| 量 | SI 基本单位 | 中文 |
+| 量 | 常用单位 | 中文 |
 |---|---|---|
 | 长度 (chángdù) | 米 (m) | length, metre |
 | 质量 (zhìliàng) | 千克 (kg) | mass, kilogram |
@@ -58,7 +59,7 @@ Chains:
 
 So $1$ km = $1000 \times 100 \times 10 = 1{,}000{,}000$ mm. Worth knowing: $1$ km = $10^6$ mm and $1$ km = $10^5$ cm.
 
-### Imperial / US length (UK 0580 only)
+### Imperial / US length — additional context
 
 | Unit | In inches |
 |---|---|
@@ -67,7 +68,7 @@ So $1$ km = $1000 \times 100 \times 10 = 1{,}000{,}000$ mm. Worth knowing: $1$ k
 | yard (yd) | $36$ ($= 3$ ft) |
 | mile (mi) | $63{,}360$ ($= 1760$ yd) |
 
-Cross-conversions: $1$ in $\approx 2.54$ cm; $1$ mi $\approx 1.609$ km. (0580 only requires these in conversion-problem contexts.)
+Cross-conversions: $1$ in $= 2.54$ cm; $1$ mi $\approx 1.609$ km. Do not assume an unfamiliar conversion factor; use the one supplied for the task.
 
 ---
 
@@ -83,7 +84,7 @@ Cross-conversions: $1$ in $\approx 2.54$ cm; $1$ mi $\approx 1.609$ km. (0580 on
 Chains: $1$ kg = $1000$ g = $10^6$ mg. $1$ tonne = $1000$ kg.
 
 > [!info] Tonne vs ton
-> Cambridge UK uses *tonne* = $1000$ kg (metric). The US customary *ton* = $2000$ pounds $\approx 907$ kg ("short ton") or *long ton* = $2240$ pounds $\approx 1016$ kg. 0580 papers default to *tonne* (metric).
+> A *tonne* is $1000$ kg. The US customary *ton* = $2000$ pounds $\approx 907$ kg ("short ton") or *long ton* = $2240$ pounds $\approx 1016$ kg.
 
 ---
 
@@ -97,7 +98,7 @@ Volume in metric scales like length-cubed, but the *unit names* don't always mat
 | litre (L) | $10^{-3}$ m³ | = $1000$ cm³ = $1$ dm³ |
 | cubic metre (m³) | $1$ m³ | = $1000$ L |
 
-So **$1$ litre = $1000$ cm³** is the most-tested fact.
+The useful bridge is **$1$ litre = $1000$ cm³**.
 
 > [!warning] Volume conversion factors are *cubed* length factors
 > $1$ m = $100$ cm, so $1$ m³ = $100^3 = 10^6$ cm³ — *not* $100$ cm³. This is one of the most common 0580 mistakes. Whenever you convert volumes, *cube* the length conversion.
@@ -150,7 +151,7 @@ $1$ mL = $1$ cm³. So $750$ mL = $750$ cm³.
 
 ### Example 4 — compound unit
 
-> A car's density is $7.5$ g/cm³. Express this in kg/m³.
+> A metal's density is $7.5$ g/cm³. Express this in kg/m³.
 
 $7.5 \dfrac{\text{g}}{\text{cm}^3} = 7.5 \times \dfrac{10^{-3} \text{ kg}}{10^{-6} \text{ m}^3} = 7.5 \times 10^3 \dfrac{\text{kg}}{\text{m}^3} = 7500 \text{ kg/m}^3$.
 
@@ -163,23 +164,29 @@ The factor $10^3$ comes from "kg conversion gives $10^{-3}$, m³ conversion give
 1. **Linear factor used for area / volume.** $1$ m = $100$ cm, but $1$ m² = $10{,}000$ cm² and $1$ m³ = $1{,}000{,}000$ cm³. *Cube the factor* for volume conversions.
 2. **Mixing mL and cm³.** They're equal — but that's because $1$ mL is *defined* as $1$ cm³. Don't think they need a conversion factor.
 3. **Forgetting that compound-unit conversions need both parts.** km/h to m/s requires *both* the km→m conversion and the h→s conversion.
-4. **Tonne vs ton confusion.** UK 0580 uses tonne ($1000$ kg). US contexts may use short ton ($907$ kg). When a question is ambiguous, default to tonne.
+4. **Tonne vs ton confusion.** A tonne is $1000$ kg. A US short ton is about $907$ kg. If “ton” is ambiguous, establish which definition is intended.
 
 ---
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 — Core and Extended
 
-**Syllabus ref:** E5.1 — convert between units within the metric system; convert between units of area and volume. Standard patterns:
+**C5.1 / E5.1** explicitly require metric mass, length, area, volume and capacity, including squared-unit conversion and volume–capacity conversion. This is Core content as well as Extended content. **C1.12 / E1.12** add rates, including speed and density; the speed–distance–time relationship must be known, while formulas for the other listed measures of rate are supplied as specified in that section.
 
-- "Convert $3.5$ km to cm." ($350{,}000$ cm.)
-- "A swimming pool has volume $250{,}000$ litres. Find the volume in m³." ($1$ L $= 10^{-3}$ m³, so $250$ m³.)
-- "A car travels at $90$ km/h. Convert to m/s." ($25$ m/s.)
-- "Find the density of a $5$ kg block of volume $2{,}000$ cm³ in g/cm³." ($5000 \text{ g} \div 2000 \text{ cm}^3 = 2.5$ g/cm³.)
+Practise cm² to m², cm³ to litres, and km/h to m/s. Write the conversion factor so the method is inspectable; a method mark depends on the particular scheme and is not guaranteed by writing a factor alone. Imperial conversion constants are not a named memorisation requirement of C5.1/E5.1.
 
-> [!tip] Show the conversion factor explicitly
-> Cambridge markschemes often award a method mark for "× $1000$" or "× $10^6$" written explicitly, even if the final number is wrong. Don't skip the conversion factor in your working — it's a free mark.
+### OxfordAQA 9260
+
+**G14 Core** explicitly includes standard units of length, area, volume/capacity, mass, time and money, conversion between related units, and compound units such as speed and density. Its time conventions include both 12- and 24-hour clocks; see [[Time Calculations (Vocab)]]. The volume and area factors here apply directly.
+
+### Later mathematics and physics
+
+Cambridge 0606, 9709 and 9231, Edexcel IAL and OxfordAQA 9660 use unit conversion as prior knowledge in applied problems, rather than introducing a separate imperial-unit syllabus through this topic. For IB mathematics, treat these conversions as foundational skills; no claim of a newly covered IB outcome is made here. AP Calculus AB/BC explicitly includes **Mathematical Practice 4.B, use appropriate units of measure**, especially when interpreting rates and accumulated quantities.
+
+### Where the boundary lies
+
+The imperial table is enrichment, not an additional 0580 unit-conversion requirement. This is arithmetic with units; SI base-unit definitions, dimensional analysis and physics-board requirements belong to [[Physical Quantities and Units]]. No advanced mechanics or calculus outcome is completed merely by knowing conversion factors.
 
 ---
 

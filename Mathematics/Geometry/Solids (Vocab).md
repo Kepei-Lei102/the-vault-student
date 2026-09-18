@@ -136,7 +136,7 @@ The last column is always $2$ — that's **Euler's polyhedron formula** $V - E +
 
 ### Cambridge 0580
 
-**Syllabus ref:** E4.3. Same content as 9260 G10. 0580 Extended adds frustums and composite solids in E5.4.
+**Syllabus ref:** E4.1 (geometrical terms — the vocabulary of solids: cube, cuboid, prism, cylinder, pyramid, cone, sphere, hemisphere, frustum). Same content as 9260 G10, with hemisphere and frustum added. Calculations with compound solids and parts of solids (a frustum's surface area and volume) sit in E5.5; symmetry of prisms, cylinders, pyramids and cones (planes and axes) in E4.5.
 
 ### A-Level / IB / AP
 

@@ -16,6 +16,7 @@ tags:
   - level/A-Level
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
+  - curriculum/IB-CS
   - syllabus/0478-1-2
   - syllabus/9618-1-2
   - type/deep
@@ -126,7 +127,7 @@ CD-quality stereo runs $44{,}100 \times 16 \times 2 = 1{,}411{,}200$ bits per se
 
 **Example 1 — choose a sample rate.** Telephone speech only needs frequencies up to about $3.4$ kHz to stay intelligible. Nyquist: rate $> 2 \times 3400 = 6800$ Hz — and real telephone networks standardised on $8{,}000$ Hz, a comfortable margin. (This is why music on hold sounds so thin: everything above $4$ kHz never crosses the line.)
 
-**Example 2 — effects of changes.** A recording's sample rate rises from $40$ kHz to $60$ kHz: accuracy **increases** (samples closer together — smaller gaps in the wave, smaller quantisation-in-time error) and file size increases proportionally. The recording's *duration* doubles: file size doubles, accuracy **unchanged** (the dials didn't move). Resolution drops $24 \to 16$ bits: file size falls by a third, accuracy **decreases** — fewer amplitude values available, larger quantisation errors.
+**Example 2 — effects of changes.** A recording's sample rate rises from $40$ kHz to $60$ kHz: the samples lie closer together, the highest frequency that can be captured without aliasing rises, and file size increases proportionally. This can improve fidelity when the source contains those higher frequencies; it does not reduce amplitude quantisation error or automatically improve an already adequately sampled, band-limited signal. The recording's *duration* doubles: file size doubles, accuracy **unchanged** (the dials didn't move). Resolution drops $24 \to 16$ bits: file size falls by a third, accuracy **decreases** — fewer amplitude values available, larger quantisation errors.
 
 **Example 3 — file size with unit discipline.** $44{,}100$ Hz, $16$-bit, stereo, $30$ s: $44{,}100 \times 16 \times 2 \times 30 = 42{,}336{,}000$ bits $= 5{,}292{,}000$ B $\approx 5.05$ MiB. Bits first, bytes next, ladder last.
 
@@ -136,11 +137,11 @@ CD-quality stereo runs $44{,}100 \times 16 \times 2 = 1{,}411{,}200$ bits per se
 
 ## Exam Notes
 
-### Cambridge 0478 (IGCSE)
+### Cambridge 0478 (IGCSE — Paper 1)
 
 **§1.2.2 — sound representation.** The three definitions, in the mark schemes' own shape: **sampling** — measuring the height/**amplitude** of the sound wave at regular time intervals; **sample rate** — the number of samples taken per second; **sample resolution** — the number of bits per sample. Expect "describe how sound is converted to digital" (microphone → wave sampled at set rate → each amplitude stored as binary at set resolution) and the benefits/drawbacks of raising either dial (closer to original vs bigger file).
 
-### Cambridge 9618 (A-Level)
+### Cambridge 9618 (AS — Paper 1)
 
 **§1.2 Sound.** Same machinery with sharper language: the terms appear as **sampling rate / sampling resolution** (the *sample-*/*sampling-* prefix varies freely across papers — the definitions never do), plus **analogue vs digital** explicitly, and the effects of changing each dial on **file size and accuracy** — two separate axes, and questions ask about one at a time.
 
@@ -153,9 +154,13 @@ CD-quality stereo runs $44{,}100 \times 16 \times 2 = 1{,}411{,}200$ bits per se
 
 ### IB CS (2027)
 
-Sound representation is **not a named statement**: A1.2's published wording stops at binary/hexadecimal conversion and logic gates processing encoded data — sampling, sample rate and resolution are not listed. Treat this card as depth behind "encoded data", not examinable IB content.
+**A1.2.2 — binary storage of data (SL and HL).** The full first-assessment-2027 guide, printed p.29, explicitly includes mechanisms for storing **audio**, as well as images, video, integers, strings and characters. Use sampled amplitudes encoded as binary numbers to explain the mechanism. The guide does not separately list Cambridge’s rate/resolution definitions or its file-size calculation forms; these support understanding but should not be represented as separately named IB outcomes.
 
 ---
+
+### Not examined on AP Computer Science A
+
+The Fall 2025 CED does not prescribe audio sampling or sample-resolution/file-size calculations as course content. A program may process numbers representing media, but that does not make the media-encoding theory a named CSA requirement.
 
 ## Connections
 

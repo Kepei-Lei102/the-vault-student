@@ -25,12 +25,12 @@ tags:
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-2
+  - curriculum/AP-Physics-C-Mechanics
+  - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-3
   - syllabus/0625-P5
   - syllabus/0625-P6
   - syllabus/0625-P7
-  - syllabus/IB-Physics-PRAC-2
-  - syllabus/AP-Physics-1-SP-1
   - type/deep
   - type/definition
   - type/vocabulary
@@ -88,17 +88,19 @@ The bullseye is the true value; the shots are the measurements. **Accuracy** is 
 
 ### 中文锚点
 
-中文物理教材通常将这两个概念翻译为：
+拿同一个一百克砝码称五次，厨房秤每次都显示九十五克。它的读数很一致，却一致地偏了：这就是“每次差不多”和“测得对不对”的区别。精密度看重复结果彼此靠不靠近，准确度看它们离可信的参考值有多远。别因为五次都一样，就更放心地相信九十五克；重复测量能让我们看清散布，却不能自动赶走那个总跟着仪器的偏差。
+
+### Terminology bridge
 
 | English | 中文 | 含义 |
 |---|---|---|
 | Accuracy (accurate) | 准确度 (准确) | 测量值与真值的接近程度 |
 | Precision (precise) | 精确度 (精确) / 精密度 | 重复测量值之间的接近程度 |
-| Systematic error | 系统误差 (xìtǒng wùchā) | 总是偏向一侧的偏差 — 影响**准确度** |
+| Systematic error | 系统误差 (xìtǒng wùchā) | 在重复条件下保持不变或按可预测方式变化的误差 — 可造成偏倚 |
 | Random error | 随机误差 (suíjī wùchā) | 测量间无规律的散布 — 影响**精确度** |
 | True value | 真值 (zhēnzhí) | 我们想测出的"那个数" |
-| Bias | 偏倚 / 系统偏差 | 系统误差的总和 — 平均值与真值的固定差距 |
-| Calibration | 校准 (xiàozhǔn) | 修正系统误差 — 用已知标准重新对零 |
+| Bias | 偏倚 / 系统偏差 | 系统误差的估计；例如测量均值与参考值的差 |
+| Calibration | 校准 (xiàozhǔn) | 与参考标准比较，确定读数关系及其不确定度；调整是另一步 |
 | Zero error | 零点误差 (língdiǎn wùchā) | 仪器未受外力时不读零 — 典型系统误差 |
 | Parallax | 视差 (shìchā) | 读数时视线与刻度不垂直 |
 
@@ -123,7 +125,7 @@ A **systematic error** (系统误差) is one that affects every reading in the s
 - **Calibration error.** The instrument's scale is mis-marked. Every value is then *proportionally* off — e.g. the ruler was printed at $98\%$ of true scale, so all lengths come out $2\%$ low. This is a "slope" error rather than an "offset" error, but it is systematic in the same sense.
 - **Parallax (one form of it).** When you consistently read a scale from above rather than directly in front, you consistently get the same biased number.
 - **Reaction-time bias in timing.** If you always start your stopwatch a bit *late*, every reading is consistently short. If you start late and stop early, the bias is even larger.
-- **Environmental drift in the same direction.** Resistance measurements taken on a hot afternoon are systematically lower than the standard $20^\circ\text{C}$ values, because the resistor's temperature coefficient is positive.
+- **Environmental drift in the same direction.** For a resistor with a positive temperature coefficient, measurements at a higher temperature are systematically higher than its reference-temperature value.
 
 ![[systematic-error-sources.png]]
 *Five faces of the same underlying property. The balance reads non-zero with nothing on it; the ruler disagrees with a known standard; the pencil's length depends on viewing angle; the stopwatch press is always a moment late; the resistor's value drifts in the heat of the lamp. Surface details differ; the structural failure is identical — and in every case, **averaging does not help.***
@@ -203,7 +205,7 @@ The manufacturer's quoted spring constant is $\;\boxed{50.0~\text{N/m}}\;$.
 
 The pattern — precise, biased low — points to **systematic error**, not random. Asking "where could the bias come from?" yields concrete candidates:
 
-- The load weights might be lighter than labelled (a $1.00~\text{kg}$ mass that is actually $0.96~\text{kg}$ gives $k$ values about $4\%$ low).
+- The load weights might be heavier than labelled (using $1.00~\text{kg}$ in the calculation when the actual mass is $1.04~\text{kg}$ gives $k$ values about $4\%$ low).
 - The ruler used to measure extension might be misaligned (parallax bias from the experiment design).
 - The spring might be near its elastic limit at this load — see [[Stress, Strain and Young Modulus]] — making the apparent $k$ artificially low because the response is becoming nonlinear.
 - The manufacturer's quoted value might itself be wrong for the population of springs shipped (don't rule it out — calibration disputes are real).
@@ -246,41 +248,33 @@ This is what *the accuracy/precision factorisation buys you.* "There's an error"
 
 **Why it's wrong:** The spec sheet gives a *best case* — assuming a perfectly steady hand, no parallax, no thermal expansion, no operator estimation. Your *actual* precision is whatever the **scatter of your own repeated readings** says it is. Five readings spanning $0.4~\text{mm}$ have $\pm 0.2~\text{mm}$ precision regardless of the instrument's spec being $\pm 0.02~\text{mm}$. The gap between the two is "operator + setup precision," and it usually dominates the instrument precision in school labs.
 
-**Fix:** Always do at least 3–5 repeats and let the scatter of *your* readings define *your* precision. Quote the instrument resolution only as a sanity check: your scatter should never be *smaller* than the instrument resolution, but it is usually larger.
+**Fix:** Always do at least 3–5 repeats and let the scatter of *your* readings define *your* precision. Quote the instrument resolution only as a sanity check: identical rounded readings can show zero observed scatter even though finite resolution still limits the measurement.
 
 ---
 
 ## Exam Notes
 
-### Cambridge 9702 (A-Level Physics)
+### Cambridge 9702 — §1.3 and practical skills
 
-§1.3 (AS Level). Examined alongside [[Error Propagation]] every session. Standard question shapes:
+The 2028–30 syllabus explicitly distinguishes precision from accuracy and requires explanation of systematic errors (including zero errors) and random errors. Classify a source from its mechanism: a persistent offset can bias repeated results, whereas trial-to-trial variation contributes scatter. A timing procedure can contain both.
 
-- MCQ: classify a described error as systematic or random. ("A student starts a stopwatch slightly after releasing a falling ball each time and notes the time taken. Is this a random or systematic error?")
-- Structured rider: given a graph of repeated readings, identify which point(s) are outliers, comment on whether the scatter suggests systematic or random error.
-- P5 (Planning & Analysis): the "improvements" question — "suggest two changes to the procedure that would reduce systematic error and two that would reduce random error." Expects four distinct suggestions, each correctly classified.
+Practical evaluation asks for limitations and justified improvements. Connect an improvement to the actual cause; calibration can correct a characterised bias, and averaging independent readings can reduce random uncertainty in the mean. Neither is a universal repair. There is no prescribed every-session question or fixed four-suggestion mark pattern.
 
-The mark scheme is unforgiving of swapping the two terms — get "calibrate to remove random error" wrong and you lose the mark. Drill the asymmetry: **calibrate → systematic; average → random.**
+### IB Physics — first assessment 2025
 
-### IB Physics (2025 syllabus)
+The coursewide inquiry skills under **Concluding and evaluating** include assessing accuracy, precision, reliability and validity, and identifying sources and impacts of random and systematic errors. “PRAC.2” is a local mapping label, not an official Tools 1 subtopic.
 
-Tools 1: PRAC.2 — explicitly named in the syllabus as "uncertainty types (random vs systematic); precision vs accuracy." Tested via:
-- Paper 1B data analysis: identify which feature of a graph (scatter vs offset) corresponds to which error type.
-- Internal Assessment (Scientific Investigation): the IA criterion *Evaluation* specifically asks for systematic error analysis — students who report only random scatter and ignore systematic bias lose marks here.
+The scientific investigation requires evaluation of methodological weaknesses/limitations and explained improvements. Discuss their effects in the particular investigation; the guide does not assign an automatic fixed penalty for omitting a named error category. A discrepancy from an accepted value suggests something to investigate, not proof that the reference is exact or the apparatus is solely responsible.
 
-IB markers reward language like "the consistent offset from the accepted value suggests systematic error, possibly due to ___, which could be reduced by ___." Pattern is: identify offset → name systematic candidate → propose calibration step.
+### AP Physics 1 / 2 / C: Mechanics / C: Electricity and Magnetism
 
-### AP Physics 1 / 2
+The current CEDs use **Science Practice 3: Scientific Questioning and Argumentation** for experimental procedures, evidence and justification. Students should identify limitations, explain how they affect results and propose useful changes. Detailed uncertainty propagation is a separate matter; do not assume a fixed random-versus-systematic sub-question or universal mark penalty.
 
-Science Practice 1 (Modelling and Representations) + SP 3 (Argumentation). Distributed through the lab requirement (≥25% of instructional time). FRQ 3 (Experimental Design and Analysis) regularly asks:
-- "Identify and explain one source of *systematic* error in the experiment."
-- "How would you modify the procedure to reduce *random* error?"
+### Cambridge 0625 — practical assessment
 
-AP rubrics explicitly award the systematic-vs-random distinction. Confusing them costs the entire sub-question's mark.
+The 2026–28 syllabus provides measurement-language definitions for consistent use during the course and says those definitions are not directly tested. Practical skills include appropriate precision, anomalies, sources of measurement/random/systematic error and justified improvements. The supplied **±10%** comparison convention applies to that comparison guidance; it is not the uncertainty of every instrument.
 
-### Cambridge 0625 (IGCSE Physics)
-
-This is **practical-paper** material — Paper 5 or Paper 6 — not one of the six numbered topics. 0625 supplies its own definitions and expects them used consistently through the course, though the wording itself is never asked for: a result is **accurate** if it is close to the true value, **precise** if repeated values are close to *each other*, and the **measurement error** is the gap between a measured value and the true value. The examinable moves built on that are recognising an **anomaly** — a result outside the general pattern — and taking appropriate action, and judging whether two results agree, where 0625 fixes the limit of experimental accuracy at **±10%**. Sources of error are named as *measurement, random and systematic*; the dartboard picture below is the fastest way to hold the random/systematic split.
+**Not a required calculation here:** estimating a numerical “accuracy score” from the dartboard, or applying a universal statistical formula to every practical. Explain the measurement mechanism and use the method requested by the question.
 
 ---
 

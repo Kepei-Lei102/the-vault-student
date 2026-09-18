@@ -15,6 +15,8 @@ tags:
   - domain/calculus
   - level/A-Level
   - level/AP
+  - curriculum/Cambridge-9702
+  - syllabus/9702-3-2
   - curriculum/Cambridge-9231
   - curriculum/Edexcel-IAL
   - curriculum/AP-Physics-C-Mechanics
@@ -61,6 +63,16 @@ That is the whole of the theory. The rest is craft — which face of $a$ to pick
 
 ---
 
+## Air resistance without calculus
+
+Drop an object from rest in still air. Initially its speed and air resistance are zero, so weight provides the downward resultant force. As it speeds up, air resistance grows upward; weight remains approximately constant. The downward resultant force and acceleration therefore decrease. On a speed–time graph the curve rises but becomes less steep.
+
+At terminal speed, upward resistance balances downward weight: resultant force and acceleration are zero, **but the object is still moving**. An ideal smooth drag model approaches this speed asymptotically; in practice the remaining change becomes too small to measure. Greater drag at a given speed produces a lower terminal speed.
+
+Opening a parachute while falling sharply increases drag. If drag now exceeds weight, the resultant force is upward while the velocity is still downward: the person slows down. As speed falls, drag falls towards balance at a new, lower terminal speed. The person does not have to reverse direction to have upward acceleration. Drag opposes motion relative to the air, not necessarily gravity.
+
+---
+
 ## Part I — Five questions, solved
 
 *(Cambridge convention throughout: $g = 10$ m s⁻². Every answer is checked against the published mark scheme and verified by computer algebra. Before each solution, the line that matters: what the question asked for, and which face of $a$ that choice forced.)*
@@ -93,7 +105,9 @@ $$8 - 0.5v^2 = 6.4\frac{dv}{dt} \;\Longrightarrow\; t = \int\frac{6.4}{8 - 0.5v^
 
 $$t = 12.8\cdot\frac{1}{8}\ln\frac{4+v}{4-v} + c = 1.6\ln\frac{4+v}{4-v} + c, \qquad t = 0,\ v = 0 \Rightarrow c = 0.$$
 
-$$\boxed{t = 1.6\ln\frac{4+v}{4-v}} \qquad\text{equivalently } t = 3.2\operatorname{artanh}\frac v4,\ \text{ i.e. } v = 4\tanh\frac{t}{1.6}.$$
+$$\boxed{t = 1.6\ln\frac{4+v}{4-v}} \qquad\text{equivalently } t = 3.2\operatorname{artanh}\frac v4,\ \text{ i.e. } v = 4\tanh\frac{t}{3.2}.$$
+
+Differentiating checks the time scale: $a(0)=4/3.2=1.25=8/6.4$ m s⁻². Integrating from rest gives $x=12.8\ln\cosh(t/3.2)$.
 
 The scheme accepts the artanh form outright — and the inverted form is a $\tanh$, bending over toward $4$ and never touching it — the right-hand panel of the first figure in Part II.
 
@@ -268,7 +282,7 @@ $\ln(v^2 - 16)$ when $v < 4$ throughout; $\ln(0 - 8)$ at the initial condition; 
 
 ### 5. "It reaches terminal velocity"
 
-It approaches it. $v = 10\tanh t$ is below $10$ for every finite $t$; so is $4\tanh(t/1.6)$. **Fix:** terminal velocity is a limit, found by setting $a = 0$; in words, "the speed *tends to* $10$ m s⁻¹."
+It approaches it. $v = 10\tanh t$ is below $10$ for every finite $t$; so is $4\tanh(t/3.2)$. **Fix:** terminal velocity is a limit, found by setting $a = 0$; in words, "the speed *tends to* $10$ m s⁻¹."
 
 ### 6. The resistive force pointing the wrong way
 
@@ -284,11 +298,11 @@ Recall that the syllabus hands you the drag law. Physics decides it. At low spee
 
 ### The tanh is not a coincidence
 
-Recall that $\tanh$ appeared in Questions 1 and 2 as the inverse of the MF19 log. There is a reason it keeps appearing: $\dfrac{dv}{dt} = g\left(1 - \dfrac{v^2}{v_\infty^2}\right)$ is the **logistic-shaped** equation — growth that is proportional to how far you are from a ceiling — and its solutions are always sigmoids. The same $\tanh$ governs a capacitor's voltage in some nonlinear circuits, the magnetisation of iron, and the activation function of a neuron in a neural network. [[Hyperbolic Functions]] is the card; here you have met one of its native habitats.
+Recall that $\tanh$ appeared in Questions 1 and 2 as the inverse of the MF19 log. There is a reason it keeps appearing: $\dfrac{dv}{dt} = g\left(1 - \dfrac{v^2}{v_\infty^2}\right)$ is the **logistic-shaped** equation — growth that is proportional to how far you are from a ceiling — and its solution from rest is the increasing, concave-down positive-time branch of a tanh. The same $\tanh$ governs a capacitor's voltage in some nonlinear circuits, the magnetisation of iron, and the activation function of a neuron in a neural network. [[Hyperbolic Functions]] is the card; here you have met one of its native habitats.
 
 ### What an exact solution buys you
 
-Every question above has a closed form because the integrals happen to be elementary. Change $v^2$ to $v^{1.8}$ — a realistic fit for some shapes — and no closed form exists; the engineer integrates numerically, step by step, exactly as the clip above was generated. The syllabus's "calculus restricted to Pure 3" is an honest boundary: beyond it, the *method* (write $ma = F$, separate, integrate) is unchanged, and only the integral stops being one you can do by hand.
+Every question above has a closed form because the integrals happen to be elementary. Change the drag law or let air density vary along the path and an elementary explicit solution may no longer be available; engineers can integrate numerically, step by step. The clip above instead evaluates the exact analytic solutions for its two stated models. The syllabus's "calculus restricted to Pure 3" is an honest boundary: beyond it, the *method* (write $ma = F$, separate, integrate) is unchanged, and only the integral stops being one you can do by hand.
 
 ---
 
@@ -304,7 +318,7 @@ $$s = \int_0^{v_R}\frac{m\,v\,dv}{T - D(v) - \mu\,(W - L(v))},$$
 
 which is Question 1(a) with three terms instead of two: the $v\,dv/dx$ face, chosen because the runway length is a *distance*. Every performance chart a pilot reads before departure — how much runway at this weight, this temperature, this altitude — is that integral evaluated for the day's air density. Hot, high and heavy all make the denominator smaller and the integral longer.
 
-**A rocket — where this card's equation stops.** Newton's second law as written on this card, $m\,\dfrac{dv}{dt} = F$, assumes the mass is fixed. A rocket throws most of itself out of the back: nine-tenths of a launch vehicle on the pad is propellant. The honest form is the momentum one, $\dfrac{d(mv)}{dt} = F$, and with thrust equal to exhaust speed times the rate of mass loss it becomes
+**A rocket — account for the escaping mass.** The rocket alone is an open system: exhaust carries momentum away. Applying $d(mv)/dt=F_{\rm external}$ to the remaining rocket without a momentum-flux term is incorrect. Apply momentum conservation to the rocket plus the material expelled during a short interval instead. For exhaust speed $v_e$ relative to the rocket, upward motion and $dm/dt<0$, the result is
 
 $$m\frac{dv}{dt} = -v_e\frac{dm}{dt} - mg - D(v),$$
 
@@ -331,7 +345,7 @@ with $m = m(t)$ falling as the tanks empty. Drop gravity and drag and separate: 
 
 - **Cambridge 9709**: Paper 4 mechanics has no variable force — its calculus kinematics is acceleration as a function of *time* only ([[Kinematics Calculus]]). The *pure* half surfaces in **P3 §3.8** as modelling with a separable differential equation from a stated rate — the same integrals with the physics stripped off.
 - **OxfordAQA 9660**: kinematics by calculus ($\frac{ds}{dt}, \frac{dv}{dt}$) only; no velocity-dependent forces, verified against the specification.
-- **Cambridge 9702 and 0625**: terminal velocity is examined *qualitatively* — describe the forces, sketch $v$–$t$, explain why acceleration falls — never as a differential equation. The qualitative story is in [[The Friction Limit]]; this card is its calculus.
+- **Cambridge 9702 and 0625**: terminal velocity is examined *qualitatively* — describe the forces, sketch $v$–$t$, explain why acceleration falls — never as a differential equation. The non-calculus force sequence and speed–time shape are explained in **Air resistance without calculus** above; [[The Friction Limit]] supplies the friction treatment.
 
 ---
 

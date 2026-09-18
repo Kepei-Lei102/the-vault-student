@@ -5,6 +5,7 @@ prerequisites:
   - "[[Secondary Storage]]"
   - "[[Sensors and Control Systems]]"
   - "[[Space Travel]]"
+  - "[[You Are a Reinforcement Learner]]"
 leads_to:
   - "[[Program Design]]"
   - "[[The True IO Bound]]"
@@ -260,6 +261,7 @@ When you need something you cannot build:
 - **Sibling Meta cards:** [[Fun Is the Brachistochrone]] (the detour that is the fastest path — the parts bin is a detour of the same kind); [[Inertia and Bootstrapping]] (the cost of starting, which the buffer's knee curve resembles); [[Credit Is the Currency]] (an interface is a promise — what a module says it will do, kept regardless of how).
 
 - **Misconception traps cleared:** decoupling is always good; a buffer adds speed; coupling and dependency are the same thing; recoupling is copying; constraints oppose invention.
+- **Prerequisite:** [[You Are a Reinforcement Learner]] — a buffer is a delay in a signal; the reinforcement card measures what a delayed reward costs a learner.
 
 ## Sources
 

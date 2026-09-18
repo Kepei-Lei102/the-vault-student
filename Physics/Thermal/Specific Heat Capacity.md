@@ -5,6 +5,9 @@ prerequisites:
   - "[[Kinetic Theory and the Ideal Gas]]"
 leads_to:
   - "[[First Law of Thermodynamics]]"
+teach_together:
+  - "[[Heat Transfer]]"
+  - "[[Temperature and Thermometry]]"
 tags:
   - subject/physics
   - domain/thermal-physics
@@ -15,6 +18,7 @@ tags:
   - curriculum/A-Level
   - curriculum/IB-Physics
   - curriculum/AP-Physics-2
+  - syllabus/9702-14-1
   - syllabus/9702-14-3
   - syllabus/0625-2-2
   - type/definition
@@ -178,7 +182,7 @@ The opposite: latent heat is exactly the energy that does **not** raise the temp
 Specific heat capacity is **intensive** — a property of the material, per kilogram. A swimming pool and a cup of the same water have the same *specific* heat capacity $c$; what differs is the **heat capacity** $C = mc$, the extensive total. Confusing $c$ with $C$ is the classic slip.
 
 ### 5. "All substances need the same energy to heat up"
-Specific heat capacities vary by more than an order of magnitude — water $4200$, aluminium $900$, iron $450$, copper $385$, lead $130$ ($\text{J kg}^{-1}\text{K}^{-1}$). This is why a metal spoon in hot soup scalds your hand long before the soup cools, and why lead shot warms almost instantly while the same energy barely nudges water.
+Specific heat capacities vary by more than an order of magnitude — water $4200$, aluminium $900$, iron $450$, copper $385$, lead $130$ ($\text{J kg}^{-1}\text{K}^{-1}$). For equal masses receiving equal energy without changing phase, lead warms much more than water. How quickly a metal spoon carries heat from soup to your hand also depends on thermal conductivity and geometry; specific heat capacity alone cannot explain the rate.
 
 ## Exam Notes
 
@@ -186,13 +190,13 @@ Specific heat capacities vary by more than an order of magnitude — water $4200
 The core home. Define and use **specific heat capacity** ($Q = mc\Delta T$) and **specific latent heat** of fusion and vaporisation ($Q = mL$); explain, in molecular terms, why melting and boiling occur at constant temperature (energy raises molecular PE, not KE). The **electrical method** for measuring $c$ (a heater of known power $P$ for time $t$ delivers $Q = Pt = mc\Delta T$) and the **method of mixtures** are standard practical questions; the heat lost to surroundings is the expected source of systematic error. The gas $C_V$/$C_p$ split is **not** required at 9702 (it belongs to §16 thermodynamics and beyond) but the molecular reasoning here sets it up.
 
 ### Cambridge 0625 (IGCSE Physics) — §2.2 (Extended)
-$Q = mc\Delta T$ and (Extended) specific latent heat $Q = mL$; the particle explanation of constant-temperature melting and boiling; simple experiments to measure $c$. Thermal expansion, thermometers (the rest of §2.2) and conduction/convection/radiation (§2.3) are separate topics.
+The 2026–2028 syllabus requires specific heat capacity and $Q = mc\Delta T$ at §2.2.2, including experiments with solids and liquids. §2.2.3 includes constant-temperature melting/boiling, particle explanations, condensation/solidification and evaporation/cooling. It does **not** name specific latent heat or $Q=mL$ as a required outcome; that quantitative treatment is enrichment here. Thermal expansion (§2.2.1) requires additional treatment; [[Heat Transfer]] explains conduction, convection and radiation (§2.3). Thermometer readings remain practical skills, but there is no separate thermometer-design unit in the current §2.2.
 
 ### IB Physics — Theme B (B.1.2)
-**Thermal energy transfer** between bodies to a common temperature; **phase change at constant $T$**; **specific heat capacity** $c$ and **specific latent heat** $L$ (fusion and vaporisation), with $Q = mc\Delta T$ and $Q = mL$. HL builds the molecular picture (the constant-$T$ plateau as molecular PE) on the [[Internal Energy]] foundation. (Conduction, convection and radiation are B.1.3 — a later card.)
+**Thermal energy transfer** between bodies to a common temperature; **phase change at constant $T$**; **specific heat capacity** $c$ and **specific latent heat** $L$ (fusion and vaporisation), with $Q = mc\Delta T$ and $Q = mL$. HL builds the molecular picture (the constant-$T$ plateau as molecular PE) on the [[Internal Energy]] foundation. (Conduction, convection and radiation are B.1.3 — see [[Temperature and Thermometry]] for equilibrium; transfer mechanisms are distinct.)
 
 ### AP Physics 2 — Unit 9 (§9.5, specific-heat half)
-$Q = mc\Delta T$ and latent heat; the heating curve; calorimetry by energy conservation. AP often writes molar heat capacities for gases ($C_V = \tfrac{3}{2}R$ monatomic, $\tfrac{5}{2}R$ diatomic) and expects the constant-volume-vs-constant-pressure distinction. (The **thermal-conductivity** half of §9.5 — conduction, $H = kA\,\Delta T/L$ — is a separate strand, pending a conduction card.)
+$Q = mc\Delta T$ and latent heat; the heating curve; calorimetry by energy conservation. AP often writes molar heat capacities for gases ($C_V = \tfrac{3}{2}R$ monatomic, $\tfrac{5}{2}R$ diatomic) and expects the constant-volume-vs-constant-pressure distinction. (The **thermal-conductivity** half of §9.5 — conduction, $H = kA\,\Delta T/L$ — is a separate strand, see [[Heat Transfer]].)
 
 ## Why Specific Heat Matters — College and Beyond
 
@@ -216,7 +220,7 @@ A cold hydrogen molecule can only translate ($C_V = \tfrac32 R$); warm it past ~
 - **Parent:** [[Internal Energy]] — specific heat is internal energy per kelvin made measurable; $C_V = \tfrac{f}{2}R$ is the degrees-of-freedom promise paid, and latent heat is the potential-well's $\Delta E_p$ given a name.
 - **Prerequisites:** [[Internal Energy]] (the KE/PE split that becomes specific heat vs latent heat), [[Kinetic Theory and the Ideal Gas]] (temperature as molecular KE; the ideal-gas $U$).
 - **Components:** specific heat capacity $c$ ($Q=mc\Delta T$); specific latent heat $L$ ($Q=mL$); molar heat capacities $C_V=\tfrac{f}{2}R$, $C_p = C_V + R$.
-- **Extensions:** [[First Law of Thermodynamics]] ($\Delta U = Q + W$; $C_p - C_V = R$ is the work of expansion) — the next card.
+- **Extensions:** [[First Law of Thermodynamics]] ($\Delta U = Q + W$; $C_p - C_V = R$ is the work of expansion).
 - **Cross-domain — mechanics:** [[Hooke's Law for Springs]] (each atomic vibration is a spring with two quadratic degrees of freedom — the root of the Dulong–Petit $3R$), [[Simple Harmonic Motion]] (those lattice vibrations).
 - **Story partner:** [[Stories/Boltzmann's Tombstone]] — the equipartition that fixes $C_V$, and its quantum failure at low $T$, are statistical mechanics in action.
 - **For 9702 / A-Level Physics students:** $c$, $L$, $Q=mc\Delta T$ and $Q=mL$ are on the data-and-formulae sheet's adjacent territory; the molecular *explanation* of the constant-temperature plateau is the bookwork most often examined.

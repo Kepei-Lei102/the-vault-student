@@ -27,9 +27,9 @@ class VariableForceSeeItMove(Scene):
 
         m, F, kq = 6.4, 8.0, 0.5
         T_END = 8.0
-        # exact: v = 4 tanh(t/1.6); x = 6.4 ln cosh(t/1.6)
-        v_of = lambda t: 4*np.tanh(t/1.6)
-        x_of = lambda t: 6.4*np.log(np.cosh(t/1.6))
+        # exact: v = 4 tanh(t/3.2); x = 12.8 ln cosh(t/3.2)
+        v_of = lambda t: 4*np.tanh(t/3.2)
+        x_of = lambda t: 12.8*np.log(np.cosh(t/3.2))
 
         track = Line(LEFT*6.5, RIGHT*6.5, color=GREY_TXT, stroke_width=3).shift(DOWN*1.2)
         tt = ValueTracker(0.0)
@@ -61,7 +61,7 @@ class VariableForceSeeItMove(Scene):
         self.add(cart, drive, drag, lab_d, lab_r, read, bar)
         self.wait(0.6)
         self.play(tt.animate.set_value(T_END), run_time=12, rate_func=linear)
-        note = Text("the drag arrow grows with v², the drive does not — so the gap closes and the speed stops changing",
+        note = Text("Drag grows; drive stays fixed. The speed approaches 4 m/s.",
                     font_size=24, color=GREY_TXT).to_edge(DOWN, buff=0.4)
         self.play(FadeIn(note)); self.wait(2.2)
         self.play(*[FadeOut(mo) for mo in self.mobjects])

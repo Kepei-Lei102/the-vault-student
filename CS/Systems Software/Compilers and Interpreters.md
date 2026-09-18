@@ -6,11 +6,14 @@ prerequisites:
   - "[[CISC vs RISC]]"
   - "[[Operating Systems]]"
   - "[[Recursion]]"
+  - "[[Programming Paradigms]]"
 leads_to:
   - "[[Stacks and Queues]]"
   - "[[The Call Stack]]"
   - "[[A, B, C]]"
   - "[[Program Development Life Cycle and Testing]]"
+teach_together:
+  - "[[Grace Hopper and the Nanosecond]]"
 tags:
   - subject/computer-science
   - domain/systems-software
@@ -248,6 +251,10 @@ RPN's whole point is a single **left-to-right** pass; and on `-` or `÷`, the *f
 
 ## Connections
 
+- **Historical companion:** [[Grace Hopper and the Nanosecond]] — reusable routines, FLOW-MATIC, the collaborative origins of COBOL, and making machine work accessible.
+
 - **Builds on:** [[Assembly Language]] — the assembler, the 1-to-1 rule this card's translators break on purpose, and the machine-code destination of stage 3; [[CISC vs RISC]] — RISC's founding bet was that compilers, not humans, write the assembly: this card is the bet's other half, honoured in stage 4; [[Operating Systems]] — the bay's government: it loads what the compiler produced, supplies the libraries the linker leans on, and hosts the hardware-level VMs this card's bytecode VMs are cousins of; [[Recursion]] — BNF's self-referring rules are recursion writing grammar.
 - **Leads to:** [[Stacks and Queues]] — RPN's engine: the pop-two-push-one discipline as a named, disciplined structure; [[The Call Stack]] — the call stack every running program lives on, frames and all; [[A, B, C]] — the story that ran this card's trade-off live: B interpreted and too slow for a kernel, C compiled and rewriting Unix within two years.
 - **Kindred:** [[Von Neumann machine]] — code-as-data is what makes translators possible at all: a compiler is a program whose *output* is a program; [[Embedded Systems]] — where compilation is the only option on the chip; [[Courage]] — binary translation shipped as a product: Rosetta translating just-in-time in 2006, Rosetta 2 translating ahead-of-time in 2020, each carrying a whole software ecosystem across a CPU change.
+- **Prerequisite:** [[Programming Paradigms]] — every paradigm is a pretence a translator pays for; the declarative one is paid for by a search engine instead.
+

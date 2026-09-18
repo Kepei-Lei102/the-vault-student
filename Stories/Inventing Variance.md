@@ -5,6 +5,7 @@ prerequisites:
   - "[[Normal Distribution]]"
   - "[[Linear Combinations of Random Variables]]"
   - "[[Stories/Gauss the Prodigy]]"
+  - "[[Laplace and Napoleon]]"
 leads_to:
   - "[[Sampling and Estimation]]"
   - "[[Hypothesis Tests]]"
@@ -109,6 +110,7 @@ Fisher and Pearson then fought for the rest of Pearson's life — over the degre
 - [[Repeated Measurements]] · [[Error Propagation]] — the physics lab as the story's living museum.
 - [[Heptadecagon]] — the morning the protagonist chose mathematics.
 - [[Stories/Stigler's Law of Eponymy]] — satisfied twice in one story (least squares, the Gaussian), then a third time by Student's $t$.
+- **Story:** [[Stories/Laplace and Napoleon]] — the third man in the least-squares dispute: Laplace supplied the justification, and this is the rest of him.
 
 ## Receipts
 

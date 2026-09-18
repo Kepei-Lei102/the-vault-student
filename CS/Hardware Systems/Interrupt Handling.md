@@ -75,11 +75,13 @@ Notice the last two rows: **not every interrupt comes from hardware.** A program
 Here is the full sequence, the exam's favourite six-marker, told once with every step earning its place:
 
 1. **The signal is raised.** A device pulls the interrupt line on the control bus. Nothing else happens yet — the CPU is mid-instruction and pays no attention.
-2. **The current instruction completes.** The CPU *never* abandons an instruction halfway — an instruction is atomic, finished or not-started, exactly as you finish the sentence before answering the door. (Half-executed instructions would leave registers in states no ISR could safely restore.)
+2. **The current instruction completes.** In this teaching model, the CPU completes the current instruction before servicing the interrupt, leaving a well-defined state to save. This is not a universal claim that every real instruction is indivisible.
 3. **The check.** At the end of **every** fetch–decode–execute cycle, the CPU examines the interrupt flag. The cycle you learned is really fetch → decode → execute → ***check*** — a fourth beat so routine it is drawn as part of the loop, and the honest answer to "*when* are interrupts detected?"
 4. **The scene is protected (现场保护).** If the flag is set (and not masked), the CPU pushes its state onto [[The Stack|the stack]]: the program counter — the bookmark itself — plus the working registers and status flags. Everything needed to stand in this exact spot again.
 5. **The vector table is consulted.** Each interrupt source has a number; the number indexes the **interrupt vector table** in memory, which holds the *address* of the matching **ISR**. The CPU loads that address into the PC and jumps. (A table, not wiring — adding a new device means writing one address into memory, the stored-program idea paying out again.)
 6. **The ISR runs, then returns.** The routine does its short, specific job — read the scan code, acknowledge the disk — and ends with a return-from-interrupt instruction: the saved state pops off the stack, the PC gets its old value back, and the original program resumes **as if nothing had happened**. It never knows it was paused.
+
+**Beyond the simple cycle:** some long instructions are restartable. An x86 repeating string operation can be suspended between iterations, with its remaining count and positions preserved, then resumed after the interrupt. [Intel’s instruction documentation](https://cdrdv2-public.intel.com/858441/252046-080-sdm-change-document.pdf) specifies this behaviour. [[CISC vs RISC]] explains why long instructions complicate interrupt latency; the essential promise is a resumable state, not universal indivisibility.
 
 The program's ignorance is the design's triumph: interruption is invisible to the interrupted. Every program you have ever run was suspended thousands of times mid-flight, and none of them ever noticed.
 

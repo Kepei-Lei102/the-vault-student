@@ -15,6 +15,7 @@ leads_to:
   - "[[Angular Momentum]]"
   - "[[Choosing Effective Equations]]"
   - "[[Kinetic Theory and the Ideal Gas]]"
+  - "[[Wave-Particle Duality]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -412,6 +413,7 @@ Includes elastic collisions in 1D, coefficient of restitution $e$, **2D oblique 
 - **Extension:** [[Coefficient of Restitution]] — the elasticity parameter $e$ that interpolates between elastic ($e = 1$) and perfectly inelastic ($e = 0$).
 - **Application:** [[Two-Body Problem]] — momentum conservation reduces a 6-coordinate problem to a 3-coordinate one.
 - **Cross-domain bridge:** [[Symmetry and Conservation Laws]] — Noether's theorem; how spatial translation gives momentum conservation.
+- **Leads to:** [[Wave-Particle Duality]] — a photon's momentum p = E/c, the push of light F = P/c, and de Broglie's λ = h/p.
 
 ---
 

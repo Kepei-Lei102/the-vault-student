@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[Interrupt Handling]]"
   - "[[Operating Systems]]"
+  - "[[Automated Systems and Robotics]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -35,34 +36,30 @@ tags:
 |---|---|---|
 | embedded system | 嵌入式系统 | a computer built *inside* a device, dedicated to one function |
 | general-purpose computer | 通用计算机 | a computer that runs whatever program you install — laptop, desktop, server |
-| dedicated function | 专用功能 | the one job the system is built for, fixed at manufacture |
+| dedicated function | 专用功能 | the specific role the system is designed to serve |
 | microcontroller (MCU) | 微控制器 | an entire computer — CPU, RAM, flash, I/O — on a single chip |
 | firmware | 固件 | the system's software, written into flash/ROM at the factory |
 | real-time | 实时 | correctness includes a *deadline* — a late answer counts as wrong |
-| RTOS (real-time operating system) | 实时操作系统 | a minimal OS that guarantees deadlines instead of fairness |
+| RTOS (real-time operating system) | 实时操作系统 | an OS designed for predictable timing and scheduling; deadlines also depend on the application and hardware |
 | ECU (electronic control unit) | 电子控制单元 | the car industry's name for one of its embedded computers |
 | IoT (Internet of Things) | 物联网 | embedded systems that have been given a network connection |
 | GPIO (general-purpose input/output) | 通用输入输出引脚 | the MCU's raw pins — where sensors and actuators physically attach |
 | SoC (system-on-chip) | 片上系统 | a full computer's worth of silicon on one die — the phone-class big sibling of the MCU |
 
-## The definition — and the one-question test
+## The definition — classify the role
 
-An **embedded system** is a computer system — processor, memory, and input/output — built **into a larger device** in order to perform a **dedicated function**. All three parts of a real computer are present: it fetches, decodes and executes instructions exactly as [[CPU Architecture and the Fetch-Execute Cycle]] describes. What is missing is *generality*. The washing machine's computer will run the washing-machine program, and nothing else, for the rest of its life.
+An **embedded system** is a computer system — processor, memory, and input/output — built **into a larger device** to perform a **dedicated function**. It executes instructions through the same [[CPU Architecture and the Fetch-Execute Cycle|fetch–decode–execute cycle]] as a laptop. The distinction is the role it was designed to serve.
 
-That gives you a single question that classifies any device the exam can throw at you:
+> **What job does this computer serve inside the product?**
+> A dedicated control or processing function points to an embedded system. A platform for a broad range of user-chosen tasks points to a general-purpose computer.
 
-> **Can the user change what it does — install new software, repurpose it for a different task?**
-> **Yes** → general-purpose computer. **No** → embedded system.
-
-A laptop passes (today a spreadsheet, tonight a game, tomorrow a compiler). A washing machine fails: its buttons *select options within the one function* — wash temperature, spin speed — they never give it a new function. Selecting a program is not programming.
+A washing-machine controller reads sensors and controls the wash cycle; selecting a temperature chooses an option within that role. A laptop supports spreadsheets, games, programming and many other jobs. Small size, a missing screen and a locked-down interface are clues, not definitions: a managed laptop is still general-purpose even if its user cannot install applications.
 
 ![[embedded-spectrum.svg|697]]
 
-The spectrum diagram is worth a slow look, because the boundary cases are where exams and arguments live. A **smart TV** runs apps, but only from a walled menu — it sits near the line. A **smartphone** began life as an embedded system (a phone: one function) and crossed the line the day users could install arbitrary apps; the exam answer is that a smartphone is a *general-purpose* computer, however pocket-sized. Meanwhile a **server** with no screen and no keyboard, humming in a rack, is still general-purpose — it will run whatever it is given. Visibility is not the test; *changeability* is.
+**Firmware updates do not stop a system being embedded.** A router can receive new networking software and remain a dedicated router. An embedded controller can run Linux on a powerful ARM system-on-chip; it need not be a tiny microcontroller running one unchangeable program. Replacing router firmware with OpenWrt does not, by itself, change the device's role.
 
-**And here is the modern twist: the hardware itself is blurring the line — which makes the question sharper, not weaker.** For decades the two categories also differed in silicon: an embedded device carried a feeble MCU because feeble was all the job needed, and no MCU could impersonate a real computer. No longer. General-purpose **ARM SoCs** — the processor family inside your phone — have become so cheap that manufacturers increasingly drop a *full computer* where a microcontroller once lived: the smart TV runs a complete operating system, the car's dashboard is a tablet in disguise, the newer washing machine may well have Linux behind its touchscreen. On raw capability, these devices could browse, compile and game.
-
-What keeps them embedded is no longer what the hardware *can* do but what the user is *allowed* to do: signed firmware, locked bootloaders, a walled menu instead of an open desktop. The boundary has migrated from physics to **policy** — *does the user have access?*, not *is the silicon capable?* You can even watch a single device cross the line: flash the community firmware **OpenWrt** onto a home router and the "embedded" router becomes a small general-purpose Linux computer — same atoms, reclassified in a quarter of an hour. The games console is the mirror case: hardware-wise a powerful PC, held on the embedded side by lockdown alone — the endless tug-of-war with jailbreakers is a fight over *exactly this line*. Which is why the one-question test has aged so well: it never asked about the chip. It asked about *you*.
+The level of description matters. A smartphone is a general-purpose device, yet it contains dedicated embedded controllers. “Is the whole device general-purpose?” and “does it contain an embedded system?” are different questions. [Arm's definition](https://www.arm.com/glossary/embedded-system-design) likewise centres on dedicated functions within a larger system.
 
 ## The chip: a computer shrunk to a grain of rice
 
@@ -124,13 +121,13 @@ The A-Level asks for a *balanced* judgement: why build a device around an embedd
 
 - **Cheap** — a microcontroller costs a few yuan; the device's price barely notices the computer inside it.
 - **Small and low-power** — one chip, no fans, no screen; runs on a battery for months or years.
-- **Fast at its one job** — no operating system layers, no other programs competing; it boots in milliseconds and reacts in microseconds.
-- **Reliable** — one program, burned in, tested to death; nothing can be mis-installed, no updates break it, and it does not crash because something *else* went wrong.
+- **Predictable at its job** — hardware and software can be selected for the required response time, with fewer unrelated workloads competing. Some designs run without an OS; others use an RTOS or a general OS.
+- **Easier to test for a restricted role** — fewer supported functions and configurations can simplify verification. Reliability must still be engineered: bugs, faulty updates and hardware failures remain possible.
 - **Easy to mass-produce and easy to use** — millions of identical units, controlled by three buttons instead of a keyboard, needing no training and near-zero maintenance.
 
 **Drawbacks:**
 
-- **Fixed function** — it can never be upgraded into something else; the function is decided at design time and welded shut.
+- **Restricted function** — the hardware and interfaces are tailored to a role, making repurposing or expansion difficult.
 - **Hard to update** — firmware updates range from awkward to impossible; a discovered bug (or security hole) may live in the field forever.
 - **Expert-only repair** — no screen, no error dialogue; diagnosing a fault needs specialist equipment, so a faulty unit is usually **replaced, not repaired** — a real electronic-waste cost.
 - **A security risk once networked** — an internet-connected embedded system has all the exposure of a computer with none of the update discipline (see the Mirai story below).
@@ -149,9 +146,9 @@ Your laptop misses deadlines constantly — a stutter here, a spinning cursor th
 > *(b) A washing machine is controlled by an embedded system. Give **two benefits** of this compared with using a general-purpose computer. [2]*
 > *(c) Give **one drawback**. [1]*
 
-**(a)** *Tool: the definition — three parts plus dedication.* A computer system (processor, memory and I/O) built **into a larger device** ✓, performing a **dedicated function** — it runs one fixed program and cannot be given a different task ✓.
+**(a)** *Tool: the definition — three parts plus dedication.* A computer system (processor, memory and I/O) built **into a larger device** ✓, performing a **dedicated function**, such as controlling the wash cycle ✓.
 
-**(b)** *Tool: the benefits table — pick two, tie them to the machine.* It is small and cheap, so it adds almost nothing to the cost and size of the washing machine ✓; it is dedicated, so it is fast and reliable — nothing else runs on it, and the user cannot break it by installing software ✓. (Low power, instant start-up, and no-training-needed are equally creditable.)
+**(b)** *Tool: the benefits table — pick two, tie them to the machine.* It is small and cheap, so it adds almost nothing to the cost and size of the washing machine ✓; its hardware and software can be tailored to the wash-control deadlines, with fewer unrelated workloads to interfere ✓. (Low power, instant start-up, and no-training-needed are equally creditable.)
 
 **(c)** *Tool: the drawbacks list.* If the firmware has a fault, it is difficult or impossible for the user to update or repair — the controller usually has to be replaced ✓.
 
@@ -175,24 +172,24 @@ Six marks, and every one of them is a sensor reading, a comparison, or an actuat
 > Dedication, not power, is the boundary. A car's infotainment ECU outguns a 2005 desktop; a jet engine's controller is a serious computer. They are embedded because their **function is fixed**, not because they are feeble. (The converse trap too: a Raspberry Pi is tiny, yet general-purpose — it runs whatever you install.)
 
 > [!warning] "A smartphone is an embedded system."
-> The classic boundary case — it *descends* from one (a phone: single function) but crossed the line the day users could install arbitrary apps. It fails the one-question test spectacularly: its whole selling point is that you change what it does. **Exam answer: general-purpose.**
+> A smartphone as a whole supports many user-chosen tasks, so classify the whole device as **general-purpose**. It can still contain embedded controllers; identify which system the question is asking about.
 
 > [!warning] "There's no software in a washing machine — it's just circuits."
-> There is a program in there — fetched, decoded and executed instruction by instruction, like any other. It is called **firmware** because it is stored in flash/ROM and never changes, but *firm* ware is still soft ware. Without it the chip does nothing at all.
+> There is a program in there — fetched, decoded and executed instruction by instruction, like any other. It is called **firmware** because it is closely tied to the hardware and usually stored in non-volatile memory; it can sometimes be updated, but *firm* ware is still soft ware. Without it the chip does nothing at all.
 
 > [!warning] "You can upgrade it like a PC."
-> Usually you cannot, and that is a *design choice*, not an oversight. The fixed function is what buys the cheapness and the reliability; the price is that an obsolete or buggy unit is replaced, not upgraded. When manufacturers do push firmware updates (cars, routers), it is engineering effort spent deliberately clawing back a little generality — and reopening the door that sealing the box had closed.
+> Usually you cannot, and that is a *design choice*, not an oversight. The fixed function is what buys the cheapness and the reliability; the price is that an obsolete or buggy unit is replaced, not upgraded. Firmware updates can fix bugs or improve the dedicated function without making the product general-purpose.
 
 ## Exam Notes
 
 | Board | Where it appears | What they want |
 |---|---|---|
 | **Cambridge 0478 IGCSE** (§3.1.5) | Paper 1 | The **purpose** of an embedded system + **examples** from the five habitats (household appliances, cars, security systems, lighting, vending machines). Typical asks: define (2 marks), identify which devices contain one, give the purpose of the embedded system *in a named device* ("controls the wash cycle by reading sensors and switching the motor/valves/heater"). Anchor every answer in *dedicated function inside a larger device*. |
-| **Cambridge 9618 A-Level** (§3.1) | Paper 1 | **Identify** a device as embedded or non-embedded (the one-question test), and give **benefits and drawbacks** — the mark scheme rewards both sides, so rehearse the symmetric pairs (cheap/fixed, reliable/un-updatable, simple/expert-only-repair). Often folded into a monitoring-and-control scenario — answer with the [[Sensors and Control Systems]] loop vocabulary. |
+| **Cambridge 9618 A-Level** (§3.1) | Paper 1 | **Identify** a device as embedded or non-embedded (classify its designed role), and give **benefits and drawbacks** — the mark scheme rewards both sides, so rehearse the symmetric pairs (cheap/fixed, reliable/un-updatable, simple/expert-only-repair). Often folded into a monitoring-and-control scenario — answer with the [[Sensors and Control Systems]] loop vocabulary. |
 | **IB CS** | — | Not separately named in any statement. Control-system scenarios (A1.3) may *feature* an embedded controller, and the loop language above answers them, but "embedded system" as a term carries no IB marks of its own. |
 | **AP CSA / CSP** | — | Not examined (CSA is Java-only; CSP's computing-systems strand stays at the internet/devices level). |
 
-**The trap to rehearse:** "give an example of a device that **does not** contain an embedded system." Safe answers are the general-purpose machines themselves — desktop, laptop, server. Nearly everything else electronic now contains one, which is exactly why the lazy example ("a TV!") backfires.
+**The trap to rehearse:** "give an example of a device that **does not** contain an embedded system." A laptop is general-purpose as a whole but may **contain** embedded controllers. Read whether the question asks what the device **is** or what it **contains**; use the described system and its dedicated function, rather than treating a device label as proof about every component.
 
 ## Beyond the syllabus
 
@@ -209,3 +206,4 @@ Six marks, and every one of them is a sensor reading, a comparison, or an actuat
 - **Builds on:** [[CPU Architecture and the Fetch-Execute Cycle]] — the microcontroller is the same stored-program machine, shrunk to one chip and one program; [[Sensors and Control Systems]] — the ring this box seals in (sense → decide → act, forever); [[Input and Output Devices]] — where the "every peripheral hides a computer" observation first surfaced; [[Secondary Storage]] — flash and EEPROM are where firmware lives, and why the ROM family exists.
 - **Leads to:** [[Interrupt Handling]] — how a sleeping chip is woken by the world the instant something happens, the working idiom of every controller on this page; [[Operating Systems]] — what changes when one computer must juggle many tasks, and what an *embedded* OS keeps and throws away.
 - **Kindred:** [[Von Neumann machine]] — the MCU is the smallest, cheapest, most numerous von Neumann machine ever built; [[Clock Domains and Metastability]] — what really happens at the GPIO pin when the asynchronous world meets the clocked chip.
+- **Leads to:** [[Automated Systems and Robotics]] — the microprocessor in the ring is this card's embedded computer; the smart-speaker question is answered from both cards at once (embedded: yes; robot: no).

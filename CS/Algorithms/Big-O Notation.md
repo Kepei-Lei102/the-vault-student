@@ -7,6 +7,7 @@ prerequisites:
   - "[[Recursion]]"
   - "[[Sequences]]"
 leads_to:
+  - "[[Heaps and Priority Queues]]"
   - "[[Graphs]]"
   - "[[P vs NP]]"
   - "[[Parallel and External Sorting]]"
@@ -46,16 +47,7 @@ The single most important sentence: **a better Big-O beats a faster computer.** 
 
 ### 中文锚点
 
-**大O记号**（dà-O jìhào, Big-O notation）/ **时间复杂度**（shíjiān fùzádù, time complexity）：描述算法的工作量**如何随着输入规模 $n$ 增长**。它故意**扔掉常数和低次项**，只保留增长的「**量级**」——因为常数取决于你的电脑，量级取决于算法本身。
-
-- $O(1)$ 常数：和 $n$ 无关（数组取下标、哈希查找）
-- $O(\log n)$ 对数：每步砍一半（[[Searching|二分查找]]）
-- $O(n)$ 线性：看一遍（线性查找）
-- $O(n\log n)$ 线性对数：最优的比较排序（[[Sorting|归并/快速排序]]）
-- $O(n^2)$ 平方：每个元素配每个元素（冒泡/选择/插入排序）
-- $O(2^n)$ 指数 / $O(n!)$ 阶乘：暴力枚举，规模一大就**彻底没救**
-
-一句话：**好的复杂度胜过快的电脑。** $n$ 小的时候常数说了算；$n$ 大的时候量级说了算，而且大到任何硬件都救不回来。
+查纸质词典时，如果从第一页逐页往后找，词典厚一倍，最倒霉时要翻的页数也差不多多一倍；如果每次看中间，根据字母顺序排除一半，厚一倍往往只多一次“砍半”。大O记号关心的就是：东西越多，这种找法会多忙多少？它用增长的上界来描述工作量，不是在给秒表报读数。翻页快慢当然有用，但换一种找法，会改变工作量随词典变厚而增长的方式。
 
 ## Why we throw away the details
 

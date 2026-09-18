@@ -27,6 +27,8 @@ tags:
   - curriculum/IB-Physics
   - curriculum/AP-Physics-1
   - curriculum/AP-Physics-2
+  - curriculum/AP-Physics-C-Mechanics
+  - curriculum/AP-Physics-C-EM
   - syllabus/9702-1-3
   - syllabus/0625-1-1
   - syllabus/0625-P4
@@ -126,9 +128,9 @@ The proof above gives you the *standard deviation* of $\bar X$. The **Central Li
 - *This card's proof:* $\sigma_{\bar X} = \sigma/\sqrt{N}$. Exact at all $N \geq 1$. No assumption about distribution shape.
 - *CLT:* as $N \to \infty$, the *standardised* $(\bar X - \mu)/(\sigma/\sqrt{N})$ converges in distribution to $N(0, 1)$. The full distribution becomes approximately normal regardless of the per-reading distribution.
 
-You need the CLT when you want to compute *probabilities* about $\bar X$ — confidence intervals, hypothesis tests, "the probability the mean is within $2$ SEM of $\mu$." You do *not* need the CLT for the SEM formula itself. The card's proof is complete; the CLT is the related-but-stronger theorem on the next floor up.
+You need the CLT when you want to compute *probabilities* about $\bar X$ — confidence intervals, hypothesis tests, "the probability the mean is within $2$ SEM of $\mu$." You do *not* need the CLT for the SEM formula itself. The SEM proof is complete; the CLT makes a stronger claim about the shape of the distribution.
 
-The CLT statement (Lindeberg–Lévy form) lives at [[Normal Distribution]] §"Central Limit Theorem (the why)" with a meta-callout noting that the formal proof uses characteristic functions, Lévy's continuity theorem, and a Taylor expansion of $\varphi(t)$ around $t = 0$ — beautiful but requiring measure-theoretic probability and Fourier theory, so it's deferred to graduate texts (Billingsley's *Probability and Measure*, Durrett's *Probability: Theory and Examples*). The CLT proof is *not* in this vault. The SEM proof, above, is.
+The CLT statement (Lindeberg–Lévy form) lives at [[Normal Distribution]] §"Central Limit Theorem (the why)" with a meta-callout noting that the formal proof uses characteristic functions, Lévy's continuity theorem, and a Taylor expansion of $\varphi(t)$ around $t = 0$ — beautiful but requiring measure-theoretic probability and Fourier theory, so it's deferred to graduate texts (Billingsley's *Probability and Measure*, Durrett's *Probability: Theory and Examples*). The SEM derivation above needs only variance additivity; a full CLT proof requires those additional tools.
 
 > [!info] Beyond syllabus — averaging and error propagation are the same theorem
 > The covariance identity $\operatorname{Var}(X+Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) + 2\operatorname{Cov}(X, Y)$ underwrites *both* this card's proof and the addition-in-quadrature rule from [[Error Propagation]] §"Rule 1 — sums and differences." Errors that are independent add via $\sigma_z^2 = \sigma_x^2 + \sigma_y^2$ rather than $\sigma_z = \sigma_x + \sigma_y$ — same identity, same independence assumption. **Repeated-measurements averaging and error propagation are the same mathematical principle, applied in opposite directions** — propagation grows variance through a calculation; averaging shrinks variance by stacking samples. Both are downstream of $\operatorname{Var}(X+Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)$ under independence.
@@ -152,7 +154,7 @@ The key numbers to internalise:
 | 400 | 5% | nearly always wasted in a school lab |
 | 10,000 | 1% | the regime where Eddington's plate stacking lived |
 
-**The practical rule:** in school physics, 5 to 10 measurements is usually the sweet spot. Going from $N=1$ to $N=5$ cuts the SEM by more than half; going from $N=5$ to $N=10$ cuts it by another 30%; going from $N=10$ to $N=20$ buys you another 30% but doubles the time spent. **Twenty is rarely worth it; a hundred almost never is** — at that point any *systematic* error in your apparatus dominates whatever's left of the random part, and no amount of averaging will help.
+**The practical rule:** choose enough repetitions to characterise the variation and meet the required precision, while checking for drift and systematic error. Going from $N=5$ to $N=20$ halves the SEM under the independent equal-variance model. Whether that improvement is worth the time depends on the measurement; there is no universal ceiling of ten or twenty readings. Automated experiments can profitably collect far more.
 
 ## The systematic-error trap
 
@@ -239,41 +241,27 @@ Independence is the load-bearing assumption of the $\sqrt{N}$ law, and students 
 
 ## Exam Notes
 
-### Cambridge 9702 (AS Level)
+### Cambridge 9702 — practical skills, Papers 3 and 5
 
-**Syllabus ref:** 1.3 — uncertainty propagation by addition of absolute/percentage uncertainties; the *taking and processing of measurements* expected throughout Paper 3 (Practical) and Paper 5 (Planning, Analysis, Evaluation).
+The syllabus requires an appropriate quantity of data and **repeat readings where appropriate**. It permits absolute uncertainty from **half the range of repeated readings where appropriate**. Select the repetitions for the actual experiment: repeated trials, multiple positions on a nonuniform object, or timing several cycles answer different sources of uncertainty. Follow any uncertainty method specified by the question.
 
-What 9702 actually expects:
-- **Practical Paper 3:** Always take *multiple* readings and report a mean; always *time 10 oscillations* (or 20, or 50) and divide rather than time one oscillation; quote uncertainty as the *spread of repeated readings* (often half-the-range as a quick approximation, $\sigma/\sqrt{N}$ in the more careful version).
-- **Paper 5 (P5):** Explicitly tests *experimental design* — "describe the procedure" questions reward an answer that includes (a) repeat the measurement at least 5 times, (b) compute the mean, (c) compute the uncertainty as the range divided by 2 or as the standard error. Marks are *given* for naming this technique.
-- **Common P5 question template:** "*describe how you would investigate the relationship between [X] and [Y]*". The mark scheme always includes a bullet for "*repeat each measurement and take the mean to reduce random uncertainty*" — worth one mark per practical question, and easy to miss if a student is rushing.
+There is no universal syllabus rule to repeat every reading five times, always time exactly ten oscillations, or switch from half-range to $s/\sqrt N$ at $N=10$. Nor does writing “repeat and average” guarantee a mark independent of the experimental context. Explain what fluctuates and how the proposed repeat measurements improve the estimate. Standard error is a statistical extension; it is not an automatic Paper 3/5 substitute for the required treatment.
 
-> [!tip] The 9702 half-range shortcut
-> For small $N$ (typically $N \leq 5$), Cambridge papers accept the **half-range** approximation: uncertainty $\approx (X_{\max} - X_{\min})/2$. This is *not* the same as $\sigma/\sqrt{N}$ — it's an upper-bound rule of thumb — but it's the formula Cambridge mark schemes expect for low-$N$ practicals. For $N \geq 10$, $\sigma/\sqrt{N}$ becomes the correct quote.
+### Cambridge 0625 — §1.1 and practical skills
 
-### Cambridge 0625 (IGCSE Physics)
+§1.1 uses measurements of multiples to obtain an average small distance or short time interval. Practical assessment requires sufficient observations for reliability and repetitions where appropriate; repeatability means consistency under the same conditions. Taking a mean can reduce random variation, but cannot repair a shared zero error. Formal standard-error calculations are not required.
 
-This card sits on both sides of 0625. **§1.1** asks for an average value for a *small distance* or a *short time interval* by measuring **multiples** — twenty swings of a pendulum timed together and divided by twenty, ten sheets of paper measured and divided by ten — which beats the ruler's or the reflex's resolution without any statistics at all. On the **practical papers** the same instinct is marked as *take sufficient observations to be reliable* and *repeat observations where appropriate*, alongside the term **repeatability**: the same result on repeating under the same conditions, same method, same experiment.
+### IB Physics — experimental skills and scientific investigation
 
-What is *not* on 0625 is the $\sigma/\sqrt{N}$ formula. Students are expected to take three readings of a length, time or temperature, compute the mean, and use it as the more reliable estimate. The jump to a formal standard error happens in AS year 1.
+Consider measurement uncertainty and use processing appropriate to the research question. The scientific investigation's Data analysis criterion rewards **appropriate consideration of uncertainties**; it does not prescribe an SEM derivation for every investigation. The first-assessment-2025 data booklet's uncertainty page supplies propagation rules, **not $u(\bar x)=\sigma/\sqrt N$**. Half-range, spread and standard error answer different questions; justify the chosen estimate rather than treating the sample size alone as a switch between formulas.
 
-### IB Physics
+### AP Physics 1, 2 and C: Mechanics / Electricity and Magnetism
 
-**Theme A / PRAC.2** — uncertainty types, error propagation, repeated measurements. IB explicitly tests:
-- *Half-range* as the standard uncertainty quote for small $N$ (same as Cambridge).
-- For larger $N$, *standard deviation* of the readings, with $\sigma/\sqrt{N}$ as the SEM. (IB writes this as $u(\bar x) = \sigma/\sqrt{N}$ in the data booklet.)
-- The Internal Assessment (20% of total grade) rewards explicit error analysis including the SEM derivation; markers look for a student who knows *why* they're dividing by $\sqrt{N}$, not just that they should.
+All four CEDs include Science Practice 3, **Scientific Questioning and Argumentation**: devise appropriate experimental procedures and justify claims with evidence. Use repeated independent measurements and averaging when random variation limits the result; distinguish this from systematic error and drift. The formal SEM derivation is additional statistical explanation, not a universal named AP Physics formula requirement. Avoid claiming a fixed mark, question number or number of trials without the actual question's rubric.
 
-### AP Physics 1 & 2
+### Scope boundary
 
-Science Practice 3 (Experimental Design and Analysis) explicitly tests:
-- Selecting the right *number of trials* for a measurement (FRQ 3 frequently).
-- Recognising that *more trials* reduce random but not systematic uncertainty.
-- The $\sqrt{N}$ scaling is rarely tested in formula form but is expected as a *concept* in justifying experimental designs.
-
-### A-Level (other boards)
-
-Edexcel, AQA, OCR all expect: take multiple readings, compute mean, quote uncertainty as half-range (small $N$) or SEM (large $N$). The 9702 formal treatment is the gold standard; other boards converge on the same content with minor notation differences.
+Repetition and uncertainty reasoning belong to practical physics across these courses. The $1/\sqrt N$ law is a mathematical model for the standard deviation of a mean under independent equal-variance observations; it does not establish a universal exam convention for reporting total measurement uncertainty.
 
 ## Connections
 

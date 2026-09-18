@@ -5,6 +5,7 @@ prerequisites:
   - "[[Stories/Franklin's Coin Flip]]"
   - "[[Franklin's Coin Flip]]"
 leads_to:
+  - "[[Electric Field]]"
   - "[[Resistance]]"
   - "[[Capacitors]]"
   - "[[Lorentz Force]]"

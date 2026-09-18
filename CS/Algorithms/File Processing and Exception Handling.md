@@ -32,9 +32,9 @@ tags:
 
 ## 中文锚点
 
-想想小区里的**快递柜**。快递员放件有三种"上架"方式。**串行**：来一件塞一格，按到达顺序排，找你的件只能从第一格挨个看——像堆在收发室桌上的一摞包裹。**顺序**：按学号（键）排好放，找的时候还是挨个看，但一旦格子上的号码超过你的，就可以停手了；要插进一件新的，得把后面的整体挪一遍。**随机（直接）**：柜子的格号由你的手机号**算**出来（比如尾号除以柜格数取余），取件时直接走到那一格，一步到位——不是"随便放"，是"算出来放"；两个人算到同一格，后来的那件就顺着放到下一个空着的格。要让"格号 × 格子大小 = 位置"这个算法成立，**每格必须一样大**，这就是为什么随机文件里的记录都是**定长**的。
+写了半天文档，按下保存，才发现U盘已经拔掉了。字还在屏幕上，不等于已经存进文件：程序还得把它交给外面的存储设备，而这一步可能办不到。发现U盘不在的那段代码，可以把问题往上传，让负责保存流程的部分来决定：换个位置，还是请你插回去再试。异常处理的用处，就在于把“发现这里出了什么事”和“决定接下来怎么办”分开，再把问题交给能拿主意的地方，而不是没存成也假装保存成功。
 
-再想取件那一刻：你输入取件码，柜子说"取件码错误"或者"柜门故障"。它**没有死机**，它把问题**报告**给能做决定的人——你——你可以重输、换一个码、找客服。这就是**异常处理**。一个程序运行中遇到意外事件（文件不存在、除以零、用户把"10"打成"十"），这个事件叫**异常**；不处理，程序会**意外终止**，像柜门半开着整台机器卡死。处理它的写法是 `try`（试着做）加 `except`（万一出错就这样办）：错误在最深处被**发现**，却可以在上面几层、真正能**决定**怎么办的地方被**接住**——异常就是把这个消息从发现处送到决定处的信使。
+## Key Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -58,7 +58,7 @@ tags:
 
 [[File Handling]] stopped at lines of text: `OPENFILE`, `READFILE`, `WRITEFILE`, `EOF`, `CLOSEFILE`, and the discovery that writing a structure down is easy and reading it back is the hard part. The A-Level step is to make the unit of work a **record** rather than a line — the user-defined `TYPE` from [[User-Defined Data Types]] — and to ask how a whole file of them should be *organised* so that the operations the program actually performs are cheap.
 
-Start with the shape that every practical paper uses: **one record per line, fields separated by a comma.**
+Start with one common file format: **one record per line, fields separated by a comma.**
 
 ```python
 from dataclasses import dataclass

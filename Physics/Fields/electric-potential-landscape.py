@@ -1,0 +1,60 @@
+"""Stack: Manim Community. Electrostatic work, charge sign, and reference freedom.
+Render: manim -qk electric-potential-landscape.py PotentialLandscape
+All values are dimensionless; paths in scene 1 are externally controlled.
+"""
+from manim import *
+import numpy as np
+config.background_color='#1e1e1e'
+TXT='#cccccc';BLUE='#2563eb';RED='#dc2626';GREEN='#059669';PURPLE='#7c3aed';AMBER='#f59e0b';GREY='#888888'
+def txt(s,n=28,c=TXT):return Text(s,font='Arial',font_size=n,color=c)
+class PotentialLandscape(Scene):
+ def reset(self):self.play(*[FadeOut(m) for m in self.mobjects],run_time=1)
+ def heading(self,s,foot):
+  footer=txt(foot,23)
+  if footer.width>13.3:footer.scale_to_fit_width(13.3)
+  self.add(txt(s,36).to_edge(UP,buff=.35),footer.to_edge(DOWN,buff=.35))
+ def construct(self):
+  self.heading('1. Different routes. The same electric work.','Fixed point source; kQ = 1. These are controlled paths, not free motion.')
+  def point(t,h):return np.array([-5+4*(1+t),-.7+4*h*np.sin(np.pi*t),0])
+  src=Dot([-5,-.7,0],radius=.16,color=BLUE)
+  A=point(0,0);B=point(1,0)
+  straight=Line(A,B,color=BLUE,stroke_width=4)
+  detour=ParametricFunction(lambda t:point(t,.8),t_range=[0,1],color=GREEN,stroke_width=4)
+  labels=VGroup(txt('+Q',25,BLUE).next_to(src,DOWN),txt('A: r = 1',24).next_to(A,DOWN),txt('B: r = 2',24).next_to(B,DOWN))
+  self.play(FadeIn(src),FadeIn(labels),Create(straight),Create(detour));self.wait(3)
+  t=ValueTracker(0);height=ValueTracker(0)
+  bead=always_redraw(lambda:Dot(point(t.get_value(),height.get_value()),radius=.11,color=AMBER))
+  def v():return 1/np.sqrt((1+t.get_value())**2+(height.get_value()*np.sin(np.pi*t.get_value()))**2)
+  value=DecimalNumber(1,num_decimal_places=3,color=TXT).move_to([.3,-2,0])
+  work=DecimalNumber(0,num_decimal_places=3,color=TXT).move_to([.3,-2.65,0])
+  value.add_updater(lambda m:m.set_value(v()));work.add_updater(lambda m:m.set_value(1-v()))
+  self.add(bead,value,work,txt('V here =',25).move_to([-1.8,-2,0]),txt('W_field / q =',25).move_to([-1.8,-2.65,0]))
+  self.play(t.animate.set_value(1),run_time=6,rate_func=linear);value.update();work.update();bead.update();self.wait(2)
+  self.remove(bead);t.set_value(0);height.set_value(.8);self.add(bead)
+  self.play(t.animate.set_value(1),run_time=6,rate_func=linear);value.update();work.update();bead.update();self.wait(3)
+  value.clear_updaters();work.clear_updaters();self.reset()
+  self.heading('2. The same V map. Opposite accelerations.','Both lower U = qV when released. Same |q| and mass; separate test-particle trials.')
+  axes=Axes(x_range=[0,6,1],y_range=[0,4,1],x_length=9,y_length=2,axis_config={'color':GREY,'include_ticks':False}).move_to([0,1.2,0])
+  curve=axes.plot(lambda x:3.5-.5*x,color=PURPLE)
+  self.play(FadeIn(axes),Create(curve),FadeIn(txt('V',26).next_to(axes.y_axis,LEFT)),FadeIn(txt('x',26).next_to(axes.x_axis,RIGHT)))
+  self.add(txt('V decreases to the right',25,PURPLE).move_to([0,2.5,0]))
+  field=Arrow([-2,-.45,0],[2,-.45,0],color=BLUE,buff=0)
+  self.play(FadeIn(field),FadeIn(txt('E points right',24,BLUE).next_to(field,UP,buff=.1)))
+  time=ValueTracker(0)
+  positive=always_redraw(lambda:Dot([.5*time.get_value()**2,-1.5,0],color=BLUE,radius=.14))
+  negative=always_redraw(lambda:Dot([-.5*time.get_value()**2,-2.4,0],color=RED,radius=.14))
+  self.add(txt('+q: toward lower V',24,BLUE).move_to([-3.8,-1.5,0]),txt('-q: toward higher V',24,RED).move_to([3.8,-2.4,0]))
+  self.play(FadeIn(positive),FadeIn(negative));self.wait(3)
+  self.play(time.animate.set_value(2.3),run_time=7,rate_func=linear);self.wait(3);self.reset()
+  self.heading('3. Change the zero. Keep the physics.','Adding a constant changes V everywhere, but changes neither voltage differences nor E.')
+  ax=Axes(x_range=[0,6,1],y_range=[-1,6,1],x_length=7,y_length=4,axis_config={'color':GREY,'include_ticks':False}).move_to([-1.5,0,0])
+  offset=ValueTracker(0)
+  line=always_redraw(lambda:ax.plot(lambda x:3.5-.5*x+offset.get_value(),color=PURPLE))
+  pa=always_redraw(lambda:Dot(ax.c2p(1,3+offset.get_value()),color=AMBER))
+  pb=always_redraw(lambda:Dot(ax.c2p(5,1+offset.get_value()),color=AMBER))
+  va=DecimalNumber(3,num_decimal_places=1).move_to([5,1.1,0]);vb=DecimalNumber(1,num_decimal_places=1).move_to([5,.3,0])
+  va.add_updater(lambda m:m.set_value(3+offset.get_value()));vb.add_updater(lambda m:m.set_value(1+offset.get_value()))
+  self.play(FadeIn(ax),FadeIn(line),FadeIn(pa),FadeIn(pb))
+  self.add(txt('V_A =',24).move_to([3.8,1.1,0]),txt('V_B =',24).move_to([3.8,.3,0]),va,vb,txt('V_B - V_A = -2',24,GREEN).move_to([4.4,-.6,0]),txt('same slope',24,GREEN).move_to([4.4,-1.3,0]))
+  self.wait(3);self.play(offset.animate.set_value(2),run_time=4);va.update();vb.update();line.update();pa.update();pb.update();self.wait(2);self.play(offset.animate.set_value(-1),run_time=4);va.update();vb.update();line.update();pa.update();pb.update();self.wait(3)
+  va.clear_updaters();vb.clear_updaters()

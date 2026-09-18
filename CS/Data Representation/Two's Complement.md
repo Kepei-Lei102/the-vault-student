@@ -63,6 +63,18 @@ The obvious idea: steal the top bit as a **sign flag** (0 = positive, 1 = negati
 
 A representation you have to special-case is a representation fighting the hardware. Two's complement is the one that stops fighting.
 
+## One's complement — invert, without the extra one
+
+One's complement keeps non-negative numbers in ordinary binary and represents a negative number by **inverting every bit of its positive magnitude**. For eight bits:
+
+- **Encode −5.** Tool: invert the eight-bit representation of +5. `0000 0101` becomes `1111 1010`.
+- **Decode `1111 1010`.** The leading 1 selects the negative case. Invert to recover `0000 0101` = 5, then apply the sign: **−5**.
+- **Decode `0010 0110`.** The leading 0 selects ordinary binary: 32 + 4 + 2 = **38**.
+
+Inverting an unsigned pattern with value $x$ produces $(2^n-1)-x$. This explains both the recipe and its drawback: +0 is all zeros, while −0 is all ones. The range is $-(2^{n-1}-1)$ to $2^{n-1}-1$, or **−127 to +127** with eight bits. There are still two zeros.
+
+The representation must be named before decoding: `1111 1010` means **−5 in one's complement**, **−6 in two's complement**, and **250 unsigned**. The bits alone do not tell you which interpretation was intended.
+
 ## Two's complement: the representation
 
 Same eight cells, one change of meaning: **the top bit's place value is negative.** For 8 bits the column weights are

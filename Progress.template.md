@@ -8,14 +8,14 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-14b` · built 2026-09-14 from commit `f18aa35`  
-> 401 cards · 580 diagrams · 102 explainers · 139 illustrations
+> **Edition** `student-2026-09-18` · built 2026-09-18 from commit `29a7c09`  
+> 432 cards · 658 diagrams · 130 explainers · 148 illustrations
 
 ---
 
 ## Mathematics
 
-*221 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*222 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -148,6 +148,7 @@
 | [[MF19 Reference (9231)]] | ? |  |  |
 | [[MF19 Reference (9709)]] | ? |  |  |
 | [[Modulus Function]] | ? |  |  |
+| [[Natural Numbers]] | ? |  |  |
 | [[Nets (Vocab)]] | ? |  |  |
 | [[Non-Parametric Tests]] | ? |  |  |
 | [[Normal Distribution]] | ? |  |  |
@@ -243,7 +244,7 @@
 
 ## Physics
 
-*51 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*71 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -258,9 +259,15 @@
 | [[Circular Motion]] | ? |  |  |
 | [[Damped Oscillations]] | ? |  |  |
 | [[Density and Pressure]] | ? |  |  |
+| [[Diffraction]] | ? |  |  |
+| [[Doppler Effect]] | ? |  |  |
 | [[Elastic Strings and Springs]] | ? |  |  |
 | [[Electric Current]] | ? |  |  |
+| [[Electric Field]] | ? |  |  |
+| [[Electric Potential]] | ? |  |  |
 | [[Electromagnetic Induction]] | ? |  |  |
+| [[Electromagnetic Spectrum]] | ? |  |  |
+| [[Energy Levels and Line Spectra]] | ? |  |  |
 | [[Entropy and the Second Law]] | ? |  |  |
 | [[Error Propagation]] | ? |  |  |
 | [[First Law of Thermodynamics]] | ? |  |  |
@@ -268,11 +275,14 @@
 | [[Forces and Equilibrium]] | ? |  |  |
 | [[Friction (Vocab)]] | ? |  |  |
 | [[Gravitational Fields]] | ? |  |  |
+| [[Heat Transfer]] | ? |  |  |
 | [[Hooke's Law for Springs]] | ? |  |  |
+| [[Hubble's Law and the Expanding Universe]] | ? |  |  |
 | [[Internal Energy]] | ? |  |  |
 | [[Internal Resistance]] | ? |  |  |
 | [[Kinetic Theory and the Ideal Gas]] | ? |  |  |
 | [[Kirchhoff's Laws]] | ? |  |  |
+| [[Lenses and Image Formation]] | ? |  |  |
 | [[Linear Momentum]] | ? |  |  |
 | [[Linear Motion under a Variable Force]] | ? |  |  |
 | [[Lorentz Force]] | ? |  |  |
@@ -281,32 +291,45 @@
 | [[Newton's Law of Restitution]] | ? |  |  |
 | [[Newton's Laws of Motion]] | ? |  |  |
 | [[Normal Force (Vocab)]] | ? |  |  |
+| [[Nuclear Physics]] | ? |  |  |
+| [[PET Scanning]] | ? |  |  |
 | [[Physical Quantities and Units]] | ? |  |  |
+| [[Polarisation]] | ? |  |  |
 | [[Potential Dividers]] | ? |  |  |
 | [[Progressive Waves]] | ? |  |  |
 | [[Projectile Motion]] | ? |  |  |
+| [[Reflection and Refraction]] | ? |  |  |
 | [[Repeated Measurements]] | ? |  |  |
 | [[Resistance]] | ? |  |  |
 | [[Resonance]] | ? |  |  |
 | [[Significant Figures]] | ? |  |  |
 | [[Simple Harmonic Motion]] | ? |  |  |
 | [[Specific Heat Capacity]] | ? |  |  |
+| [[Stationary Waves]] | ? |  |  |
+| [[Stellar Luminosity and Size]] | ? |  |  |
 | [[Stress, Strain and Young Modulus]] | ? |  |  |
+| [[Superposition and Interference]] | ? |  |  |
 | [[SUVAT]] | ? |  |  |
+| [[Temperature and Thermometry]] | ? |  |  |
 | [[Tension (Vocab)]] | ? |  |  |
 | [[The Friction Limit]] | ? |  |  |
 | [[Torque]] | ? |  |  |
+| [[Ultrasound]] | ? |  |  |
 | [[Vectors in Physics]] | ? |  |  |
+| [[Wave-Particle Duality]] | ? |  |  |
 | [[Work, Energy and Power]] | ? |  |  |
+| [[X-rays and CT]] | ? |  |  |
 
 ## CS
 
-*63 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*70 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[Arrays]] | ? |  |  |
+| [[Artificial Intelligence]] | ? |  |  |
 | [[Assembly Language]] | ? |  |  |
+| [[Automated Systems and Robotics]] | ? |  |  |
 | [[Balanced Trees]] | ? |  |  |
 | [[Big-O Notation]] | ? |  |  |
 | [[Binary Trees]] | ? |  |  |
@@ -319,12 +342,14 @@
 | [[Compression]] | ? |  |  |
 | [[CPU Architecture and the Fetch-Execute Cycle]] | ? |  |  |
 | [[Data Security]] | ? |  |  |
+| [[Digital Currency and Blockchain]] | ? |  |  |
 | [[Embedded Systems]] | ? |  |  |
 | [[Encryption]] | ? |  |  |
 | [[Error Detection and Correction]] | ? |  |  |
 | [[Ethics and Ownership]] | ? |  |  |
 | [[File Handling]] | ? |  |  |
 | [[File Processing and Exception Handling]] | ? |  |  |
+| [[File Systems]] | ? |  |  |
 | [[Flip-Flops]] | ? |  |  |
 | [[Floating-Point Representation]] | ? |  |  |
 | [[Graphs]] | ? |  |  |
@@ -332,6 +357,7 @@
 | [[Gödel's Incompleteness Theorems]] | ? |  |  |
 | [[Half-Adder and Full-Adder]] | ? |  |  |
 | [[Hash Tables]] | ? |  |  |
+| [[Heaps and Priority Queues]] | ? |  |  |
 | [[Image Encoding]] | ? |  |  |
 | [[Information Theory]] | ? |  |  |
 | [[Input and Output Devices]] | ? |  |  |
@@ -350,6 +376,8 @@
 | [[Pipelining and Simultaneous Multithreading]] | ? |  |  |
 | [[Program Design]] | ? |  |  |
 | [[Program Development Life Cycle and Testing]] | ? |  |  |
+| [[Programming Fundamentals]] | ? |  |  |
+| [[Programming Paradigms]] | ? |  |  |
 | [[RAM and the Memory Hierarchy]] | ? |  |  |
 | [[Recursion]] | ? |  |  |
 | [[Relational Databases]] | ? |  |  |
@@ -371,7 +399,7 @@
 
 ## Meta
 
-*15 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*17 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -390,10 +418,12 @@
 | [[The Love of Wisdom]] | ? |  |  |
 | [[The True IO Bound]] | ? |  |  |
 | [[Why Probability and Statistics]] | ? |  |  |
+| [[You Are a Reinforcement Learner]] | ? |  |  |
+| [[You're the Architect, the AI is the Bricklayer]] | ? |  |  |
 
 ## Stories
 
-*46 cards · 🔴 unread · 🟢 read*
+*52 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -413,8 +443,13 @@
 | [[From the Grid to the Garage]] | ? |  |  |
 | [[Galois at Twenty]] | ? |  |  |
 | [[Gauss the Prodigy]] | ? |  |  |
+| [[Grace Hopper and the Nanosecond]] | ? |  |  |
+| [[Henrietta Leavitt and the Cosmic Yardstick]] | ? |  |  |
 | [[Hilbert vs Brouwer]] | ? |  |  |
+| [[Ibn al-Haytham and the Question of Seeing]] | ? |  |  |
 | [[Inventing Variance]] | ? |  |  |
+| [[Laplace and Napoleon]] | ? |  |  |
+| [[Layers]] | ? |  |  |
 | [[Lewis Carroll the Mathematician]] | ? |  |  |
 | [[Newton vs Hooke]] | ? |  |  |
 | [[One Take, Many Tracks]] | ? |  |  |
@@ -437,6 +472,7 @@
 | [[The Loudness War]] | ? |  |  |
 | [[The Naming of Normal]] | ? |  |  |
 | [[The Pendulum Story]] | ? |  |  |
+| [[The Perceptron and Move 78]] | ? |  |  |
 | [[The War of the Currents]] | ? |  |  |
 | [[Turing at Bletchley]] | ? |  |  |
 | [[Two Family Trees]] | ? |  |  |

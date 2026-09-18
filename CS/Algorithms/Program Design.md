@@ -4,9 +4,11 @@ prerequisites:
   - "[[Forward Reading and Problem Discovery]]"
   - "[[Decouple and Recouple]]"
 leads_to:
+  - "[[Programming Fundamentals]]"
   - "[[Object-Oriented Programming]]"
   - "[[Cambridge Pseudocode]]"
   - "[[Program Development Life Cycle and Testing]]"
+  - "[[Programming Paradigms]]"
 tags:
   - subject/computer-science
   - domain/algorithms
@@ -316,6 +318,7 @@ They are the cheapest bug-prevention in the topic, and the marks are the least o
 - **Leads to:** [[Cambridge Pseudocode]] — the exam's own dialect, and the translation target for every design here; the design is what you think in, that card is what you write it down in.
 - **Application:** [[Searching]] and [[Sorting]] — the standard algorithms, and the natural things to hand a flowchart of and be asked what they do; [[Stacks and Queues]] and [[Linked List]] — where the operations are given as algorithms that a structure chart's parameter arrows describe exactly.
 - **Kindred:** [[Logic Gates]] and [[Boolean Algebra]] — a decision diamond's condition and a gate are the same object at two scales, which is why logic statements transfer intact; [[Operating Systems]] — its process states are a state-transition diagram, so the notation here is the one that card's triangle is drawn in; [[Floating-Point Representation]] — why choosing INTEGER cents over REAL dollars in an identifier table is a design decision and not a formality; [[Assembly Language]] — a loop's backwards arrow is a conditional jump, which is what the flowchart draws honestly.
+- **Leads to:** [[Programming Paradigms]] — the procedural constructs here are one paradigm of four; what changes when the same problem is written in the others.
 
 ## Notation Reference
 

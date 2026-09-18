@@ -154,11 +154,11 @@ with open("log.txt", "a") as f:   # log.txt is intact; new lines go at the end.
 
 Nothing above describes how a real application behaves, and the mismatch is worth naming rather than leaving as a puzzle. A note-taking app appears to save on every keystroke. It plainly is not opening and closing a file a thousand times, and it is certainly not rewriting the whole document each time you press a key.
 
-Start by tightening one sentence from earlier, because it is easy to over-read. **Flushing is what makes writing real; `close` is simply one thing that triggers a flush** — the last one, and the one you can forget. A program that intends to keep going just flushes when it wants durability and keeps the file open for hours. Open and close are not the unit of saving; they bracket a *connection*.
+Start by tightening one sentence from earlier, because it is easy to over-read. **Flushing pushes a language-level buffer onward; `close` is one operation that triggers it.** The OS and device may still buffer those bytes. A long-running program can keep the connection open while flushing and requesting storage synchronisation when it needs durability; a Python `flush()` alone is not that guarantee. Open and close are not the unit of saving; they bracket a *connection*.
 
 Three mechanisms do the actual work, and each answers a different part of the question.
 
-**1. Write somewhere else, then swap the name.** The standard way to save a document is not to overwrite it. Write the new version to a **temporary file**, flush it all the way to the disk, then `rename` the temporary file over the original. Renaming is *atomic*: at every instant the name refers to one complete file or the other, never to a half-written one. This is what makes "save" survive a power cut — and it is the professional answer to the write-mode trap above, since the original is never opened for writing at all. (The subtlety, for the same reason: the rename itself has to be flushed, or a crash can leave the old name pointing at the old data.)
+**1. Write somewhere else, then swap the name.** The standard way to save a document is not to overwrite it. Write the new version to a **temporary file**, flush it all the way to the disk, then `rename` the temporary file over the original. Renaming is *atomic*: at every instant the name refers to one complete file or the other, never to a half-written one. This avoids exposing a half-written replacement and answers the write-mode trap above. Power-loss durability additionally requires synchronising the directory change on systems that require it and a storage stack that honours the flushes. The example below demonstrates atomic replacement on a supporting local file system; it does not implement the final directory-synchronisation step.
 
 ```python
 import os, tempfile
@@ -176,7 +176,7 @@ def save_atomically(path, text):
 
 **3. Let something else worry about it.** Most apps that appear to save instantly are not managing files at all — they are writing rows to an embedded database, overwhelmingly **SQLite**, which does the journalling, the atomic replace and the crash recovery internally. The application says *store this note*; the durability problem has been solved once, by people who specialise in it, rather than badly in every app.
 
-And the honest tail: **"saved" in a user interface is a claim about the application's buffer, not about the disk.** The data may still be in the program's buffer, then the operating system's cache, then the drive's own cache. Only an explicit flush-to-disk makes it a fact — which is the same promise-versus-fact distinction the whole topic runs on.
+And the honest tail: **"Saved" in a user interface is an application-specific promise.** Data can pass through the program’s buffer, the OS cache and the drive’s cache; durable saving needs the appropriate synchronisation protocol and hardware support. [[File Systems]] separates atomic visibility from survival after power loss.
 
 ## Text and binary are the same thing
 

@@ -83,6 +83,22 @@ class LinkedList:
 
 Traversal is the price of the scattered life: to reach the fifth item you must walk through four `next` pointers — there is no formula that jumps to item $i$, because location was the thing we gave up. **A linked list trades random access for cheap change.** Whether that trade is right is a question the situation answers, never the structure alone.
 
+## Finding an item — follow the chain until an answer
+
+Tool: a linear walk, because there is no address formula for a linked list. Add this method inside `LinkedList`:
+
+```python
+    def find(self, value):
+        current = self.head
+        while current is not None:
+            if current.data == value:
+                return current        # return the matching node
+            current = current.next
+        return None                   # also handles an empty list
+```
+
+The invariant is that every node before `current` has been checked and did not match. Each hop shortens the unchecked suffix; finding a match or reaching `None` finishes the search. Best case $O(1)$, worst case $O(n)$ time, and $O(1)$ extra space. Returning the node lets the caller inspect its data; returning `None` distinguishes absence from a legitimate stored value such as zero.
+
 ## The operations — two writes, one write
 
 ### Insert: two pointer writes

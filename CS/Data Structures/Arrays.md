@@ -1,6 +1,7 @@
 ---
 chinese: 数组 (shùzǔ)
 prerequisites:
+  - "[[Programming Fundamentals]]"
   - "[[RAM and the Memory Hierarchy]]"
 leads_to:
   - "[[File Handling]]"

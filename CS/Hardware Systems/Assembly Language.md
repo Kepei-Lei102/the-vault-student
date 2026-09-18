@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[CISC vs RISC]]"
   - "[[Compilers and Interpreters]]"
+  - "[[Programming Paradigms]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -66,7 +67,7 @@ Cambridge examines a clean teaching machine: an **ACC** (accumulator — the wor
 
 | Group | Instructions | What they do |
 |---|---|---|
-| **Data movement** | `LDM #n` · `LDD <addr>` · `LDI <addr>` · `LDX <addr>` · `LDR #n` · `MOV <reg>` · `STO <addr>` | load the ACC (four different ways — see addressing modes), load the IX, copy ACC↔IX, store ACC to memory |
+| **Data movement** | `LDM #n` · `LDD <addr>` · `LDI <addr>` · `LDX <addr>` · `LDR #n` · `MOV <reg>` · `STO <addr>` | load the ACC (four different ways — see addressing modes), load the IX, copy ACC → IX, store ACC to memory |
 | **Input / output** | `IN` · `OUT` | read one character into ACC; write ACC as one character |
 | **Arithmetic** | `ADD <addr>` / `ADD #n` · `SUB <addr>` / `SUB #n` · `INC <reg>` · `DEC <reg>` | add/subtract into ACC; nudge ACC or IX by one |
 | **Compare** | `CMP <addr>` / `CMP #n` · `CMI <addr>` | compare ACC with a value — sets a flag, changes nothing else |
@@ -78,7 +79,7 @@ Two habits to wire in now: **`CMP` does nothing visible** — it only sets a fla
 
 ## Addressing modes — five answers to "where is it?"
 
-The same `LD` idea comes in several costumes, and the difference between them is the single most examined idea in §4.2. Each mode adds **one more level of indirection** — one more hop before you reach the data:
+The same `LD` idea comes in several costumes, and the difference between them is the single most examined idea in §4.2. Each mode specifies a different rule for finding the operand; **indirect** addressing adds a lookup, whereas **indexed** addressing adds an offset:
 
 ![[asm-addressing-modes.svg|697]]
 
@@ -206,3 +207,5 @@ The exam's favourite exercise is *being* the assembler: given a short program, p
 - **Builds on:** [[CPU Architecture and the Fetch-Execute Cycle]] — the registers and cycle every instruction here drives; instructions-as-numbers is that card's opcode/operand story, completed; [[Number Bases]] — hex as machine code's native costume; [[Bitwise Operations]] — the AND/OR/XOR/shift instructions' full mechanics.
 - **Leads to:** [[CISC vs RISC]] — why instruction sets themselves disagree, and the war over what an instruction should be; [[Compilers and Interpreters]] — the translators that *design* machine code instead of transcribing it, where the one-to-one rule breaks and the interesting choices begin.
 - **Kindred:** [[Embedded Systems]] — where hand-written assembly still earns its keep (boot code, tight ISRs); [[Interrupt Handling]] — the return-from-interrupt and state-saving this card's instructions implement; [[Von Neumann machine]] — code-as-numbers is the stored-program idea, and assembly is its human handle.
+- **Leads to:** [[Programming Paradigms]] — the low-level paradigm beside the other three, and the five addressing modes run on a register machine.
+

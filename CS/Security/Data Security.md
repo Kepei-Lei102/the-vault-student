@@ -67,13 +67,13 @@ Three questions, asked of every system that holds data worth holding: *can the w
 
 ## Part I — The three properties, and why they differ
 
-Students collapse the three into "keeping data safe", and the exam separates them because the *defences* differ. Security is a wall against outsiders; privacy is a rule about insiders; integrity is a check on the data itself.
+These properties overlap, but they ask different questions:
 
-- **Security is broken** when someone who should have no access gets some: a stolen password, an unpatched server, a hacked account. The defences are authentication and access control.
-- **Privacy is broken** when someone with legitimate access uses it beyond its purpose: the hospital clerk who looks up a neighbour's records, the app that sells your location. The defences are access *levels* (each role sees only what it needs) and law — China's *Personal Information Protection Law* (2021), Europe's GDPR.
-- **Integrity is broken** when data changes when it should not: a corrupted transfer, a mistyped date of birth, a bit flipped in transmission. The defences are validation, verification, and the [[Error Detection and Correction|parity and checksum]] machinery of transmission.
+- **Security:** is data protected against unauthorised access, alteration, destruction or disruption? Authentication, access control, encryption and recovery measures address different parts of that problem.
+- **Privacy:** is personal information collected, seen and used appropriately? A clerk with legitimate system access can still breach privacy by browsing a neighbour's medical records without a work reason. Access levels and limits on use matter as well as keeping outsiders out.
+- **Integrity:** is data accurate, complete and changed only as intended? Mistyped inputs, transmission errors and malicious edits can all damage it. Validation, verification and [[Error Detection and Correction|error checks]] address different causes; permissions help prevent unauthorised changes.
 
-A system can have any one without the others. An encrypted database with one shared password has security without privacy. A carefully validated form on an open network has integrity without security. The exam's favourite trap is a scenario that names one and asks for the defence of another.
+One control does not establish all three. Encryption can protect a stolen copy from being read but cannot stop an authorised user misusing the decrypted data. A range check can reject an impossible age but cannot detect every plausible wrong age or protect the stored value from later tampering.
 
 ## Part II — Threats
 
@@ -85,6 +85,9 @@ The 0478 list is the fuller one; 9618 uses the same names. Learn each as *mechan
 | **Worm** | like a virus but *self-propagating* across a network with no host file and no user action | availability |
 | **Trojan** | malware *disguised* as a legitimate program the user installs willingly | security |
 | **Spyware** | records what you do — keystrokes, screens — and sends it to the attacker | privacy, security |
+| **Adware** | displays unwanted advertisements, sometimes redirecting browsing or tracking activity | privacy, availability |
+| **Data interception** | captures data travelling over a network; readable contents may disclose credentials or personal information | confidentiality |
+| **Hacking** | gains unauthorised access, for example through a stolen credential or a software vulnerability | security |
 | **Ransomware** | encrypts your files and demands payment for the key | availability |
 | **Phishing** | a *legitimate-looking message* lures the user to a fake site to hand over credentials | security (via the human) |
 | **Pharming** | redirects the user to a fake site *without their action* — poisoned DNS or a hosts file | security (via the machine) |
@@ -101,8 +104,10 @@ Two distinctions the schemes reward. **Phishing needs the user to act** (click, 
 
 For each threat, a countermeasure — and the exam wants the *how*, not the name.
 
-- **Authentication** proves you are who you claim. Passwords (something you know), biometrics (something you are — fingerprint, face), and **two-step / two-factor verification** (something you have — a code on your phone). 2FA is the single highest-value control: Google's 2019 study found an on-device prompt blocked **100% of automated attacks, 99% of bulk phishing, and 90% of targeted attacks**. A password alone blocks far less.
+- **Authentication** proves you are who you claim. Passwords (something you know), biometrics (something you are — fingerprint, face), and **two-factor authentication** (two different categories, such as a password plus possession of a security key or phone). **Two-step verification** means two checks; they count as two factors only when they use different categories. 2FA is the single highest-value control: Google's 2019 study found an on-device prompt blocked **100% of automated attacks, 99% of bulk phishing, and 90% of targeted attacks**. A password alone blocks far less.
 - **Access control / access levels** decide, once you are in, what you may see and change. This is the *privacy* defence: the database's `GRANT` from [[SQL]], the file permissions of [[Operating Systems]]. Least privilege — give every account the minimum it needs — is the principle behind it.
+- **Privacy settings** restrict who can see a profile, contact you or access personal information. Restricting a public location post to trusted contacts reduces exposure; it does not prevent an authorised viewer copying it.
+- **Proxy server** acts as an intermediary: a client sends a request to it, and it requests the resource on the client’s behalf. An organisation can filter destinations or content centrally and conceal client addresses from the destination. A proxy is not automatically an encrypted connection; HTTPS/TLS still supplies protection in transit.
 - **Firewall** monitors traffic in and out and rejects anything not matching its rules (a blacklist or whitelist of addresses; closing ports known to be used by attackers). It is the network wall, not a scanner of content.
 - **Anti-malware** scans files against a database of known-malware signatures (and, increasingly, behaviour) and quarantines or deletes matches. It must be *kept updated*, because the signature database is only as good as its last update — which is why **automatic software updates** are a control in their own right: most breaches exploit a hole that was patched months earlier.
 - **Encryption** scrambles data so that intercepting it yields nothing without the key. It is the last-line defence: it does not stop the theft, it makes the theft worthless. The mechanism — symmetric vs asymmetric keys, public and private — is [[Encryption]].
@@ -111,24 +116,13 @@ For each threat, a countermeasure — and the exam wants the *how*, not the name
 
 The chart is why "use a long password" and "the site must hash properly" are two different, both-necessary rules. It plots the expected time to brute-force a password by its shape, under two assumptions about how the site *stored* it. A six-letter lowercase password stored as a fast MD5 hash falls in under a hundredth of a second; the same password stored with a deliberately slow hash (bcrypt) takes twenty-five minutes. Length helps the user; a slow, salted hash is the site's job — and the gap between the two bars is the site keeping its promise. Four random words beat a short "complex" password, which is why the advice changed.
 
-### Making a password that is strong — and that you can remember
+### Memorable is not the same as unpredictable
 
-The chart speaks the machine's language: length and character classes. Your memory speaks another: *one thing I can picture*. A good password is where the two meet, and there is a recipe. Take an image that is yours and vivid — 脚滑的狐狸, the slippery fox — write it in English, join the words, then swap a few letters for the symbols and digits that look like them:
+`Slippery_Fox` becoming `$Iippery_F0x` looks more complicated, but password crackers routinely try dictionary words and substitutions such as `S→$` and `o→0`. A phrase being private does not make it random. Counting $94^{12}$ possibilities is justified only for twelve characters chosen independently and uniformly from those 94 symbols; it badly overstates the strength of a human-chosen phrase.
 
-```
-Slippery Fox  →  Slippery_Fox  →  $Iippery_F0x
-                                   S→$    l→I    o→0
-```
+Treat the chart's recipe and cracking times as **illustrative attack assumptions**, not a forecast for your password. Actual guessing order, leaked information, hardware and the site's hash settings change the result. Online rate limits and multi-factor authentication further change the attack; the chart models guesses against a stolen hash.
 
-Twelve characters, all four classes — upper, lower, digit, symbol. To you it is a fox on ice. To an attacker who knows nothing about it, it is one string among $94^{12} \approx 5 \times 10^{23}$, and the chart's two `$Iippery_F0x` rows show what that costs:
-
-| The attacker's strategy | Guesses needed | Stored as MD5 | Stored as bcrypt |
-|---|---|---|---|
-| Blind brute force over every 12-character string | $\approx 2 \times 10^{23}$ | 75,000 years | longer than the universe |
-| Guesses the whole recipe: two English words, a separator, the usual substitutions, a capital | $\approx 10^{13}$ | about a minute | about a year and a half |
-| `Password1!` and its thousand cousins | $< 10^{6}$ | 10 microseconds | 10 seconds |
-
-Read the middle row honestly. Crackers *know* the substitutions — `S→$`, `o→0`, `l→1` and `l→I` are in every rule list — so the swaps alone add little. What makes the password strong is that the phrase is **private** (not a lyric, not a proverb, not in the million-entry breach lists where `Password1!` lives) and **long**: twelve characters push even the recipe-guessing attacker to ten trillion tries — a million *million*, not a million — and with a properly slow hash on the site's side, to years. The principle underneath: **you remember meaning; the machine must search characters.** Pick an image nobody else would, make it twelve or more, and never reuse it — one password per site, or a password manager holding all of them behind a single fox like this one, with two-factor on anything that matters.
+Use a password manager to generate and retain **long, unique passwords**. If a password must be memorised, a long passphrase made from randomly selected words avoids the predictability of a familiar quotation or personal fact. Do not reuse passwords: one site's breach must not unlock another. Enable multi-factor authentication where available. These principles follow [NIST's password guidance](https://www.nist.gov/cybersecurity-and-privacy/how-do-i-create-good-password).
 
 ## Part IV — Integrity: validation and verification
 

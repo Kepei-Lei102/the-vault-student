@@ -12,6 +12,7 @@ prerequisites:
   - "[[Radians]]"
   - "[[Circular Motion]]"
 leads_to:
+  - "[[Stationary Waves]]"
   - "[[Damped Oscillations]]"
   - "[[Resonance]]"
   - "[[Coupled Oscillators]]"
