@@ -21,6 +21,7 @@ leads_to:
   - "[[The Quantum Harmonic Oscillator]]"
   - "[[The Pendulum Story]]"
   - "[[Alternating Current]]"
+  - "[[Sound]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -74,14 +75,14 @@ The four letters in that one line:
 - $\omega$ — a positive constant called the **angular frequency** (units: $\text{rad s}^{-1}$). For a mass-on-spring it equals $\sqrt{k/m}$; in general it equals $\sqrt{U''(x_0)/m}$ where $U''(x_0)$ is the curvature of the potential at the stable equilibrium.
 - The **minus sign** — the entire story. It's what makes the motion oscillatory rather than runaway, exactly as in [[Hooke's Law for Springs]].
 
-> [!info] Full symbol glossary in the 中文锚点 below
-> The table immediately below lists *every* symbol in this card (amplitude $A$, period $T$, frequency $f$, phase $\phi$, spring constant $k$, mass $m$, etc.) with units and bilingual names. Glance there before continuing — the card refers back to these symbols constantly.
+> [!info] Symbol glossary below
+> The symbol glossary below lists the main symbols (amplitude $A$, period $T$, frequency $f$, phase $\phi$, spring constant $k$, mass $m$, etc.) with units and bilingual names. Glance there before continuing — the card refers back to these symbols constantly.
 
 This is the most important second-order differential equation in physics. Newton's Second Law turns Hooke's Law into the SHM equation in one step. Writing $F = -kx$ for the spring (where $k$ is the **spring constant**, units $\text{N m}^{-1}$, and $m$ is the **oscillator's mass** in $\text{kg}$):
 
 $$F = ma \quad \text{and} \quad F = -kx \quad \Rightarrow \quad m \cdot \frac{d^2 x}{dt^2} = -kx \quad \Rightarrow \quad \frac{d^2 x}{dt^2} = -\frac{k}{m}\,x.$$
 
-Identifying $\omega^2 = k/m$, we have $\boxed{\omega = \sqrt{k/m}}$. **SHM is what Hooke's Law does over time.** The Hooke card was the *force law*; this card is the *motion* it produces.
+Identifying $\omega^2 = k/m$, we have $\boxed{\omega = \sqrt{k/m}}$. **SHM is what Hooke's Law does over time.** Hooke's law gives the force; Newton's law turns it into motion.
 
 > [!info] "Angular frequency" or "angular velocity"? — same quantity, two names
 > The symbol $\omega$ wears two hats in physics:
@@ -95,7 +96,9 @@ Identifying $\omega^2 = k/m$, we have $\boxed{\omega = \sqrt{k/m}}$. **SHM is wh
 
 ### 中文锚点
 
-**简谐运动 (jiǎn xié yùndòng)** = 物体加速度与位移成正比、方向相反的运动。中文教材也叫 **简谐振动 (jiǎn xié zhèndòng)**.
+把尺子一端压在桌边，轻轻拨动悬空的另一端再松手。弯得越多，它往回弹的劲儿越大；可回到原来的位置时，它已经有了速度，不会就地停住，而是冲到另一边，再被往回拉。在弯曲很小的范围内，这股往回拉的力，大小大致跟偏离的距离成正比，这就是简谐运动的关键。反复来回靠的是“拉回去”和“停不住”的配合；真实尺子还会因阻力慢慢安静下来。
+
+### Symbol glossary / 术语对照
 
 | English | 中文 | Symbol / formula |
 |---|---|---|
@@ -111,17 +114,12 @@ Identifying $\omega^2 = k/m$, we have $\boxed{\omega = \sqrt{k/m}}$. **SHM is wh
 | Damping | 阻尼 (zǔní) | energy leaks out; amplitude decays |
 | Resonance | 共振 (gòng zhèn) | driving frequency = natural frequency → large amplitude |
 
-中文物理早就学过弹簧振子和单摆，但英语 IB/AP/A-Level **要求学生把 $\ddot{x} = -\omega^2 x$ 当作核心方程**，并独立完成两件事：
-1. **从微分方程推出 $x(t) = A\cos(\omega t + \phi)$** — 不能只是背公式
-2. **从能量守恒推出 $\omega = \sqrt{k/m}$ 而不依赖运动学** — 这是 9702/IB HL/AP-C 的最常考路径
-
-中文叫"角频率"，英文常常省略"角"字直接说 frequency $\omega$ — 这是英语物理的偷懒约定，看到 $\omega$ 出现在 oscillation/wave 的语境里都是 angular frequency。
 
 ---
 
 ## Why SHM is everywhere — the bridge to Hooke
 
-Recall the deep claim from [[Hooke's Law for Springs]]: every smooth stable equilibrium gives $F \approx -k\xi$ to leading order, where $\xi$ is the small displacement from equilibrium and $k = U''(x_0)$ is the curvature of the potential at its minimum.
+Recall the deep claim from [[Hooke's Law for Springs]]: a smooth one-dimensional equilibrium with positive potential curvature gives $F \approx -k\xi$ to leading order, where $\xi$ is the small displacement from equilibrium and $k = U''(x_0)$ is the curvature of the potential at its minimum.
 
 By Newton's Second Law this is *immediately* the SHM equation:
 
@@ -129,9 +127,9 @@ $$\frac{d^2 \xi}{dt^2} = -\frac{k}{m}\,\xi = -\omega^2 \xi.$$
 
 So:
 
-> **Theorem.** Every small oscillation about a stable equilibrium is *approximately* simple harmonic, with angular frequency $\omega = \sqrt{U''(x_0)/m}$.
+> **Theorem.** A conservative one-coordinate system near an equilibrium with $U''(x_0)>0$ is approximately harmonic, with angular frequency $\omega=\sqrt{U''(x_0)/m}$. If the quadratic curvature vanishes, as for $U\propto x^4$, stability alone does not give SHM. Multiple coupled coordinates require normal modes.
 
-Pendulum, atomic vibration in a crystal lattice, molecular bond, water wave, sound wave, electron in a quadratic trap, photon as a quantum of the electromagnetic field — *every* small oscillation in nature is SHM at the bottom. The card you're reading now describes what that motion *looks like* in time: the shape of the trajectory, the phase relationships, the period, the energy interchange.
+Small-angle pendulums, molecular vibrations and many wave modes share this linear approximation. [[Coupled Oscillators]] explains how several coordinates separate into collective harmonic motions; a general superposition need not make each individual body execute SHM.
 
 ---
 
@@ -191,7 +189,7 @@ From $\omega = \sqrt{k/m}$ and $T = 2\pi/\omega$ we have
 
 $$\boxed{\; T = 2\pi \sqrt{\frac{m}{k}} \;}$$
 
-for the mass-spring oscillator. **Notice what's absent: the amplitude $A$.** The period is independent of how far you pull the mass — small swings and big swings take the *same time*. This **isochronism** is the defining surprise of SHM, the property Galileo noticed watching the cathedral lamps in Pisa swing in 1582 and that made him invent the pendulum clock.
+for the mass-spring oscillator. **Notice what's absent: the amplitude $A$.** The period is independent of how far you pull the mass — small swings and big swings take the *same time*. This **isochronism** is the defining surprise of SHM, the property that makes small-angle pendulums useful for timekeeping.
 
 The frequency $f = 1/T$ has units of Hertz ($\text{Hz} = \text{s}^{-1}$, one cycle per second). The angular frequency $\omega = 2\pi f$ has units of $\text{rad s}^{-1}$.
 
@@ -255,13 +253,13 @@ The two add to $\frac{1}{2}kA^2$ at every $x$. Three key observations:
 
 1. **At the turning points** ($x = \pm A$): all energy is PE, $v = 0$, momentarily at rest.
 2. **At equilibrium** ($x = 0$): all energy is KE, speed is maximum: $v_{\max} = A\omega$.
-3. **Halfway out** ($x = A/2$): PE is one-quarter of total, KE is three-quarters. So $v = \omega\sqrt{A^2 - (A/2)^2} = \tfrac{\sqrt{3}}{2}A\omega$ — still 87% of the maximum speed. **The bulk of an SHM cycle is spent near the equilibrium**, not the turning points.
+3. **Halfway out** ($x = A/2$): PE is one-quarter of total, KE is three-quarters. So $v = \omega\sqrt{A^2 - (A/2)^2} = \tfrac{\sqrt{3}}{2}A\omega$ — still 87% of the maximum speed. **A body passes quickly through equilibrium and spends longer near the turning points.** In fact it spends one-third of a period within $-A/2<x<A/2$, and two-thirds outside that central interval.
 
 **Time-averaged energies.** Over one full period, the *averages* of KE and PE are *equal*:
 
 $$\langle \text{KE} \rangle = \langle \text{PE} \rangle = \tfrac{1}{4}kA^2.$$
 
-This **equipartition** result anticipates a deep theorem in statistical mechanics: for any harmonic mode, on time-average (or thermal average), KE = PE = $\frac{1}{2}k_BT$. The card you're reading is the classical seed of the result.
+These time averages equal $E/2$ for a fixed-energy oscillator. In classical thermal equilibrium, the equipartition theorem separately gives an ensemble average of $k_BT/2$ per quadratic energy term. Temperature does not set the energy of an arbitrary isolated oscillator.
 
 ---
 
@@ -370,22 +368,21 @@ $$m \frac{d^2 x}{dt^2} + b\,\frac{dx}{dt} + kx = F_0 \cos(\omega_d t).$$
 
 After transients die out, the steady-state response is sinusoidal at the *driving* frequency $\omega_d$, with amplitude that depends on how close $\omega_d$ is to the natural frequency $\omega_0 = \sqrt{k/m}$.
 
-**Resonance** is the peak: when $\omega_d \approx \omega_0$, the amplitude grows dramatically. With zero damping the amplitude would diverge. With light damping it peaks at $\omega_d = \omega_0$ at a height roughly $1/b$ times the static deflection — a small sustained push, in tune with the natural frequency, builds up to a large oscillation.
+**Resonance** is the peak: when $\omega_d \approx \omega_0$, the amplitude grows dramatically. With zero damping, driving exactly at the natural frequency produces secular amplitude growth. For light viscous damping the displacement peak lies slightly below $\omega_0$, at $\sqrt{\omega_0^2-b^2/(2m^2)}$, and its height is approximately $Q$ times the static deflection, where $Q=m\omega_0/b$ — a small sustained push, in tune with the natural frequency, builds up to a large oscillation.
 
 **Resonance is responsible for:**
-- The Tacoma Narrows bridge collapse (1940) — wind drove the bridge at its torsional natural frequency.
 - Why opera singers can shatter wine glasses with the right pitch.
 - How tuned circuits in radios select one station out of all the others.
 - Why pushing a child on a swing in time with the natural period makes them swing higher.
 - How atomic clocks work — caesium atoms have a *very* sharp resonance at 9.192631770 GHz; locking an oscillator to that resonance gives the SI second.
 
-The vault's full treatment lives in [[Resonance]].
+The Tacoma Narrows collapse involved self-excited aeroelastic flutter, not ordinary sinusoidal forced resonance ([Washington State DOT](https://wsdot.wa.gov/TNBhistory/bridges-failure.htm)). See [[Resonance]] for the distinction.
 
 ### Coupled oscillators and normal modes
 
 Two pendulums connected by a soft spring. Each one's natural frequency is altered by its neighbour; the result is **two coupled second-order ODEs** whose solutions decompose into **normal modes** — collective oscillations of definite frequency. For two identical pendulums coupled symmetrically, the two modes are *in-phase* (both swing together, frequency = pendulum frequency) and *anti-phase* (opposite, frequency = slightly higher because the spring also contributes restoring force).
 
-Three pendulums give three modes; a million atoms in a crystal lattice give a million modes; a continuous string gives infinitely many — and that's how SHM generalises into **wave motion** (see [[Progressive Waves]]). Every wave is a coupled SHM of infinitely many neighbours.
+Three pendulums constrained to one coordinate each give three modes. In three dimensions, $N$ unconstrained atoms have $3N$ displacement coordinates. Small-amplitude waves in a linear medium can be decomposed into harmonic modes; a general wave need not itself be sinusoidal. [[Coupled Oscillators]] derives the two frequencies, energy exchange and the route from a chain of neighbours to [[Progressive Waves]].
 
 ### The quantum harmonic oscillator
 
@@ -442,12 +439,12 @@ $$\mathcal{L} = \tfrac{1}{2}m v^2 - \tfrac{1}{2}kx^2 = \text{KE} - \text{PE}.$$
 
 | Board | $a = -\omega^2 x$ | $T = 2\pi/\omega$ | $T = 2\pi\sqrt{m/k}$ | $T = 2\pi\sqrt{L/g}$ | $v = \pm\omega\sqrt{A^2 - x^2}$ |
 |---|---|---|---|---|---|
-| Cambridge 9702 (P4) | On data sheet | On data sheet | On data sheet | On data sheet | **On data sheet** |
+| Cambridge 9702 (P4) | On data sheet | Not printed | Not printed | Not printed | **On data sheet** |
 | IB Physics | On data booklet | On data booklet | On data booklet | On data booklet | On data booklet |
 | AP Physics 1 | On formula sheet | On formula sheet | On formula sheet | On formula sheet | Not printed (derive) |
 | AP Physics C Mech | On formula sheet | On formula sheet | On formula sheet | On formula sheet | Not printed (derive) |
 
-**Takeaway.** Cambridge and IB are *unusually generous* — the velocity-position formula is rare to find on a formula sheet, and they print it. AP gives you the periods but expects derivation of the velocity-position relation. Practising the energy-conservation derivation is therefore *more* important for AP than for Cambridge/IB.
+**Cambridge distinction.** The 9702 Paper 4 sheet prints the defining acceleration equation and the velocity equations, but not the three period formulas in this table (2028–2030 syllabus, data sheet p. 60). A formula appearing in the syllabus is not evidence that it is printed in the examination. The energy derivation remains useful on every board.
 
 ---
 

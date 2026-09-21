@@ -36,14 +36,7 @@ Send the message **`hi 你好 🚀`** and count what it costs: seven characters,
 
 ## 中文锚点
 
-**文本编码 (wénběn biānmǎ)** = text encoding：把字符变成数字、再把数字变成字节的**约定**。两个独立的概念，务必分开：
-
-- **字符集 (character set)** —— 一张编号表：给每个字符分配一个数字。ASCII 给 128 个英文字符编号；**Unicode 统一码** 给全世界每个字符编号（你 = U+4F60），编号叫**码点 (code point)**。
-- **编码 (encoding)** —— 把码点变成实际存储的**字节**的规则。UTF-8 是变长编码：ASCII 字符 $1$ 字节、汉字 $3$ 字节、emoji $4$ 字节。
-- **乱码 (luànmǎ / mojibake)** —— 字节没错，**查错了表**：用 GBK 的表去读 UTF-8 的字节（或反过来），就得到"锟斤拷"。
-- 常见误区：**"Unicode 是一种编码"** ——不是。Unicode 只负责*编号*；UTF-8 / UTF-16 / UTF-32 才是把编号变成字节的*编码*。
-
----
+朋友发来一份文档，打开却满屏乱码，不一定是传输把文件弄坏了。也可能字节一个没丢，只是打开它的软件用错了读法：好比你照着一张菜单报菜号，对方却拿另一张菜单找菜，号码听得清清楚楚，上来的菜仍然不对。文本编码就是双方约定的读写规则；把字节完整送到，还得按相应的规则读，文字才回得来。
 
 ## The idea — text is a treaty, not a signal
 
@@ -201,7 +194,7 @@ Text encoding is **not a named statement**: A1.2's published representation word
 
 ### Where this is *not* examined
 
-**AP Computer Science A** has `char` and `String` in its subset but does not examine character *sets* — ASCII, Unicode, encodings and their widths are all outside it, and there is no file I/O in which an encoding could go wrong. Beyond every board: UTF-8's self-synchronising design, byte-order marks, normalisation forms, and the 乱码 diagnosis gallery are here because they explain the examined facts, not because they are examined.
+**AP Computer Science A** has `String` in its Java subset and excludes `char` along with four other primitive types. It does not examine character *sets*: ASCII, Unicode, encodings and their widths are all outside it. The course does read text files (topic 4.6), but only as lines and tokens handed over by `Scanner`, so no question turns on an encoding. Beyond every board: UTF-8's self-synchronising design, byte-order marks, normalisation forms, and the 乱码 diagnosis gallery are here because they explain the examined facts, not because they are examined.
 
 ---
 

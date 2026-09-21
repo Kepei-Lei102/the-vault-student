@@ -34,7 +34,7 @@ The **probability** of an event $A$, written $P(A)$, is a number between 0 and 1
 
 $$0 \leq P(A) \leq 1$$
 
-If all outcomes are **equally likely**, the probability of event $A$ is:
+If the sample space is **finite** and all outcomes are **equally likely**, the probability of event $A$ is:
 
 $$P(A) = \dfrac{n(A)}{n(S)} = \dfrac{\text{number of outcomes in } A}{\text{total number of outcomes}}$$
 
@@ -44,22 +44,17 @@ where $S$ is the **sample space** — the set of all possible outcomes.
 
 Probability answers the question: **"how likely is this to happen?"**
 
-- $P(A) = 0$ means "impossible — it will never happen"
+In an elementary finite model where every listed outcome has positive probability:
+
+- $P(A) = 0$ means "impossible — no listed outcome belongs to $A$"
 - $P(A) = 1$ means "certain — it will definitely happen"
 - $P(A) = 0.5$ means "even chance — equally likely to happen or not"
 
-Everything else falls somewhere on this scale. The closer to 1, the more likely; the closer to 0, the less likely.
+For continuous distributions, probability zero need not mean an empty event; the distinction is explained below. Everything else falls somewhere on this scale. The closer to 1, the more likely; the closer to 0, the less likely.
 
 ### 中文锚点 (Chinese Anchor)
 
-**概率** (gàilǜ)："概"是大概，"率"是比率——大概的比率，某件事发生的可能性有多大。
-
-$$P(A) = \dfrac{\text{A发生的情况数}}{\text{所有可能的情况数}}$$
-
-概率的范围：$0 \leq P(A) \leq 1$。0是不可能，1是一定发生，0.5是一半一半。
-
-> [!tip] 概率与集合的关系
-> 概率用的是集合语言！事件$A$其实就是样本空间$S$的一个[[Subset|子集]]。$P(A) = \dfrac{n(A)}{n(S)}$和我们在集合论里学的$n(A)$（[[Cardinality|基数]]）是同一个概念。
+袋子里有九颗红珠子、一颗蓝珠子，大小手感都一样。摇匀后闭眼摸一颗，你当然更容易摸到红的——因为十颗里有九颗都能让“摸到红珠子”这件事发生。每次摸完放回，再摇匀重摸，也不等于前九次必须摸到红的、第十次才轮到蓝的。概率说的是在这样的条件下，哪种结果更容易出现，不是在给每一次结果排班。
 
 ## Vocabulary — The Language of Probability
 
@@ -103,8 +98,8 @@ This is where probability connects directly to [[Set|set theory]]:
 |---|---|---|
 | $P(A)$ | Probability of event $A$ | $P(\text{heads}) = 0.5$ |
 | $P(A')$ | Probability of "not $A$" (complement) | $P(\text{not heads}) = 0.5$ |
-| $P(A) = 0$ | Event $A$ is impossible | $P(\text{rolling 7 on a standard die}) = 0$ |
-| $P(A) = 1$ | Event $A$ is certain | $P(\text{rolling 1–6 on a standard die}) = 1$ |
+| $P(A) = 0$ | Zero probability; impossible in the finite positive-outcome model | $P(\text{rolling 7 on a standard die}) = 0$ |
+| $P(A) = 1$ | Probability one; the complement has probability zero | $P(\text{rolling 1–6 on a standard die}) = 1$ |
 | $n(A)$ | Number of outcomes in event $A$ | See [[Cardinality]] |
 | $n(S)$ | Total number of outcomes in sample space | |
 
@@ -120,12 +115,14 @@ In exams, fractions are usually preferred (exact). If the question says "give yo
 
 ### The Probability Scale
 
+For the elementary finite positive-outcome model:
+
 $$\underbrace{0}_{\text{impossible}} \longleftarrow \underbrace{0.5}_{\text{even chance}} \longrightarrow \underbrace{1}_{\text{certain}}$$
 
 Every probability lives on this scale. No probability is negative. No probability exceeds 1.
 
 > [!info] Why is probability between 0 and 1?
-> Because $P(A) = \dfrac{n(A)}{n(S)}$, and $n(A)$ is always between 0 (no outcomes match) and $n(S)$ (all outcomes match). So the fraction is always between 0 and 1. This is a direct consequence of the fact that every event is a [[Subset|subset]] of the sample space: $A \subseteq S$ implies $0 \leq n(A) \leq n(S)$.
+> In a finite equally likely model, $P(A) = \dfrac{n(A)}{n(S)}$, and $n(A)$ is always between 0 (no outcomes match) and $n(S)$ (all outcomes match). So the fraction is always between 0 and 1. This is a direct consequence of the fact that every event is a [[Subset|subset]] of the sample space: $A \subseteq S$ implies $0 \leq n(A) \leq n(S)$. More generally, probability is non-negative, the whole sample space has probability one, and probabilities add for disjoint events. Since $A$ and its complement split that whole, $P(A)$ cannot exceed one.
 
 ### The Complement Rule
 
@@ -135,12 +132,12 @@ The probability of something **not** happening equals 1 minus the probability of
 
 **Why it works:** $A$ and $A'$ together cover every possible outcome (they are **exhaustive**) and they don't overlap (they are **mutually exclusive**). So $P(A) + P(A') = 1$.
 
-In set theory terms: $A \cup A' = S$ and $A \cap A' = \emptyset$, so $n(A) + n(A') = n(S)$. Dividing through by $n(S)$ gives the complement rule.
+For finite equally likely outcomes, the same proof can be written using counts: $A \cup A' = S$ and $A \cap A' = \emptyset$, so $n(A) + n(A') = n(S)$. Dividing through by $n(S)$ gives the complement rule.
 
 > [!tip] When to use the complement
 > Use $P(A') = 1 - P(A)$ when "not $A$" is easier to calculate than $A$. Classic example:
 >
-> "What is the probability of rolling **at least one 6** in four rolls of a die?"
+> "What is the probability of rolling **at least one 6** in four independent rolls of a fair die?"
 >
 > Direct calculation is messy (one 6, or two 6s, or three, or four...). But the complement "no sixes at all" is simple:
 >
@@ -154,13 +151,13 @@ If $S = \{o_1, o_2, \ldots, o_n\}$ is the sample space, then:
 
 $$P(o_1) + P(o_2) + \cdots + P(o_n) = 1$$
 
-All probabilities in the sample space add up to 1. This is because *something* must happen.
+For a finite sample space, the probabilities of its individual outcomes add up to 1. This is because *something* must happen.
 
 ### Mutually Exclusive Events
 
 Two events are **mutually exclusive** if they cannot both happen at the same time:
 
-$$A \cap B = \emptyset \quad \Longleftrightarrow \quad P(A \text{ and } B) = 0$$
+$$A \cap B = \emptyset \quad \Longrightarrow \quad P(A \text{ and } B) = 0$$
 
 For mutually exclusive events, the addition rule simplifies to:
 
@@ -168,8 +165,8 @@ $$P(A \cup B) = P(A) + P(B)$$
 
 Example: rolling a die — "getting a 2" and "getting a 5" are mutually exclusive (you can't roll both at once). So $P(2 \text{ or } 5) = \dfrac{1}{6} + \dfrac{1}{6} = \dfrac{2}{6} = \dfrac{1}{3}$.
 
-> [!warning] Only add when mutually exclusive
-> $P(A \text{ or } B) = P(A) + P(B)$ **only** works when $A$ and $B$ can't overlap. If they can overlap, you're double-counting the intersection. The general rule is $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ — see [[Combined Probability]].
+> [!warning] Account for the overlap
+> Disjoint events have no overlap, so their probabilities add directly. In general, subtract the probability of their intersection to avoid double-counting it. A nonempty intersection can have probability zero in more general models; disjointness is the set condition $A\cap B=\emptyset$. The general rule is $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ — see [[Combined Probability]].
 
 ### Exhaustive Events
 
@@ -183,16 +180,18 @@ If events are both mutually exclusive and exhaustive, their probabilities add to
 
 | Type | How it's calculated | Example |
 |---|---|---|
-| **Theoretical** | $\dfrac{\text{favourable outcomes}}{\text{total outcomes}}$ — uses reasoning | $P(\text{heads}) = \dfrac{1}{2}$ for a fair coin |
+| **Theoretical** | $\dfrac{\text{favourable outcomes}}{\text{total outcomes}}$ — for finite equally likely outcomes | $P(\text{heads}) = \dfrac{1}{2}$ for a fair coin |
 | **Experimental** (relative frequency) | $\dfrac{\text{times it happened}}{\text{total trials}}$ — uses data | Flipped 100 times, got 47 heads → $\dfrac{47}{100} = 0.47$ |
 
-Theoretical probability assumes equally likely outcomes and gives an exact answer. Experimental probability comes from actual trials and gives an estimate that improves with more trials. See [[Relative and Expected Frequency]] for the full treatment.
+The counting formula assumes finite equally likely outcomes; a theoretical model can also assign unequal probabilities. Relative frequency estimates a probability from data. With independent repetitions under the same conditions, more trials generally give a more stable estimate; each additional trial need not move it closer. See [[Relative and Expected Frequency]] for the full treatment.
 
 ## Worked Examples
 
 ### Example 1: Bag of marbles
 
-A bag contains 5 red, 3 blue, and 2 green marbles. One marble is picked at random.
+A bag contains 5 red, 3 blue, and 2 green marbles. One marble is picked so each of the ten is equally likely.
+
+**Tool: count equally likely outcomes. Trigger: one uniform draw from ten marbles.**
 
 **Sample space:** $n(S) = 5 + 3 + 2 = 10$
 
@@ -200,7 +199,11 @@ A bag contains 5 red, 3 blue, and 2 green marbles. One marble is picked at rando
 
 (b) $P(\text{blue}) = \dfrac{3}{10}$
 
+**Tool: complement. Trigger: “not green” is the opposite of one simple event.**
+
 (c) $P(\text{not green}) = 1 - P(\text{green}) = 1 - \dfrac{2}{10} = \dfrac{8}{10} = \dfrac{4}{5}$
+
+**Tool: add disjoint-event probabilities. Trigger: a marble has exactly one colour.**
 
 (d) $P(\text{red or blue}) = \dfrac{5}{10} + \dfrac{3}{10} = \dfrac{8}{10} = \dfrac{4}{5}$
 
@@ -210,9 +213,13 @@ A bag contains 5 red, 3 blue, and 2 green marbles. One marble is picked at rando
 
 A standard deck has 52 cards: 4 suits (hearts, diamonds, clubs, spades) × 13 ranks (A, 2–10, J, Q, K).
 
+**Tool: count equally likely outcomes. Trigger: assume a uniform draw from all 52 cards.**
+
 (a) $P(\text{ace}) = \dfrac{4}{52} = \dfrac{1}{13}$
 
 (b) $P(\text{heart}) = \dfrac{13}{52} = \dfrac{1}{4}$
+
+**Tool: inclusion–exclusion. Trigger: the ace of hearts belongs to both events.**
 
 (c) $P(\text{ace or heart})$ — careful! These are **not** mutually exclusive (the ace of hearts is both).
 
@@ -228,9 +235,11 @@ $$P(\text{ace or heart}) = P(\text{ace}) + P(\text{heart}) - P(\text{ace and hea
 
 A die was rolled 60 times. Estimate the probability of rolling a 4.
 
+**Tool: relative frequency. Trigger: observed trials provide an estimate, not a stated fair-die model.**
+
 $$P(4) \approx \dfrac{15}{60} = \dfrac{1}{4} = 0.25$$
 
-This is experimental probability (relative frequency). For a fair die, theoretical probability would be $\dfrac{1}{6} \approx 0.167$. The difference suggests this die may be biased — or we need more trials.
+This is experimental probability (relative frequency). For a fair die, theoretical probability would be $\dfrac{1}{6} \approx 0.167$. This difference alone does not establish bias; sampling variation can produce it even for a fair die.
 
 ## Common Misconceptions (Teaching Notes)
 
@@ -242,9 +251,9 @@ Students sometimes calculate $P(A) = \dfrac{8}{5}$ and don't notice the problem.
 
 ### 2. "If an event hasn't happened for a while, it's 'due'"
 
-The gambler's fallacy. A fair coin that has landed heads 10 times in a row still has $P(\text{heads}) = 0.5$ on the next flip. The coin has no memory.
+The gambler's fallacy. Under an independent fair-flip model, a coin that has landed heads 10 times in a row still has $P(\text{heads}) = 0.5$ on the next flip. The coin has no memory.
 
-**Fix:** "Each trial is independent. The coin doesn't know what happened before. Past results don't change future probabilities."
+**Fix:** "Each trial is independent. The coin doesn't know what happened before. In this model, past results do not change the next-flip probability. Dependence or evidence that the coin is biased would change the analysis."
 
 ### 3. Confusing "equally likely" with "50-50"
 
@@ -258,45 +267,43 @@ Students compute $P(\text{ace or heart}) = \dfrac{4}{52} + \dfrac{13}{52} = \dfr
 
 **Fix:** "Before adding, ask: can both happen at the same time? If yes, you're double-counting the overlap and need to subtract $P(A \cap B)$." Connect to [[Venn Diagram]] regions.
 
-### 5. Confusing $P(A) = 0$ with "unlikely"
+### 5. Treating every zero probability as impossibility
 
-$P(A) = 0$ means **impossible**, not just unlikely. $P(\text{rolling a 7}) = 0$ on a standard die. But $P(\text{rolling six 6s in a row}) = \left(\dfrac{1}{6}\right)^6 \approx 0.00002$ — very unlikely, but not impossible.
+In a finite model where every elementary outcome has positive probability, a zero-probability event contains no outcomes. Rolling 7 on a standard six-sided die is impossible; six consecutive 6s on independent fair rolls are merely rare: $(1/6)^6\approx0.0000214$.
 
-**Fix:** "Zero means never. A tiny number means rarely. There's a difference."
+For a continuous uniform position on $[0,1]$, however, any particular point has probability zero. Probabilities are areas over intervals, and a point has zero width. A result still occurs somewhere. Probability one similarly means that the exceptions have probability zero, not necessarily that no exceptions exist. See [[Continuous Random Variables]].
 
-> [!info] Beyond syllabus — does $P(A) = 0$ really mean impossible?
-> At IGCSE: yes, treat it that way. But at university, the answer is surprisingly **no**. Pick a random real number between 0 and 1. The probability of picking *exactly* 0.5 is $P = 0$ — there are infinitely many choices, so any single number has zero probability. But picking 0.5 isn't impossible — it could happen.
->
-> This only occurs with **continuous** distributions (infinitely many outcomes). For anything at IGCSE — dice, coins, cards, marbles — the sample space is finite, and $P(A) = 0$ genuinely means impossible. The distinction matters in university-level measure theory, but not here.
+The distinction depends on the model, not on the student's year group. Even a finite probability model can include an elementary outcome assigned zero weight; the positive-weight condition above matters.
 
 ## Exam Notes
 
-### OxAQA 9260
+### Cambridge 0580 and OxfordAQA 9260
 
-- S9: understand and use the vocabulary of probability; probability scale 0 to 1
-- Notation: $P(A)$, complement $P(A')$
-- Both Paper 1E and Paper 2E
-- Questions typically: "Find the probability of...", probability from frequency tables, showing probabilities sum to 1
-- Often combined with Venn diagrams (link to [[Venn Diagram]] and [[Set Operations]])
-- Mutually exclusive and exhaustive are key vocabulary (S15)
+- **0580 C8.1/E8.1:** probability scale, single events and complements. Core does **not** require probability notation; Extended does. C8.2/E8.2 uses relative frequency; E8.3 develops combined events. State the event, count under an equally likely model, or divide observed frequency by total trials as appropriate.
+- **9260 S9–S13:** vocabulary/scale, theoretical and experimental probability, comparison of data with a model, variation between trials and the value of larger samples. **S14–S16:** sample spaces, mutually exclusive/exhaustive outcomes and Venn diagrams. S9 alone does not cover all these outcomes. Combined and conditional calculations continue in S17–S18.
 
-### Cambridge 0580
+### A-Level mathematics
 
-- E8.1: probability scale, notation, single events, complement
-- Same core content as 9260 S9
-- Expect questions involving listing outcomes, using frequency tables, and applying the complement rule
-- Probability of combined events is in E8.3 — see [[Combined Probability]]
+- **9709 §5.3 (Probability & Statistics 1):** evaluate probabilities, use addition/multiplication appropriately, distinguish exclusivity from independence and calculate conditional probabilities. Explicit use of the general union formula is not required; diagrams and sample spaces can supply the reasoning. Counting connects to §5.2.
+- **Edexcel IAL S1 §3:** elementary probability, complements, sample spaces, addition/multiplication, independence and conditional probability. **OxfordAQA 9660 S1.1 (§3.2.2):** probability rules, independent/mutually exclusive events and conditional probability; set notation is not essential.
+- **9231:** assumes 9709 knowledge; elementary probability is a prerequisite for Further Statistics, not a separate new unit. **0606:** no probability topic.
 
-### AP / IB / A-Level
+### IB Mathematics AA and AI
 
-- **AP Statistics:** adds formal sample space notation, introduces probability as a long-run relative frequency
-- **IB Mathematics:** formal axiomatic definition (Kolmogorov axioms) at HL
-- **A-Level:** links to combinatorics for counting outcomes — connects to [[Permutations and Combinations]]
+Both guides, **SL4.5–SL4.6** (also required at HL), cover outcomes/sample spaces, equally likely counting, relative frequency, complements, expected counts, diagrams, combined events, independence and conditional probability. There is no named HL requirement to memorise Kolmogorov's axioms. [AA guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-guide-en.pdf); [AI guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-applications-and-interpretation-guide-en.pdf).
+
+### AP
+
+**AP Statistics, revised course effective fall 2026, Topics 2.3–2.5:** simulation and long-run frequency, sample space, probability bounds, complements and mutually exclusive events; 2.6–2.7 continue conditional probability and independence. Explain which event and denominator the context requires. **AP Calculus AB/BC:** no elementary probability unit; using integration on a density is an application of calculus, not a separate probability-course requirement. [Current course description](https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-and-exam-description.pdf).
+
+### Formula status and scope
+
+The elementary counting rule needs finite equally likely outcomes. Complement and union identities work more generally. Derive them from the sample space and overlap rather than relying on a particular board supplying them. The continuous zero-probability distinction is an enrichment bridge here; it becomes explicit in continuous distributions.
 
 ## Connections
 
 > [!info] Why probability matters — your brain is a prediction engine
-> The human brain is, at its core, a machine for predicting what happens next. Every time you catch a ball, cross a road, or decide whether to trust someone, your brain is running a probability calculation — estimating likely outcomes from incomplete information.
+> Catching a ball or crossing a road involves anticipating uncertain outcomes. Probability offers a model for such decisions; this does not mean the brain literally evaluates the formulas above. In quality control, a manufacturer can instead make the calculation explicitly: sample items at random, count defects, and use that relative frequency to estimate the process defect probability. A small sample leaves uncertainty; a changed process needs fresh evidence.
 >
 > Probability and statistics are the mathematical language for what your brain does intuitively. But intuition has limits: we overreact to small samples, confuse correlation with causation, and misjudge rare events (see [[Relative and Expected Frequency]] and [[Conditional Probability]] for examples). These natural blind spots are exactly why the formal framework exists — and why fields from medicine to AI depend on getting probability right.
 >
@@ -309,7 +316,7 @@ $P(A) = 0$ means **impossible**, not just unlikely. $P(\text{rolling a 7}) = 0$ 
 - **Next:** [[Combined Probability]] — what happens when events combine (and, or, independent, tree diagrams)
 - **Next:** [[Conditional Probability]] — probability when you already know something happened
 - **Counting:** [[Permutations and Combinations]] — systematic ways to count $n(A)$ and $n(S)$ for complex problems
-- **For 9709 students:** [[MF19 Reference (9709)]] — which formulas on this card are on the MF19 exam sheet vs need memorising. (Other boards have their own sheets.)
+- **For 9709 students:** [[MF19 Reference (9709)]] — which formulas are on the MF19 exam sheet vs need memorising. (Other boards have their own sheets.)
 
 ---
 

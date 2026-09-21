@@ -30,7 +30,9 @@ tags:
 
 ## 中文锚点
 
-想象快递驿站的一条上架规矩：**包裹按手机尾号两位上架**——尾号 28 的一律放 28 号格。于是取件根本不用"找"：店员看一眼你的手机号，**算**出格子号，一步走到，在那一小格里翻两下就拿到了。一百件包裹如此，一百万件也如此——这就是哈希表。你手上的是**键**（学号、手机号、一个单词），哈希函数把键"加工"成格子号（取尾两位，正是 `MOD 100`），查找从此变成计算，平均 $O(1)$。代价立刻到账：格子只有一百个，尾号相同的人却无穷多，**同格"撞车"不是故障，是抽屉原理保证的必然**——而且来得比直觉早得多：一百个格子，只需十三件随机包裹，撞车概率就已过半（生日悖论）。真实系统消化碰撞无非三条路，驿站里全都看得到：**同格多放几件**（在那一小格里翻一翻）、**满了进备用区**（柜台后那堆"溢出"包裹）、**顺延到下一个空格**（挨着往下看）。双十一一来，格子渐满、翻找变慢——**装填因子**一高性能就塌，于是**加倍货架、全部重新上架**：这就是重哈希，Python 的 dict 一辈子都在干这件事。这笔买卖付掉的账单是**顺序**：包裹被尾号打散，想"按寄达日期从早到晚"清点？没门——要顺序找[[Balanced Trees|平衡树]]，要速度找哈希表，鱼与熊掌的分工至此完成。把同一条规矩刻到磁盘上，就是**哈希文件**：记录的键直接算出它在文件里的位置，一次读盘命中。
+快递驿站有一条上架规矩：包裹按手机号的后两位上架，尾号是 28，包裹就在 28 号格。所以店员从来不用“找”：看一眼你的手机号，算出是哪一格，直接走过去，在那一格的几件包裹里翻一下就拿到了。驿站里有一百件包裹还是一百万件，花的时间都一样，因为从头到尾没有人需要记住你的包裹放在哪儿：它的位置是用你手里的这个键算出来的。这就是哈希表：一条把每个键变成位置的规则，于是“查找”变成了“计算”。这条规则唯一防不住的情况，是两个人的尾号后两位相同。格子只有一百个，顾客远远不止一百个，所以同格不是运气不好，而是必然会发生的事；凡是这一类办法，都得决定两件包裹要进同一个位置时怎么办。这家驿站的办法是一格放好几件，店员在里面翻一翻。
+
+### 术语对照 (Terms)
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -264,11 +266,14 @@ The hash table lives on **three papers**:
 - **§19.1d's own words** — "demonstrate how a dictionary can be implemented from built-in types or other ADTs" — are this card's array-plus-chains build; with it, every named structure in that learning objective now has its implementation demonstrated.
 - Note the boundary: §19.1c's *write find/insert* list names linked list and binary tree, **not** the dictionary — the dictionary's algorithms are examined through Paper 4's practical shapes rather than P3 prose.
 
+### IB Computer Science (first assessment 2027, higher level)
+
+- **B4.1.6, "Explain the core principles of ADTs"**, names "the underlying mechanics of hash tables, including hashing functions, collision resolution strategies and load factors", then the mechanics of sets, and `dict` and `set` in Python (`HashMap` and `HashSet` in Java). All three are taught above: the hash function under "The problem, before the tool", the strategies under "Collisions", and the load factor under its own heading. B4.1.5 asks separately for the set as an ADT, with its operations in code.
+
 ### Not examined
 
 - **Cambridge 0478** — no hashing anywhere (its nearest neighbour is the file topic, unhashed).
 - **AP CSA** — `HashMap` is outside the tested Java subset; a CSA student meets this card at university.
-- **IB CS (2027)** — B4.1's ADT list (stacks, queues, lists, trees) does not name hash tables; treat as enrichment there until real papers say otherwise.
 
 ## Connections
 

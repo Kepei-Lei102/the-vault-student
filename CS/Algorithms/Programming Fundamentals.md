@@ -5,6 +5,7 @@ prerequisites:
 leads_to:
   - "[[Arrays]]"
   - "[[Program Development Life Cycle and Testing]]"
+  - "[[Java Values and Expressions]]"
 teach_together:
   - "[[Cambridge Pseudocode]]"
 tags:
@@ -356,7 +357,7 @@ For **first assessment 2027**, Theme **B2 Programming** is examined in Paper 2 w
 
 ### AP Computer Science A
 
-The current four-unit CED places these ideas in **1.2–1.9** (variables, expressions, assignment, conversion, API use, comments and signatures), **1.15** (strings), **Unit 2** (selection/iteration), and **3.8** (scope). **Answers are Java**, so Python proficiency alone is insufficient: Java needs declared types, braces, `&&`/`||`/`!`, `.equals()` for string content, and explicit parameter/return types. Its integer division truncates; `String.substring(start,stop)` has zero-based/exclusive bounds. This supports the concepts but does not replace Java practice or close those rows. The CED excludes specific mechanisms for acquiring user input; do not spend revision learning `Scanner` as a named requirement.
+The current four-unit CED places these ideas in **1.2–1.9** (variables, expressions, assignment, conversion, API use, comments and signatures), **1.15** (strings), **Unit 2** (selection/iteration), and **3.8** (scope). **Answers are Java**, so Python proficiency alone is insufficient: Java needs declared types, braces, `&&`/`||`/`!`, `.equals()` for string content, and explicit parameter/return types. Its integer division truncates; `String.substring(start,stop)` has zero-based/exclusive bounds. The Java side of these topics, compiled and run, is [[Java Values and Expressions]]. The CED excludes input typed at the keyboard. It does not exclude `Scanner`: topic 4.6 reads text files with `Scanner(File)`, and `nextInt`, `nextDouble`, `nextBoolean`, `nextLine`, `next`, `hasNext` and `close` are all on the Java Quick Reference, so learn `Scanner` for files and not for the keyboard.
 
 **Where these spellings are not examined:** Cambridge 0478 pseudocode is not the answer language for AP CSA or IB's 2027 Paper 2, nor for 9618 Paper 4. Programming constructs belong to the CS courses, not standalone programming objectives on the tracked Cambridge maths/physics boards (0580/0606/9709/9231/0625/9702).
 

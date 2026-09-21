@@ -36,18 +36,7 @@ The joke is real. Ask any computer on Earth — your laptop, your phone, a super
 
 ## 中文锚点
 
-**浮点数 (fúdiǎnshù)** = floating-point number：用"二进制科学计数法"存储实数——
-
-$$\text{数值} = \text{尾数 (mantissa)} \times 2^{\text{阶码 (exponent)}}$$
-
-一个浮点数被切成两个字段：**尾数**（有效数字，决定**精度 precision**）和**阶码**（决定**范围/数量级 range**）。剑桥 9618 的约定：尾数和阶码都用 [[Two's Complement|二进制补码]]，尾数的小数点在符号位之后。
-
-- **规格化 (normalisation)**：把尾数左移、同时减小阶码，直到**符号位与其后第一位不同**（正数形如 `0.1…`，负数形如 `1.0…`）——挤掉前导的冗余位，让有限的尾数位承载最多的有效数字。
-- **范围 vs 精度的权衡**：总位数固定。阶码位越多 → 范围越大但精度越低；尾数位越多 → 精度越高但范围越小。
-- **上溢/下溢 (overflow/underflow)**、**舍入误差 (rounding error)**：尾数位有限，很多十进制小数（如 $0.1$）在二进制里无限循环，只能近似——所以 $0.1+0.2 \ne 0.3$。
-- **IEEE 754**：现实硬件的统一标准——符号位单独存、阶码加偏移量 (bias)、隐含首位 $1$；单精度 $1+8+23$ 位，双精度 $1+11+52$ 位。注意：IEEE 的规格化窗口是 $[1,2)$（尾数形如 $1.xxx$），剑桥格式是 $[\tfrac12,1)$（形如 $0.1xxx$）——差的那个因子 $2$ 被阶码吸收，所以同一个数在两种格式里阶码相差 $1$。AI 时代把"范围 vs 精度"这笔账重新算了一遍：训练用 bfloat16（保范围、砍精度），推理甚至只用 $4$ 位整数。
-
----
+想象一个只能保留六位有效数字的计算器：它能把一百万写成科学计数法，却没地方同时记住后面每一位。你再加上1，屏幕上的数可能纹丝不动——不是1消失了，而是这套记法已经分不清这么小的差别。浮点数也在做类似的取舍：拿一部分位记住前面几个有效数字，再用另一部分位说明它们该放在哪个数量级。数能伸到很大，刻度却也跟着变粗了。
 
 ## The idea — a number split into two jobs
 
@@ -314,6 +303,10 @@ Usually speed wins, so engineers keep IEEE floats and manage the error the way a
 > The IEEE 754 and precision-economics sections, and most of the exact-arithmetic menu, are enrichment: 9618 examines only the two's-complement teaching format (§13.3) plus BCD (§1.1). But the enrichment is where the topic becomes real — IEEE 754 is what every device you own actually runs, and the precision economics is a live industry story.
 
 ---
+
+### AP Computer Science A (course effective Fall 2025)
+
+Topic **1.5.C** names the consequence and not the format: a `double` has a fixed amount of memory, so an expression that would need more precision suffers **round-off error** and is stored as the nearest representable value, and the course's stated cure is to use `int` values where exactness matters. Mantissa, exponent, normalisation and IEEE 754 are not examined. The Java side, including `0.1 + 0.2` and the lost cent in `(int) (19.99 * 100)`, is worked in [[Java Values and Expressions]].
 
 ### IB Computer Science
 

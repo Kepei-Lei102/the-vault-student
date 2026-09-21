@@ -270,19 +270,23 @@ On a calculator: $8 \;\hat{}\; (-4 \div 3) = 0.0625 = 1/16$. ✓
 
 Both papers allow calculators, but expect students to simplify expressions like $(5x^3)^2$ and $12a^5 \div 3a^{-2}$ algebraically. Solving equations like $2^x = 32$ and $9^x = 27$ by equating bases appears regularly.
 
-### Cambridge 0580 Extended
+### Cambridge 0580 (Core and Extended)
 
-**Syllabus ref:** E1.7 — positive, zero, negative, and fractional indices. E2.4 — simplification of algebraic expressions using index laws.
+**Syllabus ref:** C1.7 and E1.7, Indices I; C2.4 and E2.4, Indices II. Core stops at positive, zero and negative **integer** indices. Extended adds **fractional** indices, so §2 is Extended only.
 
-Paper 2 (non-calculator): simplify expressions, evaluate without calculator. Paper 4: solve equations involving indices. Typical question: "Simplify $6x^7 y^4 \times 5x^{-5} y$."
+Papers 1 and 2 are non-calculator, which is where evaluating $16^{-3/4}$ or $2^{-3} \times 2^4$ by hand belongs; Papers 3 and 4 allow a calculator. Simplifying with the laws and solving an equation such as $2^x = 32$ can appear on any of them. Typical Extended question: "Simplify $6x^7 y^4 \times 5x^{-5} y$."
 
 ### Cambridge 0606
 
-Index laws are **assumed knowledge** from 0580. Not directly tested but needed throughout — particularly for differentiation (the [[Power Rule]] requires rewriting expressions using indices before differentiating, e.g. $\dfrac{1}{x^2} = x^{-2}$).
+The syllabus states that IGCSE Mathematics content "such as surds and indices, will not be tested directly but it may be required in response to questions on other topics", and the 2025–27 revision removed the old Indices and surds topic. In practice the laws are needed throughout, particularly for differentiation (the [[Power Rule]] requires rewriting first, e.g. $\dfrac{1}{x^2} = x^{-2}$).
 
-### AP / IB / A-Level
+### Cambridge 9709
 
-Index laws are foundational and assumed. At this level, they appear inside logarithm rules ($\log a^n = n \log a$ comes from the index laws), differentiation, and exponential equations. The leap to irrational indices ($a^{\sqrt{2}}$, $a^{\pi}$) and the formal definition via $a^x = e^{x \ln a}$ happen in university analysis.
+Prior knowledge: the syllabus assumes IGCSE content and says this "includes the use of indices and surds". Indices are named again in Pure 2 §2.2 and Pure 3 §3.2, which require the relationship between logarithms and indices and the solution of equations and inequalities in which the unknown appears in indices; [[Logarithms]] takes that up.
+
+### Not examined as a topic
+
+Cambridge 9231 and AP Calculus assume the laws and set no question on them as such. At that level they work inside logarithm rules ($\log a^n = n \log a$ comes from the index laws), differentiation and exponential equations. Irrational indices ($a^{\sqrt{2}}$, $a^{\pi}$) and the definition $a^x = e^{x \ln a}$ belong to university analysis.
 
 > [!info] Beyond syllabus — Why does $a^{\pi}$ even make sense?
 > The seven laws are proved for integer indices, then extended to fractions via roots. But what about $2^{\pi}$? You can't multiply 2 by itself $\pi$ times. The answer: define $a^x = e^{x \ln a}$ using the exponential function, then verify that all seven laws still hold. This is the rigorous university definition. At IGCSE/IB level, we treat irrational indices as "the limit of rational approximations" — $2^{3.14} \approx 2^{314/100}$, and the calculator handles the rest.

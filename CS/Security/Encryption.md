@@ -10,6 +10,7 @@ leads_to:
   - "[[Networks]]"
   - "[[Data Protection and Privacy]]"
   - "[[The Internet and the Web]]"
+  - "[[Privacy-Preserving Computation]]"
 tags:
   - subject/computer-science
   - domain/security
@@ -48,7 +49,9 @@ A symmetric cipher is a strongbox with one key: you and I must both have a copy,
 
 ### 中文锚点
 
-手机上刷脸付款、刷脸登录，你的脸去哪了？**哪儿都没去。** 人脸和指纹从不离开手机，支付宝、微信、任何网站都拿不到它们；它们只是在本机上开一把锁。锁里放的是一把**私钥**，存在手机的安全芯片里，永不导出；网站那边存的是对应的**公钥**。登录时网站发来一串随机数（"挑战"），手机让你刷脸——刷脸只是解锁私钥——然后用私钥给这串随机数"盖章"（**数字签名**），网站用公钥验章：章对得上，就是你，而且这个章只对这一次有效，偷了也没用。这套东西叫**通行密钥**（passkey），这也是为什么它能防钓鱼：假网站拿到的是另一把钥匙。它的上一代就是银行的 **U 盾**——一个插在电脑上的小 U 盘，里面同样是一把交不出去的私钥；U 盾退场了，原理没变，只是搬进了手机。这就是**非对称加密**的核心：一对钥匙，**公钥可以给所有人，私钥永不离手**；一把锁上的东西只有另一把能打开。反过来用它，就是**给别人发只有他能看的密信**：用**对方的公钥**加密，只有对方的私钥能解——浏览器地址栏那把小锁 🔒（HTTPS）开头做的就是这件事。与之相对的**对称加密**（AES）只有一把钥匙，加密解密都用它，快得多，但麻烦在"怎么把钥匙安全地交给对方"——所以现实里两者永远搭配：**非对称加密负责传钥匙，对称加密负责传内容**。这张卡把 RSA 真的跑一遍（$p=61,\ q=53$，一个字母加密再解密，数字全能手算），讲清楚**谁拿私钥、谁拿公钥**在每个真实场景里的分配，再讲**数字证书**为什么是 HTTPS 的信任根（2014 年 12306 让全国人手动装根证书的那次），最后讲**量子**：中国的"墨子号"卫星做的量子密钥分发，和让 RSA 失效的 Shor 算法，是两件不同的事。
+手机上刷脸付款、刷脸登录，你的脸去哪了？哪儿都没去。人脸和指纹从不离开手机，支付宝、微信、任何网站都拿不到它们；它们只是在手机上开一把锁，锁后面放的是一把私钥，存在手机的安全芯片里，永远不会导出。网站那边存的是和它配对的公钥。登录的时候，网站发来一串新的随机数；手机让你刷脸，刷脸只是为了解锁私钥，然后用私钥给这串随机数盖一个章；网站再用公钥验这个章。这个章只对这一串随机数有效，偷走了也没用；就算小偷把网站的整个数据库都拷走，拿到的也只是一堆公钥，什么门都打不开。这就是非对称加密的核心：一对钥匙，一把可以发给全世界，一把永不离手，而且其中一把做过的事，只有另一把能验证或者解开。反过来用，就是一封密信：谁都可以用你的公钥把信锁上，只有你的私钥打得开，浏览器地址栏里那把小锁，每次建立安全连接，都是从这一步开始的。银行以前发的 U 盾也是同一个道理，只不过现在这把钥匙搬进了手机。
+
+### 术语对照 (Terms)
 
 | English | 中文 | 一句话 |
 |---|---|---|
@@ -344,7 +347,7 @@ Everything here runs on your own machine.
 ### Not examined on…
 
 - **AP Computer Science A** — no cryptography in the course.
-- **Cambridge 9709 / 9231** — modular arithmetic and Euler's theorem are not on either syllabus; the number theory here is university material, though [[Number Bases]] and [[Prime Numbers (Vocab)]] are the IGCSE roots of it.
+- **Cambridge 9709 / 9231** — modular arithmetic and Euler's theorem are not on either syllabus; the number theory here is university material, though [[Number Bases]] and [[Prime Numbers]] are the IGCSE roots of it.
 - **Physics boards** — QKD's photon polarisation is not examined as physics on 9702, 0625, AP or IB.
 
 ---
@@ -374,7 +377,8 @@ Everything here runs on your own machine.
 
 - **Parents:** [[Data Security]] — encryption as the last-line defence, "it makes the theft worthless"; this card is the mechanism. [[Information Theory]] — perfect secrecy and the one-time pad; why ciphertext must carry no information about plaintext. [[Hash Tables]] — the hash function, here in its opponent-resisting form, as the first step of every signature.
 - **Children:** [[Networks]] — TLS as the layer above TCP, the protocol stack that carries it; [[Data Protection and Privacy]] — encryption at rest and in transit as the technical half of a legal duty.
-- **Cross-domain:** [[Number Bases]] and [[Prime Numbers (Vocab)]] — the arithmetic that RSA is built from; [[Big-O Notation]] — why multiplying is $O(n^2)$ and factoring is sub-exponential but not polynomial, which is the entire gap RSA lives in; [[Compression]] — its sibling: compression removes redundancy, encryption removes meaning, and a good protocol compresses first; [[Credit Is the Currency]] — the certificate chain as a tower of kept promises, trust delegated from a root; [[Sensors and Control Systems]] — nothing, except that QKD's photon detectors are its instruments.
+- **Computing on ciphertexts:** [[Privacy-Preserving Computation]] — RSA's accidental homomorphism turned into a design goal (Paillier, fully homomorphic encryption), and proofs that reveal nothing but their own truth.
+- **Cross-domain:** [[Number Bases]] and [[Prime Numbers]] — the arithmetic that RSA is built from; [[Big-O Notation]] — why multiplying is $O(n^2)$ and factoring is sub-exponential but not polynomial, which is the entire gap RSA lives in; [[Compression]] — its sibling: compression removes redundancy, encryption removes meaning, and a good protocol compresses first; [[Credit Is the Currency]] — the certificate chain as a tower of kept promises, trust delegated from a root; [[Sensors and Control Systems]] — nothing, except that QKD's photon detectors are its instruments.
 - **Misconception traps cleared:** the private key encrypts private messages; asymmetric replaces symmetric; a certificate encrypts; the public key is secret; quantum cryptography is a quantum computer; longer keys are always better.
 
 ## Sources

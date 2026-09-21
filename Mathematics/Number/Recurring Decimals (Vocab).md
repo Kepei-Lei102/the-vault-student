@@ -134,15 +134,19 @@ Let $x = 0.\overline{9}$. Then $10x = 9.\overline{9}$. Subtract: $9x = 9$, so $x
 
 ### Cambridge 0580 (Extended)
 
-**Syllabus ref:** E1.4 Extended — convert recurring decimals to fractions. Standard patterns:
+**Syllabus ref:** E1.4, Fractions, decimals and percentages: "includes converting between recurring decimals and fractions and vice versa", and the dot notation is required. **Extended only:** the Core row C1.4 states that candidates "are not expected to use recurring decimal notation" or to convert a recurring decimal to a fraction. Standard patterns:
 
 - "Show that $0.\overline{45} = \dfrac{5}{11}$." (Apply $10x - x$ technique.)
 - "Convert $0.4\overline{1}$ to a fraction in lowest terms."
 - "Without a calculator, evaluate $0.\overline{3} + 0.\overline{6}$." (Convert each to $\tfrac{1}{3}$ and $\tfrac{2}{3}$, sum to $1 = 0.\overline{9}$.)
 
-### A-Level / IB
+### OxAQA 9260
 
-A-Level builds on this with the formal sum-to-infinity treatment of geometric series — see [[Arithmetic and Geometric Progressions]]. Recurring decimals are the simplest non-trivial geometric series: $0.\overline{3} = \sum_{n=1}^{\infty} 3 \cdot 10^{-n}$, a GP with first term $0.3$ and common ratio $0.1$.
+**Syllabus ref:** N12, Extension content only: "convert between fractions and recurring decimals". Core stops at terminating decimals.
+
+### Beyond IGCSE
+
+No later Cambridge syllabus examines the conversion as a topic. A-Level builds on it with the formal sum-to-infinity treatment of geometric series — see [[Arithmetic and Geometric Progressions]]. Recurring decimals are the simplest non-trivial geometric series: $0.\overline{3} = \sum_{n=1}^{\infty} 3 \cdot 10^{-n}$, a GP with first term $0.3$ and common ratio $0.1$.
 
 ---
 

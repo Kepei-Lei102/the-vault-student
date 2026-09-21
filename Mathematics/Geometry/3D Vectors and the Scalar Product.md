@@ -6,9 +6,12 @@ prerequisites:
   - "[[Pythagoras Theorem]]"
   - "[[Magnitude of a Vector (Vocab)]]"
 leads_to:
+  - "[[Lagrange's Identity]]"
+  - "[[Fourier Series]]"
   - "[[Vector Equations of Lines]]"
   - "[[Cross Product]]"
   - "[[Planes in 3D]]"
+  - "[[Partial Derivatives and the Gradient]]"
 tags:
   - subject/mathematics
   - domain/geometry
@@ -58,21 +61,19 @@ The new operation is the **scalar product**, $\mathbf{a} \cdot \mathbf{b}$. It i
 
 ### 中文锚点
 
-**三维向量**（sānwéi xiàngliàng）：在三维空间里的有向位移，写作 $\mathbf{v} = v_1 \mathbf{i} + v_2 \mathbf{j} + v_3 \mathbf{k}$ 或列向量 $(v_1, v_2, v_3)^T$。
+拉着行李箱走：拉杆是斜的，所以你的力只有一部分在把箱子往前拖，其余的只是把它往上提了一点。你的力有多少是“顺着地面”的？**数量积**（也叫点积）对任意两支箭头回答的就是这个问题：其中一支有多少落在另一支的方向上。两支同向，全部算数；互相垂直，一点也不算，所以垂直向量的数量积是零；方向相反，就算成负的。意外的是它算起来极其便宜：对应分量相乘，再加起来。这个用坐标一行就能算出的数，居然还等于“长度乘长度，再乘夹角的余弦”，于是在没法拿量角器直接去量的三维空间里，只凭坐标就能求出夹角。
 
-**模长**（magnitude / 模）：$|\mathbf{v}| = \sqrt{v_1^2 + v_2^2 + v_3^2}$（三维勾股定理）。
+### 术语对照 (Terms)
 
-**数量积 / 点积 / 内积**（scalar product / dot product / inner product，简称**点积**）：
+**三维向量**（sānwéi xiàngliàng）：三维空间里的有向位移，写作 $\mathbf{v} = v_1 \mathbf{i} + v_2 \mathbf{j} + v_3 \mathbf{k}$ 或列向量 $(v_1, v_2, v_3)^T$。
+
+**模长**（magnitude）：$|\mathbf{v}| = \sqrt{v_1^2 + v_2^2 + v_3^2}$，即三维的勾股定理。
+
+**数量积 / 点积 / 内积**（scalar product / dot product / inner product）：
 
 $$\mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\mathbf{a}||\mathbf{b}|\cos\theta$$
 
-两个等号是数量积的**核心恒等式**。左边可以**算**，右边可以**用**。
-
-**两大用途：**
-1. **判垂直**：$\mathbf{a} \cdot \mathbf{b} = 0$ 当且仅当 $\mathbf{a} \perp \mathbf{b}$（前提非零向量）。
-2. **求夹角**：$\cos\theta = \dfrac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}||\mathbf{b}|}$。
-
-中文教材也称为"内积"或"标积"。注意它输出**一个数**，不是向量（"数量积"的"数量"就是 scalar 的意思）。和**叉积**（cross product / 外积 / 向量积）不一样——叉积输出一个垂直向量，9709 P3 不考，9231 才考。
+左边的式子用来**算**，右边的式子用来**用**。它的结果是**一个数**，不是向量，“数量积”的“数量”就是 scalar 的意思；中文教材也叫“内积”或“标积”。它和**叉积**（cross product，也叫外积、向量积）不同：叉积的结果是一个与两者都垂直的向量。
 
 ---
 
@@ -311,6 +312,8 @@ Vectors and dot products are the entry point to:
 
 ## Connections
 
+- **Function-space extension:** [[Fourier Series]] — replace the finite dot product by an integral; projections recover a waveform’s harmonic coordinates.
+
 - **Direct prerequisite:** [[Vectors]] — the 2D foundation. This card extends to 3D with the same algebra, plus introduces the dot product.
 - **Direct prerequisite:** [[Trigonometric Ratios]] — for $\cos\theta$ and $\arccos$.
 - **Direct prerequisite:** [[Pythagoras Theorem]] — for the 3D magnitude formula (Pythagoras twice).
@@ -353,7 +356,7 @@ $$|\mathbf{a} \times \mathbf{b}|^2 + (\mathbf{a} \cdot \mathbf{b})^2 = |\mathbf{
 
 "**Scalar product**" because the output is a scalar (number), not a vector. "**Inner product**" comes from the more abstract setting where you can also have an "*outer product*" $\mathbf{a} \otimes \mathbf{b}$ that produces a matrix (the rank-1 matrix $\mathbf{a}\mathbf{b}^T$). The naming distinguishes the two types of multiplicative operation. Standard linear-algebra naming.
 
-The notation $\mathbf{a} \cdot \mathbf{b}$ is the most common; $\langle \mathbf{a}, \mathbf{b} \rangle$ is the abstract / pure-math notation; $\mathbf{a}^T \mathbf{b}$ is the matrix-style notation (column vector times row vector gives a $1 \times 1$ matrix, which we identify with a scalar).
+The notation $\mathbf{a} \cdot \mathbf{b}$ is the most common; $\langle \mathbf{a}, \mathbf{b} \rangle$ is the abstract / pure-math notation; $\mathbf{a}^T \mathbf{b}$ is the matrix-style notation (row vector times column vector gives a $1 \times 1$ matrix, which we identify with a scalar).
 
 ### Cauchy-Schwarz inequality
 
@@ -361,7 +364,9 @@ From $\cos\theta \in [-1, 1]$:
 
 $$|\mathbf{a} \cdot \mathbf{b}| \leq |\mathbf{a}|\,|\mathbf{b}|,$$
 
-with equality iff $\mathbf{a}$ and $\mathbf{b}$ are parallel. This is the **Cauchy-Schwarz inequality** in $\mathbb{R}^3$. Generalises to abstract inner-product spaces, where it's one of the most-used results in analysis. The Cauchy-Schwarz inequality is essentially "the dot product can't be bigger than the product of magnitudes" — a deep statement once you generalise.
+with equality when the vectors are linearly dependent (including either vector being zero). This is the **Cauchy-Schwarz inequality** in $\mathbb{R}^3$. Generalises to abstract inner-product spaces, where it's one of the most-used results in analysis. The Cauchy-Schwarz inequality is essentially "the dot product can't be bigger than the product of magnitudes" — a deep statement once you generalise.
+
+[[Lagrange's Identity]] proves the inequality directly from coordinates in any real dimension, and identifies the exact non-negative gap.
 
 ### Dot product in $\mathbb{R}^n$
 

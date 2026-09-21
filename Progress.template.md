@@ -8,14 +8,14 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-18` · built 2026-09-18 from commit `29a7c09`  
-> 432 cards · 658 diagrams · 130 explainers · 148 illustrations
+> **Edition** `student-2026-09-21` · built 2026-09-21 from commit `21b9356`  
+> 462 cards · 747 diagrams · 158 explainers · 157 illustrations
 
 ---
 
 ## Mathematics
 
-*222 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*227 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -99,6 +99,8 @@
 | [[Financial Literacy (Life)]] | ? |  |  |
 | [[Four Colour Theorem]] | ? |  |  |
 | [[Four Operations (Vocab)]] | ? |  |  |
+| [[Fourier Series]] | ? |  |  |
+| [[Fourier Transform]] | ? |  |  |
 | [[Fractional Equations (Vocab)]] | ? |  |  |
 | [[Fractions (Vocab)]] | ? |  |  |
 | [[Function]] | ? |  |  |
@@ -128,6 +130,7 @@
 | [[Inverse Operations (Vocab)]] | ? |  |  |
 | [[Kinematics Calculus]] | ? |  |  |
 | [[L'Hôpital's Rule]] | ? |  |  |
+| [[Lagrange's Identity]] | ? |  |  |
 | [[Laws of Indices]] | ? |  |  |
 | [[Length and Midpoint (Vocab)]] | ? |  |  |
 | [[Limit]] | ? |  |  |
@@ -160,6 +163,7 @@
 | [[OxAQA 9660 Reference]] | ? |  |  |
 | [[Parallel Lines (Vocab)]] | ? |  |  |
 | [[Parametric Differentiation]] | ? |  |  |
+| [[Partial Derivatives and the Gradient]] | ? |  |  |
 | [[Partial Fractions]] | ? |  |  |
 | [[Percentage Calculations (Vocab)]] | ? |  |  |
 | [[Percentages (Vocab)]] | ? |  |  |
@@ -173,6 +177,7 @@
 | [[Power Rule]] | ? |  |  |
 | [[Powers and Roots (Vocab)]] | ? |  |  |
 | [[Prime Factorisation (Vocab)]] | ? |  |  |
+| [[Prime Numbers]] | ? |  |  |
 | [[Probability Basics]] | ? |  |  |
 | [[Probability Generating Functions]] | ? |  |  |
 | [[Product Rule]] | ? |  |  |
@@ -244,7 +249,7 @@
 
 ## Physics
 
-*71 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*82 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -257,6 +262,7 @@
 | [[Centre of Mass]] | ? |  |  |
 | [[Centres of Mass by Integration]] | ? |  |  |
 | [[Circular Motion]] | ? |  |  |
+| [[Coupled Oscillators]] | ? |  |  |
 | [[Damped Oscillations]] | ? |  |  |
 | [[Density and Pressure]] | ? |  |  |
 | [[Diffraction]] | ? |  |  |
@@ -286,6 +292,7 @@
 | [[Linear Momentum]] | ? |  |  |
 | [[Linear Motion under a Variable Force]] | ? |  |  |
 | [[Lorentz Force]] | ? |  |  |
+| [[Magnetism and Magnetic Materials]] | ? |  |  |
 | [[Maxwell's Equations]] | ? |  |  |
 | [[Moment of Inertia]] | ? |  |  |
 | [[Newton's Law of Restitution]] | ? |  |  |
@@ -294,18 +301,25 @@
 | [[Nuclear Physics]] | ? |  |  |
 | [[PET Scanning]] | ? |  |  |
 | [[Physical Quantities and Units]] | ? |  |  |
+| [[Planning an Experiment]] | ? |  |  |
 | [[Polarisation]] | ? |  |  |
 | [[Potential Dividers]] | ? |  |  |
 | [[Progressive Waves]] | ? |  |  |
 | [[Projectile Motion]] | ? |  |  |
+| [[Quantum States and the Schrödinger Equation]] | ? |  |  |
+| [[Quantum Tunnelling]] | ? |  |  |
+| [[Recording and Analysing Experimental Data]] | ? |  |  |
 | [[Reflection and Refraction]] | ? |  |  |
 | [[Repeated Measurements]] | ? |  |  |
 | [[Resistance]] | ? |  |  |
 | [[Resonance]] | ? |  |  |
 | [[Significant Figures]] | ? |  |  |
 | [[Simple Harmonic Motion]] | ? |  |  |
+| [[Sound]] | ? |  |  |
+| [[Special Relativity]] | ? |  |  |
 | [[Specific Heat Capacity]] | ? |  |  |
 | [[Stationary Waves]] | ? |  |  |
+| [[Stellar Evolution]] | ? |  |  |
 | [[Stellar Luminosity and Size]] | ? |  |  |
 | [[Stress, Strain and Young Modulus]] | ? |  |  |
 | [[Superposition and Interference]] | ? |  |  |
@@ -313,6 +327,8 @@
 | [[Temperature and Thermometry]] | ? |  |  |
 | [[Tension (Vocab)]] | ? |  |  |
 | [[The Friction Limit]] | ? |  |  |
+| [[The Solar System]] | ? |  |  |
+| [[Thermal Expansion]] | ? |  |  |
 | [[Torque]] | ? |  |  |
 | [[Ultrasound]] | ? |  |  |
 | [[Vectors in Physics]] | ? |  |  |
@@ -322,10 +338,11 @@
 
 ## CS
 
-*70 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*76 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
+| [[Affective Computing]] | ? |  |  |
 | [[Arrays]] | ? |  |  |
 | [[Artificial Intelligence]] | ? |  |  |
 | [[Assembly Language]] | ? |  |  |
@@ -341,7 +358,9 @@
 | [[Compilers and Interpreters]] | ? |  |  |
 | [[Compression]] | ? |  |  |
 | [[CPU Architecture and the Fetch-Execute Cycle]] | ? |  |  |
+| [[Data Protection and Privacy]] | ? |  |  |
 | [[Data Security]] | ? |  |  |
+| [[Digital Audio Workstation]] | ? |  |  |
 | [[Digital Currency and Blockchain]] | ? |  |  |
 | [[Embedded Systems]] | ? |  |  |
 | [[Encryption]] | ? |  |  |
@@ -362,6 +381,8 @@
 | [[Information Theory]] | ? |  |  |
 | [[Input and Output Devices]] | ? |  |  |
 | [[Interrupt Handling]] | ? |  |  |
+| [[Java Objects, References and Strings]] | ? |  |  |
+| [[Java Values and Expressions]] | ? |  |  |
 | [[Karnaugh Maps]] | ? |  |  |
 | [[Linked List]] | ? |  |  |
 | [[Logic Gates]] | ? |  |  |
@@ -374,6 +395,7 @@
 | [[P vs NP]] | ? |  |  |
 | [[Parallel and External Sorting]] | ? |  |  |
 | [[Pipelining and Simultaneous Multithreading]] | ? |  |  |
+| [[Privacy-Preserving Computation]] | ? |  |  |
 | [[Program Design]] | ? |  |  |
 | [[Program Development Life Cycle and Testing]] | ? |  |  |
 | [[Programming Fundamentals]] | ? |  |  |
@@ -399,7 +421,7 @@
 
 ## Meta
 
-*17 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*20 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -410,20 +432,23 @@
 | [[Decouple and Recouple]] | ? |  |  |
 | [[Forward Reading and Problem Discovery]] | ? |  |  |
 | [[Fun Is the Brachistochrone]] | ? |  |  |
+| [[Humans Are Story Animals]] | ? |  |  |
 | [[Inertia and Bootstrapping]] | ? |  |  |
 | [[Laws and Theorems]] | ? |  |  |
 | [[Learning as Verification]] | ? |  |  |
+| [[Learning with the Whole Body]] | ? |  |  |
 | [[The Feynman Technique]] | ? |  |  |
 | [[The Gift of the Gradient]] | ? |  |  |
 | [[The Love of Wisdom]] | ? |  |  |
 | [[The True IO Bound]] | ? |  |  |
+| [[When a Model Breaks]] | ? |  |  |
 | [[Why Probability and Statistics]] | ? |  |  |
 | [[You Are a Reinforcement Learner]] | ? |  |  |
 | [[You're the Architect, the AI is the Bricklayer]] | ? |  |  |
 
 ## Stories
 
-*52 cards · 🔴 unread · 🟢 read*
+*57 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -444,6 +469,7 @@
 | [[Galois at Twenty]] | ? |  |  |
 | [[Gauss the Prodigy]] | ? |  |  |
 | [[Grace Hopper and the Nanosecond]] | ? |  |  |
+| [[Hedy Lamarr and the Frequency-Hopping Piano]] | ? |  |  |
 | [[Henrietta Leavitt and the Cosmic Yardstick]] | ? |  |  |
 | [[Hilbert vs Brouwer]] | ? |  |  |
 | [[Ibn al-Haytham and the Question of Seeing]] | ? |  |  |
@@ -455,6 +481,8 @@
 | [[One Take, Many Tracks]] | ? |  |  |
 | [[Ramanujan and Hardy]] | ? |  |  |
 | [[Russell's Paradox in the Post]] | ? |  |  |
+| [[Sophie Germain and the Borrowed Name]] | ? |  |  |
+| [[Sorry the Homework Is Late]] | ? |  |  |
 | [[Space Travel]] | ? |  |  |
 | [[Stats Lies Hall of Fame]] | ? |  |  |
 | [[Stigler's Law of Eponymy]] | ? |  |  |
@@ -471,8 +499,10 @@
 | [[The Lady Tasting Tea]] | ? |  |  |
 | [[The Loudness War]] | ? |  |  |
 | [[The Naming of Normal]] | ? |  |  |
+| [[The Nobel Prizes in the Beaker]] | ? |  |  |
 | [[The Pendulum Story]] | ? |  |  |
 | [[The Perceptron and Move 78]] | ? |  |  |
+| [[The Pigeons and the Beginning of Everything]] | ? |  |  |
 | [[The War of the Currents]] | ? |  |  |
 | [[Turing at Bletchley]] | ? |  |  |
 | [[Two Family Trees]] | ? |  |  |

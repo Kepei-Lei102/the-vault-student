@@ -12,6 +12,8 @@ leads_to:
   - "[[Data Protection and Privacy]]"
   - "[[You Are a Reinforcement Learner]]"
   - "[[The Perceptron and Move 78]]"
+  - "[[Privacy-Preserving Computation]]"
+  - "[[Affective Computing]]"
 tags:
   - subject/cs
   - domain/artificial-intelligence
@@ -60,7 +62,7 @@ Ordinary programming is rules in, answers out. Machine learning is answers in, r
 
 ### 中文锚点
 
-人工智能是计算机科学的一个分支，它让程序表现出智能行为。一个 AI 系统有四样东西：一批**数据**、使用这些数据的**规则**、由此**推理**的能力，以及（有时）**学习和适应**的能力。造一个 AI 有两条路。**专家系统**把人类专家的知识写成显式规则，由四个部件组成：知识库（事实）、规则库（IF–THEN）、推理机（把规则用到事实上、决定下一个问题问什么），以及界面；专家系统本身不会学习。**机器学习**则让程序根据经验自动调整自己的数据和处理过程：**监督学习**从"输入—正确输出"的样例里学一个映射，**无监督学习**在没有标签的数据里自己找结构，**强化学习**靠行动带来的奖励和惩罚作为反馈，不断改进。**人工神经网络**是许多简单单元分层相连的模型，每条连接上有一个训练时会调整的**权重**；**深度学习**指隐藏层很多的神经网络，每一层从上一层提取更高级的特征；**误差反向传播**是训练它的算法——把输出和期望比较，用微积分求出误差对每个权重的梯度，把梯度沿网络反向传回去，调整所有权重，如此反复，直到结果足够准确；**回归**则是用一条线或曲线去拟合输入与数值输出之间的关系。这张卡把每一样都用几十行 numpy 从零实现，并逐一实测效果：梯度下降回归找回真实斜率，单个神经元学不会 XOR 而三个隐藏神经元可以，反向传播的梯度和数值微分吻合到 $10^{-11}$，同样多的权重排成三层比排成一层准得多，k-means 不看标签就找出三簇，Q-learning 只靠奖励找到绕开陷阱的最短路径，一个前向链式推理机做出了诊断。
+手机相册会自动把你家猫的照片归到一起，可是没有哪个程序员写过"什么是猫"：尖耳朵？有的猫耳朵是折的。四条腿？狗和桌子也有。靠人手写规则，很快就写不下去了。实际发生的是：程序先看了海量已经标好"是猫"或"不是猫"的照片。它一开始乱猜；每猜错一次，就把自己内部那一大堆数字朝"这次本可以少错一点"的方向微调一下；微调几百万次之后，这堆数字就变成了一个能认出猫的东西，虽然没人指得出哪一行代表"耳朵"。这就是机器学习：不是被告知规则，而是照着例子不断调整自己，直到错误变少。造智能程序的另一条路更老，叫专家系统：去请教人类专家，把知识写成一条条明确的"如果……那么……"规则，让程序照着推理。专家说得清楚的事它做得好，比如诊断故障、核对报税表；专家自己也说不清的事它就不行，而那正是机器学习接手的地方。专家系统每一步都能解释，却不会自己进步；学出来的模型越看越准，却常常解释不了自己。
 
 ---
 
@@ -283,6 +285,8 @@ A4.1 machine-learning fundamentals has two understandings: the **types of machin
 
 - **Builds on:** [[Graphs]] — Dijkstra's and A\* worked on real papers; [[Ethics and Ownership]] — bias, the proxy that learns the historical decisions, and the economic and environmental cost of training; [[Differentiation]] — the gradient that every learner walks down; [[Probability Basics]] — the Bayesian spam filter and the reward's expectation.
 - **Extends into:** [[The Turing Test]] — whether any of this counts as thinking; [[Compression Is Intelligence]] — prediction and compression as the same act, which is what a language model does; [[Data Protection and Privacy]] — the training data was somebody's.
+- **Training without pooling the data:** [[Privacy-Preserving Computation]] — federated averaging, the record a single gradient gives away, and the secure aggregation that hides it.
+- **A classifier pointed at people:** [[Affective Computing]] — what a model can and cannot infer about feelings from a face, a voice or a pulse, and why an accurate detector can give an inaccurate answer.
 - **Sibling:** [[Sorting]] and [[Searching]] — the classical algorithms that AI search generalises; [[Information Theory]] — the entropy that a learning system reduces.
 - **Leads to:** [[You Are a Reinforcement Learner]] — Part III's gridworld agent read as a self-portrait: you are someone else's environment, and a proxy-paid learner circles the checkpoints forever.
 - **Story:** [[Stories/The Perceptron and Move 78]] — why these ideas exist in this order: the Navy's press conference, Minsky's theorem and the winters, back propagation's four inventors, two gaming cards, and AlphaGo as the marriage of search and learning.

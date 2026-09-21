@@ -142,12 +142,20 @@ A regular hexagon has 6 lines of symmetry → 6 planes of symmetry pass *through
 
 ### Cambridge 0580
 
-**Syllabus ref:** E4.5 — recognise rotational and line symmetry (including order of rotational symmetry) in two and three dimensions; recognise symmetry properties of the prism, cylinder, cone, pyramid. Standard patterns:
+**Syllabus ref:** C4.5 / E4.5. Point 1, Core and Extended: recognise line symmetry and order of rotational symmetry **in two dimensions**, including the properties of triangles, quadrilaterals and polygons that follow from their symmetries. Point 2, **Extended only**: recognise the symmetry properties of prisms, cylinders, pyramids and cones, that is, planes and axes of symmetry. The symmetry properties of circles (equal chords equidistant from the centre, the perpendicular bisector of a chord through the centre, tangents from an external point) are a separate Extended row and live in [[Circle Theorems II]]. Standard patterns:
 
 - "State the number of lines of symmetry of an equilateral triangle." (3)
 - "Write down the order of rotational symmetry of a parallelogram." (2)
 - "Draw all the lines of symmetry on the diagram." (Mark them as solid lines on the figure.)
 - "How many planes of symmetry does a cuboid (with all sides different) have?" (3)
+
+### OxfordAQA 9260
+
+**Syllabus ref:** G6 — recognise reflection and rotation symmetry of 2D shapes. Three-dimensional symmetry (planes and axes) is not listed on 9260.
+
+### Where it is not examined as a topic
+
+0606 and the A-Level boards use symmetry only as a tool, for instance in sketching curves, and set no question on lines or orders of symmetry.
 
 ---
 

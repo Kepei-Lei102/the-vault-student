@@ -23,6 +23,7 @@ tags:
   - curriculum/Cambridge-0580
   - syllabus/9260-N12
   - syllabus/9260-N7
+  - syllabus/0580-E1-6
   - syllabus/0580-E1-4
   - type/vocabulary
   - misconception/fraction-division
@@ -32,13 +33,13 @@ tags:
 
 ## Definition
 
-A **fraction** (分数) represents a part of a whole: $\dfrac{a}{b}$ means "$a$ parts out of $b$ equal parts." The top number is the **numerator** (分子) and the bottom is the **denominator** (分母).
+For a positive integer $b$, a **fraction** (分数) $\dfrac{a}{b}$ counts $a$ units of size $\dfrac1b$. It can exceed one whole: $\dfrac74$ counts seven quarter-units. More generally, $a/b$ denotes division, with $b\ne0$. The top number is the **numerator** (分子) and the bottom is the **denominator** (分母).
 
-$$\dfrac{\text{numerator (分子)}}{\text{denominator (分母)}} = \dfrac{\text{how many parts}}{\text{how many equal parts in total}}$$
+$$\dfrac{\text{numerator (分子)}}{\text{denominator (分母)}} = \dfrac{\text{how many parts}}{\text{how many equal parts per whole}}$$
 
 ### 中文锚点
 
-分数 = 整体中的一部分。分子在上，分母在下。$\dfrac{3}{4}$ 读作"四分之三"（中文从分母读起，英文从分子读起）。
+一张披萨切成八块一样大的，你拿了三块。现在把每块都再切成两半，你手里变成六小块，整张披萨变成十六小块，可你并没有多拿一口。$\frac38$ 和 $\frac6{16}$ 说的是同一份：块数翻了一倍，每块也小了一半。分数记下的，正是你用多大的“一块”来数，以及数了多少块。
 
 > [!warning] Reading order: English vs Chinese
 > English reads **top first**: "three quarters" ($\frac{3}{4}$). Chinese reads **bottom first**: "四分之三" (sì fēn zhī sān) — literally "of four parts, three." This reversal catches bilingual students on listening tasks.
@@ -70,17 +71,25 @@ $$\dfrac{2}{3} + \dfrac{1}{4} = \dfrac{8}{12} + \dfrac{3}{12} = \dfrac{11}{12}$$
 
 $$\dfrac{2}{3} \times \dfrac{4}{5} = \dfrac{8}{15}$$
 
-**Dividing:** Multiply by the reciprocal ("**K**eep, **F**lip, **C**hange" — yes, KFC, like the chicken restaurant 🍗). Keep the first fraction, Flip the second, Change ÷ to ×.
+**Dividing — recover the missing multiplier.** Let $q=\dfrac23\div\dfrac45$. By the meaning of division, $q\times\dfrac45=\dfrac23$. Multiply **both sides of that equation** by $\dfrac54$:
 
-$$\dfrac{2}{3} \div \dfrac{4}{5} = \dfrac{2}{3} \times \dfrac{5}{4} = \dfrac{10}{12} = \dfrac{5}{6}$$
+$$q\times\underbrace{\dfrac45\times\dfrac54}_{1}=\dfrac23\times\dfrac54,
+\qquad q=\dfrac{10}{12}=\dfrac56.$$
 
-> [!tip] WHY does "flip and multiply" work?
-> Dividing by $\dfrac{4}{5}$ asks "how many $\dfrac{4}{5}$'s fit inside $\dfrac{2}{3}$?" Multiplying both sides of $\dfrac{2}{3} \div \dfrac{4}{5}$ by $\dfrac{5}{4}$ gives $\dfrac{2}{3} \times \dfrac{5}{4}$, because $\dfrac{4}{5} \times \dfrac{5}{4} = 1$. So dividing by a fraction is the same as multiplying by its reciprocal.
+The reciprocal turns the divisor into $1$, leaving the unknown multiplier alone. This requires a nonzero divisor.
+
+Once that reason is clear, the mnemonic is **K**eep, **F**lip, **C**hange — KFC, like the chicken restaurant 🍗: keep the first fraction, flip the second, change $\div$ to $\times$.
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
-**Syllabus ref:** N7 (9260), E1.4–E1.5 (0580). Fraction arithmetic appears on both calculator and non-calculator papers. Common exam phrasing: "Express as a fraction in its simplest form," "Give your answer as a mixed number."
+### OxAQA 9260
+**N7 (Core and Extension)** requires exact calculation with fractions; **N12** covers equivalent fractions and conversion between fractions, terminating decimals and percentages. Conversion from recurring decimals is Extension content and is developed in [[Recurring Decimals (Vocab)]].
+
+### Cambridge 0580 — Core and Extended
+**C1.4 / E1.4** cover fraction notation, equivalent forms and conversion; **C1.5 / E1.5** cover ordering. The arithmetic itself belongs to **C1.6 / E1.6**, including improper fractions and mixed numbers. Fraction calculations can appear on both calculator and non-calculator papers. Read whether an answer must be a simplified fraction, a mixed number or a decimal.
+
+### Other boards — assumed arithmetic
+**Cambridge 0606 / 9709 / 9231, Edexcel IAL and OxAQA 9660** use numerical fraction arithmetic within algebra and later work, rather than prescribing it as a separate elementary unit. **IB AA / AI (first assessment 2021)** explicitly include fraction arithmetic in *Prior learning*. **AP Calculus AB / BC** assumes prior algebra, including rational functions; numerical fractions remain a working skill, with no standalone fraction-arithmetic unit. [[Algebraic Fractions (Vocab)]] and partial fractions add algebraic scope beyond these numerical rules.
 
 ## Connections
 

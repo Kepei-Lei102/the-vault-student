@@ -126,8 +126,20 @@ At 9260 this is simple — only the first two cases appear.
 - **Not assessed** at Core tier — matrices are Extension-only (G23–G26)
 - Multiplication of $2 \times 2$ by $2 \times 2$, $2 \times 2$ by $2 \times 1$, and scalar multiplication are all required
 - Both Paper 1E and Paper 2E may include matrix questions (calculators allowed on both)
-- **i** and **j** notation is **not** required (stated in spec)
+- **i** and **j** notation is **not** required (the specification's own note under G26)
 - Expect questions combining matrix multiplication with transformation identification — see [[Matrix Transformations]]
+
+### Cambridge 9231 (Further Mathematics) — Paper 1, §1.4 Matrices
+
+Addition, subtraction and multiplication, "including non-square matrices", with **at most 3 rows and columns**; the terms zero matrix and identity (or unit) matrix. Determinants, inverses, $(\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$ and the transformation work are in [[Determinants and Inverses]] and [[Matrix Transformations]]. Everything in the 9260 list above is assumed, and the size limit rises from $2\times2$ to $3\times3$.
+
+### Pearson Edexcel IAL — FP1 (matrix algebra)
+
+Addition, scalar multiplication and products of conformable matrices up to $2\times2$ in FP1, as the base for determinants, inverses and transformations.
+
+### Where it is *not* examined
+
+Cambridge **0580**, **0606** and **9709** contain no matrices (checked against the current syllabuses).
 
 ## Connections
 

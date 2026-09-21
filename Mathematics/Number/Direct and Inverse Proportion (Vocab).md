@@ -121,13 +121,15 @@ Top row: $y\propto x$ is a straight line through the origin; $y\propto 1/x$ is a
 
 **A18 Ext** — Express direct and inverse variation algebraically; find unknown quantities. The algebraic framing of the same idea, now expected at GCSE-Extended / A-Level feeder level.
 
-### Cambridge 0580 Extended
+### Cambridge 0580
 
-**E2.8** — Proportion (algebraic). Use $\propto$ notation and the equation $y = kx^n$ or $y = k/x^n$; find $k$ from one pair, then compute. 3–4 marks typical.
+**C1.11 / E1.11 Ratio and proportion** (Core and Extended) — the numerical side, in the syllabus's words: ratios in simplest form, dividing a quantity in a given ratio, and "proportional reasoning and ratios in context" (adapting recipes, map scales, best value). The words *direct* and *inverse* do not appear here; the reasoning does.
 
-### Cambridge 0606
+**E2.8 Proportion** (Extended only; the Core syllabus marks C2.8 "Extended content only") — express direct and inverse proportion algebraically and use the expression to find unknowns. The syllabus names the cases: **linear, square, square root, cube and cube root** proportion, and states that **the symbol ∝ is required**. Find $k$ from one pair of values, then compute. 3–4 marks typical.
 
-Inverse and direct proportion show up in applied differentiation and integration problems (rates, volumes). The vocabulary is identical; the context is denser.
+### Where it is *not* a syllabus item
+
+**Cambridge 0606** lists no proportion outcome (checked against the current syllabus); the idea is assumed from 0580 and appears inside rates-of-change questions without being examined in its own right.
 
 ## Connections
 

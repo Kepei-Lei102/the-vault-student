@@ -9,6 +9,8 @@ prerequisites:
 leads_to:
   - "[[Calibration of Instruments]]"
   - "[[Stories/The 1919 Eclipse]]"
+  - "[[Planning an Experiment]]"
+  - "[[Recording and Analysing Experimental Data]]"
 teach_together:
   - "[[Significant Figures]]"
 tags:
@@ -75,7 +77,11 @@ The formula has three things every Foundations student should hold:
 
 ### 中文锚点
 
-**重复测量** (chóngfù cèliáng) = repeated measurements. 物理实验中最古老、最朴素也最强大的降噪手段：**多测几次，取平均**。
+让五个同学用手机给同一次单摆摆动计时，会得到五个不一样的结果。谁也没有做错：每个人按键都会早一点或者晚一点，而且事先谁也说不准是早还是晚。正因为早和晚的可能性一样大，把几个读数加起来的时候，这些误差会互相抵消掉一部分，平均值就比随便哪一次读数更接近真实值。重复测量的全部道理就在这里。不过这种抵消来得很慢：想让平均值的波动减小一半，读数就得是原来的四倍；想再减一半，就得十六倍。还有一种误差是取平均碰不到的。假如每部手机的时钟都慢了百分之二，五个读数就会一起偏小同样多，平均值也跟着偏小同样多，而你光看这些数字，根本发现不了问题。重复测量只能对付那种每次读数都不一样的误差，也只能对付这一种。
+
+### 术语对照 (Terms)
+
+**重复测量** (chóngfù cèliáng)：多次独立测量同一个量，取平均。平均值的不确定度 = 单次测量的不确定度 / $\sqrt{N}$；它只能减小**随机误差** (random error)，对**系统误差** (systematic error) 无效，见 [[Accuracy vs Precision]]。
 
 | English | 中文 | 含义 |
 |---|---|---|
@@ -86,10 +92,6 @@ The formula has three things every Foundations student should hold:
 | Independent | 独立的 (dúlì de) | 测量之间没有共同的偏差源 |
 | Central Limit Theorem | 中心极限定理 (zhōngxīn jíxiàn dìnglǐ) | 独立同分布变量之和趋近正态分布 |
 | Diminishing returns | 边际递减 (biānjì dìjiǎn) | 多测一倍数据，精度只提高 $\sqrt{2}$ 倍 |
-
-**核心公式**: 平均值的不确定度 = 单次测量的不确定度 / $\sqrt{N}$。
-
-**核心警告**: 这只能消除 **随机误差** (random error)，对 **系统误差** (systematic error) 完全没用。系统偏差在平均后还在那里 — 无论你测多少次。这点见 [[Accuracy vs Precision]] §"Misconception 3 — averaging removes systematic error."
 
 ## Proof — variance additivity gives the $\sqrt{N}$ law
 
@@ -267,6 +269,7 @@ Repetition and uncertainty reasoning belong to practical physics across these co
 
 - **Prerequisite:** [[Accuracy vs Precision]] — defines the random-vs-systematic factorisation that this card extends. Averaging is the mechanism that *acts on the random axis*; the systematic axis is invariant under averaging.
 - **Prerequisite:** [[Error Propagation]] — variance additivity under independence is the shared engine. *Error propagation grows variance through a calculation; this card shrinks variance by stacking samples.* Two directions of the same principle.
+- **Where the repeats go:** [[Recording and Analysing Experimental Data]] — every repeat recorded in the table, the anomalous one circled and explained, and a best-fit line as averaging done by eye.
 - **Prerequisite:** [[Physical Quantities and Units]] — the SEM has the same units as the original measurement; the unit travels through averaging untouched.
 - **Prerequisite:** [[Normal Distribution]] — the formal CLT statement, with full proof outline, lives there. This card uses the result without re-deriving.
 - **Prerequisite:** [[Discrete Random Variables]] — defines mean and variance for individual measurements; the sample-mean variance derivation above re-uses that machinery.

@@ -35,15 +35,19 @@ Almost every computer scientist believes finding really is harder than checking 
 
 ## 中文锚点
 
-**P 与 NP 问题**问的是一句话：**如果一个答案能被快速*验证*，它能不能也被快速*找到*？**
+一张填好的数独，检查一遍只要一分钟：每一行、每一列、每一个九宫格扫一眼就行。同一道题要是空着让你填，可能要一个小时。拼好的拼图，对不对一眼就看得出来；把它拼起来，却花了整整一个晚上。在日常生活里，检查一个答案总比找到一个答案容易。问题是：这究竟是一条规律，还是只说明我们还不够聪明？也许凡是答案能很快检查的问题，也都有一种很快找到答案的办法，只是我们还没发现。也没有人能证明这样的办法不存在。这个问题的答案关系重大：你网上付款用的那把“锁”，正是这样一类问题，有钥匙一验就知道对不对，而所有人都指望，没有钥匙就根本解不开。大多数数学家相信，“找”确实比“验”难。可相信不等于证明，半个世纪过去了，还没有人证出来。
 
-- **P** = 能在**多项式时间**内**解出**的问题（"易解"/可行）。
-- **NP** = 给一个候选答案，能在多项式时间内**验证**对错的问题。（NP = *Nondeterministic Polynomial*，**不是** "Non-Polynomial"——这是头号误解。每个 P 问题都在 NP 里：$P \subseteq NP$。）
-- **核心问题：$P = NP$ 吗？** 即"验证容易"是否意味着"求解也容易"。
-- **NP-complete（NP 完全）**：NP 里**最难**的一类——所有 NP 问题都能在多项式时间内**归约**到它。只要其中**任何一个**有多项式解法，$P=NP$ 全部解决。
-- **NP-hard（NP 困难）**：至少和 NP 里最难的一样难，但本身**不一定**在 NP 里。
+### 术语对照 (Terms)
 
-类比：填数独很难，验证已填好的数独很容易。**找** vs **验**，就是这个问题的全部。绝大多数人相信 $P \neq NP$，但无人能证明——它是七个**千禧年大奖难题**之一，悬赏一百万美元。
+| English | 中文 | one-line meaning |
+|---|---|---|
+| polynomial time | 多项式时间 | running time bounded by a power of the input size: "fast" |
+| P | P 类问题 | problems that can be *solved* in polynomial time |
+| NP | NP 类问题 | problems whose answers can be *checked* in polynomial time; the N is for *nondeterministic*, not "non" |
+| NP-complete | NP 完全 | the hardest problems in NP: solve one quickly and all of NP follows |
+| NP-hard | NP 困难 | at least as hard as everything in NP, and not necessarily in NP |
+| reduction | 归约 | turning one problem into another quickly |
+| Millennium Prize Problem | 千禧年大奖难题 | one of seven, each with a million-dollar prize |
 
 ## P — the problems we can actually solve
 

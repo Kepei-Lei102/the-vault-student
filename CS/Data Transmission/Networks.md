@@ -27,6 +27,8 @@ tags:
   - misconception/bandwidth-is-speed
   - misconception/the-router-knows-the-whole-path
   - misconception/full-duplex-doubles-the-bandwidth
+teach_together:
+  - "[[Hedy Lamarr and the Frequency-Hopping Piano]]"
 ---
 
 # Networks 计算机网络
@@ -49,7 +51,9 @@ A network is a postal system for a city with no maps. You cannot send a book, so
 
 ### 中文锚点
 
-打《英雄联盟》或《无畏契约》时，屏幕角落有个数字：**ping，比如 45 ms 或 200 ms**。它是什么？是一个小数据包从你的电脑到游戏服务器**再回来**所用的时间——往返时间。它和你家"百兆宽带"没有关系：**带宽**是管子有多粗（一秒能过多少比特），**延迟**是管子有多长（一个比特要走多久）；管子再粗，成都到上海的光纤也得走几毫秒，到美国要走一百多毫秒，光速说了算。所以百兆宽带照样会"卡"，卡的是延迟和**抖动**（延迟忽大忽小），不是带宽。你按下技能键，这条消息是怎么过去的？它被切成一个个**数据包**——每个包带着**目的地址、源地址、包编号**（头部）、一小段数据（**载荷**）和一个校验（尾部）——交给你家路由器；路由器只看目的地址，把包转给它此刻认为最好的下一跳，再下一跳的路由器再决定下一步，**没有人知道全程**。各个包可能走不同的路、乱序到达，服务器按编号重排；坏了或丢了的包，请对方再发一次。这就是**分组交换**，整个互联网都这么工作，和老式电话的**电路交换**（先接通一条专线，通话期间独占）刚好相反。管这一切的规则叫**协议**，而协议是**分层**的：应用层（HTTP 网页、SMTP 发邮件、IMAP 收邮件、BitTorrent 下载）、传输层（TCP 保证送到且有序，UDP 快但不保证——游戏和视频通话用 UDP，因为迟到的一帧不如不要）、网际层（IP，地址和路由）、链路层（以太网、Wi-Fi、5G，一跳）。这张卡把这条链**真的摸了一遍**：用 Python 在本机跑一次 TCP 和 UDP 通信，手写一个 HTTP 请求看服务器回什么，从成都 ping 谷歌四十次画出延迟的分布，traceroute 数出中间的路由器。最后是 0478 要考的"线上的事"：**串行还是并行**（一根线还是八根线）、**单工 / 半双工 / 全双工**（单向、轮流、同时），以及 **USB** 为什么统一了所有接口。
+打《英雄联盟》或《无畏契约》的时候，屏幕角落有一个数字：ping，比如 45 ms。它是一条很小的消息从你的电脑跑到游戏服务器、再跑回来所用的时间。家里装的是千兆宽带，游戏照样会卡，因为带宽和延迟根本是两码事。带宽是管子有多粗：一秒钟能通过多少比特。延迟是管子有多长：任何一个比特要走多久才到。按一下技能键只是一条极小的消息，管子再粗对它也没有用，它需要的是路短一点。而这段路有一个花多少钱都压不下去的下限，因为信号在光纤里跑的速度是固定的：从成都到上海打个来回，至少要十几毫秒；从成都到美国的服务器打个来回，要一百多毫秒，带宽买得再大也一样。
+
+### 术语对照 (Terms)
 
 | English | 中文 | 一句话 |
 |---|---|---|
@@ -288,7 +292,7 @@ Everything here runs on your own machine, with tools already installed.
 
 ### IB Computer Science — A2.1–A2.3
 
-- **A2.1 Network fundamentals:** LAN and WAN, client–server and peer-to-peer, the role of routers and the idea of a protocol. **A2.2 Network architecture:** layered protocols and the cloud as rented client–server. **A2.3 Data transmission:** packets, protocols and transmission media (copper, fibre, wireless), with [[Compression]] for the lossy/lossless half. The register is descriptive; the depth is this card's Parts I–IV without the 9618 mark-point precision.
+- **A2.1 Network fundamentals:** types of network, the infrastructure behind the internet and the cloud, network devices, the protocols TCP, UDP, HTTP, HTTPS and DHCP, and at higher level the four-layer TCP/IP model. **A2.2 Network architecture:** topologies, client–server against peer-to-peer, segmentation, and at higher level the roles of servers. **A2.3 Data transmissions:** IP addressing, transmission media (twisted pair, fibre, wireless), packet switching, and at higher level static and dynamic routing. Compression is not in A2: IB places it at A1.1.8, which [[Compression]] covers. What is taught here overlaps A2.1.4, A2.1.5 and A2.3.3: the protocols, the four-layer model and packet switching, in Parts I and II. The rest of A2 asks for more than description, and mostly lives elsewhere: comparing client–server with peer-to-peer, explaining segmentation (subnets and VLANs), comparing the three media against eight named factors, and explaining static and dynamic routing with their trade-offs. [[The Internet and the Web]] carries addressing, topologies and client–server.
 
 ### Not examined on…
 

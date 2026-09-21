@@ -58,7 +58,11 @@ The surprise worth the whole topic is in that finish order: the honey jar is *sl
 
 ### 中文锚点
 
-**阻尼振动 (zǔní zhèndòng)** = 振幅随时间衰减的振动；能量被阻力不断带走。
+推一下秋千，然后走开。它每一次都荡得比上一次低一点，最后停下来。空气和转轴都在阻碍它，而阻力总是跟运动方向对着干，不管秋千往哪边荡；于是每荡一次，就有一点能量被拿走，变成了热。荡得越快损失越多，所以每荡一次，损失的能量大约都是剩下能量的同一个比例：振幅每次按同样的比例缩小，开始掉得快，后来越来越慢。这就是阻尼。要多大的阻尼，是设计时的选择。汽车压过减速带以后，不该像秋千那样上下晃个不停（阻尼太小），也不该花上十秒钟才慢吞吞地落回原位（阻尼太大）。减震器被调到两者之间恰到好处的那一档，让车身尽快恢复平稳而又不冲过头，这叫临界阻尼；教室门上的闭门器让门很快关上又不会"砰"地一声撞上，也是照这个道理调的。
+
+### 术语对照 (Terms)
+
+**阻尼振动 (zǔní zhèndòng)**：振幅随时间衰减的振动，能量被阻力不断带走。
 
 | English | 中文 | Symbol / idea |
 |---|---|---|
@@ -72,7 +76,7 @@ The surprise worth the whole topic is in that finish order: the honey jar is *sl
 | Natural frequency | 固有频率 (gùyǒu pínlǜ) | $\omega_0 = \sqrt{k/m}$, the undamped value |
 | Quality factor | 品质因数 (pǐnzhì yīnshù) | $Q$ — how many swings the ring survives |
 
-Cambridge says **light / critical / heavy**; Chinese textbooks and all engineering literature say 欠阻尼 / 临界阻尼 / 过阻尼 (**under / critical / over**). Same three regimes, two naming families — exams accept the Cambridge set.
+三种情形有两套叫法，说的是同一回事：light / critical / heavy，以及 under / critical / over（欠阻尼 / 临界阻尼 / 过阻尼）。
 
 ---
 

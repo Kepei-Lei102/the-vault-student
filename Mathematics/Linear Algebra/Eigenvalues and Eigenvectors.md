@@ -61,7 +61,7 @@ An eigenvector is a rail remembered *with its stretch factor*. The rail answers 
 
 ### 中文锚点 (Chinese Anchor)
 
-**特征向量**是矩阵"不肯转动"的方向：$\mathbf{A}\mathbf{e} = \lambda\mathbf{e}$，向量 $\mathbf{e}$ 变换后还在原来那条过原点的直线上，只是长度伸缩了 $\lambda$ 倍——**特征值**就是这个伸缩倍数（$\lambda<0$ 表示还调了个头）。找它们的思路只有一句话：把 $\mathbf{A}\mathbf{e} = \lambda\mathbf{e}$ 改写成 $(\mathbf{A} - \lambda\mathbf{I})\mathbf{e} = \mathbf{0}$，要它有非零解，矩阵 $\mathbf{A} - \lambda\mathbf{I}$ 就必须是**奇异**（singular，行列式为零）的，所以解 $\det(\mathbf{A} - \lambda\mathbf{I}) = 0$（**特征方程** characteristic equation）先拿到 $\lambda$，再回代求方向。**对角化**是这套东西的回报：换到特征向量的视角，矩阵就变成纯粹的"各方向各自拉伸"，算高次幂 $\mathbf{A}^n$ 从苦工变成一步——这正是考题最爱的地方。凯莱–哈密顿定理（矩阵满足自己的特征方程）则给了降幂和求逆的第二条路。国内高中不学这些——线性代数是大学课程（也是考研的重头戏），所以别指望"以前学过"，这里就是第一次见面；好在它建立在你刚学过的不变直线上：**特征向量就是不变直线的方向，特征值就是沿线的伸缩倍数**，新的只是名字和算法。
+在修图软件里，把照片横向拉宽到原来的两倍，高度不动。照片上一支水平箭头仍然水平，只是长了一倍；竖直箭头连长度都没变；斜着的箭头却通常会改变方向。原来，同一次变换对某些方向格外“简单”：只沿着原来的直线伸缩，不把它带到别的方向去。**特征向量**记住的就是这样的方向，**特征值**记住它沿线伸缩的倍数（方向反了就是负的）——这次横向是 2，竖向是 1。
 
 ## The bridge — rails, grown up
 
@@ -379,6 +379,8 @@ AHL 1.15: eigenvalues and eigenvectors of $2\times2$ matrices, characteristic po
 Not on Cambridge 9709 (no matrices anywhere in the syllabus), not on OxAQA 9660 (likewise — no matrix content at all), not on AP Calculus or AP Precalculus (Precalculus Unit 4 stops at determinants and inverses), not in IB AA. This topic is a Further-Mathematics marker: if the course has "Further" in the name, expect it; otherwise don't.
 
 ## Connections
+
+- **Physical application:** [[Coupled Oscillators]] — an eigenvector is a collective motion pattern; its eigenvalue, after mass scaling, gives squared frequency.
 
 - **Parent:** [[Invariant Points and Lines]] — the rails; an eigenvector is an invariant direction carrying its stretch factor, and the gradient quadratic is the characteristic equation asked sideways.
 - **Proof ingredient:** [[Determinants and Inverses]] — $\det(\mathbf{A} - \lambda\mathbf{I}) = 0$ *is* the singularity test, run as a search; cofactor expansion computes it, and swap-and-negate inverts $\mathbf{Q}$.

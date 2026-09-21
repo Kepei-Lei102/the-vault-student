@@ -13,7 +13,6 @@ tags:
   - level/IGCSE
   - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
-  - syllabus/9260-N2
   - syllabus/9260-N3
   - syllabus/0580-E1-6
   - type/vocabulary
@@ -24,11 +23,11 @@ tags:
 
 ## Definition
 
-The **order of operations** is the agreed set of rules that determines which calculations to perform first in an expression. Without these rules, $2 + 3 \times 4$ would be ambiguous.
+The **order of operations** is the agreed set of rules that determines which calculations to perform first in an expression. Without these rules, $2 + 3 \times 4$ would be ambiguous. Multiplication groups the three lots of four: $2+(3\times4)=14$. Brackets can request a different grouping: $(2+3)\times4=20$. The convention specifies which calculation the writer means; BIDMAS and its cousins below are reminders of that convention.
 
 ### 中文锚点
 
-运算顺序：先括号，再指数，然后乘除（从左到右），最后加减（从左到右）。
+买三个包子，每个四元，整单再加两元配送费，账单可以写成 $2+3\times4$。这里的“三个、每个四元”是一组意思，要先算出包子的钱，再加那一笔配送费。运算顺序就像算式里的标点：它让写的人和读的人知道哪些数量是一组，不会把同一张账单读成两笔不同的账。
 
 ## Key Vocabulary
 
@@ -60,12 +59,13 @@ The **order of operations** is the agreed set of rules that determines which cal
 ## Exam Notes
 
 ### OxAQA 9260
-**Syllabus ref:** N2–N3 — apply operations in correct order; use inverse operations.
-Calculator questions still test this: students must enter expressions correctly.
+**N3 (Core, also required for Extension)** explicitly prescribes priority of operations, including brackets, powers, roots and reciprocals. Equal-precedence operations still run left to right; entering the intended grouping matters on calculator questions too.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.6 — order of operations including brackets and powers.
-Paper 2 (non-calculator) relies heavily on correct manual application.
+### Cambridge 0580 — Core and Extended
+**C1.6 / E1.6** explicitly require correct ordering and brackets in calculations with integers, fractions and decimals. Powers also draw on **C1.7 / E1.7**. Both non-calculator papers (1 Core, 2 Extended) and calculator papers (3 Core, 4 Extended) use these conventions in the 2025–27 syllabus.
+
+### Other boards — prior skill, not a separate BIDMAS unit
+Cambridge **0606, 9709 and 9231**, **Edexcel IAL** and **OxAQA 9660** apply these conventions throughout algebra and calculus; they do not prescribe a separate BIDMAS topic. **IB AA / AI (first assessment 2021)** explicitly list order of operations with integer, decimal and fraction arithmetic under *Prior learning*. **AP Calculus AB / BC** likewise assumes algebraic fluency; there is no standalone order-of-operations unit. None of these boundaries makes ambiguous calculator entry acceptable.
 
 ## Connections
 

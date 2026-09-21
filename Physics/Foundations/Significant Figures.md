@@ -10,6 +10,8 @@ leads_to:
   - "[[Linearisation for Lab Analysis]]"
   - "[[Stories/The 1919 Eclipse]]"
   - "[[The 1919 Eclipse]]"
+  - "[[Planning an Experiment]]"
+  - "[[Recording and Analysing Experimental Data]]"
 teach_together:
   - "[[Repeated Measurements]]"
 tags:
@@ -78,6 +80,12 @@ This is one of the quiet jobs scientific notation does: every time you write a n
 
 ### 中文锚点
 
+厨房秤只显示到整克。把一个鸡蛋称五次，得到 61、62、61、63、62，让计算器求平均，它给出 61.8；再让它往下除一步，它会若无其事地显示 12.34782。多出来的这些数字，没有一位是量出来的。秤从来看不到比一克更小的东西，而且这五次读数彼此就差着一两克。你写下的每一位数字，都是在声明你对这个量了解到什么程度：写 61.8 g，是说 61 有把握，8 也大致靠得住；写 61.80000 g，等于宣称你连十万分之一克的差别都分得出来，这是用数字撒的谎。所以 4.50 和 4.5 虽然是同一个数，却是两句不同的话：前一句说有人看过百分位，发现那里是零；后一句说根本没人看过。计算器不知道你的仪器能看清到哪一位，所以数字写到哪里为止，得由你来决定，而且这要由测量说了算，而不是屏幕说了算。
+
+### 术语对照 (Terms)
+
+**有效数字** (yǒuxiào shùzì) 从第一个非零数字开始数，**小数位**从小数点后开始数，所以 $0.00450$ 有三位有效数字，却有五位小数。
+
 | English | 中文 | 缩写 |
 |---|---|---|
 | Significant figure | 有效数字 (yǒuxiào shùzì) | s.f. |
@@ -86,8 +94,6 @@ This is one of the quiet jobs scientific notation does: every time you write a n
 | Round to *n* s.f. | 保留 $n$ 位有效数字 | — |
 | Trailing zero (significant) | 末尾零 (有效) | — |
 | Leading zero (not significant) | 前导零 (无效) | — |
-
-有效数字说的是你打算在测量结果里保留多少位有效信息，而不是计算器屏幕上能显示多少位。厨房秤只能显示到整克，算平均值时冒出的 $12.34782~\mathrm g$ 也不会因此变成毫克级的测量结果；要先结合秤的分辨率和多次测量的波动估计不确定度，再决定保留几位。$4.50$ 和 $4.5$ 在数学上相等，但写出的末位不同，传达的精度也不同；不过光凭写出的末位，并不能保证实际误差就有那么小。**有效数字**从第一个非零数字开始数，**小数位**从小数点后开始数，所以 $0.00450$ 有三位有效数字，却有五位小数。
 
 ---
 
@@ -219,6 +225,7 @@ Use sensible numerical precision in calculations and data analysis, retaining wo
 - **Parent:** [[Rounding (Vocab)]] — the maths-side card with the basic counting rules. Measurement reporting adds arithmetic conventions and uncertainty matching.
 - **Sibling:** [[Accuracy vs Precision]] — the typographic version of precision. The sig-fig count of a written value claims a precision; that claim must be honest.
 - **Sibling:** [[Error Propagation]] — propagation quantifies how input uncertainties affect a result; significant figures are a reporting shortcut, not a substitute.
+- **At the bench:** [[Recording and Analysing Experimental Data]] — why 4.70 cm and 4.7 cm are different records, and how many figures a gradient deserves.
 - **Components:** [[Standard Form (Vocab)]] — scientific notation is an unambiguous way to write a number with a *given* sig-fig count. The two cards travel together.
 - **Application:** [[Casio fx-991 Reference]] — calculator display settings; showing fewer digits does not improve measurement accuracy.
 

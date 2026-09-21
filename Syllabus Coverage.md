@@ -10,14 +10,14 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-18` · built 2026-09-18 from commit `29a7c09`  
-> 432 cards · 658 diagrams · 130 explainers · 148 illustrations
+> **Edition** `student-2026-09-21` · built 2026-09-21 from commit `21b9356`  
+> 462 cards · 747 diagrams · 158 explainers · 157 illustrations
 
 ---
 
 ## Cambridge IGCSE 0478 Computer Science
 
-*37 syllabus points · 57 card references*
+*37 syllabus points · 58 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -37,7 +37,7 @@ is often taught under a different heading.
 | 4.2.1 | [[Assembly Language]] |
 | 5.1 | [[The Internet and the Web]] |
 | 5.2 | [[Digital Currency and Blockchain]] |
-| 5.3 | [[Data Security]] |
+| 5.3 | [[Data Protection and Privacy]], [[Data Security]] |
 | 6.1 | [[Automated Systems and Robotics]] |
 | 6.2 | [[Automated Systems and Robotics]] |
 | 6.3 | [[Artificial Intelligence]] |
@@ -61,17 +61,17 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0580 Mathematics (Extended)
 
-*72 syllabus points · 122 card references*
+*72 syllabus points · 125 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | C4.7 | [[Circle Theorems I]], [[Circle Theorems II]] |
-| E1.1 | [[Factors and Multiples (Vocab)]], [[Natural Numbers]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Reciprocals (Vocab)]] |
+| E1.1 | [[Factors and Multiples (Vocab)]], [[Natural Numbers]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Prime Numbers]], [[Reciprocals (Vocab)]] |
 | E1.2 | [[Cardinality]], [[Complement]], [[Element]], [[Empty Set]], [[Intersection]], [[Set]], [[Set Operations]], [[Set-Builder Notation]], [[Subset]], [[Union]], [[Universal Set]], [[Venn Diagram]] |
 | E1.3 | [[Powers and Roots (Vocab)]] |
 | E1.4 | [[Decimals (Vocab)]], [[Fractions (Vocab)]], [[Percentages (Vocab)]], [[Recurring Decimals (Vocab)]] |
 | E1.5 | [[Ordering and Inequalities Notation (Vocab)]] |
-| E1.6 | [[Four Operations (Vocab)]], [[Order of Operations (Vocab)]] |
+| E1.6 | [[Four Operations (Vocab)]], [[Fractions (Vocab)]], [[Order of Operations (Vocab)]] |
 | E1.7 | [[Laws of Indices]] |
 | E1.8 | [[Standard Form (Vocab)]] |
 | E1.9 | [[Estimation (Vocab)]], [[Rounding (Vocab)]] |
@@ -91,7 +91,7 @@ is often taught under a different heading.
 | E2.5 | [[Changing the Subject (Vocab)]], [[Completing the Square]], [[Fractional Equations (Vocab)]], [[Linear Equations (Vocab)]], [[Quadratic Equations]], [[Simultaneous Equations (Vocab)]] |
 | E2.6 | [[Graphical Inequalities (Vocab)]], [[Linear Inequalities (Vocab)]] |
 | E2.7 | [[Sequences]] |
-| E2.8 | [[Direct and Inverse Proportion (Vocab)]] |
+| E2.8 | [[Direct and Inverse Proportion (Vocab)]], [[Proportion (Vocab)]] |
 | E2.9 | [[Area Under a Graph (Vocab)]], [[Travel Graphs (Vocab)]] |
 | E2.10 | [[Exponential Graphs (Vocab)]], [[Graphs of Functions]] |
 | E2.11 | [[Sketching Curves (Vocab)]] |
@@ -214,14 +214,17 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0625 Physics
 
-*26 syllabus points · 53 card references*
+*31 syllabus points · 67 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| P4 | [[Calibration of Instruments]], [[Repeated Measurements]], [[Significant Figures]] |
-| P5 | [[Accuracy vs Precision]], [[Error Propagation]] |
-| P6 | [[Accuracy vs Precision]], [[Calibration of Instruments]] |
-| P7 | [[Accuracy vs Precision]], [[Repeated Measurements]] |
+| P1 | [[Planning an Experiment]] |
+| P2 | [[Planning an Experiment]] |
+| P3 | [[Planning an Experiment]] |
+| P4 | [[Calibration of Instruments]], [[Recording and Analysing Experimental Data]], [[Repeated Measurements]], [[Significant Figures]] |
+| P5 | [[Accuracy vs Precision]], [[Error Propagation]], [[Recording and Analysing Experimental Data]] |
+| P6 | [[Accuracy vs Precision]], [[Calibration of Instruments]], [[Planning an Experiment]] |
+| P7 | [[Accuracy vs Precision]], [[Planning an Experiment]], [[Repeated Measurements]] |
 | 1.1 | [[Physical Quantities and Units]], [[Repeated Measurements]], [[Vectors in Physics]] |
 | 1.2 | [[Kinematics Calculus]], [[SUVAT]], [[Travel Graphs (Vocab)]] |
 | 1.3 | [[Forces and Equilibrium]], [[Gravitational Fields]], [[Newton's Laws of Motion]] |
@@ -230,20 +233,22 @@ is often taught under a different heading.
 | 1.6 | [[Linear Momentum]] |
 | 1.7 | [[Work, Energy and Power]] |
 | 1.8 | [[Density and Pressure]] |
-| 2.2 | [[Specific Heat Capacity]] |
+| 2.1 | [[Kinetic Theory and the Ideal Gas]] |
+| 2.2 | [[Specific Heat Capacity]], [[Thermal Expansion]] |
 | 2.3 | [[Heat Transfer]] |
 | 3.1 | [[Progressive Waves]] |
 | 3.2 | [[Lenses and Image Formation]], [[Reflection and Refraction]] |
 | 3.3 | [[Electromagnetic Spectrum]], [[X-rays and CT]] |
-| 3.4 | [[Ultrasound]] |
+| 3.4 | [[Sound]], [[Ultrasound]] |
+| 4.1 | [[Magnetism and Magnetic Materials]] |
 | 4.2 | [[Alternating Current]], [[Electric Current]], [[Electric Field]], [[Electric Potential]], [[Resistance]] |
 | 4.3 | [[Kirchhoff's Laws]], [[Potential Dividers]] |
 | 4.4 | [[Potential Dividers]] |
-| 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]] |
+| 4.5 | [[Electromagnetic Induction]], [[Lorentz Force]], [[Magnetism and Magnetic Materials]] |
 | 5.1 | [[Nuclear Physics]] |
 | 5.2 | [[Nuclear Physics]] |
-| 6.1 | [[Gravitational Fields]] |
-| 6.2 | [[Doppler Effect]], [[Hubble's Law and the Expanding Universe]] |
+| 6.1 | [[Gravitational Fields]], [[The Solar System]] |
+| 6.2 | [[Doppler Effect]], [[Hubble's Law and the Expanding Universe]], [[Stellar Evolution]] |
 
 ## Cambridge A-Level 9231 Further Mathematics
 
@@ -278,7 +283,7 @@ is often taught under a different heading.
 
 ## Oxford AQA 9260 International Mathematics (Extension)
 
-*97 syllabus points · 153 card references*
+*97 syllabus points · 155 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -349,11 +354,11 @@ is often taught under a different heading.
 | N17 | [[Ratio (Vocab)]] |
 | N18 | [[Proportion (Vocab)]] |
 | N19 | [[Rates (Vocab)]] |
-| N2 | [[Four Operations (Vocab)]], [[Order of Operations (Vocab)]] |
-| N20 | [[Direct and Inverse Proportion (Vocab)]], [[Exponential Growth and Decay]] |
+| N2 | [[Decimals (Vocab)]], [[Four Operations (Vocab)]] |
+| N20 | [[Direct and Inverse Proportion (Vocab)]], [[Exponential Growth and Decay]], [[Proportion (Vocab)]] |
 | N20.Ext | [[Exponential Growth and Decay]] |
 | N3 | [[Inverse Operations (Vocab)]], [[Order of Operations (Vocab)]], [[Reciprocals (Vocab)]] |
-| N4 | [[Algebraic Proof]], [[Factors and Multiples (Vocab)]], [[Number Sets (Vocab)]], [[Prime Factorisation (Vocab)]] |
+| N4 | [[Algebraic Proof]], [[Factors and Multiples (Vocab)]], [[Number Sets (Vocab)]], [[Prime Factorisation (Vocab)]], [[Prime Numbers]] |
 | N5 | [[Powers and Roots (Vocab)]] |
 | N6 | [[Laws of Indices]] |
 | N6.Ext | [[Laws of Indices]] |
@@ -382,7 +387,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*46 syllabus points · 88 card references*
+*46 syllabus points · 89 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -397,7 +402,7 @@ is often taught under a different heading.
 | 4.3 | [[Assembly Language]], [[Bitwise Operations]] |
 | 5.1 | [[File Systems]], [[Operating Systems]] |
 | 5.2 | [[Compilers and Interpreters]] |
-| 6.1 | [[Data Security]] |
+| 6.1 | [[Data Protection and Privacy]], [[Data Security]] |
 | 6.2 | [[Data Security]], [[Error Detection and Correction]] |
 | 7.1 | [[Ethics and Ownership]] |
 | 8.1 | [[Relational Databases]] |
@@ -435,7 +440,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9702 Physics
 
-*74 syllabus points · 97 card references*
+*74 syllabus points · 98 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -494,7 +499,7 @@ is often taught under a different heading.
 | 18.4 | [[Electric Field]] |
 | 18.5 | [[Electric Potential]] |
 | 19 | [[Capacitors]] |
-| 20.1 | [[Lorentz Force]] |
+| 20.1 | [[Lorentz Force]], [[Magnetism and Magnetic Materials]] |
 | 20.2 | [[Lorentz Force]] |
 | 20.3 | [[Lorentz Force]] |
 | 20.4 | [[Lorentz Force]] |
@@ -739,7 +744,7 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*20 syllabus points · 35 card references*
+*21 syllabus points · 36 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -755,6 +760,7 @@ is often taught under a different heading.
 | A3.4 | [[NoSQL and Distributed Data]] |
 | A4.1 | [[Artificial Intelligence]] |
 | A4.3 | [[Artificial Intelligence]] |
+| A4.4 | [[Data Protection and Privacy]] |
 | B2.1 | [[Programming Fundamentals]] |
 | B2.2 | [[Arrays]], [[Stacks and Queues]] |
 | B2.3 | [[Programming Fundamentals]] |

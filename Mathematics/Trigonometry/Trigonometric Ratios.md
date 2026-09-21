@@ -287,13 +287,13 @@ Once you have calculus on $\sin$ and $\cos$, you can derive their **Taylor serie
 $$\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots, \qquad \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$$
 Combined with the Taylor series for $e^x$, this produces **Euler's formula**:
 $$e^{i\theta} = \cos\theta + i\sin\theta$$
-(where $i = \sqrt{-1}$, the imaginary unit — see the discriminant discussion in [[Completing the Square]]). This single identity unites exponential growth, rotation, and oscillation into one object. Setting $\theta = \pi$ gives **Euler's identity** $e^{i\pi} + 1 = 0$, often called the most beautiful equation in mathematics. You will meet this in IB AA HL, AP Calculus BC, and first-year university.
+(where $i = \sqrt{-1}$, the imaginary unit — see the discriminant discussion in [[Completing the Square]]). This single identity unites exponential growth, rotation, and oscillation into one object. Setting $\theta = \pi$ gives **Euler's identity** $e^{i\pi} + 1 = 0$, often called the most beautiful equation in mathematics. This is required in IB AA HL and developed further at university; AP Calculus BC studies real power series but does not prescribe Euler’s complex-exponential identity.
 
 ### Fourier Analysis — Where Trig Takes Over the World
 
-Every well-behaved periodic function can be written as a sum of sines and cosines:
-$$f(t) = a_0 + \sum_{n=1}^{\infty} \left(a_n \cos(n\omega t) + b_n \sin(n\omega t)\right)$$
-This is a **Fourier series**. Its continuous cousin, the **Fourier transform**, decomposes arbitrary signals into frequency components. Applications: audio compression (MP3), image compression (JPEG), medical imaging (MRI, CT), radio, WiFi, noise-cancelling headphones, quantum mechanics. Every time your phone plays a song, Fourier analysis runs a billion sines and cosines per second.
+A continuous, piecewise smooth periodic function can be reconstructed from its harmonic components:
+$$f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}\left(a_n\cos(n\omega t)+b_n\sin(n\omega t)\right).$$
+[[Fourier Series]] derives the coefficients by projection; at a jump, the series converges to the midpoint of the two one-sided limits. The [[Fourier Transform]] extends frequency analysis beyond one repeated pattern. Additive synthesis uses the sum directly to build a tone; many audio and image codecs use related transforms to represent data compactly.
 
 A triangle you can draw with a ruler and protractor leads to the mathematics that runs the modern world.
 

@@ -12,17 +12,20 @@ leads_to:
   - "[[First Law of Thermodynamics]]"
   - "[[Specific Heat Capacity]]"
   - "[[Entropy and the Second Law]]"
+  - "[[Stellar Evolution]]"
+  - "[[Thermal Expansion]]"
 tags:
   - subject/physics
   - subject/mathematics
   - domain/thermal-physics
   - level/A-Level
-  - level/IGCSE-extension
+  - level/IGCSE
   - curriculum/Cambridge-9702
   - curriculum/Cambridge-0625
   - curriculum/A-Level
   - curriculum/IB-Physics
   - curriculum/AP-Physics-2
+  - syllabus/0625-2-1
   - syllabus/9702-14-2
   - syllabus/9702-15-1
   - syllabus/9702-15-2
@@ -40,7 +43,7 @@ tags:
 
 # Kinetic Theory and the Ideal Gas 气体动理论与理想气体
 
-> *Temperature feels like a primitive thing — a number on a thermometer. Kinetic theory says it is nothing of the kind. Temperature is bookkeeping for a single hidden quantity: the average kinetic energy of one molecule. Heat the gas and you are, literally, speeding up the molecules. This card derives that claim from nothing but Newton's laws and a box of bouncing balls — and out of it falls the same constant $k$ carved on [[Stories/Boltzmann's Tombstone|Boltzmann's gravestone]].*
+> *Push the plunger of a sealed syringe full of air and it pushes back. Fill it with water and it barely moves. The difference is mostly empty space: gas molecules have room to come closer; liquid molecules are already close. Follow those invisible particles and pressure, temperature and the gas laws become consequences of motion — with the same constant $k$ carved on [[Stories/Boltzmann's Tombstone|Boltzmann's gravestone]].*
 
 ## Definition
 
@@ -52,15 +55,47 @@ exactly, where $p$ is pressure, $V$ volume, $T$ the **absolute** (Kelvin) temper
 
 ### 中文锚点
 
-**理想气体**（lǐxiǎng qìtǐ）：严格满足状态方程 $pV = nRT = NkT$ 的气体。$T$ 必须是**绝对温度**（开尔文 Kelvin），$n$ 是**摩尔数**，$N$ 是**分子数**，$R$ 是**摩尔气体常数**，$k$ 是**玻尔兹曼常数**（Boltzmann constant）。
+把不带针头的注射器抽满空气，用手指堵住出口，再慢慢推活塞，你会感觉它越来越顶手；如果里面装满水、没有气泡，活塞就几乎推不动了。空气里的分子隔得很远，挤一挤，主要是把它们之间的空隙变小，并不是把分子压扁。空间越小，分子撞上活塞就越频繁，你的手便要更用力，才能顶住这些细小撞击合起来的推力。水里的分子本来就挨得很近，留给你压缩的余地很少。
 
-**气体动理论**（qìtǐ dònglǐlùn, kinetic theory）：把气体看成大量做无规则运动的小分子，用**牛顿力学**推导出宏观的气体定律。核心结论惊人地简单：
+## Start with matter you can hold
 
-$$\tfrac{1}{2}m\langle c^2\rangle = \tfrac{3}{2}kT$$
+A **particle model** explains a material's large-scale behaviour using its small constituents: atoms, molecules, ions and electrons. Which constituents matter depends on the material — a salt crystal is not a pile of salt molecules, and a metal contains mobile electrons as well as ions. The simple dots below stand for constituent particles, not tiny copies of the whole object.
 
-—— **温度就是分子平均平动动能的度量**。加热气体，本质上就是让分子跑得更快。绝对零度（$T=0$）对应分子平动动能为零。
+![[particle-model-states.svg|760]]
 
-关键术语：$\langle c^2 \rangle$ 是**均方速率**（mean-square speed），$c_{\text{rms}} = \sqrt{\langle c^2\rangle}$ 是**均方根速率**（root-mean-square speed）。本卡片推导 $pV = \tfrac{1}{3}Nm\langle c^2\rangle$，并把它和 $pV = NkT$ 对比，得到上面那条"温度即动能"的结论。这正是 [[Stories/Boltzmann's Tombstone|玻尔兹曼]] 统计力学的物理基石。
+| State | Arrangement, separation and motion | What you can observe — and why |
+|---|---|---|
+| **Solid** | Close particles; in a crystal, a regular arrangement. They vibrate about fixed positions. | Fixed shape and approximately fixed volume: strong interactions resist changing neighbours and spacing. Non-crystalline solids need not have regular order. |
+| **Liquid** | Close particles, irregular arrangement; particles move past one another. | Approximately fixed volume but takes the container's shape: neighbours can rearrange without becoming widely separated. |
+| **Gas** | Widely separated particles, no fixed arrangement; rapid random motion between collisions. | No fixed shape or volume: particles spread through the available space. Large gaps make compression easy. |
+
+**Why not squeeze water like air?** With a needle-free syringe, seal the outlet and gently press the plunger. Air compresses readily because the particles can come closer together. Water with no trapped air compresses very little: its particles are already close, and forcing them closer encounters strong resistance. Liquids and solids are *slightly* compressible; “incompressible” is a useful approximation. **Particles do not shrink when the sample is compressed.**
+
+**Changing state changes the arrangement.** Solid → liquid is **melting**; liquid → solid is **freezing**; liquid → gas is **vaporisation** (evaporation at a surface, or boiling throughout a liquid); gas → liquid is **condensation**. Ice melting does not turn individual water molecules into “liquid molecules”: the same molecules can now rearrange. Energy supplied during melting or boiling changes the interactions and separation rather than simply increasing temperature; see [[Internal Energy]] and [[Specific Heat Capacity]].
+
+## Brownian motion — watching the invisible through what it hits
+
+Under a microscope, tiny suspended smoke particles in still air or fine particles in water jiggle irregularly. This is **Brownian motion**. The visible speck is a microscopic particle containing many atoms or molecules; it is **not** an individual air or water molecule.
+
+Much smaller, light, fast-moving molecules strike the speck from all sides. In a short interval their impacts do not balance exactly: one side happens to get the larger total impulse, so the speck changes its velocity. A moment later the imbalance points elsewhere. The resulting jitter is evidence that the surrounding molecules are continually moving even when the fluid has no bulk flow.
+
+**Observation → inference:** a wandering speck is visible; the molecular collisions that cause it are inferred. Do not label the speck's traced path “the path of a molecule.” A whole cloud drifting one way because of a current is bulk flow, not by itself evidence of Brownian motion. See [[Stories/Boltzmann's Tombstone]] for why this distinction helped settle the argument about atoms.
+
+![[particle-model-motion.mp4]]
+
+Follow the same 24 dots through a solid, a liquid and a gas; then watch compression reduce spacing without changing dot size. The final scene separates the large amber speck from the much smaller teal molecules delivering kicks. This is a teaching schematic: phase rearrangements, compression and collision timing are illustrative, and particle sizes are greatly exaggerated. The compression comparison holds temperature fixed; it does not simulate the warming of a rapidly compressed gas.
+
+## Pressure and temperature — the particle explanation first
+
+**A collision delivers a push.** A gas particle approaching a wall reverses its normal velocity component when it rebounds. Its momentum changes, so the wall must exert a force on it. The particle exerts an equal and opposite force on the wall. Many impacts produce an average force; **pressure is that normal force per unit area**, $p=F/A$.
+
+- **Heat a fixed mass at constant volume:** mean particle kinetic energy increases. Faster particles strike the wall more often and transfer more momentum per collision on average. Both changes raise pressure.
+- **Compress a fixed mass at constant temperature:** the average kinetic energy and speed distribution stay the same. Shorter trips across the container mean more frequent impacts per unit area, so pressure rises. It is the spacing, not the molecular size, that changes.
+- **Heat a gas at constant pressure:** it must expand to offset the stronger bombardment. A freely moving piston provides this situation; a rigid sealed can does not.
+
+Temperature tracks the energy associated with random particle motion. **Absolute zero**, $0\,\mathrm K=-273.15\,^\circ\mathrm C$, is the lower limit of temperature: particles have their least possible energy, not a universal promise that all quantum motion stops. The school particle picture says hotter particles move more vigorously. The precise classical ideal-gas relation between temperature and mean *translational* kinetic energy is derived below.
+
+Convert using $T/\mathrm K=\theta/^\circ\mathrm C+273.15$ (usually rounded to **+273** at IGCSE). Thus $27\,^\circ\mathrm C\approx300\,\mathrm K$. Doubling from $300\,\mathrm K$ to $600\,\mathrm K$ doubles ideal-gas pressure at fixed volume; doubling the Celsius number does not. A kelvin is the same size interval as a Celsius degree, but the zero is different — see [[Temperature and Thermometry]].
 
 ## The empirical story first — three gas laws and one equation
 
@@ -90,13 +125,13 @@ Real gases obey this best when they are **dilute and hot** — low pressure (mol
 
 ![[kinetic-theory-gas-simulation.mp4]]
 
-A box of molecules obeying exactly the five assumptions above: random directions, elastic bounces, no forces between collisions. Watch three things. First, the **net-momentum arrow stays near zero** even though every molecule is screaming along — random directions cancel, which is *why a room full of 500 m/s nitrogen feels like nothing*. Second, the **wall lights up on every impact**: that drumbeat of collisions, summed, *is* the pressure. Third, when the gas is **heated**, every molecule speeds up and the **speed histogram** (right) slides rightward and flattens into the Maxwell–Boltzmann shape — the same curve plotted later in this card, now built one molecule at a time.
+A **two-dimensional hard-disc simulation**: elastic collisions, wall-impact flashes and a speed histogram. The momentum arrow illustrates the difference between rapid random motion and a small bulk drift; finite samples fluctuate rather than cancelling exactly. Heating raises the speed scale and broadens the histogram. The two-dimensional distribution is not the three-dimensional Maxwell–Boltzmann curve below; the simulation illustrates collisions and averaging, not a literal three-dimensional gas.
 
 ## The derivation — pressure from molecular chaos
 
 ![[kinetic-theory-box-derivation.svg|697]]
 
-Here is the heart of the card: getting a macroscopic pressure out of microscopic collisions, using only momentum. Put $N$ molecules, each of mass $m$, in a cubical box of side $L$ (so volume $V = L^3$).
+The central task is getting a macroscopic pressure out of microscopic collisions, using only momentum. Put $N$ molecules, each of mass $m$, in a cubical box of side $L$ (so volume $V = L^3$).
 
 **One molecule, one wall.** Take a single molecule and look only at the $x$-component of its velocity, $c_x$. When it strikes the right-hand wall it bounces back elastically, so its $x$-momentum reverses from $+mc_x$ to $-mc_x$. The momentum *given to the wall* in that one collision is
 
@@ -120,9 +155,9 @@ $$p = \frac{F}{L^2} = \frac{Nm\langle c_x^2\rangle}{L^3} = \frac{Nm\langle c_x^2
 
 $$\boxed{\,pV = \tfrac{1}{3}Nm\langle c^2\rangle\,}$$
 
-This is a purely mechanical result — no thermometer has appeared yet. It says pressure is set by how many molecules there are, how heavy they are, and how fast they move (mean-square).
+Since gas density is $\rho=Nm/V$, the same result is $p=\tfrac13\rho\langle c^2\rangle$. This is a purely mechanical result — no thermometer has appeared yet. It says pressure is set by how many molecules there are, how heavy they are, and how fast they move (mean-square).
 
-## Temperature *is* average kinetic energy
+## Ideal-gas temperature measures average translational kinetic energy
 
 Now lay the mechanical result beside the experimental equation of state. We have, from mechanics,
 
@@ -140,11 +175,12 @@ Multiply both sides by $\tfrac{3}{2}$ and the left side becomes the average tran
 
 $$\boxed{\;\langle E_k\rangle = \tfrac{1}{2}m\langle c^2\rangle = \tfrac{3}{2}kT\;}$$
 
-This is one of the most quietly profound equations in physics. **The absolute temperature of a gas is, up to the constant $\tfrac{3}{2}k$, nothing but the average translational kinetic energy of one of its molecules.** A thermometer is a (very indirect) molecular speedometer. Consequences:
+This is one of the most quietly profound equations in physics. **For a classical ideal gas, absolute temperature is, up to the constant $\tfrac{3}{2}k$, nothing but the average translational kinetic energy of one of its molecules.** A thermometer is a (very indirect) molecular speedometer. Consequences:
 
-- **Temperature is *intensive*.** It depends on the energy *per molecule*, not the total. A spark at 1000 °C and a bathtub of warm water carry wildly different *amounts* of thermal energy, but the spark's molecules are individually more energetic.
-- **Absolute zero has meaning.** At $T = 0$, $\langle E_k\rangle = 0$: classically, all molecular translation ceases. This is *why* the Kelvin scale starts where it does — it is the temperature scale on which $T$ is directly proportional to molecular KE. (Quantum mechanics adds an unremovable *zero-point* energy, and the third law makes $T=0$ unreachable — see beyond-syllabus.)
-- **At the same temperature, every gas has the same average molecular KE.** Hydrogen and xenon at 300 K share $\langle E_k\rangle$ — which immediately tells you the light molecules must be moving *faster* (next section).
+- **Temperature is *intensive*.** It does not scale with the amount of gas. Divide a gas sample at equilibrium into two identical containers: each half keeps the same temperature, although each contains half the total molecular energy.
+- **Absolute zero is a limit.** The classical expression extrapolates to zero translational kinetic energy at $T=0$. Real systems require quantum mechanics at sufficiently low temperature; do not use that extrapolation to claim every particle becomes motionless.
+- **Different classical ideal gases at the same temperature have the same mean translational KE.** Hydrogen and xenon at 300 K share this mean energy, so lighter molecules must move faster. Rotational and vibrational energies are separate contributions, when available.
+- **Internal energy needs one extra distinction.** For an ideal **monatomic** gas, only the three translational degrees of freedom contribute in this model, so $U=N\langle E_k\rangle=\tfrac32NkT$. Diatomic molecules can also rotate and vibrate; $\tfrac32NkT$ is not their total internal energy in general.
 
 ## The two faces of the gas constant — why $k$ is Boltzmann's
 
@@ -158,7 +194,7 @@ $$nRT = NkT \;\Longrightarrow\; nRT = nN_A kT \;\Longrightarrow\; \boxed{k = \fr
 
 So the **Boltzmann constant is just the gas constant *per molecule*** — you take the per-mole bookkeeping constant $R$ and divide out Avogadro's number to get the per-molecule version. Numerically $k = 8.31 / (6.02\times10^{23}) = 1.38\times10^{-23}\,\text{J K}^{-1}$.
 
-This is the same $k$ that appears in **[[Stories/Boltzmann's Tombstone|Boltzmann's entropy formula]]** $S = k\ln W$ and in the [[Information Theory|noise floor]] $k_B T$ of every communication channel. It is the universal conversion factor between **temperature and energy** — "how many joules is one kelvin worth, per molecule." Encountering the same $k$ in the pressure of a gas, the entropy of a black hole, and the thermal noise in a wire is not a coincidence: all three are statements about molecules (or microstates) carrying energy $\sim kT$ apiece.
+This is the same $k$ that appears in **[[Stories/Boltzmann's Tombstone|Boltzmann's entropy formula]]** $S = k\ln W$ and in the thermal-energy scale $k_B T$ underlying noise in electrical systems (see [[Information Theory]]). It is the universal conversion factor between **temperature and energy** — "how many joules is one kelvin worth, per molecule." Encountering the same $k$ in the pressure of a gas, the entropy of a black hole, and the thermal noise in a wire is not a coincidence: all three are statements about molecules (or microstates) carrying energy $\sim kT$ apiece.
 
 ## r.m.s. speed and the spread of speeds
 
@@ -169,7 +205,7 @@ $$c_{\text{rms}} = \sqrt{\langle c^2\rangle} = \sqrt{\frac{3kT}{m}} = \sqrt{\fra
 where $M = mN_A$ is the **molar mass**. Two readings fall straight out:
 
 - $c_{\text{rms}} \propto \sqrt{T}$ — to *double* the typical molecular speed you must *quadruple* the absolute temperature.
-- $c_{\text{rms}} \propto 1/\sqrt{m}$ — at a given temperature, **lighter molecules move faster**. (This is why hydrogen and helium leak out of the atmosphere over geological time, and why a helium balloon deflates faster than an air-filled one: the fast little molecules find the gaps.)
+- $c_{\text{rms}} \propto 1/\sqrt{m}$ — at a given temperature, **lighter molecules move faster**. This helps explain why light gases escape planetary atmospheres more readily. Balloon leakage also depends on molecular size and the permeability of the balloon material; speed alone does not determine it.
 
 > [!example] How fast is the air in this room?
 > Nitrogen, $M = 0.028\,\text{kg mol}^{-1}$, at $T = 300\,\text{K}$:
@@ -180,9 +216,9 @@ where $M = mN_A$ is the **molar mass**. Two readings fall straight out:
 
 This is the right question to ask, and it has two answers — the second is the beautiful one.
 
-**The motion is random, so there is no *net* flow.** For every molecule slamming into you from the left at 517 m/s, one hits from the right just as hard. The momentum transfers cancel, so there is **no net push** — no wind. A breeze is what you feel when the entire swarm picks up a small *bulk drift* (a few m s⁻¹) *on top of* the random 517 — the whole crowd walking one way at once. Still air has zero drift, hence zero wind, no matter how furious the underlying thermal motion. (It is also why the thermal speed and the speed of sound are the same order of magnitude: sound is exactly a small organised ripple riding on that random sea.)
+**The motion is random, so there is no average bulk flow.** Opposing momentum transfers balance *on average*, not molecule for molecule or instant by instant. The tiny fluctuations are precisely what cause Brownian motion. A breeze adds an organised bulk drift of a few metres per second on top of the much faster random motion.
 
-**You *do* feel it — as pressure, not wind.** The sum of those $\sim 10^{23}$ tiny impacts per second on every square centimetre *is* atmospheric pressure — about **10 tonnes** pressing on your body right now. You don't notice because it is perfectly balanced: equal from every direction, and matched by the pressure inside you (lungs, blood, tissues) pushing back out. The body only registers pressure **differences** — ears popping as a plane climbs, suction on a straw, the shove of a moving swarm. One molecule is far too light, and the impacts far too frequent, for your senses to resolve individually; they blur into the two steady averages your senses *can* read — **pressure** and **temperature**. The 517 m/s is hiding in plain sight, as "1 atmosphere" and "room temperature."
+**The impacts still produce pressure.** At $100\,\mathrm{kPa}$, air exerts about $10\,\mathrm N$ on each square centimetre of a surface: $F=pA=(10^5)(10^{-4})$. Pressure acting on different sides largely balances; pressure *differences* produce the noticeable force — a syringe pushing back, suction through a straw, or ears popping as a plane climbs. The absence of wind does not mean the absence of molecular motion or pressure.
 
 **Not all molecules move at $c_{\text{rms}}$.** That is just the speed whose square is the average. The actual speeds are spread out in the **Maxwell–Boltzmann distribution**:
 
@@ -194,75 +230,107 @@ $$c_{\text{mp}} \;<\; \bar c \;<\; c_{\text{rms}},$$
 
 the most-probable (peak), the mean, and the root-mean-square. Heating the gas slides the whole curve right and flattens it (the molecules spread over a wider band of speeds). There is a beautiful link to statistics here: each *velocity component* $c_x, c_y, c_z$ is **[[Normal Distribution|normally distributed]]** about zero, and the *speed* $c = \sqrt{c_x^2+c_y^2+c_z^2}$ — the length of a 3-D vector of three independent normals — is exactly what produces the Maxwell–Boltzmann shape.
 
+## Where the model does work — pumps and pressure gauges
+
+A bicycle pump converts your push into gas pressure. Compressing air reduces its volume and raises its pressure; when the pressure exceeds the tyre pressure enough to open the valve, air enters the tyre. A fast stroke also warms the gas: work is transferred to its internal energy, so Boyle's constant-temperature law is not an exact description during that stroke. After cooling, the temperature effect changes again. **A real pump makes both restrictions matter: temperature may change, and molecules leave the cylinder when the valve opens.**
+
+For a sealed syringe compressed slowly enough to exchange heat with the room, fixed amount and nearly fixed temperature are much better approximations. Measure pressure and volume and the prediction is a curve, not a straight line:
+
+![[particle-model-boyle.svg|720]]
+
+On a $p$–$V$ diagram, constant pressure (**isobaric**) is a horizontal line, constant volume (**isochoric**) is a vertical line, and constant temperature (**isothermal**) gives the curved path shown.
+
+Each point has the same product $pV$. Halving $V$ doubles $p$; the $p$–$V$ graph is a **hyperbola**. Neither axis is crossed. At sufficiently high pressure the ideal model fails before zero volume can be approached. Plotting $p$ against $1/V$ instead produces a straight line through the origin for the ideal model.
+
 ## Worked Examples
 
+*The examples below are original practice questions, labelled by relevant syllabus topic.*
+
 **Example 1 — Boyle's law from the model (9702 §15.2).** A fixed mass of ideal gas at $1.0\times10^5\,\text{Pa}$ occupies $2.0\times10^{-3}\,\text{m}^3$. It is compressed isothermally to $5.0\times10^{-4}\,\text{m}^3$. Find the new pressure.
-*Constant $T$, fixed $N$, so $pV = NkT$ is constant: $p_1V_1 = p_2V_2$.*
+*Trigger: fixed amount and constant temperature. Tool: Boyle’s law, $p_1V_1=p_2V_2$.*
 $$p_2 = \frac{p_1V_1}{V_2} = \frac{(1.0\times10^5)(2.0\times10^{-3})}{5.0\times10^{-4}} = 4.0\times10^5\,\text{Pa}.$$
 
 **Example 2 — Counting molecules (9702 §15.1–15.2).** How many molecules are in $25\,\text{cm}^3$ of an ideal gas at $1.0\times10^5\,\text{Pa}$ and $300\,\text{K}$?
+*Trigger: molecule count rather than mole count. Tool: $pV=NkT$, with $1\,\mathrm{cm^3}=10^{-6}\,\mathrm{m^3}$.*
 $$N = \frac{pV}{kT} = \frac{(1.0\times10^5)(25\times10^{-6})}{(1.38\times10^{-23})(300)} \approx 6.0\times10^{20}\ \text{molecules.}$$
 (That's about a milli-mole — reassuringly, $6.0\times10^{20}/6.02\times10^{23} \approx 1.0\times10^{-3}\,\text{mol}$.)
 
 **Example 3 — Temperature to speed (9702 §15.3).** Find $c_{\text{rms}}$ for helium ($M = 4.0\times10^{-3}\,\text{kg mol}^{-1}$) at $300\,\text{K}$, and compare with the nitrogen result above.
+*Trigger: temperature and molar mass are given. Tool: $c_{\mathrm{rms}}=\sqrt{3RT/M}$, using $M$ in kilograms per mole.*
 $$c_{\text{rms}} = \sqrt{\frac{3(8.31)(300)}{4.0\times10^{-3}}} \approx 1370\,\text{m s}^{-1}.$$
 Helium is about $\sqrt{28/4} = \sqrt{7} \approx 2.6$ times faster than nitrogen at the same temperature — exactly the $1/\sqrt{m}$ law, since both share the same average KE.
 
 **Example 4 — Average KE is gas-independent (IB B.3, AP-2 §9.1).** What is the average translational kinetic energy of *any* ideal-gas molecule at room temperature, $T = 293\,\text{K}$?
+*Trigger: mean translational energy per molecule. Tool: $\langle E_k\rangle=\tfrac32kT$.*
 $$\langle E_k\rangle = \tfrac{3}{2}kT = \tfrac{3}{2}(1.38\times10^{-23})(293) \approx 6.1\times10^{-21}\,\text{J}.$$
 The same for helium, nitrogen, or uranium hexafluoride — temperature fixes the energy per molecule, not the speed.
 
 ## Common Misconceptions
 
 ### 1. "Temperature measures heat / total energy"
-Temperature measures the **average kinetic energy per molecule** — it is *intensive*. A cup of boiling water and a swimming pool at the same temperature have the same molecular KE, but the pool holds vastly more total thermal energy. Heat (energy transferred) and temperature (energy per molecule) are different quantities; conflating them is the single most common thermal error.
+Temperature is **not an amount of energy** — it is *intensive*. For a classical ideal gas it is proportional to mean translational kinetic energy per molecule. A cup of boiling water and a swimming pool at the same temperature have the same molecular KE, but the pool holds vastly more total thermal energy. Heat (energy transferred) and temperature (energy per molecule) are different quantities; conflating them is the single most common thermal error.
 
 ### 2. "Heavier gas molecules move faster"
-The opposite. At a given temperature **all** gases share the same average KE, so $\tfrac{1}{2}m\langle c^2\rangle$ is fixed — which means larger $m$ forces *smaller* $\langle c^2\rangle$. Heavy molecules are **slower** ($c_{\text{rms}}\propto 1/\sqrt m$).
+The opposite. At a given temperature **classical ideal** gases share the same mean translational KE, so $\tfrac{1}{2}m\langle c^2\rangle$ is fixed — which means larger $m$ forces *smaller* $\langle c^2\rangle$. Heavy molecules are **slower** ($c_{\text{rms}}\propto 1/\sqrt m$).
 
 ### 3. "All the molecules move at the same speed"
 There is a whole **distribution** of speeds (Maxwell–Boltzmann), from near-zero to several times $c_{\text{rms}}$. $c_{\text{rms}}$ is a single representative value, not a universal molecular speed.
 
 ### 4. "Gas pressure is molecules pushing on each other"
-In the ideal model molecules exert **no forces on each other** at all. The pressure on a container wall comes entirely from molecules **colliding with the wall** and reversing momentum — the derivation above never once used a molecule–molecule force.
+In the ideal model there are **no intermolecular forces between collisions**; elastic collisions still transfer momentum. The pressure on a container wall comes entirely from molecules **colliding with the wall** and reversing momentum — the derivation above never once used a molecule–molecule force.
 
 ### 5. "You can reach absolute zero / molecules truly stop"
-Classically $T=0$ would mean zero molecular motion, but the **third law of thermodynamics** makes absolute zero unreachable in a finite number of steps, and **quantum mechanics** leaves an irreducible *zero-point* energy even at $T=0$. Absolute zero is a limit you approach, not a place you arrive.
+The classical translational-energy formula extrapolates to zero at $T=0$, but the **third law of thermodynamics** makes absolute zero unreachable in a finite cooling process, and quantum systems can retain **zero-point motion** in their lowest-energy state. Absolute zero is a limit you approach, not a place you arrive.
 
 ## Exam Notes
 
-### Cambridge 9702 (A-Level Physics) — §14, §15, §16
-The core home of this card. **§14.2** Kelvin scale, $T/\text{K} = \theta/^\circ\text{C} + 273.15$ — always convert to Kelvin before using any gas equation. **§15.1** the mole and $N_A$. **§15.2** equation of state $pV = nRT = NkT$. **§15.3** the kinetic-theory derivation of $pV = \tfrac{1}{3}Nm\langle c^2\rangle$ (you may be asked to reproduce it), r.m.s. speed, and $\tfrac{1}{2}m\langle c^2\rangle = \tfrac{3}{2}kT$. **§16.1** internal energy as the sum of random molecular KE + PE — for an ideal gas there is no intermolecular PE, so internal energy is *purely* kinetic, $U = N\langle E_k\rangle = \tfrac{3}{2}NkT$. The derivation is a standard structured-question target; learn the five steps (one molecule → one wall → frequency → sum → randomness).
+### Cambridge 0625 (IGCSE Physics) — §2.1
+**§2.1.1:** distinguish solid/liquid/gas properties and name melting, freezing, vaporisation and condensation. **§2.1.2:** draw particle arrangements; explain separation, motion, temperature and absolute zero; explain gas pressure and Brownian motion. Supplement adds the role of particle forces/distances and the distinction between the visible microscopic speck and the light, fast-moving molecules that hit it. Pressure explanations must reach **force per unit area**.
 
-### Cambridge 0625 (IGCSE Physics)
-Covered **qualitatively**: the particle model of matter, gas pressure as molecular bombardment of the walls, and the $p$–$V$–$T$ relationships described in words and simple proportion (Boyle's law graphs). The $pV = \tfrac{1}{3}Nm\langle c^2\rangle$ derivation and the constant $k$ are **not** at IGCSE — they are AS-level extensions. IGCSE students should leave with the *picture* (fast random molecules hitting walls) and the three proportionalities.
+**§2.1.3 Core:** explain pressure changes for a fixed mass when temperature changes at constant volume, or volume changes at constant temperature. Convert with $T/\mathrm K=\theta/^\circ\mathrm C+273$. **Supplement:** recall and calculate with $pV=\text{constant}$ for fixed mass at constant temperature, including the curved $p$–$V$ graph. The derivation of $pV=\tfrac13Nm\langle c^2\rangle$, moles and $k$ are extensions beyond 0625; they belong to the A-Level ideal-gas topic, not AS content.
 
-### IB Physics — Theme B (B.1, B.3)
-**B.1.1** molecular model, the Kelvin scale, internal energy. **B.3.1** kinetic-theory assumptions, conditions for the ideal-gas approximation (low $p$, moderate $T$, low density), pressure $p = F/A$, Avogadro's constant. **B.3.2** the equation of state $pV = nRT = NkT$, isothermal/isobaric/isochoric changes and their $pV$ diagrams, and the central relation $\langle E_k\rangle = \tfrac{3}{2}kT$. HL extends into the first and second laws (a later card).
+### Cambridge 9702 (A-Level Physics) — §14.2 and §15
+These are **A-Level-only topics**. **§14.2:** thermodynamic temperature and the Kelvin–Celsius conversion. **§15.1:** amount of substance, moles and $N_A$. **§15.2:** recall and use $pV=nRT=NkT$ and $k=R/N_A$. **§15.3:** assumptions, derive and use $pV=\tfrac13Nm\langle c^2\rangle$, distinguish mean-square and r.m.s. speeds, and deduce $\langle E_k\rangle=\tfrac32kT$ by comparison with the equation of state. The one-molecule → repeat collisions → sum → isotropy chain is explicitly required. §16.1's internal-energy definition includes molecular kinetic **and potential** energies; do not present $U=\tfrac32NkT$ as valid for every gas.
 
-### AP Physics 2 — Unit 9 (Thermodynamics)
-**9.1** kinetic theory of temperature and pressure (the $\langle E_k\rangle = \tfrac{3}{2}kT$ result and the molecular origin of pressure). **9.2** the ideal gas law $pV = nRT$. Algebra-based: AP does not require reproducing the calculus-free derivation in full, but expects the conceptual chain "molecular collisions → pressure → temperature as average KE," and fluent use of $pV=nRT$ and $c_{\text{rms}} = \sqrt{3kT/m}$.
+**Formula sheet:** the 2028–30 data pages give $R$, $k$ and $N_A$; the Paper 4 formula page supplies $p=\tfrac13(Nm/V)\langle c^2\rangle$. They do **not** supply $pV=nRT=NkT$ or $\langle E_k\rangle=\tfrac32kT$. A supplied pressure formula does not remove the requirement to derive it.
+
+### IB Physics — B.1 Thermal energy transfers; B.3 Gas laws
+Both SL and HL study the particle model, temperature and internal energy in B.1. B.3 requires $P=F/A$, $n=N/N_A$, ideal-gas assumptions and validity, the empirical gas laws, $PV=Nk_BT=nRT$, momentum transfer as the source of pressure and $P=\tfrac13\rho\langle v^2\rangle$. It explicitly includes **monatomic** internal energy $U=\tfrac32Nk_BT=\tfrac32nRT$ and pressure–volume representations. There is **no additional HL content in B.3**; thermodynamic processes and laws continue in B.4.
+
+### AP Physics 2 — Unit 9, §9.1–9.2
+§9.1 connects atomic collisions to pressure and mean kinetic energy to temperature, including $K_{\rm avg}=\tfrac32k_BT=\tfrac12mv_{\rm rms}^2$. Students interpret how a Maxwell–Boltzmann distribution changes with temperature; its functional form is **not required**. §9.2 covers ideal-gas assumptions and the gas law. Name the fixed variables before applying a proportionality; the course also expects quantitative work, not only verbal descriptions.
+
+**Where it is not examined:** kinetic theory and thermodynamic gas laws are not topics in current AP Physics 1, AP Physics C: Mechanics or AP Physics C: Electricity and Magnetism. Cambridge 9709/9231 mechanics uses force, momentum and energy but does not prescribe this thermal model.
 
 ## Why Kinetic Theory Matters — College and Beyond
 
 > [!info] Beyond syllabus — equipartition, real gases, and the bridge to statistical mechanics
-> **Equipartition.** The factor of 3 in $\tfrac{3}{2}kT$ is really "$\tfrac{1}{2}kT$ per degree of freedom," and a point molecule has 3 translational ones $(c_x,c_y,c_z)$. This is the **equipartition theorem**: each quadratic degree of freedom holds $\tfrac{1}{2}kT$ of energy on average. A *diatomic* molecule can also rotate (and at high $T$ vibrate), adding degrees of freedom — which is exactly why diatomic gases have larger heat capacities than monatomic ones. (Recall that internal energy is the total of all these molecular energies — the [[Internal Energy]] card picks this up.)
+> Recall that the translational energy of one classical ideal-gas molecule averages $\tfrac32kT$; this need not be its entire energy.
+>
+> **Equipartition.** The factor of 3 in $\tfrac{3}{2}kT$ is really "$\tfrac{1}{2}kT$ per degree of freedom," and a point molecule has 3 translational ones $(c_x,c_y,c_z)$. This is the **equipartition theorem**: each quadratic degree of freedom holds $\tfrac{1}{2}kT$ of energy on average. A *diatomic* molecule can also rotate (and at high $T$ vibrate), adding degrees of freedom — which is exactly why diatomic gases have larger heat capacities than monatomic ones. See [[Internal Energy]] for the total energy bookkeeping.
 >
 > **Real gases.** Drop assumptions 2 and 3 (molecules have size; they attract weakly) and you get the **van der Waals equation** $\left(p + \dfrac{a n^2}{V^2}\right)(V - nb) = nRT$: the $a$ term corrects for attraction (lowering pressure), the $b$ term for molecular volume. Ideal-gas behaviour is the dilute, hot limit where $a$ and $b$ stop mattering.
 >
-> **The statistical-mechanics bridge.** Kinetic theory is the gateway drug to **statistical mechanics**, where Boltzmann replaced "average over molecules" with "average over microstates" and wrote $S = k\ln W$ — the same $k$, now counting arrangements instead of collisions. The probability a molecule has energy $E$ falls off as the **Boltzmann factor** $e^{-E/kT}$, the single most important exponential in physical chemistry (reaction rates, atmospheres, semiconductors all run on it). The human story of how that constant came to bear Boltzmann's name — and the tragedy behind it — is in [[Stories/Boltzmann's Tombstone]].
+> **The statistical-mechanics bridge.** Kinetic theory is the gateway drug to **statistical mechanics**, where Boltzmann replaced "average over molecules" with "average over microstates" and wrote $S = k\ln W$ — the same $k$, now counting arrangements instead of collisions. The relative equilibrium weight of a microstate of energy $E$ contains the **Boltzmann factor** $e^{-E/kT}$; the probability of an energy range also depends on how many states have those energies, the single most important exponential in physical chemistry (reaction rates, atmospheres, semiconductors all run on it). The human story of how that constant came to bear Boltzmann's name — and the tragedy behind it — is in [[Stories/Boltzmann's Tombstone]].
 >
-> **Quantum coda.** When molecules get cold and crowded enough that their de Broglie waves overlap, classical counting fails and you must ask whether the particles are distinguishable: Maxwell–Boltzmann statistics splits into **Bose–Einstein** (photons, helium-4) and **Fermi–Dirac** (electrons) statistics. Planck cracked this open in 1900 using Boltzmann's own counting method — the move that started quantum mechanics.
+> **Quantum coda.** When molecules get cold and crowded enough that their de Broglie waves overlap, classical counting fails and the indistinguishability and spin of identical particles determine their statistics: classical Maxwell–Boltzmann counting gives way to **Bose–Einstein** (photons, helium-4) and **Fermi–Dirac** (electrons) statistics. Planck cracked this open in 1900 using Boltzmann's own counting method — the move that started quantum mechanics.
 
 ## Connections
 
 - **Prerequisites:** [[Newton's Laws of Motion]] (the wall collision is N2 as rate of change of momentum), [[Linear Momentum]] ($\Delta p = 2mc_x$ at each bounce — the engine of the derivation), [[Work, Energy and Power]] (the $\tfrac{1}{2}mv^2$ kinetic energy that temperature turns out to measure), [[Vectors in Physics]] (resolving velocity into independent $c_x, c_y, c_z$ components).
 - **Components:** the empirical gas laws (Boyle, Charles, Gay-Lussac) combined into $pV=nRT$; the kinetic model's five assumptions.
-- **Extensions:** [[Internal Energy]] ($U = \tfrac{3}{2}NkT$ for an ideal gas), [[First Law of Thermodynamics]] ($\Delta U = Q + W$), [[Specific Heat Capacity]] (why diatomic > monatomic, via degrees of freedom) — the rest of the Thermal bay.
+- **The three states, warmed:** [[Thermal Expansion]] — why gases expand a hundred times more than solids, from how firmly the particles are held.
+- **Extensions:** [[Internal Energy]] ($U = \tfrac{3}{2}NkT$ for a monatomic ideal gas), [[First Law of Thermodynamics]] ($\Delta U = Q + W$), [[Specific Heat Capacity]] (why diatomic > monatomic, via degrees of freedom).
+- **The same gas, a million kilometres across:** [[Stellar Evolution]] — $p = nkT$ is what holds a star up against its own gravity, and balancing the two gives the Sun's core temperature from its mass and radius.
 - **Cross-domain — mathematics:** [[Normal Distribution]] (each velocity component is Gaussian; the speed is the length of a 3-D normal vector → Maxwell–Boltzmann), [[Why Probability and Statistics]] (the whole model is "average over a population," and Maxwell–Boltzmann/Bose–Einstein/Fermi–Dirac statistics are combinatorial counting).
 - **Story partner:** [[Stories/Boltzmann's Tombstone]] — the same constant $k$, statistical mechanics, and the man who argued atoms were real while this very model still needed defending.
-- **The same $k$ elsewhere:** [[Information Theory]] — Boltzmann's $S = k\ln W$ is Shannon's entropy in physics units, and the thermal-noise floor $k_BT$ caps every communication channel.
-- **For 9702 / A-Level Physics students:** the gas equations and constants ($R$, $k$, $N_A$) are given in the 9702 data-and-formulae sheet; the *derivation* of $pV=\tfrac{1}{3}Nm\langle c^2\rangle$ is not — you must be able to reproduce it.
+- **The same $k$ elsewhere:** [[Information Theory]] — Boltzmann's $S = k\ln W$ is Shannon's entropy in physics units, and $k_BT$ sets the thermal-energy scale behind electrical noise.
+- **For 9702 students:** see the verified given-versus-recall distinction in Exam Notes; the kinetic-pressure formula is supplied on Paper 4, but its derivation remains required.
+
+## Sources and further reading
+
+- [OpenStax: kinetic theory, molecular pressure and Brownian motion](https://openstax.org/books/college-physics-2e/pages/13-4-kinetic-theory-atomic-and-molecular-explanation-of-pressure-and-temperature).
+- [OpenStax: heat capacity and equipartition](https://openstax.org/books/university-physics-volume-2/pages/2-3-heat-capacity-and-equipartition-of-energy) — why molecular translation is not always the whole internal energy.
 
 ## LaTeX Reference
 

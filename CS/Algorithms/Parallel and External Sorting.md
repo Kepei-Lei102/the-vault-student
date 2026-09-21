@@ -29,7 +29,7 @@ tags:
 
 # Parallel and External Sorting 并行排序与外部排序
 
-> *[[Sorting]] taught five ways to order a list that fits in memory on one processor. Real systems break both of those assumptions: a phone has 8 cores sitting idle, a database has to sort a file far larger than its RAM, and Google sorts petabytes across thousands of machines. This card is about what sorting becomes when you have **many workers** (parallel) or **too much data for memory** (external) — and it answers the question [[Sorting]] left hanging: why does industry quietly lean on **merge sort** at scale? The surprise at the centre is that throwing more cores at a problem can make it **slower**, and that even when it helps, ten cores almost never give you ten times the speed.*
+> *[[Sorting]] taught five ways to order a list that fits in memory on one processor. Real systems break both of those assumptions: a phone has 8 cores sitting idle, a database has to sort a file far larger than its RAM, and Google sorts petabytes across thousands of machines. The question is what sorting becomes when you have **many workers** (parallel) or **too much data for memory** (external) — and it answers the question [[Sorting]] left hanging: why does industry quietly lean on **merge sort** at scale? The surprise at the centre is that throwing more cores at a problem can make it **slower**, and that even when it helps, ten cores almost never give you ten times the speed.*
 
 ## Definition — two ways "bigger" breaks an ordinary sort
 
@@ -38,14 +38,11 @@ A textbook sort assumes one processor and that the whole array fits in memory. D
 - **Parallel sorting** — many processors (cores, or whole machines) sort *at the same time*, then combine their results. The goal is **wall-clock time**: finish sooner by doing work simultaneously.
 - **External sorting** — the data is far too big to hold in RAM, so it lives on disk (or across disks), and the sort is organised to **minimise slow disk reads/writes** rather than comparisons.
 
-Both problems have the same hero, and it is not the single-core champion quicksort — it is **merge sort**, because its two halves are *completely independent*: they can be sorted on different cores or streamed off different disks and then stitched together by a merge. That independence is the structural property the rest of this card exploits.
+Both problems have the same hero, and it is not the single-core champion quicksort — it is **merge sort**, because its two halves are *completely independent*: they can be sorted on different cores or streamed off different disks and then stitched together by a merge. That independence is the structural property the construction below exploits.
 
 ### 中文锚点
 
-**并行排序**（bìngxíng páixù）：多个处理器（多核，或多台机器）**同时**排序再合并，目标是缩短**实际耗时**（wall-clock time）。
-**外部排序**（wàibù páixù）：数据太大放不进内存，存在磁盘上，排序的目标是**减少慢速磁盘读写**而非比较次数。
-
-核心结论：能扩展（scale）的是**归并排序**（merge sort），因为它的两半**互相独立**——可以丢到不同核心/机器/磁盘上分别排序，再合并。但有两个反直觉的真相：(1) 给小数据加核心反而**更慢**（开销 overhead 大于收益）；(2) 即使有用，10 个核心也几乎拿不到 10 倍加速（**Amdahl 定律**）。
+一大摞收据要按编号排好，可以请几个人各排一摞，最后再把几摞排好的收据合起来；要是桌子太小摆不下，就一次只摆一摞，排好一摞收起来，最后再一批批合并。一个办法是请更多帮手，另一个办法是绕开桌面大小的限制，但不管用哪种，最后都得想好怎么合。分堆、搬来搬去、等别人干完，这些都要花时间，所以收据只有十几张的时候，叫来一群人反而可能更慢。
 
 ## Why merge sort is the one that scales
 
@@ -95,7 +92,7 @@ A thousand cores would *still* only sort this about 9× faster than one. The ser
 
 When a problem gets confusing, a [[Forward Reading and Problem Discovery|hunter asks what does not change]]. Add nine more cores to the sort and one thing stays exactly fixed: the **number of comparisons**. The benchmark counted them — about **18.7 million** comparisons to sort a million elements — and that figure is identical whether the work runs on one core or ten. Parallelism does not *delete* any work; it **redistributes the same work across time**, doing several comparisons at the same instant instead of one after another.
 
-That reframes both halves of this card. Speed-up is never "fewer operations" — it is "the same operations, overlapped." And it explains the overhead penalty cleanly: overlapping work has a coordination cost (spawn, split, ship, merge), and if the work you saved by overlapping is smaller than that cost, you come out behind. The comparison count is the invariant; the wall-clock time is the variable you are trading for.
+That reframes both kinds of sorting. Speed-up is never "fewer operations" — it is "the same operations, overlapped." And it explains the overhead penalty cleanly: overlapping work has a coordination cost (spawn, split, ship, merge), and if the work you saved by overlapping is smaller than that cost, you come out behind. The comparison count is the invariant; the wall-clock time is the variable you are trading for.
 
 ## External sorting — when the data won't fit in memory
 
@@ -178,33 +175,36 @@ The point of external sorting is not the comparisons — it is **minimising disk
 
 ## Exam Notes
 
-This is **enrichment** — it sits beyond every A-Level/IGCSE/AP syllabus row, and no exam will ask you to implement a parallel or external sort.
+### Cambridge 9618 — §§15.1 and 19.1
 
-### Cambridge 9618 (A-Level CS) — the understanding behind §15.1
-The required sorts are **bubble sort and insertion sort**, taught in [[Sorting]] with complexity in [[Big-O Notation]]. Merge sort and quicksort are enrichment for 9618. This card is the *why* behind **§15.1** (processors and **parallel processing** — multi-core, SISD/SIMD/MISD/MIMD, massively parallel). The syllabus treats that as vocabulary to memorise; **Amdahl's law and the overhead crossover are the actual ideas** those words point at, and knowing them turns rote acronyms into something you understand. Worth reading for any A2 student who wants the concepts beneath §15.1 to make sense.
+§15.1 requires understanding computer architectures (SISD, SIMD, MISD, MIMD) and massively parallel computers. The parallel-work/serial-bottleneck explanation supports that understanding. §19.1 names bubble and insertion sort; implementing a parallel merge sort or external merge sort, and deriving Amdahl's law, are not named requirements. Do not reduce §15.1's “show understanding” to memorising acronyms.
 
-### Cambridge 0478 (IGCSE CS)
+### Cambridge 0478 — §7.4
 
-Not examined, in any form. §7 stops at bubble sort, insertion sort and the two searches on a single machine with everything in memory — neither *parallel* nor *external* appears anywhere in the syllabus. The one adjacent row is §3.3's storage hierarchy, which is the *reason* external sorting exists: this card is what that hierarchy costs you once the data outgrows RAM.
+The specified standard algorithms include **linear search and bubble sort**, not insertion sort and binary search. Implementing parallel or external sorting is not specified. §2.1 does use “parallel” for data transmission; that is a different topic from parallel computation. Storage knowledge helps motivate external sorting without making its implementation an IGCSE requirement.
 
-### IB Computer Science (first assessment 2027)
+### IB Computer Science — first assessment 2027
 
-Not examined. The published outline names bubble and selection sort, linear and binary search, and efficiency comparison at the level of "which is faster and why" (B2.4) — the same quartet closed by [[Sorting]], [[Searching]], [[Big-O Notation]] and [[Recursion]]. There is no theory-of-computation or parallel-algorithms statement to attach this to. HL's system-fundamentals content touches multi-core hardware as *architecture* vocabulary, not as algorithm design, so Amdahl's law sits behind that vocabulary rather than inside any assessed statement.
+B2.4.3 requires bubble and selection sort; B2.4.4 (HL) includes recursive algorithms such as quicksort. A1.1 covers multi-core architecture. Parallel/external sort implementations and the named Amdahl/Gustafson laws are not specified outcomes; use them as extensions to the assessed architecture and algorithm concepts. B2.4 is broader than a list of four search/sort names.
 
-### AP Computer Science A
+### AP Computer Science A — Topics 4.15–4.17
 
-Not examined. AP CSA is single-threaded Java throughout — `ArrayList` and array sorting at §4.14–4.17, with no concurrency, no `Thread`, no parallel streams, and no external storage model. (AP CSP mentions parallel and distributed computing at the level of "speedup" as a *concept*; even there, nothing here is assessed.)
+The Fall 2025 CED covers selection/insertion sort, recursion and recursive search/sort including merge sort. **Sequential merge sort is assessed; parallel execution and disk-run merging are not the same requirement.** Parallel sorting implementations, thread coordination and external sorting are not specified course content.
 
-*Enrichment cards get an explicit not-examined line for every board rather than silence — silence reads as an oversight rather than a verdict.*
+### AP Computer Science Principles — Topic 4.3
+
+CSN-2.A and CSN-2.B explicitly assess sequential/parallel/distributed comparisons, execution time, speedup and the limit imposed by serial work. The timing and bottleneck intuition above therefore has real assessed overlap. Implementing a multiprocessing sort or heap-based disk merge is not named scope. See the [official CED, printed pp.107–108](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-and-exam-description.pdf).
+
+**Scope boundary:** the specialised sorting implementations are enrichment on these boards; this does not make every underlying parallel-computing idea unexamined.
 
 ## Connections
 
-- **Prerequisite:** [[Sorting]] — merge sort is the hero here precisely because of the independent-halves property introduced there; this card is the "card of its own" that [[Sorting]] promised. [[Recursion]] — fork–join *is* divide-and-conquer recursion, the recursion tree mapped onto cores. [[Big-O Notation]] — Amdahl's law is the parallel analogue of asymptotic limits: a ceiling you cannot optimise past.
+- **Prerequisite:** [[Sorting]] — the independent-halves property makes merge-based parallel and external designs possible. [[Recursion]] — fork–join *is* divide-and-conquer recursion, the recursion tree mapped onto cores. [[Big-O Notation]] — Amdahl's law is the parallel analogue of asymptotic limits: a ceiling you cannot optimise past.
 - **Leads to:** [[Concurrency]] — once many workers share work, coordinating them (race conditions, mutual exclusion) becomes its own subject.
-- **Relies on (reserved):** [[Heaps and Priority Queues]] — the $k$-way merge is built on a min-heap; that abstract data type and its array implementation belong to the planned **Data Structures** bay (it is *used* here, not yet taught).
+- **Relies on:** [[Heaps and Priority Queues]] — a min-heap selects the smallest current run front without loading every run into memory.
 - **Cross-domain:** [[Information Theory]] — the $n\log n$ comparison lower bound from [[Sorting]] still binds *each core*, so even a perfect parallel sort can't escape the information cost of ordering; it only spreads that cost across workers.
 - **Hardware:** [[Pipelining and Simultaneous Multithreading]] — the machine this algorithm runs on: multi-core, SMT, and the GPU's SIMD lanes a GPU sort exploits. Amdahl's law lives in both cards — here as the algorithm's ceiling, there as the processor's.
-- **Story:** [[Stories/Dual-Core Craft]] — this card's thesis as history. Why *StarCraft* runs its whole world on one core ("Dual-Core Craft"), how the deterministic-lockstep contract makes a real-time strategy simulation the canonical *serial* workload, and how the industry clawed parallelism back with job systems and ECS — Amdahl's law wearing a Zerg costume.
+- **Story:** [[Stories/Dual-Core Craft]] — the serial-bottleneck idea as history. Why *StarCraft* runs its whole world on one core ("Dual-Core Craft"), how the deterministic-lockstep contract makes a real-time strategy simulation the canonical *serial* workload, and how the industry clawed parallelism back with job systems and ECS — Amdahl's law wearing a Zerg costume.
 - **Application:** database `ORDER BY` on huge tables (external merge sort), the MapReduce/Spark **shuffle** (distributed sort), GPU sorting, and every multi-core library sort.
 - **For 9618 / A2 students:** the concept layer beneath §15.1 (parallel processing) — read it for understanding, not for an exam answer.
 

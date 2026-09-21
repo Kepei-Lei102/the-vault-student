@@ -112,6 +112,18 @@ At 9260 only the multiplicative identity is required.
 - Inverse matrices and determinants are **not in the 9260 spec** — don't expect "find the inverse" questions
 - Expect questions where recognising $\mathbf{I}$ simplifies a calculation
 
+### Cambridge 9231 (Further Mathematics) — Paper 1, §1.4 Matrices
+
+The syllabus requires "the terms zero matrix and identity (or unit) matrix" and states that $\mathbf{I}$ will be used for the identity. Here the identity is $2\times2$ **and** $3\times3$, and it is the target of every inverse: $\mathbf{A}\mathbf{A}^{-1} = \mathbf{A}^{-1}\mathbf{A} = \mathbf{I}$ (see [[Determinants and Inverses]]). "Unit matrix" is the same object under an older name.
+
+### Pearson Edexcel IAL — FP1 (matrix algebra)
+
+Identity and inverse of $2\times2$ matrices; $\mathbf{I}$ appears in "show that $\mathbf{A}^2 = k\mathbf{I}$" and in verifying an inverse.
+
+### Where it is *not* examined
+
+Cambridge **0580**, **0606** and **9709** contain no matrices at all (checked against the current syllabuses), so the identity matrix cannot appear there.
+
 ## Connections
 
 - **Parent:** [[Matrix]] — the identity is a special case of a $2 \times 2$ matrix

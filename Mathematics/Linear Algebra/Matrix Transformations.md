@@ -168,6 +168,14 @@ Note the sign swap in the off-diagonal entries.
   - **Apply** a matrix to specific points or the unit square
 - Both Paper 1E and Paper 2E (calculators allowed)
 
+### Cambridge 9231 (Further Mathematics) — Paper 1, §1.4 Matrices
+
+$2\times2$ matrices representing transformations of the $x$–$y$ plane, with the terms **rotation, reflection, enlargement, stretch and shear** required; the transformation represented by $\mathbf{A}^{-1}$; $\mathbf{AB}$ as "$\mathbf{B}$ followed by $\mathbf{A}$"; the area scale factor as the determinant; invariant points and lines. The 9260 restrictions above do not apply: any angle of rotation and any line of reflection through the origin may appear. The rotations, reflections and enlargements here are the base layer; **stretches and shears, the determinant as area scale factor and inverses** are taught in [[Determinants and Inverses]], composition in [[Combination of Transformations]], and invariant points and lines in [[Invariant Points and Lines]].
+
+### Where it is *not* examined
+
+Cambridge **0580**, **0606** and **9709** contain no matrices (checked against the current syllabuses). Their transformation geometry is done without matrices: see [[Transformations (Vocab)]].
+
 ## Connections
 
 - **Parent:** [[Matrix]] — transformation matrices are specific $2 \times 2$ matrices

@@ -28,7 +28,9 @@ tags:
 
 ## 中文锚点
 
-玩过寻宝游戏吗？每张纸条上写的不是宝物，而是**下一张纸条藏在哪**。纸条可以东一张西一张散落全屋——顺序不靠摆放位置，全靠每张纸条里那行"下一站"。这就是链表：每个**节点**装两样东西——数据本身，和下一个节点的**地址**（指针）；最后一张纸条写着"没有下一站"（空指针，考卷上的 −1），而你手里只攥着第一张（头指针），全链由此可达。它换来的本事正是数组给不了的：火车中段要加一节车厢，不必全列让位——**解开一个挂钩、挂上两个**，两次指针改写就完成，列车多长都一样；删除更省，把挂钩绕过那节车厢，一次改写了事（被绕过的车厢并没有被销毁——只是再也没有挂钩通向它）。代价同样立刻到账：想看第 500 节车厢？没有"算一下直接跳"这回事，只能从车头一节节摸过去——数组的一步直达，在这里换成了 $O(n)$ 的顺藤摸瓜。空出来的车厢也不浪费：它们自己也被链成一列（**空闲链表**），要新节点就从那儿领、删了就还回去——用一个链表来管理"链表能用的空位"，漂亮得像句绕口令。
+玩寻宝游戏的时候，纸条上写的不是宝物，而是下一张纸条藏在哪儿。纸条可以散在屋子的各个角落，一张在鞋里，一张在挂钟后面，可这场寻宝的先后顺序一点也不乱，因为顺序不在纸条放的位置上，而在每张纸条写的那句话里。链表就是这样存数据的：每一项除了自己的数据，还记着下一项在哪儿，而你手里只握着第一项。它的两个脾气都是从这儿来的。想在寻宝中途加一步，什么都不用搬：多藏一张新纸条，再把前一张纸条上的那一行改掉就行了。可要是想直接去看第十张纸条，没有捷径，因为除了第九张，谁也不知道它在哪儿，你只能从第一张开始，一张一张跟过去。
+
+### 术语对照 (Terms)
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -142,6 +144,14 @@ def delete(self, value):
     prev.next = prev.next.next            # one write; the node is a ghost
     return True
 ```
+
+### The same two operations with a walking pair
+
+The object-oriented style Paper 4 expects hides each node's fields behind methods (`GetValue()`, `GetNext()`, `SetNext()`), inserts on the front, and deletes with **two** pointers walking together: `Current` looks at each node, and `Previous` stays one step behind it, so that when `Current` finds the value, the node whose pointer must change is already in hand. The head needs its own case, handled before the loop, for exactly that reason: **the first node has no `Previous`**, so there is nobody's `next` to rewrite, and `Head` itself moves on instead. Watch the code run line by line, including what happens if the two lines of the insert are written the wrong way round:
+
+![[linked-list-class-version.mp4]]
+
+The wrong order is worse than the orphaned tail from the insert above: with `Head = NewNode` written first, `NewNode.SetNext(Head)` makes the new node point **at itself**, so the rest of the list is lost *and* any traversal loops forever.
 
 ## The exam's engine — arrays underneath, and the free list
 
@@ -262,7 +272,7 @@ They buy cheap change with random access, pointer overhead, and (on modern hardw
 ### Other boards
 
 - **AP CSA:** linked lists are not in the Java subset — but *reference semantics* (two variables holding the same object) are, and this card's grip-before-relinking reasoning is the cleanest place to learn them.
-- **IB CS:** linked lists were named objects of the legacy HL syllabus's abstract-data-structures topic; in the 2027 outline they sit inside the programming themes rather than as named statements — depth behind that strand.
+- **IB CS (first assessment 2027, higher level only):** linked lists are named twice. **B4.1.2** asks a student to evaluate linked lists, which must include **singly, doubly and circular** lists: sketch them, show insertion, deletion, traversal and search on a diagram, and weigh them against arrays. **B4.1.3** asks for code that builds and uses all three. The singly linked list is developed in full above; the doubly and circular variants are described more briefly under Beyond the syllabus.
 
 ## Beyond the syllabus
 

@@ -34,6 +34,10 @@ tags:
 
 ## 中文锚点
 
+在网站上填十八位身份证号，只要敲错一位，页面马上提示“号码有误”。它并没有去哪儿查你这个人。号码的最后一位根本不是关于你的信息，而是用前十七位按一条固定的规则算出来的。网站把同样的计算再做一遍，算出来的结果和你填的最后一位对不上，就知道这串号码被改动过。所有检查传输差错的办法都是这个思路：发送的一方在数据后面多带一点东西，这点东西是从数据本身算出来的；接收的一方再算一遍，两边一比。多带的这点东西没有告诉对方任何新内容，可它有用恰恰就在这儿：到达的东西必须自己和自己对得上，而数据一旦受损，通常就对不上了。是“通常”，不是“一定”：两处错误有可能刚好互相抵消，所以校验只能让漏网的差错变得极少，没法保证一个都没有。
+
+### 术语对照 (Terms)
+
 | English | 中文 | one-line meaning |
 |---|---|---|
 | validation | 验证（合理性检查） | is this data *plausible*? checked against rules |
@@ -66,7 +70,7 @@ Data in transit is a physical signal — a voltage on copper, a pulse of light, 
 Those are the ones an engineer can fight. Two more cannot be engineered away at all, and they are the reason this whole topic exists rather than being a temporary embarrassment:
 
 - **Radiation.** A cosmic-ray secondary particle, or an alpha particle from trace impurities in the chip's own packaging, deposits enough charge in a memory cell to flip it. The industry calls these **soft errors** — the hardware is undamaged, the stored value is simply now wrong. They are frequent enough to be budgeted for: server memory is specified with an expected error rate, and aircraft at altitude see more of them than equipment at sea level, because there is less atmosphere in the way.
-- **Quantum tunnelling.** An electron has no strict boundary; it has a probability of being found on the far side of a barrier it has not got the energy to cross. In a flash memory cell, charge held on a floating gate slowly tunnels away, which is why an unpowered SSD eventually forgets. As transistors shrink, the barriers get thinner and the effect grows.
+- **Charge retention.** Flash encodes information in charge-dependent threshold voltages. [[Quantum Tunnelling]] helps explain both programming and some leakage paths, but real retention loss also involves material defects and trap dynamics. Stored charge can drift until a reading crosses a decision boundary; temperature, wear and cell construction affect the rate. Floating-gate and charge-trap cells implement the storage region differently.
 
 **Neither of these is a mistake anyone made.** They are the physics the machine is built out of, and no amount of care removes them. That is worth saying to a class outright, because it reframes the whole subject: error handling is not an apology for sloppy engineering, it is a permanent design requirement.
 

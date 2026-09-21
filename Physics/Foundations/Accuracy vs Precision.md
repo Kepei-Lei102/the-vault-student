@@ -9,6 +9,7 @@ leads_to:
   - "[[Calibration of Instruments]]"
   - "[[Stories/The 1919 Eclipse]]"
   - "[[The 1919 Eclipse]]"
+  - "[[Planning an Experiment]]"
 teach_together:
   - "[[Error Propagation]]"
 tags:

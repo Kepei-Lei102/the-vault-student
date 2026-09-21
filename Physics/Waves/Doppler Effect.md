@@ -3,6 +3,7 @@ chinese: 多普勒效应 (duōpǔlè xiàoyìng)
 prerequisites:
   - "[[Progressive Waves]]"
   - "[[Energy Levels and Line Spectra]]"
+  - "[[Sound]]"
 leads_to:
   - "[[Special Relativity]]"
   - "[[Hubble's Law and the Expanding Universe]]"

@@ -3,6 +3,7 @@ chinese: 洛伦兹力 (luòlúnzī lì)
 aliases:
   - 洛伦兹力
 prerequisites:
+  - "[[Magnetism and Magnetic Materials]]"
   - "[[Cross Product]]"
   - "[[Electric Field]]"
   - "[[Electric Current]]"
@@ -40,6 +41,10 @@ tags:
 > *Every force you met in mechanics pushes along something sensible — along the string, down the slope, toward the planet. The magnetic force refuses all of that. It ignores charges that stand still, it pushes **sideways** — perpendicular to the velocity and* to the field at once — and it never does a joule of work. Three strange rules; and out of them come electric motors, mass spectrometers, the aurora, your old tube TV, and the magnetic bottles that hold star-hot plasma. The sideways force is the [[Cross Product]] made flesh:
 > $$\mathbf{F} = q\,\mathbf{E} + q\,\mathbf{v} \times \mathbf{B}.$$
 ## 中文锚点
+
+拿一块磁铁靠近老式显像管电视的屏幕，画面会扭曲、打转。显像管里有一束电子正朝屏幕飞去，磁铁在推它们，但推法很古怪：从不往前推，也不往后拉，永远是往旁边推，既垂直于电子运动的方向，又垂直于磁场的方向。一个永远从侧面来的力，只能改变物体往哪儿走，改变不了它走多快，所以带电粒子在磁场里会以不变的速率绕圈，就像拴在绳子上甩起来的球。导线里缓缓漂移的电子受到的也是这种侧向的推力，电动机就是靠它转起来的。而且只有电荷在动的时候才有这个力：一个静止不动的电荷放在磁铁旁边，什么也感觉不到。
+
+### 术语对照 (Terms)
 
 | English                          | 中文            | one-line meaning                                                                                                       |
 | -------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------- |

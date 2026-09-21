@@ -31,6 +31,10 @@ tags:
 
 ## 中文锚点
 
+掀开抽水马桶水箱的盖子，按一下冲水。水位往下掉，一个塑料浮球跟着往下掉，浮球一落就把进水阀打开了；水流进来，水位上升，浮球跟着上升，升到设定的高度，就把阀门顶死了。没有人在旁边看着，它也从来不会溢出来。一个控制系统该有的东西，这里全都有了。浮球是传感器：它把一个物理量，也就是水位，变成了机构能用的东西。阀门是执行器：它对外部世界实实在在地做点什么。最要紧的是那个"圈"：阀门做的事会改变浮球下一刻量到的值，而量到的值又反过来决定阀门接下来做什么。水位一上升，就引出一个让它不再上升的动作，这种专门跟偏差对着干的回路，叫作负反馈。再拿体温计比一比。它同样在感知，也能准确地告诉你发烧了，可是仅此而已，它不会对发烧做任何事。这叫监测系统。把浮球换成电子传感器，把杠杆换成一个处理器，专门负责拿读数和设定值作比较，把阀门换成电机或者加热器，就得到了空调、电饭煲和汽车的定速巡航。
+
+## 术语对照 (Terms)
+
 | English | 中文 | one-line meaning |
 |---|---|---|
 | sensor | 传感器 | a transducer pointed at the world — turns a physical quantity into an electrical signal |
@@ -38,7 +42,7 @@ tags:
 | ADC (analogue-to-digital converter) | 模数转换器 | measures a smoothly varying voltage into a number, over and over |
 | DAC (digital-to-analogue converter) | 数模转换器 | the reverse — a number back into a voltage |
 | monitoring system | 监测系统 | measures and reports; never touches the process |
-| control system | 控制系统 | measures, compares, and **acts** — its action changes the next measurement |
+| control system | 控制系统 | **acts** on a physical process. The *closed-loop* kind, which this card builds, measures, compares and acts, and its action changes the next measurement; an *open-loop* one acts with no measurement of the result |
 | feedback loop | 反馈回路 | the ring: output fed back to become part of the next input |
 | negative feedback | 负反馈 | a response that *opposes* the deviation — the stabilising kind |
 | setpoint | 设定值 | the stored target value the processor compares against |
@@ -96,10 +100,10 @@ Two ideas ride along. **Resolution:** an 8-bit ADC splits the voltage range into
 
 An **actuator** turns an electrical signal back into physical action: a **motor** (rotation — open the window, spin the drum), a **pump**, a **valve**, a **heater**, a **solenoid**. The signal path runs down through a **DAC** or a simple on/off line, usually via a **relay** — an electrically-thrown switch that lets a tiny processor signal command a mains-powered machine. A milliwatt whisper throwing a kilowatt punch.
 
-0478 files the actuator under *output devices*, and that is technically true — but it hides the point. Screens and speakers aim their output at people. An actuator aims its output at *the measured quantity itself*. It exists to be noticed by a sensor.
+0478 files the actuator under *output devices*, and that is technically true — but it hides the point. Screens and speakers aim their output at people. An actuator aims its output at *the physical process itself*. In a closed loop that process is the very quantity a sensor is watching, so the actuator's work is there to be noticed by the sensor.
 
 > [!tip] The two questions that draw the boundary
-> Boundary cases ("is this an actuator?" — "is this a control system?") settle with two questions. **One: does it push on the physical world — move it, heat it, pump it — rather than present something to a person's senses?** That separates the actuator from the screen and the speaker (whose cone technically moves, but for an audience of eardrums, not sensors). **Two: is the thing it changes the very quantity a sensor is watching?** That separates a closed control loop from a mere output — the monitoring-vs-control question in miniature. Ask them in order: the first classifies the *device*, the second classifies the *system*.
+> Boundary cases ("is this an actuator?" — "is this a control system?") settle with two questions. **One: does it push on the physical world — move it, heat it, pump it — rather than present something to a person's senses?** That separates the actuator from the screen and the speaker (whose cone technically moves, but for an audience of eardrums, not sensors). **Two: is the thing it changes the very quantity a sensor is watching?** That separates a *closed* control loop from a system that acts blind. A system with no actuator on the process is monitoring. One that acts without checking the result, such as an irrigation valve opened by a clock, is open-loop control. One that acts and then measures what its action did is closed-loop control. Ask the questions in order: the first classifies the *device*, the second classifies the *system*.
 
 ## Monitoring — measure and tell
 
@@ -152,13 +156,13 @@ A **moisture** sensor — the question is about water *in the soil*, and that is
 > It sends a smeary analogue voltage. The **ADC** turns that into a number, and **calibration** is what makes the number *mean* 21.3 °C. Three steps, and exam answers earn credit for naming the middle one — "the sensor's analogue value is converted by an ADC" is a marking point in its own right.
 
 > [!warning] "Monitoring and control are basically the same thing."
-> One question separates them: **does the system's own output change the quantity it measures?** A patient monitor pages a nurse — a *human* closes the loop: monitoring. A greenhouse throws its own heater: control. No actuator acting on the process → monitoring, always.
+> One question separates them: **does the system itself act on the process?** A patient monitor pages a nurse — a *human* acts, and closes the loop: monitoring. A greenhouse throws its own heater: control, and because the heater changes the temperature the system goes on measuring, closed-loop control. No actuator acting on the process → monitoring, always.
 
 > [!warning] "Humidity and moisture are synonyms."
 > Air versus soil. Humidity = water vapour in the **air**; moisture = water in the **soil or a surface**. The irrigation question is set precisely to catch this — and in Chinese the trap half-vanishes (湿度 vs 水分), which is a hint: the confusion is an accident of English, not of physics.
 
 > [!warning] "The loop runs once."
-> "…and the process **repeats continuously**" is the sentence exam answers forget. Without repetition there is no control — just one lucky adjustment and a long blind night. The ring, not any single lap, is the machine.
+> "…and the process **repeats continuously**" is the sentence exam answers forget. Without repetition there is no closed-loop control — just one lucky adjustment and a long blind night. The ring, not any single lap, is the machine.
 
 > [!info] Beyond syllabus — the loop, grown up
 > - **Hysteresis 滞回.** The two-threshold trick has a name: the gap is a *dead band*, and it exists to stop noise near a single threshold from machine-gunning the actuator. Watch it work below — one threshold and every noisy crossing throws the relay; a dead band and the loop breathes. Electronics plays the same trick on any trembling analogue signal with a **Schmitt trigger** — two switching levels, one calm digital output.
@@ -190,7 +194,7 @@ A **moisture** sensor — the question is about water *in the soil*, and that is
 
 ### IB Computer Science — A1.3 control systems
 
-- A1.3 pairs **operating systems and control systems**; this card is the control half: the components of a control system (sensor → processor → actuator), open vs closed loop (monitoring vs control in Cambridge's language), and feedback. The OS half is its own machinery.
+- A1.3 pairs **operating systems and control systems**; this card is the control half: the components of a control system (sensor → processor → actuator), open-loop and closed-loop control, and feedback. The two pairs of words do not line up: Cambridge's *monitoring* system takes no action at all, whereas an **open-loop control** system does act, but without measuring the result — a washing machine that runs each stage for a fixed time, or an irrigation valve opened by a clock. A **closed-loop** system feeds its measurement back and corrects itself, which is the control system this card builds. IB also uses the words *controller* and *control algorithm* for the processor and the compare-and-decide rule it runs. The OS half is its own machinery.
 - IB scenarios lean real-world (traffic lights, climate control, elevators) — lead with the loop diagram and name each stage.
 
 ### AP Computer Science A

@@ -9,6 +9,7 @@ prerequisites:
   - "[[Continuous Random Variables]]"
   - "[[Inventing Variance]]"
 leads_to:
+  - "[[Sorry the Homework Is Late]]"
   - "[[t-Tests]]"
   - "[[Chi-Squared Tests]]"
   - "[[Non-Parametric Tests]]"

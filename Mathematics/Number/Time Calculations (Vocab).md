@@ -18,7 +18,7 @@ tags:
 
 ## Definition
 
-Time arithmetic mixes two number bases — **decimal for hours and seconds**, **base-60 for minutes and seconds**, **base-12 or base-24 for clock hours**. The classic exam mistake: treating time as if it were decimal. **$2.5$ hours = $2$ h $30$ min, not $2$ h $50$ min.**
+Clock notation groups **60 seconds into a minute** and **60 minutes into an hour**, with hours displayed on a 12-hour or 24-hour cycle. A duration can also be written as an ordinary decimal number of hours; this is different from hours-and-minutes notation. **$2.5$ hours = $2$ h $30$ min, not $2$ h $50$ min.**
 
 The four key skills:
 
@@ -29,13 +29,7 @@ The four key skills:
 
 ### 中文锚点
 
-**时间计算 (shíjiān jìsuàn)** = 时间相关的运算。注意：
-
-- **时分秒进制是 60，不是 10**。
-- $2.5$ 小时 = $2$ 时 $30$ 分（即半小时是 $0.5$ 而非 $0.50$ 分钟）。
-- $14:30$ = 下午 $2:30$。
-
-时区计算：UTC ± 偏移。中国标准时间 = UTC+8。纽约 (东部时间) = UTC−5（夏令时 UTC−4）。
+一部电影标着时长2.5小时，可以把它想成分针走了两个整圈，再加半圈。分针走一个整圈是一小时，也就是60分钟；半圈自然是30分钟，不是50分钟。小数点后面的“.5”没有自带“分钟”这个单位，它说的是前面那个单位的一半。先看清分的是哪一整份，时间就不会越算越乱。
 
 ---
 
@@ -71,7 +65,7 @@ The trap: $0.5$ hour $= 30$ minutes, *not* $50$ minutes.
 **Conversion rule:** to go decimal → minutes, *multiply the fractional part by 60*. To go minutes → decimal, *divide minutes by 60*.
 
 > [!warning] $2.5$ hours is not $2$ hours $50$ minutes
-> The minutes after the decimal point are *60ths of an hour*, not 100ths. $2.5 \text{ h} = 2 \text{ h} + 0.5 \text{ h} = 2 \text{ h} + 30 \text{ min}$. The most common 0580 calculation slip is treating the decimal point as if it separated hours from minutes directly. Always run the $\times 60$ conversion explicitly.
+> The fractional part is a decimal fraction of an **hour**, not a count of minutes. $2.5 \text{ h} = 2 \text{ h} + 0.5 \text{ h} = 2 \text{ h} + 30 \text{ min}$. The most common 0580 calculation slip is treating the decimal point as if it separated hours from minutes directly. Always run the $\times 60$ conversion explicitly.
 
 ### 12-hour ↔ 24-hour clocks
 
@@ -100,7 +94,7 @@ Add hours: $09 + 2 = 11$. Add minutes: $48 + 35 = 83$. Carry: $83 = 60 + 23$, so
 
 ### Example 2 — subtracting times (find duration)
 
-> A flight departs at $14:25$ and arrives at $18:10$. How long is the flight?
+> A flight departs at $14:25$ and arrives at $18:10$ on the same day, with both times expressed in the same time zone. How long is the flight?
 
 Direct subtraction: $18:10 - 14:25$. Minutes can't go: $10 - 25$ would be negative. Borrow $60$ from the hours: $18:10$ becomes $17:70$. Now $70 - 25 = 45$ min, $17 - 14 = 3$ h.
 
@@ -108,7 +102,7 @@ Direct subtraction: $18:10 - 14:25$. Minutes can't go: $10 - 25$ would be negati
 
 ### Example 3 — time zones
 
-> A flight leaves Singapore (UTC+8) at $11:00$ on Monday and lands in London (UTC+0) after $13$ hours. What is the local arrival time in London?
+> A flight leaves Singapore (UTC+8) at $11:00$ on Monday and lands in London (use UTC+0 for this winter journey) after $13$ hours. What is the local arrival time in London?
 
 Two approaches.
 
@@ -134,7 +128,7 @@ Two approaches.
 1. **Treating $0.5$ hours as $50$ minutes.** It's $30$. Always $\times 60$.
 2. **Forgetting to borrow $60$ when subtracting.** $10:15 - 8:40$: borrow gives $9:75 - 8:40 = 1:35$, *not* the bizarre $2:25$ you'd get without borrowing properly.
 3. **24-hour clock arithmetic at midnight.** $23:50 + 0:20 = 24:10$ technically, but should be reported as $00:10$ (with the date advancing).
-4. **Time zone sign errors.** Singapore is UTC**+8** (ahead of UTC), New York is UTC**−5** (behind). To go from local to UTC: *subtract* the offset. To go from UTC to local: *add* the offset.
+4. **Time zone sign errors.** Singapore is UTC**+8** (ahead of UTC), New York is UTC**−5** in standard time (UTC−4 during daylight saving). To go from local to UTC: *subtract* the offset. To go from UTC to local: *add* the offset.
 
 ---
 
@@ -145,7 +139,7 @@ Two approaches.
 **Syllabus ref:** E1.15 (Time) — calculate times in terms of the 24-hour and 12-hour clock; read clocks and timetables. Standard exam patterns:
 
 - "A bus leaves at $07:42$ and arrives at $09:15$. Find the journey time in hours and minutes."
-- "A film starts at $7:35$ pm and lasts $2$ hours $50$ minutes. At what time does it end?" (Cross midnight check.)
+- "A film starts at $7:35$ pm and lasts $2$ hours $50$ minutes. At what time does it end?"
 - "A flight departs Hong Kong (UTC+8) at $23:30$ on $15$ March and arrives in San Francisco (UTC−7) after $13$ hours. What is the local arrival time and date?"
 
 ---
@@ -154,7 +148,7 @@ Two approaches.
 
 - **Sibling:** [[Average Speed (Vocab)]] — speed × time = distance, with proper unit-time arithmetic
 - **Application:** *travel and logistics* — flight schedules, train timetables, all-night-vs-day-trip calculations
-- **Forward:** *physics* — relativity adds further time-zone-like complications when speeds approach $c$ (different observers measure different elapsed times)
+- **Forward:** *physics* — [[Special Relativity]] concerns differences in measured elapsed time; time zones merely assign different local clock labels
 
 ---
 

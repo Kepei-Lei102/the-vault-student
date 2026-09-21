@@ -9,6 +9,7 @@ leads_to:
   - "[[The Love of Wisdom]]"
   - "[[The Feynman Technique]]"
   - "[[Compression Is Intelligence]]"
+  - "[[Humans Are Story Animals]]"
 tags:
   - subject/methodology
   - subject/philosophy

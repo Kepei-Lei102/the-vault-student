@@ -54,21 +54,7 @@ One art is a promise ("you'll get every bit back"); the other is a judgement cal
 
 ### 中文锚点
 
-**数据压缩 (shùjù yāsuō)** = 用更少的比特重新编码同样的数据。
-
-| English | 中文 | Idea |
-|---|---|---|
-| Lossless compression | 无损压缩 (wúsǔn yāsuō) | 完全可逆，逐位还原 |
-| Lossy compression | 有损压缩 (yǒusǔn yāsuō) | 永久删除信息，只能还原近似 |
-| Run-length encoding (RLE) | 行程长度编码 (xíngchéng chángdù biānmǎ) | 把"连续重复"记成 (个数, 值) |
-| Huffman coding | 霍夫曼编码 (huòfūmàn biānmǎ) | 常见符号用短码，罕见符号用长码 |
-| Redundancy | 冗余 (rǒngyú) | 可被压缩掉的"废话" |
-| Compression ratio | 压缩率 (yāsuō lǜ) | 原大小 ÷ 压缩后大小 |
-| Entropy | 熵 (shāng) | 无损压缩的理论下限（见 [[Information Theory]]） |
-
-考试语言注意：Cambridge 两个板块都**点名 RLE**；0478 的有损压缩答案要用它自己的四个动词——降低分辨率 (resolution)、降低色深 (colour depth)、降低采样率 (sample rate)、降低采样精度 (sample resolution)。
-
----
+朋友发来一长串“哈哈哈哈……”：如果正好连续100个，你不必逐字抄下来，记一句“连续100个哈”就够了。对方照着展开，一个字也不会少。压缩抓住的就是这种机会：数据里有重复、有规律，就换一种更省地方、双方都看得懂的记法。这里省掉的是冗长的写法；如果只是删掉一些字，那就已经丢失信息了。
 
 ## Why compression is possible at all — redundancy
 
@@ -239,9 +225,8 @@ Different *kind*, not different strength: lossless rewrites the same information
 
 ### IB Computer Science (first assessment 2027)
 
-- The rebuilt two-theme IB course (the old Topics 1–7 syllabus retired after its 2026 sittings) places compression under **Theme A, A2 Networks — A2.3 Data transmission**: compression as the answer to *why transmitted files are made smaller*, with the lossy-vs-lossless distinction justified in context. Expect the justify question wearing transmission clothes — streaming vs archiving, a bandwidth-limited link, an attachment size cap.
+- The rebuilt two-theme IB course (the old Topics 1–7 syllabus retired after its 2026 sittings) places compression under **Theme A, A1 Computer fundamentals — statement A1.1.8, "Describe the concept of compression"**, which names two things: the differences between lossy and lossless methods, and **run-length encoding and transform coding**. Transform coding is what JPEG and MP3 do: describe the data as frequency components, then store every component rounded, with fine steps for the components the eye or ear notices most and coarse steps for the rest. The rounding is where the information is lost, and it cannot be undone. Expect the choose-and-justify question in a storage or a transmission setting — streaming against archiving, a bandwidth-limited link, an attachment size cap.
 - Data representation itself (binary, hexadecimal, logic) sits in **A1.2**, so the machinery here transfers intact — and the four-file-type table answers the IB version of "choose and justify" just as it answers Cambridge's.
-- The sub-topic placement follows the published course outline; check the current guide for exact command terms before drilling wording.
 
 ### Where it is *not* examined
 

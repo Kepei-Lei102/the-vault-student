@@ -9,6 +9,7 @@ prerequisites:
 leads_to:
   - "[[Programming Paradigms]]"
   - "[[Dual-Core Craft]]"
+  - "[[Java Objects, References and Strings]]"
 tags:
   - subject/computer-science
   - domain/programming
@@ -303,7 +304,7 @@ The class is the description; the object is the thing. `Animal` cannot make a so
 
 ### 4. Polymorphism confused with overloading
 
-Overloading (VB's `Overloads`, Java's same-name-different-parameters) is several methods with one name in *one* class. Polymorphism is one method name across a *family* of classes, chosen by the object's type at run time. Python has no overloading at all; it has polymorphism everywhere. **Fix:** the exam word is *override*, and the test is "does a call on the parent type run the child's code?"
+Overloading (VB's `Overloads`, Java's same-name-different-parameters) is several methods with one name in *one* class. The polymorphism this card teaches, and the only kind Cambridge means by the word, is one method name across a *family* of classes, chosen by the object's type at run time. Python has no overloading at all; it has that polymorphism everywhere. **Fix:** on a Cambridge paper the exam word is *override*, and the test is "does a call on the parent type run the child's code?" IB uses a wider vocabulary: it asks for *dynamic* polymorphic behaviour, which is overriding, settled while the program runs, and also for *static* polymorphic behaviour, of which overloading is the standard example, settled when the program is compiled. An IB student should be able to name both and say which is which.
 
 ### 5. "Private means nobody can touch it" (in Python)
 
@@ -354,8 +355,8 @@ Python's loop over `zoo` never checked that every element was an `Animal`; it ch
 
 ### AP Computer Science A (Fall 2025 framework — Java)
 
-- Unit 1.12 (objects as instances of classes) and **Unit 3, Class Creation** (§3.1 abstraction and class diagrams, §3.3 anatomy of a class with `private`/`public`, §3.4 constructors and `this`, §3.5 writing methods, §3.6 passing objects — the aliasing the Account example shows, §3.7 static members, §3.8 scope). The Java specimen above is the shape of the Class Design free-response question.
-- **Inheritance and polymorphism are not in the Fall 2025 course** — the redesign stripped them, with interfaces and abstract classes. An AP student needs this card's first half in Java and can read the second half as enrichment.
+- Unit 1.12 (objects as instances of classes) and **Unit 3, Class Creation** (§3.1 abstraction and program design, §3.3 anatomy of a class with `private`/`public`, §3.4 constructors, §3.5 writing methods, §3.6 passing and returning object references, §3.7 class (`static`) variables and methods, §3.8 scope and access, §3.9 `this`). The Class Design free-response question asks for one complete class written from a specification: private instance variables, a public constructor and public methods. The Java specimen above is a Cambridge mark-scheme subclass that uses `extends`, `super` and public fields, so it is not a model for that question.
+- **Inheritance is in the Fall 2025 course as vocabulary, not as code.** §1.12 expects a student to know what a superclass and a subclass are, and that every Java class is a subclass of `Object`. Designing and implementing an inheritance relationship is outside the course, overriding `toString` and `equals` is outside it, and no learning objective asks for polymorphism, interfaces or abstract classes. An AP student needs this card's first half in Java and can read the second half as enrichment.
 
 ### IB Computer Science (B3)
 

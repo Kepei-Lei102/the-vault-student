@@ -1,6 +1,6 @@
 # The Vault — Physics Directory
 
-> **71 cards across 12 bays.** Last landed: [[Lenses and Image Formation]] (2026-09-18) — follow each point’s light into a camera, projector or corrected eye.
+> **82 cards across 12 bays.** Last landed: [[Quantum Tunnelling]] — one barrier, opposite engineering goals: suppress CPU leakage, program SSD memory.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations, the worked papers, and the graph of what to read first.
 
 **Reading the bays.** Bays follow the Cambridge 9702 chapter structure. *Closed* bays cover their stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0625 = Cambridge IGCSE, 9702 = Cambridge A Level, 9709/9231 = the Cambridge maths boards whose mechanics papers these cards also serve, IB = IB Physics, AP-1 / AP-2 / AP-C = the AP Physics courses.
@@ -49,12 +49,12 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *The 9231 §3.5 row rode the Mechanics bay ([[Linear Motion under a Variable Force]], 2026-09-02) — Further Mechanics is 6/6. The field-theoretic sibling [[Electric Field]] lives in Fields.*
 
-## Oscillations (2 — open)
+## Oscillations (3 — open)
 
 1. **[[Damped Oscillations]]** — SHM with the friction switched back on: light, critical and heavy damping as the three-case dial of a second-order ODE, with the decay envelope.
 2. **[[Resonance]]** — the driven oscillator: steady state at the driver's frequency, maximum amplitude at the natural one; the quarter-cycle lag, peak height $Q\,F_0/k$, width $f_0/Q$, build-up in $Q/\pi$ cycles; six real questions from two boards.
 
-*Next in the bay: [[Coupled Oscillators]], the bridge to Waves.*
+3. **[[Coupled Oscillators]]** — two frequencies from symmetry; exact energy exchange, normal modes as eigenvectors, the chain-to-wave bridge and tuned mass dampers. 💎
 
 ## Fluids (1 — open)
 
@@ -64,7 +64,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *Related drag teaching: [[Linear Motion under a Variable Force]] and [[Density and Pressure]]; their coverage and repair work are tracked in the Hunter’s Notebook. Surface tension remains an enrichment candidate.*
 
-## Waves (9 — open)
+## Waves (10 — open)
 
 *The pattern travels, the medium stays: progressive waves first, then what happens when they meet each other and things.*
 
@@ -86,11 +86,13 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 9. **[[Lenses and Image Formation]]** — ray bundles, six image regimes, the lens equation derived, cameras, projectors and vision correction; four SVG sets and a rendered Manim. *0625 §3.2.3 · AP-2 13.4*
 
-*9702 Topic 7 complete. Remaining wave/optics scope: IGCSE sound, curved-mirror imaging for AP2, plus AP-2 §14.3 finite string-join reflection/transmission.*
+10. **[[Sound]]** — a longitudinal wave of compressions and rarefactions that needs a medium; 330–350 m/s and why temperature, not pressure, sets it; $v = \sqrt{\text{stiffness}/\text{density}}$ for air, water and steel; four speed experiments with their simulated uncertainties; amplitude → loudness, frequency → pitch, the audible range; five WAV files and a Manim; six real questions. *0625 §3.4 · AP-2 14.1–14.2 · IB C.2*
+
+*9702 Topic 7 and 0625 Topic 3 complete. Remaining wave/optics scope: curved-mirror imaging for AP2, plus AP-2 §14.3 finite string-join reflection/transmission.*
 
 ---
 
-## Quantum-Nuclear (3 — open)
+## Quantum-Nuclear (5 — open)
 
 *Where the wave picture and the particle picture are both true, and what that does to the atom and the nucleus.*
 
@@ -100,13 +102,17 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 3. **[[Nuclear Physics]]** — why nuclei hold together and decay; Rutherford, quarks, random decay, binding energy and fission/fusion, with smoke alarms, tracers, dating and reactors. *9702 §11/§23 · 0625 §5 · IB E.1/E.3/E.4 · AP-2 §15.7–15.8*
 
-*Cambridge quantum/nuclear/particle core complete. Enrichment shelf: [[Pauli Exclusion Principle]], [[Quantum Tunnelling]].*
+4. **[[Quantum States and the Schrödinger Equation]]** — normalisation, phase and Schrödinger evolution; the infinite well, coherent preparation versus mixture, Fourier uncertainty and quantum-dot displays, with three SVGs and 4K Manim. *University enrichment*
 
-## Thermal (7)
+5. **[[Quantum Tunnelling]]** — boundary matching, conserved probability current and exponential transmission; CPU gate leakage, SSD programming/retention and STM, with three SVGs and 4K Manim. *University enrichment*
+
+*Cambridge quantum/nuclear/particle core complete. Enrichment shelf: [[Pauli Exclusion Principle]].*
+
+## Thermal (8)
 
 *The thermodynamics core, complete: kinetic theory → internal energy → specific heat → first law → entropy.*
 
-1. **[[Kinetic Theory and the Ideal Gas]]** — $pV = \tfrac13 Nm\langle c^2\rangle$ from molecules in a box, laid beside $pV = NkT$: temperature *is* mean molecular kinetic energy.
+1. **[[Kinetic Theory and the Ideal Gas]]** — states, syringe compression and Brownian motion; pressure and temperature derived from molecular collisions, with particle animation and Boyle graph. *0625 §2.1 · 9702 §15 · IB B.3 · AP-2 9.1–9.2*
 2. **[[Internal Energy]]** — random KE + intermolecular PE; for a fixed amount of monatomic ideal gas $U = \tfrac32 nRT$ depends on temperature alone; degrees of freedom and equipartition.
 3. **[[Specific Heat Capacity]]** — $Q = mc\Delta T$ and $Q = mL$: heating fills the kinetic term, phase change pays the potential term; $C_p = C_V + R$.
 4. **[[First Law of Thermodynamics]]** — $\Delta U = Q + W$ with the sign convention taught principle-first; the four processes on the $p$–$V$ diagram.
@@ -115,8 +121,9 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 6. **[[Temperature and Thermometry]]** — equilibrium, thermometric properties, Kelvin scale, calibration, response and probe loading. *9702 §14.1–14.2*
 
 7. **[[Heat Transfer]]** — conduction, convection and radiation; thermal resistance, insulation, Earth’s balance and measured conductivity. *0625 §2.3 · IB B.1 · AP-2 9.3/9.5*
+8. **[[Thermal Expansion]]** — the lopsided bond that makes matter grow when heated; solids, liquids and gases compared; expansion gaps, the bimetallic strip, thermal stress, water at 4 °C. *0625 §2.2.1*
 
-*Cambridge Topic 14 and 0625 §2.3 complete. Remaining: expansion applications and other IGCSE thermal outcomes; audit existing teaching before adding treatments.*
+*Cambridge Topic 14 and 0625 §2.1/§2.3 complete. Remaining: expansion applications and other IGCSE thermal outcomes; audit existing teaching before adding treatments.*
 
 ## Electricity (6 — closed)
 
@@ -131,7 +138,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *Bay closed 2026-09-09: the planned run [[Electric Current]] → [[Alternating Current]] is complete; the field-theoretic side ([[Electric Field]], [[Energy Resources]]) belongs to Fields.*
 
-## Fields (6 — open)
+## Fields (7 — open)
 
 1. **[[Capacitors]]** — $C = Q/V$ as an electrical spring; the parallel-plate formula derived from the field; energy $\tfrac12 CV^2$; charging and discharging through a resistor.
 2. **[[Lorentz Force]]** — $\mathbf{F} = q\mathbf{E} + q\mathbf{v}\times\mathbf{B}$: ignores stationary charge, pushes sideways, does no work; $F = BIL\sin\theta$ by the parade derivation.
@@ -142,19 +149,27 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 6. **[[Electric Potential]]** — potential as energy per charge; reference at infinity, signed work, equipotentials, pairwise assembly and continuous-source integrals; accelerating voltage as the electron microscope’s energy dial. *9702 §18.5 · IB D.2 HL · AP C Unit 9*
 
-*9702 Topic 18 complete. Remaining briefs: [[Energy Resources]] and the map-led IGCSE magnetism supplement; verify their residual outcomes against existing teaching before drafting.*
+7. **[[Magnetism and Magnetic Materials]]** — poles, compass mapping, induced magnetism, domains, material response and hysteresis; relays/speakers and permeability. *0625 §4.1 + §4.5.3 · AP2/AP-C EM 12.1*
 
-## Modern (0 — reserved)
+*9702 Topic 18 and IGCSE magnetism/electromagnetic effects complete at mapped-row granularity. Remaining brief: [[Energy Resources]]; verify its residual scope against existing teaching.*
 
-*Planned: [[Particle Physics]] beyond the quark introduction in [[Nuclear Physics]], plus the enrichment pair [[Special Relativity]] and [[General Relativity]]. Cambridge §11/§22–23 and 0625 §5 are taught in Quantum-Nuclear above.*
+## Modern (1 — open)
 
-## Astronomy (2 — open)
+**[[Special Relativity]]** — two postulates; time dilation from a light clock and Pythagoras; length contraction; the relativity of simultaneity; the Lorentz transformation; the invariant interval; space-time diagrams; muons measured on a mountain; GPS. *IB A.5 HL*
+
+*Next: [[General Relativity]], and [[Particle Physics]] beyond the quark introduction in [[Nuclear Physics]]. Cambridge §11/§22–23 and 0625 §5 are taught in Quantum-Nuclear above.*
+
+## Astronomy (4 — open)
 
 **[[Stellar Luminosity and Size]]** — inverse-square distance, calibrated candles, blackbody spectra and radius from light; three controls, distinct measurements. *9702 §25.1–25.2 · IB B.1/E.5 radiation and radius · AP-2 §15.4*
 
 **[[Hubble's Law and the Expanding Universe]]** — why every observer sees the same expansion law; redshift, the cosmic clock and the hot Big Bang. *9702 §25.3 · 0625 §6.2.3*
 
-*Remaining: stellar evolution and parallax/HR-diagram treatment, plus the IGCSE Solar-System inventory. Reuse existing orbit and spectral-shift teaching.*
+**[[Stellar Evolution]]** — cloud to white dwarf, neutron star or black hole; the balance that holds a star up, fusion as the payer, the HR diagram, parallax. *0625 §6.2.1–6.2.2 · IB E.5*
+
+**[[The Solar System]]** — day, seasons and Moon phases from one tilted spinning ball; the inventory and the planets' table; why rock inside and gas outside; speeds, ellipses and energy. *0625 §6.1*
+
+*All mapped Cambridge astronomy rows are complete. Enrichment candidates: exoplanets, tides.*
 
 ## Medical (3 — closed)
 
@@ -166,7 +181,7 @@ Sound and radiation as probes of structure and function. 9702 Topic 24 complete.
 
 **[[Ultrasound]]** — the gel, the echo clock and the image; acoustic impedance, reflection and round-trip attenuation.
 
-## Foundations (7 — closed)
+## Foundations (9 — closed)
 
 *The measurement curriculum end to end: quantities and units → vectors → the two error axes → their remedies → honest reporting. 9702 Topic 1 · 0625 §1.1 · IB PRAC.*
 
@@ -177,6 +192,8 @@ Sound and radiation as probes of structure and function. 9702 Topic 24 complete.
 5. **[[Repeated Measurements]]** — Galton's ox and SEM $= \sigma/\sqrt N$; why averaging eats noise but not bias.
 6. **[[Calibration of Instruments]]** — reference comparisons, corrections and their uncertainty; the Hubble mirror; the traceability pyramid.
 7. **[[Significant Figures]]** — an honesty contract between writer and reader; rounding conventions motivated by error propagation, explicit uncertainties and board-specific reporting rules.
+8. **[[Planning an Experiment]]** — independent, dependent and control variables; apparatus → method → enough data → table → analysis; why five spread values and repeats, simulated; techniques, hazards and matched improvements; the twelve practical contexts. *0625 practical skills P1–P3, P6–P7 · 9702 Paper 5 planning · AP experimental design*
+9. **[[Recording and Analysing Experimental Data]]** — reading scales to half a division, tables, best-fit lines, the large gradient triangle, intercepts, anomalies and the 10 % test. *0625 P4–P5 · 9702 Papers 3/5*
 
 ---
 

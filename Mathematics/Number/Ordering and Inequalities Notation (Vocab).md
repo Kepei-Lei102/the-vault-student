@@ -9,6 +9,7 @@ tags:
   - subject/mathematics
   - domain/number
   - level/IGCSE
+  - curriculum/OxAQA-9260
   - curriculum/Cambridge-0580
   - syllabus/0580-E1-5
   - syllabus/9260-N1
@@ -36,22 +37,11 @@ Reading rule: the **open end** of the inequality faces the *larger* number (the 
 
 ### 中文锚点
 
-**排序 (páixù)** = ordering. **不等号 (bùděnghào)** = inequality symbol.
+天气预报说今天零下五度，明天零下两度，你会觉得明天暖和些。虽然“五”比“二”大，零下五度却排在零下两度的下面：温度往上走，数值才变大。不等号记的也是这个顺序，所以写成 $-5<-2$。别只盯着离零有多远——温度计上站在哪一边，才决定谁大谁小。
 
-| 符号 | 中文 | 含义 |
-|---|---|---|
-| $=$ | 等于 (děngyú) | 两边相等 |
-| $\neq$ | 不等于 | 两边不相等 |
-| $>$ | 大于 (dàyú) | 左边大于右边 |
-| $<$ | 小于 (xiǎoyú) | 左边小于右边 |
-| $\ge$ | 大于等于 / 不小于 | $>$ 或 $=$ |
-| $\le$ | 小于等于 / 不大于 | $<$ 或 $=$ |
+### 术语对照
 
-记忆：**张口对大**（开口对着大数）。$7 > 3$，$3 < 7$，开口都朝向 $7$。
-
-升序 (shēngxù) = ascending; 降序 (jiàngxù) = descending.
-
----
+排序：ordering；不等号：inequality symbol；升序：ascending；降序：descending。$>$：大于；$<$：小于；$\ge$：大于等于；$\le$：小于等于；$\ne$：不等于。
 
 ## Key Vocabulary
 
@@ -76,7 +66,7 @@ Reading rule: the **open end** of the inequality faces the *larger* number (the 
 
 > Arrange in ascending order: $-2,\;\; \tfrac{3}{4},\;\; -\tfrac{1}{2},\;\; 1.5,\;\; -2.1$.
 
-Plot on a number line: $-2.1$ is the most negative (furthest left), then $-2$, then $-\tfrac{1}{2}$, then $\tfrac{3}{4} = 0.75$, then $1.5$.
+**Tool: number-line order. Trigger: mixed fractions, decimals and negative signs make visual digit comparison unreliable.** Convert fractions as needed, then plot on a number line: $-2.1$ is the most negative (furthest left), then $-2$, then $-\tfrac{1}{2}$, then $\tfrac{3}{4} = 0.75$, then $1.5$.
 
 **Answer.** $-2.1 < -2 < -\tfrac{1}{2} < \tfrac{3}{4} < 1.5$.
 
@@ -91,6 +81,8 @@ Plot on a number line: $-2.1$ is the most negative (furthest left), then $-2$, t
 > (c) "$x$ is between $2$ and $7$, inclusive"
 > (d) "$x$ is positive but less than $4$"
 
+**Tool: test the boundary. Trigger: phrases such as “at least” differ in whether equality is allowed.** Ask whether the named endpoint satisfies the words.
+
 **Answers.**
 (a) $x \ge 5$ — *at least* = $\ge$
 (b) $x \le 10$ — *no more than* = $\le$
@@ -99,7 +91,7 @@ Plot on a number line: $-2.1$ is the most negative (furthest left), then $-2$, t
 
 ### Example 3 — number line representation
 
-For $-2 < x \le 3$:
+**Tool: endpoint inclusion. Trigger: the two ends use different inequality signs.** For $-2 < x \le 3$:
 
 ```
 ←─────○━━━━━━━━━━━━━━━━━●─────→
@@ -108,8 +100,8 @@ For $-2 < x \le 3$:
 
 **Open circle** at $-2$ (strict inequality, $-2$ excluded), **closed circle** at $3$ (non-strict, $3$ included), **bar** between them showing the included range.
 
-> [!tip] Open vs closed circle is the *only* way to show strict vs non-strict on a number line
-> Open circle ($\circ$) = strict ($<$ or $>$, value excluded). Closed circle ($\bullet$) = non-strict ($\le$ or $\ge$, value included). 0580 markschemes always check this — drawing the wrong circle costs the mark even if the rest of the picture is right.
+> [!tip] The endpoint convention
+> Open circle ($\circ$) means the endpoint is excluded; closed circle ($\bullet$) means it is included. The picture must encode the same set as the inequality.
 
 ---
 
@@ -125,17 +117,23 @@ For $-2 < x \le 3$:
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 — Core and Extended
 
-**Syllabus ref:** N1 — order quantities by magnitude using the symbols $=, \neq, >, <, \ge, \le$. Standard exam patterns:
+**C1.5 / E1.5 (Ordering)** require ordering quantities and using $=, \ne, >, <, \ge, \le$. **C2.6 / E2.6** also require interpreting and representing inequalities on number lines, with open endpoints for strict inequalities and filled endpoints for included boundaries. Solving linear inequalities and two-variable regions extends beyond the notation taught here: see [[Linear Inequalities (Vocab)]] and [[Graphical Inequalities (Vocab)]].
 
-- "Insert the correct symbol ($>$, $<$, or $=$) in each box: $-7 \square -4$." Number-line check.
-- "Show the inequality $-1 < x \le 4$ on a number line." Open at $-1$, closed at $4$, bar between.
-- "Write down all integers $n$ such that $-2 \le n < 5$." Answer: $-2, -1, 0, 1, 2, 3, 4$ (note 5 excluded).
+Practice prompts: order negative fractions and decimals; decide whether a boundary value is allowed; translate a double inequality into a number line; list the integers in a specified interval. These are illustrative prompts, not quoted past-paper questions.
 
-### A-Level / IB / AP
+### OxfordAQA 9260
 
-A-Level extends the symbols to set-builder notation: $\{x \in \mathbb{R} : x > 0\}$. IB AA HL adds interval notation: $(0, \infty)$ for $x > 0$, $[a, b]$ for $a \le x \le b$, etc. Same content, more compact notation.
+**N1** requires ordering positive and negative integers, decimals and fractions and using comparison symbols, including number-line work. **A23** uses open and closed endpoint conventions when displaying solutions. Distinguish understanding the symbols from solving the inequalities: A23 also requires algebra, with quadratic and two-variable extensions.
+
+### Further study — assumed language, not an HL-only invention
+
+**Cambridge 0606** uses solution-set notation for quadratic inequalities (§2.5) and further inequalities in §4. **9709 §1.1**, **Edexcel IAL P1 §1.7–1.8** and **OxfordAQA 9660 P1.1** use inequalities in algebra; their substantive solving methods go beyond ordering. **9231** assumes ordinary A-Level mathematical language while extending the functions and problems to which it applies.
+
+**IB AA and AI**, at both SL and HL, include inequalities and intervals on the real number line in **prior learning**. Interval notation is not an AA HL invention. In **AP Calculus AB/BC**, intervals describe domains, limits and derivative-sign conclusions; in **AP Statistics**, inequalities describe events and statistical comparisons. These are uses of prerequisite notation, not a separate ordering theorem to memorise.
+
+**Where this is not a standalone new topic:** the advanced courses above do not introduce basic real-number ordering as a new theorem. They still require correct notation. No special formula-sheet entry is needed; read whether the boundary belongs to the set.
 
 ---
 

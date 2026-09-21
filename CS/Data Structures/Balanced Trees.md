@@ -22,7 +22,9 @@ tags:
 
 ## 中文锚点
 
-上一张[[Binary Trees|卡片（二叉树）]]的结尾是一句坦白：二叉搜索树的 $O(\log n)$ 靠的是一个它自己**并不维护**的假设——树要长得平衡。数据乱序到来，树自然茂密；数据**按顺序**到来（编号、时间戳、按字母表导入的名单——这恰恰是现实里最常见的输入），树就退化成一条链。这张卡片把"希望"升级成**合同**，分四步。第一步补上**删除**（考纲里没有、但平衡机器离不开的手术）：删叶子、删一个孩子的、删两个孩子的——双孩的情况用"中序后继"顶替，而后继**必然至多只有一个孩子**，所以难题总能化归成简单题。第二步把代价**算清楚**：最坏 $O(n)$、最好 $\lceil\log_2(n{+}1)\rceil$、随机到来的平均深度约 $1.39\log_2 n$——平均不坏，但最坏并非小概率意外，而是最平常的输入。第三步是**旋转**：唯一合法的修树动作——把孩子提到父亲的位置上、三个指针换位，**中序遍历完全不变**（排序承诺毫发无损），高度却矮了一层。AVL 树给每个节点立规矩"左右子树高度差不超过 1"，插入后沿路检查、失衡就旋转（四种情况：LL、RR 单旋，LR、RL 先转孩子再转自己）——效果惊人：**把 1 到 1023 按顺序喂给普通 BST 得到高度 1023 的链；喂给 AVL 得到高度 10——正好是完美值**。红黑树是更"懒"的合同（最长路径不超过最短的两倍），换来更少的旋转次数，所以各语言的标准库选它。第四步下到磁盘：**B 树**把节点撑宽到一整个磁盘块（每块几百个键），一亿条记录三四次读盘就命中；**B+ 树**再把数据全部压到叶层、叶子串成链表——范围查询变成顺着链走——这就是 MySQL、SQLite、PostgreSQL 索引里真正住着的那棵树。
+快递站新添了一个货架，就在原来的指路牌后面再接一块牌子。要是货架编号一直往上加，找一个大编号就得顺着长长一串牌子问下去。平衡搜索树会时不时重新安排这些“指路牌”，让找东西的路不至于越伸越长；挪动以后，“小的往左，大的往右”的约定仍然成立。它省下的是查找时一次次判断的步数。快，不是因为数据碰巧按一个好顺序到来，而是因为它在数据变多时还会照料自己的形状。
+
+## Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -38,9 +40,9 @@ tags:
 
 ## The unfinished business
 
-Two debts stand open from [[Binary Trees]]. First, the missing operation: the syllabus never asked deletion, and the balancing machinery below cannot exist without it, so it gets built properly here. Second, the price that was only gestured at: "balanced → $O(\log n)$, degenerate → $O(n)$" is true, but a tree that will hold real data deserves real analysis — *how likely* is degradation, *how bad* is typical, and what does a guarantee cost? The plan: complete the toolkit, price the risk honestly, then meet the three machines that make the risk vanish — two for memory, one for disk.
+Two debts stand open from [[Binary Trees]]. First, the missing operation: Cambridge 9618 never asks for deletion, though IB higher level does, and the balancing machinery below cannot exist without it, so it gets built properly here. Second, the price that was only gestured at: "balanced → $O(\log n)$, degenerate → $O(n)$" is true, but a tree that will hold real data deserves real analysis — *how likely* is degradation, *how bad* is typical, and what does a guarantee cost? The plan: complete the toolkit, price the risk honestly, then meet the three machines that make the risk vanish — two for memory, one for disk.
 
-## Deletion — the surgery the syllabus spared you
+## Deletion — three cases, each harder than the last
 
 Deleting from a chain was one write. Deleting from a tree depends entirely on **how many children the doomed node has**, and the three cases escalate beautifully.
 
@@ -206,7 +208,7 @@ The opposite in spirit: a B-tree node has *hundreds* of children precisely to es
 
 ## Exam Notes
 
-**Not examined at school level, anywhere in the vault's boards — this is a university-preview card.** Cambridge 9618 stops at the plain BST's find and insert (§19.1, [[Binary Trees]]' Exam Notes carry the detail); deletion, rotations, AVL, red-black and B-trees appear nowhere in the 2027–29 syllabus. Cambridge 0478 has no trees at all. AP CSA stops at `ArrayList`. IB CS's B4.1 covers ADT fundamentals; its published outline does not name self-balancing machinery. Where this material *is* the syllabus: first-year university data-structures courses (AVL insertion with rotation cases is a canonical exam question; red-black deletion a canonical homework horror), database-systems courses (B+ mechanics), and software-engineering interviews. One honest exam-adjacent payoff at A-Level: the phrase "**provided the tree remains balanced**" in a 9618 Big-O justification is worth a mark, and this card is what that clause actually means.
+**One section here is examined; the rest is a university preview.** IB Computer Science (first assessment 2027, higher level) statement **B4.1.4** lists "insert, delete, traverse and searching nodes in a BST", so the three-case **deletion** from a plain binary search tree, the section "Deletion" above, is examined IB material. Rotations, AVL, red-black and B-trees are named by no school board, IB included. Cambridge 9618 stops at the plain BST's find and insert (§19.1, [[Binary Trees]]' Exam Notes carry the detail); deletion appears nowhere in its 2027–29 syllabus. Cambridge 0478 has no trees at all. AP CSA stops at `ArrayList`. Where this material *is* the syllabus: first-year university data-structures courses (AVL insertion with rotation cases is a canonical exam question; red-black deletion a canonical homework horror), database-systems courses (B+ mechanics), and software-engineering interviews. One honest exam-adjacent payoff at A-Level: the phrase "**provided the tree remains balanced**" in a 9618 Big-O justification is worth a mark, and this card is what that clause actually means.
 
 ## Connections
 

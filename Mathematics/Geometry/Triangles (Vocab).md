@@ -96,7 +96,7 @@ So you can have a "right isosceles triangle" (the 45-45-90) or a "scalene obtuse
 
 ### OxAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** G1 (9260) / E4.1 (0580). Triangle vocabulary is assumed knowledge — it appears as part of larger geometry questions rather than standalone. "Name the type of triangle" questions are rare but do appear at Core level. More commonly, knowing that a triangle is isosceles unlocks the base-angle property needed to find a missing angle.
+**Syllabus ref:** G1 (9260: "the names and properties of isosceles, equilateral and scalene triangles, and also right-angled, acute-angled and obtuse-angled triangles") / C4.1 and E4.1 Geometrical terms (0580, Core and Extended alike). Triangle vocabulary is assumed knowledge — it appears as part of larger geometry questions rather than standalone. "Name the type of triangle" questions are rare but do appear at Core level. More commonly, knowing that a triangle is isosceles unlocks the base-angle property needed to find a missing angle.
 
 ---
 

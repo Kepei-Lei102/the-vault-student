@@ -365,19 +365,19 @@ Use $g$ values from §4.4 conventions if weight enters (it usually doesn't for c
 
 ### Cambridge 0625 (IGCSE Physics) — §1.6
 
-**Core:** definition $p = mv$, conservation in collisions (qualitative + simple numerical).
-**Extended only:** impulse $F = \Delta p / \Delta t$ as the rearranged N2; force-time graph reading.
+**The whole of §1.6 is Supplement (Extended) content; the Core syllabus has no momentum.** Four statements: define momentum and use $p = mv$; define impulse and use impulse $= F\Delta t = \Delta(mv)$; apply conservation of momentum to simple problems in one dimension; define resultant force as the change in momentum per unit time, $F = \Delta p/\Delta t$.
 
-### A-Level Mathematics Mechanics (9709 M2 / OCR / Edexcel) and IB AA
+### Cambridge 9231 Further Mathematics — Further Mechanics §3.6
 
-Includes elastic collisions in 1D, coefficient of restitution $e$, **2D oblique impacts** (resolve along and perpendicular to the line of impact; $e$ acts only along the line of impact). IB AA HL also covers 2D collisions.
+Newton's experimental law and the coefficient of restitution $e$, for direct impacts and for **oblique impacts**, including a smooth sphere striking a fixed surface: resolve along and perpendicular to the line of impact, and apply $e$ along that line only. [[Newton's Law of Restitution]] carries it. The current 9709 syllabus has no second mechanics paper; its only momentum content is §4.3 above.
 
-### AP Physics 1 / C: Mechanics
+### IB Physics — A.2
 
-**AP Physics 1:** conservation of momentum, impulse, 1D and 2D collisions, all qualitatively and through pictorial analysis.
-**AP Physics C: Mechanics:** all of the above plus integral form $\mathbf{J} = \int \mathbf{F}\, dt$, variable-mass problems (rocket equation), and centre-of-mass treatment.
+Momentum $p = mv$, impulse $J = F\Delta t = \Delta p$, Newton's second law as $F = \Delta p/\Delta t$, and collisions and explosions, elastic and inelastic: one dimension at standard level, **two dimensions at higher level**. IB Mathematics (Analysis and Approaches, and Applications and Interpretation) contains no mechanics of collisions.
 
----
+### AP Physics 1 and AP Physics C: Mechanics — Unit 4
+
+Linear momentum, change in momentum and impulse (as the area under a force–time graph; as $\int F\,dt$ in Physics C), conservation of momentum, and elastic and inelastic collisions, in one and two dimensions.
 
 ## Why Linear Momentum Matters — College and Beyond
 

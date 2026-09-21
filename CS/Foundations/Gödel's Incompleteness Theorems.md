@@ -40,14 +40,19 @@ It was a magnificent, optimistic vision: mathematics as a closed machine that, g
 
 ## 中文锚点
 
-**哥德尔不完备定理**（1931）粉碎了希尔伯特的梦想——用一套有限公理证明出**所有**数学真理。它有两条：
+小孩子爱玩一句话：“我现在说的这句话是假的。”它要是真的，那它就是假的；它要是假的，那它又成了真的。大家笑一笑就过去了，因为这只是一个文字把戏。1931 年，哥德尔只改了一个词。他的那句话是：“这句话无法被证明。”这一下就不是把戏了。假如这句话能被证明，那这套规则就证出了一句假话，而能证出假话的规则一文不值。所以只要规则是靠得住的，这句话就证不出来，而这恰恰就是它自己说的内容：它是真的，规则却永远够不着它。他真正费力的地方，是证明普通的算术已经丰富到足以写出这样一句谈论自己的话，办法是给每个公式编一个号，这样一来，关于数的命题同时也可以是关于公式的命题。结论并不是数学垮了，而是：任何一本关于算术的规则书，不管写得多长，总有一些真话落在它外面。
 
-- **第一不完备定理**：任何**一致的**（不自相矛盾）、**能表达算术**的、公理可机械列举的形式系统，都是**不完备的**——存在**真但无法在系统内证明**的命题。
-- **第二不完备定理**：这样的系统**无法证明自身的一致性**。
+### 术语对照 (Terms)
 
-**机制**：**哥德尔编码**把每个符号、公式、证明都编成一个数（"命题即数据"，正是 [[Turing Machine|图灵机]] 通用机的逻辑）。于是"可证性"变成一个**算术谓词**，系统能谈论自己。再构造一句自指命题 **G**：*"G 在本系统内不可证。"* 若 G 可证，则系统证出一句假命题（不一致）；故若系统一致，G **为真却不可证**——**真理超出可证性**。
-
-它**不是**说"数学崩塌了"或"什么都证不了"；它只说：没有任何**单一**系统能证明关于算术的**全部**真理。与 [[Turing Machine|停机问题]] 是同一把"对角线"利刃的两面。
+| English | 中文 | one-line meaning |
+|---|---|---|
+| incompleteness | 不完备性 | some true statements cannot be proved inside the system |
+| consistent | 一致的（不自相矛盾） | the system never proves both a statement and its negation |
+| formal system | 形式系统 | axioms plus rules, mechanical enough for a machine to check |
+| provable | 可证的 | reachable from the axioms by the rules |
+| Gödel numbering | 哥德尔编码 | every symbol, formula and proof gets a number |
+| self-reference | 自指 | a statement that talks about itself |
+| first / second incompleteness theorem | 第一 / 第二不完备定理 | true but unprovable statements exist / the system cannot prove its own consistency |
 
 ## The vocabulary, made precise
 

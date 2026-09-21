@@ -5,6 +5,7 @@ prerequisites:
   - "[[Sequences]]"
   - "[[Algebraic Proof]]"
 leads_to:
+  - "[[Prime Numbers]]"
   - "[[Four Colour Theorem]]"
   - "[[Summation of Series]]"
   - "[[Recursion]]"

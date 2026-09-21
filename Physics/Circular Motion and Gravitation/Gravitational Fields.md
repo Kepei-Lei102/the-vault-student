@@ -11,6 +11,8 @@ prerequisites:
 leads_to:
   - "[[Angular Momentum]]"
   - "[[Laplace and Napoleon]]"
+  - "[[Stellar Evolution]]"
+  - "[[The Solar System]]"
 teach_together:
   - "[[Electric Potential]]"
   - "[[Electric Field]]"
@@ -86,7 +88,7 @@ A field is a *map* of what a test mass would feel at every point before you put 
 
 ### 中文锚点 (Chinese Anchor)
 
-**引力场**就是"放一个有质量的物体进去就会受力"的区域。**场强** $g = F/m$，单位 N/kg（也就是 m/s²），是个矢量，方向就是受力方向。**万有引力定律**：两个质点之间 $F = Gm_1m_2/r^2$，$G$ 小到不可思议（$6.67\times10^{-11}$），所以只有行星级别的质量才显出引力；均匀球体对外面的物体，相当于全部质量集中在球心。于是，在一个质量为 $M$ 的天体外面，$g = GM/r^2$，指向球心——地表的 9.81 就是这么算出来的。**引力势** $\varphi = -GM/r$：把单位质量从无穷远拉到这一点，引力替你做功，所以你"欠"能量，势是负的；势能 $U = -GMm/r$，**场强是势的负梯度**（$g = -d\varphi/dr$，势曲线越陡场越强）。**轨道**：引力充当向心力，$GMm/r^2 = mv^2/r$ 给出 $v = \sqrt{GM/r}$ 和开普勒第三定律 $T^2 \propto r^3$；**逃逸速度** $\sqrt{2GM/R}$（地球 11.2 km/s）来自"动能正好填平势能的坑"；**地球同步轨道**半径 42 200 km，必须在赤道上空、自西向东。几个常见误区：太空里不是没有重力（空间站处 $g$ 还有地表的 88%，宇航员"失重"是因为正在自由下落）；势是负的不是"欠了谁"，只是零点定在无穷远；逃逸速度跟火箭质量无关；公式里的 $r$ 永远从**球心**量，不是离地高度。
+把球水平扔出去，它划一道弧线，落在几米外。用力大一点，落得就远一点。现在想象你站在高山顶上，扔得快到这样的程度：球往下掉了五米的时候，脚下圆圆的地球表面也正好弯下去了五米。球仍然在下落，和刚才一模一样，可它离地面再也不会更近——它成了一颗卫星。轨道就是这么回事：一场永远落不到地上的下落。月亮就是这样在下落，空间站也一样；宇航员飘着，不是因为那里没有引力（那个高度的引力还有地面的九成左右），而是因为人和飞船在一起下落。同一股引力，从地球伸向四面八方，随距离的平方减弱，既让苹果落地，也把月亮留在它的圆轨道上。
 
 ---
 
@@ -345,6 +347,8 @@ Not on Cambridge 9709 (no gravitation beyond $W = mg$), not on OxAQA 9260, 0580 
 - **Parent:** [[Circular Motion]] — gravity is the centripetal force in every orbit on this page; [[Newton's Laws of Motion]] — $F = ma$ with $F = GMm/r^2$.
 - **Energy:** [[Work, Energy and Power]] — the potential is work per unit mass, $mgh$ is its near-surface shadow, and orbital energy is KE $+$ U with KE $= -\tfrac12 U$.
 - **Calculus:** [[Integration]] gives $\varphi$ from $g$ (area under the $g$–$r$ graph); [[Differentiation]] gives $g$ from $\varphi$ (the gradient).
+- **Gravity against pressure:** [[Stellar Evolution]] — $GM^2/R$ as the energy store of a collapsing cloud, and the lifelong contest between a star's gravity and its hot gas.
+- **The descriptive companion:** [[The Solar System]] — the eight planets' measured data laid on $v = \sqrt{GM/r}$ and $T^2 \propto r^3$, a comet's energy ledger, seasons, phases and how the system formed.
 - **Leads to:** [[Electric Field]] — the same map with charge for mass and $1/4\pi\varepsilon_0$ for $G$, the one difference being that like charges repel; [[Angular Momentum]] — Kepler's second law *is* its conservation.
 - **Kinship:** [[Simple Harmonic Motion]] — the tunnel through the Earth; [[Vectors in Physics]] — field strengths add as vectors, potentials as scalars.
 - **Stories:** [[Newton vs Hooke]] — who had the inverse square first, and what "standing on the shoulders of giants" was really about; [[The 1919 Eclipse]] — the day Newton's gravity met its successor.

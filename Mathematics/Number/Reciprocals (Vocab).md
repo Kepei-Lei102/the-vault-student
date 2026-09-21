@@ -42,18 +42,7 @@ For a fraction $\tfrac{p}{q}$ with $p\ne0$ and $q\ne0$, the reciprocal is $\tfra
 
 ### 中文锚点
 
-**倒数 (dàoshù)** = reciprocal / 乘法逆元 (chéngfǎ nìyuán). 一个数 $x$ 的倒数是 $\dfrac{1}{x}$，使得 $x \cdot \dfrac{1}{x} = 1$。
-
-| 数 | 倒数 |
-|---|---|
-| $5$ | $\dfrac{1}{5}$ |
-| $\dfrac{p}{q}$ | $\dfrac{q}{p}$（**翻转分子分母**） |
-| $0$ | **不存在** (zero has no reciprocal) |
-| $1$ 和 $-1$ | 自己 |
-
-注：**0 没有倒数** —— 因为 $0$ 乘任何数都是 $0$，永远等不了 $1$。这就是为什么除以 $0$ 没有定义。
-
----
+把照片的宽度放大到原来的两倍，再缩成当前的一半，就回到了原来的宽度。“乘二”和“乘二分之一”刚好抵消，因为两个倍数相乘等于一。倒数就是这样一个能把乘法抵消掉的数：前面乘了多少，后面就乘它的倒数还原。零不行——无论再乘什么，零都回不到一。
 
 ## Key Vocabulary
 
@@ -61,7 +50,7 @@ For a fraction $\tfrac{p}{q}$ with $p\ne0$ and $q\ne0$, the reciprocal is $\tfra
 |---------|------|-------|
 | reciprocal | 倒数 | the number whose product with $x$ is $1$ |
 | multiplicative inverse | 乘法逆元 | formal name; same thing |
-| flip the fraction | 翻分数 | the rule for $\tfrac{p}{q} \to \tfrac{q}{p}$ |
+| flip the fraction | 分子分母对调 | the rule for $\tfrac{p}{q} \to \tfrac{q}{p}$ |
 | dividing by | 除以 | dividing by $x$ = multiplying by $\dfrac{1}{x}$ |
 
 > [!info] Why $0$ has no reciprocal

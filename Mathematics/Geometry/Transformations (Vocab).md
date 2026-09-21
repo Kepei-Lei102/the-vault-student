@@ -132,7 +132,7 @@ Missing any piece loses marks. And you must name the transformation type — "it
 
 ### OxAQA 9260 / Cambridge 0580
 
-**Syllabus ref:** G21 (9260) / E5.1 (0580). "Describe fully" questions are worth 2–3 marks and appear on almost every paper. At Extension, expect: combined transformations (one followed by another), negative scale factors, and finding the centre of enlargement by drawing rays. The connection to [[Matrix Transformations]] is 9260 Extension / 0606 territory.
+**Syllabus ref:** G21 (9260) / C7.1 and E7.1 (0580). 0580 Core: reflection in a vertical or horizontal line; rotation through multiples of 90° about the origin, a vertex or the midpoint of an edge; enlargement with positive and fractional scale factors only; translation by a column vector. 0580 Extended: reflection in any straight line, rotation about any centre, and **negative** scale factors; questions may combine transformations. 9260 Core uses positive scale factors and asks which properties each transformation preserves; 9260 Extension adds combined transformations and fractional and negative scale factors. "Describe fully" questions are worth 2–3 marks and appear on almost every paper. Representing transformations by $2 \times 2$ matrices ([[Matrix Transformations]]) is 9260 Extension content; neither 0580 nor 0606 includes matrices.
 
 ---
 

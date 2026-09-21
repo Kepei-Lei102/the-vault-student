@@ -28,9 +28,9 @@ tags:
 
 Count digits **after** the decimal point.
 
-$$3.14159 \approx 3.14 \quad \text{(2 d.p.)} \qquad 0.00673 \approx 0.007 \quad \text{(1 d.p.?)}$$
+$$3.14159\approx3.14\quad\text{(2 d.p.)},\qquad 0.00673\approx0.0\quad\text{(1 d.p.)}.$$
 
-Wait — that last one is wrong. $0.00673$ to 1 d.p. is $0.0$ (which is essentially 0). The instruction probably meant 1 significant figure: $0.007$. This confusion is why exams specify carefully.
+The same $0.00673$ is $0.007$ to **1 significant figure**. Decimal places specify a fixed position; significant figures start at the first nonzero digit.
 
 ### Significant figures (s.f.) 有效数字
 
@@ -40,11 +40,11 @@ Count digits from the **first non-zero digit**.
 |--------|--------|--------|--------|
 | $3472$ | $3000$ | $3500$ | $3470$ |
 | $0.005081$ | $0.005$ | $0.0051$ | $0.00508$ |
-| $20.06$ | $20$ | $20$ | $20.1$ |
+| $20.06$ | $2\times10^1$ | $2.0\times10^1$ | $20.1$ |
 
 ### 中文锚点
 
-取近似值 = 用更简单的数代替原来的数。小数位 (d.p.) = 小数点后有几位。有效数字 (s.f.) = 从第一个非零数字开始数。
+朋友问你还有多远，你看着导航上的“397米”，说“差不多400米”，对方就能判断该走一会儿还是得打车。那几米的差别，对眼前这个决定并不重要，省掉反而好理解。可如果你是在告诉外卖员门牌号，就不能把397号也说成400号了。取近似值，就是看清眼前要做什么，再决定哪些细节可以先放下。
 
 ## Key Vocabulary
 
@@ -53,7 +53,7 @@ Count digits from the **first non-zero digit**.
 | round / round off | 取近似值 / 四舍五入 | 四舍五入 literally means "discard 4, enter 5" — the Chinese rounding rule |
 | decimal place (d.p.) | 小数位 (xiǎoshù wèi) | Digits after the point |
 | significant figure (s.f.) | 有效数字 (yǒuxiào shùzì) | Digits that carry meaning, starting from the first non-zero |
-| truncate / truncation | 截断 (jiéduàn) | Cut off digits without rounding (always round down) |
+| truncate / truncation | 截断 (jiéduàn) | Discard digits; at integer precision, move towards zero (not always down) |
 | correct to | 精确到 (jīngquè dào) | "Correct to 2 d.p." = round to 2 decimal places |
 | nearest | 最近的 | "To the nearest 10" = round to tens |
 
@@ -66,19 +66,25 @@ Count digits from the **first non-zero digit**.
 > [!info] Beyond syllabus — Rounding in programming
 > Most programming languages give you three functions: `floor()` (always round down), `ceil()` (always round up), and `round()` — but `round()` sometimes behaves unexpectedly (Python's "banker's rounding" rounds 0.5 to the nearest *even* number!).
 >
-> The classic trick: to round $x$ to the nearest integer using only `floor`, compute `floor(x + 0.5)`. Adding 0.5 shifts the halfway boundary so that truncation becomes rounding. For ceiling: `floor(x) + 1` if $x$ is not already an integer, or just `ceil(x)`.
+> The classic trick: to round $x$ to the nearest integer using only `floor`, compute `floor(x + 0.5)`. This uses floor, not truncation, and sends exact halfway ties towards positive infinity. It is not Python’s ties-to-even rule, nor a universal rule for negative halfway cases. For ceiling: `floor(x) + 1` if $x$ is not already an integer, or just `ceil(x)`.
 >
-> Full details and worked examples in [[Upper and Lower Bounds]] §Beyond syllabus.
+> Full details and worked examples in [[Upper and Lower Bounds#3. Truncation vs Rounding — A Crucial Distinction|Upper and Lower Bounds]].
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
-**Syllabus ref:** N11 (9260), E1.9 Estimation (0580). Virtually every calculation paper specifies "Give your answer correct to 3 significant figures" or "2 decimal places." Losing marks for wrong rounding is the most avoidable mistake on the paper.
+### Cambridge 0580 (Core and Extended)
+**Syllabus ref:** C1.9 and E1.9, Estimation: round to a specified degree of accuracy, "includes decimal places and significant figures", and round an answer sensibly for its context. The standing instruction on every paper is stricter than most candidates notice: non-exact answers are to be given "correct to 3 significant figures, or 1 decimal place for angles in degrees", unless the question says otherwise, and "to earn accuracy marks, candidates should avoid rounding figures until they have their final answer". Rounding early is the most avoidable way to lose marks on the paper.
+
+### OxAQA 9260
+**Syllabus ref:** N11 (Core): round numbers and measures to an appropriate degree of accuracy, including decimal places and significant figures. The specification adds that students "should know not to round values during intermediate steps of a calculation".
+
+### Where this is assumed, not examined
+Cambridge 0606, 9709 and 9231 set no question on rounding as such, and each states its own accuracy rule on the front of the paper (usually 3 significant figures). The skill is assumed throughout.
 
 ## Connections
 
 - **Prerequisite:** [[Four Operations (Vocab)]] — need to compute before rounding
-- **Leads to:** [[Estimation (Vocab)]] — rounding to 1 s.f. is the first step of estimation
+- **Leads to:** [[Estimation (Vocab)]] — choose a convenient precision to estimate at the scale the task needs
 - **Leads to:** [[Upper and Lower Bounds]] — rounding creates error intervals
 - **Parallel:** [[Standard Form (Vocab)]] — s.f. and standard form often appear together
 

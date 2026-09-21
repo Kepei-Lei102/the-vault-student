@@ -10,6 +10,7 @@ leads_to:
   - "[[Second Derivative Test]]"
   - "[[Kinematics Calculus]]"
   - "[[Mean Value Theorem]]"
+  - "[[Partial Derivatives and the Gradient]]"
 tags:
   - subject/mathematics
   - domain/calculus
@@ -68,15 +69,16 @@ In every case, the gradient is zero at that exact moment. "Stationary" means the
 
 ### 中文锚点 (Chinese Anchor)
 
-**驻点** (zhùdiǎn)："驻"是停留、驻足的意思——函数在这里"停了一下"，斜率为零。
+把球竖直往上抛。到最高点的那一瞬间，它既不上升也不下落：高度暂时不变了，虽然重力一刻也没有停止往下拉它。函数的**驻点**就是这样的一瞬间：斜率为零，图像在这里是平的。“驻”就是停留、驻足的意思。但光知道“平”，还不知道自己站在什么地方。走在路上，山顶是平的，坑底是平的，上坡途中的一小段平台也是平的：在那儿歇一下，接着还是上坡。要分清它们，得看两边的坡：先上后下是山顶，先下后上是谷底；要是两边都是上坡，或者都是下坡，那就只是个平台。
 
-三种驻点：
+### 术语对照 (Terms)
 
-- **极大值** (jídàzhí)：函数先升后降，到了山顶。$f'(x)$从正变负。
-- **极小值** (jíxiǎozhí)：函数先降后升，到了谷底。$f'(x)$从负变正。
-- **拐点**（水平拐点）：函数"停了一下"但没有转弯，继续朝同一方向走。$f'(x)$不变号。
+- **驻点** (zhùdiǎn, stationary point)：$f'(x) = 0$ 的点。
+- **极大值** (jídàzhí, local maximum)：函数先升后降，$f'(x)$ 从正变负。
+- **极小值** (jíxiǎozhí, local minimum)：函数先降后升，$f'(x)$ 从负变正。
+- **水平拐点** (stationary point of inflection)：函数停了一下但没有掉头，$f'(x)$ 不变号。
 
-关键判断：$f'(x) = 0$只告诉你"这里是平的"，不告诉你是山顶还是谷底。要判断类型，需要看$f'(x)$的变号情况，或者用$f''(x)$。
+$f'(x) = 0$ 只说明“这里是平的”；要判断类型，看 $f'(x)$ 在两侧的符号，或者用 $f''(x)$。
 
 ## Notation
 

@@ -5,6 +5,7 @@ prerequisites:
   - "[[Electromagnetic Spectrum]]"
 leads_to:
   - "[[Hubble's Law and the Expanding Universe]]"
+  - "[[Stellar Evolution]]"
 teach_together:
   - "[[Henrietta Leavitt and the Cosmic Yardstick]]"
   - "[[Energy Levels and Line Spectra]]"
@@ -314,6 +315,7 @@ It is the inverse-square law written on a logarithmic scale, not an independent 
 - **Builds on:** [[Progressive Waves]] — power spread over area; [[Electromagnetic Spectrum]] — wavelength and thermal radiation.
 - **Companion:** [[Energy Levels and Line Spectra]] — lines reveal composition; continuum shape constrains temperature.
 - **Next inference:** [[Hubble's Law and the Expanding Universe]] — distances combined with redshifts; [[Doppler Effect]] supplies the spectral-shift measurement.
+- **What the measurements are for:** [[Stellar Evolution]] — plot luminosity against surface temperature and the stars sort themselves by mass and age; parallax supplies the distances.
 - **Energy source:** [[Nuclear Physics]] — fusion and mass–energy; surface temperature is not core temperature.
 - **Mathematics:** [[Integration]] — area under a spectral density; [[Logarithms]] — magnitude ratios; [[Error Propagation]] — what uncertainty does to inferred size.
 - **Experimental judgment:** [[Accuracy vs Precision]] — repeated measurements cannot remove an unmodelled calibration bias.

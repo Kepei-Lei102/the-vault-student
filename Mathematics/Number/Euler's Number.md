@@ -338,11 +338,11 @@ Students see $e^{i\pi} + 1 = 0$ and assume $e$ and $\pi$ must be linked by some 
 
 ### Cambridge 0606
 
-$e$ appears explicitly on the 0606 syllabus under "Exponential and logarithmic functions." Expect:
-- Sketching $y = e^x$, $y = e^{-x}$, and $y = \ln x$
-- Solving equations of the form $e^x = k$, $\ln x = k$, and equations reducing to these
-- Problems mixing $e^x$ with the laws of logarithms
-- Continuous compound-interest problems using $y = Ae^{kt}$
+$e$ appears by name in **§6, Logarithmic and exponential functions**, and again in the calculus section:
+- **§6.1:** the properties and graphs of $e^x$ and $\ln x$, each as the inverse of the other, with their asymptotes stated. Graphs are limited to $y = ke^{nx} + a$ and $y = k\ln(ax + b)$ with integer constants, and the syllabus says series expansions are not required.
+- **§6.2–6.3:** the laws of logarithms including change of base (the syllabus's own example asks for $1/\log_5 e$ as a natural logarithm), and equations of the form $a^x = b$.
+- **§14.3:** the derivatives of $e^x$ and $\ln x$ are on the list of standard derivatives, with constant multiples, sums and composites.
+- Growth, decay and compound interest are not named anywhere in the 0606 syllabus. A question may still dress an equation such as $y = Ae^{kt}$ in that kind of story, and it is solved with §6.3.
 
 The three-definitions story and the irrationality proof are *not* examinable on 0606 — but the letter $e$ is treated as a real, specific constant, not a mystery. Students should be comfortable typing "e" and "ln" on their calculator buttons.
 
@@ -354,11 +354,19 @@ The base-$e$ form is **not required** on 9260 — the extension topic N20 (expon
 
 Same position as 9260: $e$ is not required; the discrete/base-$b$ forms suffice.
 
-### A-Level (Edexcel / AQA / OCR / CIE)
+### Cambridge 9709 — §2.2 and §3.2 (Papers 2 and 3)
 
-- **Year 1:** Derivatives of $e^x$ and $\ln x$ are new named results. Proof at "quote and use" level — the full $f(x) = \sum x^k/k!$ argument is beyond-syllabus but worth seeing.
-- **Year 2:** Integration of $e^x$ and $\tfrac{1}{x}$; separation of variables for first-order ODEs $\tfrac{dy}{dt} = ky$.
-- **Further Maths:** Taylor series $e^x = \sum x^k/k!$ is proved rigorously; Euler's formula $e^{i\theta} = \cos\theta + i\sin\theta$ becomes the main tool for trig identities and De Moivre's theorem.
+- "The definition and properties of $e^x$ and $\ln x$, including their relationship as inverse functions and their graphs", with the graph of $y = e^{kx}$ for positive and negative $k$. Change of base is excluded here, unlike 0606.
+- Logarithms are used to solve equations and inequalities and to reduce $y = kx^n$ and $y = k(a^x)$ to linear form.
+- §2.4/§3.4 then use the derivatives of $e^x$ and $\ln x$, and §2.5/§3.5 their integrals. The three definitions, the series and the irrationality proof are not examined.
+
+### Cambridge 9231 Further Mathematics
+
+- Further Pure 2 §2.1 defines the six hyperbolic functions "in terms of the exponential function" ([[Hyperbolic Functions]]), and Maclaurin's series is on the syllabus and the formula list ([[Maclaurin Series]]), where $e^x = \sum x^k/k!$ is the first example.
+
+### Edexcel IAL — P3.3.1 · OxAQA 9660 — P2.5
+
+- Both name $e^x$ and its graph; Edexcel specifies $y = e^{ax+b} + c$. Derivatives and integrals of $e^x$ and $\ln x$ follow in the same units.
 
 ### IB AA / AI
 

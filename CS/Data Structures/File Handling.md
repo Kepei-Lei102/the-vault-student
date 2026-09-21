@@ -36,7 +36,9 @@ tags:
 
 ## 中文锚点
 
-游戏打了三小时不存档，关机——全没了。变量就是这样活着的：它们住在内存里，像写在教室黑板上的字，程序一退出、电一断，黑板就被擦得干干净净。**文件就是存档**：把数据誊进磁盘这本"笔记本"，它就**活得比程序久**（持久化），明天开机还在。和笔记本打交道有一套完整的礼节：**打开**（跟系统借到本子），读或写（**文件指针**是你的书签，记着读到哪儿），**关闭**（合上、还回去）。读到最后一页再没有字，那是**文件结束**——一个"到头了"的**状态**，不是藏在末尾的某个特殊字符，循环拿它当停止信号。最要紧的礼节藏在"关闭"里：你写的字不会立刻落到磁盘上，而是先攒在内存的**缓冲区**里，攒够一批才真正誊过去——合上本子那一刻，没誊完的才被全部誊清。这也是 U 盘要"安全弹出"的全部道理：直接拔，缓冲区里没誊完的字就永远丢在半路了。写的方式还分两种脾气：**写模式**翻开就把旧内容整本撕掉从头来，**追加模式**只在末尾续写——考卷年年爱考你分清这两位，分不清的代价是整个文件。
+昨晚退出游戏，今天再打开，角色还站在那个村口。并不是游戏在你关机后还偷偷运行，而是它把位置、背包和进度写进了存档，再次启动时照着记录恢复现场。内存帮程序记住眼前正在发生的事；保存在持久存储里的文件，让选定的信息能留到程序结束以后。程序得自己决定哪些东西值得留下，又该怎样读回来——“存档”按钮背后，就是这份把现在交给下一次的约定。
+
+## Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -353,7 +355,7 @@ The most consequential one, because it survives into professional work and fails
 
 ### Where this is *not* examined
 
-**AP Computer Science A has no file I/O at all** — input arrives only through `Scanner`, and no free-response question can require reading a file. Buffering, flushing, encodings and line-ending conventions are examined on none of the four boards; they are here because they explain the rules that are.
+**AP Computer Science A examines reading a text file, and only reading.** Topic 4.6 of the course effective Fall 2025, *Using Text Files*, asks for Java that opens a file with `File` and `Scanner`, declares `throws IOException`, loops while `hasNext()`, reads with `nextInt`, `nextDouble`, `nextLine` or `next`, splits a line with `String.split`, and closes the scanner. Writing and appending files are not in that course, and keyboard input is excluded. The lifecycle and the read-until-the-end loop on this card are the same idea in Python. Buffering, flushing, encodings and line-ending conventions are examined on none of the four boards; they are here because they explain the rules that are.
 
 > [!info] Beyond syllabus — why "written" still doesn't mean "safe"
 > `close` empties your program's buffer into the operating system. The operating system then has a buffer of its own, and the drive has one after that. A power cut in between can still lose data that every layer reported as written. Programs that genuinely cannot afford this — databases, above all — call `fsync`, which asks the whole chain to commit before returning, and pay for it in speed. It is the same trade the whole topic runs on: buffering is fast because it is a promise about the future, and a promise is not a fact. The database's answer to *how do I keep a promise across a crash* is the transaction log, which is why [[Relational Databases]] exist as something other than a tidy file format.

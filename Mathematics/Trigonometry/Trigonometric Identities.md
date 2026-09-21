@@ -8,6 +8,7 @@ prerequisites:
   - "[[Coordinate Geometry of the Circle]]"
   - "[[Exact Trigonometric Values]]"
 leads_to:
+  - "[[Fourier Series]]"
   - "[[Hyperbolic Functions]]"
   - "[[Trigonometric Equations]]"
   - "[[Differentiation Rules]]"
@@ -60,7 +61,7 @@ This is true for **every** real number $x$. Plug in $x = 0$, $x = \pi/4$, $x = \
 
 ### 中文锚点
 
-三角恒等式 = 对所有 $x$（在定义域内）都成立的三角等式。区别于"三角方程"——方程只对**特定** $x$ 成立，需要去解；恒等式对**所有** $x$ 成立，是变形工具。最重要的恒等式 $\sin^2 x + \cos^2 x = 1$ 来自单位圆上的勾股定理：单位圆上一点 $(\cos\theta, \sin\theta)$ 到原点的距离恒为 $1$，所以 $\cos^2\theta + \sin^2\theta = 1$。其他恒等式几乎全是它的推论。
+盯着钟表的指针尖看：它一会儿向上，一会儿向左，可离表盘中心的距离始终没变。横着偏了多少、竖着偏了多少，看似各自在变，其实被指针的长度绑在一起。把指针长度算作“1”，横向、纵向的偏移量就分别是余弦和正弦；勾股定理说，它们的平方加起来永远是一。这里记录的不是指针停在某个位置的巧合，而是它怎么转都改不了的关系——这就是恒等式的意思。
 
 > [!tip] Identity vs equation — keep them separate
 > $\sin^2 x + \cos^2 x = 1$ is an **identity** — universally true. $\sin x = \tfrac{1}{2}$ is an **equation** — true only at $x = \pi/6, 5\pi/6, \pi/6 + 2\pi, \dots$ When 0606 §10.6 says *"prove that …"*, they want an identity argument: start with one side, use known identities, transform it into the other side. Solving for $x$ would be the wrong response.
@@ -140,7 +141,7 @@ $$
 These two are syllabus-named on Cambridge 0606 §10.4. Each is **just the master identity divided through** — no separate memorisation if you remember the master and the divisions. (Some boards write them as $\sec^2 x = 1 + \tan^2 x$ and $\csc^2 x = 1 + \cot^2 x$ — same thing, terms reordered.)
 
 > [!info] Beyond syllabus — geometric reading of $\sec^2 = 1 + \tan^2$
-> Inside the unit circle, draw the radius to $P = (\cos x, \sin x)$. Now extend the radius outward until it hits the **vertical tangent line** $X = 1$ (the line $x = 1$). The extension hits at the point $(1, \tan x)$, and its distance from the origin is exactly $\sec x$. The right triangle with vertices $(0,0)$, $(1,0)$, $(1, \tan x)$ has legs $1$ and $\tan x$ with hypotenuse $\sec x$. Pythagoras: $1 + \tan^2 x = \sec^2 x$. The same picture explains why "secant" and "tangent" are named after the geometric *secant line* (cuts the circle, length to the tangent point) and *tangent line* (touches the circle once). 17th-century names; same picture.
+> For an acute angle $x$, draw the radius to $P = (\cos x, \sin x)$ on the unit circle. Now extend the radius outward until it hits the **vertical tangent line** $X = 1$ (the line $x = 1$). The extension hits at the point $(1, \tan x)$, and its distance from the origin is exactly $\sec x$. The right triangle with vertices $(0,0)$, $(1,0)$, $(1, \tan x)$ has legs $1$ and $\tan x$ with hypotenuse $\sec x$. Pythagoras: $1 + \tan^2 x = \sec^2 x$. The same picture explains why "secant" and "tangent" are named after the geometric *secant line* (cuts the circle, length to the tangent point) and *tangent line* (touches the circle once). 17th-century names; same picture.
 
 ---
 
@@ -253,7 +254,7 @@ Cambridge 0606 §10.6 explicitly tests **proving identities**. The standard play
 
 **Example 1.** Prove that $\dfrac{\cos x}{1 - \sin x} + \dfrac{\cos x}{1 + \sin x} = \dfrac{2}{\cos x}$.
 
-Common denominator on the LHS:
+*Trigger: two fractions with conjugate denominators. Tools: common denominator, difference of squares, then the Pythagorean identity.*
 
 $$
 \text{LHS} = \frac{\cos x(1 + \sin x) + \cos x(1 - \sin x)}{(1 - \sin x)(1 + \sin x)}
@@ -266,7 +267,7 @@ The key move was **$(1 - \sin x)(1 + \sin x) = 1 - \sin^2 x = \cos^2 x$** — a 
 
 **Example 2.** Prove that $\sin^4 x - \cos^4 x = \sin^2 x - \cos^2 x$.
 
-Difference of squares:
+*Trigger: a difference of fourth powers. Tools: factor as a difference of squares, then use the Pythagorean identity.*
 
 $$
 \text{LHS} = (\sin^2 x - \cos^2 x)(\sin^2 x + \cos^2 x) = (\sin^2 x - \cos^2 x) \cdot 1 = \text{RHS}. \;\square
@@ -274,7 +275,7 @@ $$
 
 **Example 3.** Prove that $\tan x + \cot x = \sec x \csc x$.
 
-Convert to sine and cosine:
+*Trigger: tangent and cotangent have different denominators. Tools: rewrite as sine/cosine, combine fractions, then use Pythagoras.*
 
 $$
 \text{LHS} = \frac{\sin x}{\cos x} + \frac{\cos x}{\sin x}
@@ -285,7 +286,7 @@ $$
 
 **Example 4.** Prove that $\dfrac{1 + \cos x}{\sin x} = \dfrac{\sin x}{1 - \cos x}$.
 
-Cross-multiply (this is just rewriting — both sides equal a third quantity):
+*Trigger: two fractions on the common domain $x\ne n\pi$. Tools: reversible cross-multiplication and the Pythagorean identity.* It suffices to prove:
 
 $$
 (1 + \cos x)(1 - \cos x) = \sin^2 x.
@@ -377,7 +378,7 @@ AP Precalculus covers the Pythagorean trio, reciprocal/quotient, sum/difference,
 - **Leads to:** [[Coordinate Geometry of the Circle]] — the parametric form $(a + r\cos\theta, b + r\sin\theta)$ uses $\cos^2 + \sin^2 = 1$ to verify the equation
 - **Application:** [[Integration by Substitution]] — trig substitutions like $x = a\sin\theta$ rely on $1 - \sin^2\theta = \cos^2\theta$
 - **Application:** physics — wave superposition uses sum-to-product identities ([[Superposition and Interference]] turns $\sin 2\pi f_1 t + \sin 2\pi f_2 t$ into a carrier times a beat envelope with exactly this formula); AC circuit analysis uses $R\sin(x + \alpha)$ form
-- **Beyond high school:** Fourier series — every periodic function is a sum of $\sin$ and $\cos$, and the orthogonality of $\sin nx$, $\cos mx$ is itself an identity (integrals of products vanish unless $n = m$)
+- **Beyond high school:** [[Fourier Series]] — product-to-sum identities prove orthogonality over a full period; projections give the harmonic coefficients. The convergence conditions matter, especially at a jump.
 
 ---
 

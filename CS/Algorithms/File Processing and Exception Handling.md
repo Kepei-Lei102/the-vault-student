@@ -418,7 +418,7 @@ A bug is fixed, not caught. Exception handling is for the failure the program co
 
 ### Where this is *not* examined
 
-**AP Computer Science A** names specific exceptions — `ArrayIndexOutOfBoundsException`, `NullPointerException`, `ArithmeticException`, `InputMismatchException` — as run-time errors a student should recognise, but has **no `try`/`catch`** and **no file I/O**. **IB Computer Science** B2.5 File processing is credited to [[File Handling]]; exception handling is not a named learning outcome. Serial, sequential and random *organisation* is examined nowhere but 9618.
+**AP Computer Science A** names specific exceptions — `ArrayIndexOutOfBoundsException`, `NullPointerException`, `ArithmeticException`, `InputMismatchException` — as run-time errors a student should recognise, along with `StringIndexOutOfBoundsException`, `IndexOutOfBoundsException` and `ConcurrentModificationException`. It has **no `try`/`catch`**: a method that reads a file declares `throws IOException` and handles nothing. It does examine **reading a text file** with `File` and `Scanner` (topic 4.6 of the course effective Fall 2025), which [[File Handling]] carries; writing files is outside it. **IB Computer Science** credits B2.5 File processing to [[File Handling]], and **names exception handling as its own statement, B2.1.3**: the points where a program can fail (unexpected input, an unavailable resource, a logic error) and the `try`/`except`/`finally` construct, which is Part III of this card. Serial, sequential and random *organisation* is examined nowhere but 9618.
 
 ## Connections
 

@@ -188,19 +188,23 @@ The full proof is the showcase example in [[Proof by Contradiction]]. The same t
 
 Extension paper: simplify surds, rationalise denominators (both types), leave answers in exact form. Frequently appears alongside [[Pythagoras Theorem]] (exact lengths) and [[Completing the Square]] (exact roots of quadratics).
 
-### Cambridge 0580 Extended
+### Cambridge 0580 (Extended only)
 
-**Syllabus ref:** E1.18 — surds, simplification, rationalising the denominator.
+**Syllabus ref:** E1.18, Surds: understand and use surds, including simplifying expressions and rationalising the denominator. The Core row C1.18 reads "Extended content only", so a Core candidate meets no surds. The papers' standing rule also matters: where a question asks for an exact value, the answer "may need to be given in terms of π or in surd form".
 
-Paper 2 (non-calculator): simplify surds, rationalise single-surd denominators. Paper 4: surds in context (geometry, quadratics). Typical question: "Express $\dfrac{6}{\sqrt{3}}$ in the form $a\sqrt{3}$."
+Paper 2 is non-calculator and is where simplifying and rationalising by hand belong; Paper 4 uses surds in context (geometry, quadratics). Typical question: "Express $\dfrac{6}{\sqrt{3}}$ in the form $a\sqrt{3}$."
 
 ### Cambridge 0606
 
-Surds are **assumed knowledge** from 0580. Not directly tested but needed throughout — particularly when solving quadratics by completing the square and giving exact answers.
+The 2025–27 syllabus removed its Indices and surds topic. Surds are now IGCSE Mathematics content that "will not be tested directly but … may be required in response to questions on other topics", in practice whenever an exact answer is wanted from a quadratic or a trigonometric value.
 
-### AP / IB / A-Level
+### Cambridge 9709
 
-Surds are foundational. At A-Level, rationalising denominators with binomial surds is explicitly assessed. IB AA HL includes proof of irrationality of $\sqrt{2}$ as a required proof. The concept extends to **algebraic surds** like $\sqrt{x + 1}$ in calculus (domain restrictions, differentiation via chain rule).
+Prior knowledge, stated in the syllabus: candidates should "be able to carry out simple manipulation of surds", with $\sqrt{12} = 2\sqrt{3}$ given as an example. No question is set on surds as a topic; exact answers throughout Pure 1 and Pure 3 rely on them.
+
+### Beyond these boards
+
+Cambridge 9231 and AP Calculus assume surds without examining them. The idea extends to **algebraic surds** such as $\sqrt{x + 1}$ in calculus (domain restrictions, differentiation by the [[Chain Rule]]), and the proof that $\sqrt{2}$ is irrational is the classic first proof by contradiction.
 
 ---
 

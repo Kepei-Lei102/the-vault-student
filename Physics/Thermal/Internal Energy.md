@@ -8,6 +8,7 @@ leads_to:
   - "[[First Law of Thermodynamics]]"
   - "[[Specific Heat Capacity]]"
   - "[[Entropy and the Second Law]]"
+  - "[[Thermal Expansion]]"
 tags:
   - subject/physics
   - domain/thermal-physics
@@ -215,6 +216,7 @@ The inspected current AP Physics 1 and both AP Physics C frameworks do not presc
 - **Parent:** [[Kinetic Theory and the Ideal Gas]] — supplies the per-molecule energy $\langle E_k\rangle = \tfrac{3}{2}kT$ that this card totals over the whole population.
 - **Prerequisites:** [[Work, Energy and Power]] (the $\tfrac{1}{2}mv^2$ kinetic energy and the energy-accounting mindset), [[Kinetic Theory and the Ideal Gas]] (temperature as molecular KE; the ideal-gas assumptions that kill the PE term).
 - **Components:** the random molecular **kinetic** energy (translation + rotation + vibration, counted by degrees of freedom) and the **intermolecular potential** energy (the bond well).
+- **The well's lopsidedness, made visible:** [[Thermal Expansion]] — a steep inner wall and a gentle outer slope push the average spacing outward as the energy rises; a symmetric well would give no expansion.
 - **Extensions:** [[First Law of Thermodynamics]] ($\Delta U = Q + W$ — internal energy is the state function heat and work change), [[Specific Heat Capacity]] ($C_V = \tfrac{f}{2}R$ from degrees of freedom; latent heat as $\Delta E_p$) — the rest of the Thermal bay.
 - **Cross-domain — mechanics:** [[Hooke's Law for Springs]] (the intermolecular well is parabolic near $r_0$, so bonds act as springs — the microscopic root of Hooke's law), [[Simple Harmonic Motion]] (atoms vibrating in a solid lattice).
 - **Story partner:** [[Stories/Boltzmann's Tombstone]] — internal energy falls out of the partition function $Z$, the same statistical machinery behind $S = k\ln W$.

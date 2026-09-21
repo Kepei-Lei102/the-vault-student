@@ -150,14 +150,14 @@ Total: $100\pi + 25\pi + 50\pi = 175\pi \approx 549.8\,\text{cm}^2$.
 
 ### Cambridge 0580 Extended
 
-**Syllabus ref:** E5.4. The 0580 Extended formula sheet *typically gives* the sphere, cone, and pyramid formulas — the prism, cylinder, cuboid, and cube formulas are expected to be known cold. Always check the front of the exam for the formula list.
+**Syllabus ref:** C5.4 / E5.4 (surface area and volume of a cuboid, prism, cylinder, sphere, pyramid and cone); compound solids and parts of solids, such as a frustum, are E5.5. The 2025–27 **List of formulas gives**: curved surface area of a cylinder, curved surface area of a cone, surface area of a sphere, and the volumes of a prism, pyramid, cylinder, cone and sphere. It does **not** give the cuboid, the area of the flat ends, or how to assemble a total surface area. "Prism" means any solid of uniform cross-section. Answers may be asked for in terms of $\pi$.
 
-> [!tip] Formula-sheet status (placeholder — Queue M1)
-> The cone $\tfrac{1}{3}\pi r^2 h$, sphere $\tfrac{4}{3}\pi r^3$, and pyramid $\tfrac{1}{3}\times\text{base}\times h$ formulas are *typically* on the 0580 formula sheet. The cylinder ($\pi r^2 h$), cuboid, and "prism = base × length" must be memorised.
+> [!tip] Formula-sheet status (0580, 2025–27)
+> Given: $V = Al$ (prism), $\tfrac13 Ah$ (pyramid), $\pi r^2 h$ (cylinder), $\tfrac13\pi r^2 h$ (cone), $\tfrac43\pi r^3$ (sphere), and the curved surface areas $2\pi r h$, $\pi r l$ and $4\pi r^2$. To know: the cuboid, and that a *total* surface area adds the flat faces to the curved one.
 
 ### OxAQA 9260
 
-**Syllabus ref:** G16 Ext. Same content as 0580 E5.4. 9260 students should expect frustum-of-a-cone problems; these are explicitly listed.
+**Syllabus ref:** G15 (Core: $V = Ah$ for a constant cross-section) and G16 Extension (surface area and volume of spheres, pyramids, cones and composite solids, **including frustums of pyramids and cones**, which are named explicitly).
 
 ### A-Level / IB / AP
 

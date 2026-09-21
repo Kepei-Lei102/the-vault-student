@@ -12,6 +12,8 @@ tags:
   - domain/number
   - level/IGCSE
   - curriculum/OxAQA-9260
+  - curriculum/IB-AA
+  - curriculum/IB-AI
   - curriculum/Cambridge-0580
   - syllabus/9260-N8
   - syllabus/0580-E1-8
@@ -23,11 +25,11 @@ tags:
 
 ## Definition
 
-**Standard form** (标准式), also called **scientific notation** (科学记数法), writes any number as:
+**Standard form** (标准式), also called **scientific notation** (科学记数法), writes a positive number as:
 
 $$a \times 10^n \qquad \text{where } 1 \leq a < 10 \text{ and } n \text{ is an integer}$$
 
-Large numbers get a positive $n$; small numbers get a negative $n$.
+Numbers at least 10 have positive $n$; numbers between 0 and 1 have negative $n$; numbers from 1 up to, but not including, 10 have $n=0$. For a negative number, write the minus sign separately (for example $-4.7\times10^{-3}$). Zero has no normalised form with $1\leq a<10$.
 
 | Number | Standard form | $n$ |
 |--------|--------------|-----|
@@ -38,7 +40,7 @@ Large numbers get a positive $n$; small numbers get a negative $n$.
 
 ### 中文锚点
 
-标准式 = $a \times 10^n$ 的形式，其中 $1 \leq a < 10$。大数用正指数，小数用负指数。中文更常说"科学记数法"。
+一座城市有六百万人，把它写成“六个一百万”，是不是比盯着一长串零更容易看清大小？科学记数法做的就是这种分工：前面的数说有几份，后面的十的幂说每份有多大。零没有丢，只是被收进了“每份多大”里。这样比较两个城市的人口时，我们先看每份有多大，再看有几份，就不容易因为数错一个零而差了十倍。
 
 ## Key Vocabulary
 
@@ -46,31 +48,44 @@ Large numbers get a positive $n$; small numbers get a negative $n$.
 |---------|------|-------|
 | standard form | 标准式 (biāozhǔn shì) | Cambridge/OxAQA term |
 | scientific notation | 科学记数法 | Same thing; used in IB, AP, and sciences |
-| mantissa | 尾数 (wěishù) | The $a$ part ($1 \leq a < 10$). See etymology note below |
+| coefficient / significand | 系数 / 有效数 | The $a$ part ($1 \leq a < 10$) |
 | exponent / power | 指数 (zhǐshù) | The $n$ in $10^n$ |
 | order of magnitude | 数量级 (shùliàng jí) | The power of 10; used for rough comparisons |
 
-> [!info] Why "mantissa"?
-> The word *mantissa* is Latin for "makeweight" or "something added" — the small extra piece a shopkeeper would throw in to round up a sale. In the days of **logarithm tables** (before calculators), every logarithm had two parts: the *characteristic* (the integer part, which told you the order of magnitude) and the *mantissa* (the decimal part, which you looked up in a table). When scientific notation came along, the word was borrowed for the $a$ part — the "significant content" that you multiply by the power of 10. The Chinese 尾数 (wěishù, "tail number") captures the same idea: it's the precise bit that comes after the big-picture power of 10.
+> [!info] Coefficient, significand and mantissa
+> **Coefficient** or **significand** names the $a$ part here. You may also encounter *mantissa*, but that word has another established meaning: the fractional part of a logarithm. Check which convention is being used.
 
 > [!warning] $a$ must be between 1 and 10
-> $56 \times 10^3$ is NOT standard form ($56 \geq 10$). Neither is $0.56 \times 10^5$ ($0.56 < 1$). The correct form is $5.6 \times 10^4$. Exam mark schemes are strict about this.
+> $56 \times 10^3$ is NOT standard form ($56 \geq 10$). Neither is $0.56 \times 10^5$ ($0.56 < 1$). The correct form is $5.6 \times 10^4$. These other expressions have the same value but are not normalised.
 
 ## Calculating in Standard Form
 
-**Multiplying:** Multiply the $a$-parts, add the indices.
+**Tool: index laws. Trigger: a product of powers of the same base.** Multiply the coefficients and add the indices; renormalise if the coefficient reaches 10.
 $$(3 \times 10^4) \times (2 \times 10^5) = 6 \times 10^9$$
 
-**Dividing:** Divide the $a$-parts, subtract the indices.
+**Tool: index laws. Trigger: a quotient of powers of 10.** Divide the coefficients and subtract the indices.
 $$(8 \times 10^7) \div (4 \times 10^3) = 2 \times 10^4$$
 
-**Adding/Subtracting:** Convert to the same power of 10 first, then add/subtract.
+**Tool: a common scale. Trigger: addition combines counts only when their bundle sizes match.** Convert to the same power of 10 first, then add/subtract the coefficients.
 $$(3.2 \times 10^5) + (4.8 \times 10^4) = (3.2 \times 10^5) + (0.48 \times 10^5) = 3.68 \times 10^5$$
 
 ## Exam Notes
 
-### OxAQA 9260 / Cambridge 0580
-**Syllabus ref:** N8 (9260), E1.9 (0580). Calculator display shows standard form as `5.6E4`. Students must convert between ordinary numbers and standard form in both directions. Common question: "Write $0.00032$ in standard form."
+### Cambridge 0580 — C1.8 / E1.8
+
+Both tiers require conversion into and out of standard form and calculations with it. **Core calculation with standard form is expected only on Paper 3**; conversion remains part of the Core content. Extended includes the same operations. Keep the coefficient in the stated range and interpret calculator notation such as `5.6E4` as $5.6\times10^4$. E1.9 concerns estimation, not standard form.
+
+### OxfordAQA 9260 — N8
+
+Core N8 requires calculation with and interpretation of standard form, including calculator displays. Extension includes Core content. Conversion and arithmetic are both relevant; the examples above are original teaching examples, not quoted past-paper questions.
+
+### IB Mathematics AA and AI — SL 1.1, also included at HL
+
+Both guides explicitly require operations in scientific notation. Their SL 1.1 guidance rejects calculator/computer notation as the final written form: write $5.2\times10^{30}$ rather than `5.2E30`. This is shared AA/AI content, not an HL-only extension.
+
+### Later courses — assumed notation
+
+Cambridge 0606/9709/9231, Edexcel IAL Mathematics/Further Mathematics and OxfordAQA 9660 build on earlier numerical skills; this is not a separate new theorem or unit in those specifications. AP Calculus AB/BC and AP Statistics likewise use numerical representations without a standalone scientific-notation outcome. Correct notation can still be needed inside a problem: absence of a dedicated unit does not mean the notation is forbidden or irrelevant. No formula-sheet entry is required.
 
 ## Connections
 

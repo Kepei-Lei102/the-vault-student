@@ -34,21 +34,13 @@ tags:
 Here is the idea worth carrying away, because it recurs everywhere in computing:
 
 > [!tip] Limitation turned into a feature
-> A variable has only a **fixed** number of bits, so its arithmetic is forced to **wrap around** when it runs off the end — a hard limitation. Two's complement doesn't fight that wraparound; it **weaponises** it. By choosing to represent $-x$ as the bit-pattern that *wraps back to zero when you add $x$*, negatives and subtraction become free: the **same adder circuit** that does $a+b$ now does $a-b$ with no new hardware, and the carry that falls off the top — the "overflow" — is exactly what makes it work.
+> A variable has only a **fixed** number of bits, so its arithmetic is forced to **wrap around** when it runs off the end — a hard limitation. Two's complement doesn't fight that wraparound; it **weaponises** it. By choosing to represent $-x$ as the bit-pattern that *wraps back to zero when you add $x$*, negatives and subtraction become free: the **same adder circuit** that does $a+b$ now does $a-b$ with no new hardware, and discarding the carry that falls off the top is exactly what makes the modular arithmetic work. A discarded carry is **not the same as signed overflow**; for example, $5+(-5)=0$ is representable and does not overflow.
 
 That is the whole story. Everything below is detail in service of that one move.
 
 ### 中文锚点
 
-**补码**（bǔmǎ, two's complement）：计算机用来在**固定位数**里存**负整数**的方法。$n$ 位能表示 $-2^{n-1}$ 到 $+2^{n-1}-1$（一字节：**−128 到 +127**）。
-
-核心思想——**把限制变成特性**：变量位数固定，算术必然**溢出回绕**（wrap around）。补码不是对抗回绕，而是**利用**它：把 $-x$ 定义成「再加 $x$ 就回到 0」的那个位模式。于是减法 = 加法，**同一个加法器电路**既能算 $a+b$ 又能算 $a-b$，从顶端丢掉的进位（溢出）正是让它成立的关键。
-
-**最核心的特性**：$a+(-a)=0$ —— 「负数」的本质就是「加上它等于零」的那个数（加法逆元）。补码正是**靠溢出**做到这一点：$a+(-a)$ 加到 $2^n$，最高位进位溢出丢掉，正好回绕成 $0$。所以 $-a$ 不是「$a$ 戴了个负号」，而是被**定义**成「能把 $a$ 抵消成零」的位模式。
-
-- **取负的口诀**：所有位**取反**，再 **+1**（invert + 1）。
-- 最高位权重是 **负的** $-2^{n-1}$（不是单纯的「符号旗」）。
-- 只有**一个 0**（不像原码 sign-and-magnitude 有 +0 和 −0 两个）。
+想象一个只显示三位数的计数器：999 再加 1，就转回 000。在这个圈上，加 999 和减 1 会落在同一格——005 加 999，窗口里就只剩 004。十进制计数器只是个比方；补码把这招搬到格数为 2 的幂的二进制圈上：在八位补码中，用 `11111111` 表示 −1，拿它与 `00000101` 相加，只保留八位，得到的正是 `00000100`，也就是 4。这个表示法的妙处是，把负数的位置安排好，原来只管加法的电路就也能做减法。
 
 ## The problem: negatives in a fixed box
 
@@ -114,7 +106,7 @@ So $-a$ is not "$a$ wearing a minus sign in the top bit" — it is *defined* as 
 
 Because $-x$ is built to wrap to zero, **$a - b$ is computed as $a + (\text{two's complement of } b)$** — one addition, then throw away any carry off the top.
 
-**Worked: $12 - 5$.** Negate 5 → `1111 1011`. Add to $12 =$ `0000 1100`:
+**Worked: $12 - 5$.** *Trigger: subtraction in a fixed-width register. Tool: add the two's-complement negative.* Negate 5 → `1111 1011`. Add to $12 =$ `0000 1100`:
 
 ```
   0000 1100   (12)
@@ -124,7 +116,7 @@ Because $-x$ is built to wrap to zero, **$a - b$ is computed as $a + (\text{two'
   0000 0111 = 7   ✓
 ```
 
-**Worked: $5 + (-5)$.** `0000 0101 + 1111 1011 = 1 0000 0000` → drop carry → `0000 0000` $= 0$. ✓
+**Worked: $5 + (-5)$.** *Trigger: equal magnitudes with opposite signs. Tool: the additive inverse, computed modulo 256.* `0000 0101 + 1111 1011 = 1 0000 0000` → drop carry → `0000 0000` $= 0$. ✓
 
 One adder, both operations. This is why two's complement won: a CPU needs **no subtractor** — to compute $a-b$ it inverts $b$, feeds a 1 into the adder's carry-in (that's the "+1"), and adds. The [[Half-Adder and Full-Adder|full-adder]] you'd build from gates is the whole arithmetic unit for signed *and* unsigned numbers at once.
 
@@ -174,13 +166,19 @@ The carry that drops off the top during subtraction is *intended* — it's the w
 
 ### Cambridge 9618 (A-Level CS)
 
-**§1.1** asks for **signed binary** by *both* sign-and-magnitude and two's complement, and to contrast them — both are here, plus the reason two's complement wins. Binary addition + overflow complete §1.1 in [[Overflow and Underflow]]; **BCD** is in [[Floating-Point Representation]]. Expect to justify *why* two's complement is used (one zero; subtraction via one adder).
+**§1.1 (2027–2029)** explicitly names **one's and two's complement**, conversions between representations, and binary addition and subtraction using positive and negative integers, including overflow. Practise decoding the same bit pattern under the stated representation, converting both ways, and checking whether an arithmetic result fits. Sign-and-magnitude is a useful comparison taught above, but it is not one of the named representations in this syllabus wording. **§13.3** uses two's-complement mantissas and exponents for binary floating-point numbers → [[Floating-Point Representation]]. BCD remains in that treatment too.
 
-### IB Computer Science
+### IB Computer Science — first assessment 2027
 
-Not yet a confirmed statement: the rebuilt course's A1.2 ("Data representation and computer logic") **confirms binary/hexadecimal conversion by name** but its published wording does not name signed representation — pending the official guide, treat two's complement as *probable-adjacent* rather than examined. The conversion discipline transfers whole either way, and IB's Java/Python programming strand meets this card the moment an `int` wraps negative.
+The **full guide**, A1.2.1–2, requires integer binary/hexadecimal representation and conversion, and explains binary storage. It does **not explicitly prescribe one's/two's-complement conversion or signed bit-level arithmetic**. Treat these mechanisms as enrichment supporting the named outcomes, rather than a separately specified IB conversion requirement. Java and Python also differ: Java's fixed-width `int` can wrap, while ordinary Python integers grow as memory permits.
 
-*(AP CSA doesn't test the representation, but Java's `int` is 32-bit two's complement, and its wraparound — `Integer.MAX_VALUE + 1` going negative — is exactly this wheel.)*
+### AP Computer Science A / Principles
+
+**AP CSA (Fall 2025), §1.5.B.3**, examines integer overflow as program behaviour; it does not prescribe two's-complement encoding/decoding. Java's `Integer.MAX_VALUE + 1` produces `Integer.MIN_VALUE`; the binary wheel explains that behaviour, while [[Overflow and Underflow]] carries the range question.
+
+**AP CSP, Topic 2.1 (DAT-1.B/C)**, examines finite-bit range limitations and positive-integer binary conversions; two's-complement conversion and signed carry rules are enrichment. [College Board CED, pp. 47–48](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-and-exam-description.pdf)
+
+**Where the extra mechanisms are not prescribed:** one's complement is not required by 0478; AP CSA, AP CSP and the IB 2027 representation outcomes above do not name the signed encoding algorithms. The range idea and overflow behaviour can still be examined without those algorithms.
 
 ## Connections
 

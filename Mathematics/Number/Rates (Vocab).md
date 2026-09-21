@@ -12,6 +12,7 @@ tags:
   - domain/number
   - level/IGCSE
   - curriculum/Cambridge-0580
+  - curriculum/OxAQA-9260
   - syllabus/0580-E1-12
   - syllabus/9260-N19
   - type/vocabulary
@@ -33,20 +34,11 @@ A **rate** is a ratio of two *different* quantities, usually expressed as "*A* p
 | Population density | people per area | persons/km² |
 | Wage rate | money per time | \$/hour |
 
-The "/" is read "**per**". A speed of $60$ km/h means *for every hour, you travel 60 km* — but you don't have to travel *for* an hour to have that speed; the rate captures the instantaneous proportion.
+The "/" is read "**per**". A **constant** speed of $60$ km/h covers 60 km in one hour, or 15 km in a quarter-hour. An **average** speed of 60 km/h means total distance divided by total time is 60 km/h; the speed can vary during the journey. A speedometer reading describes the speed at that instant, not a promise about the next hour.
 
 ### 中文锚点
 
-**率 (lǜ)** = 两个不同量的比，常带**复合单位 (fùhé dānwèi)**。
-
-| 量 | 单位 | 中文 |
-|---|---|---|
-| 速率 (sùlǜ) | km/h, m/s | speed |
-| 密度 (mìdù) | g/cm³ | density |
-| 压强 (yāqiáng) | N/m² (帕 Pa) | pressure |
-| 汇率 (huìlǜ) | USD/CNY | exchange rate |
-
-"/" 读作 **"每"** (měi) 或 "per"。$60$ km/h 即"每小时 $60$ 公里"。
+买米时，一袋500克卖12元，另一袋900克卖18元。只看价签，第一袋便宜；可你买到的米也少。把它们都换成“每100克多少钱”，就是2.4元和2元，第二袋反而更划算。“每”字做的事，就是先把比较的分量统一，让你看清同样一份东西究竟要花多少钱。
 
 ---
 
@@ -69,7 +61,7 @@ The "/" is read "**per**". A speed of $60$ km/h means *for every hour, you trave
 
 $$v = \frac{d}{t}.$$
 
-Example: a car travels $240$ km in $3$ hours. Speed = $\dfrac{240}{3} = 80$ km/h.
+**Trigger: total journey distance and time → tool: average speed = total distance / total time.** A car travels $240$ km in $3$ hours. Average speed = $\dfrac{240}{3} = 80$ km/h.
 
 The rearrangements: $d = vt$, $t = d/v$. (See [[Average Speed (Vocab)]] for the harmonic-mean trap when speed varies.)
 
@@ -77,13 +69,13 @@ The rearrangements: $d = vt$, $t = d/v$. (See [[Average Speed (Vocab)]] for the 
 
 $$\rho = \frac{m}{V}.$$
 
-Example: a metal block has mass $216$ g and volume $24$ cm³. Density = $\dfrac{216}{24} = 9$ g/cm³ (consistent with copper).
+**Trigger: mass per volume → tool: density = mass / volume.** A metal block has mass $216$ g and volume $24$ cm³. Density = $\dfrac{216}{24} = 9$ g/cm³ (consistent with copper).
 
 ### 3. Pressure = force / area
 
 $$P = \frac{F}{A}.$$
 
-Example: a $600$ N person stands on snowshoes covering $0.4$ m². Pressure = $\dfrac{600}{0.4} = 1500$ N/m² ($= 1500$ Pa). Without snowshoes (foot area $\approx 0.04$ m²), pressure spikes to $15{,}000$ Pa — and you sink. Snowshoes are an applied-pressure problem.
+**Trigger: the same force spread over different areas → tool: pressure = force / area.** A $600$ N person stands on snowshoes covering $0.4$ m². Pressure = $\dfrac{600}{0.4} = 1500$ N/m² ($= 1500$ Pa). Without snowshoes (foot area $\approx 0.04$ m²), pressure spikes to $15{,}000$ Pa — and you sink. Snowshoes are an applied-pressure problem.
 
 > [!tip] The "rate triangle" memory aid
 > For any rate $R = \dfrac{A}{B}$, the relationship $A = R \times B$, $B = A / R$ comes from the triangle:
@@ -101,6 +93,8 @@ Example: a $600$ N person stands on snowshoes covering $0.4$ m². Pressure = $\d
 ## Best-Buy Comparisons
 
 The classic rate-comparison problem: "Which is the best buy — $500$ g for £2.40 or $750$ g for £3.40?"
+
+**Trigger: unequal pack sizes hide the price comparison → tool: compare one common quantity.** Assume the products have the same quality and both quantities are useful to you.
 
 **Method 1 — cost per unit (rate).**
 - $\dfrac{2.40}{500} = 0.0048$ £/g.
@@ -121,10 +115,12 @@ The second gives more grams per pound → second is better. Same answer, differe
 
 ## Exchange Rates
 
-If \$1 = ¥7.20 (USD to RMB rate), then:
+If \$1 = ¥7.20 (an illustrative USD to RMB rate, not a current quote), then:
 
-- Converting USD → RMB: multiply by 7.20. ($50 USD × 7.20 = ¥360.)
-- Converting RMB → USD: divide by 7.20. (¥720 ÷ 7.20 = $100.)
+**Trigger: the wanted currency must remain after units cancel → tool: multiply by the conversion factor in the appropriate direction.**
+
+- Converting USD → RMB: multiply by 7.20. (US\$50 × 7.20 = ¥360.)
+- Converting RMB → USD: divide by 7.20. (¥720 ÷ 7.20 = US\$100.)
 
 The rate is a *factor*; same trick as any unit conversion. Banks usually quote a *spread* (different buy and sell rates) — the difference is their margin.
 
@@ -141,16 +137,35 @@ The rate is a *factor*; same trick as any unit conversion. Banks usually quote a
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 Core and Extended — 2025–27
 
-**Syllabus ref:** N19 — solve problems involving rates: speed, density, pressure; comparison of "best buy" type problems. Standard patterns:
+**C1.12 / E1.12, Rates:** use rates of pay, currency exchange, flow and fuel consumption; apply other rates such as pressure, density and population density; calculate average speed. The syllabus supplies required formulas for those **other measures of rate**, but expects students to know the speed–distance–time relationship. Best-value comparisons also sit under **C1.11 / E1.11, Ratio and proportion**. “N19” belongs to OxfordAQA, not Cambridge.
 
-- "A train travels $360$ km in $4$ hours. Calculate its average speed in km/h."
-- "Box A: $500$ g for \$2.40. Box B: $1.2$ kg for \$5.50. Which is the better buy? Show your working."
-- "An object of mass $48$ g has volume $20$ cm³. Calculate its density."
+Representative applications (constructed examples):
 
-> [!tip] Always show the rate calculation explicitly
-> Write the rate as a fraction with units, do the division, write the answer with units. The markscheme awards: 1 mark for the correct fraction, 1 for the arithmetic, 1 for the unit. Skipping units costs the unit mark even when the number is right.
+- **Pay:** £12 per hour for 3.5 hours gives £42. *Trigger: rate and duration → tool: multiply; hours cancel.*
+- **Flow:** 18 litres in 3 minutes gives 6 L/min. *Trigger: volume per minute → tool: divide volume by elapsed time.*
+- **Fuel:** 24 litres over 360 km gives $24/360\times100\approx6.67$ L/100 km. *Trigger: the unit says per 100 km → tool: scale to that common distance.* A lower L/100 km is better fuel economy; a higher km/L is better. Keep the rate direction fixed when comparing.
+
+Show the setup, consistent units and final answer. **Mark allocations depend on the question and its mark scheme**; there is no universal “fraction + arithmetic + unit = three marks” rule.
+
+### OxfordAQA 9260 — Core content within both tiers
+
+**N19** explicitly includes common rates, pay and best-buy problems. **G14** also requires conversions involving standard and compound units, with speed and density as examples. The calculations above support rate interpretation; [[Units of Measure (Vocab)]] develops unit conversions.
+
+### Cambridge 0606 and A-Level mathematics
+
+For **0606**, this is supporting IGCSE arithmetic and compound-unit fluency, not a separately listed elementary-rates topic. **9709**, **9231**, **Edexcel IAL** and **OxfordAQA 9660** also use these skills within further work. In particular, average speed belongs in mechanics and derivatives describe instantaneous rates: dividing two totals is not a substitute for differentiation. [[Average Speed (Vocab)]], [[Differentiation]] and [[Connected Rates of Change]] develop those distinctions.
+
+### IB Mathematics AA / AI — first-assessment-2021 guides
+
+Both guides explicitly list ratio/proportion, SI and derived units, and speed = distance/time under **prior learning** (AA pp. 26–27; AI pp. 24–25). These are usable knowledge, not material to discard as “not examined”. Topic 5 goes on to derivatives and rates of change; those calculus outcomes require more than elementary rate arithmetic. [AA guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-guide-en.pdf), [AI guide](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-applications-and-interpretation-guide-en.pdf).
+
+### AP Calculus AB / BC
+
+The CED includes average and instantaneous rates, applied rate interpretation and related rates, especially **Unit 4**. Elementary compound-unit arithmetic supports that work; the calculus requirements are developed in [[Differentiation]] and [[Connected Rates of Change]]. Neither course has a separate supermarket best-buy unit. This is a scope distinction, not a claim that rate reasoning is absent from AP.
+
+**Where this elementary treatment is not a separate named topic:** the higher courses above do not list the IGCSE package of pay, shopping and density as a standalone unit. Their prerequisite arithmetic and their assessed calculus/mechanics applications still matter. No extra higher-course syllabus tags are inferred from the word “rate”.
 
 ---
 

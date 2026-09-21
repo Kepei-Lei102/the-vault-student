@@ -64,15 +64,7 @@ The name itself reads the definition out loud: a **rad**ian is a **rad**ius-wort
 
 ### 中文锚点
 
-中国学生从初中开始接触**弧度制**，英文考试里就是 radian measure。定义是一模一样的：弧长除以半径。
-$$\theta = \frac{s}{r} \qquad \text{(} s \text{ 弧长, } r \text{ 半径)}$$
-只是英文里要会说：
-
-- *one radian* = 一弧度
-- *π radians* = π 弧度 = $180°$
-- *in radians* = 以弧度为单位
-
-考试常踩的坑是 **"radian" 是一个纯数比值，没有实际单位**（弧长的米除以半径的米，米抵消了），但计算器上 DEG / RAD 两种模式的切换会直接影响 $\sin, \cos, \tan$ 的数值。在 0606 及以上的所有考试里，弧度是**默认**的角度单位。
+想象自行车轮在地上滚动，没有打滑。先量出车轮的半径，再在地上标出一段这么长的距离：车轮滚过这一段，转过的角度就是一弧度。换个更大的轮子，同样转这么多，走的路会更长；但拿路程除以半径，结果还是一样。弧度量的就是：沿着圆周走过了多少个“半径那么长”。轮子可以换大小，转了多少的说法不用换。
 
 ## Bridge — Degrees and Radians Side by Side
 
@@ -87,11 +79,11 @@ You already know the degree-based arc/sector formulas from [[Circles Arcs and Se
 | Sector area | $A = \dfrac{\theta}{360°} \cdot \pi r^2$ | $A = \dfrac{1}{2} r^2 \theta$ | Same cleanup |
 | Derivative of $\sin$ | $(\sin x°)' = \dfrac{\pi}{180}\cos(x°)$ | $(\sin x)' = \cos x$ | The single biggest reason radians exist |
 
-The right column is the reason every calculus course in the world switches to radians — the formulas become structural rather than cluttered with $\pi/180$ factors.
+The right column shows why calculus normally uses radians — the formulas become structural rather than cluttered with $\pi/180$ factors.
 
 ![[radian-definition.svg|697]]
 
-Left: one radian is the angle for which the arc equals the radius. Right: the unit circle marked with the standard radian values — $\pi/6, \pi/4, \pi/3, \pi/2, \pi, 3\pi/2, 2\pi$. Memorise these; they appear in every 0606/A-Level/IB trig question.
+Left: one radian is the angle for which the arc equals the radius. Right: the unit circle marked with the standard radian values — $\pi/6, \pi/4, \pi/3, \pi/2, \pi, 3\pi/2, 2\pi$. These standard angles provide useful reference points.
 
 ## Conversion
 
@@ -135,37 +127,18 @@ These are the values every 0606/A-Level student must know on sight. Say them alo
 | Revolutions | $\tfrac{1}{6}$ turn | Rare in exams; common in engineering and CS (rotation matrices) |
 
 > [!warning] Omitting the $°$ is not a choice — it changes the answer
-> Writing $\sin 30$ without a degree mark means $\sin(30 \text{ rad})$ — and $30$ radians is about $4.77$ full turns, giving $\sin 30 \approx -0.988$, not $0.5$. This is the single most common calculator-mode error in the 0606 exam.
+> Writing $\sin 30$ without a degree mark means $\sin(30 \text{ rad})$ — and $30$ radians is about $4.77$ full turns, giving $\sin 30 \approx -0.988$, not $0.5$. Always match the calculator mode to the angle unit.
 
-> [!info] Why radians have "no unit"
-> Radians are defined as arc length divided by radius — length over length, so the unit cancels to a pure number. That's why angular speed in rad/s looks dimensionally the same as a frequency 1/s, and why $\sin\theta$ for small $\theta$ in radians can equal $\theta$ itself (you can't sensibly add a dimensional quantity to $1$). The $°$ symbol, by contrast, carries the conversion factor $\pi/180$ inside it — $\sin(x°)$ secretly means $\sin(x \cdot \pi/180)$.
+> [!info] Dimensionless does not mean “not a unit”
+> The ratio $s/r$ has dimension one. **The radian is the coherent SI unit of plane angle**, with symbol rad; retaining that symbol distinguishes an angle from another dimensionless quantity. Degrees measure the same kind of quantity on a different scale: $1°=(\pi/180)\,\mathrm{rad}$. [BIPM, SI Brochure](https://www.bipm.org/en/publications/si-brochure)
 
-## The deepest reason — degree is a unit, radian is a pure number
+## Why the natural scale matters
 
-Of all the answers to *"why do mathematicians prefer radians?"* this one is the most intuitive, and it doesn't require any calculus to land:
+A wheel rolling without slipping travels $s=r\theta$ when its radian angle changes by $\theta$. Doubling the wheel's radius doubles the distance for the same turn; dividing the distance by the radius removes the wheel's size. That is why the ratio measures the turn itself.
 
-**A degree is a unit. A radian is not.** A radian is a *pure number* — the dimensionless ratio of two lengths.
+The same normalization makes calculus simple. Near zero, the unit-circle arc and its vertical displacement nearly agree, giving $\sin h/h\to1$ when $h$ is the numerical angle in radians. This is a geometric limit, **not something dimensional analysis proves**. It makes the slope of sine at zero equal to one.
 
-When you write "60 degrees," the $°$ is a real unit, like *metres* or *seconds* or *kilograms*. It says: *"I have divided one full revolution into 360 equal parts and I am counting 60 of them."* The choice of 360 is arbitrary — Babylonian, base-60, historically baked in. A Martian civilisation that divided the circle into 400 parts (the *gradian*, which actually exists on some scientific calculators) would have its own perfectly valid "degree-like" unit. There's nothing privileged about 360.
-
-When you write "$\pi/3$ radians," there is no unit at all. By definition, $\theta = \text{arc}/\text{radius}$ — *length divided by length*. The dimensions cancel. What remains is a pure number, exactly like $2$ or $e$ or $\pi$ itself. **The word "radian" is a label, not a unit** — it's a reminder of what kind of ratio we're talking about, the way you might say "this is a strain" or "this is a probability" or "this is a Mach number." All of those things are pure numbers with names.
-
-> [!tip] The parallel that makes this click — strain in materials science
-> The clearest parallel from physics is **strain** in [[Stress, Strain and Young Modulus]]. Strain is defined as $\varepsilon = \Delta L / L_0$ — change in length over original length. Both numerator and denominator have units of metres, so the ratio is a *pure number*. You can write $\varepsilon = 0.002$ or $\varepsilon = 0.2\%$, but the $\%$ is just a "divide by 100" notation; there's no real unit involved.
->
-> Compare this to *stress* in the same card: $\sigma = F/A$ has units of pascals (N/m²) — a real unit, not a pure number. The Young modulus $E = \sigma/\varepsilon$ inherits stress's units (pascals) because dividing by a pure number doesn't introduce dimensions.
->
-> **Radian is to degree as strain is to … well, nothing, because strain doesn't have a competing unit.** That's actually the deeper point: the most natural physical quantities (strain, refractive index, probability, Mach number, π, e, the fine-structure constant) are pure numbers. Units are useful but added — by humans, for convenience. The radian is the angle measurement that nature picked; degrees are what 4000-year-old Babylonian astronomers picked.
-
-This framing immediately explains every "why radians" puzzle without any calculus machinery:
-
-- **Why does $\sin x \approx x$ for small $x$?** Because if $x$ is a pure number (radian), the comparison $\sin x \approx x$ is dimensionally consistent — pure number on both sides. If $x$ were in degrees, $\sin(30°)$ and $30°$ would have different "kinds" — one a pure number, one a unit-carrying quantity — and the approximation would need an explicit conversion: $\sin(x°) \approx x \cdot \pi/180$.
-
-- **Why is the conversion factor exactly $\pi/180$?** Because converting a unit to a pure number means dividing by the unit's *size*. One degree corresponds to $\pi/180$ of a radian (i.e., the arc-over-radius ratio of $\pi/180$). The $\pi/180$ is literally "how big one degree is as a pure number."
-
-- **Why does $(\sin x)' = \cos x$ only when $x$ is in radians?** Because the derivative is the slope of $\sin$ at $0$, which the proof in the next section shows equals $1$ — *but only when the input is a pure number*. If $x$ is in degrees, the slope at $0$ is $\pi/180$, and you'd need to write $(\sin(x°))' = (\pi/180)\cos(x°)$, dragging the conversion factor through every derivative forever.
-
-The full Taylor-series justification of $\sin x \approx x - x^3/6 + \ldots$ (see [[Maclaurin Series]]) deepens the point further — but the unit-vs-pure-number framing above already answers *"why radians?"* completely, without needing any calculus.
+If $x$ instead counts degrees, the function is $\sin(\pi x/180)$, so the chain rule gives $(\pi/180)\cos(\pi x/180)$. Neither angle unit is invalid. Radians remove the conversion factor because their numerical value is already the arc-to-radius ratio. The geometric proof below supplies the missing limit.
 
 ## Key Facts
 
@@ -298,54 +271,67 @@ $$\sin\theta = \theta - \tfrac{\theta^3}{6} + \tfrac{\theta^5}{120} - \cdots, \q
 At small $\theta$, $\sin$ starts linearly (leading term $\theta$) while $\cos$ starts quadratically (leading $1 - \theta^2/2$). Keep the second-order term for $\cos$; the linear one is just $1$ and gives no information. Trigonometry is the first place students meet Taylor series in action — any power-series identity you've seen for $\sin$, $\cos$, or $e^x$ is a Taylor expansion in disguise.
 
 > [!tip] Physics bridge — simple pendulum and SHM
-> The small-angle approximation $\sin\theta \approx \theta$ is the reason a pendulum's period is *independent of amplitude* (for small swings). The equation of motion $\ddot\theta + (g/L)\sin\theta = 0$ is a nightmare non-linear ODE; swap $\sin\theta$ for $\theta$ and it becomes simple harmonic motion with period $T = 2\pi\sqrt{L/g}$. Every grandfather clock depends on this approximation — and on radians. See [[Simple Harmonic Motion]] when the physics folder opens.
+> The small-angle approximation $\sin\theta \approx \theta$ is the reason a pendulum's period is *independent of amplitude* (for small swings). The equation of motion $\ddot\theta + (g/L)\sin\theta = 0$ is a nightmare non-linear ODE; swap $\sin\theta$ for $\theta$ and it becomes simple harmonic motion with period $T = 2\pi\sqrt{L/g}$. Every grandfather clock depends on this approximation — and on radians. See [[Simple Harmonic Motion]].
 
 ## Worked Examples
 
-### Example 1 (0606 §9.1): arc length and sector area
+### Example 1 — original practice for 0606 §9.1: arc length and sector area
 
 A sector has radius $r = 10\text{ cm}$ and central angle $\theta = \pi/3$ rad. Find the arc length, the sector area, and the perimeter of the sector.
+
+*Trigger: a radius and central angle. Tools: the arc definition, the sector fraction, and adding the two straight radii for perimeter.*
 
 $$s = r\theta = 10 \cdot \tfrac{\pi}{3} = \tfrac{10\pi}{3}\text{ cm}$$
 $$A = \tfrac{1}{2} r^2 \theta = \tfrac{1}{2}(100)\tfrac{\pi}{3} = \tfrac{50\pi}{3}\text{ cm}^2$$
 $$P = s + 2r = \tfrac{10\pi}{3} + 20\text{ cm}$$
 
-Leave in exact form. A follow-up question might ask for 3 significant figures — then $s \approx 10.47\text{ cm}$, $A \approx 52.36\text{ cm}^2$.
+Leave in exact form. A follow-up question might ask for 3 significant figures — then $s \approx 10.5\text{ cm}$, $A \approx 52.4\text{ cm}^2$.
 
-### Example 2 (0606 §9.1): find the angle given arc length
+### Example 2 — original practice for 0606 §9.1: find the angle given arc length
 
 An arc of length $12\text{ cm}$ lies on a circle of radius $8\text{ cm}$. Find the central angle in radians and in degrees.
+
+*Trigger: arc length and radius are given. Tool: rearrange $s=r\theta$, then use $\pi$ rad $=180°$.*
 
 $$\theta = \frac{s}{r} = \frac{12}{8} = \frac{3}{2}\text{ rad}$$
 
 In degrees: $\tfrac{3}{2} \cdot \tfrac{180°}{\pi} = \tfrac{270°}{\pi} \approx 85.94°$.
 
-The 0606 mark scheme typically accepts either form unless the question specifies. If a later part asks for the sector area, use the radian value:
+Give the unit and the form requested by the question. If a later part asks for the sector area, use the radian value:
 $$A = \tfrac{1}{2}(8)^2 \cdot \tfrac{3}{2} = 48\text{ cm}^2.$$
 
-### Example 3 (0606 §9.1): segment area — the classic compound-shape question
+### Example 3 — Edexcel IAL WMA11/01, October 2024, Q5 (9 marks)
 
-A chord joins two points $A, B$ on a circle of radius $6\text{ cm}$. The chord subtends an angle of $\tfrac{\pi}{2}$ at the centre. Find (i) the sector area $OAB$, (ii) the triangle area $OAB$, (iii) the minor segment area.
+*Problem paraphrased.* A sector-shaped plot has radius 5 km and angle 1.2 rad. A line from one arc endpoint $A$ to a point $P$ on the other radius $OB$ cuts off triangle $OAP$, called $R_2$. The remaining region $R_1$ has three times its area. Find the plot's perimeter, show $R_2$ has area $3.75\text{ km}^2$, and find $AP$ to the nearest 100 m.
 
-(i) Sector: $A_{\text{sec}} = \tfrac{1}{2}(36)\tfrac{\pi}{2} = 9\pi\text{ cm}^2$.
+**(a) Trigger: a curved boundary plus two radii. Tool: $s=r\theta$, then add all boundary lengths.**
+$$P_{\text{plot}}=5(1.2)+5+5=16\text{ km}.$$
 
-(ii) Triangle: the two radii are at right angles, so $A_{\triangle} = \tfrac{1}{2}(6)(6) = 18\text{ cm}^2$. More generally, $A_{\triangle} = \tfrac{1}{2} r^2 \sin\theta$.
+**(b) Trigger: the regions fill one sector in ratio $3:1$. Tools: sector area and four equal shares.**
+$$A_{\text{sector}}=\tfrac12(5^2)(1.2)=15\text{ km}^2,\qquad A_{R_2}=15/4=3.75\text{ km}^2.$$
 
-(iii) Segment: sector minus triangle: $A_{\text{seg}} = 9\pi - 18\text{ cm}^2 \approx 10.27\text{ cm}^2$.
+**(c) Trigger: a triangle's area, one side and included angle are known. Tool: $A=\tfrac12ab\sin C$ to find the other side.**
+$$\tfrac12(5)(OP)\sin1.2=3.75\quad\Rightarrow\quad OP=\frac{1.5}{\sin1.2}\approx1.60937\text{ km}.$$
+Now two sides and the included angle are known. **Tool: the cosine rule** from [[Sine and Cosine Rules]].
+$$AP=\sqrt{25+OP^2-10(OP)\cos1.2}\approx4.66459\text{ km}\approx\boxed{4.7\text{ km}}.$$
 
-### Example 4 (A-Level, small-angle): physics approximation
+The published scheme gives 2, 3 and 4 marks respectively. Keep unrounded $OP$ through the last calculation; 100 m is 0.1 km. The area condition selects the route into a triangle whose missing side could not be found from the radius alone.
+
+### Example 4 — original small-angle practice: physics approximation
 
 Estimate $\sin(0.05)$ and $\cos(0.05)$ without a calculator, where $0.05$ is in radians.
 
+*Trigger: a small numerical angle already in radians. Tool: retain the leading nonzero terms of sine and cosine.*
+
 $$\sin(0.05) \approx 0.05, \qquad \cos(0.05) \approx 1 - \tfrac{1}{2}(0.05)^2 = 1 - 0.00125 = 0.99875.$$
 
-Calculator check: $\sin(0.05) = 0.04998\ldots$, $\cos(0.05) = 0.99875\ldots$. The approximations are accurate to four decimal places at this scale — and this is why pendulums work.
+Calculator check: $\sin(0.05) = 0.04998\ldots$, $\cos(0.05) = 0.99875\ldots$. Both estimates round to the same four-decimal-place values as the exact functions at this scale — and this is why pendulums work.
 
 ## Common Misconceptions
 
 ### 1. Calculator left in the wrong mode
 
-Student writes $\sin(\pi/6) = \sin(0.524) \approx 0.500$ correctly, then on the next question computes $\sin 60 \approx -0.305$ — because the calculator is still in radian mode and $60$ radians is roughly $9.5$ full turns. Every calculator mistake in 0606 trigonometry traces to DEG/RAD confusion.
+Student writes $\sin(\pi/6) = \sin(0.524) \approx 0.500$ correctly, then on the next question computes $\sin 60 \approx -0.305$ — because the calculator is still in radian mode and $60$ radians is roughly $9.5$ full turns. A mode mismatch is one common cause of an incorrect trigonometric value.
 
 **Fix:** Teach a *mode-check reflex*. Before any trig calculation: look at the top of the calculator display for DEG or RAD. If the question uses $\pi$ or labels $\theta$ without a degree mark, set RAD. If it uses $°$, set DEG. Make students announce the mode out loud. Once they confuse themselves badly on a mock paper, the habit sticks forever.
 
@@ -355,11 +341,11 @@ Student applies $s = r\theta$ with $\theta = 60°$, getting $s = 10 \cdot 60 = 6
 
 **Fix:** Make the conversion the first line of working, always. "Given $\theta = 60°$. Convert: $\theta = 60 \cdot \pi/180 = \pi/3$ rad. Now $s = r\theta = 10 \cdot \pi/3 = 10\pi/3\text{ cm}$." Writing the conversion line explicitly earns partial credit even when the rest is wrong, and prevents the error in the first place.
 
-### 3. Treating "radian" as a unit you can cancel or carry
+### 3. Carrying the input's angle unit into a sine value
 
-Students sometimes see "rad/s" and try to write things like $\sin(5 \text{ rad}) = \sin(5) \text{ rad}$ — treating "rad" as a unit that sticks around like "m" or "s". It doesn't: $\sin(5)$ is a pure number, dimensionless.
+$\sin(5\,\mathrm{rad})$ is a dimensionless ratio; it is not $\sin(5)\,\mathrm{rad}$. The input is an angle and the output is a ratio of lengths.
 
-**Fix:** Remind them that radians are *defined* as a ratio of two lengths, so the units cancelled at the source. Writing "rad" is a labelling convenience, not a dimensional tag. In physics formulas like $v = r\omega$, the radian doesn't show up on the length side because it already cancelled.
+**Fix:** Keep rad when it helps identify angles and angular rates, such as rad/s. In dimensional calculations rad has dimension one; this does not make its name or symbol meaningless.
 
 ### 4. Using the small-angle approximation in degrees
 
@@ -369,13 +355,13 @@ Student writes "$\sin 5° \approx 5$" and gets a wildly wrong answer (true value
 
 ### 5. Confusing $2\pi$ and $\pi$ for a full turn
 
-Roughly half of first-time radian users write "full circle = $\pi$" because $\pi \approx 3.14$ "feels like" the answer. A full circle is $2\pi$. Half a circle (a straight angle) is $\pi$.
+Some first-time radian users write "full circle = $\pi$" because $\pi \approx 3.14$ "feels like" the answer. A full circle is $2\pi$. Half a circle (a straight angle) is $\pi$.
 
 **Fix:** Anchor on the identity $\pi \text{ rad} = 180°$. A straight line is half a turn, so it has half the radians of a full turn. From there, $2\pi = $ full turn is automatic.
 
 ## A Brief History — How Radians Came to Own Calculus
 
-The companion card [[Trigonometric Functions]] tells the story of where the words *sine*, *cosine*, *tangent* came from — a 2000-year chain of Sanskrit, Arabic, and Latin, with one famous mistranslation preserved forever. That's the story of the **functions themselves**. What follows here is the other half: the story of their **input** — why trigonometry spoke degrees for nearly 4000 years before calculus quietly revealed that the circle had been speaking radians all along.
+[[Trigonometric Functions]] tells the story of where the words *sine*, *cosine*, *tangent* came from — a 2000-year chain of Sanskrit, Arabic, and Latin, with one famous mistranslation preserved forever. That's the story of the **functions themselves**. What follows here is the other half: the story of their **input** — why trigonometry spoke degrees for nearly 4000 years before calculus quietly revealed that the circle had been speaking radians all along.
 
 ### ~2000 BCE — the Babylonians pick 360°
 
@@ -423,34 +409,32 @@ So when a student asks "why radians, not degrees?" — the honest answer isn't "
 
 ## Exam Notes
 
-### Cambridge 0606
+### Cambridge 0606 and 9709
 
-**§9.1 (Circular Measure)** — "Solve problems involving arc length and sector area, including knowledge and use of radian measure." This is the *entire* syllabus content of §9 — one row, one card resolves the whole section. Typical questions:
+**0606 §9.1, Circular measure:** arc lengths and sector areas using radians, including compound shapes. Both Papers 1 and 2 may assess it. The syllabus explicitly says these formulas are **not given**, so know $s=r\theta$ and $A=\tfrac12r^2\theta$. Its trigonometry section permits **degrees or radians**; radians are required for the standard calculus formulas, not every trigonometry question.
 
-- Give an angle in radians, ask for arc length, sector area, or perimeter.
-- Give two of (arc, radius, angle), ask for the third.
-- Compound shapes: sector combined with a triangle or a smaller sector (segment problems, crescents).
+**9709 §1.4, Pure Mathematics 1 (Paper 1):** definition, degree–radian conversion, arc length and sector area, including combinations with triangles. The syllabus's formula list supplies the arc and sector formulas. Radian trigonometry also supports later calculus. **9231** assumes the 9709 background; small-angle work and Maclaurin expansions use it, but circular measure is not a separate new Further Mathematics topic.
 
-Radians appear throughout the rest of 0606 — every trig, differentiation, and integration question from §9 onwards assumes radian measure.
+### OxfordAQA and Edexcel IAL
 
-### A-Level (Pure 1)
+**OxfordAQA 9660 PP1.2:** degree/radian measure, arc length and sector area, in the Pure Mathematics 1 content. **Edexcel IAL P1 §3.2:** radian measure with arc length and sector area; the P1 formula list does not supply $s=r\theta$ or $A=\tfrac12r^2\theta$, so know them. These are the international specifications: do not substitute a UK A-level unit number or assign every small-angle approximation to this P1 outcome.
 
-**Edexcel P1 §5, AQA Pure §D** — includes radians, arc length, sector area, plus the **small-angle approximations** $\sin\theta \approx \theta$, $\cos\theta \approx 1 - \tfrac{1}{2}\theta^2$, $\tan\theta \approx \theta$ with applications to approximating expressions near $\theta = 0$. Often tested as "given $\theta$ is small, show that $\dfrac{\sin 3\theta + 2\cos\theta}{1 - \cos 2\theta}$ is approximately …".
+### IB Mathematics — first assessment 2021
 
-Radian differentiation (§8 Pure 2) is the payoff — $(\sin x)' = \cos x$, $(\cos x)' = -\sin x$, $(\tan x)' = \sec^2 x$ all live in radians.
-
-### IB AA (SL and HL)
-
-**Topic 3 (Trigonometry)** — radian measure is the primary angle unit from day one. AA HL adds the derivation of the small-angle limits (Topic 5 Calculus) and the extension to $\sin(nx)$, $\cos(nx)$ derivatives under the chain rule.
+**AA SL/HL §3.4:** radians, arc length and sector area. **AI HL AHL §3.7:** definition and conversion, arc lengths, sectors and segments. **AI SL** uses degree-based geometry; radian circular measure is not a named SL outcome. The guides require access to the provided formula booklet during examinations; check its circular-measure entries alongside the course’s SL/HL scope.
 
 ### AP
 
-**AP Precalculus / AP Calculus AB** — radians are assumed in AP Calculus. Derivatives and integrals of trig functions always in radians. The AP Precalculus framework introduces radian measure alongside unit-circle trig in Unit 3.
+**AP Precalculus §3.2:** degree and radian angles on the unit circle. **AP Calculus AB and BC:** radian measure is prerequisite language for trigonometric limits, derivatives and integrals; these standard derivative formulas use radians. AP Calculus supplies no general formula sheet. The historical account and SI-unit discussion are enrichment, not separate required AP outcomes.
+
+### Not examined as radian circular measure
+
+The inspected **Cambridge 0580** and **OxfordAQA 9260** specifications use degree-based circular geometry and do not prescribe radians. Examples 1, 2 and 4 are original practice; Example 3 is attributed to its paper and checked against the published scheme. The full small-angle and series treatment goes beyond the 0606 circular-measure requirement.
 
 ## Connections
 
 - **Prerequisite:** [[Circle Vocabulary (Vocab)]] — radius, arc, sector, central angle defined here.
-- **Prerequisite:** [[Circles Arcs and Sectors (Vocab)]] — degree-based formulas; this card is the cleanup.
+- **Prerequisite:** [[Circles Arcs and Sectors (Vocab)]] — degree-based formulas; radian measure simplifies the same geometry.
 - **Prerequisite:** [[Trigonometric Ratios]] — $\sin, \cos, \tan$ on the unit circle; already flagged radians in its enrichment section.
 - **Prerequisite:** [[Trigonometric Functions]] — graphs of trig functions; radian domain makes the period $2\pi$ rather than $360$.
 - **Leads to:** [[Differentiation]] — radian derivatives of $\sin, \cos, \tan$; the core payoff.
@@ -458,7 +442,7 @@ Radian differentiation (§8 Pure 2) is the payoff — $(\sin x)' = \cos x$, $(\c
 - **Leads to:** [[Euler's Number]] — the complex-exponential identity $e^{i\theta} = \cos\theta + i\sin\theta$ only makes sense with $\theta$ in radians.
 - **Leads to:** [[Complex Numbers]] — modulus-argument form $r(\cos\theta + i\sin\theta)$ and polar form rely on radian $\theta$.
 - **Leads to:** [[Taylor Series]] — the small-angle approximations $\sin\theta \approx \theta$, $\cos\theta \approx 1 - \theta^2/2$ are truncated Taylor expansions; trig is the first place they bite.
-- **Physics bridge — reserved:** [[Simple Harmonic Motion]] — the small-angle approximation is the linearisation that turns the pendulum ODE into SHM with period $T = 2\pi\sqrt{L/g}$. Reserved for the Physics folder.
+- **Physics bridge:** [[Simple Harmonic Motion]] — the small-angle approximation is the linearisation that turns the pendulum ODE into SHM with period $T = 2\pi\sqrt{L/g}$.
 
 ## LaTeX Reference
 

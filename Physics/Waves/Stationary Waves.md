@@ -4,7 +4,9 @@ prerequisites:
   - "[[Progressive Waves]]"
   - "[[Resonance]]"
   - "[[Simple Harmonic Motion]]"
+  - "[[Sound]]"
 leads_to:
+  - "[[Quantum States and the Schrödinger Equation]]"
   - "[[Energy Levels and Line Spectra]]"
   - "[[Superposition and Interference]]"
   - "[[Diffraction]]"
@@ -57,7 +59,11 @@ A skipping rope turned by two children is one loop of a stationary wave: the end
 
 ### 中文锚点
 
-两个人甩跳绳：绳子中间上下翻飞，两端却几乎不动——这就是一个**驻波**。它不是"波在跑"，而是"波在原地站着振"：往前跑的波和从固定端**反射**回来的波**叠加**，跑的方向抵消了，上下的振动留下了。绳上有些点永远不动，叫**波节**（相邻两个波节之间的距离正好是**半个波长**）；波节之间的中点摆得最厉害，叫**波腹**，振幅是单个行波的两倍。相邻两个波节之间的那一段绳，上面的点同起同落；波节两侧的两段则一个往上、一个往下。为什么只有特定的甩绳频率才出现漂亮的驻波？因为两端被固定住了，那里必须是波节，于是整条绳的长度只能装下**整数个半波长**：$L = n\lambda/2$，对应的频率 $f_n = nv/2L$ 就是这根绳的**谐波**——吉他的每一根弦、笛子的每一根管，都靠这条规则决定音高。管子也一样，只是规矩换成：封闭端是波节，开口端是波腹，所以一端封闭的管子只有奇数次谐波。考题最常考的一件事：**从波节的位置读出波长**——相邻波节的距离乘二，就是波长，再用 $v = f\lambda$。
+两个人甩跳绳：绳子中间上下翻飞，握在手里的两端却几乎不动。这个波哪儿也没去，它就站在原地振动。原因是，沿着绳子跑过去的波在对面那只手那里被反射回来，去的波和回来的波叠加在一起，"跑"的部分互相抵消，上下振动的部分留了下来。现在把绳子甩得快一些。大多数速度下绳子只是乱抖；可是恰好甩到原来的两倍快时，绳子突然稳稳地分成两段，中间有一个不动的点；三倍快时分成三段。只有这些特殊的频率才行，因为两端被手固定住，整个波形必须正好装进这根绳子：整数个半波长，不多也不少。吉他弦就是这样选定音高的：弦长决定哪些波长装得下，其中最长的那个决定你听到的音高；手指把弦按在品上，弦变短了，只有更短的波装得下，音就高了。
+
+### 术语对照 (Terms)
+
+驻波 stationary (standing) wave · 反射 reflection · 叠加 superposition · 波节 node · 波腹 antinode · 半波长 half-wavelength · 基频 fundamental frequency · 谐波 harmonic · 闭管 closed pipe · 开管 open pipe
 
 > [!info] Symbols in this card
 > | Symbol | Meaning | 中文 |
@@ -263,6 +269,8 @@ The antinode at an open end actually sits about $0.6r$ *outside* the pipe, $r$ i
 
 ### Two dimensions: Chladni figures
 Sprinkle sand on a metal plate and bow its edge: the sand jumps off the antinodes and collects on the **nodal lines**, drawing the plate's mode shape — Chladni's demonstration of 1787, which Napoleon paid to see. A drumhead's modes are the same thing on a circle, and they are not harmonics — their frequencies are not integer multiples, which is why a drum has a pitch you cannot quite name and a string has one you can.
+
+Germain took up the prize competition to explain those plate patterns. [[Sophie Germain and the Borrowed Name]] follows the person doing the research. A plate bends, whereas tension supplies the restoring force in a stretched drum membrane; their similar-looking nodal patterns do not imply identical equations.
 
 ### The electron is a stationary wave
 De Broglie's $\lambda = h/p$ turns an electron confined to a box of length $L$ into exactly Part IV: only $L = n\lambda/2$ fits, so only $p_n = nh/2L$ and only $E_n = n^2h^2/8mL^2$ are allowed. Quantised energy levels are the harmonics of a wave that cannot leave its box. Bohr's orbits are the circular version — a whole number of wavelengths round the ring — and the hydrogen atom is a three-dimensional resonance tube. The quantum harmonic oscillator in [[Simple Harmonic Motion]] is the same story with a spring for a box.

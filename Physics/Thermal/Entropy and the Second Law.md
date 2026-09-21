@@ -37,15 +37,11 @@ That something is the **second law of thermodynamics**, and its currency is a qu
 
 ## 中文锚点
 
-**核心论题**：[[First Law of Thermodynamics|第一定律]]说能量守恒——账永远平。但它对一个明显的事实保持沉默：碎杯子不会自动复原，热不会自发从冷流向热，没有热机能把热全变成功——**这些反过程都不违反能量守恒**，自然却依然禁止它们。是**第二定律**给时间定了方向，它的货币叫**熵** $S$。
+往一杯清水里滴一滴墨水，它会慢慢散开，直到整杯水变成淡蓝色；不管你等多久，它都不会自己再聚回一滴。其实没有哪条运动定律禁止它聚回去：分子之间的每一次碰撞，倒过来放同样说得通。拦住它的是"数数"。让墨水分子散布在整杯水里的排法，比让它们挤在一小滴里的排法多得无法想象；分子被撞来撞去，盲目地从一种排法换到另一种，几乎必然落在数量占压倒多数的那一类排法里。熵就是物理学家用来衡量这个数目的量：从外面看一模一样，里面的分子却可以有许多种不同的排法；这样的排法越多，熵就越高。热力学第二定律说，孤立系统的熵不会减少，意思不过是：事情总是从稀有的排法滑向常见的排法。热茶的热量流进凉的房间也是同一回事：能量分摊给房间里所有的分子，排法远比挤在一个杯子里时多得多。所以茶只会自己变凉，不会自己变热；时间之所以看起来有方向，也是这个原因。
 
-第二定律有三种等价表述：**克劳修斯**（热不会自发地从冷流向热）、**开尔文**（没有循环热机能把热全部变成功）、**熵**（孤立系统的熵永不减少，$\Delta S_{\text{孤立}} \ge 0$）。
+## 术语对照 (Terms)
 
-熵有两个定义，它们在深处相遇：
-- **宏观（克劳修斯）**：$\mathrm{d}S = \delta Q_{\text{rev}}/T$，可逆吸热 $Q$ 时 $\Delta S = Q/T$，单位 J/K，是状态函数。
-- **微观（玻尔兹曼）**：$S = k\ln W$，$W$ 是与宏观态相容的微观态数目。（完整的数学与玻尔兹曼的人生见 [[Stories/Boltzmann's Tombstone|玻尔兹曼的墓碑]]。）
-
-第二定律不是铁律，而是**压倒性的概率**：气体"散开"对应的微观态数目多到反过程永远等不到。热机效率 $\eta = W/Q_h = 1 - Q_c/Q_h$，上限是卡诺效率 $\eta_C = 1 - T_c/T_h$。而熵 $S=k\ln W$ 与香农信息熵 $H = -\sum p\log p$ **是同一个数学对象**（见 [[Information Theory]]）——熵就是"缺失的信息"。
+热力学第二定律 second law of thermodynamics · 熵 entropy · 孤立系统 isolated system · 微观态 microstate · 宏观态 macrostate · 克劳修斯表述 Clausius statement · 开尔文表述 Kelvin statement · 可逆过程 reversible process · 热机效率 efficiency of a heat engine · 卡诺效率 Carnot efficiency · [[Stories/Boltzmann's Tombstone|玻尔兹曼的墓碑]] · [[Information Theory|信息熵]] information entropy
 
 ---
 

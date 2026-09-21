@@ -12,6 +12,8 @@ leads_to:
   - "[[Significant Figures]]"
   - "[[Error Propagation]]"
   - "[[Stories/The Pendulum Story]]"
+  - "[[Planning an Experiment]]"
+  - "[[Recording and Analysing Experimental Data]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -218,6 +220,7 @@ Calibration is an experimental skill, not a separately examined mathematical the
 - **Prerequisite:** [[Accuracy vs Precision]] — defines the random-vs-systematic factorisation. Calibration checks the systematic part of the measurement; Repeated Measurements is the *technique that acts on the random axis*. Orthogonal, both required.
 - **Prerequisite:** [[Physical Quantities and Units]] — every unit traces to a calibration standard. The 2019 SI redefinition discussion in that card's beyond-syllabus callout is the direct setup for the traceability chain section here.
 - **Prerequisite:** [[Repeated Measurements]] — the companion technique. Closing one of the two uncertainty axes is necessary but not sufficient; the bay's value comes from doing both.
+- **At the bench:** [[Recording and Analysing Experimental Data]] — checking for zero error before reading, and why a gradient is untouched by one.
 - **Prerequisite:** [[Upper and Lower Bounds]] — the mathematics-side card that first introduces "systematic errors require calibration" at IGCSE level.
 - **Leads to:** [[Significant Figures]] — once the calibration uncertainty is known, the answer's reported significant figures must match it. A balance certified to $\pm 0.005~\text{g}$ cannot honestly report masses to four decimal places.
 - **Leads to:** [[Error Propagation]] — the calibration uncertainty enters downstream calculations via the standard quadrature-addition rules.

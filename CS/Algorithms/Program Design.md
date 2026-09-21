@@ -16,6 +16,8 @@ tags:
   - level/A-Level
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
+  - curriculum/IB-CS
+  - curriculum/AP-CSA
   - syllabus/9618-9-1
   - syllabus/9618-9-2
   - syllabus/9618-11-1
@@ -37,6 +39,10 @@ tags:
 > *You will be given a problem in English and asked for a solution in code, and the marks are not all at the end. Between the paragraph and the program sit four drawings and a table, and each exists because it answers a question the others answer badly. Learn them as five things to memorise and they are a chore. Learn them as five questions asked about one program and they become the fastest way to find out whether you actually understand a problem. Underneath all five sit the only two questions that matter: **how do I make this solvable**, and **what doesn't change** — which are the hunter's questions, asked of a paragraph of English instead of a moving body.*
 
 ## 中文锚点
+
+自动售货机看着只是“付钱，出饮料”，可少投了一元怎么办？投完钱又换了主意呢？先把收钱、判断钱够不够、出货和找零分开想，再说清楚它们之间要交接什么信息，许多漏洞就会提前露出来。程序设计的用处，不是把简单的事画复杂，而是趁还没写下一大段代码，把脑子里那些“到时候再说”的决定摊开。
+
+## Design vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -288,24 +294,35 @@ They are the cheapest bug-prevention in the topic, and the marks are the least o
 - **§9.2 Algorithms** — an algorithm is *a solution to a problem expressed as a sequence of defined steps*; suitable identifier names presented in an **identifier table**; pseudocode containing input, process and output using the three basic constructs; **documenting an algorithm as structured English, a flowchart or pseudocode**; and the four translations, examined in both directions — pseudocode **from** structured English or a flowchart, and a flowchart **from** structured English or pseudocode. Then **stepwise refinement** to a programmable level of detail, and **logic statements** to define parts of a solution.
 - **§12.2 Program Design** — the **structure chart**: describe its purpose, **construct one for a given problem**, express the **parameters passed between modules**, and **derive equivalent pseudocode from it**. Plus *understand the purpose of* **state-transition diagrams** — note the softer verb: §12.2 asks you to know what they are for, not to construct one, though reading one is fair game.
 - **§11.1** opens with *implement and write pseudocode from a given design presented as either a program flowchart or structured English* — that LO is this material pointed at a keyboard. The rest of §11.1 (declarations, initialisation, assignment, expressions, built-in functions) is programming basics, not design.
-- **Where the marks actually sit:** on the structure chart it is the **arrows**, not the boxes — a correct hierarchy with no parameters shown scores poorly. On flowcharts it is **shape choice and labelled decision exits**. On refinement it is the **numbering** that shows which step each refinement came from.
+- **What to make explicit:** show module relationships and parameter flow in a structure chart, label decision exits in a flowchart, and make the hierarchy of refinements traceable. Exact credit depends on the particular question and published scheme; numbering is useful organisation, not a universal marking rule.
 
-### Cambridge 0478 IGCSE — §7.1, §7.2, §7.9
+### Cambridge 0478 IGCSE — §7.1–3 and §7.9
 
 - **§7.1** puts this inside the **program development life cycle** (analysis, design, coding, testing) and names the content of each stage explicitly: *analysis* = abstraction, decomposition, identifying the problem and requirements; **design = decomposition, structure diagrams, flowcharts, pseudocode**; coding = writing code and iterative testing; testing = testing with test data.
-- **Watch the name.** 0478 says **structure diagram** where 9618 says **structure chart**. Same notation, two board vocabularies — use the one on the paper in front of you.
+- **Watch the name.** 0478 says **structure diagram** where 9618 says **structure chart**. Both show decomposition, but 9618 explicitly adds parameter flow; do not assume every 0478 diagram requires the full A-Level convention.
 - **§7.2** is decomposition twice over: every computer system is made of sub-systems which are made of further sub-systems; a problem can be decomposed into its component parts; and *use different methods to design and construct a solution*.
 - **§7.9** is the translation LO — *write and amend algorithms for given problems using pseudocode, program code and flowcharts*.
-- The **flowchart symbols are printed in the syllabus itself** (section 4), and are exactly the six above: flow line, process, subroutine, input/output, decision, terminator. They are given to you; there is no excuse for the wrong shape.
-- IGCSE stops short of the parameter arrows and of state-transition diagrams — both are A-Level.
+- The **flowchart symbols are printed in the syllabus itself** (section 4), and are exactly the six above: flow line, process, subroutine, input/output, decision, terminator. Use the prescribed symbols; publication in the syllabus does not mean a symbol key is supplied in every question paper.
+- **§7.3** also asks for the purpose and processes of a given algorithm. The specified 0478 scope does not require 9618’s parameter-flow or state-transition documentation.
+- **Answer language (2026–28 syllabus):** ordinary coding answers use Cambridge pseudocode; the 15-mark scenario additionally accepts Python, Visual Basic or Java. §7.9’s broad algorithm wording does not override that assessment rule. [[Cambridge Pseudocode]] supplies the notation bridge.
 
-### IB Computer Science (first assessment 2027)
+### IB Computer Science — first assessment 2027, B1.1
 
-- Not a named topic. The published outline works at the level of algorithm construction and tracing rather than design documentation, so flowcharts appear as things to *read* rather than a notation to be assessed on, and structure charts and state-transition diagrams do not appear at all. Useful preparation, not examined material.
+B1.1.1 requires constructing a problem specification, including requirements, constraints, inputs, outputs and evaluation criteria. B1.1.2–3 explicitly assess abstraction, algorithmic design, decomposition and pattern recognition and their application. **B1.1.4 explicitly requires tracing flowcharts**, following variable changes and determining output with standard symbols. This is assessed computational thinking, not merely optional preparation.
 
-### AP Computer Science A
+The particular Cambridge structure-chart conventions and state-transition diagrams are not named requirements in B1.1. These diagrams can still help reason about a system; distinguish that useful extension from the specified flowchart-tracing outcome.
 
-- Not examined. AP CSA assesses Java directly, with no design-notation component — the closest relative is its emphasis on decomposing into methods and classes, which is §9.1's decomposition wearing an object-oriented hat.
+### AP Computer Science A — Topic 3.1, Fall 2025 CED
+
+**Abstraction and Program Design is explicitly assessed.** 3.1.A calls for representing a program's class design with natural language or diagrams, including attributes and behaviours. 3.1.A.1–7 covers data/procedural abstraction, method decomposition, parameters and preserving a method's contract while changing its implementation. [[Object-Oriented Programming]] supplies the class-specific continuation.
+
+Cambridge identifier-table, flowchart-symbol and structure-chart parameter-arrow conventions are not prescribed CSA notation. That does not exclude the underlying design work—or diagrams—from CSA.
+
+### AP Computer Science Principles
+
+Program design/development and abstraction are explicit course content, with program design, function and purpose also represented in the Create written-response scope. The conceptual work here is relevant; Cambridge's specific documentation conventions are not thereby required. [College Board course](https://apcentral.collegeboard.org/courses/ap-computer-science-principles), [assessment scope](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam).
+
+**Not examined as a named requirement:** Cambridge-style structure-chart notation and state-transition documentation on these IB/AP frameworks. “Not this notation” must not be read as “not program design”.
 
 ## Beyond the syllabus
 

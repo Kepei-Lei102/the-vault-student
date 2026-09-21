@@ -33,6 +33,10 @@ tags:
 
 ## 中文锚点
 
+想争取一份工作，可简历上没什么拿得出手的资历，怎么办？年轻的法拉第把听戴维讲座时记下的笔记整理好，配上图，再用自己的装订手艺做成一本书，送给戴维。他没有只说“我很想学”，而是让对方亲眼看见自己已经怎样学、怎样做。原本似乎与科学无关的手艺，就这样成了他的敲门砖。
+
+## Names and language
+
 | English | 中文 | one-line meaning |
 |---|---|---|
 | bookbinder's apprentice | 装订工学徒 | seven years' indenture to a trade — and, for this apprentice, to the contents of the books |

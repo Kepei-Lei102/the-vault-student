@@ -43,19 +43,20 @@ tags:
 
 That "afterwards" is the link back to [[Searching]]. Binary search is dramatically faster than linear search — but it has one precondition: **the list must be sorted.** Sorting is the price you pay, once, to unlock that speed forever after. So the two cards are two halves of one idea: sorting *creates* the order, searching *spends* it.
 
-There is no single "sort algorithm." There are many, and they make different trade-offs between *how simple they are to write* and *how much work they do*. This card builds the four that the syllabuses ask for — **bubble, selection, insertion,** and **merge** — on a single shared example so you can watch the same five numbers fall into line four different ways. Then it adds a fifth, **quicksort**, which no exam board requires but every programmer meets — it's the sort most languages reach for under the hood.
+There is no single "sort algorithm." There are many, and they make different trade-offs between *how simple they are to write* and *how much work they do*. This card builds the four that the syllabuses ask for — **bubble, selection, insertion,** and **merge** — on a single shared example so you can watch the same five numbers fall into line four different ways. Then it adds a fifth, **quicksort**, which only IB higher level names but every programmer meets — it's the sort most languages reach for under the hood.
 
 ### 中文锚点
 
-**排序**（páixù, sorting）：把一组数据按大小（升序 ascending / 降序 descending）重新排列。
+老师收上来四十本作业，想按学号排好。她一个人做：一本一本拿起来，插进手里那摞已经排好的作业的正确位置；手里的越来越多，每一本新作业要比较的次数也越来越多，四十本要比几百次。换个办法：把作业分成两半交给两个同学，每人再对半往下分，直到每人手里只剩几本，看一眼就排好了。往回合并才是省事的地方：两摞都已经排好，只要看两摞最上面的那一本，谁小就拿谁，拿完再看；没有哪一本需要和一整摞去比。这就是归并排序、快速排序比冒泡、选择、插入排序快的原因：慢的方法几乎让每个数据都和其他所有数据比一遍，大约 $n^2$ 次；分而治之把数据对半分 $\log n$ 层，每一层合并只花大约 $n$ 次。为什么要排序？老师的做法本身就是答案：排好一次，以后找任何一本只要翻几下，不用把四十本从头翻到尾。
 
-- **冒泡排序**（màopào páixù, bubble sort）：相邻两个比较，逆序就交换；最大的像气泡一样「浮」到最后。
-- **选择排序**（xuǎnzé páixù, selection sort）：每次从未排序部分**选出最小**的，放到前面。
-- **插入排序**（chārù páixù, insertion sort）：像理扑克牌，把每张牌**插入**到前面已排好的位置。
-- **归并排序**（guībìng páixù, merge sort）：**分**成两半，各自排好，再**合并**——这是 [[Recursion]] 的分治思想。
-- **快速排序**（kuàisù páixù, quicksort，**考纲外**）：选一个**基准** pivot，比它小的放左、大的放右，再对两边递归——和归并一样是分治，但**按值**分而不是按位置分，且**原地**排序。实战中最常用。
+### 术语对照 (Terms)
 
-一句话：前三种简单但慢（约 $n^2$ 次操作），归并排序和快速排序用「分而治之」做到约 $n\log n$ —— 和二分查找同一个 $\log$。**为什么愿意先排序？** 因为排好一次，之后每次 [[Searching|二分查找]] 都快得飞起。
+- **排序** páixù, sorting；升序 ascending / 降序 descending
+- **冒泡排序** màopào páixù, bubble sort：相邻两个比较，逆序就交换；最大的像气泡一样「浮」到最后。
+- **选择排序** xuǎnzé páixù, selection sort：每次从未排序部分选出最小的，放到前面。
+- **插入排序** chārù páixù, insertion sort：像理扑克牌，把每张牌插入到前面已排好的位置。
+- **归并排序** guībìng páixù, merge sort：分成两半，各自排好，再合并，是 [[Recursion]] 的分治思想。
+- **快速排序** kuàisù páixù, quicksort：选一个基准 pivot，比它小的放左、大的放右，再对两边递归；按值分而不是按位置分，原地排序。
 
 ## The shared example
 
@@ -214,8 +215,8 @@ The **merge** is the clever part. Because both halves are *already* sorted, comb
 
 ## Quicksort 快速排序
 
-> [!info] Beyond syllabus — but worth it
-> Quicksort is on **none** of the three CS boards (0478, 9618, AP CSA). It's here because it's the sort your programming language almost certainly uses under the hood, and because it's the most instructive *other* way to be divide-and-conquer.
+> [!info] Beyond most syllabuses — but worth it
+> Quicksort is on none of 0478, 9618 and AP CSA. **IB higher level is the exception:** statement B2.4.4 names it as a recursive algorithm to explain. It's here because it's the sort your programming language almost certainly uses under the hood, and because it's the most instructive *other* way to be divide-and-conquer.
 
 Merge sort divides by **position** (cut the list in half regardless of values) and does its real work in the *merge*. Quicksort flips that: it divides by **value** and does its real work in the *split*, so there's nothing left to merge afterwards.
 
@@ -354,11 +355,11 @@ That initial-order bullet is the one students drop. It is asking for the almost-
 
 ### AP Computer Science A
 
-**Unit 4.15 — Sorting:** **selection sort, insertion sort,** and **merge sort** (the recursive divide-and-conquer one). This card closes 4.15. The recursive structure of merge sort also completes **4.17 (Recursive Searching and Sorting)** alongside [[Recursion]] and [[Searching]] (recursive binary search). AP frames cost informally ("informal run-time comparisons") — the [[Big-O Notation]] card carries the formal version for students going further.
+**Topic 4.15 — Sorting Algorithms** is **selection sort and insertion sort**: determine the state of the collection after each pass. **Merge sort belongs to topic 4.17 (Recursive Searching and Sorting)**, beside recursive binary search ([[Searching]], [[Recursion]]), and is also assessed by tracing. No other sorting algorithm is in the course, and the exam is in Java, so the ideas here carry over and the syntax does not. AP frames cost informally ("informal run-time comparisons") — the [[Big-O Notation]] card carries the formal version for students going further.
 
 ### IB Computer Science (B2.4)
 
-**Bubble and selection sort are the named IB pair** (SL) — trace, describe, and compare; merge/quick stay enrichment there just as merge stays the 9618 extension. The pass-fixes-one-value and no-swaps-means-sorted observations earn marks in identical words; efficiency comparisons lean on the Big-O framing of [[Big-O Notation]].
+**Bubble and selection sort are the named IB pair** at standard level (B2.4.3) — trace, describe, and compare. **At higher level, B2.4.4 names quicksort** as a recursive algorithm to explain, so the quicksort section is examined material for an HL student and enrichment for an SL one. Merge sort is not named by either statement. The pass-fixes-one-value and no-swaps-means-sorted observations earn marks in identical words; efficiency comparisons lean on the Big-O framing of [[Big-O Notation]].
 
 ## Connections
 

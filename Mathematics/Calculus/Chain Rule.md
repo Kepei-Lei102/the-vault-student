@@ -17,6 +17,7 @@ leads_to:
   - "[[Integration]]"
   - "[[Optimisation]]"
   - "[[Standard Integrals]]"
+  - "[[Partial Derivatives and the Gradient]]"
 teach_together:
   - "[[Product Rule]]"
 tags:
@@ -57,11 +58,11 @@ A useful paraphrase: *when one quantity drives another that drives a third, the 
 
 ## 中文锚点 (Chinese Anchor)
 
-**链式法则** (literally "chain-style rule") differentiates a composite function by **chaining** the derivatives of the inner and outer pieces.
+骑变速自行车，挂在低速挡：脚踏转一圈，后轮转两圈；后轮转一圈，车往前走大约两米。那脚踏转一圈，车走多远？四米。你想都没想就把两个数乘了起来，因为脚踏的作用要经过后轮才能传到路面上。函数套函数就是这样一台机器：$x$ 带动里面的量 $u$，$u$ 再带动 $y$。在任何一点附近，$x$ 的一点小变化，传到 $u$ 时被放大或缩小一次，再传到 $y$ 时又被放大或缩小一次，所以这两个倍数要相乘。**链式法则**说的就是这件事：整条链的变化率，等于每一环变化率的乘积。最容易丢掉的是里面那一环：内层函数自己变化得有多快。
 
-The Chinese curriculum often introduces the rule via the substitution form: 设 $u = g(x)$，则 $y = f(u)$，所以 $\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot\dfrac{du}{dx}$. The same Leibniz form lands in English textbooks but the prime-notation form $f'(g(x))\,g'(x)$ is the one that shows up in Cambridge mark schemes — students must be fluent in both.
+### 术语对照 (Terms)
 
-The English mistake to watch for: students who learn 链式法则 in Chinese sometimes write the answer as $f'(g(x))$ and forget the trailing $\cdot g'(x)$. The *chain* part of the name is exactly the multiplication that gets dropped. Drilling this with bilingual examples fixes it fast.
+**链式法则** (liànshì fǎzé)，字面意思是“链条式的法则”：把内层和外层的导数像链条一样一环环**连乘**起来。中文教材通常用换元的写法引入：设 $u = g(x)$，则 $y = f(u)$，所以 $\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot\dfrac{du}{dx}$（莱布尼茨记法）。英文教材里同样常见的是撇号写法 $f'(g(x))\,g'(x)$，两种写法都要能读能写。名字里的“链”指的正是最后那个乘上去的 $g'(x)$。
 
 ## Composition Recap (Bridge)
 

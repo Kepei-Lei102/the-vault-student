@@ -43,13 +43,9 @@ Search a shopping app for umbrellas under ¥50, cheapest first. You have just wr
 
 ### 中文锚点
 
-你在淘宝搜"雨伞"，勾"50 元以下"，点"按价格从低到高"。你刚刚写了一条 SQL，只是没看见它：
+你对店员说：“帮我找五十元以下的雨伞，便宜的排在前面。”你交代的是想拿到什么结果，而不是让他先走哪条过道、再翻哪个货架。SQL 查询也是这个道理：把想要什么、要满足什么条件说清楚，具体怎么找，交给数据库去安排。同一个要求，可以先查索引，也可以逐行找；只要结果符合要求，内部路线就能换。这就是它省心的地方——仓库每次重新整理，你都不用把找东西的步骤跟着重写一遍。
 
-```sql
-SELECT Name, Price FROM Product WHERE Category = '雨伞' AND Price < 50 ORDER BY Price;
-```
-
-这就是整门语言的骨架——**要什么**（SELECT 哪几列）、**从哪拿**（FROM 哪张表）、**什么条件**（WHERE）、**怎么排**（ORDER BY）、**怎么汇总**（GROUP BY 加 SUM / COUNT / AVG）。它是**声明式**的：你说要什么，不说怎么找——循环、索引、先查哪张表，都是数据库自己的事。SQL 分两半：**DDL**（数据定义语言）造结构——`CREATE TABLE` 建表、`ALTER TABLE` 改表、`PRIMARY KEY` / `FOREIGN KEY` 定钥匙；**DML**（数据操作语言）动数据——`SELECT` 查、`INSERT INTO` 加、`UPDATE` 改、`DELETE FROM` 删。考试考的就是这十来个词，而且**你现在就能跑**：Python 自带 `sqlite3`，三行代码建库，这张卡上每一条语句都在旁边那个脚本里真的运行过，这里的输出就是这些语句真正跑出来的。一条查询真正的执行顺序**不是从上往下**：数据库先看 `FROM`（拿哪张表），再 `WHERE`（留哪些行），再 `GROUP BY`（怎么分组），再 `SELECT`（算哪几列），最后 `ORDER BY`（排序）——记住这个顺序，"为什么 WHERE 里不能用 SUM"这类问题就自己解开了。最后一件真实世界的事：把用户输入直接拼进 SQL 字符串，是全世界最常见的安全漏洞之一（**SQL 注入**）；正确写法是用 `?` 占位符把数据和语句分开——这也是 A Level §6 会考到的内容。
+### Terminology
 
 | English | 中文 | 一句话 |
 |---|---|---|

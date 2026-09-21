@@ -13,6 +13,7 @@ prerequisites:
   - "[[Maclaurin Series]]"
   - "[[Magnitude of a Vector (Vocab)]]"
 leads_to:
+  - "[[Quantum States and the Schrödinger Equation]]"
   - "[[Euler's Formula and De Moivre's Theorem]]"
   - "[[Differential Equations]]"
   - "[[Heptadecagon]]"

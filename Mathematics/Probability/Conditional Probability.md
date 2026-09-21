@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[Discrete Random Variables]]"
   - "[[Laplace and Napoleon]]"
+  - "[[Affective Computing]]"
 tags:
   - subject/mathematics
   - domain/probability
@@ -300,6 +301,7 @@ You cannot condition on an event that has zero probability — $P(A \mid B)$ is 
 
 - **Foundation:** [[Combined Probability]] — the addition and multiplication rules; tree diagrams; Venn diagrams for probability
 - **Foundation:** [[Probability Basics]] — sample space, complement rule, mutually exclusive events
+- **Base rates in the wild:** [[Affective Computing]] — a smile detector that is 99 % accurate and a happiness verdict that is right half the time; a violence screen whose flags are 98 % false.
 - **Set theory:** [[Intersection]] — $P(A \cap B)$ is the numerator of the conditional probability formula
 - **Diagrams:** [[Venn Diagram]] — "zoom into circle $B$" is the visual meaning of conditioning
 - **Counting:** [[Permutations and Combinations]] — counting restricted outcomes often involves conditional reasoning

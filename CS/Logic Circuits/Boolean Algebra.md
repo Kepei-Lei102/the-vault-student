@@ -252,7 +252,7 @@ All examine Boolean simplification and De Morgan, very similarly to 9618. A stan
 AP CSA is Java/OOP, not circuit design, so it does **not** examine Boolean algebra as such — but topic 2.6 ("comparing Boolean expressions") uses **De Morgan informally** to rewrite compound `if` conditions: `!(a && b)` becomes `!a || !b`. Worth knowing in that code form.
 
 ### IB Computer Science
-Not a named statement: IB's A1.2 logic content stops at **gates and truth tables** ("logic gates processing encoded data") — the algebraic layer here is the Cambridge 9618 §15.2 extension. As with AP, De Morgan still earns its keep informally whenever IB code rewrites a compound condition.
+Examined. In the guide for first assessment 2027, **A1.2.4** lists "Karnaugh maps and algebraic simplification to simplify output expressions", and **A1.2.5** lists "Boolean algebra rules to simplify complex logic diagrams and expressions". Both are common to standard and higher level, so the laws and the simplification method here are IB material as well as Cambridge 9618 §15.2. The guide names no particular list of laws. As with AP, De Morgan also earns its keep whenever IB code rewrites a compound condition.
 
 ---
 

@@ -309,6 +309,8 @@ $$r = \dfrac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \
 
 ## Connections
 
+- **Why the coefficient is bounded:** [[Lagrange's Identity]] — proves $-1\le r\le1$, works a numerical sensor example, and derives $r^2$ from the least-squares residual.
+
 - **Prerequisite:** [[Classifying Data]] — scatter diagrams require quantitative bivariate data
 - **Prerequisite:** [[Statistical Charts]] — scatter diagrams are a type of statistical chart for two-variable data
 - **Prerequisite:** [[Averages and Spread]] — the mean point $(\bar{x}, \bar{y})$ anchors the line of best fit

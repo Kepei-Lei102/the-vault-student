@@ -7,7 +7,8 @@ aliases:
 prerequisites:
   - "[[Doppler Effect]]"
   - "[[Stellar Luminosity and Size]]"
-leads_to: []
+leads_to:
+  - "[[The Pigeons and the Beginning of Everything]]"
 teach_together:
   - "[[Henrietta Leavitt and the Cosmic Yardstick]]"
 tags:
@@ -330,6 +331,7 @@ The syllabus's shorthand “a specific frequency” refers to the characteristic
 ## Connections
 
 - **Prerequisites:** [[Doppler Effect]] — spectral shifts and the small-speed approximation; [[Stellar Luminosity and Size]] — independent distance measurements and blackbody radiation.
+- **Discovery companion:** [[The Pigeons and the Beginning of Everything]] — the receiver checks, surviving excess and Princeton interpretation behind the microwave background.
 - **Historical companion:** [[Henrietta Leavitt and the Cosmic Yardstick]] — the work behind calibrated stellar distances.
 - **Graph discipline:** [[Linearisation]] — why a change of axes changes the meaning of a gradient; [[Accuracy vs Precision]] — shared calibration errors.
 - **Physical foundations:** [[Gravitational Fields]] — local bound systems; [[Nuclear Physics]] — early light-element reactions; [[Energy Levels and Line Spectra]] — identifying spectral lines.

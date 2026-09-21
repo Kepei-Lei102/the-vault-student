@@ -13,6 +13,7 @@ leads_to:
   - "[[Vectors in Physics]]"
   - "[[Electric Current]]"
   - "[[Density and Pressure]]"
+  - "[[Planning an Experiment]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -66,11 +67,11 @@ The unit is the answer to "*compared to what*?". Without it the number has no an
 
 ### 中文锚点
 
-**物理量** (wùlǐliàng) = physical quantity. 中文物理教学经常用一个简单的公式总结全部物理量的本质：
+走到菜市场的摊位前说"给我来两……大米"，摊主一定会反问：两什么？两斤、两公斤，还是两袋？光有数字，什么也没说清楚。每一个物理量都是一个数值乘以一个单位，单位带着一半的信息。1999 年，一艘叫"火星气候探测者号"的飞船就是这样丢的：一个团队的软件用"磅·秒"报告推进器的冲量，另一个团队的软件把同样的数字当成"牛顿·秒"来读，数字看上去完全合理，结果飞船飞得太低，在火星大气里烧毁了。正因为单位是和数值乘在一起的，它也服从乘法的规矩：米除以秒得到米每秒；只有单位相同的两个量才能相加。这样一来，单位就成了任何计算都白送的一道检查：你算一个速度，最后单位却是"米乘秒"，那一定是哪里出了错，而且不用看任何一个数字就能知道。
 
-$$\text{物理量} = \text{数值} \times \text{单位}$$
+### 术语对照 (Terms)
 
-这个等式的精神是：数值 (number) 和单位 (unit) **缺一不可**。例如，"长度是 1.5"是没有意义的 — 1.5 米？1.5 英寸？1.5 公里？数值告诉你"多少"，单位告诉你"多少**什么**"。
+**物理量** (wùlǐliàng)：$\text{物理量} = \text{数值} \times \text{单位}$，数值 (number) 和单位 (unit) 缺一不可。
 
 | English | 中文 | 例子 / Example |
 |---|---|---|

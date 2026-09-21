@@ -60,7 +60,9 @@ This is the bridge. Logic on paper is propositions about truth and falsity; logi
 
 ### 中文锚点
 
-**逻辑门 (luójí mén)** = 硬件层面实现布尔运算的电子元件。
+微波炉只有门关好了、又按了启动键，才会转。汽车发动着，安全带却没系，提示音就会响。楼梯上下两个开关，随便扳哪一个，灯的状态都会变。这些机器里面并没有谁在思考。它们每一个都只是一小块电路，输出怎么随输入变化，全由接线的方式决定，规则永远是固定的那么一条：两个都要有，有一个就行，或者把结果反过来。这就是逻辑门：用接线做出来的一个决定。一个门能决定的事情很少。可是门的输出和它的输入是同一种东西，都是一根要么通、要么不通的导线，所以一个门的输出可以接到下一个门的输入上，小决定就这样一层一层摞成大决定，没有上限。把两个不大的数加起来，需要几十个这样的决定；一块处理器，是几十亿个。
+
+#### 术语对照 (Terms)
 
 | English | 中文 | Connective | What it computes |
 |---|---|---|---|
@@ -71,11 +73,6 @@ This is the bridge. Logic on paper is propositions about truth and falsity; logi
 | NOR | 或非门 (huò fēi mén) | $\overline{A + B}$ | the negation of OR |
 | XOR | 异或门 (yìhuò mén) | $A \oplus B$ | 1 iff *exactly one* input is 1 |
 
-中文计算机课早就讲过这些符号，但中文教材偏重"记住真值表"。本卡的英文版本要求学生学会**两个深的事情**:
-1. **从真值表反向构造电路** (从结果倒推到原因 — 这是 hunter 的核心动作)
-2. **理解 NAND 的万能性** — 一种门就能搭出全部数字电路，是 Intel/AMD CPU 真正的物理基础
-
-这两件事中文物理教材几乎不讲，是英语 0478/9618 试卷的真正考点。
 
 ---
 
@@ -426,15 +423,15 @@ Recall that DNF guarantees a circuit but doesn't minimise it. **Karnaugh maps** 
 |---|---|---|---|
 | Cambridge 0478 | Yes — §10 directly | No (saved for 9618) | No |
 | Cambridge 9618 | Yes — §3.2 (basic) and §15.2 (advanced) | Yes — §15.2 | Yes — §15.2 |
-| IB Computer Science | Yes — A1.2 "logic gates processing encoded data" | No named statement — gate behaviour + truth tables only | No |
+| IB Computer Science | Yes — A1.2.3 to A1.2.5 | Yes — A1.2.4 and A1.2.5 | Yes — A1.2.4 |
 | AP CSA | **No** — AP CSA is Java/OOP, not circuit-level | No | No |
 | AQA / OCR / Edexcel A-Level CS | Yes, similar to Cambridge | Yes | Yes |
 
 Exam notes:
 - **0478 §10:** complete truth tables, construct circuits and write expressions from the given representation. Circuits have **at most three inputs and one output**; NOT gates have one input, the other gates have two. When translating a given statement into a circuit, **draw it without simplification**, as the syllabus requires. Follow each operation directly; an algebraically equivalent simpler circuit may not answer that instruction. For a truth-table starting point, build the required output row by row, using two-input gates to combine terms.
 - **9618 §3.2 expects familiarity with the six standard gates** plus the ability to read a complex multi-input circuit. §15.2 raises the bar to Boolean simplification and Karnaugh maps.
-- **IB CS A1.2** frames gates as *processing encoded data* — expect a circuit fed by binary values from a data-representation context (the same forward/backward traces as 0478, wearing an IB scenario); the six standard gates and truth tables are the working set.
-- The **NAND-universality proof** is not directly examined on either board, but it's a 5-mark question on every UK A-Level paper that asks "Explain how AND can be built from only NAND gates." Knowing this prepares you for that question and for first-year university digital-electronics modules.
+- **IB CS A1.2.3 to A1.2.5** (first assessment 2027) ask for the purpose of gates, truth tables built from a circuit or from a problem description, and logic diagrams drawn with the standard symbols — the same forward and backward traces as 0478, wearing an IB scenario. IB names **seven** operators: AND, OR, NOT, NAND, NOR, XOR and **XNOR**. XNOR is XOR followed by NOT: its output is 1 exactly when its two inputs are equal. A1.2.4 also names Karnaugh maps and algebraic simplification, which [[Karnaugh Maps]] and [[Boolean Algebra]] carry.
+- The **NAND-universality proof** is not examined as a proof on 0478 or 9618. Building one gate from NAND or NOR gates alone is a standard exercise at this level, and it is where first-year university digital electronics begins.
 
 ---
 

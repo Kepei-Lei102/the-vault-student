@@ -18,6 +18,7 @@ leads_to:
   - "[[The Friction Limit]]"
   - "[[Braking Systems]]"
   - "[[Elastic Strings and Springs]]"
+  - "[[The Solar System]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -75,7 +76,7 @@ Velocity is an arrow with a length (the speed) and a direction. Acceleration is 
 
 ### 中文锚点 (Chinese Anchor)
 
-匀速圆周运动里，速度的**大小**不变但**方向**一直在变，所以一直有加速度，而且永远指向圆心——这就是**向心加速度**，大小 $a = v^2/r = r\omega^2$，其中 $\omega = \Delta\theta/\Delta t = 2\pi/T$ 是角速度，$v = r\omega$。**向心力不是一种新的力，而是一个"岗位"**：绳子的拉力、地面的摩擦力、斜坡的支持力、地球的引力，谁指向圆心谁就在干这份活；画受力图时**只画真实的力**，然后朝圆心列方程 $F_{\text{向}} = mv^2/r$，垂直「指向圆心」方向的合力为零（水平圆周里就是竖直方向）。竖直圆周运动速度会变，要再加上能量守恒；**绳子松弛的判据是 $T = 0$，不是 $v = 0$**——要让绳子拉着物体走完整圆周，最低点速度必须满足 $u^2 \geq 5gr$（换成杆或管子只要 $u^2 \geq 4gr$）。两个经典误区：没有"离心力"把你往外甩，是你的惯性想走直线，车门把你往里推；绳子一断，物体**沿切线飞出**，不是沿半径甩出。考试里 9231/9709 取 $g = 10$，9702 取 $g = 9.81$。
+公交车一拐弯，你觉得自己被"甩"向外侧。其实没有谁在甩你。你的身体只是想照原来的方向笔直往前走——运动的东西没人管的时候都这样；拐弯的是车，是座椅和扶手把你硬往里拽，你才跟着车拐了过去。圆周运动的全部秘密就在这里：匀速转圈的东西，速度的方向每时每刻都在变，方向变了就是有加速度，而加速度要靠一个指向圆心的力才能产生。链球运动员一松手，链球并不是向外飞出去，而是沿切线笔直飞走，因为往里拉的那个力没了。这个往里拉的力不是什么新的力，它是一个"岗位"，谁正好指向圆心谁就来上岗：绳子的拉力、轮胎的摩擦力、地球拉住月亮的引力。
 
 ---
 
@@ -411,6 +412,7 @@ Not on Cambridge 9709 (its mechanics papers stop at particles, projectiles and c
 - **Measure:** [[Radians]] — $s = r\theta$ is where $v = r\omega$ and $a = r\omega^2$ come from, and why $\omega$ must be in rad s⁻¹.
 - **Resolving and energy:** [[Forces and Equilibrium]] — the same resolve-along-two-axes habit, with one axis pointed at the centre; [[Work, Energy and Power]] — the centripetal force does no work, and energy conservation is half of every vertical-circle question. [[Hooke's Law for Springs]] supplies the tension when the string is elastic.
 - **Leads to:** [[Gravitational Fields]] — gravity as the centripetal force, orbits and Kepler; [[Simple Harmonic Motion]] — the shadow of uniform circular motion on a diameter *is* SHM, the reference-circle picture; [[Lorentz Force]] — $r = mv/(Bq)$ is one line of this page; [[Angular Momentum]] — $L = mvr = mr^2\omega$ for a particle on a circle; [[The Friction Limit]] and [[Braking Systems]] — the flat bend and braking in corners.
+- **In the sky:** [[The Solar System]] — $v = 2\pi r/T$ for every planet, and the Sun's gravity as the centripetal force.
 - **Hand-offs:** [[SUVAT]] — what happens after the string goes slack or the particle leaves the sphere; [[Linear Momentum]] — vertical circles that end in collisions.
 - **Kinship:** [[Polar Coordinates]] — circular motion is the $r$-constant special case of motion described by $(r, \theta)$.
 - **For 9231 students:** [[MF19 Reference (9231)]] — the acceleration statement ($\omega^2 r$ or $v^2/r$, toward the centre) is printed; $v = r\omega$ and everything about vertical circles is yours to carry. For 9702 nothing in Topic 12 is on the data sheet.

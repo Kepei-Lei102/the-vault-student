@@ -12,6 +12,8 @@ tags:
   - level/A-Level
   - curriculum/Cambridge-0478
   - curriculum/Cambridge-9618
+  - curriculum/AP-CSA
+  - curriculum/AP-CSP
   - syllabus/0478-1-1
   - syllabus/9618-1-1
   - type/deep
@@ -32,17 +34,11 @@ tags:
 This card is the dark twin of [[Two's Complement]]. There, the fixed-width *wraparound* was the hero — it's exactly what made $a + (-a) = 0$, dropping the carry off the top to land on zero. Here is the same mechanism wearing a black hat: when the answer was supposed to be a real, large number and the carry falls off the top anyway, the result **silently wraps to something wrong**. Same physics, opposite intent.
 
 > [!tip] The one idea
-> A register is a [[Two's Complement|clock]], not a number line. Run off the top and you reappear at the bottom (`127 + 1 → −128`, `255 + 1 → 0`); run off the bottom and you reappear at the top (`0 − 1 → 255`). Whether that wrap is a **feature** (modular arithmetic you intended) or a **bug** (a count that overflowed) depends entirely on whether you *meant* to leave the range. The hardware never warns you — it just wraps.
+> A register is a [[Two's Complement|clock]], not a number line. Run off the top and you reappear at the bottom (`127 + 1 → −128`, `255 + 1 → 0`); run off the bottom and you reappear at the top (`0 − 1 → 255`). Whether that wrap is a **feature** (modular arithmetic you intended) or a **bug** (a count that overflowed) depends entirely on whether you *meant* to leave the range. Fixed-width arithmetic may wrap, but hardware can also expose carry/overflow flags, and software may check, trap or saturate; behaviour depends on the system.
 
 ### 中文锚点
 
-**溢出**（yìchū, overflow）：计算的真实结果**太大**，装不进固定的位数。**下溢**（xiàyì, underflow）：结果太小——低于最小值，或（小数情形）太接近 0——也装不下。
-
-这张卡是 [[Two's Complement|补码]] 的「反面」。在补码里，固定位数的**回绕**是英雄：它正是让 $a+(-a)=0$ 成立的机制（进位从顶端丢掉，落到 0）。这里同一个机制成了反派：当结果本该是个正常的大数，进位却照样从顶端丢掉，于是**悄悄回绕**成错的值。机制一样，意图相反。
-
-- 8 位有符号：`127 + 1 → −128`（上溢）；`0 − 1 → −1` 没问题，但 `−128 − 1 → +127`（下溢回绕）。
-- 8 位无符号：`255 + 1 → 0`；`0 − 1 → 255`。
-- **硬件不会报警**，它只是回绕——所以要么你*故意*用回绕（模运算），要么你得自己**检测**它。
+想象一个只有四位的机械计数器：9999 再往前拨一下，显示的却是 0000。次数明明增加了，只是它没有第五个轮子来显示那个“1”。电脑里有些位数固定的整数也会这样回绕，于是显示出来的数字看着挺正常，背后却可能已经发生了一次超出范围的计算。不过，电脑也可以检查并报错，或停在能表示的最大值；回绕不是唯一选择。浮点数的下溢则是另一种限制：数值太接近零，原有的精度开始保不住。
 
 ## The same wraparound, now a bug
 
@@ -72,7 +68,7 @@ Equivalently, and easier to eyeball: **two operands of the *same* sign that prod
 ![[overflow-detection-byte.svg|697]]
 *Detecting signed overflow on `127 + 1`. Add column by column with carries. At the sign-bit column the carry coming **in** is 1 but the carry going **out** is 0 — they disagree, so the addition overflowed. The visible result `1000 0000` reads as −128, while the true answer (+128) needed a ninth bit the byte doesn't have. Compare `64 + 1`: carries into and out of the sign bit are both 0 — they agree, no overflow.*
 
-**Worked.** $64 + 64$: `0100 0000 + 0100 0000 = 1000 0000`. Two positives, result negative (−128) → overflow (true answer +128 won't fit). $64 + 1 = $ `0100 0001` = 65, signs fine, carries agree → no overflow.
+**Worked.** *Trigger: two positive inputs produce a negative-looking byte. Tool: check the mathematical sum against the signed 8-bit range, −128 to +127.* $64 + 64$: `0100 0000 + 0100 0000 = 1000 0000`. Two positives, result negative (−128) → overflow (true answer +128 won't fit). $64 + 1 = $ `0100 0001` = 65, signs fine, carries agree → no overflow.
 
 ## Underflow
 
@@ -86,7 +82,7 @@ The same wheel, turned the other way. Drive *below* the minimum and you wrap to 
 
 ## Shifts can overflow too
 
-Bit-shifting is its own family of operations — a **logical left shift** multiplies by 2, a **logical right shift** divides by 2 — and it's a third way to overflow: a left shift pushes the top bit clean off the end (`1000 0000 << 1 = 0000 0000`, the 1 is lost), so the ×2 overflowed, exactly like an addition that ran off the top. The full treatment — logical vs **arithmetic** shifts, the sign-bit subtleties, and masking with AND/OR/XOR — is its own card: [[Bitwise Operations]].
+Bit-shifting is its own family of operations — for unsigned integers, a **logical left shift** multiplies by 2 if the result fits; a **logical right shift** divides by 2 and discards any remainder — and it's a third way to overflow: a left shift pushes the top bit clean off the end (`1000 0000 << 1 = 0000 0000`, the 1 is lost), so the ×2 overflowed, exactly like an addition that ran off the top. The full treatment — logical vs **arithmetic** shifts, the sign-bit subtleties, and masking with AND/OR/XOR — is its own card: [[Bitwise Operations]].
 
 ## When overflow is the plan, not the bug
 
@@ -139,17 +135,25 @@ Multiplication overflows much faster (two 16-bit values can need 32 bits). A **l
 
 ### Cambridge 0478 (IGCSE CS)
 
-**§1.1.4** — perform **binary addition** of 8-bit integers and identify **overflow** (a carry beyond the 8th bit / a result that won't fit). **§1.1.5** — **logical left and right shifts** and their effect (×2 / ÷2), including that bits shifted off the end are lost. This card closes §1.1.4–5; the representation it builds on is [[Two's Complement]].
+**§1.1.4** — add two **positive 8-bit binary integers** and explain overflow: an unsigned result above **255** cannot fit in the register. Carry beyond the eighth bit signals overflow for this unsigned task. This is distinct from signed overflow, where a result can be out of range with no carry-out. **§1.1.5** — perform logical left/right shifts, identify bits lost, and explain their multiplicative meaning. For unsigned values, right shift divides by a power of two and discards any remainder; left shift multiplies only while the result fits. **§1.1.6** supplies two's-complement representation → [[Two's Complement]].
 
 ### Cambridge 9618 (A-Level CS)
 
-**§1.1** includes binary addition and **overflow**; you should be able to state the signed-overflow condition (carry-in ≠ carry-out of the sign bit) and explain why adding opposite-signed numbers can't overflow. **Floating-point** overflow and underflow live in **§13.3** → [[Floating-Point Representation]].
+**§1.1 (2027–2029)** requires binary addition **and subtraction** using positive and negative integers, with understanding of overflow. Use the signed representable range to check the true answer. The same-sign test and unequal carries into/out of the sign bit are useful detection methods; the syllabus does not explicitly name the carry-XOR circuit as a separate outcome. **§13.3** requires floating-point overflow, underflow and representation/precision consequences → [[Floating-Point Representation]]. Underflow near zero is different from an integer result falling below its minimum.
 
-### IB Computer Science
+### IB Computer Science — first assessment 2027
 
-Not a named statement: A1.2's confirmed wording covers **binary/hexadecimal conversion and logic gates** — binary addition and overflow detection are not on the published outline. As with AP, the *behaviour* still surfaces wherever IB code does arithmetic near a type's limits; the bit-level carry rules stay Cambridge-only.
+The full guide's **A1.2.1–2** covers binary/hexadecimal integers, conversions and binary storage. It does **not explicitly prescribe binary addition, signed-overflow detection or floating-point underflow calculations**. Keep those as supporting enrichment, without inferring a required carry-rule question from the broad word “representation”. Language behaviour also differs: Java `int` has a fixed range; ordinary Python integers expand as memory permits.
 
-*(AP CSA: Java's `int` overflow is silent — `Integer.MAX_VALUE + 1` is a large negative — and is a classic source of subtle bugs; the concept is examinable as program behaviour even though the bit-level rule isn't.)*
+### AP Computer Science A — effective Fall 2025
+
+**§1.5.B.1–3** requires reasoning about the `int` range, `Integer.MIN_VALUE` / `Integer.MAX_VALUE`, and expressions whose results lie outside that range. A Java `int` uses 32 signed bits: adding 1 to **2,147,483,647** yields **−2,147,483,648**. The trigger is the *mathematical result leaving the allowed range*, not an exception message. Bit-level carry tests and two's-complement conversion are not prescribed. **§1.5.C.1** separately addresses `double` round-off; that is not the same as underflow. The broader casting work of §1.5 still needs its own Java practice.
+
+### AP Computer Science Principles
+
+**Topic 2.1, DAT-1.B.1–3**, covers fixed-bit limitations, possible integer overflow, and approximate representation/round-off for real numbers. **CRD-2.I.4** also identifies overflow as an error category. Explain *why* a finite number of patterns imposes a limit. The reference-sheet language instead abstracts integers as limited by available memory; do not assume its arithmetic wraps like an 8-bit register. [College Board CED, pp. 39 and 47](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-and-exam-description.pdf)
+
+**Not prescribed by these outcomes:** signed carry-XOR detection and floating-point underflow calculation are not AP CSA/AP CSP or IB A1.2 requirements; 0478 does not require floating-point underflow. Cambridge 9618 §13.3 does require the floating-point concepts.
 
 ## Connections
 

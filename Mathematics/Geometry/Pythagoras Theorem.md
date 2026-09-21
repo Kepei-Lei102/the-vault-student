@@ -235,13 +235,13 @@ Adding: $a^2 + b^2 = cd + ce = c(d + e) = c \cdot c = c^2 \qquad \square$
 - Extension: 3D problems — finding lengths and angles within prisms, pyramids, and cuboids. These always involve applying Pythagoras twice (once in a face, once in a cross-section).
 - The converse is testable: "Show that triangle ABC is right-angled."
 
-### Cambridge 0580 Extended
+### Cambridge 0580
 
-**Syllabus ref:** E6.1 — Pythagoras' theorem in 2D.
+**Syllabus refs:** **C6.1 / E6.1** "Know and use Pythagoras' theorem" (Core and Extended), and **E6.6** Pythagoras' theorem and trigonometry **in 3D** (Extended): "carry out calculations and solve problems in three dimensions using Pythagoras' theorem and trigonometry, including calculating the angle between a line and a plane".
 
-- Paper 2 (non-calculator): expect integer answers (Pythagorean triples) or simple surds.
-- Paper 4 (calculator): expect decimal answers, often combined with trigonometry.
-- 0580 does not explicitly test 3D Pythagoras at Extended level, but it can appear in compound problems.
+- Paper 2 (non-calculator, Extended) and Paper 1 (non-calculator, Core): expect integer answers (Pythagorean triples) or simple surds.
+- Paper 4 and Paper 3 (calculator): expect decimal answers, often combined with trigonometry.
+- **3D is explicitly examined at Extended level** (E6.6): the space diagonal of a cuboid, slant heights of pyramids and cones, and the angle between a line and a plane, each by finding the right-angled triangle inside the solid and applying the theorem twice. See [[3D Trigonometry]], which owns the E6.6 row.
 
 ### AP / IB / A-Level
 

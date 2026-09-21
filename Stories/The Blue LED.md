@@ -31,6 +31,10 @@ tags:
 
 ## 中文锚点
 
+打开手机手电筒，白光一下就亮了，很难想象，让一颗小灯发出高效的蓝光，曾经会难住那么多人。中村修二在企业里坚持研究氮化镓，赤崎勇和天野浩在名古屋大学攻关同一种材料，他们面对的都不是今天随手就能点亮的成品，而是还会失败的实验。这个故事有意思的地方，就在那个结果还没出来的时刻：眼前的办法又没奏效，你根据什么判断，值得再试一次？我们用着那束方便的光，他们当年却得先做这个没有保证的选择。
+
+## Names and language
+
 | English | 中文 | one-line meaning |
 |---|---|---|
 | light-emitting diode (LED) | 发光二极管 | a semiconductor junction that turns current directly into light |

@@ -3,6 +3,7 @@ chinese: 超声波 (chāoshēngbō)
 prerequisites:
   - "[[Progressive Waves]]"
   - "[[Resonance]]"
+  - "[[Sound]]"
 leads_to: []
 teach_together:
   - "[[X-rays and CT]]"

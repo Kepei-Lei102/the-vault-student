@@ -1,6 +1,7 @@
 ---
 chinese: 辅助存储 / 外存 (fǔzhù cúnchǔ / wàicún)
 prerequisites:
+  - "[[Magnetism and Magnetic Materials]]"
   - "[[RAM and the Memory Hierarchy]]"
   - "[[Gray Code]]"
 leads_to:
@@ -42,7 +43,7 @@ tags:
 | hard disk drive (HDD) | 机械硬盘 | magnetic storage on spinning platters |
 | platter / track / sector | 盘片 / 磁道 / 扇区 | the disk's surface / one concentric ring / one slice of a ring |
 | solid-state drive (SSD) | 固态硬盘 | flash storage, no moving parts |
-| flash memory | 闪存 | floating-gate storage erased a block at a time |
+| flash memory | 闪存 | non-volatile charge storage erased a block at a time |
 | floating gate | 浮栅 | the insulated island that traps electrons — the flash bit |
 | optical disc | 光盘 | CD/DVD/Blu-ray — pits and lands read by laser |
 | ROM (read-only memory) | 只读存储器 | non-volatile firmware; the family PROM → EPROM → EEPROM |
@@ -100,30 +101,32 @@ The fourth question is the secret one. Recall how DRAM reads a cell: the bit lin
 
 ![[secondary-storage-floating-gate.svg|697]]
 
-**The bit** is a puddle of electrons trapped on a **floating gate** — an island of conductor buried inside a transistor, wrapped on every side by insulating oxide. A normal transistor switches on when its **control gate** is charged; in a flash cell, the floating gate sits *between* the control gate and the channel, and any electrons parked on it push back against the control gate's field. Charge on the island raises the voltage needed to switch the transistor on — the **threshold voltage**. That is the whole trick: *the stored charge is invisible, but the transistor's switching point betrays it.*
+**In the floating-gate implementation**, information is stored as charge on a **floating gate** — an island of conductor buried inside a transistor, wrapped on every side by insulating oxide. A normal transistor switches on when its **control gate** is charged; in a flash cell, the floating gate sits *between* the control gate and the channel, and any electrons parked on it push back against the control gate's field. Charge on the island raises the voltage needed to switch the transistor on — the **threshold voltage**. That is the whole trick: *the stored charge is invisible, but the transistor's switching point betrays it.*
 
-**Writing** means forcing electrons *through* the insulating wall. A large voltage bends the oxide barrier until electrons **[[Quantum Tunnelling|quantum-tunnel]]** across it onto the island — passing through a wall they classically could not climb; remove the voltage and the wall snaps shut behind them. The island has no wires — that is the point. Perfectly insulated, the charge just *stays*, for years, with no power at all.
+**Writing a NAND cell** uses a strong electric field to reshape the insulating barrier so electrons **[[Quantum Tunnelling|quantum-tunnel]]** into its storage region. Remove the programming voltage and escape becomes much less likely. The charge can persist without power, but retention is finite and depends on temperature, wear and device design. The barrier changes; it never becomes an absolutely impassable wall.
+
+**Many modern 3D NAND cells use charge traps instead of floating gates:** electrons occupy localised states in an insulating storage layer rather than one conducting island. Both implementations store information through a threshold-voltage shift. The diagram and video here illustrate the floating-gate version. [Micron: charge-trap NAND](https://www.micron.com/products/storage/nand-flash/176-layer-nand)
 
 **Reading** applies an in-between voltage to the control gate and checks whether the transistor conducts. Charged island → still off → read as 0; uncharged → on → read as 1. No moving parts, so access takes ~50 µs instead of ~10 ms — and a dropped SSD shrugs.
 
-**Erasing** is the odd one out: tunnelling electrons *off* the island is done a whole **block** at a time (hundreds of kilobytes), not byte-by-byte. When Fujio Masuoka's team at Toshiba built the first such memory in 1984, a colleague remarked that block-erase wiped the chip like a camera *flash* going off — and the name stuck.
+**Erasing** resets stored charge a whole **block** at a time, not byte-by-byte. In the floating-gate model, electrons tunnel off the island under a different bias; charge-trap implementations can also involve holes neutralising stored negative charge. Block sizes depend on the device. When Fujio Masuoka's team at Toshiba built the first such memory in 1984, a colleague remarked that block-erase wiped the chip like a camera *flash* going off — and the name stuck.
 
-The whole cycle is really a story about **where the electrons flow** — forced through the wall, interrogated without being touched, flushed back out:
+The floating-gate cycle is a story about **where charge moves**: alter the barrier to program, sense the channel to read, change the bias to erase. Reading does not deliberately empty the storage region; repeated reads can nevertheless disturb real cells:
 
 ![[secondary-storage-flash-cell.mp4]]
 
-Two wiring arrangements share the mechanism, and their names are honest — they describe the gate structure the cells form. **NOR** flash wires every cell its own contact to the bit line (parallel, like a NOR gate's inputs): any byte reachable at any moment — random access, so firmware can *execute in place* — but all those contacts cost silicon. **NAND** flash chains cells into **series strings** (like a NAND gate's stacked transistors) with a single contact per string: far denser and cheaper per byte, but readable only in whole **pages** — the engine of every SSD, SD card, and USB drive.
+Two wiring arrangements use charge-controlled thresholds (their programming methods need not be identical), and their names are honest — they describe the gate structure the cells form. **NOR** flash wires every cell its own contact to the bit line (parallel, like a NOR gate's inputs): any byte reachable at any moment — random access, so firmware can *execute in place* — but all those contacts cost silicon. **NAND** flash chains cells into **series strings** (like a NAND gate's stacked transistors) with a single contact per string: far denser and cheaper per byte, but readable only in whole **pages** — the engine of every SSD, SD card, and USB drive.
 
 ![[secondary-storage-nor-vs-nand.svg|560]]
 
-**Packing more bits per island.** A single-level cell (SLC) stores one bit: island empty or full, two charge levels, one fat gap between them. Modern drives store **2, 3, or 4 bits per cell** (MLC, TLC, QLC) by distinguishing **4, 8, or 16 distinct charge levels** — same island, finer pencil. The catch is the decision boundaries: sixteen levels must fit where two used to live, so the gaps shrink and a slightly-leaked island can drift across a line. Two defences keep QLC honest:
+**Packing more bits per cell.** A single-level cell (SLC) stores one bit using two distinguishable threshold-voltage ranges, with a generous margin between them. Modern drives store **2, 3, or 4 bits per cell** (MLC, TLC, QLC) by distinguishing **4, 8, or 16 threshold-voltage ranges** — same storage region, finer pencil. The catch is the decision boundaries: sixteen levels must fit where two used to live, so the gaps shrink and a slightly-leaked island can drift across a line. Two defences keep QLC honest:
 
 - **The levels are numbered in [[Gray Code]] order.** Adjacent charge levels differ in exactly *one* bit — so a cell that drifts one level over corrupts one bit, not four. The rotary-encoder trick, replayed inside every flash cell you own.
 - **Error-correcting codes** stored alongside the data mop up the stragglers ([[Error Detection and Correction]]).
 
 ![[secondary-storage-flash-levels.png|640]]
 
-**Wear.** Every program/erase cycle rams electrons through the oxide, and the oxide scars — trapped charge accumulates until the cell can no longer hold its levels apart. Endurance runs from ~100 000 cycles for SLC down to around a thousand for QLC. The controller fights back with **wear levelling**: it constantly remaps data so writes spread evenly across all blocks, no block dying young while others sit idle. (This is also why *defragmenting an SSD is worse than useless* — see Misconceptions.)
+**Wear.** Repeated high-field program/erase cycles stress the tunnel dielectric and interfaces. Unwanted defects and trapped charge accumulate until the cell can no longer hold its threshold ranges apart. Endurance runs from ~100 000 cycles for SLC down to around a thousand for QLC. The controller fights back with **wear levelling**: it constantly remaps data so writes spread evenly across all blocks, no block dying young while others sit idle. (This is also why *defragmenting an SSD is worse than useless* — see Misconceptions.)
 
 **Over-provisioning.** Wear levelling needs room to manoeuvre — spare blocks to shuffle data through, and replacements for the blocks that eventually die. So manufacturers build the spare in, using a trick of the two unit ladders from [[Storage Units (Vocab)]]: NAND chips come off the production line in *binary* sizes, but the sticker is *decimal*. A "512 GB" drive physically carries 512 GiB ≈ 550 GB of flash, and the ≈ 7% difference is **over-provisioning** — a reserve the operating system never sees, spent on wear levelling, background garbage collection, and quietly retiring failing blocks. It is why a healthy SSD stays fast and reaches old age *by design*, not by luck. Enterprise drives push the same dial harder: a "400 GB" data-centre drive may carry that same 512 GiB of silicon, trading over a quarter of its sellable capacity for endurance and sustained write speed. The TB-vs-TiB gap, put to work.
 
@@ -143,7 +146,7 @@ Two wiring arrangements share the mechanism, and their names are honest — they
 
 Mask ROM cannot change its mind at all. PROM lets you *make up* your mind exactly once — programming literally blows fuses, as irreversible as it sounds. The leap is **EPROM** (Intel, 1971): Dov Frohman realised that a *defect* observed in transistors — charge getting stuck on a floating conductor — could be the storage mechanism itself, and the floating gate found its **first mass-produced home**, thirteen years before flash. EPROM chips carry a little quartz window: twenty minutes under an ultraviolet lamp gives the trapped electrons enough energy to jump off the islands, blanking the whole chip (working chips got a sticker over the window, so stray sunlight couldn't slowly erase the firmware). **EEPROM** replaced the UV lamp with electrical erase, byte-by-byte, in-circuit — no more unplugging the chip to update it. And **flash** is EEPROM's pragmatic descendant: give up byte-erase, erase in blocks, and in exchange pack the cells so densely that terabytes become cheap.
 
-So the SSD in your laptop and the BIOS chip on its motherboard are the same invention at two scales — the floating gate, Frohman's tamed defect, holding both your files and the firmware that finds them.
+The SSD in your laptop and the flash chip holding its firmware share the principle of electrically controlled, non-volatile charge storage. Their cell structures can differ: the floating gate has descendants as well as neighbours.
 
 ## Optical — pits, lands, and a finer pen
 
@@ -214,11 +217,11 @@ The sysadmin's joke — *"there is no cloud, it's just someone else's computer"*
 
 **Example 1 — why an SSD feels 100× snappier.** A 7 200 rpm HDD needs an average seek of 9 ms. Estimate its average access time, and compare with an SSD at 60 µs.
 
-*Tool: rotational latency — on average the platter must turn half a revolution before the sector arrives.*
+*Tool: rotational latency. Trigger: random arrival relative to a uniformly rotating platter means a half-revolution average wait.*
 
 One revolution takes $\dfrac{60}{7200} = 8.33$ ms, so the average rotational wait is half that: $4.17$ ms.
 
-*Tool: access time = seek + rotational latency (the transfer itself is comparatively fast).*
+*Tool: access time = seek + rotational latency. Trigger: the arm must reach the track and then the sector must arrive; for this small random access, transfer time is neglected.*
 
 $$t_{HDD} \approx 9 + 4.17 \approx 13\ \text{ms} \qquad t_{SSD} \approx 0.06\ \text{ms}$$
 
@@ -240,7 +243,7 @@ The pattern to name in an exam answer: **no medium wins every axis** — every r
 > Deleting removes a name and eventually releases allocation; it does not certify erasure. On an HDD, old bytes may survive until reuse, but recoverability depends on surviving metadata and contents. On an SSD, TRIM/discard tells the controller which logical ranges are no longer needed; host access may disappear before garbage collection physically erases the flash. Overwriting a file cannot reliably reach remapped pages, snapshots or backups. Sanitisation requires a suitable verified device procedure, cryptographic erase with its key-management conditions, or appropriate destruction. [[File Systems]] follows these distinct lifetimes and explains why neither recovery nor erasure follows from the word “delete”.
 
 > [!warning] "Storage lasts forever — it's non-volatile!"
-> Non-volatile means *survives power-off*, not *survives time*. Recordable-DVD dye fades in years-to-decades ("disc rot"); a worn flash cell's electrons leak off the floating gate within a few unpowered years; even magnetisation weakens as thermal jostling flips grains. Storage is a **lease, not a purchase** — real archives survive by *active copying* onto fresh media, not by trusting any one object. The 2,000-year-old texts we still read survived the same way: recopied, not preserved.
+> Non-volatile means *survives power-off*, not *survives time*. Recordable-DVD dye fades in years-to-decades ("disc rot"); a flash cell can lose distinguishable charge levels, at a rate depending on temperature, wear and construction; even magnetisation weakens as thermal jostling flips grains. Storage is a **lease, not a purchase** — real archives survive by *active copying* onto fresh media, not by trusting any one object. The 2,000-year-old texts we still read survived the same way: recopied, not preserved.
 
 > [!warning] "Defragment your drives regularly."
 > On an HDD, defragmenting genuinely helps: it gathers each file's blocks into contiguous runs, so the head seeks less. An SSD has no head-seek penalty to remove, and generic HDD-style defragmentation adds writes. Fragmentation can still have file-system overhead, so use the OS’s device-aware maintenance; TRIM and defragmentation are different operations.
@@ -276,7 +279,7 @@ This section is examined in full, and the six learning objectives map directly o
 
 - "Show understanding of the need for input, output, primary memory and **secondary (including removable) storage**" — the primary/secondary table plus the removable examples covers this bullet.
 - "Describe the **principal operations** of hardware devices" — of the named device list, this page delivers *magnetic hard disk, solid-state (flash) memory, and optical disc reader/writer*. Answer in mechanism language: flux reversals and heads for magnetic; floating gates and threshold voltages for flash; pits, lands, and laser reflection for optical.
-- "Explain the difference between **PROM, EPROM and EEPROM**" — the ROM-family table is this LO verbatim: fuses/once/never; floating gates/UV-erase/whole-chip; electrical-erase/byte-by-byte. A classic 3-mark question is one distinguishing sentence per generation.
+- "Explain the difference between **PROM, EPROM and EEPROM**" — the ROM-family table is this LO verbatim: fuses/once/never; floating gates/UV-erase/whole-chip; electrical-erase/byte-by-byte. Name the programming method, erasing method and granularity when the question asks for those distinctions; the allocation depends on the question.
 - "Show understanding of the use of **buffers**" — definition plus one concrete use (printing or streaming) with the *speed-mismatch* reason stated.
 - 9618 loves **justify-the-choice** questions (as in the photographer example): name the axis that dominates the scenario, then match the medium that wins that axis.
 
@@ -296,7 +299,7 @@ Not examined — AP CSA is a programming course; storage hardware is out of scop
 - **Extensions:** [[Operating Systems]] — paging, segmentation, page replacement, thrashing (the A-Level §16.1 machinery behind the sketch here); [[File Systems]] — how blocks become named files and folders; [[Error Detection and Correction]] — the codes that mop up what the physics lets slip; [[RAID]] — many cheap disks pretending to be one fast, reliable disk (striping, mirroring, XOR parity — and why RAID is *not* a backup); [[How a Chip Is Made]] — how floating gates are actually fabricated.
 - **Application:** [[Compression]] — fitting more into the same blocks; and its compression-is-prediction thesis is literally how a PRML disk head reads.
 - **Story:** [[Stories/The Blue LED]] — the wavelength ladder's finest pen, the 405 nm violet laser, is Nakamura's: the man who made blue light exist, and was paid two envelopes of ¥10,000 for the patent.
-- **Physics bridge:** [[Capacitors]] — DRAM's cell is a capacitor built to be fast and leaky; the floating gate is a capacitor built to never discharge. Same physics, opposite design goals. [[Quantum Tunnelling]] — the wall-crossing that writes every flash cell (and powers alpha decay, the STM, and the sun).
+- **Physics bridge:** [[Capacitors]] — DRAM's cell is a capacitor built to be fast and leaky; flash stores charge behind barriers designed for long retention. Both exploit stored charge, with very different speed and retention goals. [[Quantum Tunnelling]] — barrier transmission used to program NAND flash, suppress CPU leakage and measure surfaces with an STM; also a mechanism in alpha decay and stellar fusion.
 - **Meta bridge:** [[Decouple and Recouple]] — the buffer is the canonical decoupler; engineering is choosing which couplings to break and which to keep.
 
 ## Glossary

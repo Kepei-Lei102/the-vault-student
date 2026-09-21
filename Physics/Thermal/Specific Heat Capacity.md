@@ -54,11 +54,11 @@ A note on *capacity* vs *specific capacity*: the **heat capacity** $C = mc$ of a
 
 ### 中文锚点
 
-**比热容**（bǐrèróng, specific heat capacity）$c$：使 **1 kg** 物质温度升高 **1 K** 所需的能量，$Q = mc\Delta T$，单位 $\text{J kg}^{-1}\text{K}^{-1}$。
+夏天中午在海边，沙子烫脚，旁边的海水却还是凉的。两者晒了一上午同样的太阳，差别在于：水每升高一度要吸收很多能量，沙子只要很少。"每千克物质升高一度需要的能量"就是比热容，水的比热容在常见物质里数一数二，所以热水袋能暖几个小时，海边城市的冬天也不太冷。再看烧水：水到了 100 °C 以后，炉子还在不停地送能量，温度计却不动了。能量没有消失，而是用来把水分子一个个从同伴身边拉开、变成水蒸气，并没有让分子跑得更快；而温度量的只是分子跑得多快。所以送进物质的能量有两个去处：让分子运动得更快，表现为温度升高；或者让分子挣脱彼此，表现为在温度不变的情况下熔化或沸腾。后一种情况下每千克需要的能量，就是比潜热。
 
-**比潜热**（bǐ qiánrè, specific latent heat）$L$：在**恒定温度**下改变 1 kg 物质**物态**所需的能量，$Q = mL$。$L_f$ 是**熔化**（rónghuà, fusion）潜热，$L_v$ 是**汽化**（qìhuà, vaporisation）潜热。单位 $\text{J kg}^{-1}$。
+### 术语对照 (Terms)
 
-核心区分：加热物质时，能量要么让温度上升（**比热容**——分子动能增加），要么在物态变化时让温度**停滞不动**（**潜热**——分子间键断裂，势能增加）。这正是 [[Internal Energy|内能]] 卡片那口"势能井"的两种去向：升温填的是动能项，熔化/汽化填的是势能项。
+**比热容**（bǐrèróng, specific heat capacity）$c$：$Q = mc\Delta T$，单位 $\text{J kg}^{-1}\text{K}^{-1}$ · **比潜热**（bǐ qiánrè, specific latent heat）$L$：$Q = mL$，单位 $\text{J kg}^{-1}$ · **熔化**（rónghuà, fusion）潜热 $L_f$ · **汽化**（qìhuà, vaporisation）潜热 $L_v$ · 物态变化 change of state · [[Internal Energy|内能]] internal energy
 
 ## Why it works — heat capacity is internal energy per kelvin
 
@@ -146,6 +146,60 @@ $$\text{energy lost by the hot body} = \text{energy gained by the cold body}.$$
 
 Equating $mc\,\Delta T$ terms lets you solve for an unknown $c$, an unknown mass, or the final temperature. (The honest caveat — heat leaks to the surroundings, and the container itself absorbs some energy — is why real calorimeters are insulated and why the container's own heat capacity often has to be included.)
 
+## Measuring it — the electrical method
+
+**Tool: energy in from a heater of known power, $E = Pt = IVt$; then the definition, $c = E/(m\,\Delta\theta)$.**
+
+**For a solid.** Use a cylindrical metal block with two holes drilled in it, one for an **immersion heater** and one for a **thermometer**. (1) Measure the block's **mass** $m$ on a balance. (2) Put a drop of oil in the thermometer hole so that the thermometer reads the block and not a pocket of air. (3) Wrap the block in **insulation** and stand it on an insulating mat. (4) Record the **initial temperature** $\theta_1$. (5) Switch on the heater and a stopwatch together; record the heater's **power** $P$ (or the current $I$ and the p.d. $V$). (6) After a measured **time** $t$, switch off and keep watching: the reading goes on rising for a minute as the energy spreads through the block. Record the **highest** temperature $\theta_2$. (7) Calculate $c = Pt/\big(m(\theta_2-\theta_1)\big)$.
+
+**For a liquid.** The same, with a measured mass of liquid in an insulated cup with a lid. **Stir** before every reading, because a liquid heated from one place is not at one temperature.
+
+**What goes wrong, and which way.** Energy escapes to the room while you heat. The block therefore warms *less* than it should, and because $\Delta\theta$ sits underneath in $c = Pt/(m\,\Delta\theta)$, the answer comes out **too large, never too small**. Here is the experiment run in numbers for 1.00 kg of aluminium (true value 900 J kg⁻¹ K⁻¹) and a 48 W heater:
+
+![[specific-heat-electrical-method.svg|820]]
+
+| Block | Rise after 10 minutes | Measured $c$ | Error |
+|---|---|---|---|
+| no losses | 32.0 K | 900 | none |
+| wrapped in insulation | 29.5 K | 977 | +9 % |
+| bare | 22.0 K | 1307 | +45 % |
+
+Two cures follow. **Insulate**, which is worth a factor of five here. And notice that the three curves share the same gradient at the start, when the block is still at room temperature and has nothing to lose: a graph of temperature against time, with $c$ taken from the **initial gradient** ($c = P/(m \times \text{gradient})$), beats any single pair of readings. Using only the first two minutes, even the bare block gives 974. This is the graph-before-arithmetic habit of [[Planning an Experiment]].
+
+## Evaporation — cooling without boiling
+
+A puddle dries at 15 °C, far below the boiling temperature of water. How does liquid turn to gas without being boiled?
+
+The molecules of a liquid do not all have the same energy. At any moment most are near the average and a few are far above it. A molecule **at the surface** that happens to be moving fast enough, in the right direction, breaks free of its neighbours' attraction and leaves. That is **evaporation: the escape of the more energetic molecules from the surface of a liquid.**
+
+Now do the accounting. The leavers were the most energetic, so the **average** kinetic energy of those left behind has fallen, and average kinetic energy is what temperature measures. **Evaporation cools the liquid.**
+
+![[specific-heat-evaporation.svg|820]]
+
+In this model of a million molecules only 0.7 % have enough energy to escape, but each of those carries nearly five times the average share, and their departure lowers the temperature of the rest by about 3 %, which is 8 K at room temperature. The liquid is now colder than whatever it is touching, so energy flows into it from that object, and the object cools too. **This is how sweat cools skin: thermal energy is transferred from the skin to the water, the more energetic water molecules escape from the surface, and the molecules that remain have a lower average kinetic energy, hence a lower temperature.** A refrigerator does the same with a liquid chosen to evaporate readily inside the pipes of the cold compartment.
+
+**Three things make evaporation faster**, each for a particle reason:
+
+| Change | Why |
+|---|---|
+| higher **temperature** | more molecules have enough energy to escape |
+| larger **surface area** | more molecules are at the surface, the only place escape can happen |
+| **air movement** over the surface (wind, a fan) | escaped molecules are carried away before they can fall back into the liquid |
+
+Wet clothes dry fastest spread out, on a warm and windy day: all three at once.
+
+**Evaporation and boiling are different processes:**
+
+| | Evaporation | Boiling |
+|---|---|---|
+| where | at the **surface** only | **throughout** the liquid (bubbles of vapour form inside it) |
+| when | at **any** temperature | only at the **boiling temperature** |
+| effect on temperature | the liquid **cools** | the temperature **stays constant** while energy is supplied |
+
+For water at standard atmospheric pressure the fixed points are **0 °C** (melting) and **100 °C** (boiling).
+
+**The reverse changes, in particles.** In **condensation** gas molecules that strike a cool surface, or each other when slow enough, are caught by the attraction between them and stay together as a liquid; the energy they give up warms the surroundings, which is why steam scalds worse than boiling water. In **solidification** (freezing) the molecules of a liquid have slowed enough for those attractions to hold each one in a fixed position, and they settle into a regular arrangement where they can only vibrate. Both release exactly the energy that the forward change absorbed.
+
 ## Worked Examples
 
 **Example 1 — Warming water (9702 §14.3 / 0625 §2.2).** How much energy heats $0.50\,\text{kg}$ of water from $20\,^\circ\text{C}$ to $100\,^\circ\text{C}$? ($c_{\text{water}} = 4200\,\text{J kg}^{-1}\text{K}^{-1}$.)
@@ -166,6 +220,22 @@ The water barely warms — its large $c$ and mass dominate the copper.
 **Example 4 — Heat capacity of a gas from degrees of freedom (AP-2 / college).** How much energy raises the temperature of $2.0\,\text{mol}$ of helium (monatomic) by $50\,\text{K}$ **at constant volume**, and how does it compare with nitrogen (diatomic)?
 $$Q_{\text{He}} = nC_V\Delta T = n\big(\tfrac{3}{2}R\big)\Delta T = (2.0)(\tfrac{3}{2})(8.31)(50) \approx 1.2\times10^3\,\text{J}.$$
 For nitrogen, $C_V = \tfrac{5}{2}R$, so $Q_{\text{N}_2} = \tfrac{5}{3}Q_{\text{He}} \approx 2.1\times10^3\,\text{J}$ — the diatomic gas needs $\tfrac{5}{3}\times$ as much, because rotation gives it two more pockets to fill.
+
+### Worked example — one question, three ideas (Cambridge 0625, November 2024 Paper 41, Q4)
+
+*(a) Describe an experiment to determine the specific heat capacity of aluminium. Include the measurements made and any equations needed. [4] (b) Boiling water is poured into an aluminium dish at room temperature. (ii) Explain, in terms of its particles, why the aluminium expands. [2] (iii) The water in the dish evaporates. Explain, in terms of the water molecules, what is meant by evaporation. [2]*
+
+**(a)** *Trigger: "describe an experiment" with a list of what to include; the marks are a method, the energy, a measurement, and the final equation.* Heat an aluminium block with an electrical heater (method). The energy supplied is $E = Pt$, or $E = IVt$ (energy). Measure the mass of the block, the time of heating, and the initial and final temperatures (measurements). Then $c = E/(m\,\Delta\theta)$ (equation). The published scheme also accepts a method of mixtures with a liquid of known specific heat capacity.
+
+**(b)(ii)** *Tool: temperature is average kinetic energy; expansion is greater separation. See [[Thermal Expansion]].* The particles gain kinetic energy as the temperature rises, and their average separation increases. It is wrong to say the particles themselves expand.
+
+**(b)(iii)** Water molecules with more energy than the rest **escape from the surface**. Both halves are needed: *which* molecules, and *from where*.
+
+### Worked example — why wet skin feels cold (Cambridge 0625, June 2026 Paper 42, Q5(a))
+
+*On a hot day a student wets his skin with cold water, which evaporates. Explain, in terms of particles, why his skin temperature decreases. [3]*
+
+*Trigger: three marks, so three links in a chain.* (1) Thermal energy is transferred from the skin to the water. (2) The more energetic water particles escape from the surface. (3) The remaining particles have a lower average kinetic energy, so the water's temperature is lower, and it goes on drawing energy from the skin.
 
 ## Common Misconceptions
 
@@ -189,8 +259,8 @@ Specific heat capacities vary by more than an order of magnitude — water $4200
 ### Cambridge 9702 (A-Level Physics) — §14.3
 The core home. Define and use **specific heat capacity** ($Q = mc\Delta T$) and **specific latent heat** of fusion and vaporisation ($Q = mL$); explain, in molecular terms, why melting and boiling occur at constant temperature (energy raises molecular PE, not KE). The **electrical method** for measuring $c$ (a heater of known power $P$ for time $t$ delivers $Q = Pt = mc\Delta T$) and the **method of mixtures** are standard practical questions; the heat lost to surroundings is the expected source of systematic error. The gas $C_V$/$C_p$ split is **not** required at 9702 (it belongs to §16 thermodynamics and beyond) but the molecular reasoning here sets it up.
 
-### Cambridge 0625 (IGCSE Physics) — §2.2 (Extended)
-The 2026–2028 syllabus requires specific heat capacity and $Q = mc\Delta T$ at §2.2.2, including experiments with solids and liquids. §2.2.3 includes constant-temperature melting/boiling, particle explanations, condensation/solidification and evaporation/cooling. It does **not** name specific latent heat or $Q=mL$ as a required outcome; that quantitative treatment is enrichment here. Thermal expansion (§2.2.1) requires additional treatment; [[Heat Transfer]] explains conduction, convection and radiation (§2.3). Thermometer readings remain practical skills, but there is no separate thermometer-design unit in the current §2.2.
+### Cambridge 0625 (IGCSE Physics) — §2.2.2 and §2.2.3
+**§2.2.2.** Core: a rise in temperature increases internal energy. Supplement: the rise described as an increase in the **average kinetic energy of all the particles**; the definition "energy required per unit mass per unit temperature increase"; recall and use $c = \Delta E/(m\,\Delta\theta)$; **describe experiments** for a solid and a liquid. The experiment question recurs almost yearly and is marked on four things: a workable method, how the energy is found ($Pt$ or $IVt$), the measurements (mass, time, initial and final temperature), and the final equation. **§2.2.3.** Core: melting and boiling as energy input with no temperature change; 0 °C and 100 °C for water at standard atmospheric pressure; condensation and solidification in terms of particles; evaporation as the escape of more-energetic particles **from the surface**; evaporation cools. Supplement: the differences between boiling and evaporation; the effects of temperature, surface area and air movement; the cooling of an object in contact with an evaporating liquid. The syllabus does **not** name specific latent heat or $Q = mL$; that treatment is enrichment at this level. §2.2.1 is taught in [[Thermal Expansion]] and §2.3 in [[Heat Transfer]].
 
 ### IB Physics — Theme B (B.1.2)
 **Thermal energy transfer** between bodies to a common temperature; **phase change at constant $T$**; **specific heat capacity** $c$ and **specific latent heat** $L$ (fusion and vaporisation), with $Q = mc\Delta T$ and $Q = mL$. HL builds the molecular picture (the constant-$T$ plateau as molecular PE) on the [[Internal Energy]] foundation. (Conduction, convection and radiation are B.1.3 — see [[Temperature and Thermometry]] for equilibrium; transfer mechanisms are distinct.)
@@ -217,6 +287,7 @@ A cold hydrogen molecule can only translate ($C_V = \tfrac32 R$); warm it past ~
 
 ## Connections
 
+- **Same syllabus section:** [[Thermal Expansion]] — what else a temperature rise does to matter; [[Planning an Experiment]] — the initial-gradient method used in the electrical experiment.
 - **Parent:** [[Internal Energy]] — specific heat is internal energy per kelvin made measurable; $C_V = \tfrac{f}{2}R$ is the degrees-of-freedom promise paid, and latent heat is the potential-well's $\Delta E_p$ given a name.
 - **Prerequisites:** [[Internal Energy]] (the KE/PE split that becomes specific heat vs latent heat), [[Kinetic Theory and the Ideal Gas]] (temperature as molecular KE; the ideal-gas $U$).
 - **Components:** specific heat capacity $c$ ($Q=mc\Delta T$); specific latent heat $L$ ($Q=mL$); molar heat capacities $C_V=\tfrac{f}{2}R$, $C_p = C_V + R$.

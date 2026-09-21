@@ -9,6 +9,7 @@ prerequisites:
   - "[[Kinetic Theory and the Ideal Gas]]"
 leads_to:
   - "[[Heat Transfer]]"
+  - "[[Thermal Expansion]]"
 teach_together:
   - "[[Calibration of Instruments]]"
   - "[[Specific Heat Capacity]]"
@@ -295,7 +296,7 @@ When the question gives a different apparatus, derive its property relation: a *
 
 The 2026–2028 syllabus lists thermal expansion at §2.2.1, specific heat capacity at §2.2.2, and melting/boiling/evaporation at §2.2.3. It does **not** prescribe the old standalone liquid-thermometer design/calibration unit or the detailed latent-heat equation as a named outcome. Temperature readings and apparatus choice remain practical skills for Papers 5/6. Thermocouple equations, Kelvin definition and gas-thermometer calculations here are enrichment beyond those IGCSE requirements.
 
-The liquid-expansion mechanism supports §2.2.1, but does not by itself complete all its solid/liquid/gas applications or the broader phase-change outcomes. A thermometer may appear in an experiment without making every thermometer mechanism required knowledge.
+The liquid-expansion mechanism supports §2.2.1; the full treatment of solids, liquids and gases, with applications, is [[Thermal Expansion]], and the phase-change outcomes are in [[Specific Heat Capacity]]. A thermometer may appear in an experiment without making every thermometer mechanism required knowledge.
 
 ### IB Physics — B.1 and coursewide skills
 
@@ -309,6 +310,7 @@ First assessment 2025: B.1 includes Kelvin/Celsius scales, equal-sized temperatu
 
 ## Connections
 
+- **The property inside the glass tube:** [[Thermal Expansion]] — why liquids expand more than the glass that holds them, and the bimetallic strip as a thermometer that can switch.
 - **Prerequisites:** [[Physical Quantities and Units]] — quantity, unit and realisation; [[Kinetic Theory and the Ideal Gas]] — microscopic temperature and gas laws.
 - **Teach together:** [[Calibration of Instruments]] — references, correction and traceability; [[Specific Heat Capacity]] — equilibration and measurement disturbance.
 - **Sensor circuit:** [[Resistance]] and [[Potential Dividers]] — the physical response and its electrical readout.

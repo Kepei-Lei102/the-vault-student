@@ -174,7 +174,7 @@ All examine K-maps up to four variables, essentially identically; some also want
 Neither AP CSA nor AP CSP covers circuit minimisation. This is a Cambridge/UK-A-Level and first-year-university (digital logic) topic.
 
 ### IB Computer Science
-Not examined: A1.2 stops at gates and truth tables, and no IB statement asks for minimisation. For an IB student this card is pure enrichment — the systematic tool behind the "simplify this circuit" instinct.
+Examined, by name. In the guide for first assessment 2027, **A1.2.4** (construct and analyse truth tables) lists "Karnaugh maps and algebraic simplification to simplify output expressions", and A1.2.5 asks for Boolean algebra rules to simplify logic diagrams. Both statements are common to standard and higher level. The guide does not say how many variables a map may have; the two-, three- and four-variable maps here cover any reasonable reading.
 
 ---
 

@@ -27,6 +27,7 @@ leads_to:
   - "[[Elastic Strings and Springs]]"
   - "[[Linear Motion under a Variable Force]]"
   - "[[Wave-Particle Duality]]"
+  - "[[The Solar System]]"
 tags:
   - subject/physics
   - subject/mathematics
@@ -447,6 +448,7 @@ A-Level Mechanics 2 (M2) extends to power and energy with variable force, integr
 - **Prerequisite:** [[Vectors]] — work as the dot product of force and displacement.
 - **Prerequisite:** [[Force (Vocab)]] — the cast of forces that may or may not do work.
 - **Prerequisite:** [[Area Under a Graph (Vocab)]] — work as the area under an F-s graph (analogous to impulse as area under F-t).
+- **Energy traded round an orbit:** [[The Solar System]] — a comet falling towards the Sun turns gravitational potential energy into kinetic energy and back, sixty-fold in speed for Halley's.
 - **Sibling:** [[Linear Momentum]] — momentum is to time as energy is to position; impulse is to F-t as work is to F-s. The two cards are best read together.
 - **Application:** [[Choosing Effective Equations]] — the energy-method framework is a major one in M1 problem-recognition; "use an energy method" is the explicit cue; constant-speed-with-power and ladder/slope-with-known-distances both reach for energy methods.
 - **Cross-domain:** **[[Conservation of Energy]]** — the master conservation law of physics; one of the three in Noether's trio.

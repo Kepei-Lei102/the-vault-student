@@ -6,6 +6,7 @@ prerequisites:
   - "[[Work, Energy and Power]]"
   - "[[Linear Momentum]]"
 leads_to:
+  - "[[Quantum States and the Schrödinger Equation]]"
   - "[[PET Scanning]]"
   - "[[Energy Levels and Line Spectra]]"
   - "[[Pauli Exclusion Principle]]"
@@ -250,7 +251,7 @@ E.2.1: the photon as a quantum of energy and momentum, $E = hf$, $p = h/\lambda$
 
 - **Builds on:** [[Superposition and Interference]] — the two-slit pattern this card draws photons from, and its last paragraph; [[Diffraction]] — the grating that electrons turn into rings, and the finite-slit pattern used as the probability density; [[Work, Energy and Power]] — the electronvolt as work done by a field; [[Linear Momentum]] — $p = E/c$ and $F = P/c$.
 - **Extends into:** [[Energy Levels and Line Spectra]] — photons absorbed and emitted whole by atoms; [[Pauli Exclusion Principle]] — the matter wave's other consequence; [[Nuclear Physics]] — the de Broglie wavelength as the ruler for the nucleus.
-- **Bridges:** [[Probability Basics]] — the wave as a probability density, and the dots as samples from it; [[Diffraction]]'s Beyond section on electrons through the same slits.
+- **Bridges:** [[Probability Basics]] — the detection pattern as a probability density, and the dots as samples from it; [[Diffraction]]'s Beyond section on electrons through the same slits.
 
 ---
 
@@ -263,7 +264,7 @@ A photon can be scattered by an electron like a billiard ball, and the scattered
 A wave with one wavelength fills all space; to localise a particle you must add wavelengths, and a spread of wavelengths is a spread of momentum: $\Delta x\,\Delta p \gtrsim h/4\pi$. Heisenberg's relation is not a limit on instruments; it is what "a particle that propagates as a wave" means.
 
 ### The Born rule, said plainly
-Part I called the wave a probability density and left it there. That is the Born rule of 1926: the wave's squared amplitude is the probability of finding the particle. Every strange thing in quantum mechanics is downstream of taking that sentence literally, including the fact that closing one slit changes where a photon that went through the other may land.
+Part I sampled detections from a density proportional to optical intensity. For a nonrelativistic particle, the Born rule gives the position probability density as $|\psi|^2$, where $\psi$ is a complex probability amplitude. Integrating over a region gives a probability; the wavefunction itself is not that density. Interference comes from adding amplitudes before squaring. Closing one slit changes the experimental preparation and the resulting pattern; the two-slit calculation does not assign each unmeasured particle a definite slit. [[Quantum States and the Schrödinger Equation]] develops normalisation, phase and time evolution.
 
 ### Relativity at the edges
 $p = E/c$ for a photon is the massless case of $E^2 = p^2c^2 + m^2c^4$; de Broglie's $\lambda = h/mv$ is the low-speed case of $\lambda = h/\gamma mv$. At $5$ kV the electron's true momentum is $0.24\%$ above the classical value; at $100$ keV, the electron microscope's, it is $4.8\%$ and the wavelength is $3.7$ pm rather than $3.9$, and the instrument's designers use the exact form.

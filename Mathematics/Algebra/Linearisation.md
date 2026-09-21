@@ -7,6 +7,8 @@ prerequisites:
   - "[[Direct and Inverse Proportion (Vocab)]]"
   - "[[Graphs of Functions]]"
   - "[[Proportion (Vocab)]]"
+  - "[[Planning an Experiment]]"
+  - "[[Recording and Analysing Experimental Data]]"
 leads_to:
   - "[[Differential Equations]]"
 tags:
@@ -322,6 +324,7 @@ In the first-assessment-2021 guide, SL 2.9 covers exponential/logarithmic functi
 
 - **Prerequisite:** [[Logarithms]] — every step of the algebra is a log law (product, power); without solid logs the technique is opaque
 - **Prerequisite:** [[Equation of a Straight Line (Vocab)]] — the *output* of linearisation is $Y = c + mX$, which is just $y = mx + c$ in different letters
+- **Prerequisite:** [[Recording and Analysing Experimental Data]] — the straight-line graph itself: scales, best-fit line, the large gradient triangle and the meaning of the intercept.
 - **Prerequisite:** [[Exponential Growth and Decay]] — the $y = Ab^x$ model on which semi-log plots act
 - **Prerequisite:** [[Direct and Inverse Proportion (Vocab)]] — power laws $y = Ax^n$ generalise direct ($n=1$) and inverse ($n=-1$) proportion
 - **Application:** *physics labs* — fitting $T = 2\pi\sqrt{\ell/g}$ (pendulum) by linearising as $T^2 = 4\pi^2 \ell / g$ and plotting $T^2$ vs $\ell$ to find $g$ from the gradient

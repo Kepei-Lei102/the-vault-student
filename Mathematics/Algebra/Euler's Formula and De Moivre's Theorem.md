@@ -12,6 +12,7 @@ leads_to:
   - "[[Differential Equations]]"
   - "[[Second-Order Differential Equations]]"
   - "[[De Moivre at Work]]"
+  - "[[Fourier Transform]]"
 tags:
   - subject/mathematics
   - domain/algebra
@@ -319,7 +320,7 @@ Once Euler's form is in your toolkit, an entire family of physical-world phenome
 
 **Differentiation becomes multiplication.** $\dfrac{d}{dt} e^{i\omega t} = i\omega \, e^{i\omega t}$. In the frequency domain (Fourier-transformed), differentiation is "multiply by $i\omega$"; integration is "divide by $i\omega$." Differential equations become **algebraic equations** in the frequency domain.
 
-**Fourier transform** decomposes any signal into a sum (or integral) of complex exponentials $e^{i\omega t}$. Every audio file (MP3, AAC), every image (JPEG, PNG), every radio transmission (Wi-Fi, 5G), every MRI scan, every digital filter — all run on Fourier decomposition. The natural building blocks are complex exponentials, not separate sines and cosines.
+**Frequency analysis** expresses suitable signals using complex exponentials: a discrete harmonic sum for periodic functions in [[Fourier Series]], or an integral in the continuous [[Fourier Transform]]. Related transforms power many audio codecs, JPEG compression and MRI reconstruction. Their shared advantage is that each oscillating component can be analysed separately; this does not mean that every file format or every digital filter performs a Fourier transform.
 
 **AC circuit analysis** treats voltage and current as complex exponentials; resistors, inductors, capacitors become **complex impedances** $R$, $i\omega L$, $\dfrac{1}{i\omega C}$; Kirchhoff's laws become linear algebra over $\mathbb{C}$. The whole subject of *electrical engineering* — until you go to power electronics or RF — is complex-number arithmetic with $\omega t$ as the running argument.
 
@@ -417,7 +418,7 @@ Not on AP Calculus AB or BC. AP Pre-calculus introduces Euler form briefly (no f
 - **Direct prerequisite:** [[Binomial Theorem]] — used to expand $(\cos\theta + i\sin\theta)^n$ when extracting multiple-angle identities.
 - **Application:** [[Heptadecagon]] — Gauss's 17-gon is the geometric realisation of the 17th roots of unity. The §6 cyclotomic-polynomial framework is the algebra behind which polygons are compass-and-straightedge constructible.
 - **Application:** [[Differential Equations]] — second-order linear ODEs in the underdamped case use $e^{(\sigma + i\omega)t}$ solutions. Euler's form is the natural language for oscillations.
-- **Application — beyond syllabus:** Fourier series and transform — every signal decomposes into complex exponentials.
+- **Application — beyond syllabus:** [[Fourier Series]] and [[Fourier Transform]] — harmonic coordinates and frequency analysis, with the function class and convergence conditions stated.
 - **Application — beyond syllabus:** AC circuit analysis — impedance is complex; Kirchhoff's laws become linear algebra over $\mathbb{C}$.
 - **Story counterpart:** [[Stories/The Argument for i]] — the 400-year drama from Cardano's cubic to Schrödinger's wavefunction. Read alongside this card for the historical and physical context.
 - **Story counterpart:** [[Stories/The Hidden Number]] — the 250-year discovery of $e$, climaxing in Euler's identity. Pairs naturally with this card.

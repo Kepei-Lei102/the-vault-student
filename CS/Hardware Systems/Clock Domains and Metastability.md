@@ -25,7 +25,7 @@ tags:
 
 ## Definition
 
-A **clock domain** (时钟域) is a region of logic all driven by the *same* clock signal. Inside one domain, timing is a solved problem: the clock edge arrives everywhere at (nearly) the same instant, every signal is guaranteed to have settled before the next edge, and the whole domain steps forward in lockstep — exactly the disciplined march the [[Flip-Flops|flip-flop]] and [[CPU Architecture and the Fetch-Execute Cycle|register]] rely on.
+A **clock domain** (时钟域) is a region of logic all driven by the *same* clock signal. Inside one domain, timing can be checked against a shared reference: the designer must account for clock skew and verify that each path meets setup and hold requirements, so the domain can step forward in lockstep — exactly the disciplined march the [[Flip-Flops|flip-flop]] and [[CPU Architecture and the Fetch-Execute Cycle|register]] rely on.
 
 A real chip is **not** one domain. It is many — cores, cache interconnect, memory controller, PCIe, USB — each ticking at its own frequency, because each has its own best speed. **Clock domain crossing** (CDC, 跨时钟域) is what happens when a signal made in one domain has to be read in another, and it is the source of the most maddening class of hardware bug there is: the kind that works 99.999% of the time.
 
@@ -97,7 +97,7 @@ Cross a boundary and that guarantee evaporates. There are two cases, and they ar
 
 - **Related clocks** — both derived from the *same* PLL, one an integer division of the other (say a domain at $f$ and another at $f/2$). Their edges are **phase-locked**: they line up predictably, and you always know exactly when an edge in one coincides with an edge in the other. Crossing between them still needs care, but the timing is *deterministic* — this is the case your intuition of "they sync every so often" describes exactly.
 
-- **Unrelated clocks** — different frequencies with no common divisor (a core at 4.5 GHz and a memory bus at, say, 3.2 GHz). Their edges **drift against each other forever**, with no fixed relationship. Sooner or later — *guaranteed*, given enough time — a signal from domain A will change at the precise instant domain B's clock tries to sample it, landing inside the receiving flip-flop's forbidden setup/hold window.
+- **Unrelated clocks** — clocks with no guaranteed phase relationship. They may have different frequencies or even the same nominal frequency from independent oscillators. Their relative edge timing cannot be treated as fixed, so an incoming transition can land inside the receiver's setup/hold window. **Different numerical frequencies alone do not prove asynchrony**: clocks derived with a controlled relationship can run at different rates and still be timed synchronously. [AMD's clock-relationship definition](https://docs.amd.com/r/en-US/ug949-vivado-design-methodology/Synchronous)
 
 And when a flip-flop is sampled mid-change, it does the thing the last card dramatised.
 
@@ -105,15 +105,15 @@ And when a flip-flop is sampled mid-change, it does the thing the last card dram
 
 ## Metastability — the coin flip, returned
 
-When a flip-flop's input changes *exactly* as it is being clocked, the device can be knocked into **metastability** (亚稳态): its output hangs at neither a clean $0$ nor a clean $1$, hovering at an in-between voltage, and only after an unpredictable delay does it topple — to $0$ or to $1$, *chosen by chance*.
+When a flip-flop's input changes within its setup/hold window, the device can be knocked into **metastability** (亚稳态): its output hangs at neither a clean $0$ nor a clean $1$, hovering at an in-between voltage, and only after an unpredictable delay does it topple — to $0$ or to $1$, *chosen by chance*.
 
 This is not a new phenomenon. **It is the released $S=R=1$ race from [[Flip-Flops]], wearing work clothes.** A bistable element has two stable valleys — storing $0$ and storing $1$ — with a knife-edge ridge between them:
 
 ![[metastability-synchronizer.svg|680]]
 
-Sample the flip-flop cleanly and it drops into a valley at once. Sample it at the worst instant and you balance it *on the ridge*, like a ball set exactly on a hilltop. It cannot stay there — but nothing bounds how long it teeters before rolling, and you cannot predict which side it rolls to. The final value is decided by thermal noise: manufacturing physics, not logic.
+Sample the flip-flop cleanly and it drops into a valley at once. Sample it at the worst instant and you balance it *on the ridge*, like a ball set exactly on a hilltop. It cannot stay there — but nothing bounds how long it teeters before rolling, and you cannot predict which side it rolls to. Small analogue differences, noise and device behaviour determine the outcome; digital logic does not provide a bounded resolution time.
 
-> **You cannot design metastability away.** It is fundamental, the same way the SR race is fundamental — any device that decides between two states in bounded time can be caught between them. The honest engineering goal is never "eliminate it"; it is "make the probability of it *lasting long enough to matter* so small that it never happens in the lifetime of the universe."
+> **You cannot design metastability away.** It is fundamental, the same way the SR race is fundamental — any device that decides between two states in bounded time can be caught between them. The honest engineering goal is never "eliminate it"; it is "make the probability of it *lasting long enough to matter* small enough to meet the system's reliability target."
 
 ---
 
@@ -122,14 +122,14 @@ Sample the flip-flop cleanly and it drops into a valley at once. Sample it at th
 The fix is almost insultingly simple: **give the metastable state time to settle before anyone looks at it.** Chain two flip-flops in the receiving domain — a **two-flip-flop synchronizer**:
 
 - The **first** flip-flop samples the incoming signal. It *may* go metastable.
-- A **full clock cycle** passes. During it, nothing downstream is allowed to read the first flip-flop — the wobble is given a whole period to collapse into a clean $0$ or $1$.
+- The next receiving edge supplies a **settling interval**, reduced by register delays, routing and the second register's setup requirement. The first stage should drive the synchronizer chain rather than unrelated downstream logic.
 - The **second** flip-flop then samples the (now almost-certainly-resolved) value and passes it into the domain as a trustworthy signal.
 
 The probability that the first flip-flop is *still* metastable after time $t$ falls off **exponentially**, so the reliability — the **mean time between failures** — is roughly
 
 $$\text{MTBF} \approx \frac{e^{\,t/\tau}}{T_0 \, f_{clk} \, f_{data}}$$
 
-where $\tau$ is the flip-flop's settling time constant, $f_{clk}$ and $f_{data}$ are the sampling and data rates, and $T_0$ is a device constant. The exponential in the numerator is the whole game: buying one more clock period of settling (increasing $t$) multiplies the MTBF by a huge factor, so a two-stage synchronizer routinely pushes the expected time-to-failure past the age of the universe. The cost is a **latency of one or two clock cycles** at the boundary, and the acceptance of a failure probability that is not zero — just negligible.
+where $\tau$ is the flip-flop's settling time constant, $f_{clk}$ and $f_{data}$ are the sampling and data rates, and $T_0$ is a device constant. The exponential in the numerator is the whole game: increasing the available settling time by $\Delta t$ multiplies the modelled MTBF by $e^{\Delta t/\tau}$. Whether two stages suffice depends on the device, clock and transition rates, physical timing and reliability target; use characterised device data and timing analysis. The cost is added receiving-clock latency and a residual failure probability. A short pulse can still be missed completely; event transfer may need a toggle or handshake. [Intel: settling time and MTBF](https://cdrdv2-public.intel.com/650346/wp-01082-quartus-ii-metastability.pdf)
 
 > [!warning] A synchronizer works for **one bit** — never a bus
 > Each flip-flop resolves *independently*. Put a two-flip-flop synchronizer on every wire of an 8-bit bus and the bits will resolve on their own schedules — you can latch some bits from the old value and some from the new in the same cycle, and read a number that was never actually sent. Multi-bit data needs a different tool.
@@ -146,13 +146,13 @@ Sample during that flip and you might read $111$ (7) or $000$ (0) or anything be
 
 $$010 \to 110 \qquad (\text{one bit flips})$$
 
-so a sample caught mid-transition returns **either the old value or the new one — never garbage.** One bit is uncertain; the rest are rock-solid.
+so an isolated adjacent transition changes only one bit. After synchronisation, it can be interpreted as the old or new count rather than an arbitrary mixture. This relies on registered Gray outputs and suitable path-delay/skew constraints; Gray encoding does not itself eliminate metastability or make arbitrary multi-step data changes safe.
 
 This is how a real cross-domain queue works — the **asynchronous FIFO**, the standard way to move a stream of data between two unrelated clocks:
 
 - The writer (domain A) pushes data and advances a **write pointer**; the reader (domain B) pops and advances a **read pointer**.
-- Each side must see the *other's* pointer to know if the FIFO is full or empty — a genuine clock-domain crossing. So the pointers are kept in **Gray code** and passed through synchronizers: only one bit ever changes, so the synchronized pointer is always either correct-old or correct-new, and the full/empty logic is never fooled.
-- The queue itself absorbs the rate mismatch: a fast writer and a slow reader simply see the FIFO fill and drain.
+- Each side must see the *other's* pointer to know if the FIFO is full or empty — a genuine clock-domain crossing. So the pointers are kept in **Gray code** and passed through synchronizers: adjacent source counts change one bit. With suitable timing constraints and synchronizers, the receiver obtains a delayed pointer suitable for conservative full/empty decisions; it may skip source counts, and the design must allow for that delay.
+- The queue itself absorbs the rate mismatch: bursts can fill and drain it. A finite FIFO cannot absorb a sustained rate mismatch forever: full/empty handling and flow control are still required.
 
 For a single control signal — "go", "done" — a lighter **request/acknowledge handshake** (each side synchronizes the other's one-bit flag) does the job without a whole FIFO.
 
@@ -169,21 +169,37 @@ For a single control signal — "go", "done" — a lighter **request/acknowledge
 
 ## Worked examples
 
-**1 — Base clock and multiplier.** A CPU has a 100 MHz base clock and a core multiplier of $\times 43$. Core frequency $= 100 \text{ MHz} \times 43 = 4.3 \text{ GHz}$. The memory controller on the same chip runs its own PLL at $\times 32 \to 3.2$ GHz — a completely unrelated frequency, hence an asynchronous crossing between core and memory. The $43$ and $32$ are the feedback-divider ratios $N$ in two separate PLLs, both fed by the one 100 MHz reference.
+### 1 — Base clock and multiplier
 
-**2 — Why not just synchronize each bus wire?** A 4-bit value crosses from a slow domain to a fast one as it changes from $0111$ to $1000$. With a per-wire synchronizer, the four bits may resolve in different cycles: the fast domain could latch $1111$, then $1000$ — a spurious $15$ for one cycle. Fix: put the value in an **async FIFO**, or Gray-code it so only one bit changes ($0111 \to 0101 \to \dots$ in Gray order) and a mid-flight sample is always old-or-new.
+**Trigger: a locked PLL with a specified divider → use its feedback equality.** A 100 MHz reference and divider $N=43$ give $f_{out}/43=100$ MHz, hence $f_{out}=4.3$ GHz. A second PLL with $N=32$ gives 3.2 GHz. **Tool boundary:** these frequencies alone do not tell us whether their phase relationship is guaranteed. Inspect the clock architecture and timing constraints before classifying the crossing as synchronous or asynchronous.
 
-**3 — Metastability is probabilistic, not preventable.** A single flip-flop samples an asynchronous signal at 1 GHz with input toggling at 200 MHz; the raw metastable-failure rate is intolerable. Add one more flip-flop (a two-stage synchronizer) and you grant a full nanosecond of settling. Because MTBF $\propto e^{t/\tau}$ and $\tau$ is a few picoseconds, that one extra nanosecond multiplies the mean time to failure by an astronomical factor — from "many times a second" to "not once before the sun dies." No cycle was made safe; the danger was made vanishingly unlikely.
+### 2 — Why not synchronize each bus wire?
+
+**Trigger: several bits of one value change together → preserve word coherence.** A four-bit bus changes from $0111$ to $1000$. Independent synchronizers can deliver some new bits and some old bits, for example $1111$, a value the sender never sent. **Tool: a handshake with data held stable, or an asynchronous FIFO.** Gray coding is useful for an adjacent-count pointer: binary 7 and 8 encode as $0100$ and $1100$, one bit apart. It is not a general repair for arbitrary bus values that jump by several counts.
+
+### 3 — More settling time, not a magic number of stages
+
+**Trigger: compare two synchronizer designs with other factors fixed → take an MTBF ratio.** Suppose characterised data gives $\tau=50$ ps and an added stage provides **800 ps of usable settling time** after timing overheads. Then
+
+$$\frac{\mathrm{MTBF}_{new}}{\mathrm{MTBF}_{old}}=e^{800/50}=e^{16}\approx8.89\times10^6.$$
+
+This is a large improvement, but the ratio alone does not supply an absolute lifetime. **Tool boundary:** absolute MTBF also needs $T_0$, actual settling time, receiving frequency and input transition rate. “Two stages” is not a universal reliability certificate.
 
 ---
 
 ## Exam Notes
 
-### Cambridge 9618 / 0478 · AP · IB CS
-Not examined on any of these — including IB CS 2027, whose hardware statements (A1.1) stop at CPU, memory, and the fetch–decode–execute cycle. This is enrichment (💎). But it is the *why* behind facts that are examined: the **setup/hold** and **clocked** behaviour of the [[Flip-Flops]] in 9618 §15.2, the **clock speed / cores** of §4.1 and §15.1, and the very existence of a "base clock × multiplier" spec sheet. The synchronizer and metastability are core first-year-university **digital design** and **computer organisation** material, and CDC is a daily concern in real chip and FPGA engineering.
+### Cambridge 9618 and 0478
 
-### Where it surfaces
-Anyone who touches FPGAs, RTL (Verilog/VHDL), or SoC design meets clock-domain crossing immediately — it is one of the first things a hardware engineer is taught to fear, and lint tools exist solely to catch unsynchronized crossings.
+**Clock-domain crossing, synchronizer design and metastability calculations are enrichment.** 9618 §4.1 examines the system clock and performance factors including clock speed; §15.2 examines SR/JK flip-flop circuits, truth tables and their storage role. The 2027–29 syllabus does **not** explicitly require setup/hold timing or the MTBF formula. 0478 §3.1 covers CPU architecture and performance, not CDC design. Use [[Flip-Flops]] and [[CPU Architecture and the Fetch-Execute Cycle]] for those examined foundations.
+
+### IB Computer Science — first assessment 2027
+
+A1.1 includes CPU components, GPUs, primary memory, the fetch–decode–execute cycle and additional hardware outcomes; it does not stop at the CPU alone. It does not specify PLLs, metastability, synchronizer chains or Gray-coded FIFO crossings. These explain implementation issues beyond those outcomes, rather than closing a separate syllabus row.
+
+### Where it is not examined
+
+The clock-crossing mechanisms and calculations above are not specified outcomes in Cambridge 0478 (2026–28), 9618 (2027–29), IB CS (2027) or AP Computer Science A. They belong to digital-design and computer-organisation study, and to practical FPGA/SoC engineering.
 
 ---
 
@@ -192,7 +208,7 @@ Anyone who touches FPGAs, RTL (Verilog/VHDL), or SoC design meets clock-domain c
 - **Parent:** [[Flip-Flops]] — metastability *is* the released $S=R=1$ race; and the $\div N$ counter that sets a PLL's multiply ratio is the frequency divider built there. Two ideas from one card, both cashed here.
 - **The safe-crossing trick:** [[Gray Code]] — one-bit-at-a-time counting makes a mid-flight sample harmless; [[Karnaugh Maps]] — the same single-bit-adjacency that made map neighbours combine.
 - **The clock in action:** [[CPU Architecture and the Fetch-Execute Cycle]] — the clock that steps the registers each cycle; [[Pipelining and Simultaneous Multithreading]] — the frequency that pipelining races against, and the per-core scaling that gives each core its own domain.
-- **A domain of its own:** [[RAM and the Memory Hierarchy]] — the memory controller runs on a separate clock, so every access between core and DRAM is an asynchronous crossing.
+- **A domain of its own:** [[RAM and the Memory Hierarchy]] — core and memory interfaces can occupy different clock domains; the actual clock relationship determines how their crossings must be handled.
 
 ---
 

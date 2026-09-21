@@ -1,6 +1,6 @@
 # The Vault — Mathematics Directory
 
-> **222 cards** — 217 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Natural Numbers]] (2026-09-17) — zero, successor, sets, recursive arithmetic and why a countdown stops.
+> **227 cards** — 222 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Lagrange's Identity]] (2026-09-21) — squared area, Cauchy–Schwarz, correlation and least-squares error from one identity.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations and the graph of what to read first.
 
 **Reading the domains.** Folders are decorative; this index and each card's frontmatter are the map. *(Vocab)* cards are short definition-first entries; the rest are deep cards. Board codes: 0580 = Cambridge IGCSE, 0606 = Cambridge Additional Maths, 9709 = Cambridge A Level (P1–P6), 9231 = Cambridge Further (FP1, FP2, FM, FS), 9260 = OxAQA IGCSE, IB, AP.
@@ -88,7 +88,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 7. **[[Eigenvalues and Eigenvectors]]** — the rails grown up: $\det(A - \lambda I) = 0$, diagonalisation for powers, Cayley–Hamilton both ways, power iteration → PageRank. *9231 FP2 §2.2*
 8. **[[Linear Systems in 3D]]** — three equations = three planes: the determinant sorts unique from not, elimination sorts consistent from not; the census of configurations. *9231 FP2 §2.2*
 
-## Calculus (31)
+## Calculus (32)
 
 1. **[[Limit]]** — intuitive limit, left/right limits, limits at infinity.
 2. **[[Differentiation]]** — first principles, $dy/dx$, gradient of a curve at a point.
@@ -121,6 +121,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 29. **[[Reduction Formulae]]** — don't integrate $\sin^{50}$: one integration by parts builds a machine that eats two powers at a time; the hinted-derivative protocol. *9231 FP2*
 30. **[[Arc Length and Surfaces of Revolution]]** — the odometer written in calculus: $ds$ by Pythagoras on the sliver, three costumes, surfaces as $2\pi y\,ds$ with the frustum honesty. *9231 FP2*
 31. **[[Bounding Sums with Integrals]]** — staircase vs ramp: trap a sum between two integrals (the harmonic sum vs $\ln$) or an integral between two sums; $\ln(n!)$ → the $n \log n$ sorting bound. *9231 FP2*
+32. **[[Partial Derivatives and the Gradient]]** — slope on a surface: hold the rest still, the small-change formula, $\nabla f \cdot \mathbf u$ for every direction, gradient ⟂ contour, the saddle test; gradient descent, $\mathbf E = -\nabla V$, image edges. *University*
 
 ## Algebra (47)
 
@@ -176,7 +177,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 
 1. **[[Exam Command Words (Vocab)]]** — official Cambridge definitions: sketch vs plot, state vs describe vs explain, show that vs prove vs verify; per-board differences.
 
-## Geometry (37)
+## Geometry (38)
 
 1. **[[Pythagoras Theorem]]** — $a^2 + b^2 = c^2$ with three proofs (赵爽弦图, rearrangement, similar triangles); triples; the converse; the 3D extension.
 2. **[[Angle Properties (Vocab)]]** — acute/obtuse/reflex, complementary/supplementary, vertically opposite, angles on a line and at a point.
@@ -216,7 +217,9 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 36. **[[Polar Coordinates]]** — a polar sketch is an ordinary $r$–$\theta$ graph read while turning; tangents at the pole; the sector-area integral $\tfrac12 \int r^2\,d\theta$. *9231 FP1 §1.6*
 37. **[[Topology]]** — throw away the ruler: what survives stretching is the number of holes; Euler's $V-E+F$ computed on the Platonic solids and a glued torus, Königsberg's seven bridges counted, planarity and Kirchhoff's loop count as invariants, the metro map, the Möbius strip cut in Manim, the hairy ball, the fixed point, the 2016 Nobel. *Enrichment — no board*
 
-## Trigonometry (9)
+38. **[[Lagrange's Identity]]** — squared alignment plus squared area; the general coordinate proof, Cauchy–Schwarz equality, Gram/Binet–Cauchy and a sensor-correlation/least-squares example. *Enrichment — no new syllabus row*
+
+## Trigonometry (11)
 
 1. **[[Trigonometric Ratios]]** — SOH-CAH-TOA from similarity; exact values from the two special triangles; $\sin^2 + \cos^2 = 1$; elevation and depression.
 2. **[[Exact Trigonometric Values]]** — the $30°/45°/60°$ table derived from the two triangles and extended round the unit circle; when exact beats decimal.
@@ -228,7 +231,10 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 8. **[[Trigonometric Equations]]** — reduce to one trig of one argument; the second solution per period from CAST; four families; the $R\sin(x + \alpha)$ form. *0606 §10.5*
 9. **[[Trigonometric Graphs]]** — the three parent graphs and the transformations of $y = a\sin(bx) + c$; reading $a, b, c$ off a given graph; tan's asymptotes. *0606 §10.2–10.3*
 
-## Number (39)
+10. **[[Fourier Series]]** — orthogonality and coefficient derivation, square/triangle waves, projection, convergence/Gibbs, Parseval, phase, A4 additive-piano synthesis and heat flow; five SVGs, WAVs and two Manim clips. *Enrichment.*
+11. **[[Fourier Transform]]** — continuous transform, DFT/FFT derivations, leakage, STFT and convolution; four SVGs, three WAVs, runnable checks and Manim. *Enrichment.*
+
+## Number (40)
 
 1. **[[Upper and Lower Bounds]]** — error intervals, combining bounds in calculations, truncation vs rounding.
 2. **[[Laws of Indices]]** — seven laws with *why* proofs; zero, negative and fractional indices; index equations.
@@ -270,6 +276,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 38. **[[Exponential Function]]** — $y = e^x$ as a function: the exp laws, $(e^x)' = e^x$ from the power series, $b^x = e^{x\ln b}$, disguised-quadratic exponential equations.
 
 39. **[[Natural Numbers]]** — Peano-style axioms, von Neumann construction, recursive addition/multiplication, proved arithmetic laws and termination measures.
+40. **[[Prime Numbers]]** — square-root test, sieve, Euclid’s infinitude proof, unique factorisation and finite-field/RSA applications.
 
 ---
 

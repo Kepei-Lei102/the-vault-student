@@ -7,6 +7,7 @@ prerequisites:
   - "[[P vs NP]]"
   - "[[Chi-Squared Tests]]"
 leads_to:
+  - "[[When a Model Breaks]]"
   - "[[You're the Architect, the AI is the Bricklayer]]"
   - "[[Ethics and Ownership]]"
   - "[[Credit Is the Currency]]"

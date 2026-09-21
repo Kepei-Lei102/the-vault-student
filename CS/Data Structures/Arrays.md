@@ -4,6 +4,7 @@ prerequisites:
   - "[[Programming Fundamentals]]"
   - "[[RAM and the Memory Hierarchy]]"
 leads_to:
+  - "[[Digital Audio Workstation]]"
   - "[[File Handling]]"
   - "[[User-Defined Data Types]]"
   - "[[Searching]]"
@@ -44,7 +45,9 @@ tags:
 
 ## 中文锚点
 
-一排完全相同的储物柜，从 0 号起编号。要开 47 号柜，你从不挨个看门牌——**迈几步都能算出来**：起点 + 47 × 柜宽，径直走到，一步开门。这就是数组：许多**同类型**的值排成**连续**一排，每格一样宽，于是"第 $i$ 格在哪"根本不用找，只用算——`base + i × size`——一百格如此，一百万格也如此，取用永远是同一个价钱 $O(1)$。下标其实是**偏移量**："第 47 号"说的是"离起点 47 格"，这就是为什么从 0 数起最自然：0 号就是起点本身。编号从哪起、到哪止（下界与上界）是柜子跟你签的合同，**越界**就是去开一个不存在的柜门——有些语言真的不拦你，门后拿到的是别人的东西。这份"连续、等宽"的合同也开出账单：合影队伍中间要插进一个人，后面**整排人都得挪一步**——想低成本地往中段插入，得去找[[Linked List|链表]]。若一格里要装**不同类型**的东西——姓名、生日、成绩——那是**记录**：一个学生的档案袋，袋子格式统一，装的是不同科目的纸。
+在电影院找座位，知道这一排从哪儿开始、每个座位一样宽，就能算出 12 号座位在哪儿，不必从头逐个核对号码。数组也是这样：各格等宽、连续排放，所以给出下标，程序就能直接算出那一格的地址。这里省掉的是“逐个寻找”，不是说人走到远处的座位不花时间；计算机定位数组元素，靠的正是这份整齐。
+
+## Vocabulary
 
 | English | 中文 | one-line meaning |
 |---|---|---|
@@ -371,7 +374,7 @@ Arrays are **§8.2**, examined on **Paper 2**, and unusually explicit about what
 
 ### AP CSA (Java)
 
-Unit 4: **§4.3 array creation and access** (`int[] a = new int[10]`, literals, and `.length` as an attribute — no brackets, unlike `String.length()`), **§4.4 traversals** (indexed `for` and the enhanced for-each), **§4.5 array algorithms**, and **§4.10/§4.13 2D arrays** (`int[][]`, row-major and column-major traversal). One free-response question is always 2D arrays and another is always `ArrayList`.
+Unit 4: **§4.3 array creation and access** (`int[] a = new int[10]`, literals, and `.length` as an attribute — no brackets, unlike `String.length()`), **§4.4 traversals** (indexed `for` and the enhanced for-each), **§4.5 array algorithms**, and **§4.11–§4.13 2D arrays** (creation and access, traversals, algorithms: `int[][]`, row-major and column-major traversal). One free-response question is always 2D arrays and another is always `ArrayList`.
 
 Java differences worth flagging: arrays are strictly **0-based** with no choice, `.length` is fixed at creation, and out-of-bounds throws `ArrayIndexOutOfBoundsException` rather than corrupting memory. `ArrayList` is the growable version — the doubling trick above, wrapped in an object.
 

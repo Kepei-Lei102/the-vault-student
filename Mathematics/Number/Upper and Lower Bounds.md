@@ -17,6 +17,7 @@ tags:
   - level/pre-IB
   - level/pre-AP
   - curriculum/OxAQA-9260
+  - curriculum/IB-AI
   - curriculum/Cambridge-0580
   - syllabus/9260-N11
   - syllabus/0580-E1-10
@@ -32,11 +33,11 @@ tags:
 
 ### Formal
 
-When a measurement $x$ is rounded to a given degree of accuracy, there is a range of values that would round to the stated result. The **error interval** is
+For a positive measurement $x$ rounded to the nearest specified unit, with exact halfway cases rounded upward, there is a range of values that would round to the stated result. The **error interval** is
 
 $$\text{Lower Bound} \leqslant x < \text{Upper Bound}$$
 
-The **lower bound** (LB) is the smallest value that rounds up to the stated value.
+The **lower bound** (LB) is the included lower endpoint of this rounding interval.
 The **upper bound** (UB) is the smallest value that would round up to the *next* stated value.
 
 > [!important] Strict inequality at the top
@@ -46,31 +47,16 @@ The **upper bound** (UB) is the smallest value that would round up to the *next*
 
 Imagine measuring a pencil with a ruler marked in centimetres. You read **7 cm**. That doesn't mean the pencil is *exactly* 7.000… cm. It means the pencil is somewhere between 6.5 cm (the halfway point below 7) and 7.5 cm (the halfway point above 7).
 
-The pencil could be 6.5 cm (that rounds up to 7), or 7.49999… cm (that still rounds down to 7), but it cannot be exactly 7.5 cm (that rounds up to 8, or to 7 — depending on convention, but the exam assumes it rounds **up**).
+The pencil could be 6.5 cm (that rounds up to 7), or 7.49999… cm (that still rounds down to 7), but it cannot be exactly 7.5 cm (which rounds to 8 under the stated halfway-up convention).
 
 $$6.5 \leqslant \text{length} < 7.5$$
 
 > [!tip] Why does this matter?
-> Every physical measurement is an approximation. When you multiply or divide measurements, the errors combine. Bounds tell you the *worst case* — how far off your answer could be. This is the mathematical foundation of **error analysis** in physics, engineering, and computer science.
+> Rounding hides information. When you multiply or divide rounded measurements, the possible values combine. These intervals describe rounding alone; other instrument errors require additional information. Bounds tell you the *worst case* — how far off your answer could be. This is the mathematical foundation of **error analysis** in physics, engineering, and computer science.
 
 ### 中文锚点 (Chinese Anchor)
 
-上界与下界：**四舍五入产生误差区间**。
-
-当一个值被四舍五入后，我们只知道它在一个范围内，不知道精确值。
-
-| 中文 | English | Symbol / Example |
-|------|---------|-----------------|
-| 上界 (shàngjiè) | Upper Bound | UB — the ceiling of the error interval |
-| 下界 (xiàjiè) | Lower Bound | LB — the floor of the error interval |
-| 误差区间 (wùchā qūjiān) | Error Interval | $\text{LB} \leqslant x < \text{UB}$ |
-| 四舍五入 (sìshě wǔrù) | Rounding | "discard 4 and below, keep 5 and above" |
-| 有效数字 (yǒuxiào shùzì) | Significant Figures | s.f. |
-| 精确度 (jīngquèdù) | Degree of Accuracy | How finely a value is measured |
-| 截断 (jiéduàn) | Truncation | Always rounding down (different from rounding!) |
-
-> [!example] 四舍五入 literally means "discard below 5, enter at 5"
-> This is *exactly* the rounding rule: digits 0–4 round down, digits 5–9 round up. The Chinese name IS the algorithm. Compare with English where "rounding" gives no hint about the rule.
+行李秤只显示整公斤，屏幕上写着二十，并不说明箱子恰好重二十公斤。轻一点、重一点的箱子，四舍五入后都可能显示同一个数。显示屏像把一小段重量装进了同一个抽屉：看见“二十”，能找回的是这个抽屉的范围，找不回原来那个精确重量。上界和下界就是抽屉的两边；至于秤本身准不准，那是另外一件要检查的事。
 
 ## Notation
 
@@ -80,12 +66,12 @@ $$6.5 \leqslant \text{length} < 7.5$$
 | UB | Upper bound | UB = 7.5 |
 | $\leqslant$ | Less than or equal to | $6.5 \leqslant x$ |
 | $<$ | Strictly less than | $x < 7.5$ |
-| $x = 7 \pm 0.5$ | Plus-or-minus notation (physics style) | Means $6.5 \leqslant x < 7.5$ |
+| $x = 7 \pm 0.5$ | A centre and a half-width | Does not by itself specify endpoint inclusion or probability |
 | d.p. | Decimal places | Rounded to 1 d.p. |
 | s.f. | Significant figures | Rounded to 3 s.f. |
 
-> [!note] Plus-or-minus notation
-> In physics and engineering, you'll see $x = 7 \pm 0.5$ instead of the error interval. The $\pm$ notation is symmetric and uses $\pm \frac{1}{2} \times \text{unit}$ where "unit" is the place value of the rounding. The two notations carry the same information.
+> [!note] Plus-or-minus notation needs a meaning
+> $7\pm0.5$ gives a centre and a half-width, but does not encode the open upper endpoint. In measurement work it may describe a bound, a standard uncertainty or a coverage interval. State the intended meaning; these are not interchangeable.
 
 ## Visual Summary
 
@@ -116,7 +102,7 @@ The **half-unit rule**: go half a unit *below* for the lower bound, half a unit 
 
 When you combine rounded values using arithmetic, the bounds interact. The key principle is: **find the combination that gives the biggest/smallest possible answer**.
 
-| Operation | To get the **largest** result | To get the **smallest** result |
+| Operation | Upper bound | Lower bound |
 |-----------|------|------|
 | $a + b$ | UB($a$) + UB($b$) | LB($a$) + LB($b$) |
 | $a - b$ | UB($a$) − LB($b$) | LB($a$) − UB($b$) |
@@ -127,62 +113,52 @@ When you combine rounded values using arithmetic, the bounds interact. The key p
 > [!tip] WHY does subtraction flip the bound?
 > If you're computing $a - b$ and want the **biggest** answer, you want $a$ as big as possible AND $b$ as small as possible — because subtracting a smaller number gives a bigger result. That's why subtraction and division use **opposite** bounds for the two operands.
 
-> [!info] The $a \times b$ rule assumes $a, b > 0$
-> If $a$ or $b$ could be negative (rare in IGCSE), the logic reverses. For exam purposes, assume all measurements are positive unless stated otherwise.
+> [!info] Check signs, zero and endpoint inclusion
+> The product, quotient and square shortcuts in this table assume positive inputs; the quotient needs a denominator bounded away from zero. For a product with arbitrary signs, compare all four endpoint products. A squared interval crossing zero has lower bound 0. A quotient whose denominator can approach zero need not have finite bounds.
+>
+> A bound can be a limiting value that is never attained. For subtraction or division, check whether the endpoint values needed to reach it are actually included.
 
 ### 3. Truncation vs Rounding — A Crucial Distinction
 
 **Rounding** goes to the *nearest* value: half-unit below and above.
-**Truncation** always rounds *down*: the stated value IS the lower bound.
+**Truncation** discards digits, moving toward zero. For a positive value, the stated truncated value is the lower bound; for a negative value the direction reverses. It is not the same as flooring.
 
 | Method | Stated value | LB | UB | Error interval |
 |--------|-------------|----|----|----------------|
 | Rounded to nearest integer | 7 | 6.5 | 7.5 | $6.5 \leqslant x < 7.5$ |
-| Truncated to nearest integer | 7 | 7 | 8 | $7 \leqslant x < 8$ |
+| Truncated to an integer | 7 | 7 | 8 | $7 \leqslant x < 8$ |
 
-> [!example] Computer truncation and the `floor(x + 0.5)` trick
-> Most programming languages give you a `floor()` function (round down) but not always a reliable "round to nearest." Since flooring always truncates, how do you round properly?
->
-> **The trick:** to round $x$ to the nearest integer, compute `floor(x + 0.5)`.
->
-> Why it works: adding 0.5 shifts the boundary. If $x = 3.7$, then $x + 0.5 = 4.2$, and $\lfloor 4.2 \rfloor = 4$ ✓. If $x = 3.2$, then $x + 0.5 = 3.7$, and $\lfloor 3.7 \rfloor = 3$ ✓. The 0.5 shift turns truncation into rounding — the same half-unit idea from bounds, applied in code.
->
-> For more on how computers represent numbers with finite precision, accumulated rounding errors, and why $0.1 + 0.2 \neq 0.3$ in most languages, see **[[Floating-Point Arithmetic]]**.
+> [!example] Truncation, floor and halfway choices
+> In Python, `math.trunc(-3.7)` is `-3`, while `math.floor(-3.7)` is `-4`. The expression `floor(x + 0.5)` implements nearest-integer rounding with halfway cases toward positive infinity, assuming the addition is exact; it is not a universal replacement for `round()`. Python's built-in `round()` uses ties to even. Different conventions change which interval endpoints are included. [Python documentation](https://docs.python.org/3/library/math.html#math.trunc)
 
 ### 4. Degree of Accuracy from Context
 
-Sometimes the exam tells you the degree of accuracy. Sometimes you have to infer it.
+Use the stated precision or the instrument/context. Written digits alone do not prove how a number was obtained.
 
 | Stated value | Implied accuracy | Reasoning |
 |---|---|---|
-| 7 cm | Nearest cm (integer) | No decimal places shown |
+| 7 cm | Nearest cm **if stated or established** | Could otherwise be exact or an estimate |
 | 7.0 cm | Nearest mm (1 d.p.) | Trailing zero = measured to 0.1 |
 | 7.00 cm | Nearest 0.01 cm (2 d.p.) | Two trailing zeros |
-| 400 people | **Exact** | You can't have half a person |
+| 400 people | Exact if reliably counted; possibly rounded if reported approximately | Discrete quantities can still be estimated |
 | 400 m | Ambiguous — read the question | Could be nearest 1 m, nearest 10 m, or nearest 100 m |
 
-> [!warning] Discrete vs continuous
-> **Counting** (people, cars, coins) gives exact values — no error interval needed.
-> **Measuring** (length, mass, time) always produces an approximation — error interval applies.
+> [!warning] Rounding is only one source of uncertainty
+> A reliable count can be exact, but crowd estimates are still estimates. A measuring device may have a calibration offset larger than its last displayed digit. A rounding interval is not a complete uncertainty budget.
 
-### 5. Maximum Percentage Error
+### 5. Percentage rounding uncertainty
 
-$$\text{Maximum \% error} = \dfrac{\text{UB} - \text{LB}}{2 \times \text{stated value}} \times 100\% = \dfrac{\text{half-unit}}{\text{stated value}} \times 100\%$$
+$$\text{Rounding half-width as \% of stated value} = \dfrac{\text{UB} - \text{LB}}{2 \times \text{stated value}} \times 100\% = \dfrac{\text{half-unit}}{\text{stated value}} \times 100\%$$
 
 | Measurement | Half-unit | % error |
 |---|---|---|
 | 7 cm (nearest cm) | 0.5 | $\dfrac{0.5}{7} \times 100\% \approx 7.1\%$ |
 | 70 cm (nearest cm) | 0.5 | $\dfrac{0.5}{70} \times 100\% \approx 0.71\%$ |
 
-**Larger measurements have smaller percentage errors.** This is why scientists use longer rulers, heavier masses, and more precise instruments — the same absolute error becomes a smaller fraction of the measurement.
+**For a fixed absolute half-width, a larger measured value has a smaller percentage uncertainty.** This is why timing several pendulum swings can reduce the fractional effect of a fixed timing uncertainty. The expression above uses the stated value as denominator; an error defined relative to a true/reference value is a different ratio.
 
-> [!info] Error propagation — this gets its own card in Physics
-> The bounds combination rules above (UB×UB, LB÷UB, etc.) are the *worst-case* method. In physics, you learn a more precise version called **[[Error Analysis|error propagation]]**:
->
-> - Addition/subtraction: absolute uncertainties add ($\Delta(a \pm b) = \Delta a + \Delta b$)
-> - Multiplication/division: *percentage* uncertainties add ($\dfrac{\Delta(ab)}{ab} = \dfrac{\Delta a}{a} + \dfrac{\Delta b}{b}$)
->
-> This is explicitly taught in **Cambridge A-Level Physics 9702** (§1.2), **IB Physics** (Topic 1, formulas on Data Booklet), and **AP Physics 1/2** (lab component). The maths bounds method is the non-calculus precursor — same instinct, simpler rules. The full treatment lives in the [[Error Analysis]] card.
+> [!info] Bounds and uncertainty propagation
+> Exact interval arithmetic gives bounds under stated input limits. [[Error Propagation]] derives first-order uncertainty estimates; products use approximations when relative uncertainties are small. A statistical standard uncertainty, or a root-sum-of-squares combination under independence assumptions, is not a guaranteed worst-case bound.
 
 ## Common Misconceptions (Teaching Notes)
 
@@ -216,15 +192,15 @@ This is the same logic as: "your bank balance is smallest when your income is at
 
 **Wrong:** Stating bounds as $6.5 \leqslant x < 7.5$ then saying "the upper bound is approximately 7."
 
-**Right:** Bounds must be stated as **exact** values. The whole point of bounds is to capture the exact range — rounding the bounds defeats the purpose.
+**Right:** Keep **exact** bounds through the calculation. If a final answer needs rounded values, label them as approximations; if it must still enclose every possible value, round the lower endpoint downward and the upper endpoint upward.
 
 ## Worked Examples
 
-### Example 1 — Finding Bounds (9260 N11 Ext, 0580 E1.10)
+### Example 1 — Finding Bounds (9260 N11, 0580 C1.10 / E1.10)
 
 > A length is measured as $12.4$ cm, correct to 1 decimal place. Write down the error interval.
 
-**Solution:**
+**Tool: half the rounding unit. Trigger: “correct to 1 decimal place” specifies the lost interval.**
 
 The degree of accuracy is 1 d.p., so the unit is $0.1$ and the half-unit is $0.05$.
 
@@ -237,7 +213,7 @@ $$\boxed{12.35 \leqslant x < 12.45}$$
 
 > A rectangle has length $8.3$ cm and width $5.7$ cm, both correct to 1 decimal place. Calculate the upper and lower bounds of its area.
 
-**Solution:**
+**Tool: monotonicity of a positive product. Trigger: increasing either positive side increases area.**
 
 First, find bounds for each measurement:
 - Length: $8.25 \leqslant l < 8.35$
@@ -251,13 +227,13 @@ $$\text{LB(area)} = 8.25 \times 5.65 = 46.6125 \text{ cm}^2$$
 
 $$\boxed{46.6125 \leqslant \text{area} < 48.0125}$$
 
-Note: the stated area is $8.3 \times 5.7 = 47.31$ cm². The actual area could be anywhere from $46.61$ to $48.01$ — a spread of about $1.4$ cm². The multiplication magnified the individual errors.
+Note: the stated area is $8.3 \times 5.7 = 47.31$ cm². The exact interval above has width $1.4$ cm²; its endpoints are approximately $46.61$ and $48.01$ cm², which must not replace the exact interval endpoints. Both input lengths contribute to the area uncertainty.
 
 ### Example 3 — Bounds in Division (9260 N11 Ext, 0580 E1.10)
 
 > The distance between two towns is $120$ km, correct to the nearest $10$ km. A car travels this distance in $1.5$ hours, correct to the nearest $0.1$ hour. Calculate the upper and lower bounds of the average speed.
 
-**Solution:**
+**Tool: numerator up, denominator down. Trigger: positive speed is distance divided by time.**
 
 Bounds for distance (nearest 10 km): $115 \leqslant d < 125$
 Bounds for time (nearest 0.1 h): $1.45 \leqslant t < 1.55$
@@ -270,15 +246,17 @@ $$\text{UB(speed)} = \dfrac{125}{1.45} \approx 86.2 \text{ km/h}$$
 **Smallest speed:** use LB(distance) ÷ UB(time).
 $$\text{LB(speed)} = \dfrac{115}{1.55} = 74.19354... \approx 74.2 \text{ km/h}$$
 
-$$\boxed{74.2 \leqslant \text{speed} < 86.2 \text{ km/h (to 1 d.p.)}}$$
+$$\boxed{\frac{2300}{31}<\text{speed}<\frac{2500}{29}\quad\mathrm{km/h}.}$$
 
-The stated speed is $\dfrac{120}{1.5} = 80$ km/h. But the *actual* speed could be anywhere in a $12$ km/h range — division with rounded values can produce significant uncertainty.
+Both endpoints are excluded: reaching either requires an excluded upper input endpoint. The bounds round to 74.2 and 86.2 km/h, but inserting those rounded numbers into an exact interval would exclude valid speeds. For a conservative interval with one-decimal endpoints, round **outward**: $74.1<\text{speed}<86.3$ km/h.
+
+The stated speed is $\dfrac{120}{1.5} = 80$ km/h. But the *actual* speed could be anywhere in an approximately $12$ km/h range — division with rounded values can produce significant uncertainty.
 
 ### Example 4 — Bounds with Subtraction (Exam-style)
 
-> Two rods have lengths $15.0$ cm and $9.4$ cm, both correct to 1 decimal place. They are placed end to end. Calculate the lower bound of the difference in their lengths.
+> Two rods have lengths $15.0$ cm and $9.4$ cm, both correct to 1 decimal place. Calculate the lower bound of the difference in their lengths.
 
-**Solution:**
+**Tool: opposite endpoints. Trigger: increasing the subtracted length decreases the difference.**
 
 Bounds:
 - Rod A: $14.95 \leqslant a < 15.05$
@@ -290,42 +268,27 @@ For the **lower bound** of a difference: use LB($a$) − UB($b$).
 
 $$\text{LB(difference)} = 14.95 - 9.45 = \boxed{5.50 \text{ cm}}$$
 
-> [!warning] Check: the stated difference is $15.0 - 9.4 = 5.6$ cm, but the actual difference could be as low as $5.50$ cm. Notice how the lower bound of a subtraction can be noticeably less than the stated answer.
+> [!warning] Check: the stated difference is $15.0 - 9.4 = 5.6$ cm, but the actual difference is strictly greater than $5.50$ cm and can approach it arbitrarily closely. Notice how the lower bound of a subtraction can be noticeably less than the stated answer.
 
 ## Exam Notes
 
-### OxAQA 9260 (Extension)
+### Cambridge 0580 — Core C1.10 and Extended E1.10
 
-**Syllabus ref:** N11 Ext — "Calculate and use upper and lower bounds."
+**Core** requires upper and lower bounds for a value rounded to a specified accuracy; it explicitly excludes finding bounds on the results of calculations with rounded data. **Extended** includes both individual bounds and bounds of calculations, with area/perimeter and speed given as examples. Distinguish an endpoint from an attainable value, and keep exact bounds until final reporting. The four worked examples are original teaching examples, not quoted past papers.
 
-- This is Extension-only content (grades 4–9). Core students don't need bounds.
-- Expect 3–5 mark questions asking you to combine bounds in calculations.
-- Common contexts: speed/distance/time, area/volume, density.
-- The question will usually say "correct to [degree of accuracy]" — read this carefully.
-- **Command word:** "Calculate" means show working, not just state the answer. Show both LB and UB calculations explicitly.
+### OxfordAQA 9260 — N11
 
-### Cambridge 0580 (Extended)
+Core includes applying and interpreting limits of accuracy. Extension adds calculating and using upper and lower bounds. It is therefore misleading to say Core students have no limits-of-accuracy work. Match the operation and context to the tier; no fixed question frequency or mark allocation is promised.
 
-**Syllabus ref:** E1.10 — "Give appropriate upper and lower bounds for data given to a specified accuracy."
+### IB Mathematics — AI SL 1.6, included at HL
 
-- Same content as 9260 N11 Ext. The skill set is identical.
-- Often appears in Paper 2 or Paper 4.
-- May ask for the error interval using inequality notation: $\text{LB} \leqslant x < \text{UB}$.
-- 0580 sometimes asks: "Write down the upper bound" — this is a 1-mark question. Don't overthink it.
+AI explicitly includes bounds of rounded numbers, approximation and percentage errors, including a maximum-percentage-error area example. AA has numerical approximation as prior learning, but does not prescribe this same named bounds unit; do not transfer the AI outcome wholesale to AA.
 
-### AP / IB / A-Level
+### Other mathematics courses and the physics bridge
 
-At higher levels, bounds connect directly to **[[Error Analysis]]** in physics:
+Cambridge 0606/9709/9231, Edexcel IAL Mathematics/Further Mathematics and OxfordAQA 9660 assume earlier numerical skills; there is no separate rounding-interval unit to claim from the title alone. AP Calculus AB/BC error bounds for approximation and AP Statistics confidence intervals are different topics, not this rounding rule.
 
-- **Cambridge A-Level Physics 9702** (§1.2) — teaches propagation rules: absolute uncertainties add for $\pm$, percentage uncertainties add for $\times \div$. The bounds combination table above is the IGCSE version of this.
-- **IB Physics SL/HL** (Topic 1) — same propagation rules, formulas provided on the Data Booklet. Required for the Internal Assessment.
-- **AP Physics 1/2** — propagation taught through lab component, using quadrature (root-sum-of-squares) for tighter bounds.
-- **Significant figures** — IB Physics requires stating answers to the correct number of s.f., justified by the precision of the input data.
-
-> [!info] Forward link — [[Floating-Point Arithmetic]]
-> Every floating-point number in a computer is stored with finite precision. The **machine epsilon** ($\varepsilon$) is the smallest number such that $1 + \varepsilon \neq 1$ in the computer's arithmetic. For `float64` (the standard), $\varepsilon \approx 2.2 \times 10^{-16}$. This means every computed number has an error interval, just like every physical measurement. The study of how these errors accumulate is called **numerical analysis**.
->
-> Catastrophic cancellation occurs when you subtract two nearly-equal numbers: the relative error explodes. For example, computing $\sqrt{x^2 + 1} - x$ for large $x$ loses almost all significant figures. The fix? Rationalise: $\dfrac{1}{\sqrt{x^2+1}+x}$, which is numerically stable. Bounds thinking helps you spot when this matters. Full treatment in the [[Floating-Point Arithmetic]] card.
+Cambridge Physics **9702 §1.3** explicitly requires simple addition of absolute or percentage uncertainties. Current IB Physics locates propagation in **Skills in the study of physics → Processing uncertainties**, not the old Topic 1. AP Physics 1, 2 and both C courses assess experimental reasoning; do not claim that quadrature is a prescribed calculation rule across them. See [[Error Propagation]] for the distinct uncertainty models and their course boundaries.
 
 ## Connections
 
@@ -335,27 +298,21 @@ At higher levels, bounds connect directly to **[[Error Analysis]]** in physics:
 **Leads to:**
 - [[Estimation (Vocab)|Estimation]] — bounds give you the *exact* worst case; estimation gives you a quick approximate check
 - [[Differentiation]] — error propagation ($\Delta f \approx f'(x) \cdot \Delta x$) is the calculus generalisation of bounds
-- [[Error Analysis]] — the physics card covering full uncertainty propagation (A-Level 9702, IB, AP)
-- [[Floating-Point Arithmetic]] — the CS card covering how computers store and round numbers
+- [[Error Propagation]] — first-order propagation and the assumptions behind uncertainty rules
+- [[Floating-Point Representation]] — how computers store a finite set of representable values
 
 **Related concepts:**
 - [[Percentages (Vocab)|Percentages]] — maximum percentage error uses percentage calculations
 - [[Set]] — an error interval is a set of possible values (interval notation from set theory)
-- [[Probability Basics]] — in measurement theory, the true value is modelled as a random variable uniformly distributed over the error interval
+- [[Probability Basics]] — a uniform model inside an interval is an additional modelling assumption, not a consequence of rounding
 
-## Beyond Syllabus — Measurement Theory
+## Beyond Syllabus — What an interval does not tell you
 
-> [!info] Beyond syllabus — How Scientists Actually Handle Uncertainty 科学家如何处理不确定性
->
-> At IGCSE, we treat the error interval as a hard box: the true value is *somewhere* inside, and we don't know where. This is called **worst-case analysis**. The full story is in the [[Error Analysis]] card, but here's a preview of the layers:
->
-> 1. **Systematic vs random error** (Cambridge IGCSE Physics onward) — A ruler that's 1% too long gives a **systematic error** (always in the same direction). Slightly different readings each time give **random error** (sometimes too high, sometimes too low). Bounds capture random error; systematic errors require calibration.
->
-> 2. **Propagation rules** (A-Level / IB / AP Physics) — Instead of the worst-case UB×UB method, physics uses: absolute uncertainties add for $\pm$, percentage uncertainties add for $\times \div$. AP Physics goes further with **quadrature** (root-sum-of-squares), which gives tighter bounds by assuming errors are independent.
->
-> 3. **Statistical uncertainty** (university) — Instead of "between 6.5 and 7.5 cm," scientists say "$7.0 \pm 0.3$ cm with 95% confidence." This means there's a 95% probability the true value falls within that range, based on repeated measurements and the normal distribution.
->
-> 4. **Heisenberg's uncertainty principle** (university physics) — A fundamental limit: $\Delta x \cdot \Delta p \geqslant \dfrac{\hbar}{2}$. You cannot simultaneously know both the position and momentum of a particle to arbitrary precision. This isn't about instrument quality — it's a law of nature.
+Recall that a rounding interval lists values consistent with a displayed number and a rounding rule. It says nothing by itself about how likely those values are. A uniform distribution inside the interval may be a useful model when supported by the available information, but the rounding operation does not establish it.
+
+Other uncertainty sources can coexist: calibration bias, noise and sampling. A frequentist 95% confidence procedure covers the fixed true parameter in 95% of repeated applications under its assumptions; that is not automatically a 95% probability attached to a particular realised interval. [[Sampling and Estimation]] develops that distinction.
+
+Computer arithmetic adds another boundary. For binary64, machine epsilon is the gap from 1 to the next representable value, $2^{-52}$; it is not the rounding error of every computed result. Exact operations can occur, and spacing varies with magnitude. [[Floating-Point Representation]] supplies the representation; numerical-analysis arguments supply error bounds for a particular computation. [NumPy floating-point limits](https://numpy.org/doc/stable/reference/generated/numpy.finfo.html)
 
 ## LaTeX Reference
 

@@ -290,6 +290,8 @@ The synthetic model normalises each system-matrix column to unit sensitivity, so
 
 ## Connections
 
+- **Tracer history:** [[The Nobel Prizes in the Beaker]] — Hevesy’s early radioactive-tracer work; the chemical label determines what the radiation can help us follow.
+
 - **Builds on:** [[Nuclear Physics]] — beta-plus decay, mass–energy, activity and half-life; [[Wave-Particle Duality]] — photon energy and momentum.
 - **Companion:** [[X-rays and CT]] — anatomical context and a contrasting inverse problem; [[Ultrasound]] — another route from travel times to an internal image.
 - **Mathematical structure:** [[Linear Systems in 3D]] — measurements constrain unknowns; [[Poisson Distribution]] — random event counts; [[Exponential Growth and Decay]] — physical and biological removal rates.

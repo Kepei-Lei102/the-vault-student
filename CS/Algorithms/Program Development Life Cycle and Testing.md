@@ -56,9 +56,9 @@ And the dry run is the moment before cooking when you read the recipe through wi
 
 ### 中文锚点
 
-**程序开发生命周期 (chéngxù kāifā shēngmìng zhōuqī)** = 一个程序从"要解决什么问题"到"上线多年后的最后一次修改"所经过的各个阶段：**分析、设计、编码、测试、维护**。**测试 (cèshì)** = 在用户发现之前，故意把错误找出来。
+请朋友来家里吃饭，先问清有没有忌口，再决定菜单、买什么、先做哪道菜。菜端上桌前还得尝一口：汤太咸，是做法出了问题；朋友临时说不吃肉，则是原先的安排得改。写程序也一样，要先弄清别人想要什么，再想办法实现，还要拿实际结果和预期对照。程序能跑完，就像菜能端上桌，都不代表事情做对了。发现问题后可能得改代码，也可能得回头改设计，甚至重新问清需求；开发不是走完一遍就不能回头的流水线。
 
-用做菜来想。周六请六个人吃饭，做一道没做过的菜：周一先弄清谁来、谁不能吃坚果——这是**分析**，锅还没碰；周三选菜谱、写购物清单、排好下锅顺序——这是**设计**，在纸上；周六下厨——**编码**——边做边尝，这正是大纲归在编码阶段的"迭代测试"；上桌前先盛一份对照菜谱上的图片检查——这是**测试**，拿"预期输出"来比对；明年换了新烤箱、有位客人改吃素了，你改菜谱——这是**维护**。三种开发模型也在厨房里：三百人的婚宴是**瀑布模型**，菜单几个月前就定死、签了字，当天什么都不能改——可预期，却不留余地；家常菜是**迭代模型**，做一版尝一口再改，端上桌的是第四轮；快闪餐厅是**快速应用开发**，第一周就把三道菜的粗糙版本端给真实顾客，听他们的意见，正式开业前把菜单重做一遍。而**跟踪表 (gēnzōng biǎo)** 就是下锅前把菜谱从头读一遍、每一步说出每个碗里现在有什么——把这个过程写下来，每个变量一列，值变了才填一格。四种**测试数据**要分清：**正常**（会被接受的普通值）、**异常**（会被拒绝的值——超出范围或类型不对）、**极端**（仍被接受的最大值和最小值）、**边界**（极端值和它紧挨着的、刚好被拒绝的邻居，成对出现）。三种**错误**也要分清：**语法错误**翻译器就不放行；**运行时错误**是程序跑起来后做了不可能的操作而停下；**逻辑错误**最阴险——程序跑完了，答案是错的，只有拿预期输出来对比的测试才抓得住。
+### Life-cycle vocabulary
 
 | English | 中文 | Idea |
 |---|---|---|
@@ -66,8 +66,8 @@ And the dry run is the moment before cooking when you read the recipe through wi
 | Waterfall · iterative · RAD | 瀑布模型 · 迭代模型 · 快速应用开发 | three orderings of the stages |
 | Syntax · run-time · logic error | 语法错误 · 运行时错误 · 逻辑错误 | won't translate · stops while running · runs and is wrong |
 | Normal · abnormal · extreme · boundary | 正常 · 异常 · 极端 · 边界 | the four kinds of test data |
-| Validation · verification | 有效性检查 · 核对（验证） | is it reasonable · is it what the source said |
-| Dry run · trace table | 人工演算 · 跟踪表 | executing by hand · the record of it |
+| Validation · verification | 有效性校验 · 录入核对 | is it reasonable · is it what the source said |
+| Dry run · trace table | 手工模拟 · 跟踪表 | executing by hand · the record of it |
 | White-box · black-box | 白盒测试 · 黑盒测试 | paths through the code · inputs against the specification |
 | Stub · integration · alpha · beta · acceptance | 桩模块 · 集成测试 · α 测试 · β 测试 · 验收测试 | the later methods, in order |
 | Corrective · adaptive · perfective | 纠错性 · 适应性 · 完善性维护 | fix · adapt to a changed environment · improve |

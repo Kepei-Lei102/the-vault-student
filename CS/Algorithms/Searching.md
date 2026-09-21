@@ -50,12 +50,7 @@ Two foundational algorithms, and the gap between them is the whole lesson:
 
 ### 中文锚点
 
-**查找**（cházhǎo）/ 搜索（sōusuǒ）：在一组数据里找目标值在不在、在哪里。
-
-- **线性查找**（xiànxìng cházhǎo, linear search）：从头一个一个看，最多看 $n$ 个。**不要求有序**，任何列表都行。
-- **二分查找**（èrfēn cházhǎo, binary search）：**必须先排好序**。每次看**中间**那个，砍掉一半，重复 —— 大约 $\log_2 n$ 次就够了。
-
-一句话对比：线性查找简单但慢（看 $n$ 个）；二分查找快得多（看 $\log_2 n$ 个），代价是**数据必须有序**。一百万个数据，线性查找最多看一百万次，二分查找只要约 **20** 次（因为 $2^{20}\approx 10^6$）。这个差距，就是我们愿意先排序的全部理由。
+找一张纸质表格，如果整摞表格乱放着，只能一张张翻。要是已经按编号排好，就可以先翻到中间：目标编号比中间那张的大，前半摞便不用看了；再把剩下的一半这样分下去。二分查找快，靠的不是猜得准，而是顺序让你有把握地排除一大批不可能包含目标的位置。不过，排好序本身也要花工夫：只找一次，未必值得先整理整摞；以后经常要找，整理的成本才更容易赚回来。
 
 ## The phone-book intuition
 
@@ -218,7 +213,7 @@ Two traps worth knowing. The conditions question wants *sorted* **and** *random 
 
 ### AP Computer Science A
 
-**Unit 4.14 — Searching:** linear search and binary search (explicitly "binary search requires a sorted list"). This card closes 4.14. The recursive binary-search form also feeds **4.17 (Recursive Searching and Sorting)**, alongside [[Recursion]].
+**Topic 4.14 — Searching Algorithms** is linear search only: from either end of an array or `ArrayList`, and row by row through a 2D array. **Binary search belongs to topic 4.17 (Recursive Searching and Sorting)**, which asks for the result of each iteration, states that the data must be sorted, and notes that the algorithm can be written with a loop or recursively; see [[Recursion]]. No other search algorithm is in the course. The exam is in Java, so the ideas here carry over and the syntax does not.
 
 ### IB Computer Science (B2.4)
 

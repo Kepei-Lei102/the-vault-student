@@ -4,7 +4,6 @@ prerequisites:
   - "[[Graphs]]"
   - "[[Probability Basics]]"
 leads_to:
-  - "[[Prime Numbers (Vocab)]]"
   - "[[Fun Is the Brachistochrone]]"
 tags:
   - type/story
@@ -130,7 +129,7 @@ He never slowed. In his seventies he was still publishing fifty papers a year; i
 
 - **[[Graphs]]** — the Erdős number is a shortest-path problem on the coauthorship graph, and Ramsey's theorem is a statement about colourings of the complete graph; the party proof is the pigeonhole principle applied to a vertex's degree.
 - **[[Probability Basics]]** — linearity of expectation and the "average below one forces a zero" step are the entire engine of the probabilistic method; [[Normal Distribution]] — the Erdős–Kac bell curve over the primes.
-- **[[Prime Numbers (Vocab)]]** — Chebyshev's theorem (a prime between $n$ and $2n$) in the proof a seventeen-year-old found, and the prime number theorem behind the feud.
+- **[[Prime Numbers]]** — why the primes never run out, why factorisation is unique, and the prime number theorem behind the feud.
 - **[[Fun Is the Brachistochrone]]** — the purest case in the vault of a chosen target: no syllabus, no employer, no assignment, sixty years of problems he picked himself; and the honest limit of that card, that the hunt was funded by other people's kitchens.
 - **[[von Neumann the Martian]]** — the same Budapest, the same decade, the opposite temperament: one built the machine, the other refused to own a chair.
 

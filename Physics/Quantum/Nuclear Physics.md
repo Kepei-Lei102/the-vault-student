@@ -5,10 +5,12 @@ prerequisites:
   - "[[Energy Levels and Line Spectra]]"
   - "[[Exponential Growth and Decay]]"
 leads_to:
+  - "[[The Nobel Prizes in the Beaker]]"
   - "[[PET Scanning]]"
   - "[[Quantum Tunnelling]]"
   - "[[Particle Physics]]"
   - "[[Energy Resources]]"
+  - "[[Stellar Evolution]]"
 tags:
   - subject/physics
   - domain/nuclear-physics
@@ -337,10 +339,13 @@ Core includes nuclear composition, isotopes and notation, background sources and
 
 ## Connections
 
+- **Historical companion:** [[The Nobel Prizes in the Beaker]] — Hevesy and Paneth’s tracer work, and the separate chemical rescue of two Nobel medals.
+
 - **Parents:** [[Wave-Particle Duality]] and [[Energy Levels and Line Spectra]] — quantum particles and allowed states, now inside nuclei.
 - **Mathematical engine:** [[Exponential Growth and Decay]], [[Differential Equations]] and [[Poisson Distribution]] — population law and counting fluctuations.
 - **Same equation, different cause:** [[Capacitors]] — charge leaks continuously; a radioactive population loses whole nuclei at random.
 - **Extensions:** [[Quantum Tunnelling]] — how a nucleus can decay through a barrier; [[Particle Physics]] — deeper interactions and particle families.
+- **In the sky:** [[Stellar Evolution]] — the binding-energy curve run as a life story: hydrogen to helium for billions of years, and iron as the fuel that pays nothing.
 - **Applications:** [[Energy Resources]], [[Entropy and the Second Law]] — nuclear heat still has to pass through a real heat engine.
 
 ## LaTeX Reference

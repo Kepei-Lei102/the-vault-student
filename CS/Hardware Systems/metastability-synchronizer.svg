@@ -76,7 +76,7 @@
   <line x1="515" y1="106" x2="515" y2="112" stroke="#9ca3af" stroke-width="1.2"/>
   <line x1="560" y1="106" x2="560" y2="112" stroke="#9ca3af" stroke-width="1.2"/>
 
-  <text x="545" y="300" class="cap" text-anchor="middle">FF1 may go metastable; it gets one full</text>
-  <text x="545" y="315" class="cap" text-anchor="middle">clock period to settle before FF2 reads it.</text>
-  <text x="545" y="330" class="cap" text-anchor="middle">Failure probability -&gt; astronomically small, never zero.</text>
+  <text x="545" y="300" class="cap" text-anchor="middle">FF1 may go metastable; FF2 allows extra</text>
+  <text x="545" y="315" class="cap" text-anchor="middle">settling time, reduced by timing overheads.</text>
+  <text x="545" y="330" class="cap" text-anchor="middle">Reliability depends on device and timing; risk is not zero.</text>
 </svg>

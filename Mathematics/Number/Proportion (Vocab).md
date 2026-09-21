@@ -12,8 +12,11 @@ tags:
   - domain/number
   - level/IGCSE
   - curriculum/Cambridge-0580
+  - curriculum/OxAQA-9260
   - syllabus/0580-E1-11
+  - syllabus/0580-E2-8
   - syllabus/9260-N18
+  - syllabus/9260-N20
   - type/vocabulary
   - notation/proportional-symbol
 ---
@@ -33,20 +36,11 @@ Two related but distinct ideas:
 - **Direct proportion** ($y \propto x$): when one variable doubles, the other doubles. Algebraically $y = kx$ for some constant $k$. Doubling distance traveled at constant speed → doubling time.
 - **Inverse proportion** ($y \propto 1/x$): when one variable doubles, the other halves. Algebraically $y = k/x$. Doubling speed at constant distance → halving travel time.
 
-This card is the *vocabulary* anchor for the §N18 row. The full algebraic treatment with worked examples lives in [[Direct and Inverse Proportion (Vocab)]].
+For finding the constant and working with powers, see [[Direct and Inverse Proportion (Vocab)]].
 
 ### 中文锚点
 
-**比例 (bǐlì)** = 两个比 (bǐ) 相等的关系。
-
-| 类型 | 中文 | 数学表达 |
-|---|---|---|
-| 正比 (zhèngbǐ) | direct proportion | $y \propto x$，即 $y = kx$ |
-| 反比 (fǎnbǐ) | inverse proportion | $y \propto \dfrac{1}{x}$，即 $y = \dfrac{k}{x}$ |
-
-**比例常数 (bǐlì chángshù)** = constant of proportionality, 常用 $k$ 表示。
-
-记号：$\propto$ = "正比于"。
+摊煎饼时，一杯面粉配两杯牛奶。朋友多来了几个，你把面粉和牛奶都加倍，面糊的稀稠程度还是差不多，因为每杯面粉分到的牛奶没变。如果只把牛奶加倍，面糊就会变稀。比例守住的正是这种搭配关系：总量可以变，彼此怎么配不变。
 
 ---
 
@@ -56,8 +50,8 @@ This card is the *vocabulary* anchor for the §N18 row. The full algebraic treat
 |---------|------|-------|
 | proportion | 比例 | equal ratios |
 | proportional (to) | 正比于 / 与...成比例 | $y$ is proportional to $x$ → $y = kx$ |
-| direct proportion | 正比 | both grow together |
-| inverse proportion | 反比 | one grows, the other shrinks |
+| direct proportion | 正比 | constant ratio $y/x$ |
+| inverse proportion | 反比 | constant product $xy$ |
 | constant of proportionality | 比例常数 | the $k$ in $y = kx$ |
 | in the ratio $a : b$ | 按 $a : b$ 的比 | shares of a quantity |
 
@@ -69,7 +63,7 @@ This card is the *vocabulary* anchor for the §N18 row. The full algebraic treat
 
 > A recipe for $4$ people uses $300$ g of flour. How much flour is needed for $7$ people?
 
-The amount of flour is **directly proportional** to the number of people: $\dfrac{\text{flour}}{\text{people}} =$ constant.
+**Tool: a constant per-person amount.** Keeping the recipe the same selects direct proportion. The amount of flour is **directly proportional** to the number of people: $\dfrac{\text{flour}}{\text{people}} =$ constant.
 
 $$\frac{300}{4} = \frac{F}{7} \;\Longrightarrow\; F = \frac{300 \times 7}{4} = 525 \text{ g}.$$
 
@@ -77,7 +71,7 @@ $$\frac{300}{4} = \frac{F}{7} \;\Longrightarrow\; F = \frac{300 \times 7}{4} = 5
 
 > A car travels a fixed distance in $3$ hours at $60$ km/h. How long does it take at $80$ km/h?
 
-Time is **inversely proportional** to speed: $\text{time} \times \text{speed} = \text{distance}$ (constant).
+**Tool: distance = speed × time.** Fixed distance selects a constant product. Time is **inversely proportional** to speed: $\text{time} \times \text{speed} = \text{distance}$ (constant).
 
 $$3 \times 60 = T \times 80 \;\Longrightarrow\; T = \frac{180}{80} = 2.25 \text{ h}.$$
 
@@ -85,7 +79,7 @@ $$3 \times 60 = T \times 80 \;\Longrightarrow\; T = \frac{180}{80} = 2.25 \text{
 
 > Divide \$120 between two people in the ratio $3 : 5$.
 
-Total parts: $3 + 5 = 8$. Each part: $120 \div 8 = 15$. So $3 \times 15 = 45$ and $5 \times 15 = 75$.
+**Tool: count equal parts.** The total is shared, so the ratio entries add to the number of parts. Total parts: $3 + 5 = 8$. Each part: $120 \div 8 = 15$. So $3 \times 15 = 45$ and $5 \times 15 = 75$.
 
 **Answer:** \$45 and \$75.
 
@@ -101,14 +95,21 @@ Total parts: $3 + 5 = 8$. Each part: $120 \div 8 = 15$. So $3 \times 15 = 45$ an
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 (2025–2027)
 
-**Syllabus ref:** E1.11 (Ratio and Proportion) — direct and inverse variation. Standard patterns:
+**C1.11 / E1.11** covers simplifying ratios, division in a ratio and proportional reasoning in recipes, maps and best-value comparisons. **E2.8** separately covers algebraic direct/inverse proportion, including linear, square, square-root, cube and cube-root relationships. Do not assign the entire power-law topic to E1.11.
 
-- "$y$ is directly proportional to $x$. When $x = 4$, $y = 12$. Find $y$ when $x = 9$."
-- "$P$ is inversely proportional to $Q^2$. When $Q = 2$, $P = 5$. Find $P$ when $Q = 4$."
+A ratio-sharing question needs the total number of parts; a proportion equation needs the invariant ratio or product. With $y\propto x^2$, find $k$ in $y=kx^2$ from the given pair before substituting new values. See [[Direct and Inverse Proportion (Vocab)]].
 
-For the variant where $y \propto x^n$ (general power), see [[Direct and Inverse Proportion (Vocab)]].
+### OxfordAQA 9260
+
+**N16** names ratio notation, **N17** division in a ratio, **N18** ratio applications and **N20** direct/inverse proportion and repeated proportional change. N18 alone is not the reference for every example here. Exponential growth/decay is N20 Extension; its full treatment is [[Exponential Growth and Decay]]. No special proportion formula is supplied in the specification's formula provision: build the invariant relationship.
+
+### IB and later mathematics
+
+Both **IB Mathematics AA and AI** list simple ratio/proportion applications under *Prior learning*. That means assumed knowledge which questions may use, not a separately numbered new topic ([AA guide](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-analysis-approaches-guide.pdf), [AI guide](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-applications-interpretation-guide.pdf), p. 24).
+
+**Not a separate proportion-vocabulary unit:** Cambridge 0606, 9709, 9231, OxfordAQA 9660, Edexcel IAL Mathematics and AP Calculus AB/BC. Ratio and algebra remain usable prerequisites; for example, 9709 differential-equation modelling explicitly requires an appropriate constant of proportionality. This is not a claim that proportional reasoning is absent from their questions.
 
 ---
 

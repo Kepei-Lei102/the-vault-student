@@ -334,16 +334,22 @@ Both contain $e$ for the same deep reason: they are the unique distributions tha
 **Common 0606 exam styles:**
 - "Sketch $y = 2 + e^{-x}$, stating clearly any asymptotes and intercepts." — transformation on top of $e^{-x}$.
 - "Solve $3 e^{2x} - 7 e^x - 6 = 0$." — disguised quadratic in $u = e^x$.
-- "The population of a town is modelled by $P = 5000 e^{0.03t}$. Find the value of $t$ when the population reaches 7500." — $e^{kt}$ application, same machinery as [[Exponential Growth and Decay]] §5.
+- "The population of a town is modelled by $P = 5000 e^{0.03t}$. Find the value of $t$ when the population reaches 7500." — $e^{kt}$ application, same machinery as [[Exponential Growth and Decay]] §5. The 0606 syllabus does not name growth or decay as a topic, so such a question is §6.3 in a story, and its graph is limited by §6.1 to $y = ke^{nx} + a$ with integer constants.
 
-### A-Level
+### Cambridge 9709 — §2.2 and §3.2 (Papers 2 and 3)
 
-$e^x$ is the workhorse of A-Level calculus:
-- **Year 1 (Core Pure):** differentiate $e^{f(x)}$ using the chain rule; integrate $e^{ax+b}$ as $\tfrac{1}{a} e^{ax+b} + C$.
-- **Year 2:** logarithmic differentiation for $y = x^x$ and $y = (f(x))^{g(x)}$; solving first-order separable differential equations ending in $\ln$ and $e$.
-- **Further Maths:** complex extension $e^{i\theta} = \cos\theta + i\sin\theta$; Taylor series $e^x = \sum x^k/k!$ treated rigorously; hyperbolic functions $\cosh x = \tfrac{e^x + e^{-x}}{2}$, $\sinh x = \tfrac{e^x - e^{-x}}{2}$.
+- "The definition and properties of $e^x$ and $\ln x$, including their relationship as inverse functions and their graphs", with $y = e^{kx}$ for positive and negative $k$. The laws of logarithms are examined **excluding change of base**, which 0606 includes.
+- Logarithms are used to solve equations and inequalities, and to reduce $y = kx^n$ and $y = k(a^x)$ to linear form.
+- §2.4/§3.4: the derivative of $e^x$ with constant multiples, sums and composites, so $e^{f(x)}$ by the [[Chain Rule]]. §2.5/§3.5: the integral of $e^{ax+b}$. The proof that $(e^x)' = e^x$ is not asked for.
+- Paper 3 continues into separable differential equations whose solutions end in $\ln$ and $e$ ([[Differential Equations]]).
 
-The proof that $(e^x)' = e^x$ is usually stated rather than proved on A-Level syllabuses — but the power-series argument above is exactly what appears in Further Maths / AA HL / BC.
+### Cambridge 9231 Further Mathematics
+
+- Further Pure 2 §2.1 defines $\sinh$, $\cosh$, $\tanh$ and their reciprocals "in terms of the exponential function" ([[Hyperbolic Functions]]); Maclaurin's series, with $e^x = \sum x^k/k!$ as its first example, is on the syllabus and the formula list ([[Maclaurin Series]]); and $e^{i\theta}$ arrives with [[Euler's Formula and De Moivre's Theorem]].
+
+### Edexcel IAL — P3.3.1 · OxAQA 9660 — P2.5
+
+- Both name $e^x$ and its graph; Edexcel specifies $y = e^{ax+b} + c$. Differentiation and integration of $e^x$ follow in the same units.
 
 ### IB AA
 

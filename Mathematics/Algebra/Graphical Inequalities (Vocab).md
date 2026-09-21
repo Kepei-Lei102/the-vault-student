@@ -6,6 +6,7 @@ prerequisites:
   - "[[Linear Graphs (Vocab)]]"
   - "[[Simultaneous Equations (Vocab)]]"
 leads_to:
+  - "[[Sorry the Homework Is Late]]"
   - "[[Linear Programming]]"
 tags:
   - subject/mathematics

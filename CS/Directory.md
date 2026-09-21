@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **70 cards across 11 bays.** Last landed: [[Heaps and Priority Queues]] (2026-09-17) — the array-packed tree, local repairs, linear heap construction and a runnable event scheduler.
+> **76 cards across 12 bays.** Last landed: [[Java Objects, References and Strings]] (2026-09-21) — the second Java companion: a variable of a class type holds an arrow, so assignment, passing, `==` and `null` are all about arrows; `String` is the object you use most.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -46,7 +46,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 11. **[[Programming Fundamentals]]** — state and invariants through sixteen 0478-pseudocode/Python pairs: types, I/O, operators, branches, loops, strings, scope and subprograms; real Paper 2 questions and a tested sales stream. *0478 §8.1 · §7.3–7.4, §7.9*
 
-## Data Representation (12 — closed)
+## Data Representation (13 — exam scope closed, plus enrichment)
 
 *How numbers, text, images and sound become bits. 0478 §1 and 9618 §1 complete, plus 9618 §13.1 and §13.3.*
 
@@ -62,6 +62,8 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 10. **[[Compression]]** — can you get the original back? RLE with its honest edge, Huffman on MISSISSIPPI, dictionary methods; lossy as a deal with your senses.
 11. **[[User-Defined Data Types]]** — a type as allowed values + operations; non-composite (enumerated, pointer) vs composite (set, record, class), each in real Python. *9618 §13.1*
 12. **[[Storage Units (Vocab)]]** — kilo/mega/giga vs KiB/MiB/GiB, why $2^{10}\approx10^3$ bred the confusion, and file-size arithmetic for images and sound. *0478 §1.3.1–2*
+
+13. **[[Digital Audio Workstation]]** — samples through a working mixer; EQ, compression, recorded-room reverb, phase vocoder, buffering and export, with audible comparisons. 💎
 
 ## Hardware Systems (13 — closed)
 
@@ -114,7 +116,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 2. **[[SQL]]** — DDL and DML with every paper statement run for real in SQLite (script beside the card); the FROM-first execution order that explains WHERE vs HAVING; joins, GROUP BY, nested queries; the injection attack and the parameterised query. *0478 §9.2 · 9618 §8.3 · IB A3.3*
 3. **[[NoSQL and Distributed Data]]** — the four families, sharding and replication, the CAP theorem proved in one paragraph, ACID vs BASE, 12306 and OceanBase, data warehouses and OLAP, and the NewSQL swing back. *IB A3.4 (HL) · 💎 for Cambridge*
 
-## Security (3 — open)
+## Security (5 — open)
 
 *The threat/defence game, and the mechanism under the word "hacking". 0478 §5.3, 9618 §6, IB A2.4 — one real Paper 1 each against its scheme.*
 
@@ -123,17 +125,19 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 3. **[[Ethics and Ownership]]** — the three layers of obligation (law, code, judgement); the BCS four duties with IEEE and ACM beside them; Horizon, Dieselgate, MCAS as the exam's small scenarios at scale; copyright as a right not a lock; the licence spectrum (FSF, OSI, shareware, commercial, and freeware kept out); AI's applications and impact, with the proxy-variable bias run live. *9618 §7.1 · AP CSA 3.2, 4.1 · IB A4.4*
 
-*Next in the bay: [[Data Protection and Privacy]] (GDPR and PIPL in full).*
+4. **[[Data Protection and Privacy]]** — personal data as *identifiable*, measured (three ordinary fields make 90 % of a city unique); the linkage attack and why hashing a phone number is not anonymising; lawful bases, principles, rights, controller and processor under GDPR and PIPL side by side; k-anonymity, keyed tokens and differential privacy, each run and priced; three 9618 questions and an AP CSA item against their schemes. *9618 §6.1 · 0478 §5.3 · IB A4.4 · AP CSA 4.1*
+5. **[[Privacy-Preserving Computation]]** — input privacy: secret sharing and multi-party computation, Paillier and fully homomorphic encryption, federated learning with its leak and its repair, trusted execution, zero-knowledge proofs; whom each one still asks you to trust. *Enrichment; no school board*
 
-## Artificial Intelligence (2 — open)
+## Artificial Intelligence (3 — open)
 
 *The two ways to build a mind: rules written by people, or rules learned from data — and the calculus that does the learning.*
 
 1. **[[Artificial Intelligence]]** — the IGCSE's four characteristics; expert systems (knowledge base, rule base, inference engine, interface) with a forward-chaining engine run for real; machine learning as parameters adjusted to shrink error — regression, k-means and Q-learning from scratch; the neuron that cannot learn XOR and the layer that can; back propagation as the chain rule, checked numerically; deep beats wide at equal weight budget; nine real 9618 and 0478 questions against their schemes. *9618 §18.1 · 0478 §6.3 · IB-CS A4.1/A4.3 (amber)*
 
 2. **[[Automated Systems and Robotics]]** — sensor → microprocessor → actuator as three roles in one ring with no human in it; what makes a robot a robot (mechanical structure, electrical components, programmable — not autonomy, not intelligence), run forwards on a tractor and backwards on a smart speaker; the seven scenarios and six roles with advantages and disadvantages from the named seat; the exam's robot simulated in a room, one sensor against a vote, and a break-even with its assumptions stated; seven real Paper 1 questions against their schemes. *0478 §6.1–§6.2*
+3. **[[Affective Computing]]** — the chain from feeling to display to sensor to label to decision; voice, text, skin and face each tested; Bayes on smiles; bias from a resting face; on-device inference and the EU ban in workplaces and schools. *Enrichment · IB A4.4 case study*
 
-*Next in the bay: the enrichment [[How a Language Model Works]]; [[Data Protection and Privacy]] sits in Security.*
+*Next in the bay: the enrichment [[How a Language Model Works]].*
 
 ---
 
@@ -147,6 +151,13 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 3. **[[The Internet and the Web]]** — the internet is not the web: URL anatomy, the DNS chain sent by hand and animated, HTTP vs HTTPS with a certificate read live, session and persistent cookies fetched from a real site, MAC/IPv4/IPv6, the router, LAN topologies with a packet's path, client-server vs P2P, cloud, bit streaming. *0478 §3.4 + §5.1 · 9618 §2.1 · IB A2.2*
 
 4. **[[Digital Currency and Blockchain]]** — double spending makes ordering necessary; hashes reveal edits, signatures authorise spending, consensus chooses a history; three real Paper 1 questions and an offline ledger with a separate real-signature experiment. *0478 §5.2 · IB A2.1.2/A2.2.3 applications*
+
+## Java Companions (2 — open)
+
+*For exams answered in Java. Each companion keeps the concept in its Python card and shows only what Java does differently; every program was compiled and run. Next: [[Java Control Flow]].*
+
+1. **[[Java Values and Expressions]]** — compile then run, and the three kinds of error; `int`, `double`, `boolean`; int division and `%`; where a cast binds; both rounding idioms; overflow and round-off; compound assignment; the `Math` class and a random integer in a range, derived. *AP CSA 1.1–1.8, 1.11*
+2. **[[Java Objects, References and Strings]]** — method signatures, overloading and call by value; class methods against instance methods; `new` and constructors; references, aliases and `null`; what a method can and cannot change; `String` indices read as cuts, immutability, `==` against `equals` against `compareTo`; `Scanner` as a library class at work.
 
 ## Enrichment directions
 

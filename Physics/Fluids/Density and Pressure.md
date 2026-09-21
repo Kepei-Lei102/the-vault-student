@@ -10,6 +10,8 @@ leads_to:
   - "[[Drag and Terminal Velocity]]"
   - "[[Braking Systems]]"
   - "[[Archimedes and the Soldier]]"
+  - "[[Sound]]"
+  - "[[The Solar System]]"
 tags:
   - subject/physics
   - domain/fluids
@@ -314,6 +316,7 @@ It does not meet it; the air over the top arrives *earlier*. The equal-transit-t
    - [[Error Propagation]] — the density uncertainty with $D$ squared.
 
 - **Children:**
+  - [[The Solar System]] — average density, computed from mass and radius, is what sorts the planets into rock and gas.
    - [[Kinetic Theory and the Ideal Gas]] — pressure again, now from molecular impacts; the atmosphere's exponential in Part III is the gas law meeting hydrostatics.
    - [[Drag and Terminal Velocity]] — Example 4's viscous force, and why it grows until the three forces balance.
    - [[Braking Systems]] — Pascal's principle at the pedal.

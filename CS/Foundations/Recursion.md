@@ -405,7 +405,7 @@ These checks establish tracing and explaining termination on given code. Writing
 
 ## Java specifics for AP CSA
 
-Recursion in Java looks like recursion anywhere else, with the addition of [[Static Method Declarations]]:
+Recursion in Java looks like recursion anywhere else. The one addition is the header: `public static int` says that the method can be called from any class, belongs to the class itself and not to one object, and returns an `int`.
 
 ```java
 public static int factorial(int n) {
@@ -417,12 +417,12 @@ public static int factorial(int n) {
 }
 ```
 
-AP CSA §4.16 and §4.17 expect students to:
-- **Trace** a given recursive method, frame by frame, on a small input
-- **Identify** the base case and recursive case in code
-- **Reason about** what happens when the base case is missing (stack overflow)
-- **Convert** simple recursive methods to iterative form and vice versa
-- **Recognise** classic recursive structures: factorial, Fibonacci, sum of array elements, recursive search
+AP CSA topics 4.16 and 4.17 (course effective Fall 2025) assess recursion by **tracing only**: the course description states that writing recursive code is outside the course and exam. They expect students to:
+- **Determine the result** of calling a given recursive method, frame by frame, on a small input, remembering that each call has its own parameters and local variables
+- **Identify** the base case and the recursive call in code
+- **Know** that any recursive solution can be rewritten with a loop and the reverse, without being asked to do the rewriting
+- **Trace** recursive methods that walk through a `String`, an array or an `ArrayList`
+- **Determine the result of each step** of binary search, written with a loop or recursively, and of merge sort (topic 4.17)
 
 The AP CSA exam particularly favours the **tracing** task — given a small recursive method, predict its output. The systematic call-stack method shown in Example 1 above is the universal answer technique. **Draw the stack. Don't try to mentally simulate it without paper.**
 
