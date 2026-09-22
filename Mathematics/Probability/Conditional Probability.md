@@ -275,18 +275,21 @@ You cannot condition on an event that has zero probability — $P(A \mid B)$ is 
 - Common question pattern: draw a tree diagram → identify conditional branches → calculate a combined probability → sometimes work backwards ("given that the second ball was blue, find the probability the first was red")
 - Often combined with S16 (Venn diagrams) — "from the Venn diagram, find $P(A \mid B)$"
 
-### Cambridge 0580
+### Cambridge 0580 (Extended only)
 
-- E8.4: conditional probability
-- **Scope note:** 0580 expects conditional probability to be understood conceptually and through tree diagrams / Venn diagrams. The formal $P(A \mid B)$ notation may or may not appear — the concept matters more than the symbol
-- "Without replacement" is the standard context
-- Both Paper 2 and Paper 4
+- **E8.4, Conditional probability:** "calculate conditional probability using Venn diagrams, tree diagrams and tables". The Core row C8.4 reads "Extended content only", so a Core candidate meets no conditional probability.
+- **The syllabus's own scope note:** "knowledge of notation, $P(A \mid B)$, and formulas relating to conditional probability is not required". The concept is examined through the diagrams and the table, never through the symbol.
+- "Without replacement" is the standard context, and E8.3 says combined events "could be with or without replacement".
 
-### AP / IB / A-Level
+### Cambridge 9709 (Probability and Statistics 1, §5.3)
 
-- **AP Statistics:** formal conditional probability notation; multiplication rule $P(A \cap B) = P(A) \times P(B \mid A)$; independence test via $P(A \mid B) = P(A)$
-- **IB Mathematics AA HL:** Bayes' theorem $P(A \mid B) = \dfrac{P(B \mid A) \times P(A)}{P(B)}$ for "reversing" conditional probabilities
-- **A-Level Statistics (S1):** conditional probability formula is core content; tree diagrams with conditional branches; Venn diagram questions asking for $P(A \mid B)$
+- "Calculate and use conditional probabilities in simple cases", with the syllabus's examples "a sample space of equiprobable elementary events, or a tree diagram".
+- Here the formula is live: "the use of $P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}$ may be required in simple cases".
+- Independence is tested by comparing $P(A \cap B)$ with $P(A) \times P(B)$.
+
+### Beyond these boards
+
+AP Statistics and the IB Mathematics guides are not held on file and are not summarised here; Bayes' theorem, which reverses a conditional probability, is beyond every Cambridge syllabus named above.
 
 ### Beyond high school — University
 

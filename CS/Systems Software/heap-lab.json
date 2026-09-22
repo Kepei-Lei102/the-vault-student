@@ -1,0 +1,61 @@
+{
+ "allocator": {
+  "after_alternate_free": {
+   "free_bytes": 2044,
+   "largest_free": 124,
+   "blocks": 33
+  },
+  "malloc_400_ok": false,
+  "after_all_free": {
+   "free_bytes": 3964,
+   "largest_free": 124,
+   "blocks": 33
+  },
+  "malloc_400_ok_after_all_free": false,
+  "merged_blocks": 32,
+  "after_coalesce": {
+   "free_bytes": 4092,
+   "largest_free": 4092,
+   "blocks": 1
+  },
+  "malloc_400_ok_after_coalesce": true,
+  "pictures": {
+   "full": "################################################################",
+   "fragmented": "..##..##..##..##..##..##..##..##..##..##..##..##..##..##..##..##",
+   "all_freed_uncoalesced": "................................................................",
+   "coalesced": "................................................................"
+  }
+ },
+ "gc": {
+  "refcounts_after_unlink": {
+   "A": 1,
+   "B": 1,
+   "C": 1,
+   "D": 1,
+   "E": 1,
+   "F": 0
+  },
+  "freed_by_refcount": [
+   "F"
+  ],
+  "mark_order": [
+   "root",
+   "A",
+   "B",
+   "C"
+  ],
+  "swept_by_mark_sweep": [
+   "D",
+   "E",
+   "F"
+  ]
+ },
+ "python": {
+  "refcount_x_y": 3,
+  "leak_mb": 1.32,
+  "cycle_objects_alive_without_gc": 20000,
+  "gc_collected": 20000,
+  "alive_after_gc": 0,
+  "list_alloc_ns": 3365
+ }
+}

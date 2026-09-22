@@ -8,6 +8,7 @@ prerequisites:
   - "[[Intersection]]"
   - "[[Union]]"
 leads_to:
+  - "[[Java Control Flow]]"
   - "[[Karnaugh Maps]]"
   - "[[Half-Adder and Full-Adder]]"
   - "[[Flip-Flops]]"
@@ -43,7 +44,9 @@ That guarantee is the whole point. [[Logic Gates]] proved (via the DNF algorithm
 
 ### 中文锚点
 
-**布尔代数 (bù'ěr dàishù)** = 在 $\{0,1\}$ 上，用 **与 ($\cdot$)、或 ($+$)、非 ($\overline{\phantom{A}}$)** 三种运算构成的代数。核心动作不是"算出一个值"，而是**在真值表不变的前提下把表达式变形、化简**——用更少的门实现同一个功能。
+网店写着：“会员满一百元免邮，或者会员用券免邮。”你可以把它说得更简洁：“先得是会员，再看是否满一百元或用了券。”无论哪位顾客来结账，改写前后，免不免邮的结果都一样。**布尔代数做的就是这种整理：判断结果不变，把重复的检查合并成一次。** 规则说起来省事了，交给电路去判断时，也可能少用几个逻辑门。
+
+### 术语对照
 
 | English | 中文 | 一句话 |
 |---|---|---|
@@ -54,9 +57,7 @@ That guarantee is the whole point. [[Logic Gates]] proved (via the DNF algorithm
 | involution | 对合律（双重否定） | 否定两次转回来 |
 | De Morgan's laws | 德摩根定律 | **拆杠翻号**：拆开长横线就要把 $\cdot$ 换成 $+$（反之亦然） |
 | duality | 对偶原理 | 把 $+\leftrightarrow\cdot$、$0\leftrightarrow1$ 全换掉，定理仍成立——所以定律成对出现 |
-| minimisation | 化简 | 用定律把 DNF 那种臃肿电路压到最少门数 |
-
-中文教材通常只要求"记住真值表 + 会画门电路"，而 A-Level 9618 §15.2 真正的考点是**用代数定律化简**，以及判断两个电路是否等价。
+| minimisation | 化简 | 用定律寻找更简洁的等价逻辑实现 |
 
 ---
 

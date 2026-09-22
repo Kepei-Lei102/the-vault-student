@@ -93,10 +93,10 @@ A percentage can exceed $100\%$. $150\%$ of $40$ is $60$; $300\%$ of $x$ is $3x$
 ## Exam Notes
 
 ### OxAQA 9260
-**Syllabus ref:** N12 (convert between fractions/decimals/percentages), N13 (interpret as operators), N14 (express one quantity as a fraction/percentage of another, including >100%). Percentages appear on every paper, both calculator and non-calculator. Command words: *express*, *find*, *calculate*, *give your answer as a percentage*.
+**Syllabus ref:** N12 (convert between fractions, terminating decimals and percentages), N13 (interpret fractions, decimals and percentages as operators), N14 (express one quantity as a fraction or percentage of another, "where the fraction is less than 1 or greater than 1"). All three are Core content. A scientific calculator is allowed on every 9260 paper. Command words: *express*, *find*, *calculate*, *give your answer as a percentage*.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.4 (fractions/decimals/percentages basics). Heavier percentage problems — increase, decrease, reverse, simple/compound interest — belong to E1.13 and are covered in [[Percentage Calculations (Vocab)|Percentage Calculations]] and [[Simple and Compound Interest (Vocab)|Simple and Compound Interest]].
+### Cambridge 0580 (Core and Extended)
+**Syllabus ref:** C1.4 and E1.4 (convert between fractions, decimals and percentages), and the first two lines of C1.13 and E1.13, Percentages: "calculate a given percentage of a quantity" and "express one quantity as a percentage of another". Those two lines are identical on both tiers, and Papers 1 and 2 set them without a calculator. The rest of 1.13 (percentage increase and decrease, interest, and on Extended reverse and repeated percentage change) is in [[Percentage Calculations (Vocab)|Percentage Calculations]] and [[Simple and Compound Interest (Vocab)|Simple and Compound Interest]].
 
 ### Cambridge 0606
 Percentages are assumed from 0580; 0606 uses them inside other topics (e.g., compound-interest formula in logarithmic equations).

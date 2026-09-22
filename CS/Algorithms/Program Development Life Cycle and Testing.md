@@ -10,6 +10,7 @@ leads_to:
   - "[[Ethics and Ownership]]"
   - "[[File Processing and Exception Handling]]"
   - "[[Object-Oriented Programming]]"
+  - "[[Anatomy of a Tech Stack]]"
 tags:
   - subject/computer-science
   - domain/software-engineering

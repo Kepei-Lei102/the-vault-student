@@ -9,6 +9,7 @@ prerequisites:
   - "[[Mean Value Theorem]]"
   - "[[Properties of Definite Integrals]]"
 leads_to:
+  - "[[Vector Calculus]]"
   - "[[Integration by Substitution]]"
   - "[[Integration by Parts]]"
   - "[[The Calculus Priority Dispute]]"

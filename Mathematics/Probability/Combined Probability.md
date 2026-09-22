@@ -319,18 +319,22 @@ Students default to multiplying probabilities for any "AND" question. But $P(A \
 - Tree diagrams and Venn diagrams are heavily tested — expect 4–6 mark questions combining both
 - "Without replacement" problems are common and test whether students correctly adjust fractions
 
-### Cambridge 0580
+### Cambridge 0580 (Core and Extended)
 
-- E8.3: combined events, sample space diagrams, tree diagrams (with and without replacement), Venn diagrams
-- Scope is very similar to 9260 — all the same tools are required
-- Expect two-stage experiments (e.g., two picks from a bag, two spins)
-- Both Paper 2 and Paper 4
+- **C8.3 and E8.3, Probability of combined events:** calculate with sample space diagrams, Venn diagrams and tree diagrams, "where appropriate". On tree diagrams "outcomes will be written at the end of branches and probabilities by the side of the branches".
+- **The Core limits, quoted:** "combined events will only be with replacement" and "Venn diagrams will be limited to two sets".
+- **Extended only:** without replacement, and the notation $P(A \cap B)$ and $P(A \cup B)$ "may be used in the context of Venn diagrams".
+- Papers 1 and 2 are non-calculator; fractions are expected to be handled by hand there.
 
-### AP / IB / A-Level
+### Cambridge 9709 (Probability and Statistics 1, §5.3)
 
-- **AP Statistics:** addition rule, multiplication rule, independence test $P(A \cap B) = P(A) \times P(B)$; mutually exclusive test $P(A \cap B) = 0$
-- **IB Mathematics AA HL:** formal notation with conditional probability; Bayes' theorem extends tree diagrams
-- **A-Level Statistics:** S1/S2 covers combined events with Venn diagrams and tree diagrams; conditional probability formula $P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}$ is core content
+- Evaluate probabilities "by means of enumeration of equiprobable elementary events, or by calculation using permutations or combinations"; the syllabus's examples are the total on two dice and drawing balls from a bag.
+- Use addition and multiplication of probabilities "in simple cases"; the syllabus states that "explicit use of the general formula $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ is not required".
+- Understand exclusive and independent events, "including determination of whether events A and B are independent by comparing the values of $P(A \cap B)$ and $P(A) \times P(B)$".
+
+### Beyond these boards
+
+AP Statistics and the IB Mathematics guides are not held on file and are not summarised here. Cambridge 9231 assumes 9709's probability and sets no question on combined events as such.
 
 ---
 

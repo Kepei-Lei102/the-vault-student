@@ -2,7 +2,8 @@
 chinese: 沃尔夫冈·泡利与数字 137 (wò'ěrfūgāng pàolì yǔ shùzì 137)
 prerequisites:
   - "[[Famous for the Wrong Thing]]"
-leads_to:
+leads_to: []
+teach_together:
   - "[[Pauli Exclusion Principle]]"
 tags:
   - type/story
@@ -35,15 +36,13 @@ tags:
 
 ## 中文锚点
 
-**沃尔夫冈·泡利**（Wolfgang Pauli, 1900–1958）：量子力学的奠基人之一，"物理学的良心"。他提出**不相容原理**（Pauli exclusion principle）——同一原子中没有两个电子能拥有完全相同的量子态，这一条禁令直接解释了**整张元素周期表**的结构、物质为何有体积、你的手为何穿不过桌子。他还在 1930 年大胆假设了一种几乎无法探测的中性粒子（费米后来命名为**中微子** neutrino）来挽救 β 衰变中的能量守恒。
-
-但这位最严苛的理性主义者——他的教父正是**逼迫玻尔兹曼**的反原子论者[[Stories/Boltzmann's Tombstone|马赫]]（Mach）——后半生却痴迷于荣格（Jung）的梦境分析、"共时性"，以及一个他无法解释的纯数字：精细结构常数 $\alpha \approx 1/137$。他死在苏黎世医院的 **137 号房间**。物理学的硬核内容（不相容原理、费米子、简并压）由 [[Pauli Exclusion Principle]] 卡片承载；这张故事卡讲的是这个人。
+替别人挑毛病，我们往往说得头头是道；可轮到自己遇上过不去的坎，却未必知道该怎么办。泡利就是这样：在同行面前，他能一句话戳穿理论的漏洞；生活失控时，这个最会质疑别人的人，也得承认自己需要帮助，走进荣格的诊室。他这个人，凡事都要讲证据，却也想给自己的经历找个说法。读他的故事，不必在理性和感受之间二选一：被一个巧合打动是一回事，把它当成证据又是另一回事。
 
 ## The Story
 
 ### Act I — The godson of the skeptic (1900–1921)
 
-He was born in Vienna in 1900, and his godfather was **Ernst Mach**. Hold that fact against the rest of the vault for a moment: Mach was the apostle of *"Haben Sie eines gesehen?"* — "Have you ever seen one?" — the positivist who tormented [[Stories/Boltzmann's Tombstone|Boltzmann]] for daring to build physics on atoms no one could observe. Mach gave the infant a silver cup, and the family a creed: **trust only what you can measure.** It is one of history's quieter ironies that the man who pressed that creed on the Pauli household stood godfather to the boy who would spend his life mapping the unobservable interior of the atom.
+He was born in Vienna in 1900, and his godfather was **Ernst Mach**. Hold that fact for a moment: Mach was the apostle of *"Haben Sie eines gesehen?"* — "Have you ever seen one?" — the positivist who tormented [[Stories/Boltzmann's Tombstone|Boltzmann]] for daring to build physics on atoms no one could observe. Mach gave the infant a silver cup, and the family a creed: **trust only what you can measure.** It is one of history's quieter ironies that the man who pressed that creed on the Pauli household stood godfather to the boy who would spend his life mapping the unobservable interior of the atom.
 
 The boy was a prodigy of the frightening kind. He devoured Einstein's relativity as a schoolboy, and at **twenty-one** wrote a 237-page encyclopedia article on the theory so complete that Einstein himself reviewed it in disbelief: *"No one studying this mature, grandly conceived work would believe that the author is a man of twenty-one."* He took his doctorate under **Sommerfeld** in Munich and walked straight into the front rank of physics.
 
@@ -92,14 +91,14 @@ He did not leave it alive. Pancreatic cancer took him within days; he was 58. Th
 ## Honest edges
 
 - **The room-137 story is real but easily over-told.** It comes through Pauli's assistant Charles Enz and is well attested; what's *not* warranted is reading any significance into it. It is a coincidence, full stop — and saying so plainly is more respectful of Pauli, who knew the difference between a sign and a number better than anyone, than turning his death into a mystical fable.
-- **The Jung / synchronicity work is not science — and was genuinely important to Pauli.** By Pauli's own falsifiability standard, synchronicity is "not even wrong," and the vault does not present it as physics. But it was a real, sustained part of who he was, not a footnote or an embarrassment to be hidden. The point of the story is precisely that the *same* mind held both — sneering at it or endorsing it would each miss the man.
+- **The Jung / synchronicity work is not science — and was genuinely important to Pauli.** By Pauli's own falsifiability standard, synchronicity is "not even wrong," and it should not be presented as physics. But it was a real, sustained part of who he was, not a footnote or an embarrassment to be hidden. The point of the story is precisely that the *same* mind held both — sneering at it or endorsing it would each miss the man.
 - **Pauli did not "steal" spin from Kronig**, and his skepticism had a defensible basis (the faster-than-light surface-speed problem). He discouraged a correct idea and that cost Kronig the credit — a real failure of nerve — but it belongs in the same drawer as a hundred other near-misses, not the villainy drawer.
 - **The neutrino as "an act of faith" is a useful frame, not the whole truth.** Pauli's bet rested on the extraordinary track record of conservation laws, not on mysticism; calling it pure faith overstates it. The genuine tension is subtler: the apostle of the observable chose an *unobservable* to save a principle — and trusted the principle.
 - **The displaced years.** Pauli's paternal family were Prague Jews (originally *Pascheles*) who had converted to Catholicism; under Nazi racial law he was "non-Aryan." After the 1938 *Anschluss* he was forced into unwanted German citizenship, failed to secure Swiss citizenship in time, and spent the war stranded at Princeton, isolated and unhappy, before returning to Zürich in 1946. The exclusion principle's author spent the war excluded.
 
 ## Cultural ripples
 
-**The exclusion principle holds up the world.** It is not an atomic-physics curiosity — it is why there *is* a world of distinct, rigid, voluminous matter. It gives the periodic table its shape and chemistry its rules; it is the real reason your hand doesn't pass through the table (the repulsive "wall" in [[Internal Energy]] is Pauli exclusion in action); and it is what props **white dwarfs and neutron stars** against their own gravity — electron and neutron *degeneracy pressure*, with the **Chandrasekhar limit** marking where even Pauli's prohibition finally loses to gravity and the star collapses. The behaviour of electrons in metals and semiconductors — **Fermi–Dirac statistics**, the thing that makes transistors work — is the exclusion principle counted at scale. Strip it out and there is no chemistry, no solid matter, no us.
+**The exclusion principle helps hold up the world.** It constrains atomic shells and chemical bonding, and is essential to ordinary matter's stability. The energy cost of pushing your hand into a table involves antisymmetry together with electronic kinetic energy and electromagnetic interactions; exclusion is not a separate contact force. In white dwarfs, filling electron states produces degeneracy pressure. The **Chandrasekhar limit** marks where electron degeneracy can no longer sustain a white-dwarf equilibrium—not where electrons stop obeying Pauli. Neutron stars need nuclear-interaction physics and relativistic gravity as well. In metals and semiconductors, **Fermi–Dirac statistics** describe how electrons occupy the available states; band structure and transport complete the device physics. The small prohibition has enormous consequences, but it does not do every job alone.
 
 **The undetectable particle founded a science.** The neutrino Pauli apologized for went from "impossible to detect" to an entire field: solar-neutrino astronomy, supernova alarms, and a 2015 Nobel Prize for the discovery that neutrinos have mass. Roughly a hundred trillion of them stream through your body every second, leaving no trace — exactly as he feared, and exactly why we needed him to insist they were there.
 
@@ -119,15 +118,15 @@ Mathematics has taken this licence for four centuries. To solve certain real cub
 
 So don't be obsessed with synchronicity. But when it happens — when the room really is numbered **137** — you are allowed to grin, think *hey, that's pretty cool*, and get back to work. Rigor and wonder were never enemies; Pauli simply never found the place to stand between them. The gift of his story is that we get to. (This is the kind of "what *status* does a claim have, and how tightly should you hold it?" question that [[Laws and Theorems]] is built around.)
 
-## Where this surfaces in the vault
+## Connections
 
-- **[[Pauli Exclusion Principle]]** — the physics card (forthcoming) carries the load-bearing content: the principle itself, fermions and spin-statistics, Fermi–Dirac statistics, degeneracy pressure and the Chandrasekhar limit. Dual residency — this Story is the human prologue; that card is the physics.
+- **[[Pauli Exclusion Principle]]** — antisymmetry, orbital occupation, Fermi–Dirac statistics and the energy cost of compression; the spin–statistics theorem is identified as a deeper dependency.
 - **[[Stories/Boltzmann's Tombstone]]** — **Mach**, Pauli's godfather, is the anti-atomist who hounded Boltzmann there. The same positivist creed Mach pressed on the Pauli household became, in Pauli's "not even wrong," one of physics' sharpest tools — even as Pauli helped build the atomic theory Mach denied to his grave.
-- **[[Kinetic Theory and the Ideal Gas]]** & **[[Internal Energy]]** — **Fermi–Dirac** statistics (electrons obey Pauli) sit right beside Maxwell–Boltzmann in the kinetic-theory beyond-syllabus, and the repulsive **"wall"** that makes matter incompressible in the Internal Energy card *is* the exclusion principle.
-- **[[Stories/Stigler's Law of Eponymy]]** — the **exclusion principle** is the *rare correctly attributed* law: Pauli discovered it and his name is rightly on it (the same "credit landing where it belongs" note as Boltzmann's constant there). The credit drama is elsewhere — the **neutrino** is Pauli's particle but **Fermi's** name, and **spin** went to **Uhlenbeck and Goudsmit** after Pauli talked Kronig out of it — priority-and-naming tangles of the kind that card collects.
+- **[[Kinetic Theory and the Ideal Gas]]** contrasts classical and quantum counting; **[[Internal Energy]]** illustrates the steep repulsive potential at short intermolecular separation. The microscopic explanation involves exclusion and electromagnetic interactions together.
+- **[[Stories/Stigler's Law of Eponymy]]** — the **exclusion principle** is the *rare correctly attributed* law: Pauli discovered it and his name is rightly on it (the same "credit landing where it belongs" note as Boltzmann's constant there). The credit drama is elsewhere — the **neutrino** is Pauli's particle but **Fermi's** name, and **spin** went to **Uhlenbeck and Goudsmit** after Pauli talked Kronig out of it — priority-and-naming tangles of the kind that narrative collects.
 - **[[The Argument for i]]** — two live edges: the **Pauli matrices** and the load-bearing $i$ of quantum mechanics; *and* the coda's theme — the imaginary number as the original "unreal but legitimate" intermediate (Cardano's cubic at one end, where $i$ cancels; Schrödinger's irreducible $i$ at the other, where it stays and still pays out).
 - **[[Stories/Turing at Bletchley]]** & **[[The 1919 Eclipse]]** — the same revolutionary generation of early-20th-century physics, told from neighbouring rooms.
-- **[[Laws and Theorems]]** — the coda's question (*what kind of truth is a claim, and how tightly should you hold it?*) is that Meta card's subject; falsifiability marks the edge of **science**, not the edge of **meaning**.
+- **[[Laws and Theorems]]** — the coda's question (*what kind of truth is a claim, and how tightly should you hold it?*) is its subject; falsifiability marks the edge of **science**, not the edge of **meaning**.
 
 ## Receipts
 
@@ -139,4 +138,4 @@ So don't be obsessed with synchronicity. But when it happens — when the room r
 - R. P. Feynman, *QED: The Strange Theory of Light and Matter* (1985) — the fine-structure-constant "magic number" passage.
 - David J. Chalmers, *Reality+: Virtual Worlds and the Problems of Philosophy* (2022) — the simulation hypothesis and the argument that virtual/simulated reality is genuine reality; with Nick Bostrom's 2003 simulation-argument trilemma and Karl Popper's falsifiability (*The Logic of Scientific Discovery*, 1934) for the coda's demarcation point.
 
-> **Sensitive-topic note.** This card mentions a death by suicide (Pauli's mother) as part of the historical record, stated plainly and without detail — the way the vault handles such moments in [[Stories/Boltzmann's Tombstone]] and [[Stories/Turing at Bletchley]]. If this subject touches you personally, it's worth reaching out to someone you trust or a local support line.
+> **Sensitive-topic note.** This story mentions a death by suicide (Pauli's mother) as part of the historical record, stated plainly and without detail — as in [[Stories/Boltzmann's Tombstone]] and [[Stories/Turing at Bletchley]]. If this subject touches you personally, it's worth reaching out to someone you trust or a local support line.

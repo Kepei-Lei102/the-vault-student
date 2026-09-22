@@ -102,11 +102,11 @@ Any ratio $a : b$ can be rewritten as a fraction, but you must decide *what the 
 ### OxAQA 9260
 **Syllabus ref:** N16 (simplest form and notation), N17 (divide in a ratio). Almost every 9260 paper has a ratio-division word problem, often with money, recipes, or three-part shares. Command words: *simplify*, *divide*, *share*, *express in the form*.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.11 (ratio, simplifying, dividing, including three-part). Identical treatment to 9260 but often combined with percentages or fractions in the same question.
+### Cambridge 0580 (Core and Extended)
+**Syllabus ref:** C1.11 and E1.11, Ratio and proportion, with identical wording on both tiers: give ratios in their simplest form (the syllabus's own example is a three-part ratio, $20 : 30 : 40 = 2 : 3 : 4$), divide a quantity in a given ratio, and "use proportional reasoning and ratios in context", for which it names adapting recipes, map scales and best value. Often combined with percentages or fractions in one question.
 
 ### Cambridge 0606
-Ratios underpin enlargement scale factors and are assumed knowledge; not directly examined as "ratio problems."
+The syllabus does not mention ratio. It is IGCSE Mathematics content, assumed and not examined as a topic.
 
 ## Connections
 

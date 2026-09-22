@@ -4,6 +4,7 @@ prerequisites:
   - "[[Set]]"
   - "[[Compression Is Intelligence]]"
 leads_to:
+  - "[[Change the Representation]]"
   - "[[You're the Architect, the AI is the Bricklayer]]"
   - "[[Logic]]"
   - "[[Algebraic Proof]]"

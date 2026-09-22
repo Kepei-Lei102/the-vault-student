@@ -264,30 +264,32 @@ While the negative correlation supports this idea, **correlation does not prove 
 
 ### OxAQA 9260
 
-- S8: construct and interpret scatter diagrams; identify correlation (positive, negative, none); draw a line of best fit by eye; use it for interpolation
-- Typical question: given a table of bivariate data → plot the scatter → describe the correlation → draw a line of best fit → use the line to estimate a value → comment on reliability
+- **S8 (Core):** "recognise correlation and draw and/or use lines of best fit by eye, understanding what these represent", with the specification's note that students should know the terms positive, negative and no correlation and weak and strong correlation.
+- Typical question: given a table of bivariate data → plot the scatter → describe the correlation → draw a line of best fit → use the line to estimate a value → comment on reliability.
 - "Comment on reliability" = is it interpolation or extrapolation? Is the correlation strong enough to make a prediction useful?
-- Mark scheme language: use "strong/moderate/weak" and "positive/negative/no" — both components needed for full marks
-- Outliers: if asked about an unusual point, state it is an outlier and suggest a reason — don't just say "it doesn't fit"
+- Mark scheme language: use "strong/moderate/weak" and "positive/negative/no"; both components are needed for full marks.
+- Outliers: if asked about an unusual point, state it is an outlier and suggest a reason; don't just say "it doesn't fit".
 
-### Cambridge 0580
+### Cambridge 0580 (Core and Extended)
 
-- E9.5: understand and interpret scatter diagrams; draw a line of best fit; understand correlation (positive, negative, zero); distinguish between interpolation and extrapolation
-- Paper 4 commonly provides a partial scatter diagram and asks you to complete it, draw the line, and make predictions
-- Calculator paper: the mean point calculation is usually straightforward but check your arithmetic
-- The word "trend" in a question means describe the correlation
-- "Use your line to estimate..." means read a value from the line, not from the data points
+- **C9.5 = E9.5 Scatter diagrams**, identical on both tiers: "draw and interpret scatter diagrams", "understand what is meant by positive, negative and zero correlation", "draw by eye, interpret and use a straight line of best fit", with the syllabus notes that points should be marked as small crosses and that a line of best fit should be a single ruled line drawn by eye.
+- Paper 4 commonly provides a partial scatter diagram and asks you to complete it, draw the line, and make predictions.
+- The word "trend" in a question means describe the correlation.
+- "Use your line to estimate…" means read a value from the line, not from the data points.
 
-### AP / IB / A-Level
+### Where this is *not* examined, and where the formulas below come from
 
-- **AP Statistics:** the Pearson product-moment correlation coefficient $r$ quantifies linear correlation on a scale from $-1$ (perfect negative) through $0$ (none) to $+1$ (perfect positive):
+- **Cambridge 9709 has no correlation or regression row** in any paper; the Pearson coefficient, $r^2$ and the least-squares line below are not Cambridge A Level content. The IB Mathematics guides and the AP Statistics course description are not on file, so no topic numbers are claimed for them; the material is kept because those courses, and every statistics course after school, examine it.
+
+### Beyond the syllabus: measuring the line rather than drawing it
+
+- The **Pearson product-moment correlation coefficient** $r$ quantifies linear correlation on a scale from $-1$ (perfect negative) through $0$ (none) to $+1$ (perfect positive):
 
 $$r = \dfrac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \cdot \sum (y_i - \bar{y})^2}}$$
 
 - $r^2$ (the **coefficient of determination**) tells you what percentage of the variation in $y$ is explained by the linear relationship with $x$. If $r = 0.9$, then $r^2 = 0.81$, meaning 81% of the variation in $y$ is explained by $x$.
-- **Least-squares regression** (最小二乘法, zuìxiǎo èrchéng fǎ): the calculated line of best fit that minimises $\sum (y_i - \hat{y}_i)^2$ — the sum of squared vertical distances from points to the line. AP, IB HL, and A-Level all require students to find the regression line $y = ax + b$ by formula or calculator. The key exam skill is **interpreting** the gradient and $y$-intercept in context (e.g., "for each additional hour studied, the predicted score increases by 8 marks").
-- **IB Mathematics AA HL / AI HL:** least-squares regression line calculated by formula or GDC; the mean point $(\bar{x}, \bar{y})$ **must** lie on the line (this is where it becomes an explicit exam requirement)
-- **A-Level Statistics:** hypothesis testing for correlation using $r$ against critical values; Spearman's rank correlation for non-linear or ordinal data
+- **Least-squares regression** (最小二乘法, zuìxiǎo èrchéng fǎ): the calculated line of best fit that minimises $\sum (y_i - \hat{y}_i)^2$, the sum of squared vertical distances from points to the line. The key skill is **interpreting** the gradient and $y$-intercept in context, and the mean point $(\bar{x}, \bar{y})$ always lies on the line.
+- Hypothesis tests for correlation using $r$ against critical values, and Spearman's rank correlation for ordinal or non-linear data, are the university and further-statistics continuations.
 
 ### Beyond high school — University
 

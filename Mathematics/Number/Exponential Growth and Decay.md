@@ -330,26 +330,34 @@ Setting $t = 0$: $y(0) = A e^0 = A$. So $A$ is precisely the starting amount —
 
 ### OxAQA 9260
 
-**Syllabus ref:** N20 Ext — exponential growth and decay. Expect a 4–6 mark Extension-paper question involving a formula of the form $y = A b^t$ or $y = A (1+r)^t$. Common commands: *find the value after $n$ years*, *find when $y$ reaches \[target\]*, *find the rate $r$*. The base-$e$ form $e^{kt}$ is **not required**; the base-$b$ form suffices. Logs are **not required** on 9260 — calculator trial-and-improvement is the accepted route when $t$ is the unknown.
+**Syllabus ref:** N20, Extension content: "exponential growth and decay" (the Core half of N20 is direct and inverse proportion, including repeated proportional change). Expect a 4–6 mark Extension-paper question involving a formula of the form $y = A b^t$ or $y = A (1+r)^t$. Common commands: *find the value after $n$ years*, *find when $y$ reaches \[target\]*, *find the rate $r$*. The base-$e$ form $e^{kt}$ is **not required**; the base-$b$ form suffices. Logs are **not required** on 9260: calculator trial-and-improvement is the accepted route when $t$ is the unknown.
 
 ### Cambridge 0580 Extended
 
-**Syllabus ref:** E1.17 — exponential growth and decay. Paper 4 typically embeds this in a multi-part question: one part sets up the formula from context, a later part asks for a specific target value or year. 0580 does not require logs; calculator trial-and-improvement is standard.
+**Syllabus ref:** E1.17, "Use exponential growth and decay", with the syllabus's own examples, depreciation and population change, and its note that **knowledge of $e$ is not required**. E2.10 (graphs of functions) adds "draw and interpret graphs representing exponential growth and decay problems". The row is Extended only. Paper 4 typically embeds this in a multi-part question: one part sets up the formula from context, a later part asks for a specific target value or year. 0580 does not require logs; calculator trial-and-improvement is standard.
 
 ### Cambridge 0606
 
-Exponential equations are first-class citizens on 0606, which *does* require the base-$e$ form and logarithms. Syllabus demands:
+**Syllabus ref:** §6, logarithmic and exponential functions. §6.1: the properties and graphs of $e^x$ and $\ln x$ as each other's inverse; §6.2: the laws of logarithms including change of base. Exponential equations are first-class citizens here, and 0606 *does* require the base-$e$ form:
 
 - Solve $e^x = k$, $\ln x = k$, and equations reducing to these
 - Apply the laws of logarithms (product, quotient, power)
 - Sketch $y = e^x$, $y = e^{-x}$, $y = \ln x$
-- Algebraic half-life and doubling-time problems — no trial-and-improvement
+- Algebraic half-life and doubling-time problems, no trial-and-improvement
 
-The 0606 treatment is the bridge between 0580's calculator-based approach and A-Level's full calculus treatment.
+The 0606 treatment is the bridge between 0580's calculator-based approach and the A-Level calculus treatment.
 
-### A-Level / IB / AP Calculus
+### Cambridge 9709 (Paper 3)
 
-Differentiation of $e^{kx}$ and $\ln x$ is standard Year 1. Separation of variables in first-order differential equations is Year 2. Exam technique: recognize the $\frac{dy}{dt} = ky$ pattern, separate variables, integrate both sides, apply boundary condition to find $A$, state the solution.
+**§3.2** (logarithmic and exponential functions) carries the algebra: laws of logarithms, solving $a^x = b$, and using logarithms to transform a relationship such as $y = Ab^t$ into a straight line. **§3.8** (differential equations) carries the calculus: "formulate a simple statement involving a rate of change as a differential equation", including a constant of proportionality; solve by separating the variables; use an initial condition for the particular solution; and interpret the solution in the context of the model, for which the syllabus promises that no specialised knowledge of the context is needed. The exam pattern is the $\frac{dy}{dt} = ky$ recognition: separate, integrate, apply the condition to find $A$, state the solution. Paper 1 has no growth-and-decay row.
+
+### AP Calculus AB and BC
+
+**Unit 7.8, Exponential Models with Differential Equations** (FUN-7.F): interpret a differential equation and its variables in context, with exponential growth and decay named as a specific application, and FUN-7.F.2 stating the model that arises from "the rate of change of a quantity is proportional to the size of the quantity", $\frac{dy}{dt} = ky$. BC adds logistic growth (7.9), which the Beyond-syllabus note below introduces.
+
+### Where this is *not* examined
+
+Cambridge 9231 has no growth-and-decay row; its differential equations are the second-order ones of FP2. The IB Mathematics guides are not on file, so no IB claim is made here.
 
 ## Beyond syllabus
 

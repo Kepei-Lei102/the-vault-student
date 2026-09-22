@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 860 430">
+<style>text {font-family:system-ui,sans-serif;fill:#888;font-size:19px}.title{font-size:23px;font-weight:600}.small{font-size:17px}</style>
+<text x="24" y="35" class="title">One orbital, two independent spin states</text>
+<rect x="40" y="65" width="66" height="56" rx="6" fill="#059669" fill-opacity="0.12" stroke="#059669" stroke-width="2"/>
+<path d="M 62,108 V 79 M 57,86 L 62,79 L 67,86" fill="none" stroke="#059669" stroke-width="2.5"/>
+<path d="M 84,78 V 107 M 79,100 L 84,107 L 89,100" fill="none" stroke="#059669" stroke-width="2.5"/>
+<text x="125" y="89" class="">Allowed</text>
+<text x="125" y="115" class="small">Same orbital; different spin states</text>
+<rect x="455" y="65" width="66" height="56" rx="6" fill="#dc2626" fill-opacity="0.12" stroke="#dc2626" stroke-width="2"/>
+<path d="M 477,108 V 79 M 472,86 L 477,79 L 482,86" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+<path d="M 499,108 V 79 M 494,86 L 499,79 L 504,86" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+<text x="540" y="89" class="">Forbidden</text>
+<text x="540" y="115" class="small">Same complete state twice</text>
+<path d="M24 151 H836" stroke="#888" opacity="0.3"/>
+<text x="24" y="190" class="title">Carbon ground configuration: 1s² 2s² 2p²</text>
+<rect x="40" y="215" width="66" height="56" rx="6" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+<path d="M 62,258 V 229 M 57,236 L 62,229 L 67,236" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<path d="M 84,228 V 257 M 79,250 L 84,257 L 89,250" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<text x="60" y="301" class="">1s</text>
+<rect x="185" y="215" width="66" height="56" rx="6" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+<path d="M 207,258 V 229 M 202,236 L 207,229 L 212,236" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<path d="M 229,228 V 257 M 224,250 L 229,257 L 234,250" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<text x="205" y="301" class="">2s</text>
+<rect x="370" y="215" width="66" height="56" rx="6" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+<path d="M 403,258 V 229 M 398,236 L 403,229 L 408,236" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<text x="390" y="301" class="">2p</text>
+<rect x="446" y="215" width="66" height="56" rx="6" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+<path d="M 479,258 V 229 M 474,236 L 479,229 L 484,236" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<text x="466" y="301" class=""></text>
+<rect x="522" y="215" width="66" height="56" rx="6" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+<text x="542" y="301" class=""></text>
+<text x="635" y="240" class="small">Three 2p orbitals</text>
+<text x="635" y="269" class="small">Six spin states</text>
+<text x="40" y="350" class="small">Pauli permits the arrangement. Hund’s rule selects the parallel, separate 2p filling.</text>
+<text x="40" y="385" class="small">A box represents a wavefunction, not a compartment in the atom.</text>
+</svg>

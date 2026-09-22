@@ -1,6 +1,6 @@
 # The Vault — Physics Directory
 
-> **82 cards across 12 bays.** Last landed: [[Quantum Tunnelling]] — one barrier, opposite engineering goals: suppress CPU leakage, program SSD memory.
+> **86 cards across 14 bays.** Last landed: [[The Transistor as a Switch — How Analog Becomes Digital]] — field-controlled switches, reliable voltage ranges, and the time and energy needed to restore a bit.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations, the worked papers, and the graph of what to read first.
 
 **Reading the bays.** Bays follow the Cambridge 9702 chapter structure. *Closed* bays cover their stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0625 = Cambridge IGCSE, 9702 = Cambridge A Level, 9709/9231 = the Cambridge maths boards whose mechanics papers these cards also serve, IB = IB Physics, AP-1 / AP-2 / AP-C = the AP Physics courses.
@@ -92,7 +92,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 ---
 
-## Quantum-Nuclear (5 — open)
+## Quantum-Nuclear (7 — open)
 
 *Where the wave picture and the particle picture are both true, and what that does to the atom and the nucleus.*
 
@@ -106,7 +106,11 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 5. **[[Quantum Tunnelling]]** — boundary matching, conserved probability current and exponential transmission; CPU gate leakage, SSD programming/retention and STM, with three SVGs and 4K Manim. *University enrichment*
 
-*Cambridge quantum/nuclear/particle core complete. Enrichment shelf: [[Pauli Exclusion Principle]].*
+6. **[[Pauli Exclusion Principle]]** — complete states and antisymmetry, shell capacities, Fermi occupation and degeneracy pressure; chemistry, solid matter and white dwarfs, with two SVGs and 4K Manim. *University enrichment*
+
+7. **[[Particle Physics]]** — the zoo and the quark order, the twelve pieces and their antiparticles, the conservation laws as a referee run on thirteen reactions, forces as exchange with the W's range computed, Feynman diagrams, colliders, tracks and invariant mass with a simulated Z peak; three SVGs and 4K Manim. *Enrichment beyond 9702 §11.2 · AP-2 15.8*
+
+*Cambridge quantum/nuclear/particle core complete. Remaining enrichment: [[Particle Physics]] beyond the introduction in [[Nuclear Physics]].*
 
 ## Thermal (8)
 
@@ -138,6 +142,10 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *Bay closed 2026-09-09: the planned run [[Electric Current]] → [[Alternating Current]] is complete; the field-theoretic side ([[Electric Field]], [[Energy Resources]]) belongs to Fields.*
 
+## Electronics (1 — open)
+
+1. **[[The Transistor as a Switch — How Analog Becomes Digital]]** — MOSFET field control, complementary CMOS, noise margins, signal restoration and switching delay/energy. 💎
+
 ## Fields (7 — open)
 
 1. **[[Capacitors]]** — $C = Q/V$ as an electrical spring; the parallel-plate formula derived from the field; energy $\tfrac12 CV^2$; charging and discharging through a resistor.
@@ -153,11 +161,13 @@ See also: [[Mathematics/Directory|Mathematics]] · [[CS/Directory|Computer Scien
 
 *9702 Topic 18 and IGCSE magnetism/electromagnetic effects complete at mapped-row granularity. Remaining brief: [[Energy Resources]]; verify its residual scope against existing teaching.*
 
-## Modern (1 — open)
+## Modern (2 — open)
 
 **[[Special Relativity]]** — two postulates; time dilation from a light clock and Pythagoras; length contraction; the relativity of simultaneity; the Lorentz transformation; the invariant interval; space-time diagrams; muons measured on a mountain; GPS. *IB A.5 HL*
 
-*Next: [[General Relativity]], and [[Particle Physics]] beyond the quark introduction in [[Nuclear Physics]]. Cambridge §11/§22–23 and 0625 §5 are taught in Quantum-Nuclear above.*
+**[[General Relativity]]** — the equivalence principle from a falling lift; gravity slows clocks (derived from the Doppler shift in an accelerating lift, measured by Pound–Rebka); tides as the limit of equivalence and the meaning of curvature; the Schwarzschild factor; light bent twice; Mercury, black holes, gravitational waves; the GPS correction worked. *Enrichment; AP-1/AP-C 2.6.C.4 equivalence principle*
+
+*Next: [[Particle Physics]] beyond the quark introduction in [[Nuclear Physics]]. Cambridge §11/§22–23 and 0625 §5 are taught in Quantum-Nuclear above.*
 
 ## Astronomy (4 — open)
 

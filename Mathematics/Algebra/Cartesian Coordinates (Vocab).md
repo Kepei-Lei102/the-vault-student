@@ -37,11 +37,11 @@ tags:
 
 A **Cartesian coordinate system** (笛卡尔坐标系) uses two perpendicular number lines — the **axes** — to specify any point in a plane by a pair of numbers. The horizontal axis is the $x$-axis, the vertical axis is the $y$-axis, and they meet at the **origin** $(0, 0)$.
 
-A point is written as an **ordered pair** $(x, y)$, where $x$ is the horizontal distance from the origin and $y$ is the vertical distance.
+A point is written as an **ordered pair** $(x, y)$, where $x$ is the **signed horizontal displacement** from the origin and $y$ is the **signed vertical displacement**. With right and up positive, left and down have negative coordinates.
 
 ### 中文锚点
 
-笛卡尔坐标 = 用两条互相垂直的数轴（$x$ 轴和 $y$ 轴）来表示平面上任何一点的位置。点用有序对 $(x, y)$ 表示：先写 $x$，再写 $y$。
+朋友在铺着方砖的广场上等你，只说“离喷泉三块砖”，你还是找不到他——喷泉四周都可能。先约好以喷泉为起点，大家面朝同一个方向，再说“向右三块，向前两块”，位置就定下来了。两个数调个顺序，你就会走到别处；第一个数写成负数，就改往左走。坐标能把位置说清楚，靠的正是大家共用同一个起点、方向和报数顺序。
 
 ---
 
@@ -98,9 +98,9 @@ Legend has it that Descartes invented the coordinate system while lying sick in 
 
 **Syllabus ref:** A10 — the same plotting-and-reading vocabulary, feeding the linear-graphs rows that follow it.
 
-### Where it is *not* examined
+### Later study
 
-Never a question of its own beyond IGCSE — every later board assumes the plane from page one; the words worth keeping are the English ones (*origin, axes, quadrant, ordered pair*).
+Coordinate reading remains part of later graph, geometry and calculus problems. Keep the vocabulary (*origin, axes, quadrant, ordered pair*) available even when plotting is only one step of a larger problem.
 
 ---
 

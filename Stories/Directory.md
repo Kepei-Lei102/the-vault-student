@@ -1,7 +1,7 @@
 # The Vault — Stories Directory 故事目录
 
-> **57 stories.** Last landed: [[Sorry the Homework Is Late]] (2026-09-21) — two open problems copied down as homework, and the ten thousand earlier problems that made them solvable.
-> Fun-first historical narratives: the folder where the human drama of mathematics, physics and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
+> **61 stories.** Last landed: [[The Corn Wouldn’t Behave]] (2026-09-22) — McClintock reads the history in spotted maize; a Nobel Prize meets the walnut harvest.
+> Fun-first historical narratives: the folder where the human drama of mathematics, physics, biology and computing gets to be the *point*, not a footnote. One line per story; the card has the acts, the receipts and the comic.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Meta/Directory|Meta]].
 
@@ -23,7 +23,7 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 ---
 
-## Mathematics (22)
+## Mathematics (23)
 
 1. **[[The Calculus Priority Dispute]]** — Newton vs Leibniz, 1665–1727: the Royal Society's rigged committee, Britain's century in the notation wilderness, Babbage's 1812 fix.
 2. **[[The Hidden Number]]** — 250 years of $e$ from Napier to Hermite: "natural" means *unbidden* — five independent paths keep producing the same constant, nobody choosing it.
@@ -48,8 +48,9 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 21. **[[Sophie Germain and the Borrowed Name]]** — Paris and Braunschweig, 1776–1831: the LeBlanc identity, Gauss’s compliment with a counterexample, vibrating plates and an auxiliary-prime plan that needed infinity.
 22. **[[Sorry the Homework Is Late]]** — Dantzig arrives late, copies down two unsolved problems as homework and apologises for taking so long; eight years on, the geometry of that thesis is why he trusts the simplex method; von Neumann's "Oh, that", nine clerks and a diet of beans, and a Nobel Prize that went to others.
+23. **[[Emmy Noether]]** — one of two women among 986 students; Hilbert's "not a bathhouse" and four years of lecturing under his name; the 1918 theorem that answered Hilbert's broken energy in general relativity; the seminar that moved into her flat in 1933.
 
-## Physics (15)
+## Physics (17)
 
 1. **[[Newton vs Hooke]]** — the first Newton priority fight, 1672–1703: the "Giants" letter as a barbed pun, the inverse-square letter, the missing portrait.
 2. **[[The 1919 Eclipse]]** — Eddington at Príncipe, Crommelin at Sobral: the Sobral plates discarded, and why that was calibration rather than cheating.
@@ -69,6 +70,9 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 
 14. **[[The Nobel Prizes in the Beaker]]** — two medals dissolved during the occupation of Denmark; the tracer pioneer, recoverable gold, and the new medals that took years to return.
 15. **[[The Pigeons and the Beginning of Everything]]** — Penzias and Wilson clean the antenna, keep the unexplained number, and connect it to Princeton’s cosmological question.
+
+16. **[[A Letter from the Kitchen]]** — Pockels’s tin trough, ten years of measurements and the letter Rayleigh sent to Nature; scientific confidence inside a deferential envelope.
+17. **[[The Universe Has a Left Hand]]** — Wu, cold cobalt, detergent seals and wine in paper cups; an experiment makes nature answer the mirror question.
 
 ## Computing (16)
 
@@ -90,6 +94,10 @@ Born-in-Stories topics (the War of the Currents, Galois's duel…) have no pedag
 15. **[[Grace Hopper and the Nanosecond]]** — clocks taken apart, programs assembled from routines, FLOW-MATIC and COBOL with their collaborators, the moth legend checked, and a teacher handing out pieces of time.
 
 16. **[[Hedy Lamarr and the Frequency-Hopping Piano]]** — actor and composer, synchronized radios and a paper-roll proposal; the patent, the rejection story and the distinction between recognition and mythology.
+
+## Biology (1)
+
+1. **[[The Corn Wouldn’t Behave]]** — Barbara McClintock: the chromosome map, the changing address, and the coloured descendants that made jumping genes visible through their consequences.
 
 ## Media and speed (4)
 

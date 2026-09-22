@@ -7,6 +7,7 @@ prerequisites:
 leads_to:
   - "[[Binary Trees]]"
   - "[[Hash Tables]]"
+  - "[[Memory Allocation and the Heap]]"
 tags:
   - subject/computer-science
   - domain/data-structures

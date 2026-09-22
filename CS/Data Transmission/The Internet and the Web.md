@@ -6,6 +6,7 @@ prerequisites:
 leads_to:
   - "[[Data Security]]"
   - "[[Digital Currency and Blockchain]]"
+  - "[[Anatomy of a Tech Stack]]"
 tags:
   - subject/computer-science
   - domain/networks

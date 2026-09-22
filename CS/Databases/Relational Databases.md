@@ -8,6 +8,7 @@ leads_to:
   - "[[SQL]]"
   - "[[NoSQL and Distributed Data]]"
   - "[[Data Protection and Privacy]]"
+  - "[[Anatomy of a Tech Stack]]"
 tags:
   - subject/computer-science
   - domain/databases

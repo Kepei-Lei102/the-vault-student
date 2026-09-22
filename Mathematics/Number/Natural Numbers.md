@@ -3,7 +3,8 @@ chinese: 自然数 (zìránshù)
 prerequisites:
   - "[[Number Sets (Vocab)]]"
   - "[[Set]]"
-leads_to: []
+leads_to:
+  - "[[Integers]]"
 teach_together:
   - "[[Proof by Induction]]"
   - "[[Recursion]]"

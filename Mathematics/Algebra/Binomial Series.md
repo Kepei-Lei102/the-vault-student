@@ -50,7 +50,7 @@ $$\binom{n}{k}\,x^k \;=\; \dfrac{n(n-1)(n-2)\cdots(n - k + 1)}{k!}\,x^k,$$
 
 where $\binom{n}{k}$ is the **generalized binomial coefficient** — defined for any real $n$ (not just positive integers) by the above falling-factorial-over-$k!$ formula.
 
-**Convergence:** the series converges to $(1 + x)^n$ on the open interval $\lvert x \rvert < 1$. At $\lvert x \rvert = 1$ the behaviour depends on $n$; outside $\lvert x \rvert > 1$ the series diverges.
+**Convergence:** the series converges to $(1 + x)^n$ on the open interval $\lvert x \rvert < 1$. For $n=0,1,2,\ldots$, it terminates and works for every real $x$. Otherwise it diverges for $\lvert x\rvert>1$, and the endpoints require separate checks. [NIST DLMF §4.6](https://dlmf.nist.gov/4.6#ii).
 
 ### Intuitive
 
@@ -60,9 +60,9 @@ $$(1 + x)^n = 1 + nx + \binom{n}{2}x^2 + \ldots + \binom{n}{n}x^n.$$
 
 The series *terminates* at the $x^n$ term, because $\binom{n}{n+1}$ involves a factor of $(n - n) = 0$, which kills every subsequent term.
 
-The **binomial series** at A-Level extends this to **non-integer $n$**. Replace $n$ with $\tfrac{1}{2}$, or $-1$, or $-\tfrac{2}{3}$, or any real number: the falling-factorial $n(n-1)(n-2)\cdots$ *never reaches zero* because $n$ isn't a positive integer. The series doesn't terminate — it goes on forever. So instead of a finite expansion, you get an **infinite power series**.
+The **binomial series** at A-Level extends this to **negative integer and non-integer $n$**. Replace $n$ with $\tfrac{1}{2}$, or $-1$, or $-\tfrac{2}{3}$, or any real $n$ outside $\{0,1,2,\ldots\}$: the falling-factorial $n(n-1)(n-2)\cdots$ *never reaches zero* because $n$ is not a non-negative integer. The series doesn't terminate — it goes on forever. So instead of a finite expansion, you get an **infinite power series**.
 
-That sounds like a problem ("how do you compute an infinite sum?"), but in practice it isn't: provided $\lvert x \rvert < 1$, the terms shrink fast enough that the first 3–5 give an excellent approximation. **You truncate.** A 4-term expansion of $\sqrt{1.04} = (1 + 0.04)^{1/2}$ gives $1.019804\ldots$ accurate to six decimal places.
+That sounds like a problem ("how do you compute an infinite sum?"), but in practice it isn't: when $x$ is sufficiently close to zero, a few terms can give an excellent approximation. Merely being inside $\lvert x\rvert<1$ does not guarantee rapid convergence near an endpoint. **You truncate.** A 4-term expansion of $\sqrt{1.04} = (1 + 0.04)^{1/2}$ gives $1.019804\ldots$ accurate to six decimal places.
 
 The headline applications at 9709 P3 §3.1:
 
@@ -72,20 +72,7 @@ The headline applications at 9709 P3 §3.1:
 
 ### 中文锚点
 
-**二项级数**（èrxiàng jíshù）：把熟悉的二项展开式 $(1+x)^n$ 从**正整数 $n$ 推广到任意实数 $n$**（包括分数、负数、无理数）。
-
-IGCSE 学的 [[Binomial Theorem|二项定理]]：$n$ 为正整数时展开有 $n+1$ 项，**有限**。如 $(1+x)^3 = 1 + 3x + 3x^2 + x^3$。
-
-A-Level 推广：$n$ 不再要求是正整数。展开式变成**无穷级数**：
-
-$$(1+x)^n = 1 + nx + \dfrac{n(n-1)}{2!}x^2 + \dfrac{n(n-1)(n-2)}{3!}x^3 + \ldots$$
-
-但要求 $\lvert x \rvert < 1$（**收敛条件**）。这个条件是新的、必须记住的。如果 $\lvert x \rvert \geq 1$，级数发散，公式失效。
-
-**核心用法**（9709 P3 §3.1）：
-1. 数值近似（$\sqrt{1.04}$, $\sqrt[3]{8.1}$ 等）
-2. 配合[[Partial Fractions|部分分式]]做有理函数的级数展开
-3. (IB HL) 用级数项-逐项积分处理"积不出来"的函数
+想把一张正方形照片的面积放大百分之二，边长该增加多少？先猜百分之一：长和宽各添一点，面积大致就多了百分之二。不过，两边同时变长，还会在角上多出一小块，所以边长的增幅其实要比百分之一略小一点。二项级数做的就是这种逐步修正：从熟悉的大小出发，先抓住主要变化，再补上小小的差别。照片只放大一点时，几步就能算得很准；要是放大很多，就不能把小幅变化时的估算硬往外套。
 
 ---
 
@@ -97,15 +84,13 @@ $$(1 + x)^n = \sum_{k=0}^{n} \binom{n}{k} x^k = 1 + nx + \binom{n}{2}x^2 + \ldot
 
 with $\binom{n}{k} = \dfrac{n!}{k!(n-k)!}$ — the standard combinatorial binomial coefficient.
 
-**Why does the series terminate at $k = n$?** Because $\binom{n}{n+1} = \dfrac{n!}{(n+1)!(-1)!}$ involves $(-1)!$, which is undefined — or, looking at the falling-factorial form,
-
-$$\binom{n}{n+1} = \dfrac{n(n-1)(n-2)\cdots(n-n)(n-(n+1)+1)}{(n+1)!} = \dfrac{\cdots \cdot 0 \cdot \cdots}{(n+1)!} = 0.$$
+**Why does the series terminate at $k = n$?** Use the falling-factorial definition: the $n+1$ factors in $\binom{n}{n+1}$ include $n-n=0$. Thus $\binom{n}{n+1}=0$, as do all later coefficients. The factorial quotient $n!/[k!(n-k)!]$ is only valid for $0\le k\le n$; an undefined negative factorial cannot prove that a coefficient is zero.
 
 The factor of $(n - n) = 0$ kills every term from $k = n+1$ onward. The series stops.
 
-### When $n$ isn't a positive integer, the zero never appears
+### Outside the non-negative integers, the zero never appears
 
-Now substitute $n = \tfrac{1}{2}$ (or any non-positive-integer real number). The falling factorial becomes:
+Now substitute $n = \tfrac{1}{2}$ (or any real number outside $\{0,1,2,\ldots\}$). The falling factorial becomes:
 
 $$\dfrac{1}{2} \cdot \left(\dfrac{1}{2} - 1\right) \cdot \left(\dfrac{1}{2} - 2\right) \cdot \left(\dfrac{1}{2} - 3\right) \cdot \ldots = \dfrac{1}{2} \cdot \left(-\dfrac{1}{2}\right) \cdot \left(-\dfrac{3}{2}\right) \cdot \left(-\dfrac{5}{2}\right) \cdot \ldots$$
 
@@ -115,8 +100,8 @@ The answer is yes, with a condition: **$\lvert x \rvert < 1$**. We'll see why in
 
 > [!info] Two algebraic regimes, one formula
 > The same expression $(1 + x)^n = \sum_{k=0}^\infty \binom{n}{k} x^k$ now describes both:
-> - **Positive-integer $n$**: the sum is finite (terminating at $k = n$), no convergence condition needed — works for any $x \in \mathbb{R}$.
-> - **Non-integer real $n$**: the sum is infinite, converges only for $\lvert x \rvert < 1$.
+> - **Non-negative-integer $n$**: the sum is finite (terminating at $k = n$), no convergence condition needed — works for any $x \in \mathbb{R}$.
+> - **Negative integer or non-integer real $n$**: the sum is infinite, converges for $\lvert x \rvert < 1$, diverges for $\lvert x\rvert>1$, and needs separate endpoint checks.
 >
 > *That's why the A-Level form is called the "binomial series" rather than the "binomial theorem" — to distinguish the infinite-sum regime from the IGCSE finite regime.*
 
@@ -181,7 +166,7 @@ Substituting into the Maclaurin formula:
 
 $$(1 + x)^n = \sum_{k=0}^\infty \dfrac{n(n-1)(n-2)\cdots(n - k + 1)}{k!}\,x^k = \sum_{k=0}^\infty \binom{n}{k}\,x^k.$$
 
-That's the binomial series. The derivation works **for any real $n$** — positive integer, negative integer, fraction, irrational — because the differentiation rule $\frac{d}{dx}(1+x)^n = n(1+x)^{n-1}$ holds for any $n \in \mathbb{R}$ (Power Rule). The only thing that distinguishes integer from non-integer $n$ is whether the $f^{(k)}(0)$ sequence eventually becomes zero (integer case) or never does (non-integer case).
+That's the binomial series. The derivation works **for any real $n$** — positive integer, negative integer, fraction, irrational — because the differentiation rule $\frac{d}{dx}(1+x)^n = n(1+x)^{n-1}$ holds for any $n \in \mathbb{R}$ (Power Rule). The derivatives eventually become zero exactly when $n$ is a non-negative integer. Negative integer exponents also give non-terminating series.
 
 Historically this derivation runs backwards. Newton had the series in **1665**, seventy-seven years before Maclaurin's framework existed to derive it from — he reached it by interpolating the coefficient pattern instead, and the full account of how is at the end of this card.
 
@@ -189,7 +174,7 @@ Historically this derivation runs backwards. Newton had the series in **1665**, 
 
 ## §4 Convergence — Why $\lvert x \rvert < 1$ is Required
 
-For non-integer $n$, the binomial series is an infinite sum. It converges to $(1+x)^n$ if and only if $\lvert x \rvert < 1$ (with boundary behavior depending on $n$).
+For real $n$ outside $\{0,1,2,\ldots\}$, the binomial series has radius of convergence 1. It equals $(1+x)^n$ for $\lvert x\rvert<1$ and diverges for $\lvert x\rvert>1$. The ratio test is inconclusive at $x=\pm1$; these endpoints must be checked separately.
 
 ### The ratio test
 
@@ -207,9 +192,9 @@ The series converges if this limit is $< 1$, i.e., if **$\lvert x \rvert < 1$**.
 
 ### Intuition — terms must shrink
 
-In the binomial series, the $k$-th term is $\binom{n}{k} x^k$. The coefficient $\binom{n}{k}$ grows polynomially with $k$ (for fixed $n$), while $\lvert x \rvert^k$ shrinks exponentially when $\lvert x \rvert < 1$. *Exponential decay beats polynomial growth.* The terms shrink to zero, and the sum converges.
+For a non-terminating binomial series, the ratio of consecutive term magnitudes tends to $|x|$. If $|x|<1$, choose a number $q$ between $|x|$ and 1: eventually each term is at most $q$ times the preceding one. A convergent geometric series then bounds the tail. This is stronger than merely saying the terms approach zero.
 
-When $\lvert x \rvert \geq 1$, $\lvert x \rvert^k$ doesn't shrink, and the polynomial growth of $\binom{n}{k}$ takes over. Terms grow; the sum diverges.
+If $|x|>1$, the magnitudes eventually grow, so the terms cannot approach zero and the series diverges. At $|x|=1$, neither conclusion follows. For example, $n=-1$ gives the geometric series, which diverges at both endpoints; $n=1/2$ converges at both. Do not turn the safe open interval into a blanket endpoint verdict.
 
 ### Worked check — $(1 + 0.5)^{1/2}$ vs $(1 + 2)^{1/2}$
 
@@ -220,7 +205,7 @@ For $x = 2$ ($\lvert x \rvert \geq 1$): the "series" should give $\sqrt{3} \appr
 $1 + 0.5 \cdot 2 = 2$; add $-0.125 \cdot 4 = -0.5$ → $1.5$; add $0.0625 \cdot 8 = 0.5$ → $2$; add $-0.0390625 \cdot 16 = -0.625$ → $1.375$… The partial sums oscillate without settling. The series **does not converge** to $\sqrt{3}$. *You must rewrite the expression to bring it into the $\lvert x \rvert < 1$ regime before expanding.*
 
 > [!warning] Always check the convergence condition first
-> Before writing down a binomial series, **identify what's in the "$x$" slot** and check $\lvert x \rvert < 1$. The "$x$" slot is the entire thing being raised to the power — including coefficients. For $(1 + 3x)^{1/2}$, the condition is $\lvert 3x \rvert < 1$, i.e., $\lvert x \rvert < \tfrac{1}{3}$. For $(2 + x)^{1/2}$, you must first factor out the $2$: $(2 + x)^{1/2} = 2^{1/2}\,(1 + x/2)^{1/2}$, and now expand in $u = x/2$ requiring $\lvert x \rvert < 2$.
+> Before writing down a binomial series, **identify what's in the "$x$" slot** and check $\lvert x \rvert < 1$. The "$x$" slot is the perturbation added to 1 — including its coefficient. For $(1 + 3x)^{1/2}$, the condition is $\lvert 3x \rvert < 1$, i.e., $\lvert x \rvert < \tfrac{1}{3}$. For $(2 + x)^{1/2}$, you must first factor out the $2$: $(2 + x)^{1/2} = 2^{1/2}\,(1 + x/2)^{1/2}$, and now expand in $u = x/2$ requiring $\lvert x \rvert < 2$.
 >
 > Missing the condition or applying it to the wrong variable is the single most common P3 §3.1 error.
 
@@ -364,7 +349,7 @@ Pre-pocket-calculator (and pre-computer), the binomial series was *the* techniqu
 
 ### 1. Forgetting the convergence condition $\lvert x \rvert < 1$
 
-Writing an expansion and applying it at $x = 2$ or $x = 5$. The series **doesn't equal $(1+x)^n$** there — it diverges.
+Applying a non-terminating expansion at $x=2$ or $x=5$: its terms do not approach zero, so it diverges. A terminating expansion with non-negative integer $n$ has no such restriction.
 
 **Fix.** Always state the convergence condition alongside the expansion. On the exam, *"valid for $\lvert x \rvert < 1$"* is usually worth a mark. Forgetting it costs the mark.
 
@@ -493,9 +478,9 @@ His first application: compute $\pi$. He took the circular segment under $y = \s
 
 ### The complex-analytic extension
 
-The same formula $(1 + z)^n = \sum \binom{n}{k} z^k$ extends to complex $z$ in the unit disk $\lvert z \rvert < 1$. The right-hand side defines a *holomorphic* function on the open unit disk, and for non-integer $n$ it has a *branch cut* along the negative real axis (because $z = -1$ would give $0^n$ which can be ill-defined for non-integer $n$).
+The same formula $(1 + z)^n = \sum \binom{n}{k} z^k$ extends to complex $z$ in the unit disk $\lvert z \rvert < 1$. The right-hand side defines a *holomorphic* function on the open unit disk, and for non-integer $n$ it has a branch point at $z=-1$; the usual branch cut runs along the real axis from $-1$ to $-\infty$.
 
-In **complex analysis**, the binomial series is the *Taylor expansion at $z = 0$* of the *principal branch* of $(1 + z)^n$, and its radius of convergence ($= 1$) is the distance from $0$ to the nearest singularity of $(1 + z)^n$, which sits at $z = -1$. This is an example of the general principle: **the radius of convergence of a Taylor series equals the distance to the nearest singularity in the complex plane**. (A theorem due to Cauchy.)
+In **complex analysis**, the binomial series is the *Taylor expansion at $z = 0$* of the *principal branch* of $(1 + z)^n$, and, when the series does not terminate, its radius of convergence ($= 1$) is the distance from $0$ to the nearest singularity of $(1 + z)^n$, which sits at $z = -1$. This is an example of the general principle: **the radius of convergence of a Taylor series equals the distance to the nearest singularity in the complex plane**. (A theorem due to Cauchy.)
 
 Even when you're only working with real $x$, the convergence radius is set by what happens *over the complex numbers*. Hence $\lvert x \rvert < 1$ for real $x$, dictated by a singularity at $z = -1$ in the complex plane.
 
@@ -507,11 +492,11 @@ $$\binom{n}{k} = \dfrac{\Gamma(n+1)}{\Gamma(k+1)\,\Gamma(n - k + 1)}.$$
 
 This works for any real (or complex) $n$ and $k$, except where the Gamma function has poles. *Beyond A-Level; standard in special-functions courses at university.*
 
-The Gamma function itself is a 17th-century invention (Euler, 1729 — yes, *that* Euler, see [[Stories/The Hidden Number]] for his story). The fact that you can put fractional values into "factorial" via $\Gamma$ is one of the earlier surprises in the development of analysis.
+The Gamma function itself is a 18th-century invention (Euler, 1729 — yes, *that* Euler, see [[Stories/The Hidden Number]] for his story). The fact that you can put fractional values into "factorial" via $\Gamma$ is one of the earlier surprises in the development of analysis.
 
 ### Why the radius is exactly 1
 
-It might seem arbitrary that the convergence condition is $\lvert x \rvert < 1$ rather than $\lvert x \rvert < 2$ or $\lvert x \rvert < 1/2$. The reason is structural: the function $(1 + x)^n$ for non-integer $n$ has a **branch point** at $x = -1$, where the function value is $0^n$, which is multivalued or singular. The Taylor series at $x = 0$ converges out to the nearest singularity — which is at distance $1$. Hence radius $1$.
+It might seem arbitrary that the convergence condition is $\lvert x \rvert < 1$ rather than $\lvert x \rvert < 2$ or $\lvert x \rvert < 1/2$. The reason is structural: the function $(1 + x)^n$ for non-integer $n$ has a **branch point** at $x = -1$, where no single-valued holomorphic continuation exists around a complete loop (even if the real value $0^n$ exists). The Taylor series at $x = 0$ converges out to the nearest singularity — which is at distance $1$. Hence radius $1$.
 
 This is *Cauchy's theorem on the radius of convergence*: the disk of convergence of a power series equals the disk around the expansion point containing no singularities of the function. The binomial series is the cleanest example of the principle at work.
 

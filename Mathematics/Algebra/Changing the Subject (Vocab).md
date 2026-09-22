@@ -1,5 +1,5 @@
 ---
-chinese: 变换主元 (biànhuàn zhǔyuán)
+chinese: 公式变形 (gōngshì biànxíng)
 prerequisites:
   - "[[Algebraic Expressions (Vocab)]]"
   - "[[Inverse Operations (Vocab)]]"
@@ -22,7 +22,7 @@ tags:
   - misconception/square-root-both-sides-forgetting-pm
 ---
 
-# Changing the Subject 变换主元
+# Changing the Subject 公式变形
 
 ## Definition
 
@@ -30,11 +30,13 @@ The **subject** of a formula is the variable that stands alone on one side, expr
 
 Make $t$ the subject: $\;v = u + at \;\Rightarrow\; v - u = at \;\Rightarrow\; t = \dfrac{v - u}{a}$
 
+Here $a\ne0$; if $a=0$, the original equation says $v=u$ and does not determine $t$.
+
 The formula hasn't changed — it still describes the same relationship. You've just turned it around to answer a different question.
 
 ### 中文锚点
 
-变换主元 = 把公式变形，让另一个变量单独在等号一边。方法和解方程一模一样："两边做相同的运算"，用逆运算一步步剥离。英文说 "make $x$ the subject" = "把 $x$ 变成主元"。
+先把打车费想简单一点：固定起步费，再加上每公里的钱。平时你拿路程算车费；现在口袋里只有这么多钱，想问的却是“够坐多远？”先扣掉起步费，再用剩下的钱除以每公里的价格，就能反过来算路程。收费关系一点没变，只是原来拿来算答案的数，现在成了你要找的答案。公式变形就是这样，把原先的计算倒着拆开，让想知道的那个量单独留在等号一边。
 
 ---
 
@@ -42,11 +44,11 @@ The formula hasn't changed — it still describes the same relationship. You've 
 
 | English | 中文 | Notes |
 |---------|------|-------|
-| subject (of a formula) | 主元 (zhǔyuán) | The isolated variable on one side |
+| subject (of a formula) | 公式中被单独表示的量 | The isolated variable on one side |
 | rearrange | 变形 / 移项 (yíxiàng) | Rewrite the formula with a different subject |
 | isolate | 隔离 (gélí) | Get the target variable alone |
 | transpose | 移项 (yíxiàng) | Move a term to the other side (older UK usage) |
-| make $x$ the subject | 把 $x$ 变成主元 | The standard exam phrasing |
+| make $x$ the subject | 把公式变形成 $x = \cdots$ | The standard exam phrasing |
 | inverse operation | 逆运算 (nì yùnsuàn) | Undo: $+$ undone by $-$, $\times$ by $\div$, square by $\sqrt{}$ |
 
 ---
@@ -68,6 +70,8 @@ $$y(x - 2) = 3x + 1 \;\Rightarrow\; yx - 2y = 3x + 1 \;\Rightarrow\; yx - 3x = 1
 
 $$x(y - 3) = 1 + 2y \;\Rightarrow\; x = \dfrac{1 + 2y}{y - 3}$$
 
+The original fraction requires $x\ne2$; the rearranged one requires $y\ne3$. Indeed, setting $y=3$ in the original would require $-6=1$, so no such solution exists.
+
 The key move: **factor out $x$** from the left side. This is [[Factorising (Vocab)]] in disguise — common factor extraction, applied to a formula instead of a polynomial.
 
 ### Rearrangements involving squares and roots
@@ -76,11 +80,11 @@ The key move: **factor out $x$** from the left side. This is [[Factorising (Voca
 
 $$r^2 = \dfrac{A}{\pi} \;\Rightarrow\; r = \sqrt{\dfrac{A}{\pi}}$$
 
-We take the positive root because $r$ is a radius (length). In pure algebra, $r = \pm\sqrt{A/\pi}$ — context decides.
+We take the non-negative root (with $A\ge0$) because $r$ is a radius (length). In pure algebra, $r = \pm\sqrt{A/\pi}$ — context decides.
 
 ### Beyond IGCSE — when exponentials and logarithms enter
 
-At 0606, A-Level, and IB, rearrangements routinely involve exponentials and logarithms as inverse operations — $\ln$ undoes $e^x$ the way $\sqrt{}$ undoes squaring. For instance, making $t$ the subject of $P = P_0 e^{kt}$ requires taking $\ln$ of both sides:
+At 0606, A-Level, and IB, rearrangements routinely involve exponentials and logarithms as inverse operations — $\ln$ undoes $e^x$ the way $\sqrt{}$ undoes squaring. For instance, making $t$ the subject of $P = P_0 e^{kt}$ requires $P_0\ne0$, $P/P_0>0$ and $k\ne0$. Then take $\ln$ after dividing by $P_0$:
 
 $$\frac{P}{P_0} = e^{kt} \;\Rightarrow\; \ln\!\left(\frac{P}{P_0}\right) = kt \;\Rightarrow\; t = \frac{1}{k}\ln\!\left(\frac{P}{P_0}\right)$$
 
@@ -106,9 +110,9 @@ This gets considerably harder once you are solving differential equations, where
 
 **Syllabus ref:** A2: "transform simple formulae" (core) escalating to "transform complex formulae **including when the subject appears twice**" (extension) — the same two-step ladder in the board's own words.
 
-### Where it is *not* examined
+### Later study
 
-Never a standalone question beyond IGCSE — 0606, 9709 and the A-Level boards assume rearrangement silently inside every solve-for-$x$ step.
+Rearrangement is reused inside later algebra, functions and calculus problems; it does not disappear when the question has a different topic heading.
 
 ---
 

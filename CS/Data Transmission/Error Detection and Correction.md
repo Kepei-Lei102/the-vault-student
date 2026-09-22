@@ -5,6 +5,7 @@ prerequisites:
   - "[[Bitwise Operations]]"
   - "[[Secondary Storage]]"
 leads_to:
+  - "[[RAID]]"
   - "[[A Fight With the Inevitable Errors]]"
   - "[[Data Security]]"
   - "[[Networks]]"
@@ -132,11 +133,11 @@ Take the seven data bits `1 0 1 1 0 0 1`. That is four 1s.
 The receiver counts the 1s in what arrived. Wrong parity means the byte is damaged.
 
 > [!question] If everything is stored in bytes, where does the parity bit actually go?
-> A fair objection: adding a ninth bit to an eight-bit byte would wreck the tidiest structure in computing. The resolution is that **parity never lives inside the byte. It rides alongside it**, and hardware has three standard ways of finding it room.
+> A fair objection: adding a ninth bit to an eight-bit byte would wreck the tidiest structure in computing. The resolution is to distinguish **payload bits from the container that carries them**. If all eight bits already carry data, an extra parity bit needs extra space; a seven-bit payload can instead share an eight-bit container with parity. Three common arrangements make the distinction concrete.
 >
-> - **The character was seven bits by design.** This is the real reason [[Text Encoding|ASCII]] is a *7-bit* code on 8-bit hardware — seven bits of character, one bit spare, and that spare bit was the parity bit for decades of teleprinters and serial terminals. The byte was never violated; the payload was sized to leave room.
+> - **The character was seven bits by design.** [[Text Encoding|ASCII]] defines seven-bit character codes. A transmission scheme can place those seven bits alongside an eighth parity bit; that is a framing choice, not part of the character value itself. Seven character bits plus one parity bit fit in eight bits.
 > - **The frame is bigger than the byte.** On a serial link the unit being sent is not a byte but a **frame**: a start bit, then the data bits, then an optional parity bit, then a stop bit. Parity is part of the envelope, not the letter.
-> - **The hardware is physically wider.** Error-correcting server memory carries **nine** memory chips where an ordinary module has eight, moving 72 bits for every 64 bits of data. The extra width exists solely to hold the check bits.
+> - **The hardware is physically wider.** A common ECC-memory organisation moves 72 bits for every 64 bits of data; the number of physical chips depends on their individual widths. The extra width exists solely to hold the check bits.
 >
 > The principle underneath all three is worth stating plainly: **redundancy is always paid for with extra room, never by taking bits from the payload.** If it were taken from the payload it would not be redundancy — it would just be a shorter message.
 
@@ -159,9 +160,9 @@ Every row now sums to an even number of 1s, and so does every column. Now flip a
 
 **The receiver now knows precisely which bit is wrong — and a wrong bit has only one possible correction.** Flip it back.
 
-The same trick runs at the scale of whole disks. A [[RAID]] array of the RAID-5 kind stripes data across several drives and gives one drive's worth of space to parity — the XOR of the others. Lose an entire drive and every byte it held is recomputed from the survivors, for the price of one drive in the set. It is this rectangle, with each column a physical disk.
+A related XOR construction runs at the scale of whole disks. [[RAID]] 5 distributes data and parity across drives, spending one drive’s worth of capacity on parity. If one drive is **known to have failed**, its missing blocks are reconstructed from the survivors. The location is already known: this is **erasure recovery**, not the parity rectangle’s task of locating an unknown flipped bit. Parity rotates between drives; there is no single dedicated parity column in RAID 5.
 
-That is genuine **error correction**, built from nothing but parity, and it is sitting on an IGCSE syllabus. It is worth pausing on, because the leap from *"something is wrong"* to *"that one is wrong"* is the entire difference between the two halves of this card's title. Detection needs one bit; **location** needs a second dimension; and once you can locate, correction is free.
+The two-dimensional parity block demonstrates **error correction**, built from parity checks. The leap from *"something is wrong"* to *"that bit is wrong"* is the extra work: under the single-flipped-bit assumption, row and column checks identify the location, then flipping the bit repairs it. RAID erasure recovery starts with the missing location already known.
 
 > [!tip] Where it still fails, and why that is the interesting part
 > Flip **two** bits in the same row: that row's parity survives (two changes cancel), but *both* their columns now fail. You know something is wrong and you know which two columns — but not which rows — so you can detect without correcting. Flip four bits in a rectangle, one at each corner, and every row and every column stays even: the block is silently wrong.
@@ -181,7 +182,7 @@ That is genuine **error correction**, built from nothing but parity, and it is s
 
 Treat the block of data as numbers, add them all up, and send the total alongside. The receiver adds up what arrived and compares.
 
-Bytes `212, 45, 199, 88` total $544$. Since a byte only holds $0$–$255$, the checksum is usually kept to one byte by taking the remainder: $544 \bmod 256 = 32$. The receiver re-adds, gets $32$, and accepts.
+Bytes `212, 45, 199, 88` total $544$. **Tool: addition modulo 256, selected because this example specifies a one-byte additive checksum.** Keep the remainder: $544 \bmod 256 = 32$. The receiver re-adds, gets $32$, and accepts.
 
 A checksum catches far more than parity — any single corrupted byte changes the total — but it is still a summary, and summaries collide. Two errors that cancel ($+3$ on one byte, $-3$ on another) leave the total untouched. Real protocols therefore use cleverer functions (CRCs) chosen so that cancellation is vanishingly unlikely, but the principle is exactly the one above.
 
@@ -199,7 +200,7 @@ Humans make two characteristic mistakes: **a wrong digit**, and **a transpositio
 
 ### ISBN-13, worked in full
 
-Take the first twelve digits of a real book — *Gödel, Escher, Bach* — which are `978030640615`.
+Take the twelve-digit example prefix `978030640615`. **Trigger: an ISBN-13 check digit → tool: alternating weights 1 and 3, followed by reduction modulo 10.**
 
 **Step 1: weight the digits alternately 1, 3, 1, 3, …**
 
@@ -207,11 +208,11 @@ $$9(1) + 7(3) + 8(1) + 0(3) + 3(1) + 0(3) + 6(1) + 4(3) + 0(1) + 6(3) + 1(1) + 5
 
 $$= 9 + 21 + 8 + 0 + 3 + 0 + 6 + 12 + 0 + 18 + 1 + 15 = 93$$
 
-**Step 2: the check digit is whatever makes the total a multiple of 10.**
+**Step 2 — tool: the checksum condition selects the next multiple of 10.**
 
 $$93 + d \equiv 0 \pmod{10} \quad\Longrightarrow\quad d = 7$$
 
-So the full ISBN is **978-0-306-40615-7**, and the printed check digit on the back of that book is indeed 7. To *verify* an ISBN you do the same sum including the check digit and confirm the total is divisible by 10.
+So the full ISBN is **978-0-306-40615-7**, whose check digit is 7. To *verify* an ISBN you do the same sum including the check digit and confirm the total is divisible by 10.
 
 ### Why the weights are 1 and 3, and not 1 and 1
 
@@ -223,7 +224,7 @@ $$(3a + b) - (a + 3b) = 2(a-b)$$
 
 so the check fails unless $2(a-b) \equiv 0 \pmod{10}$ — that is, unless $a - b = \pm 5$.
 
-**So ISBN-13 catches every single-digit error and every transposition except those where the swapped digits differ by exactly 5.** Swap a 2 and a 7 and the code is silently happy. That hole is *known and accepted*: it is 10 of the 90 possible ordered pairs, the alternative schemes that close it are harder to compute by hand, and a check digit was designed for an era of paper catalogues and human clerks.
+**So ISBN-13 catches every single-digit error and every adjacent transposition of unequal digits except those where they differ by exactly 5.** Swap a 2 and a 7 and the code is silently happy. That hole is *known and accepted*: it is 10 of the 90 possible ordered pairs, the alternative schemes that close it are harder to compute by hand, and a check digit was designed for an era of paper catalogues and human clerks.
 
 Bar codes (EAN-13) use exactly the same rule — an ISBN-13 *is* an EAN-13, which is why a book scans at a supermarket till.
 
@@ -263,7 +264,7 @@ A link that is genuinely broken will fail every retransmission, so an unbounded 
 
 The two English words are near-synonyms in ordinary speech, so the distinction feels artificial until it is made concrete.
 
-**Fix:** one example, asked as a question. *A form demands an age between 0 and 120. A user means to type 43 and types 34. Which check catches it?* Neither range nor format nor length — it is a perfectly valid age. Only **double entry** catches it, and double entry is verification. Then reverse it: a transmission error turns 43 into 993, which validation catches instantly. Two different diseases, two different medicines.
+**Fix:** one example, asked as a question. *A form demands an age between 0 and 120. A user means to type 43 and types 34. Which check catches it?* Neither range nor format nor length — it is a perfectly valid age. **Double entry** may catch it if the second attempt differs; **visual checking against the source** may also catch it. Both are verification, and neither guarantees success. Then reverse it: a transmission error turns 43 into 993, which validation catches instantly. Two different diseases, two different medicines.
 
 ### 2. "Parity catches errors"
 
@@ -285,12 +286,12 @@ The instinct that makes the parity block feel obvious in hindsight — and, hist
 
 ### Cambridge IGCSE 0478 — **§2.2 Methods of error detection**
 
-Four learning objectives, all of them "describe" or "understand" — this is a written-answer section with no calculation beyond the check-digit arithmetic.
+The four objectives ask for processes and purposes. Practise tracing the named methods on supplied data; the wording does not justify treating parity or checksum arithmetic as off-limits.
 
-- **Understand the need to check for errors after transmission, and how errors occur** — the marks are for naming a *cause* (interference) and a *consequence* (data loss, data gain, data change), not for saying "errors happen".
+- **Understand the need to check for errors after transmission, and how errors occur** — the syllabus names interference and the consequences data loss, gain and change; explain the cause and its effect.
 - **Describe parity check (odd and even), checksum and echo check** — the syllabus specifically adds **parity byte and parity block check**, so the rectangle above is examinable, not enrichment.
 - **Describe how a check digit is used to detect errors in data entry, and identify examples** — **ISBN and bar codes are named in the syllabus**, so know both by name.
-- **Describe how ARQ establishes that data is received without error** — the syllabus names **positive/negative acknowledgements** and **timeout**. All three earn marks; the timeout is the one most often missed.
+- **Describe how ARQ establishes that data is received without error** — the syllabus names **positive/negative acknowledgements** and **timeout**. Explain how acknowledgements and timeout affect retransmission; exact marks depend on the question.
 
 **Answer-writing notes.** "Describe" wants the *process*, in order, not a definition — a parity answer that never mentions counting the 1s *at the receiving end* has only described half the method. And say which parity system is in use before computing anything: a byte is only correct or corrupt *relative to an agreed convention*.
 
@@ -306,16 +307,26 @@ The reliable trap is a question that gives a field and asks for *the most approp
 
 ### Where this is *not* examined
 
-Hamming codes, CRCs and Reed–Solomon appear on **no** Cambridge pre-university syllabus. They are the natural next step and they are genuinely beautiful, but nothing below is required for either paper.
+Hamming codes, CRC algorithms, Reed–Solomon and RAID reconstruction are not named requirements of the checked 0478 (2026–28) or 9618 (2027–29) syllabi. This is a statement about those two specifications, not every Cambridge qualification.
+
+### AQA A-Level 7517
+
+[§4.5.5.3](https://filestore.aqa.org.uk/resources/computing/specifications/AQA-7516-7517-SP-2015.PDF) explicitly requires parity bits, **majority voting**, checksums and check digits. Majority voting is correction by repetition: send each bit three times; decode `101` as 1 because two copies agree. It corrects one flipped bit in that triple but decodes incorrectly if two flip. Compared with one parity bit, it spends more transmitted bits to recover a value without retransmission.
+
+### IB Computer Science (first assessment 2027), AP CSA and OCR H446
+
+The checked IB guide does not prescribe the parity/checksum/ARQ algorithms taught here. Its A1.4.1 error-detection wording concerns **translation software**, not transmission codes; its A2.3 transmission section does not add these algorithms. AP CSA’s Java course framework likewise does not prescribe communication error-control codes. OCR H446’s data-types and networking sections do not name this parity/checksum/ARQ set. Input validation and software testing remain relevant programming ideas on these courses; their presence is not evidence that these transmission methods are prescribed.
+
+### Beyond syllabus — stronger codes
 
 > [!info] Beyond syllabus — what a checksum grows up into
 > The checksum above is the toy version of a real family, and the family splits by **what it is defending against**.
 >
-> Against *noise*, the standard tool is a **CRC** (cyclic redundancy check). It is still a fingerprint computed from the data, but the arithmetic is chosen so that the burst errors real channels actually produce cannot cancel out. Every Ethernet frame carries one.
+> Against *noise*, the standard tool is a **CRC** (cyclic redundancy check). It is still a fingerprint computed from the data, but the arithmetic is chosen to detect useful classes of burst errors. A degree-r CRC detects every burst of length at most r bits; longer bursts can still escape, depending on their pattern. Every Ethernet frame carries one.
 >
 > Against an *adversary*, you need a **cryptographic hash** — MD5, and its successors SHA-1 and SHA-256. The download page that lists a long hex string beside a file is asking you to verify exactly as above: recompute, compare.
 >
-> And **MD5 is the instructive one, because it is simultaneously broken and fine.** It is broken for security: it is now practical to construct *two different files with the same MD5 digest on purpose*, so an MD5 match no longer proves nobody tampered with the file. It remains perfectly adequate for spotting *accidental* corruption, because a random flipped bit will not stumble onto a collision.
+> And **MD5 is the instructive one, because it is simultaneously broken and fine.** It is broken for security: it is now practical to construct *two different files with the same MD5 digest on purpose*, so an MD5 match no longer proves nobody tampered with the file. It remains perfectly adequate for spotting *accidental* corruption, because an accidental change is very unlikely to preserve the digest; that probability claim does not establish authenticity.
 >
 > That distinction is the one to carry away: **resisting noise and resisting an opponent are different requirements**, and a check built for one is not automatically fit for the other. Noise is indifferent; an attacker is aiming. (Hashing algorithms in their own right are examined on 9618 — see [[Hash Tables]] for the data-structure use, where the requirement is different again: there you want collisions to be *rare and cheap*, not impossible.)
 

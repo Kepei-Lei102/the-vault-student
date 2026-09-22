@@ -1,0 +1,87 @@
+{
+ "restart": {
+  "served_before": 9,
+  "served_after_restart": 1,
+  "db_rows_after_restart": 3,
+  "top": [
+   {
+    "name": "grace",
+    "score": 95
+   },
+   {
+    "name": "ada",
+    "score": 90
+   },
+   {
+    "name": "alan",
+    "score": 85
+   }
+  ]
+ },
+ "latency": {
+  "health (no database)": {
+   "p50_ms": 0.313,
+   "p99_ms": 0.919,
+   "n": 300
+  },
+  "top, database every time": {
+   "p50_ms": 0.448,
+   "p99_ms": 1.729,
+   "n": 300
+  },
+  "top, through the cache": {
+   "p50_ms": 0.273,
+   "p99_ms": 0.612,
+   "n": 300
+  }
+ },
+ "load": [
+  {
+   "threads": 1,
+   "requests": 200,
+   "seconds": 0.061,
+   "req_per_s": 3259,
+   "errors": 0,
+   "error_kinds": {}
+  },
+  {
+   "threads": 4,
+   "requests": 800,
+   "seconds": 0.289,
+   "req_per_s": 2768,
+   "errors": 0,
+   "error_kinds": {}
+  },
+  {
+   "threads": 16,
+   "requests": 3200,
+   "seconds": 1.193,
+   "req_per_s": 2683,
+   "errors": 0,
+   "error_kinds": {}
+  }
+ ],
+ "writes": {
+  "attempted": 800,
+  "landed": 800,
+  "errors": 0,
+  "seconds": 0.489
+ },
+ "bad_requests": {
+  "status_codes": [
+   400,
+   400,
+   400,
+   404
+  ],
+  "server_alive_after": true
+ },
+ "log_sample": [
+  "GET /api/health",
+  "GET /api/top",
+  "GET /api/health",
+  "GET /api/health",
+  "GET /api/health",
+  "GET /api/health"
+ ]
+}

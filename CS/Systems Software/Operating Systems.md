@@ -13,6 +13,7 @@ leads_to:
   - "[[The Ghost of Drive A]]"
   - "[[Data Security]]"
   - "[[Networks]]"
+  - "[[Memory Allocation and the Heap]]"
 tags:
   - subject/computer-science
   - domain/systems-software
@@ -38,6 +39,10 @@ tags:
 > *Strip a computer of its software and what remains is a savage place: a processor that executes whatever the Program Counter points at, memory that belongs to whoever writes to it first, a disk that is just billions of numbered blocks, and devices that answer only to exact register pokes. Programming that machine means driving the disk motor yourself. Every program you have ever written lived somewhere kinder — a world of windows, files, and the serene belief that your program had the whole machine to itself. That kinder world is a fiction, and this card is about the program that writes it: the* operating system, *part **government** (it owns every resource and rations them out) and part **illusionist** (every program gets a private machine that does not exist). It is also the payoff of a promise: [[Interrupt Handling]] ended with a kernel woken by a timer tick — this card is what the kernel* does *with the wake-up.*
 
 ## 中文锚点
+
+一家酒店只有一个厨房、一间洗衣房，却住着几百位客人，而每位客人都像整家酒店是自己的一样：点晚餐从不问还有谁在吃，也从来见不到隔壁房间的床单。让这一切成立的是酒店的员工：他们接下每一个要求，决定轮到谁，把一位客人的东西挡在另一位客人的房间外面，厨房忙的时候，也只是让客人多等一会儿，而不是把人赶走。操作系统就是这班员工。硬件是一个处理器、一块内存和几件设备；程序是客人，每一个都写得好像整台机器归它一个人用。操作系统把处理器在程序之间切换得飞快，快到每个程序都像是在独自运行；它分给每个程序自己的一段内存，还不许它去读别人的；它还站在每一个程序和每一件设备之间。所以它干的是两件事：把只有一份的东西分着用，同时维持一个假象，让每个人都觉得什么都有自己的一份。
+
+### 术语对照 (Terms)
 
 | English | 中文 | one-line meaning |
 |---|---|---|

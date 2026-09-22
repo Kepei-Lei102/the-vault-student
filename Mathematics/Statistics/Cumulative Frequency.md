@@ -301,18 +301,20 @@ This means approximately 80% of parcels weigh 7.8 kg or less.
 - Mark scheme: points plotted at upper class boundaries (1 mark), smooth curve through points (1 mark), correct median reading with tolerance ± half a small square (1 mark)
 - Often paired with a box plot question: "Using the values from your curve, draw a box plot for this data"
 
-### Cambridge 0580
+### Cambridge 0580 (Extended only)
 
-- E9.6: construct and use cumulative frequency diagrams; estimate and interpret the median, percentiles, quartiles, and interquartile range
-- Paper 4: almost always appears — high frequency topic. Expect a 6–8 mark question combining cf table, cf curve, and readings
-- The grid is usually provided with pre-drawn axes. Check the scale carefully before plotting — a common error is misreading the axis scale
-- "Estimate the number of..." questions = use the curve in reverse (value → cf, then subtract from $n$ if asking for "more than")
+- **E9.6 Cumulative frequency diagrams** (C9.6 is marked "Extended content only"): "draw and interpret cumulative frequency tables and diagrams" and "estimate and interpret the median, percentiles, quartiles and interquartile range from cumulative frequency diagrams". The syllabus's own note: plotted points "should be clearly marked, for example as small crosses (×), and be joined with a smooth curve".
+- Paper 4: almost always appears. Expect a 6–8 mark question combining cf table, cf curve and readings.
+- The grid is usually provided with pre-drawn axes. Check the scale carefully before plotting; a common error is misreading the axis scale.
+- "Estimate the number of…" questions use the curve in reverse (value → cf, then subtract from $n$ if asking for "more than").
 
-### AP / IB / A-Level
+### Cambridge 9709 (Paper 5)
 
-- **AP Statistics:** cumulative relative frequency plots ("ogives") are standard; students must interpret percentile ranks and use ogives to describe distributions. The AP exam uses **cumulative relative frequency** (0 to 1 or 0% to 100%) rather than raw cumulative frequency.
-- **IB Mathematics AI:** cumulative frequency is part of the descriptive statistics toolkit; students use GDC to generate ogives and read percentiles. IB often asks students to estimate the number of data values within a given range using the curve.
-- **A-Level Statistics:** cumulative frequency is foundational for the **cumulative distribution function** (CDF) — the theoretical version of the ogive. For a continuous random variable $X$, the CDF is $F(x) = P(X \leq x)$, which is the probability analogue of cumulative frequency.
+- **§5.1 Representation of data:** "draw and interpret stem-and-leaf diagrams, box-and-whisker plots, histograms and cumulative frequency graphs", and use the median and interquartile range read from them "in comparing and contrasting sets of data". The cumulative frequency graph is also the bridge to the cumulative distribution function of §6.3, where $F(x) = P(X \leq x)$ is the theoretical curve the data one estimates.
+
+### AP Statistics and IB
+
+- The AP Statistics course description and the IB Mathematics guides are not on file, so no topic numbers are claimed. AP-style questions use **cumulative relative frequency** (0 to 1) rather than raw counts; the readings are the same.
 
 ### Beyond high school — University
 

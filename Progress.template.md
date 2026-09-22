@@ -8,14 +8,14 @@
 > checkpoint (quiz, game, timed question) proved you can use it.
 > **Stories are just `🔴` unread / `🟢` read.**
 
-> **Edition** `student-2026-09-21` · built 2026-09-21 from commit `21b9356`  
-> 462 cards · 747 diagrams · 158 explainers · 157 illustrations
+> **Edition** `student-2026-09-22` · built 2026-09-22 from commit `898c063` + uncommitted changes  
+> 485 cards · 793 diagrams · 175 explainers · 162 illustrations
 
 ---
 
 ## Mathematics
 
-*227 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*231 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -120,6 +120,7 @@
 | [[Identity Matrix]] | ? |  |  |
 | [[Implicit Differentiation]] | ? |  |  |
 | [[Indices in Algebra (Vocab)]] | ? |  |  |
+| [[Integers]] | ? |  |  |
 | [[Integration]] | ? |  |  |
 | [[Integration by Parts]] | ? |  |  |
 | [[Integration by Substitution]] | ? |  |  |
@@ -151,6 +152,7 @@
 | [[MF19 Reference (9231)]] | ? |  |  |
 | [[MF19 Reference (9709)]] | ? |  |  |
 | [[Modulus Function]] | ? |  |  |
+| [[Multiple Integrals]] | ? |  |  |
 | [[Natural Numbers]] | ? |  |  |
 | [[Nets (Vocab)]] | ? |  |  |
 | [[Non-Parametric Tests]] | ? |  |  |
@@ -170,6 +172,7 @@
 | [[Permutations and Combinations]] | ? |  |  |
 | [[Perpendicular Lines (Vocab)]] | ? |  |  |
 | [[Planes in 3D]] | ? |  |  |
+| [[Plans and Elevations]] | ? |  |  |
 | [[Poisson Distribution]] | ? |  |  |
 | [[Polar Coordinates]] | ? |  |  |
 | [[Polygon Angles (Vocab)]] | ? |  |  |
@@ -242,6 +245,7 @@
 | [[Units of Measure (Vocab)]] | ? |  |  |
 | [[Universal Set]] | ? |  |  |
 | [[Upper and Lower Bounds]] | ? |  |  |
+| [[Vector Calculus]] | ? |  |  |
 | [[Vector Equations of Lines]] | ? |  |  |
 | [[Vector Geometry]] | ? |  |  |
 | [[Vectors]] | ? |  |  |
@@ -249,7 +253,7 @@
 
 ## Physics
 
-*82 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*86 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
@@ -280,6 +284,7 @@
 | [[Force (Vocab)]] | ? |  |  |
 | [[Forces and Equilibrium]] | ? |  |  |
 | [[Friction (Vocab)]] | ? |  |  |
+| [[General Relativity]] | ? |  |  |
 | [[Gravitational Fields]] | ? |  |  |
 | [[Heat Transfer]] | ? |  |  |
 | [[Hooke's Law for Springs]] | ? |  |  |
@@ -299,6 +304,8 @@
 | [[Newton's Laws of Motion]] | ? |  |  |
 | [[Normal Force (Vocab)]] | ? |  |  |
 | [[Nuclear Physics]] | ? |  |  |
+| [[Particle Physics]] | ? |  |  |
+| [[Pauli Exclusion Principle]] | ? |  |  |
 | [[PET Scanning]] | ? |  |  |
 | [[Physical Quantities and Units]] | ? |  |  |
 | [[Planning an Experiment]] | ? |  |  |
@@ -328,6 +335,7 @@
 | [[Tension (Vocab)]] | ? |  |  |
 | [[The Friction Limit]] | ? |  |  |
 | [[The Solar System]] | ? |  |  |
+| [[The Transistor as a Switch — How Analog Becomes Digital]] | ? |  |  |
 | [[Thermal Expansion]] | ? |  |  |
 | [[Torque]] | ? |  |  |
 | [[Ultrasound]] | ? |  |  |
@@ -338,11 +346,12 @@
 
 ## CS
 
-*76 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*86 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[Affective Computing]] | ? |  |  |
+| [[Anatomy of a Tech Stack]] | ? |  |  |
 | [[Arrays]] | ? |  |  |
 | [[Artificial Intelligence]] | ? |  |  |
 | [[Assembly Language]] | ? |  |  |
@@ -377,15 +386,21 @@
 | [[Half-Adder and Full-Adder]] | ? |  |  |
 | [[Hash Tables]] | ? |  |  |
 | [[Heaps and Priority Queues]] | ? |  |  |
+| [[How a Chip Is Made]] | ? |  |  |
+| [[How a Language Model Works]] | ? |  |  |
 | [[Image Encoding]] | ? |  |  |
 | [[Information Theory]] | ? |  |  |
 | [[Input and Output Devices]] | ? |  |  |
 | [[Interrupt Handling]] | ? |  |  |
+| [[Java Arrays and ArrayList]] | ? |  |  |
+| [[Java Classes]] | ? |  |  |
+| [[Java Control Flow]] | ? |  |  |
 | [[Java Objects, References and Strings]] | ? |  |  |
 | [[Java Values and Expressions]] | ? |  |  |
 | [[Karnaugh Maps]] | ? |  |  |
 | [[Linked List]] | ? |  |  |
 | [[Logic Gates]] | ? |  |  |
+| [[Memory Allocation and the Heap]] | ? |  |  |
 | [[Networks]] | ? |  |  |
 | [[NoSQL and Distributed Data]] | ? |  |  |
 | [[Number Bases]] | ? |  |  |
@@ -400,6 +415,7 @@
 | [[Program Development Life Cycle and Testing]] | ? |  |  |
 | [[Programming Fundamentals]] | ? |  |  |
 | [[Programming Paradigms]] | ? |  |  |
+| [[RAID]] | ? |  |  |
 | [[RAM and the Memory Hierarchy]] | ? |  |  |
 | [[Recursion]] | ? |  |  |
 | [[Relational Databases]] | ? |  |  |
@@ -412,7 +428,9 @@
 | [[Stacks and Queues]] | ? |  |  |
 | [[Storage Units (Vocab)]] | ? |  |  |
 | [[Text Encoding]] | ? |  |  |
+| [[The GPU — From Triangles to Tensors]] | ? |  |  |
 | [[The Internet and the Web]] | ? |  |  |
+| [[The Modern CPU vs the Textbook Model]] | ? |  |  |
 | [[The Turing Test]] | ? |  |  |
 | [[Turing Machine]] | ? |  |  |
 | [[Two's Complement]] | ? |  |  |
@@ -421,11 +439,12 @@
 
 ## Meta
 
-*20 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
+*21 cards · ? · ?+light · 🔴 · 🟡 · 🟢*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[Chain of Thought]] | ? |  |  |
+| [[Change the Representation]] | ? |  |  |
 | [[Choosing Effective Equations]] | ? |  |  |
 | [[Compression Is Intelligence]] | ? |  |  |
 | [[Credit Is the Currency]] | ? |  |  |
@@ -448,11 +467,12 @@
 
 ## Stories
 
-*57 cards · 🔴 unread · 🟢 read*
+*61 cards · 🔴 unread · 🟢 read*
 
 | Card | Status | Evidence | Date |
 |---|---|---|---|
 | [[A Fight With the Inevitable Errors]] | ? |  |  |
+| [[A Letter from the Kitchen]] | ? |  |  |
 | [[A Rich Neighbor Named Xerox]] | ? |  |  |
 | [[A, B, C]] | ? |  |  |
 | [[Abel the Other Boy Who Died Young]] | ? |  |  |
@@ -462,6 +482,7 @@
 | [[Cantor vs Kronecker]] | ? |  |  |
 | [[Courage]] | ? |  |  |
 | [[Dual-Core Craft]] | ? |  |  |
+| [[Emmy Noether]] | ? |  |  |
 | [[Erdős the Wandering Mathematician]] | ? |  |  |
 | [[Famous for the Wrong Thing]] | ? |  |  |
 | [[Franklin's Coin Flip]] | ? |  |  |
@@ -494,6 +515,7 @@
 | [[The Bookbinder's Apprentice]] | ? |  |  |
 | [[The Boolean-to-Silicon Bridge]] | ? |  |  |
 | [[The Calculus Priority Dispute]] | ? |  |  |
+| [[The Corn Wouldn’t Behave]] | ? |  |  |
 | [[The Ghost of Drive A]] | ? |  |  |
 | [[The Hidden Number]] | ? |  |  |
 | [[The Lady Tasting Tea]] | ? |  |  |
@@ -503,6 +525,7 @@
 | [[The Pendulum Story]] | ? |  |  |
 | [[The Perceptron and Move 78]] | ? |  |  |
 | [[The Pigeons and the Beginning of Everything]] | ? |  |  |
+| [[The Universe Has a Left Hand]] | ? |  |  |
 | [[The War of the Currents]] | ? |  |  |
 | [[Turing at Bletchley]] | ? |  |  |
 | [[Two Family Trees]] | ? |  |  |

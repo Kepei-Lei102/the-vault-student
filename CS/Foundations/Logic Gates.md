@@ -5,6 +5,7 @@ prerequisites:
   - "[[Set Operations]]"
   - "[[Truth Table (Vocab)]]"
 leads_to:
+  - "[[The Transistor as a Switch — How Analog Becomes Digital]]"
   - "[[Half-Adder and Full-Adder]]"
   - "[[Boolean Algebra]]"
   - "[[Karnaugh Maps]]"
@@ -17,6 +18,7 @@ leads_to:
   - "[[RAM and the Memory Hierarchy]]"
   - "[[Lewis Carroll the Mathematician]]"
   - "[[The Boolean-to-Silicon Bridge]]"
+  - "[[How a Chip Is Made]]"
 tags:
   - subject/computer-science
   - subject/mathematics
@@ -52,15 +54,15 @@ tags:
 
 ## Definition
 
-A **logic gate** is a physical device — a tiny patch of silicon — that takes one or more electrical inputs and produces an electrical output, where each signal is interpreted as either **1** (high voltage, typically ~3.3 V or 5 V) or **0** (low voltage, ~0 V).
+A **logic gate** is a physical circuit, commonly implemented in silicon, that takes one or more electrical inputs and produces an electrical output, where each signal is interpreted as either **1** (a voltage in the specified HIGH input range) or **0** (a voltage in the specified LOW input range).
 
-Every gate computes a *fixed Boolean function*. Give it the same inputs twice and you get the same output — gates are memoryless and deterministic. The function each gate computes is exactly one of the **logical connectives** you already met in [[Logic]] — AND, OR, NOT, and their cousins — translated from chalkboard truth-functional symbols ($\land, \lor, \lnot$) into hardware.
+Every gate computes a *fixed Boolean function*. For valid input levels, after the circuit settles, the Boolean output is determined by those inputs. This is the combinational model; real gates also have delay and electrical limits. The function each gate computes is exactly one of the **logical connectives** you already met in [[Logic]] — AND, OR, NOT, and their cousins — translated from chalkboard truth-functional symbols ($\land, \lor, \lnot$) into hardware.
 
 This is the bridge. Logic on paper is propositions about truth and falsity; logic in silicon is voltages about high and low. **The rules are identical**, and that identity is what makes a computer possible.
 
 ### 中文锚点
 
-微波炉只有门关好了、又按了启动键，才会转。汽车发动着，安全带却没系，提示音就会响。楼梯上下两个开关，随便扳哪一个，灯的状态都会变。这些机器里面并没有谁在思考。它们每一个都只是一小块电路，输出怎么随输入变化，全由接线的方式决定，规则永远是固定的那么一条：两个都要有，有一个就行，或者把结果反过来。这就是逻辑门：用接线做出来的一个决定。一个门能决定的事情很少。可是门的输出和它的输入是同一种东西，都是一根要么通、要么不通的导线，所以一个门的输出可以接到下一个门的输入上，小决定就这样一层一层摞成大决定，没有上限。把两个不大的数加起来，需要几十个这样的决定；一块处理器，是几十亿个。
+微波炉只有门关好了、又按了启动键，才会转。汽车发动着，安全带却没系，提示音就会响。楼梯上下两个开关，随便扳哪一个，灯的状态都会变。这些机器里面并没有谁在思考。它们每一个都只是一小块电路，输出怎么随输入变化，全由接线的方式决定，规则永远就是固定的那一条：两个都得有，有一个就行，或者把结果反过来。这就是逻辑门：用接线做出来的一个决定。一个门能决定的事情很少。可是门的输出和它的输入是同一种东西，都是导线上约定好的高、低电平，所以一个门的输出可以接到下一个门的输入上，小决定就这样一层一层摞成大决定，没有上限。把两个不大的数加起来，需要几十个这样的决定；一块处理器，则把大量这样的决定组合在一起。
 
 #### 术语对照 (Terms)
 
@@ -287,17 +289,15 @@ Since we just built {NOT, AND, OR} entirely from NANDs, and {NOT, AND, OR} can b
 ![[logic-gates-nand-universality.svg|720]]
 
 > [!tip] NOR is also universal — by symmetric reasoning
-> The same proof, with NORs in place of NANDs, shows that **NOR is also universal**. So is the converse pair. The two universal gates are NAND and NOR; everything else needs at least two distinct gate types.
+> The same proof, with NORs in place of NANDs, shows that **NOR is also universal**. Among the six standard gates listed here, NAND and NOR are each universal on their own; none of the other four is.
 
-### Why this is a fact about silicon, not just paper
+### Universality does not prescribe a chip layout
 
-Real CPUs are built almost entirely from NAND gates (or NOR gates — both work). Intel and AMD don't manufacture chips with a delicate mix of six gate types; they manufacture **a few hundred million NAND transistors** and wire them up. Why?
+NAND alone can express every Boolean function. That does **not** mean a processor consists only of NAND gates, or that a transistor is itself a “NAND transistor.”
 
-- **Manufacturing simplicity.** One transistor pattern is dramatically cheaper to mass-produce than six.
-- **Yield.** Fewer distinct components means fewer ways for a fab to go wrong.
-- **CMOS reality.** In CMOS — the dominant chip technology since the 1980s — NAND and NOR are the *natural* gates. The reason is physics: every CMOS gate is a team of two complementary transistor types, **PMOS** pulling the output high and **NMOS** pulling it low, and that arrangement inherently *inverts* — so AND = NAND + NOT, and the NOT costs extra transistors. (What a transistor actually is, and why doped silicon can act as a voltage-controlled switch at all: [[Semiconductors]].)
+In static complementary CMOS, a two-input NAND uses two series NMOS pull-down devices and two parallel PMOS pull-up devices. NOR reverses the series/parallel arrangements. These are compact inverting functions; AND and OR can be made by adding an inverter. The field-controlled devices and the voltage guarantees are developed in [[The Transistor as a Switch — How Analog Becomes Digital]].
 
-So the universality of NAND isn't a piece of trivia: it's the **engineering reason** modern computers look the way they do. Every photograph of a die shows you a forest of NANDs.
+Real implementation balances area, delay, power and wiring. [SkyWater's standard-cell catalogue](https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd/tree/main/cells) includes NAND, NOR, inverters, XOR, multiplexers, compound gates and storage cells. Mathematical universality guarantees an available construction; it does not guarantee the best physical construction uses only one gate type.
 
 ---
 
@@ -319,9 +319,9 @@ These two traces are the bread and butter of every 0478 §10 exam question. They
 
 A circuit is described in words: *"The output $F$ is 1 if input $A$ is 0 AND input $B$ is 1, OR if input $C$ is 1."*
 
-In Boolean: $F = \overline{A} \cdot B + C$.
+**Tool: translate each stated connective. Trigger: “A is 0” selects NOT; “AND” combines with B; “OR C” is the final operation.** In Boolean: $F = \overline{A} \cdot B + C$.
 
-The truth table (eight rows for three inputs):
+**Tool: exhaustive forward evaluation. Trigger: three independent binary inputs give $2^3=8$ cases.** Evaluate NOT, then AND, then OR:
 
 | $A$ | $B$ | $C$ | $\overline{A}$ | $\overline{A} \cdot B$ | $\overline{A} B + C$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -351,11 +351,11 @@ A burglar alarm should sound (output 1) when *both* a window sensor $W$ and a mo
 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 1 | 1 |
 
-Five rows have output 1. DNF assembly:
+**Tool: disjunctive normal form. Trigger: a complete truth table lets us select exactly the output-1 rows.** Five rows have output 1; make one AND term per row and OR those terms:
 
 $$\text{alarm} = \overline{W}\,\overline{M}\,P + \overline{W} M P + W \overline{M} P + W M \overline{P} + W M P.$$
 
-This *works* — but it's ugly. Boolean simplification (factor out $P$ from four terms, then notice $W M$ swallows what's left) gives the obvious answer:
+**Tool: distributivity, complements and absorption. Trigger: four terms share $P$, covering all $W,M$ cases.** Those four sum to $P$; the remaining $WM\overline P$ combines with it to give:
 
 $$\text{alarm} = W M + P.$$
 
@@ -363,7 +363,7 @@ Two gates: one AND, one OR. (And the unsimplified DNF result is also correct —
 
 ### Example 3 — Build OR using only NAND gates
 
-Take the recipe from the universality proof:
+**Tool: De Morgan’s law. Trigger: only NANDs are allowed, so write OR as an AND with complemented inputs and complemented output.** Use a NAND with tied inputs for each input complement:
 
 $$\text{OR}(A, B) = \text{NAND}(\text{NAND}(A, A), \text{NAND}(B, B)).$$
 
@@ -386,9 +386,7 @@ The last column is the OR truth table. ✓ Three NANDs replicate one OR — and 
 
 ### The Sheffer stroke
 
-In pure mathematical logic, the operator we call NAND has its own name: the **Sheffer stroke**, written $A \mid B$. Henry Sheffer proved in 1913 that this single connective is sufficient to express all of propositional logic — well before silicon gates existed. Sheffer was working in symbolic logic; he had no idea his result would, 50 years later, become the engineering choice for every CPU on Earth.
-
-This is one of the cleanest examples in the vault of **mathematics anticipating its physical realisation**: Sheffer's 1913 paper is the abstract version of Intel's 1970s manufacturing decision, separated by 60 years and zero communication.
+In mathematical logic, NAND is the **Sheffer stroke**, $A \mid B$. Its functional completeness means that repeated use of this one connective can express every Boolean function. The electrical realisation adds conditions the algebra alone cannot supply: valid signal levels, sufficient settling time and a power supply. [[The Boolean-to-Silicon Bridge]] follows the history of this connection.
 
 ### Half-adders, full-adders, and arithmetic from gates
 
@@ -405,11 +403,11 @@ Chain half-adders together (with a "carry-in" input on each) and you get a **ful
 
 ### Reversible computing and quantum gates
 
-Classical NAND **destroys information**: from the output bit alone you cannot reconstruct the two input bits. (Output 1 could come from inputs $00$, $01$, or $10$, three possibilities collapsed to one.) Information loss in physical computation costs energy — Landauer's principle (1961) says erasing one bit at temperature $T$ dissipates at least $k_B T \ln 2$ joules of heat. Real-world CPUs sweat for exactly this reason.
+Classical NAND **destroys information**: from the output bit alone you cannot reconstruct the two input bits. (Output 1 could come from inputs $00$, $01$, or $10$, three possibilities collapsed to one.) Information loss in physical computation costs energy — Landauer's principle (1961) says erasing one bit at temperature $T$ dissipates at least $k_B T \ln 2$ joules of heat. This is a thermodynamic lower bound for logically irreversible erasure under the usual thermal assumptions, not a calculation of a present-day processor’s heat. Ordinary CMOS dissipates energy charging and discharging capacitances, through leakage and during switching; see [[The Transistor as a Switch — How Analog Becomes Digital]].
 
 **Reversible gates** keep all the information by outputting more bits. The **Toffoli gate** (a controlled-controlled-NOT) is reversible *and* universal — every classical computation can be done reversibly, at the cost of carrying extra bits along. Reversible computing is also the bridge to **quantum gates**: quantum circuits must be reversible (because quantum evolution is unitary), so the universal quantum gates are reversible cousins of NAND. The standard quantum-universal set is $\{H, T, \text{CNOT}\}$ — Hadamard, π/8, and controlled-NOT. The Toffoli gate itself is universal for *classical* reversible computing but needs supplementation in the quantum case.
 
-The vault won't cover quantum gates in full, but the through-line is clear: **classical Boolean gates → reversible classical gates → quantum gates** is a three-step ladder, and all three rungs are versions of the same underlying idea — composing simple operations to compute anything.
+The through-line is **classical Boolean gates → reversible classical gates → quantum gates** is a three-step ladder, and all three rungs are versions of the same underlying idea — composing simple operations to compute anything.
 
 ### Karnaugh maps and minimisation
 
@@ -417,7 +415,7 @@ Recall that DNF guarantees a circuit but doesn't minimise it. **Karnaugh maps** 
 
 ---
 
-## Formula sheet and exam notes
+## Exam Notes
 
 | Board | Logic gates examined? | Boolean algebra examined? | Karnaugh maps? |
 |---|---|---|---|
@@ -425,13 +423,16 @@ Recall that DNF guarantees a circuit but doesn't minimise it. **Karnaugh maps** 
 | Cambridge 9618 | Yes — §3.2 (basic) and §15.2 (advanced) | Yes — §15.2 | Yes — §15.2 |
 | IB Computer Science | Yes — A1.2.3 to A1.2.5 | Yes — A1.2.4 and A1.2.5 | Yes — A1.2.4 |
 | AP CSA | **No** — AP CSA is Java/OOP, not circuit-level | No | No |
-| AQA / OCR / Edexcel A-Level CS | Yes, similar to Cambridge | Yes | Yes |
+| AQA A-Level CS 7517 | Yes — §4.6.4 | Yes — §4.6.5 | Not specified in §4.6.5 |
+| OCR A-Level CS H446 | Yes — §1.4.3 | Yes — §1.4.3 | Yes — §1.4.3 |
+
+AQA’s [§4.6.4–4.6.5](https://www.aqa.org.uk/subjects/computer-science/a-level/computer-science-7517/specification/subject-content/fundamentals-of-computer-systems) specifies six gates and Boolean identities/De Morgan’s laws; OCR’s [§1.4.3 guide](https://www.ocr.org.uk/Images/231760-boolean-algebra-delivery-guide.pdf) also specifies Karnaugh maps. These are distinct requirements.
 
 Exam notes:
 - **0478 §10:** complete truth tables, construct circuits and write expressions from the given representation. Circuits have **at most three inputs and one output**; NOT gates have one input, the other gates have two. When translating a given statement into a circuit, **draw it without simplification**, as the syllabus requires. Follow each operation directly; an algebraically equivalent simpler circuit may not answer that instruction. For a truth-table starting point, build the required output row by row, using two-input gates to combine terms.
 - **9618 §3.2 expects familiarity with the six standard gates** plus the ability to read a complex multi-input circuit. §15.2 raises the bar to Boolean simplification and Karnaugh maps.
 - **IB CS A1.2.3 to A1.2.5** (first assessment 2027) ask for the purpose of gates, truth tables built from a circuit or from a problem description, and logic diagrams drawn with the standard symbols — the same forward and backward traces as 0478, wearing an IB scenario. IB names **seven** operators: AND, OR, NOT, NAND, NOR, XOR and **XNOR**. XNOR is XOR followed by NOT: its output is 1 exactly when its two inputs are equal. A1.2.4 also names Karnaugh maps and algebraic simplification, which [[Karnaugh Maps]] and [[Boolean Algebra]] carry.
-- The **NAND-universality proof** is not examined as a proof on 0478 or 9618. Building one gate from NAND or NOR gates alone is a standard exercise at this level, and it is where first-year university digital electronics begins.
+- The Cambridge outcomes do not name a formal functional-completeness proof. The construction is useful enrichment; for assessed circuit work, follow the stated representation and simplification requirements.
 
 ---
 
@@ -451,7 +452,7 @@ Exam notes:
    - [[Half-Adder and Full-Adder]] — arithmetic from gates; XOR + AND combine into a single-bit adder, then chained for multi-bit arithmetic.
    - [[Recursion]] — a different way of building complex things from simple parts; the dual to "compose gates from simpler gates."
 
-- **Physics floor:** [[Semiconductors]] — the layer beneath the lowest layer here: doping, the p-n junction, and the MOSFET as a voltage-controlled switch. Understand that, and PMOS/NMOS stop being magic names — in principle you could build a working gate from sand upward. No CS syllabus asks for it; it is the floor every card in this bay stands on.
+- **Physics floor:** [[The Transistor as a Switch — How Analog Becomes Digital]] — field-controlled channels, CMOS, noise margins, restoration, switching delay and energy. [[Semiconductors]] is the broader materials connection.
 
 - **History bridge:** [[Stories/The Boolean-to-Silicon Bridge]] — Sheffer 1913 (the algebraic universality of the stroke), Shannon's 1937 MIT Master's thesis (the first to realise Boolean algebra could describe switching circuits, often called *the most important Master's thesis of the twentieth century*), and von Neumann + Turing on the universality of computation. Three classical milestones; one through-line.
 

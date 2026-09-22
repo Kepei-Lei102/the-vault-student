@@ -37,19 +37,11 @@ The full table:
 | $90°$ | $1$ | $0$ | undefined |
 | $180°$ | $0$ | $-1$ | $0$ |
 
-This card derives all of these from **two reference triangles** (the $30$–$60$–$90$ and the $45$–$45$–$90$) plus the unit-circle definitions for $0°, 90°, 180°$.
+We can derive all of these from **two reference triangles** (the $30$–$60$–$90$ and the $45$–$45$–$90$) plus the unit-circle definitions for $0°, 90°, 180°$.
 
 ### 中文锚点
 
-**三角函数特殊值** = 在 $0°, 30°, 45°, 60°, 90°, 180°$ 这几个"特殊角"上，三角函数值是**精确的** (jīngquè) 有理数或带根号的表达式 —— 不是小数。
-
-考试常见要求："Find the **exact** value of $\sin 60°$" → 写 $\dfrac{\sqrt{3}}{2}$，**不要**写 $0.866$。
-
-来源：两个**参考三角形** (cānkǎo sānjiǎoxíng)：
-- **30-60-90 三角形**：从等边三角形对半剪开
-- **45-45-90 三角形**：从正方形沿对角线剪开
-
-加上**单位圆 (dānwèi yuán)** 上 $0°, 90°, 180°$ 的直接读取。
+把一张正方形纸沿对角线折一下，两条直角边一样长，折痕则是边长的根号二倍。计算器显示1.414……，可纸上的几何关系并没有变成“大概如此”。看那个45度的角，边长与折痕长度之比就是准确的 $1/\sqrt{2}$。三角函数的特殊值，留住的就是这种由形状确定的关系；小数可以方便测量，根号则让我们不用提前把它截短。
 
 ---
 
@@ -57,13 +49,13 @@ This card derives all of these from **two reference triangles** (the $30$–$60$
 
 A decimal like $0.5$ *is* exactly equal to $\dfrac{1}{2}$ — no precision lost. But $0.866$ is *not* exactly $\dfrac{\sqrt 3}{2}$; it's a 3-decimal approximation, and using it propagates a small error through the rest of the calculation.
 
-When the answer is meant to be exact (e.g., "Show that the area is $9\sqrt 3$"), substituting decimal trig values *guarantees* the proof fails. Cambridge 0580/0606 use the word "**exact**" specifically to signal "leave surds and fractions as they are."
+When the answer is meant to be exact (e.g., "Show that the area is $9\sqrt 3$"), substituting rounded decimal trig values loses the exact equality needed for the proof. Cambridge 0580/0606 use the word "**exact**" specifically to signal "leave surds and fractions as they are."
 
 > [!tip] When to use exact, when to use decimal
 > - "Find the **exact** value" / "Show that $\ldots = \dfrac{\sqrt 3}{2}$" / "Give your answer in **surd form**" → use the table; *no* calculator-decimal substitution.
 > - "Calculate the angle correct to 1 decimal place" → calculator. Exact values aren't required.
 >
-> Read the question's last line. If it says "exact" or specifies surd form, the special-value table is non-negotiable.
+> An exact-answer instruction selects exact arithmetic: use the triangle or unit-circle values and keep fractions and surds through the working.
 
 ---
 
@@ -93,7 +85,7 @@ So $\sin 30° = \cos 60° = \tfrac{1}{2}$ and $\sin 60° = \cos 30° = \tfrac{\s
 
 ## Reference Triangle 2 — the 45-45-90 (from the unit square)
 
-**Construction.** Start with a unit square (side $1$). Cut along one diagonal. The diagonal has length $\sqrt{1^2 + 1^2} = \sqrt 2$ (Pythagoras), and the two halves are isoceles right triangles with two $45°$ angles.
+**Construction.** Start with a unit square (side $1$). Cut along one diagonal. The diagonal has length $\sqrt{1^2 + 1^2} = \sqrt 2$ (Pythagoras), and the two halves are isosceles right triangles with two $45°$ angles.
 
 ![[exact-trig-45-45-90.svg]]
 
@@ -108,7 +100,7 @@ $$\sin 45° = \cos 45° = \frac{1}{\sqrt 2} = \frac{\sqrt 2}{2}, \quad \tan 45°
 Both legs are equal, so $\sin 45° = \cos 45°$ — the symmetry of the square is what enforces this.
 
 > [!info] Rationalising $\dfrac{1}{\sqrt 2}$
-> $\dfrac{1}{\sqrt 2}$ and $\dfrac{\sqrt 2}{2}$ are the same value — but the *rationalised* form $\dfrac{\sqrt 2}{2}$ has no surd in the denominator, which is the conventional Cambridge format. To convert: multiply numerator and denominator by $\sqrt 2$. See [[Surds]] for the rationalisation rule.
+> $\dfrac{1}{\sqrt 2}$ and $\dfrac{\sqrt 2}{2}$ are the same value — the *rationalised* form $\dfrac{\sqrt 2}{2}$ has no surd in the denominator. Use the form requested by the question; rationalising changes presentation, not exactness. To convert: multiply numerator and denominator by $\sqrt 2$. See [[Surds]] for the rationalisation rule.
 
 ---
 
@@ -132,10 +124,10 @@ So:
 | $270°$ | $(0, -1)$ | $0$ | $-1$ | undefined |
 | $360°$ | $(1, 0)$ (same as $0°$) | $1$ | $0$ | $0$ |
 
-> [!warning] $\tan 90°$ is **undefined, period**
-> $\tan\theta = \sin\theta / \cos\theta$, and $\cos 90° = 0$. The bare expression $\dfrac{1}{0}$ has no value (see [[Reciprocals (Vocab)]] for the full discussion).
+> [!warning] $\tan 90°$ is undefined
+> $\tan\theta = \sin\theta / \cos\theta$, and $\cos 90° = 0$. The bare expression $\dfrac{1}{0}$ has no value (see [[Reciprocals (Vocab)]]).
 > - The "$\tan 90° = \infty$" claim comes from a *different* question: not "what is $\tan 90°$?" but "what does $\tan\theta$ do as $\theta$ approaches $90°$?" That's a **limit**, and like all limits the answer depends on which side: $\tan\theta \to +\infty$ as $\theta \to 90°^-$, but $\tan\theta \to -\infty$ as $\theta \to 90°^+$. Same approach to $90°$, *opposite* limits — because the function is doing different things on the two sides.
-> - **Lesson.** A bare expression like $\tan 90°$ has no inherent meaning; meaning lives in context. At 0580 there's no context, so $\tan 90°$ is **undefined, period**. Calculus brings the context (a function and a limit), and even then the "answer" depends on which direction you approach from.
+> - **Keep the two questions separate:** the function is undefined at $90°$. A one-sided limit describes nearby values and does not assign a value there.
 > - In an exam: write "undefined" or "$\tan 90°$ does not exist." Never write "$\tan 90° = \infty$" — that's a limit statement masquerading as an equation.
 
 ---
@@ -148,6 +140,8 @@ A pattern that simplifies memorising the sine row:
 |---|---|---|---|---|---|
 | $\sin\theta$ | $\dfrac{\sqrt 0}{2}$ | $\dfrac{\sqrt 1}{2}$ | $\dfrac{\sqrt 2}{2}$ | $\dfrac{\sqrt 3}{2}$ | $\dfrac{\sqrt 4}{2}$ |
 | simplified | $0$ | $\dfrac{1}{2}$ | $\dfrac{\sqrt 2}{2}$ | $\dfrac{\sqrt 3}{2}$ | $1$ |
+
+The triangle and circle derivations are the reason these values hold; this pattern is only a recall aid. If it becomes ambiguous, return to the geometry.
 
 So $\sin$ at the five common angles is $\dfrac{\sqrt n}{2}$ for $n = 0, 1, 2, 3, 4$ in order.
 
@@ -164,7 +158,7 @@ So $\sin$ at the five common angles is $\dfrac{\sqrt n}{2}$ for $n = 0, 1, 2, 3,
 
 > Find the exact area of an equilateral triangle with side length $6$ cm.
 
-Drop a perpendicular: it has length $6 \cdot \sin 60° = 6 \cdot \dfrac{\sqrt 3}{2} = 3\sqrt 3$ cm. Area = $\tfrac{1}{2}(6)(3\sqrt 3) = 9\sqrt 3$ cm².
+**Trigger:** an equilateral triangle supplies a $60°$ angle and a known side. **Tool: sine in the right triangle** formed by dropping a perpendicular. The height has length $6 \cdot \sin 60° = 6 \cdot \dfrac{\sqrt 3}{2} = 3\sqrt 3$ cm. **Tool: triangle area, $A=\tfrac12 bh$.** Hence $A = \tfrac{1}{2}(6)(3\sqrt 3) = 9\sqrt 3$ cm².
 
 (Alternatively, the formula $A = \tfrac{\sqrt 3}{4} s^2$ gives the same result for any equilateral triangle.)
 
@@ -172,49 +166,66 @@ Drop a perpendicular: it has length $6 \cdot \sin 60° = 6 \cdot \dfrac{\sqrt 3}
 
 > A right triangle has hypotenuse $10$ cm and one of its acute angles is $30°$. Find the *exact* lengths of the other two sides.
 
-Side opposite $30°$: $10 \sin 30° = 10 \cdot \tfrac{1}{2} = 5$ cm.
-Side adjacent to $30°$: $10 \cos 30° = 10 \cdot \dfrac{\sqrt 3}{2} = 5\sqrt 3$ cm.
+**Trigger:** the hypotenuse and a special angle are known. **Tool: sine = opposite/hypotenuse.** Side opposite $30°$: $10 \sin 30° = 10 \cdot \tfrac{1}{2} = 5$ cm.
+**Tool: cosine = adjacent/hypotenuse.** Side adjacent to $30°$: $10 \cos 30° = 10 \cdot \dfrac{\sqrt 3}{2} = 5\sqrt 3$ cm.
 
 ### Example 3 — exact value of a trig combination
 
 > Find the exact value of $2\sin 60° \cos 30°$.
 
+**Trigger:** both factors have known exact values. **Tool: direct substitution and multiplication of surds.**
+
 $2 \cdot \dfrac{\sqrt 3}{2} \cdot \dfrac{\sqrt 3}{2} = 2 \cdot \dfrac{3}{4} = \dfrac{3}{2}$.
 
-(This is one application of the double-angle formula: $\sin(2\theta) = 2\sin\theta\cos\theta$, so the expression equals $\sin 120° = \dfrac{\sqrt 3}{2}$ — interesting cross-check, but you wouldn't need the formula at 0580 level.)
+**Why not the double-angle formula?** $\sin(2\theta)=2\sin\theta\cos\theta$ needs the *same* angle in both factors. Here they are $60°$ and $30°$, so that pattern does not apply. Using $\cos30°=\sin60°$, a valid check is $2(\sin60°)^2=2(3/4)=3/2$.
 
 ---
 
 ## Common Mistakes
 
-1. **Decimal substitution.** $\sin 60° \ne 0.866$ when the question asks for *exact*. Write $\dfrac{\sqrt 3}{2}$.
-2. **Confusing $\sin 30°$ and $\sin 60°$.** $\sin 30° = \tfrac{1}{2}$ (small angle, small sine). $\sin 60° = \dfrac{\sqrt 3}{2} \approx 0.866$ (bigger). The smaller-angle has the smaller sine.
+1. **Decimal substitution.** A rounded decimal such as $0.866$ is only an approximation to $\sin60°$. Write $\dfrac{\sqrt 3}{2}$.
+2. **Confusing $\sin 30°$ and $\sin 60°$.** $\sin 30° = \tfrac{1}{2}$ (small angle, small sine). $\sin 60° = \dfrac{\sqrt 3}{2} \approx 0.866$ (bigger). This ordering holds for acute angles; sine is not increasing over all angles.
 3. **$\tan 90°$ as "infinity."** Write *undefined*. (Beyond 0580: $\lim_{\theta \to 90°^-} \tan\theta = +\infty$, but that's a limit statement, not the value at $90°$.)
-4. **Forgetting to rationalise.** $\tan 30° = \dfrac{1}{\sqrt 3}$ should be written $\dfrac{\sqrt 3}{3}$ in formal answers — the standard convention is "no surd in the denominator."
+4. **Confusing a requested form with exactness.** $\tan30°=1/\sqrt3=\sqrt3/3$; both are exact. Rationalise when required by the question, and simplify without rounding.
 5. **Wrong sign at $180°, 270°$, etc.** $\cos 180° = -1$ (not $1$); $\sin 270° = -1$ (not $1$). Use the unit circle to read off the sign.
 
 ---
 
 ## Exam Notes
 
-### Cambridge 0580 / 0606
+### Cambridge 0580 — Extended E6.3
 
-**Syllabus refs:** 0580 E6.3 (knowledge of exact trigonometric values), 0606 §10.4 (uses these inside trig identities and equations). Standard exam patterns:
+The 2025–2027 syllabus requires exact sine and cosine values at $0°,30°,45°,60°,90°$, and tangent at $0°,30°,45°,60°$. **C6.3 is Extended-only content**, so do not assign this recall list to Core. The table’s $180°$ values and unit-circle extensions support E6.4; they go beyond the literal E6.3 list. Paper 2 is non-calculator and Paper 4 allows a calculator; an exact-answer instruction still requires exact arithmetic on either.
 
-- "Without using a calculator, find the exact value of $\sin 30° + \cos 60°$." ($\tfrac{1}{2} + \tfrac{1}{2} = 1$.)
-- "An equilateral triangle has side $a$. Show that its area is $\tfrac{\sqrt 3}{4} a^2$." (Use $\sin 60° = \tfrac{\sqrt 3}{2}$.)
-- "A right triangle has angles $30°$, $60°$, $90°$ and hypotenuse $h$. Find the exact lengths of the other two sides." ($h \sin 30° = h/2$ and $h \cos 30° = \tfrac{h\sqrt 3}{2}$.)
+### Cambridge 0606 — §10.1, §10.4–10.5 and assumed 0580 knowledge
 
-> [!tip] On 0580/0606 calculator papers, the question still might say "exact"
-> Even on calculator-allowed papers, "exact value" or "in surd form" overrides the calculator. Don't use the calculator's decimal output for $\sin 60°$ — use the table value.
+The 2025–2027 syllabus assumes 0580 (or equivalent) subject knowledge. §10.1 covers all six trigonometric functions; §10.4 covers identities and §10.5 equations on a specified domain. **§10.4 is not an exact-value recall row.** Use the values inside identities and equations, converting degrees/radians as needed. Paper 1 is non-calculator; Paper 2 allows a calculator. The syllabus’s exact-answer guidance permits surds and constants rather than rounded decimal substitutes.
 
-### A-Level / IB / AP
+### Cambridge 9709 and 9231
 
-A-Level extends to:
-- **Radians:** $\sin\dfrac{\pi}{6} = \tfrac{1}{2}$, $\sin\dfrac{\pi}{4} = \dfrac{\sqrt 2}{2}$, etc. The exact values are the *same numbers*; only the angle measure changes.
-- **All four quadrants:** $\sin 150° = \tfrac{1}{2}$, $\cos 150° = -\dfrac{\sqrt 3}{2}$ (using $150° = 180° - 30°$ and the symmetry of the unit circle). The reference-triangle technique extends throughout the unit circle via signs and quadrant analysis (CAST diagram — see [[Trigonometric Equations]]).
-- **Half-angle / double-angle formulas:** the $15°, 75°$ values come from $30°/2$ via half-angle.
-- **Inverse trig values:** $\arcsin\tfrac{1}{2} = 30°$ (or $\dfrac{\pi}{6}$). The table works backwards too.
+**9709 Pure Mathematics 1 §1.5** explicitly requires exact sine, cosine and tangent values at $30°,45°,60°$ and related angles, in either angle unit. Unit-circle symmetry determines signs. Subsequent Pure Mathematics uses this knowledge in equations, identities and calculus.
+
+**9231** assumes the relevant 9709 mathematics; the elementary table is prerequisite knowledge, not a separate Further Mathematics topic. Compound angles, complex numbers and other extensions can generate additional exact values.
+
+### Edexcel IAL and OxfordAQA 9660
+
+**Edexcel IAL P1 §3.3** covers sine, cosine and tangent functions, their graphs, symmetries and periodicity; **P2 §6.2** solves trigonometric equations in specified intervals. The exact table is supporting fluency for those tasks, not a separately enumerated recall list in those rows.
+
+**OxfordAQA 9660 PP1.2** likewise covers the functions, identities and interval-restricted equations in degrees/radians. Use exact values when applicable; do not import Cambridge’s numbered recall list as an OxfordAQA quotation.
+
+### IB Mathematics — AA and AI differ
+
+**Analysis and Approaches, SL 3.5** (also required at HL) explicitly includes exact ratios at $0,\pi/6,\pi/4,\pi/3,\pi/2$ and their multiples, alongside the unit circle. This is not HL-only. [IB AA guide, first assessment 2021, p. 46](https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-guide-en.pdf)
+
+**Applications and Interpretation, AHL 3.8** explicitly excludes assessment of knowledge of exact trigonometric values, while noting their value for understanding. Do not transfer AA’s recall requirement to AI. [IB AI guide, first assessment 2021, p. 45](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-applications-interpretation-guide.pdf)
+
+### AP Calculus AB/BC
+
+The Course and Exam Description’s **Prerequisites** explicitly expects unit-circle definitions and trigonometric values at $0,\pi/6,\pi/4,\pi/3,\pi/2$ and their multiples. They support exact evaluation in calculus; the table is not a separate calculus unit. “AP” here means AB/BC, not every AP course.
+
+### Where the standalone recall requirement does not apply
+
+**0580 Core and IB AI** do not carry this requirement as above. **OxfordAQA 9260 G19–G20** covers right-triangle ratios and, at Extension, the sine/cosine rules and triangle area; it does not enumerate an exact-angle recall table. Exact answers can still be requested, and the geometry remains useful. **9231** inherits the skill through 9709 rather than adding a new recall topic.
 
 ---
 

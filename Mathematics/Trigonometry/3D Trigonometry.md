@@ -178,7 +178,7 @@ $$\sin\theta = \frac{VO}{VA} = \frac{3\sqrt 7}{9} = \frac{\sqrt 7}{3}, \quad \th
 
 Pick the face $V$-$A$-$B$ (a triangular face). Its line of intersection with the base is the edge $AB$. From a point on $AB$ (say its midpoint $M$), draw perpendiculars to $AB$ in each plane:
 - In the base plane: from $M$ to the centre $O$. Length $OM = 3$ cm (half of the base side $6$).
-- In the face plane: from $M$ to the apex $V$. Length $VM$ is the *slant height* of the face — Pythagoras in triangle $V$-$M$-(some corner): $VM = \sqrt{9^2 - 3^2} = \sqrt{72} = 6\sqrt 2$. (Actually wait — that's wrong, let me re-derive. The slant height from apex to midpoint of base edge: $V$ is height $h = 3\sqrt 7$ above $O$, and $M$ is on the base $3$ cm from $O$. So $VM = \sqrt{h^2 + 3^2} = \sqrt{63 + 9} = \sqrt{72} = 6\sqrt 2$ cm.)
+- In the face plane: from $M$ to the apex $V$. Length $VM$ is the *slant height* of the face. $V$ sits $h = 3\sqrt 7$ above $O$ and $M$ lies in the base $3$ cm from $O$, so in the right triangle $V$-$O$-$M$, $VM = \sqrt{h^2 + 3^2} = \sqrt{63 + 9} = \sqrt{72} = 6\sqrt 2$ cm. (The face triangle gives the same number by a different right triangle: $VA = 9$ and $AM = 3$, so $VM = \sqrt{9^2 - 3^2} = \sqrt{72}$.)
 
 The angle is between $OM$ (length $3$) and $VM$ (length $6\sqrt 2$), measured at $M$ in the right triangle $V$-$O$-$M$.
 
@@ -201,26 +201,31 @@ $$\cos\phi = \frac{OM}{VM} = \frac{3}{6\sqrt 2} = \frac{1}{2\sqrt 2}, \quad \phi
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 (IGCSE)
 
-**Syllabus ref:** E6.6 — apply Pythagoras and trigonometry to 3D problems including angles between lines and planes. Standard exam patterns:
+**Syllabus ref:** E6.6, Extended content only: "Carry out calculations and solve problems in three dimensions using Pythagoras' theorem and trigonometry, including calculating the angle between a line and a plane." The Core paper has no three-dimensional row; C6 stops at right-angled triangles and bearings. Standard exam patterns:
 
 - "A cuboid measures $a \times b \times c$. Find (i) the space diagonal, (ii) the angle between the space diagonal and the base."
 - "A square pyramid has base side $s$ and slant edge $\ell$. Find the perpendicular height and the angle between a slant edge and the base."
 - "A triangular prism has cross-section [given]. Find the angle between [some line] and [some face]."
 - "Find the area of triangle $XYZ$ where $X, Y, Z$ are corners of the cuboid." (Apply Pythagoras to find $XY, YZ, XZ$; then cosine rule for an angle; then $\tfrac{1}{2}ab\sin C$ for area.)
 
+The angle between two *planes* (Setup 3) is not named in E6.6; it appears on 0580 papers only as an angle between a line and a plane in disguise (the slant height of a face against the base), so a candidate who can find the line-plane angle has the whole row.
+
 > [!tip] Always show the 2D right-triangle sketch
 > Markschemes credit "showing the 2D triangle drawn separately" as a method mark. Don't just compute — sketch the extracted triangle, label its sides with values you've found, and write the trig ratio used. This is a 2-mark improvement on most 3D trig questions.
 
-### A-Level / IB / AP
+### OxfordAQA 9260 (IGCSE)
 
-A-Level extends to:
-- **3D vectors and the dot product.** $\cos\theta = \dfrac{\mathbf{a} \cdot \mathbf{b}}{\lvert\mathbf{a}\rvert\lvert\mathbf{b}\rvert}$ replaces the geometric construction with an algebraic formula. Especially powerful for non-axis-aligned solids.
-- **Direction cosines.** Decomposing a 3D direction into its angles with each axis.
-- **Coordinate geometry of 3D solids.** Lines as $\mathbf{r} = \mathbf{a} + t\mathbf{d}$, planes as $\mathbf{r}\cdot\mathbf{n} = d$.
+**Syllabus ref:** G19. Core content: "know the formula for Pythagoras' theorem $a^2 + b^2 = c^2$ and the trigonometric ratios" and apply them in right-angled triangles. Extension content: "including 3D figures". So every question on this card is Extension on 9260, with the same cuboid, pyramid and prism shapes as 0580; the angle between a line and a plane is not named separately but is examined inside the 3D figures.
 
-The 0580 perpendicular-dropping technique is the *geometric* approach; A-Level adds the *vector-algebraic* one. Both produce the same answers, with vectors being faster for arbitrary geometries.
+### Cambridge 9709 (A Level), Paper 3 vectors
+
+Three-dimensional angles reappear in 9709 §3.7 by the vector route: "use formulae to calculate the scalar product of two vectors, and use scalar products in problems involving lines and points", with the note that "questions may involve 3D objects such as cuboids, tetrahedra (pyramids), etc." The angle between two edges or diagonals of a cuboid is then $\cos\theta = \dfrac{\mathbf{a}\cdot\mathbf{b}}{\lvert\mathbf{a}\rvert\lvert\mathbf{b}\rvert}$ ([[Vector Geometry]]); the syllabus covers lines only, so the angle between a line and a plane and the angle between two planes are not examined on 9709. The vector product is also excluded.
+
+### Where this is *not* examined
+
+Cambridge 0606 (Additional Mathematics) has no three-dimensional trigonometry row; its only mention of three dimensions is the assessment objective "recognise and use spatial relationships in two and three dimensions", and its trigonometry content is identities, equations and graphs. No IB or AP mathematics row is claimed for this card.
 
 ---
 

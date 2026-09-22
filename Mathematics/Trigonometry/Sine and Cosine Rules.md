@@ -293,9 +293,13 @@ When $\sin B = 0.8$, the calculator gives $B = 53.1°$. Students stop there. But
 
 ## §7 Exam Notes
 
-### OxAQA 9260
+### Cambridge 0580 (IGCSE), Extended only
 
-**Syllabus ref:** G20 Extension — "Know and apply the sine rule, cosine rule, and $\text{Area} = \frac{1}{2}ab\sin C$." The formulae are given on the formula sheet. Extension papers frequently combine these with bearings, 3D trigonometry, or multi-step geometry. The ambiguous case is not explicitly tested at 9260 but can appear in harder problems.
+**Syllabus ref:** E6.5 "Non-right-angled triangles": "Use the sine and cosine rules in calculations involving lengths and angles for any triangle", with the note "Includes problems involving obtuse angles and the ambiguous case"; and "Use the formula area of triangle $= \tfrac12 ab \sin C$". Both formulae are printed in the List of formulas. The Core syllabus states C6.5 as "Extended content only", so the rules appear on Papers 2 and 4 and never on the Core papers. Questions are routinely SAS → cosine rule for a side, SSS → cosine rule for an angle, and a two-step combination; the ambiguous case is named in the syllabus, so "find the two possible values" is fair game.
+
+### OxfordAQA 9260 (IGCSE), Extension only
+
+**Syllabus ref:** G20. The Core column is empty; the Extension column reads "know and apply the sine rule … and cosine rule … to find unknown lengths and angles" and "know and apply Area $= \tfrac12 ab \sin C$ to calculate the area, sides or angles of any triangle". The specification's formulae page prints the sine rule, the cosine rule and the area formula, so recall is not examined; choosing the rule and handling obtuse angles is. Extension papers combine these with bearings and with [[3D Trigonometry]].
 
 **Typical 9260 questions:**
 
@@ -304,23 +308,21 @@ When $\sin B = 0.8$, the calculator gives $B = 53.1°$. Students stop there. But
 - "Find the largest angle" given SSS [3 marks]
 - Multi-step: find a side using the cosine rule, then use it in the sine rule to find an angle [5–6 marks]
 
-### Cambridge 0580 Extended
+### Cambridge 0606 (Additional Mathematics)
 
-**Syllabus ref:** E6.6 — "Use the sine and cosine rules in calculations involving lengths and angles for any triangle. Area = $\frac{1}{2}ab\sin C$." Formulae are given. 0580 Extended papers test these routinely in Paper 4 (extended theory). Questions are similar to 9260 but rarely involve bearings or 3D.
+**No subject-content row of its own.** The syllabus's introduction to the subject content lists "sine rule", "cosine rule" and "area of a non-right-angled triangle (no diagram is given in the List of formulas)" among the formulas "also given in the List of formulas to assist candidates", and states that such prior content "may be required in response to questions on other topics". So the rules are sub-tools inside harder problems: a cosine-rule setup that produces a trigonometric equation, or a triangle inside a circular-measure question. Being given the formulas raises rather than lowers the bar: the marks are in choosing the rule and handling the ambiguous case.
 
-### Cambridge 0606
+### Cambridge 9709 (A Level)
 
-**No subject-content row of its own.** The sine rule, the cosine rule and the area formula reach 0606 only through the **List of formulas** printed on page 2 of both papers — they are assumed from 0580 §6.6 and handed to you rather than taught again. That makes them sub-tools inside harder problems, which is exactly how they appear: a cosine-rule setup that produces a trigonometric equation to solve (Topic 10), or a triangle inside a circular-measure problem (Topic 9). Being given the formulas raises rather than lowers the bar — the marks are in choosing the right rule and handling the ambiguous case, which is more likely to be tested here than at 0580.
+No row names the sine or cosine rule. The syllabus's "Prior knowledge" statement says "Knowledge of the content of the Cambridge IGCSE Mathematics 0580 (Extended curriculum) … is assumed", which carries E6.5 into every paper as a tool. They reappear as such in Paper 1 trigonometry and circular measure, in the mechanics papers (a force triangle solved by the sine rule is Lami's theorem in disguise) and, as the dot product, in Paper 3 vectors: $\lvert\mathbf{a}-\mathbf{b}\rvert^2 = \lvert\mathbf{a}\rvert^2 + \lvert\mathbf{b}\rvert^2 - 2\,\mathbf{a}\cdot\mathbf{b}$ is the cosine rule, as §2 shows.
 
-### A-Level
+### OxfordAQA 9660 (International AS/A Level)
 
-The sine rule, cosine rule, and area formula are assumed knowledge at A-Level. They reappear in:
+PP1.2 Trigonometry lists "The sine and cosine rules" and "The area of a triangle in the form $\tfrac12 ab \sin C$" as Pure Maths content in their own right, alongside radian measure; unlike 9709, the AS paper can ask for them directly.
 
-- **Mechanics** — resolving forces in non-right triangles (Lami's theorem is essentially the sine rule applied to force triangles)
-- **Further Pure** — proving identities and deriving results in triangle geometry
-- **Statistics** — navigation/bearing problems in applied papers
+### Where this is *not* examined, and what is unverified
 
-The formulae are given on the A-Level formula sheet.
+Cambridge 0580 Core: none (C6.5 is Extended only). The IB Mathematics guides are not on file, so the IB Analysis and Applications placements recorded in this card's tags are the standard SL trigonometry rows and are not verified against a PDF here. No AP Calculus row examines triangle solution.
 
 ---
 

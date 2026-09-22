@@ -36,7 +36,7 @@ $$6x + 9 = 3(2x + 3)$$
 
 ### 中文锚点
 
-因式分解 = 把一个表达式写成几个因式的乘积。和展开相反。先找公因式（HCF），提出来。
+野餐前，要把6个三明治和9杯饮料装进几个内容相同的袋子。分成3袋，每袋2个三明治、3杯饮料，原来两堆东西里藏着的“三份相同组合”就显出来了。因式分解也是在找这样的组合：把 $6x+9$ 写成 $3(2x+3)$，总量没变，只是把“三份”提到了外面，让重复的结构一眼可见。
 
 ---
 
@@ -77,21 +77,21 @@ because $2 \times 3 = 6$ and $2 + 3 = 5$.
 
 ### The Cross Method 交叉相乘法
 
-When the leading coefficient isn't 1, the "find two numbers" approach gets awkward. The **cross method** is a systematic way to handle any quadratic $ax^2 + bx + c$.
+When the leading coefficient isn't 1, the "find two numbers" approach gets awkward. The **cross method** is a systematic search for integer-coefficient factors of a quadratic $ax^2 + bx + c$. Not every quadratic has such factors; the quadratic formula or completing the square remains available.
 
 **Example:** Factorise $6x^2 + 17x + 5$.
 
-**Step 1 — List factor pairs.** Write down the ways to split $a = 6$ and $c = 5$:
+**Step 1 — trigger: integer coefficients and a leading coefficient other than 1. Tool: factor-pair search.** Write down the ways to split $a = 6$ and $c = 5$:
 
 $$6 = 1 \times 6 = 2 \times 3 \qquad 5 = 1 \times 5$$
 
-**Step 2 — Arrange in a cross and multiply diagonally.** Try each combination:
+**Step 2 — trigger: the middle coefficient must also match. Tool: expand the candidate product and compare its cross terms.** Try each combination:
 
 $$\begin{array}{ccc} 2 & & 1 \\ & \times & \\ 3 & & 5 \end{array} \qquad \Rightarrow \quad 2 \times 5 + 3 \times 1 = 10 + 3 = 13 \quad \text{✗}$$
 
 $$\begin{array}{ccc} 2 & & 5 \\ & \times & \\ 3 & & 1 \end{array} \qquad \Rightarrow \quad 2 \times 1 + 3 \times 5 = 2 + 15 = 17 \quad \text{✓}$$
 
-**Step 3 — Read off the brackets.** Each row gives a bracket:
+**Step 3 — tool: reconstruct and verify by expansion.** Each row gives a bracket:
 
 $$6x^2 + 17x + 5 = (2x + 5)(3x + 1)$$
 
@@ -112,15 +112,25 @@ $$6x^2 + 17x + 5 = (2x + 5)(3x + 1)$$
 
 ### Cambridge 0580
 
-**Syllabus ref: C2.2 / E2.2** (the algebraic-manipulation block, alongside expanding). The tier split is sharp and worth knowing: **Core stops at extracting common factors** — item 3, "e.g. $9x^2 + 15xy = 3x(3x+5y)$" — while **Extended adds the whole standard catalogue** as item 4: grouping ($ax + bx + kay + kby$), the difference of two squares ($a^2x^2 - b^2y^2$), the perfect square ($a^2 + 2ab + b^2$), the general quadratic ($ax^2+bx+c$), and the common-factor cubic ($ax^3+bx^2+cx$). That list *is* the syllabus's own definition of what you are expected to recognise, so it doubles as a revision checklist. Note also the syllabus's standing gloss, printed beside the row: **"Factorise means factorise fully"** — so partial factorisation loses the mark even when the question does not repeat the word.
+**Syllabus ref: C2.2 / E2.2** (the algebraic-manipulation block, alongside expanding). The tier split is sharp and worth knowing: **Core stops at extracting common factors** — item 3, "e.g. $9x^2 + 15xy = 3x(3x+5y)$" — while **Extended adds the whole standard catalogue** as item 4: grouping ($ax + bx + kay + kby$), the difference of two squares ($a^2x^2 - b^2y^2$), the perfect square ($a^2 + 2ab + b^2$), the general quadratic ($ax^2+bx+c$), and the common-factor cubic ($ax^3+bx^2+cx$). That list *is* the syllabus's own definition of what you are expected to recognise, so it doubles as a revision checklist. Note also the syllabus's standing gloss, printed beside the row: **"Factorise means factorise fully"** — so a partially factorised expression does not satisfy that instruction; credit depends on the particular mark scheme.
 
 ### OxfordAQA 9260
 
-**Syllabus ref: A5.** Same skill, tested directly and as a sub-step in solving quadratics, simplifying algebraic fractions, and proof.
+**Syllabus ref: A5.** Core includes common factors, monic quadratics $x^2+bx+c$ and difference of squares. Extension includes the general quadratic $ax^2+bx+c$. This differs from Cambridge 0580 Core, where the factorisation requirement is common factors only.
 
-### Cambridge 0606
+### Cambridge 0606 / 9709 / 9231
 
-Not a standalone question type: factorising is assumed, and appears as the first-choice method for solving quadratics (alongside the formula and completing the square). The syllabus carries the same instruction verbatim in its notes to candidates — when asked to *factorise*, factorise **fully**.
+0606 §2.4 and 9709 §1.1 explicitly include factorisation as a method for solving quadratics. Expanding and collecting terms support those manipulations; 9709 §1.5 separately examines binomial expansion. 9231 assumes the relevant 9709 pure content. These syllabuses do not justify a claim that a basic algebra step can never be asked on its own.
+
+### Edexcel IAL / OxfordAQA 9660
+
+Edexcel IAL P1 §1.10 explicitly includes expanding brackets, collecting like terms and factorising polynomials up to degree three; P1 §1.5 includes quadratic solution by factorisation. OxfordAQA 9660 P1.1 likewise names polynomial manipulation and quadratic factorisation. These are examinable algebra, not merely optional background.
+
+### IB AA / AI and AP Calculus
+
+The IB AA and AI guides for first assessment 2021 list expansion and factorisation under **prior learning**, which examination questions may assume. [IB AA guide, prior learning](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-analysis-approaches-guide.pdf); [IB AI guide, prior learning](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-applications-interpretation-guide.pdf).
+
+AP Calculus AB/BC assumes fluent algebra; Topic 1.6 uses algebraic manipulation for limits, including factoring and cancellation with domain awareness. **Scope boundary:** elementary expansion/factorisation is not a separate new unit in those IB/AP courses; its assumed status does not make it unassessable. No marks or question frequency are implied here.
 
 ---
 

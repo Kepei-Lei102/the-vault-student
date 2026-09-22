@@ -9,6 +9,7 @@ prerequisites:
   - "[[The Boolean-to-Silicon Bridge]]"
   - "[[A Fight With the Inevitable Errors]]"
 leads_to:
+  - "[[How a Language Model Works]]"
   - "[[Compression]]"
   - "[[Kolmogorov Complexity]]"
   - "[[Cross-Entropy Loss]]"

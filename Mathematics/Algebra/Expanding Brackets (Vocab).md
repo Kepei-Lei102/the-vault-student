@@ -34,7 +34,7 @@ To **expand** (展开) means to remove brackets by multiplying every term inside
 
 ### 中文锚点
 
-展开 = 去掉括号。每一项都要乘。$a(b + c) = ab + ac$ 是分配律。双括号就是每一项乘另一个括号的每一项。
+给三个人买同样的午餐，每份都有一个三明治和一杯饮料。如果没有套餐优惠，算三份午餐的钱，和分别算三个三明治、三杯饮料的钱，结果一样。把一份拆开算，只是换了分组，饮料并没有少买。所以括号外的“3”要照顾到里面的每一项，不能只乘三明治、把饮料落下。这就是展开括号背后的分配律。
 
 ---
 
@@ -55,13 +55,17 @@ To **expand** (展开) means to remove brackets by multiplying every term inside
 
 $$a(b + c) = ab + ac$$
 
-**Why it works:** $a$ copies of $(b + c)$ means $a$ copies of $b$ plus $a$ copies of $c$. Think of $3 \times 12 = 3 \times (10 + 2) = 30 + 6 = 36$ — you already use distribution with numbers.
+**Why it works for a nonnegative integer multiplier:** $a$ copies of $(b + c)$ means $a$ copies of $b$ plus $a$ copies of $c$. Think of $3 \times 12 = 3 \times (10 + 2) = 30 + 6 = 36$ — you already use distribution with numbers. The same distributive law applies to real algebraic quantities; the repeated-copy picture is its whole-number starting point.
 
 ---
 
 ## Patterns
 
+**Trigger: a multiplier acts on a whole sum. Tool: distribute to every term.**
+
 **Single bracket:** $\quad 3(2x - 5) = 6x - 15$
+
+**Trigger: each term in one sum multiplies the entire other sum. Tool: distribute twice, then collect like terms.**
 
 **Double bracket:** $\quad (x + 3)(x - 2) = x^2 - 2x + 3x - 6 = x^2 + x - 6$
 
@@ -80,15 +84,25 @@ The middle terms cancel: $ab - ab = 0$. This identity is used constantly in fact
 
 ### Cambridge 0580
 
-**Syllabus ref:** C2.2 / E2.2 — "expand products of algebraic expressions". Core stops at single brackets and two brackets in one variable, e.g. $(2x+1)(x-4)$; **Extended adds products of more than two brackets**, e.g. $(x-2)(x+3)(2x+1)$ — expand two, then multiply the result by the third. Rarely a standalone question: it's a sub-step in equations, proof ("Show that"), and simplification. The instruction "Expand and simplify" means expand, then collect like terms.
+**Syllabus ref:** C2.2 / E2.2 — "expand products of algebraic expressions". Core stops at single brackets and two brackets in one variable, e.g. $(2x+1)(x-4)$; **Extended adds products of more than two brackets**, e.g. $(x-2)(x+3)(2x+1)$ — expand two, then multiply the result by the third. It also supports equations, proof and simplification. The instruction "Expand and simplify" means expand, then collect like terms.
 
 ### OxAQA 9260
 
 **Syllabus ref:** A4 — expanding up to two linear expressions; the Extension tier adds products of **two or three binomials** (the Pascal's-triangle shortcut for repeated brackets lives with [[Binomial Theorem]]).
 
-### Everywhere above IGCSE
+### Cambridge 0606 / 9709 / 9231
 
-Not examined as its own question on 0606, 9709 or beyond — those boards assume it fluently and test it only inside larger manipulations (binomial expansions, polynomial division, calculus rearrangements). If expanding is costing you marks there, the leak is speed and sign discipline, not syllabus content.
+0606 §2.4 and 9709 §1.1 explicitly include factorisation as a method for solving quadratics. Expanding and collecting terms support those manipulations; 9709 §1.5 separately examines binomial expansion. 9231 assumes the relevant 9709 pure content. These syllabuses do not justify a claim that a basic algebra step can never be asked on its own.
+
+### Edexcel IAL / OxfordAQA 9660
+
+Edexcel IAL P1 §1.10 explicitly includes expanding brackets, collecting like terms and factorising polynomials up to degree three; P1 §1.5 includes quadratic solution by factorisation. OxfordAQA 9660 P1.1 likewise names polynomial manipulation and quadratic factorisation. These are examinable algebra, not merely optional background.
+
+### IB AA / AI and AP Calculus
+
+The IB AA and AI guides for first assessment 2021 list expansion and factorisation under **prior learning**, which examination questions may assume. [IB AA guide, prior learning](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-analysis-approaches-guide.pdf); [IB AI guide, prior learning](https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/mathematics-applications-interpretation-guide.pdf).
+
+AP Calculus AB/BC assumes fluent algebra; Topic 1.6 uses algebraic manipulation for limits, including factoring and cancellation with domain awareness. **Scope boundary:** elementary expansion/factorisation is not a separate new unit in those IB/AP courses; its assumed status does not make it unassessable. No marks or question frequency are implied here.
 
 ---
 

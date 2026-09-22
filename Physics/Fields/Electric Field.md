@@ -7,6 +7,7 @@ prerequisites:
   - "[[Vectors]]"
   - "[[Newton's Laws of Motion]]"
 leads_to:
+  - "[[The Transistor as a Switch — How Analog Becomes Digital]]"
   - "[[Electric Potential]]"
   - "[[Capacitors]]"
   - "[[Lorentz Force]]"

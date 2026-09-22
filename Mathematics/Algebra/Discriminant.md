@@ -50,15 +50,7 @@ A single number — born from $b^2 - 4ac$ — answers every "how many solutions?
 
 ### 中文锚点
 
-判别式 $\Delta = b^2 - 4ac$ 用来判断二次方程 $ax^2 + bx + c = 0$ 有几个实根，**不需要解出来**：
-- $\Delta > 0$ → 两个不同的实根（抛物线与 $x$ 轴相交两次）
-- $\Delta = 0$ → 一个重根（抛物线与 $x$ 轴相切）
-- $\Delta < 0$ → 没有实根（抛物线与 $x$ 轴不相交）
-
-考试常见问法：
-- "Find the values of $k$ for which the equation has two real roots" → 解 $\Delta > 0$
-- "Show that the line is tangent to the curve" → 代入消元后的二次方程，证 $\Delta = 0$
-- "Find the values of $k$ for which the line meets the curve in two distinct points" → $\Delta > 0$
+把球向上抛，问它什么时候到达某个高度。忽略空气阻力，高度随时间画出来是一条抛物线：在出手高度和最高点之间，同一个高度，球上升时经过一次，下落时又经过一次；恰好在最高点，两次就合成了一次；再高，球根本到不了。判别式做的就是这个判断：先不急着算出具体时刻，先看两次相遇是分开的、合在一起的，还是压根没有。
 
 ---
 
@@ -85,7 +77,7 @@ The quantity inside the square root is exactly $\Delta = b^2 - 4ac$. Now the thr
 The discriminant isn't a separate fact to memorise — it's the *part of the quadratic formula that decides the answer's nature*.
 
 > [!info] Beyond syllabus — complex roots come in conjugate pairs
-> When $\Delta < 0$, the quadratic still has *two* roots — but they live in the complex numbers $\mathbb{C}$ rather than $\mathbb{R}$. They take the form $x = -\dfrac{b}{2a} \pm \dfrac{i\sqrt{|\Delta|}}{2a}$, a *complex conjugate pair*. The "no real roots" framing of the $\Delta < 0$ case is shorthand for "two complex roots, no real roots." The Fundamental Theorem of Algebra guarantees every degree-$n$ polynomial has exactly $n$ roots in $\mathbb{C}$ counted with multiplicity — quadratics always have two, even when both are imaginary. A-Level Further and IB AA HL formalise this; see future card *Complex Numbers*.
+> When $\Delta < 0$, the quadratic still has *two* roots — but they live in the complex numbers $\mathbb{C}$ rather than $\mathbb{R}$. They take the form $x = -\dfrac{b}{2a} \pm \dfrac{i\sqrt{|\Delta|}}{2a}$, a *complex conjugate pair*. The "no real roots" framing of the $\Delta < 0$ case is shorthand for "two complex roots, no real roots." The Fundamental Theorem of Algebra guarantees every degree-$n$ polynomial has exactly $n$ roots in $\mathbb{C}$ counted with multiplicity — quadratics always have two, even when neither is real. A-Level Further and IB AA HL formalise this; see [[Complex Numbers]].
 
 ---
 

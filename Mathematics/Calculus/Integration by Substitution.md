@@ -8,6 +8,7 @@ prerequisites:
   - "[[Standard Integrals]]"
   - "[[Substitution Equations]]"
 leads_to:
+  - "[[Multiple Integrals]]"
   - "[[Integration by Parts]]"
   - "[[Differential Equations]]"
   - "[[Partial Fractions]]"

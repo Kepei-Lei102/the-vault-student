@@ -1,6 +1,7 @@
 ---
 chinese: 比例尺图 (bǐlìchǐ tú)
 prerequisites:
+  - "[[Plans and Elevations]]"
   - "[[Ratio (Vocab)]]"
   - "[[Proportion (Vocab)]]"
   - "[[Similarity]]"

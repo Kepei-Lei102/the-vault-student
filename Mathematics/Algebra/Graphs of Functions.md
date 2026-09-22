@@ -53,7 +53,7 @@ This card catalogues the **parent graphs** you must recognise on sight, then bui
 
 ### 中文锚点
 
-**函数图像 (hánshù túxiàng)** = function graph. **母函数 (mǔ hánshù)** = parent function (the bare, untransformed version). **图像变换 (túxiàng biànhuàn)** = graph transformation. Key operations: **平移 (píngyí)** translation, **伸缩 (shēnsuō)** stretch, **反射 (fǎnshè)** reflection. Chinese textbooks often present transformations in the $y - k = f(x - h)$ "shifted-equation" form; English exams almost always write them as $y = f(x - h) + k$. The maths is identical.
+给瓶子匀速灌水时，每隔一秒记一下水面有多高。把时间放在横轴、水面高度放在纵轴，那一串记录就变成了一条往上走的曲线。到了较细的瓶颈，同样一小杯水挤在更窄的地方，水面升得更快，曲线也就更陡。函数图像的用处正在这里：不用逐个读数字，也能看出一个量变化时，另一个量怎样跟着变。线条的形状，是这种关系留下的痕迹。
 
 ---
 

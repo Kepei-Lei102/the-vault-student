@@ -20,6 +20,7 @@ leads_to:
   - "[[Turing Machine]]"
   - "[[Parallel and External Sorting]]"
   - "[[The Boolean-to-Silicon Bridge]]"
+  - "[[Memory Allocation and the Heap]]"
 teach_together:
   - "[[Natural Numbers]]"
 tags:
@@ -81,7 +82,9 @@ Two facts hide in plain sight inside this six-line definition:
 
 ### 中文锚点
 
-**递归 (dīguī)** = 一个函数在它的定义里调用自己，每次都让问题变小一点，最终落到一个不再递归的「基础情况」(基线条件)。
+电影院里黑着灯，你想知道自己坐在第几排。你拍拍前面的人问：“你是第几排？”他也不知道，于是去问他前面的人，前面的人再问更前面的。这个问题一路往前传，直到传到第一排的人那里，他不用问任何人就能回答：“第一排。”然后答案开始往回传：“一”“二”“三”，每个人都在听到的数上加一，直到你前面那个人回过头来说“七”，你就知道自己在第八排。这一串人里没有谁做了什么聪明的事。每个人做的都是同一件小事：把同一个问题缩小一点点，传给前面的人，等着，再加一。这就是递归，它的两半都摆在明面上：一半是让问题变小的那一步，另一半是第一排，问话到这儿为止。要是把第一排拿掉，问题就会一直往前传下去，永远不会有答案传回来。
+
+#### 术语对照 (Terms)
 
 | English | 中文 | What it means |
 |---|---|---|

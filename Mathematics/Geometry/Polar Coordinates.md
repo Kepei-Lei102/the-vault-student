@@ -6,6 +6,7 @@ prerequisites:
   - "[[Complex Numbers]]"
   - "[[Integration]]"
 leads_to:
+  - "[[Multiple Integrals]]"
   - "[[Arc Length and Surfaces of Revolution]]"
 tags:
   - subject/mathematics

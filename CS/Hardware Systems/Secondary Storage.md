@@ -5,6 +5,7 @@ prerequisites:
   - "[[RAM and the Memory Hierarchy]]"
   - "[[Gray Code]]"
 leads_to:
+  - "[[RAID]]"
   - "[[Operating Systems]]"
   - "[[File Handling]]"
   - "[[File Systems]]"
@@ -35,6 +36,10 @@ tags:
 > *Nothing in nature is a bit. A patch of magnetised rust, a puddle of trapped electrons, a pit pressed into plastic — each is an **amount**: smeary, analog, drifting with temperature and age. Storage works because somewhere a circuit draws a line and decides — this much means 1, that little means 0. Every storage technology on this page is a different answer to the same dangerous question: **how do I stay far from the line?***
 
 ## 中文锚点
+
+你的手机里有两种很不一样的存储，而你只在一种时候能察觉出区别：玩游戏玩到一半，电池没电了。游戏当时的局面，正在算的那些数，全没了。可你的照片还在。工作内存里的东西只有通着电才留得住，但正是这种“断电即失”的设计，让它快得跟得上处理器；而存储器不通电也留得住，因为这就是它的本职。你在这台设备上拥有的一切，照片、应用、消息，都住在存储器里，只有用到的时候才被复制到工作内存里去。常见的三种存储器，留住数据的办法各不相同：机械硬盘把数据存成高速旋转的盘片上一块块的磁性痕迹，磁头得飞过去才能读到；固态硬盘把电荷关在一个个小单元里，没有任何活动的部件；光盘则靠激光去读压在盘面上的一个个小坑。选哪一种，要看更在乎什么：每 GB 的价钱，速度，还是摔一下不坏。
+
+### 术语对照 (Terms)
 
 | English | 中文 | one-line meaning |
 |---|---|---|

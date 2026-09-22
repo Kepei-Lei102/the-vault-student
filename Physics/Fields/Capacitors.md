@@ -6,8 +6,10 @@ prerequisites:
   - "[[Electric Current]]"
   - "[[Exponential Growth and Decay]]"
 leads_to:
+  - "[[The Transistor as a Switch — How Analog Becomes Digital]]"
   - "[[Maxwell's Equations]]"
   - "[[Alternating Current]]"
+  - "[[How a Chip Is Made]]"
 tags:
   - subject/physics
   - domain/electromagnetism

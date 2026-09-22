@@ -5,6 +5,7 @@ prerequisites:
   - "[[Energy Levels and Line Spectra]]"
   - "[[Exponential Growth and Decay]]"
 leads_to:
+  - "[[The Universe Has a Left Hand]]"
   - "[[The Nobel Prizes in the Beaker]]"
   - "[[PET Scanning]]"
   - "[[Quantum Tunnelling]]"
@@ -338,6 +339,8 @@ Core includes nuclear composition, isotopes and notation, background sources and
 **Where it is not examined:** nuclear structure and radioactive decay are not topics in AP Physics 1, AP Physics C: Mechanics, or AP Physics C: Electricity and Magnetism. Their conservation laws provide tools, not a nuclear-physics syllabus. Cambridge maths can use exponential-decay contexts without examining nuclear mechanisms.
 
 ## Connections
+
+- **Story:** [[The Universe Has a Left Hand]] — Wu and the NBS team test whether beta decay treats mirror-related directions equally.
 
 - **Historical companion:** [[The Nobel Prizes in the Beaker]] — Hevesy and Paneth’s tracer work, and the separate chemical rescue of two Nobel medals.
 

@@ -295,19 +295,21 @@ This spans two classes, so split the estimate:
 - Mark scheme: bars drawn at correct positions with correct heights (frequency density), no gaps between bars, $y$-axis labeled "frequency density"
 - "Estimate the number of..." = use the area of the relevant portion of a bar (assuming uniform distribution within the class)
 
-### Cambridge 0580
+### Cambridge 0580 (Extended only)
 
-- E9.7: construct and interpret histograms with equal and unequal intervals; frequency density
-- Paper 4: high-frequency topic. Often 5–7 marks. The grid is usually provided — check the scale carefully
-- Common format: a histogram is drawn with one bar missing → complete the table → draw the missing bar → answer interpretation questions
-- The relationship $\text{area} = \text{frequency}$ is the key — every calculation goes through it
-- Sometimes combined with cumulative frequency: "use the histogram to complete the cumulative frequency table"
+- **E9.7 Histograms** (C9.7 is marked "Extended content only"): "draw and interpret histograms" and "calculate with frequency density", with the syllabus's own notes that the vertical axis is labelled "Frequency density" and that frequency density is defined as frequency ÷ class width.
+- Paper 4: high-frequency topic, often 5–7 marks. The grid is usually provided; check the scale carefully.
+- Common format: a histogram is drawn with one bar missing → complete the table → draw the missing bar → answer interpretation questions.
+- The relationship $\text{area} = \text{frequency}$ is the key; every calculation goes through it.
+- Sometimes combined with cumulative frequency: "use the histogram to complete the cumulative frequency table".
 
-### AP / IB / A-Level
+### Cambridge 9709 (Paper 5)
 
-- **AP Statistics:** histograms are fundamental to describing distributions. Students must describe shape (symmetric, skewed left/right, unimodal, bimodal), centre, spread, and unusual features. AP uses **relative frequency histograms** where bar areas sum to 1 (or 100%) — this connects directly to probability.
-- **IB Mathematics AI:** histograms appear in the descriptive statistics section; students use technology (GDC) to generate them. IB often asks students to comment on the shape of the distribution and relate it to measures of central tendency.
-- **A-Level Statistics:** histograms are the graphical representation of a **probability density function** (PDF). The condition "total area = 1" for a PDF is the continuous analogue of "all probabilities sum to 1." The transition from histogram → PDF is a key conceptual step in A-Level.
+- **§5.1 Representation of data:** "draw and interpret stem-and-leaf diagrams, box-and-whisker plots, histograms and cumulative frequency graphs", and "select a suitable way of presenting raw statistical data, and discuss advantages and/or disadvantages that particular representations may have". A 9709 histogram question is as likely to ask *why* a histogram suits continuous grouped data as to ask for one. The bridge from histogram to probability density function is §6.3 (continuous random variables, Paper 6), where "total area = 1" is the continuous version of probabilities summing to 1.
+
+### AP Statistics and IB
+
+- The AP Statistics course description and the IB Mathematics guides are not on file, so no topic numbers are claimed. Describing a distribution's shape, centre, spread and unusual features from a histogram is the same skill wherever it is examined, and AP-style questions use **relative frequency** histograms whose bar areas sum to 1.
 
 ### Beyond high school — University
 

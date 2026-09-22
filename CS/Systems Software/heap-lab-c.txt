@@ -1,0 +1,17 @@
+1. one address from each region (this run):
+  code  (main)        0x1001884f8
+  data  (a_global)    0x100190000
+  heap  (malloc 100)  0x1001bd480
+  heap  (malloc 100)  0x1001bd4f0   +112 bytes from the first
+  heap  (malloc 100k) 0x759c800000
+  stack (a_local)     0x16fc766f4
+  local at depth 3    0x16fc7669c
+  -> the stack address at depth 3 is LOWER than main's: the stack grows down; the heap grew up.
+
+2. allocate and free, per block:
+   64 bytes on the stack 1.47 ns   64 bytes on the heap (100000 live at once) 19.4 ns   1 MB on the heap 133 ns
+
+3. 200 000 blocks of 1000 bytes allocated and forgotten: resident memory 8 MB -> 204 MB (checksum 580)
+
+4. after free(name) and a new malloc: name -> 0x1001bd560, other -> 0x1001bd560, same block: yes
+   reading through the stale pointer gives "mallory" (undefined behaviour; today it is the new tenant)

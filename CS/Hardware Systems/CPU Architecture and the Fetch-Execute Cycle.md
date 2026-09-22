@@ -5,6 +5,7 @@ prerequisites:
   - "[[Number Bases]]"
   - "[[Von Neumann machine]]"
 leads_to:
+  - "[[The Modern CPU vs the Textbook Model]]"
   - "[[Pipelining and Simultaneous Multithreading]]"
   - "[[Assembly Language]]"
   - "[[RAM and the Memory Hierarchy]]"
@@ -33,7 +34,7 @@ tags:
 
 # CPU Architecture and the Fetch-Execute Cycle 处理器架构与取指执行周期
 
-> *A CPU does exactly one thing, a few billion times a second: it fetches the next instruction from memory, works out what it means, and carries it out. Everything else — every app, every game, every model — is that one loop, repeated. This card opens the box and names the parts: the registers that hold the work in progress, the buses that move it, and the **stored-program** idea that lets a machine be reprogrammed instead of rewired.*
+> *A CPU does exactly one thing, a few billion times a second: it fetches the next instruction from memory, works out what it means, and carries it out. Everything else — every app, every game, every model — is that one loop, repeated. Inside are the registers that hold the work in progress, the buses that move it, and the **stored-program** idea that lets a machine be reprogrammed instead of rewired.*
 
 ## Definition — the stored-program machine
 
@@ -48,11 +49,7 @@ The deep idea — **the program is just data in memory** — is what makes a com
 
 ### 中文锚点
 
-**处理器架构（冯·诺依曼架构 von Neumann）**：一块**主存储器同时存放程序和数据**（stored-program，存储程序），CPU 不断地**取指（fetch）→ 译码（decode）→ 执行（execute）**。CPU 四大部分：**控制单元 CU**（指挥）、**算术逻辑单元 ALU**（运算，由 [[Logic Gates|逻辑门]] 搭成）、**寄存器**（CPU 内部极快的小存储）、**总线**（地址/数据/控制）。
-
-**核心思想**：*程序就是存储器里的数据* —— 换程序即可改变功能，无需重新接线。这正是图灵 1936 年"通用机"（[[Turing Machine]]）的物理实现，由冯·诺依曼 1945 年给出可建造的架构（[[Von Neumann machine]]）。
-
-**取指-执行周期**的寄存器层面（见下文）：`PC→MAR`、读内存`→MDR→CIR`、`PC+1`、译码、执行。常见误区：**PC 存的是下一条指令的*地址*，不是指令本身**。
+同一台电脑，刚才还在跑游戏，打开另一个程序，就开始修照片了。你没有拆开机箱换零件，变的是它从内存里读到的指令。就像同一间厨房换一份菜谱，原来的锅灶就能做出另一道菜；处理器不断取来一条指令，认出该做哪种操作，再把它执行掉。它并不懂“我要修得好看一点”，只能照着程序规定的步骤做。电脑能换着干活，靠的是把做事的步骤也存进机器里，让同一套硬件反复读取。
 
 ## The von Neumann model — components and buses
 
@@ -195,7 +192,7 @@ The core IGCSE hardware topic. You should be able to:
 Everything above at more depth, plus: the **status register** and its flags, the role of each register *within* the cycle, and how the buses coordinate a transfer. (Assembly language and addressing modes are **§4.2** → [[Assembly Language]].) The performance half (pipelining, parallel processing) is **§15.1** → [[Pipelining and Simultaneous Multithreading]].
 
 ### IB Computer Science — A1.1 Computer hardware and operation
-The CPU, its components, and the **fetch–decode–execute cycle** sit at the centre of A1.1. The register-transfer trace and the von Neumann model are the working vocabulary for A1.1 questions on how a processor executes instructions; cores/cache/clock speed answer the "factors affecting performance" strand. IB names the registers. Statement A1.1.1 (first assessment 2027) lists the instruction register (**IR**), program counter (PC), memory address register (MAR), memory data register (MDR) and accumulator (**AC**), with the ALU, the control unit and the address, data and control buses. Two spellings differ from Cambridge's: IB's IR is the register this card calls the CIR, and IB's AC is the ACC. The same statement lists single-core and multi-core processors and **co-processors**, which are separate processing units that take over one kind of work for the CPU, such as floating-point arithmetic or graphics. Naming the registers and tracing a transfer is exactly the justified detail IB's extended responses reward.
+The CPU, its components, and the **fetch–decode–execute cycle** sit at the centre of A1.1. The register-transfer trace and the von Neumann model are the working vocabulary for A1.1 questions on how a processor executes instructions; cores/cache/clock speed answer the "factors affecting performance" strand. IB names the registers. Statement A1.1.1 (first assessment 2027) lists the instruction register (**IR**), program counter (PC), memory address register (MAR), memory data register (MDR) and accumulator (**AC**), with the ALU, the control unit and the address, data and control buses. Two spellings differ from Cambridge's: IB's IR is Cambridge's CIR, and IB's AC is the ACC. The same statement lists single-core and multi-core processors and **co-processors**, which are separate processing units that take over one kind of work for the CPU, such as floating-point arithmetic or graphics. Naming the registers and tracing a transfer is exactly the justified detail IB's extended responses reward.
 
 ### AP
 **AP CS Principles** treats the CPU at a high level (the fetch-execute idea, not register names). **AP CSA** does not cover hardware architecture. *(No formula-sheet relevance — this is a model, not a formula card.)*
@@ -203,9 +200,9 @@ The CPU, its components, and the **fetch–decode–execute cycle** sit at the c
 ## Connections
 
 - **Prerequisite:** [[Logic Gates]] — the ALU and the registers are built from gates; an adder *is* gates. [[Number Bases]] — machine-code instructions and addresses are binary.
-- **The modern realisation:** [[Pipelining and Simultaneous Multithreading]] — the same fetch-execute cycle, accelerated (overlapped, reordered, run on many units and cores). This card is the model; that card is the speed.
-- **The ancestors (reserved):** [[Turing Machine]] — the 1936 *theoretical* universal machine (what is computable); [[Von Neumann machine]] — the 1945 *architectural* ancestor (the stored-program idea this card runs on). The lineage Turing → von Neumann → the FDE CPU.
-- **Extends to (reserved):** [[Assembly Language]] — the human-readable form of the machine code the CU decodes (9618 §4.2). [[The Modern CPU vs the Textbook Model]] — how far a real core has grown past this 5-register picture.
+- **The modern realisation:** [[Pipelining and Simultaneous Multithreading]] — the same fetch-execute cycle, accelerated (overlapped, reordered, run on many units and cores). The basic model explains each instruction; pipelining explains how their execution overlaps.
+- **The ancestors:** [[Turing Machine]] — the 1936 *theoretical* universal machine (what is computable); [[Von Neumann machine]] — the 1945 *architectural* ancestor (the stored-program idea behind this model). The lineage Turing → von Neumann → the FDE CPU.
+- **Extends to:** [[Assembly Language]] — the human-readable form of the machine code the CU decodes (9618 §4.2). [[The Modern CPU vs the Textbook Model]] — how far a real core has grown past this 5-register picture.
 - **Uses:** [[Overflow and Underflow]] — the status-register carry/overflow flags are set by the ALU here.
 - **History:** [[Stories/The Boolean-to-Silicon Bridge]] — Turing's universal machine, von Neumann's 1945 EDVAC report, and the road to silicon; [[You Never Expect the Change of Needs]] — what doubling the register file quietly bought when x86 went 64-bit: fewer trips to memory, and a gift gamers could feel.
 

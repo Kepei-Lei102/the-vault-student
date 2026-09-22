@@ -47,9 +47,20 @@ Formally it's a 7-tuple $M = (Q, \Sigma, \Gamma, \delta, q_0, b, F)$ — states 
 
 ## 中文锚点
 
-**图灵机**是 1936 年阿兰·图灵为了定义「**什么叫可计算**」而设想的抽象机器——不是电路，而是把一个用纸笔做计算的「人」抽象到极简。它由五部分组成：一条**无限长的纸带**（分成格子，每格一个符号，如 `0`/`1`/空白），一个能**读、写、左右移动**的**读写头**，一组**有限的状态**（机器的「心情」），一张**转移函数表** $\delta$（规则手册：看到「当前状态 + 当前符号」，就决定「写什么、往哪移、进入哪个状态」），以及一个**起始状态**和若干**停机状态**。这张有限的规则表**就是整个程序**。
+在纸上做一道多位数乘法，留意一下你到底在做什么。你只盯着一列，只记住一件很小的事，也就是那个进位，然后照着一条固定的规矩走：写下这一位，把进位记上，往左挪一列。你从来没有把整道题装在脑子里，题在纸上，你每一次只看一个地方。1936 年，图灵问：一个人这样算的时候，最少需要哪些东西？然后他就用这几样东西造了一台机器：一条分成一格一格的纸带，一次只能读写一格；一个读写头，每次向左或向右挪一格；再加一小张规则表，每条规则都是“在这个状态下看到这个符号，就写下那个，往那边挪，进入那个状态”。除此之外什么都没有。改变了这个世纪的论断是：这台再简陋不过的机器，能做任何按步骤做的计算，所以“究竟什么是可以计算的”这个问题，有了一个精确的答案。一台笔记本电脑做的一切，说到底都是这样一张规则表在飞快地跑，这也是为什么图灵机是一个定义，而不是一份设计图。
 
-惊人之处有三：(1) 这么简陋的机器能算出任何「可计算」的东西；(2) 存在一台**通用图灵机**，把别的机器的「规则表」当作纸带上的数据读进来就能模拟它——这正是「程序即数据」、现代存储程序计算机的雏形；(3) 有些问题**任何**图灵机都解不了——**停机问题**就是第一个被证明「不可判定」的问题。图灵机是 [[CPU Architecture and the Fetch-Execute Cycle|取指执行周期]] 的理论祖先：图灵 (1936，理论) → 冯·诺依曼 (1945，架构) → 真实 CPU。
+### 术语对照 (Terms)
+
+| English | 中文 | one-line meaning |
+|---|---|---|
+| Turing machine | 图灵机 | the 1936 abstract machine that defines what "computable" means |
+| tape / cell / blank | 纸带 / 格 / 空白 | unbounded squares holding one symbol each |
+| head | 读写头 | reads and writes one cell and moves one step |
+| state | 状态 | the machine's finite "mood"; a finite set of them |
+| transition function / rule table | 转移函数 / 规则表 | (state, symbol) → (write, move, next state): the whole program |
+| start / halting state | 起始状态 / 停机状态 | where it begins; where it stops |
+| universal Turing machine | 通用图灵机 | reads another machine's table as data and simulates it: program as data |
+| halting problem | 停机问题 | the first problem proved undecidable by any Turing machine |
 
 ![[turing-machine-anatomy.svg|697]]
 *The whole machine: an unbounded tape of symbols, a head that reads/writes one cell and steps left or right, and a finite control holding the current state and the rule-book. Nothing else.*

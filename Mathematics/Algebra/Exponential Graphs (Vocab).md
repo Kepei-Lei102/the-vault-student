@@ -30,13 +30,17 @@ tags:
 
 ## Definition
 
-An **exponential graph** is the curve of $y = a \cdot b^x$, where the variable $x$ sits in the *exponent* rather than the base. The key shape facts: the curve never touches the $x$-axis, it passes through $(0, a)$, and it either rises steeply (growth, $b > 1$) or falls toward zero (decay, $0 < b < 1$).
+An **exponential graph** is the curve of $y = a \cdot b^x$, with $a>0$, $b>0$ and $b\ne1$ for the growth/decay shapes below, where the variable $x$ sits in the *exponent* rather than the base. The key shape facts: the curve never touches the $x$-axis, it passes through $(0, a)$, and it either rises steeply (growth, $b > 1$) or falls toward zero (decay, $0 < b < 1$).
 
 On exams, "exponential" is a *shape word* — like "parabola" or "cubic" — and the examiner expects you to recognise it from the equation alone.
 
 ### 中文锚点
 
-**指数函数 (zhǐshù hánshù)** = exponential function. The variable is the 指数 (exponent), not the 底 (base). This is the exact contrast that matters: 幂函数 (power function, $y = x^n$) has the variable in the base; 指数函数 has it in the exponent. Chinese exams often test both on the same paper — English exams do too, using the words "exponential" vs "polynomial" to distinguish them.
+假设游戏里有个规则：每过一轮，手头的资源就减少一半。起初有80，第一轮少了40，下一轮只少20，再下一轮少10。图像越往后越平，不是规则变宽松了，而是剩得越少，同样“一半”对应的数量就越少。如果不做取整处理，无论过多少轮，手里总还剩上一轮的一半；曲线就这样贴近零，但在有限的轮数内永远不会真的变成零。
+
+### 术语对照 (Terms)
+
+假设游戏里有个规则：每过一轮，手头的资源就减少一半。起初有80，第一轮少了40，下一轮只少20，再下一轮少10。图像越往后越平，不是规则变宽松了，而是剩得越少，同样“一半”对应的数量就越少。如果不做取整处理，无论过多少轮，手里总还剩上一轮的一半；曲线就这样贴近零，但在有限的轮数内永远不会真的变成零。
 
 ## Key Vocabulary
 
@@ -47,8 +51,8 @@ On exams, "exponential" is a *shape word* — like "parabola" or "cubic" — and
 | exponent / index / power | 指数 / 幂 | The variable $x$ in $b^x$ — three English words, one concept |
 | growth | 增长 | Curve rises; $b > 1$ |
 | decay | 衰减 | Curve falls toward zero; $0 < b < 1$ |
-| asymptote | 渐近线 | Line the curve approaches but never reaches |
-| horizontal asymptote | 水平渐近线 | Here always $y = 0$ (the $x$-axis) |
+| asymptote | 渐近线 | Line approached in a specified limit; crossing elsewhere can occur |
+| horizontal asymptote | 水平渐近线 | For the unshifted family here, $y = 0$ |
 | initial value | 初始值 | Value at $x = 0$; equals $a$ in $y = a \cdot b^x$ |
 | $y$-intercept | $y$轴截距 | Same as initial value for this family |
 | growth factor | 增长因子 | The base $b$ when $b > 1$ |
@@ -60,10 +64,10 @@ On exams, "exponential" is a *shape word* — like "parabola" or "cubic" — and
 
 ![[exponential-vs-polynomial.svg]]
 
-Left: $y = 2^x$ with its asymptote $y = 0$ — the curve approaches the $x$-axis as $x \to -\infty$ but never touches. Right: $y = 2^x$ vs $y = x^2$. They meet at $(2, 4)$ and again at $(4, 16)$. For $x < 2$ and between the crossings, $x^2$ is ahead; past $x = 4$, the exponential pulls away and never looks back.
+Left: $y = 2^x$ with its asymptote $y = 0$ — the curve approaches the $x$-axis as $x \to -\infty$ but never touches. Right: $y = 2^x$ vs $y = x^2$. On the nonnegative range, they meet at $(2,4)$ and $(4,16)$: $2^x>x^2$ for $0\le x<2$ and $x>4$, while $x^2>2^x$ for $2<x<4$. Over all real $x$, there is also a negative crossing near $x=-0.767$; the positive-range picture is not the whole graph.
 
 > [!warning] "Asymptote" is a precise word
-> An asymptote is a line the curve gets arbitrarily close to but never meets. For $y = b^x$ the $x$-axis ($y = 0$) is a horizontal asymptote: as $x \to -\infty$ the curve approaches zero from above but never equals zero. Don't write "the curve hits the asymptote" — it *doesn't*, that's the whole point.
+> A horizontal asymptote $y=L$ means the function tends to $L$ as $x$ tends to positive or negative infinity. Some functions cross their asymptotes at finite inputs. For $y=b^x$ with $b>0$, $b\ne1$, the asymptote is $y=0$ and this particular curve never meets it: the output is always positive. The approach is as $x\to-\infty$ for $b>1$, or $x\to+\infty$ for $0<b<1$.
 
 > [!tip] Exam phrasing
 > - "**Sketch** $y = 2^x$, showing the $y$-intercept and the asymptote." → Mark $(0, 1)$; draw $y = 0$ as a dashed line; curve above it, rising right.

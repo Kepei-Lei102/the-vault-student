@@ -7,6 +7,7 @@ prerequisites:
   - "[[Kinematics Calculus]]"
   - "[[Area Under a Graph (Vocab)]]"
 leads_to:
+  - "[[Particle Physics]]"
   - "[[Newton's Law of Restitution]]"
   - "[[Impulse]]"
   - "[[Centre of Mass]]"

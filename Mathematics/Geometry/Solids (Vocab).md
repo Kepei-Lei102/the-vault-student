@@ -4,6 +4,7 @@ prerequisites:
   - "[[Geometrical Terms (Vocab)]]"
   - "[[Polygon Angles (Vocab)]]"
 leads_to:
+  - "[[Plans and Elevations]]"
   - "[[Surface Area and Volume (Vocab)]]"
   - "[[3D Trigonometry]]"
   - "[[Nets (Vocab)]]"

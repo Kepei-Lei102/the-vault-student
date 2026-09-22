@@ -6,6 +6,7 @@ leads_to:
   - "[[Arrays]]"
   - "[[Program Development Life Cycle and Testing]]"
   - "[[Java Values and Expressions]]"
+  - "[[Anatomy of a Tech Stack]]"
 teach_together:
   - "[[Cambridge Pseudocode]]"
 tags:

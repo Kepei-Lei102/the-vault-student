@@ -21,7 +21,7 @@ tags:
 
 # Clock Domains and Metastability 时钟域与亚稳态
 
-> *You picture a computer keeping time to a single drumbeat. It doesn't. Inside one chip a dozen clocks run at once, each at its own tempo, most of them deaf to the others — and the hardest, subtlest engineering in the whole machine lives in the handful of wires where one clock's world touches another's. Cross that boundary carelessly and a flip-flop does the one thing the [[Flip-Flops|last card]] warned about: it hangs between $0$ and $1$ and picks by chance.*
+> *You picture a computer keeping time to a single drumbeat. It doesn't. Inside one chip a dozen clocks run at once, each at its own tempo, most of them deaf to the others — and the hardest, subtlest engineering in the whole machine lives in the handful of wires where one clock's world touches another's. Cross that boundary carelessly and a flip-flop does the one thing the [[Flip-Flops|flip-flop model]] warned about: it hangs between $0$ and $1$ and picks by chance.*
 
 ## Definition
 
@@ -36,6 +36,10 @@ Two questions organise the whole topic:
 
 ### 中文锚点
 
+给朋友拍照时，他恰好正在翻动手里的号码牌，按下快门的那一瞬间，牌还没翻稳。芯片里也会撞上这样的时刻：一边按自己的节奏改变信号，另一边恰好要把它记下来。触发器不是拍到一张模糊照片，而是内部电压可能迟迟没稳定到能可靠读作 0 或 1 的状态，这叫亚稳态。对合适的单比特信号，多接一级触发器，就能在后面的电路使用它之前多留一点稳定时间。等一等能把出错的概率压低，却不能保证这种巧合永远不发生。
+
+### Vocabulary
+
 | English | 中文 | 一句话 |
 |---|---|---|
 | clock domain | 时钟域 (shízhōngyù) | 由**同一个**时钟驱动的一片逻辑 |
@@ -45,8 +49,6 @@ Two questions organise the whole topic:
 | phase-locked loop (PLL) | 锁相环 (suǒxiànghuán) | 用反馈把参考频率**倍频**上去 |
 | base clock / multiplier | 基准时钟 / 倍频 (bèipín) | 核心频率 = 基准 × 倍频系数 |
 | jitter / skew | 抖动 / 偏斜 | 时钟边沿在时间上的抖动 / 到达的先后差 |
-
-核心一句话：一颗晶振 → 锁相环倍频 + 分频 → 许多时钟域；**域内同步，域间危险**；跨域靠同步器把亚稳态的概率压到几乎为零。
 
 ---
 
@@ -91,7 +93,7 @@ $$\boxed{\,f_{out} = N \times f_{ref}\,}$$
 
 ## Clock domains and the crossing problem
 
-Within a domain, the tools of the [[Flip-Flops|flip-flop]] card guarantee correctness: a signal launched by one edge is required to be stable (to meet **setup and hold** — quiet for a moment before the edge and a moment after) by the time the next edge samples it. The designer's timing tools check every path and certify it.
+Within a domain, the timing requirements of [[Flip-Flops|flip-flops]] guide verification: a signal launched by one edge is required to be stable (to meet **setup and hold** — quiet for a moment before the edge and a moment after) by the time the next edge samples it. The designer's timing tools check every path and certify it.
 
 Cross a boundary and that guarantee evaporates. There are two cases, and they are night and day:
 

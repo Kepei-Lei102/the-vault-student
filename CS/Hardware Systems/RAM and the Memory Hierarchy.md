@@ -5,10 +5,13 @@ prerequisites:
   - "[[Flip-Flops]]"
   - "[[CPU Architecture and the Fetch-Execute Cycle]]"
 leads_to:
+  - "[[The Modern CPU vs the Textbook Model]]"
+  - "[[The GPU — From Triangles to Tensors]]"
   - "[[Operating Systems]]"
   - "[[Secondary Storage]]"
   - "[[Arrays]]"
   - "[[The True IO Bound]]"
+  - "[[How a Chip Is Made]]"
 tags:
   - subject/computer-science
   - domain/computer-architecture
@@ -34,6 +37,10 @@ tags:
 > *Memory has exactly one job: hold a bit steady until you ask for it back. There are two physical ways to do that job, and they are opposites — a tiny leaky bucket, or a small self-locking switch. One is cheap but forgetful; the other never forgets but costs six times the silicon. **Every layer of a computer's memory, from the registers in the core to the gigabytes of main memory, is one of those two cells — chosen by whether you needed it fast or needed it cheap.** The whole memory hierarchy is that single trade-off, stacked.*
 
 ## 中文锚点
+
+想想你照着菜谱做菜是怎么做的。菜谱放在屋子那头的书架上，你不会每做一步就跑一趟书架，而是把书拿到灶台边；炒菜的时候，眼下马上要用的两三样东西——盐和勺子——就直接攥在手里。手里几乎放不下什么，可随手就到；灶台上能放几样，一伸手的距离；书架上什么都有，可得走一趟。计算机的内存正是这样分层的，理由也一模一样。处理器自己的寄存器只装得下几个数，零点几纳秒就能拿到；往下是高速缓存，多装一点；再往下是主存，装着正在运行的程序；每往下一层，大约大十倍，也慢十倍。这整套安排之所以行得通，靠的是程序的一个习惯：刚刚用过的东西，还有它旁边的东西，很可能马上又要用。于是小而快的那几层里，装的都是刚用过的东西和它们的“邻居”，大多数时候，去书架的那一趟根本不用走。
+
+### 术语对照 (Terms)
 
 | English | 中文 | one-line meaning |
 |---|---|---|

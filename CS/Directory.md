@@ -1,6 +1,6 @@
 # The Vault — Computer Science Directory
 
-> **76 cards across 12 bays.** Last landed: [[Java Objects, References and Strings]] (2026-09-21) — the second Java companion: a variable of a class type holds an arrow, so assignment, passing, `==` and `null` are all about arrows; `String` is the object you use most.
+> **86 cards across 13 bays.** Last landed: [[Memory Allocation and the Heap]] (2026-09-22) — the car park under every program: an allocator and two collectors built and measured, fragmentation, leaks, dangling pointers and the cycle reference counting cannot see.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for everything else — its frontmatter and Connections section carry the graph of what to read first.
 
 **Reading the bays.** A bay is a run of cards built in order. *Closed* bays cover their syllabus stretch end to end; *open* bays are still growing, and the italic line under each names what comes next (a link that leads nowhere yet is a card still to be written). 💎 marks enrichment beyond every syllabus. Board codes: 0478 = Cambridge IGCSE, 9618 = Cambridge A Level, AP CSA = AP Computer Science A.
@@ -65,14 +65,14 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 13. **[[Digital Audio Workstation]]** — samples through a working mixer; EQ, compression, recorded-room reverb, phase vocoder, buffering and export, with audible comparisons. 💎
 
-## Hardware Systems (13 — closed)
+## Hardware Systems (17 — core closed; enrichment added)
 
 *The whole machine below the software line: Turing → von Neumann → the fetch–execute CPU → pipelining, then memory, storage, I/O, sensors, embedded systems, interrupts, assembly, CISC vs RISC. 0478 §3 (bar network hardware) and 9618 §3.1 + §4.*
 
 1. **[[Turing Machine]]** — tape, head, states and a rule-book as the minimal model of computing; the universal machine; the halting problem proved by diagonal. 💎
 2. **[[Von Neumann machine]]** — program and data in one memory, instructions as numbers: reprogram by loading, not rewiring; the bottleneck and the Harvard rival.
 3. **[[CPU Architecture and the Fetch-Execute Cycle]]** — CU, ALU, the five exam registers and three buses; the cycle traced register by register on a three-instruction program.
-4. **[[Pipelining and Simultaneous Multithreading]]** — overlap the stages so one instruction finishes per cycle; hazards, branch prediction, SMT, and the GPU's SIMD bet.
+4. **[[Pipelining and Simultaneous Multithreading]]** — overlap the stages so one instruction finishes per cycle; hazards, branch prediction, SMT, and GPU execution groups.
 5. **[[RAM and the Memory Hierarchy]]** — DRAM as leaking charge, SRAM as a flip-flop; the cache ladder and why locality pays.
 6. **[[Clock Domains and Metastability]]** — one crystal, many clocks: PLLs multiply by dividing, and a signal crossing clock domains can sit undecided. 💎
 7. **[[Secondary Storage]]** — nothing in nature is a bit: magnetic, optical and solid-state media each hand you an analogue smear and a decision boundary.
@@ -83,13 +83,20 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 12. **[[Assembly Language]]** — machine code with names on; the Cambridge instruction set, addressing modes as hop-counting, traced programs.
 13. **[[CISC vs RISC]]** — the ISA is a contract, not a blueprint: why pipelines love RISC, how x86 decodes to micro-ops, and why the ecosystem still decides.
 
-## Systems Software (3 — open)
+14. **[[RAID]]** — lose a drive and reconstruct its bytes: striping, mirrors, two parity relations, rebuilds and why a mirror has no undo button. 💎
+
+15. **[[The GPU — From Triangles to Tensors]]** — triangles become fragments; SIMT, divergence, memory reuse, tensor cores and CPU–GPU cooperation. *IB A1.1.2–3 · A4.1.2; OCR H446 §1.1.2*
+16. **[[The Modern CPU vs the Textbook Model]]** — the fetch–execute model as a contract and the out-of-order core as the engine that honours it; branch prediction, dependency chains and the memory wall measured at ×3, ×8 and ×100 on one laptop; a cycle-level simulator of three machines; renaming and in-order commit; what it means for code. *Enrichment · 9618 §4.1 performance factors · IB A1.1*
+17. **[[How a Chip Is Made]]** — the planar process from sand to a stencil eighty layers deep: lithography and its light, the CMOS inverter in cross-section, DRAM and flash cells built the same way, and the Poisson arithmetic of yield that sets what a die costs and why chiplets win.
+
+## Systems Software (4 — open)
 
 *The software that runs the machine itself. 0478 §4, 9618 §5 and §16 complete.*
 
 1. **[[Operating Systems]]** — part government, part illusionist: process states and scheduling, paging vs segmentation, files, drivers, utilities, and virtual machines. *0478 §4.1 · 9618 §5.1, §15.1, §16.1*
 2. **[[Compilers and Interpreters]]** — translate the book once or interpret live: the three translators, the four compilation stages, BNF, and RPN on a stack. *0478 §4.2 · 9618 §5.2, §16.2*
 3. **[[File Systems]]** — names are not bytes: allocation, links, deletion, SSD discard, formatting, snapshots and sanitisation; an open-file experiment and 4K animation. *0478 §4.1 · 9618 §5.1 · IB A1.3; internals are enrichment.*
+4. **[[Memory Allocation and the Heap]]** — where a process's variables live, measured in C (stack down, heap up, 1.5 ns against 19 ns, a 200 MB leak); a first-fit allocator built in forty lines and fragmented on purpose; reference counting and mark and sweep built and run on the cycle only one of them can free (4K Manim); leaks, dangling pointers and pools; 9618 §5.1/§16.1, IB B2.2.1 and AP CSA quoted.
 
 *Next in the bay: [[The Call Stack]].*
 
@@ -128,7 +135,7 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 4. **[[Data Protection and Privacy]]** — personal data as *identifiable*, measured (three ordinary fields make 90 % of a city unique); the linkage attack and why hashing a phone number is not anonymising; lawful bases, principles, rights, controller and processor under GDPR and PIPL side by side; k-anonymity, keyed tokens and differential privacy, each run and priced; three 9618 questions and an AP CSA item against their schemes. *9618 §6.1 · 0478 §5.3 · IB A4.4 · AP CSA 4.1*
 5. **[[Privacy-Preserving Computation]]** — input privacy: secret sharing and multi-party computation, Paillier and fully homomorphic encryption, federated learning with its leak and its repair, trusted execution, zero-knowledge proofs; whom each one still asks you to trust. *Enrichment; no school board*
 
-## Artificial Intelligence (3 — open)
+## Artificial Intelligence (4 — open)
 
 *The two ways to build a mind: rules written by people, or rules learned from data — and the calculus that does the learning.*
 
@@ -137,7 +144,9 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 2. **[[Automated Systems and Robotics]]** — sensor → microprocessor → actuator as three roles in one ring with no human in it; what makes a robot a robot (mechanical structure, electrical components, programmable — not autonomy, not intelligence), run forwards on a tractor and backwards on a smart speaker; the seven scenarios and six roles with advantages and disadvantages from the named seat; the exam's robot simulated in a room, one sensor against a vote, and a break-even with its assumptions stated; seven real Paper 1 questions against their schemes. *0478 §6.1–§6.2*
 3. **[[Affective Computing]]** — the chain from feeling to display to sensor to label to decision; voice, text, skin and face each tested; Bayes on smiles; bias from a resting face; on-device inference and the EU ban in workplaces and schools. *Enrichment · IB A4.4 case study*
 
-*Next in the bay: the enrichment [[How a Language Model Works]].*
+4. **[[How a Language Model Works]]** — next-token prediction as the whole game; counting models that improve and then run out of data; byte-pair tokens; one attention layer built in numpy with a hand-written, gradient-checked backward pass, trained on the Stories until it beats the best counting model; temperature; what scale bought; from completer to assistant; what it is not. *Enrichment · 9618 §18.1 / 0478 §6.3 / IB A4.1 illustration*
+
+*Nothing further is queued in the bay.*
 
 ---
 
@@ -152,17 +161,24 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 
 4. **[[Digital Currency and Blockchain]]** — double spending makes ordering necessary; hashes reveal edits, signatures authorise spending, consensus chooses a history; three real Paper 1 questions and an offline ledger with a separate real-signature experiment. *0478 §5.2 · IB A2.1.2/A2.2.3 applications*
 
-## Java Companions (2 — open)
+## Java Companions (5 — CLOSED 2026-09-22)
 
-*For exams answered in Java. Each companion keeps the concept in its Python card and shows only what Java does differently; every program was compiled and run. Next: [[Java Control Flow]].*
+*For exams answered in Java. Each companion keeps the concept in its Python card and shows only what Java does differently; every program was compiled and run. All five delivered; the practice site outside the vault is the next step.*
 
 1. **[[Java Values and Expressions]]** — compile then run, and the three kinds of error; `int`, `double`, `boolean`; int division and `%`; where a cast binds; both rounding idioms; overflow and round-off; compound assignment; the `Math` class and a random integer in a range, derived. *AP CSA 1.1–1.8, 1.11*
 2. **[[Java Objects, References and Strings]]** — method signatures, overloading and call by value; class methods against instance methods; `new` and constructors; references, aliases and `null`; what a method can and cannot change; `String` indices read as cuts, immutability, `==` against `equals` against `compareTo`; `Scanner` as a library class at work.
+3. **[[Java Control Flow]]** — braces make the block (Apple's `goto fail`); conditions must be `boolean`; one-way, two-way and multiway selection and the dangling `else`; `&&`, `||`, `!`, short-circuit guards; truth tables and De Morgan's laws; `while`, sentinels and the digits of an integer; the order of a `for` header; walking a String; nested loops and statement execution counts.
+4. **[[Java Classes]]** — a `BankAccount` written section by section: design as abstraction, `private` fields and `public` methods, constructors and default values (a 4K Manim clip of one `new`), accessors and mutators and where `return` goes, objects as parameters and privacy per class, `this` and the `size = size` trap, `static` and `final`, the three scopes and least scope.
+5. **[[Java Arrays and ArrayList]]** — arrays with defaults, `length` and the enhanced for loop's copy; the standard algorithms; reading a text file with `File`, `Scanner` and `split`; wrapper classes and boxing; `ArrayList` and its six methods, the shift after `add` and `remove`, and removing while traversing (a 4K clip of the skipped element); 2D arrays as arrays of rows; the searches and sorts in Java, traced.
+
+## Software Engineering (1 — opened 2026-09-22)
+
+1. **[[Anatomy of a Tech Stack]]** — script versus system: a complete stack in one Python file (page, JSON API, SQLite behind a cache) restarted, timed and loaded; the request's journey with the clock running (4K Manim), the three tiers and the state line that decides what can be copied, the listen backlog that refused half the requests, cloud tiers and deployment; 9618 §2.1, 0478 §3.3/§5.1 and IB A1.1.9/A2.2 quoted.
 
 ## Enrichment directions
 
-- **Hardware** — [[How a Chip Is Made]], [[The Modern CPU vs the Textbook Model]], [[The GPU — From Triangles to Tensors]], [[RAID]].
-- **Software engineering** — [[Anatomy of a Tech Stack]], version control, APIs and deployment.
+- **Hardware** — [[How a Chip Is Made]], [[The Modern CPU vs the Textbook Model]].
+- **Software engineering** — version control, APIs and deployment as seedlings behind [[Anatomy of a Tech Stack]].
 
 ---
 

@@ -1,13 +1,13 @@
 # The Vault — Meta Directory
 
-> **20 cards.** Last landed: [[Learning with the Whole Body]] (2026-09-21) — what the hand and the feel of a force add to understanding, why it is not about how much of the brain is active, and when doing does not help.
+> **21 cards.** Last landed: [[Change the Representation]] (2026-09-22) — choose a description from the operation, then check the round trip and what information survives.
 > Cards whose subject is *how to think across domains* — methods that apply to mathematics, physics, computer science and ordinary life alike. One line per card; the card carries the argument.
 
 See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · [[Stories/Directory|Stories]].
 
 ---
 
-## Methodology (15)
+## Methodology (16)
 
 1. **[[Chain of Thought]]** — Pólya's four phases, the "show that" chain, command and signal words, and the rule that a worked example names its trigger, not just its technique.
 2. **[[Choosing Effective Equations]]** — framework recognition (SUVAT / N2 / momentum / energy / power / friction at the limit) plus forward reading for what each clause of a question locks down.
@@ -24,6 +24,8 @@ See also: [[Mathematics/Directory|Mathematics]] · [[Physics/Directory|Physics]]
 13. **[[When a Model Breaks]]** — a correct calculation can serve an inadequate model; find the missing ingredient with a discriminating test and an explicit error budget.
 14. **[[Humans Are Story Animals]]** 人是故事的动物 — memory keeps causal chains, not lists (93 % against 13 %): put the chain back into a result, read a story question twice, and beware the story that sits beside the idea.
 15. **[[Learning with the Whole Body]]** 用整个身体学习 — held bicycle wheels, handwriting and 提笔忘字, gesture; *Tetris* shows it is not the amount of brain activity but what an idea is connected to; the toy banknotes and the failed laptop replication mark the limits; a climbing wall as a mechanics laboratory.
+
+16. **[[Change the Representation]]** — the same information can support different work: algebraic forms, normal coordinates, Fourier filtering and task-specific summaries, with domains and reconstruction kept honest.
 
 
 ## Productivity / Cognitive Models (1)

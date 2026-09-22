@@ -9,6 +9,7 @@ prerequisites:
   - "[[Circular Motion]]"
   - "[[Gravitational Fields]]"
 leads_to:
+  - "[[Emmy Noether]]"
   - "[[Laws and Theorems]]"
 tags:
   - subject/physics

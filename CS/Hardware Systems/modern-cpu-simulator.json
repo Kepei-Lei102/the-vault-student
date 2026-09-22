@@ -1,0 +1,38 @@
+{
+ "unsorted": {
+  "instructions": 17957,
+  "textbook": {
+   "cycles": 101785,
+   "ipc": 0.17642088716412044,
+   "mispredicts": 0
+  },
+  "pipeline": {
+   "cycles": 35832,
+   "ipc": 0.5011442286224603,
+   "mispredicts": 1957
+  },
+  "ooo": {
+   "cycles": 19439,
+   "ipc": 0.9237615103657596,
+   "mispredicts": 2007
+  }
+ },
+ "sorted": {
+  "instructions": 17957,
+  "textbook": {
+   "cycles": 101785,
+   "ipc": 0.17642088716412044,
+   "mispredicts": 0
+  },
+  "pipeline": {
+   "cycles": 35832,
+   "ipc": 0.5011442286224603,
+   "mispredicts": 1957
+  },
+  "ooo": {
+   "cycles": 4025,
+   "ipc": 4.461366459627329,
+   "mispredicts": 3
+  }
+ }
+}

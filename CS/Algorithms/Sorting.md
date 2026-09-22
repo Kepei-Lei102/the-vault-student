@@ -6,6 +6,7 @@ prerequisites:
   - "[[Recursion]]"
   - "[[Sequences]]"
 leads_to:
+  - "[[Java Arrays and ArrayList]]"
   - "[[Big-O Notation]]"
   - "[[Parallel and External Sorting]]"
 tags:

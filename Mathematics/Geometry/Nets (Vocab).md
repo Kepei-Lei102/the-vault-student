@@ -4,6 +4,7 @@ prerequisites:
   - "[[Solids (Vocab)]]"
   - "[[Geometrical Terms (Vocab)]]"
 leads_to:
+  - "[[Plans and Elevations]]"
   - "[[Surface Area and Volume (Vocab)]]"
 tags:
   - subject/mathematics

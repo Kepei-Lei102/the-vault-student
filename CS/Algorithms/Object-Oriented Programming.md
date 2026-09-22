@@ -7,6 +7,7 @@ prerequisites:
   - "[[A Rich Neighbor Named Xerox]]"
   - "[[Program Development Life Cycle and Testing]]"
 leads_to:
+  - "[[Java Classes]]"
   - "[[Programming Paradigms]]"
   - "[[Dual-Core Craft]]"
   - "[[Java Objects, References and Strings]]"

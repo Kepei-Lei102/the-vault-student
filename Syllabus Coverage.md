@@ -10,8 +10,8 @@ not a claim that the point is unimportant. Ask your tutor (or the AI reading thi
 vault) to search the cards before concluding anything is missing: the same content
 is often taught under a different heading.
 
-> **Edition** `student-2026-09-21` · built 2026-09-21 from commit `21b9356`  
-> 462 cards · 747 diagrams · 158 explainers · 157 illustrations
+> **Edition** `student-2026-09-22` · built 2026-09-22 from commit `898c063` + uncommitted changes  
+> 485 cards · 793 diagrams · 175 explainers · 162 illustrations
 
 ---
 
@@ -61,12 +61,12 @@ is often taught under a different heading.
 
 ## Cambridge IGCSE 0580 Mathematics (Extended)
 
-*72 syllabus points · 125 card references*
+*72 syllabus points · 126 card references*
 
 | Syllabus point | Cards |
 |---|---|
 | C4.7 | [[Circle Theorems I]], [[Circle Theorems II]] |
-| E1.1 | [[Factors and Multiples (Vocab)]], [[Natural Numbers]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Prime Numbers]], [[Reciprocals (Vocab)]] |
+| E1.1 | [[Factors and Multiples (Vocab)]], [[Integers]], [[Natural Numbers]], [[Number Sets (Vocab)]], [[Powers and Roots (Vocab)]], [[Prime Factorisation (Vocab)]], [[Prime Numbers]], [[Reciprocals (Vocab)]] |
 | E1.2 | [[Cardinality]], [[Complement]], [[Element]], [[Empty Set]], [[Intersection]], [[Set]], [[Set Operations]], [[Set-Builder Notation]], [[Subset]], [[Union]], [[Universal Set]], [[Venn Diagram]] |
 | E1.3 | [[Powers and Roots (Vocab)]] |
 | E1.4 | [[Decimals (Vocab)]], [[Fractions (Vocab)]], [[Percentages (Vocab)]], [[Recurring Decimals (Vocab)]] |
@@ -283,7 +283,7 @@ is often taught under a different heading.
 
 ## Oxford AQA 9260 International Mathematics (Extension)
 
-*97 syllabus points · 155 card references*
+*98 syllabus points · 156 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -319,6 +319,7 @@ is often taught under a different heading.
 | A9.Ext | [[Composite Function]], [[Inverse Function]] |
 | G1 | [[Geometrical Terms (Vocab)]], [[Triangles (Vocab)]] |
 | G10 | [[Solids (Vocab)]] |
+| G11 | [[Plans and Elevations]] |
 | G12 | [[Bearings (Vocab)]], [[Scale Drawings (Vocab)]] |
 | G13 | [[Geometrical Constructions (Vocab)]], [[Loci (Vocab)]] |
 | G14 | [[Units of Measure (Vocab)]] |
@@ -387,7 +388,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9618 Computer Science
 
-*46 syllabus points · 89 card references*
+*46 syllabus points · 90 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -425,7 +426,7 @@ is often taught under a different heading.
 | 13.3 | [[Floating-Point Representation]] |
 | 14.1 | [[Networks]] |
 | 14.2 | [[Networks]] |
-| 15.1 | [[CISC vs RISC]], [[Operating Systems]], [[Pipelining and Simultaneous Multithreading]] |
+| 15.1 | [[CISC vs RISC]], [[Operating Systems]], [[Pipelining and Simultaneous Multithreading]], [[The GPU — From Triangles to Tensors]] |
 | 15.2 | [[Boolean Algebra]], [[Flip-Flops]], [[Half-Adder and Full-Adder]], [[Karnaugh Maps]], [[Logic Gates]] |
 | 16.1 | [[Interrupt Handling]], [[Operating Systems]] |
 | 16.2 | [[Compilers and Interpreters]] |
@@ -440,7 +441,7 @@ is often taught under a different heading.
 
 ## Cambridge A-Level 9702 Physics
 
-*74 syllabus points · 98 card references*
+*74 syllabus points · 99 card references*
 
 | Syllabus point | Cards |
 |---|---|
@@ -475,7 +476,7 @@ is often taught under a different heading.
 | 10.2 | [[Kirchhoff's Laws]] |
 | 10.3 | [[Potential Dividers]] |
 | 11.1 | [[Nuclear Physics]] |
-| 11.2 | [[Nuclear Physics]] |
+| 11.2 | [[Nuclear Physics]], [[Particle Physics]] |
 | 12.1 | [[Circular Motion]] |
 | 12.2 | [[Circular Motion]] |
 | 13.1 | [[Gravitational Fields]] |
@@ -744,11 +745,11 @@ is often taught under a different heading.
 
 ## IB Computer Science
 
-*21 syllabus points · 36 card references*
+*21 syllabus points · 38 card references*
 
 | Syllabus point | Cards |
 |---|---|
-| A1.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Input and Output Devices]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Secondary Storage]] |
+| A1.1 | [[CPU Architecture and the Fetch-Execute Cycle]], [[Input and Output Devices]], [[Pipelining and Simultaneous Multithreading]], [[RAM and the Memory Hierarchy]], [[Secondary Storage]], [[The GPU — From Triangles to Tensors]] |
 | A1.2 | [[Logic Gates]], [[Number Bases]] |
 | A1.3 | [[File Systems]], [[Operating Systems]], [[Sensors and Control Systems]] |
 | A2.1 | [[Digital Currency and Blockchain]], [[Networks]] |
@@ -758,7 +759,7 @@ is often taught under a different heading.
 | A3.2 | [[Relational Databases]] |
 | A3.3 | [[SQL]] |
 | A3.4 | [[NoSQL and Distributed Data]] |
-| A4.1 | [[Artificial Intelligence]] |
+| A4.1 | [[Artificial Intelligence]], [[The GPU — From Triangles to Tensors]] |
 | A4.3 | [[Artificial Intelligence]] |
 | A4.4 | [[Data Protection and Privacy]] |
 | B2.1 | [[Programming Fundamentals]] |

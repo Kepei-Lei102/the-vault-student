@@ -63,19 +63,7 @@ This is the moment in a student's life when complex numbers stop feeling like a 
 
 ### 中文锚点
 
-**欧拉公式**（ōulā gōngshì）—— Leonhard Euler 1748 年：
-
-$$e^{i\theta} = \cos\theta + i\sin\theta.$$
-
-**棣莫弗定理**（dìmòfú dìnglǐ）—— Abraham de Moivre 1707 年：
-
-$$(\cos\theta + i\sin\theta)^n = \cos(n\theta) + i\sin(n\theta).$$
-
-两个其实是**同一个事实**的两种写法。用欧拉公式重写棣莫弗定理：$(e^{i\theta})^n = e^{in\theta}$ —— 这就是 IGCSE 学过的指数法则。**复数的乘法、幂、开根号，都被压缩成指数规则。**
-
-中文教材把 $\cos\theta + i\sin\theta$ 简写作 $\mathrm{cis}\,\theta$（"cosine plus i sine"），但欧拉形式 $e^{i\theta}$ 更紧凑、更通用，是国际高校的统一语言。**学好欧拉形式，复数计算速度翻倍，且和大学物理 / 工程 / 信号处理直接对接。**
-
-为什么这张卡值得单独写：复数本身（[[Complex Numbers]]）讲的是定义、Argand 图、极坐标、共轭、轨迹这些"什么是复数"的内容。这张卡讲的是"怎样高效用复数计算"的工具集。两张卡分工：基础卡是入门，工具卡是飞跃。
+看自行车轮边缘上的一个记号：它一直绕圈转，可只看它在水平方向或竖直方向的位置，就会看到来回起伏。正弦和余弦原来是同一次转动的两个投影。把两个坐标合成一个复数，欧拉公式就把这次转动写成 e 的虚指数次幂；两次转动相接，角度相加，写成乘法就能接起来。棣莫弗定理也因此很自然：同样的转动重复 n 次，总角度就是原来的 n 倍。
 
 ---
 

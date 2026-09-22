@@ -6,6 +6,7 @@ prerequisites:
   - "[[Maxwell's Equations]]"
   - "[[Doppler Effect]]"
 leads_to:
+  - "[[Particle Physics]]"
   - "[[General Relativity]]"
 tags:
   - subject/physics

@@ -7,6 +7,7 @@ prerequisites:
   - "[[Probability Basics]]"
   - "[[Automated Systems and Robotics]]"
 leads_to:
+  - "[[How a Language Model Works]]"
   - "[[The Turing Test]]"
   - "[[Compression Is Intelligence]]"
   - "[[Data Protection and Privacy]]"
@@ -271,7 +272,7 @@ Three outcomes: what AI is (a branch of computer science dealing with the simula
 
 ### IB Computer Science (A4 Machine learning — SL and HL)
 
-A4.1 machine-learning fundamentals has two understandings: the **types of machine learning and their real-world applications** (supervised, unsupervised, reinforcement, deep learning), which Parts III–VI cover at the A-Level's depth and beyond, and the **hardware requirements** of the scenarios machine learning runs in (GPUs and accelerators for training, what inference needs on a phone), which this card only touches in Part VI's remark about graphics cards. The IB's framing of the topic, rules-from-data against rules-written, is Part I's. A4.3 (HL) goes further into specific models and their evaluation; A4.2 (HL) data preprocessing is not here. A4.4's ethical considerations are [[Ethics and Ownership]].
+**A4.1.1** names deep, reinforcement, supervised, transfer and unsupervised learning and their applications. Parts III–VI develop several of these approaches, but do not provide a transfer-learning treatment. **A4.1.2** compares hardware requirements across deployment scenarios: see [[The GPU — From Triangles to Tensors]] §6 for laptops, GPUs, ASICs/TPUs, FPGAs, edge devices, cloud platforms and HPC, including processing, storage and scalability. The rules-from-data framing is Part I's. A4.3 (HL) goes further into specific models and evaluation; A4.2 (HL) data preprocessing needs separate study. A4.4's ethical considerations are developed in [[Ethics and Ownership]].
 
 ### Where it is *not* examined
 

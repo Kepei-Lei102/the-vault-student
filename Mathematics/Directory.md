@@ -1,6 +1,6 @@
 # The Vault — Mathematics Directory
 
-> **227 cards** — 222 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Lagrange's Identity]] (2026-09-21) — squared area, Cauchy–Schwarz, correlation and least-squares error from one identity.
+> **231 cards** — 226 topic cards across 14 domains, plus 5 formula-sheet references at the folder root. Last landed: [[Plans and Elevations]] (2026-09-22) — three photographs with the depth squashed out, why two views are not enough, and the British and Chinese names for the same drawings.
 > One line per card: what it teaches and, where settled, which syllabus rows it closes. Open the card for the derivations and the graph of what to read first.
 
 **Reading the domains.** Folders are decorative; this index and each card's frontmatter are the map. *(Vocab)* cards are short definition-first entries; the rest are deep cards. Board codes: 0580 = Cambridge IGCSE, 0606 = Cambridge Additional Maths, 9709 = Cambridge A Level (P1–P6), 9231 = Cambridge Further (FP1, FP2, FM, FS), 9260 = OxAQA IGCSE, IB, AP.
@@ -88,7 +88,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 7. **[[Eigenvalues and Eigenvectors]]** — the rails grown up: $\det(A - \lambda I) = 0$, diagonalisation for powers, Cayley–Hamilton both ways, power iteration → PageRank. *9231 FP2 §2.2*
 8. **[[Linear Systems in 3D]]** — three equations = three planes: the determinant sorts unique from not, elimination sorts consistent from not; the census of configurations. *9231 FP2 §2.2*
 
-## Calculus (32)
+## Calculus (34)
 
 1. **[[Limit]]** — intuitive limit, left/right limits, limits at infinity.
 2. **[[Differentiation]]** — first principles, $dy/dx$, gradient of a curve at a point.
@@ -122,6 +122,8 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 30. **[[Arc Length and Surfaces of Revolution]]** — the odometer written in calculus: $ds$ by Pythagoras on the sliver, three costumes, surfaces as $2\pi y\,ds$ with the frustum honesty. *9231 FP2*
 31. **[[Bounding Sums with Integrals]]** — staircase vs ramp: trap a sum between two integrals (the harmonic sum vs $\ln$) or an integral between two sums; $\ln(n!)$ → the $n \log n$ sorting bound. *9231 FP2*
 32. **[[Partial Derivatives and the Gradient]]** — slope on a surface: hold the rest still, the small-change formula, $\nabla f \cdot \mathbf u$ for every direction, gradient ⟂ contour, the saddle test; gradient descent, $\mathbf E = -\nabla V$, image edges. *University*
+33. **[[Multiple Integrals]]** — columns under a surface; slicing and Fubini; limits from a sketch and the three rules; changing the order ($e^{y^2}$); $dA = r\,dr\,d\theta$ and the Gaussian integral; the Jacobian as area stretch; cylindrical and spherical; the hill's 178 million cubic metres; Monte Carlo and the vanishing ball.
+34. **[[Vector Calculus]]** — three fields and a paddle wheel; line integrals and conservative fields; flux; divergence as outflow per volume and curl as circulation per area, each checked as a numerical limit; Green, Stokes and Gauss from one cancelling picture; Maxwell's integral forms turned into differential ones; the planimeter and the continuity equation.
 
 ## Algebra (47)
 
@@ -177,7 +179,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 
 1. **[[Exam Command Words (Vocab)]]** — official Cambridge definitions: sketch vs plot, state vs describe vs explain, show that vs prove vs verify; per-board differences.
 
-## Geometry (38)
+## Geometry (39)
 
 1. **[[Pythagoras Theorem]]** — $a^2 + b^2 = c^2$ with three proofs (赵爽弦图, rearrangement, similar triangles); triples; the converse; the 3D extension.
 2. **[[Angle Properties (Vocab)]]** — acute/obtuse/reflex, complementary/supplementary, vertically opposite, angles on a line and at a point.
@@ -219,6 +221,8 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 
 38. **[[Lagrange's Identity]]** — squared alignment plus squared area; the general coordinate proof, Cauchy–Schwarz equality, Gram/Binet–Cauchy and a sensor-correlation/least-squares example. *Enrichment — no new syllabus row*
 
+39. **[[Plans and Elevations]]** — plan, front and side elevation as square-on photographs with the depth squashed out; internal lines where the surface steps; why two views leave two solids; 俯视图/主视图/左视图 against the English names.
+
 ## Trigonometry (11)
 
 1. **[[Trigonometric Ratios]]** — SOH-CAH-TOA from similarity; exact values from the two special triangles; $\sin^2 + \cos^2 = 1$; elevation and depression.
@@ -234,7 +238,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 10. **[[Fourier Series]]** — orthogonality and coefficient derivation, square/triangle waves, projection, convergence/Gibbs, Parseval, phase, A4 additive-piano synthesis and heat flow; five SVGs, WAVs and two Manim clips. *Enrichment.*
 11. **[[Fourier Transform]]** — continuous transform, DFT/FFT derivations, leakage, STFT and convolution; four SVGs, three WAVs, runnable checks and Manim. *Enrichment.*
 
-## Number (40)
+## Number (41)
 
 1. **[[Upper and Lower Bounds]]** — error intervals, combining bounds in calculations, truncation vs rounding.
 2. **[[Laws of Indices]]** — seven laws with *why* proofs; zero, negative and fractional indices; index equations.
@@ -277,6 +281,7 @@ See also: [[Physics/Directory|Physics]] · [[CS/Directory|Computer Science]] · 
 
 39. **[[Natural Numbers]]** — Peano-style axioms, von Neumann construction, recursive addition/multiplication, proved arithmetic laws and termination measures.
 40. **[[Prime Numbers]]** — square-root test, sieve, Euclid’s infinitude proof, unique factorisation and finite-field/RSA applications.
+41. **[[Integers]]** — signed arithmetic, distributive sign-rule proofs, natural-pair construction and machine-integer contrast.
 
 ---
 

@@ -4,6 +4,9 @@ prerequisites:
   - "[[Laws and Theorems]]"
   - "[[Learning as Verification]]"
 leads_to: []
+teach_together:
+  - "[[The Corn Wouldn’t Behave]]"
+  - "[[Change the Representation]]"
 tags:
   - subject/methodology
   - subject/philosophy
@@ -262,6 +265,8 @@ For the pendulum: if the missing ingredient is the sine's curvature, increasing 
 Then run that test, revise only what the evidence supports, and check a new case. The aim is to understand *why* the model succeeds, so that you can recognise where it will stop succeeding.
 
 ## Connections
+
+- **Historical companion:** [[The Corn Wouldn’t Behave]] — McClintock’s maize patterns, controlled crosses and a genetic element whose location could change.
 
 - **Foundations:** [[Laws and Theorems]] — deduction and empirical support; [[Learning as Verification]] — checks that expose a discrepancy.
 - **Choosing a framework:** [[Choosing Effective Equations]] — physical conditions select equations; [[Forward Reading and Problem Discovery]] — trace what each condition makes possible.

@@ -6,6 +6,7 @@ prerequisites:
   - "[[Sequences]]"
   - "[[Logarithms]]"
 leads_to:
+  - "[[Java Arrays and ArrayList]]"
   - "[[Sorting]]"
   - "[[Big-O Notation]]"
   - "[[Binary Trees]]"

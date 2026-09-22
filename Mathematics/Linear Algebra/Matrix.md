@@ -4,6 +4,7 @@ prerequisites:
   - "[[Four Operations (Vocab)]]"
   - "[[Vectors]]"
 leads_to:
+  - "[[The GPU — From Triangles to Tensors]]"
   - "[[Identity Matrix]]"
   - "[[Matrix Transformations]]"
   - "[[Combination of Transformations]]"

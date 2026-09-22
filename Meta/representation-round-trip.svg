@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 490" width="100%">
+ <style>text {font-family:system-ui,-apple-system,sans-serif;fill:#888;text-anchor:middle} .title{font-size:25px;font-weight:600}.label{font-size:23px}.small{font-size:18px}</style>
+ <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#888"/></marker></defs>
+ <text x="500" y="40" class="title">Change the route. Keep the answer.</text>
+ <rect x="55" y="85" width="300" height="100" rx="14" fill="#2563eb" fill-opacity=".12" stroke="#2563eb" stroke-width="2"/>
+ <text x="205" y="125" class="label">Original description x</text><text x="205" y="157" class="small">What the question gives</text>
+ <rect x="645" y="85" width="300" height="100" rx="14" fill="#059669" fill-opacity=".12" stroke="#059669" stroke-width="2"/>
+ <text x="795" y="125" class="label">Original answer F(x)</text><text x="795" y="157" class="small">What the question asks for</text>
+ <rect x="55" y="300" width="300" height="100" rx="14" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="2"/>
+ <text x="205" y="340" class="label">New description T(x)</text><text x="205" y="372" class="small">Useful relationships exposed</text>
+ <rect x="645" y="300" width="300" height="100" rx="14" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="2"/>
+ <text x="795" y="340" class="label">Result G(T(x))</text><text x="795" y="372" class="small">Still in the new description</text>
+ <g stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M365 135H635"/><path d="M365 350H635"/><path d="M205 195V290"/><path d="M795 290V195"/></g>
+ <text x="500" y="113" class="label">Original operation F</text><text x="500" y="328" class="label">Simpler operation G?</text>
+ <text x="293" y="239" class="small">Encode T</text><text x="706" y="239" class="small">Decode T⁻¹</text>
+ <text x="500" y="451" class="label">Check the round trip — including domains and boundary conditions.</text>
+</svg>

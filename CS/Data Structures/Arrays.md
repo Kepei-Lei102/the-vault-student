@@ -4,6 +4,7 @@ prerequisites:
   - "[[Programming Fundamentals]]"
   - "[[RAM and the Memory Hierarchy]]"
 leads_to:
+  - "[[Java Arrays and ArrayList]]"
   - "[[Digital Audio Workstation]]"
   - "[[File Handling]]"
   - "[[User-Defined Data Types]]"
@@ -14,6 +15,7 @@ leads_to:
   - "[[Binary Trees]]"
   - "[[The Arrow That Pointed the Other Way]]"
   - "[[Hash Tables]]"
+  - "[[Memory Allocation and the Heap]]"
 tags:
   - subject/computer-science
   - domain/data-structures

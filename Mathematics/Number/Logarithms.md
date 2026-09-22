@@ -350,9 +350,9 @@ Both orderings end up with the same $\ln$ and the same $e^x$ — they're like tw
 
 **§6.3 Solving equations of the form $a^x = b$.** The only technique is "take logs of both sides, then use the power law." Exam language: "Solve, giving your answer correct to 3 significant figures." A common extension is a disguised quadratic: let $u = 2^x$ in $2^{2x} - 5 \cdot 2^x + 4 = 0$ → $u^2 - 5u + 4 = 0$ → $u = 1$ or $u = 4$ → $x = 0$ or $x = 2$.
 
-### A-Level
+### Cambridge 9709
 
-Logs reappear in:
+**§2.2 (Paper 2) and §3.2 (Paper 3), Logarithmic and exponential functions**, in the syllabus's own words: understand the relationship between logarithms and indices and use the laws of logarithms, *excluding change of base* (the one law 0606 §6.2 examines and 9709 does not); understand the definition and properties of $e^x$ and $\ln x$ as inverse functions with their graphs, including $y = e^{kx}$ for positive and negative $k$; use logarithms to solve equations and inequalities in which the unknown appears in indices, such as $3^{2x+1} = 4^{2x-1}$; and use logarithms to transform a relationship to linear form and read off constants from gradient and intercept, with $y = kx^n$ and $y = k(a^x)$ as the two named models. Beyond that section, logs reappear in:
 - **Differentiation** — $\dfrac{d}{dx}\ln x = \dfrac{1}{x}$, logarithmic differentiation for $y = x^x$ and similar.
 - **Integration** — $\int \dfrac{1}{x}\,dx = \ln|x| + C$, plus integration-by-substitution tricks using logs.
 - **Differential equations** — separable equations routinely end with a $\ln$ on both sides; solving for $y$ requires exponentiating to cancel.
@@ -360,7 +360,11 @@ Logs reappear in:
 
 ### IB AA
 
-Same laws. IB AA SL covers log equations and change of base; HL extends into logarithmic differentiation, log scales in applications, and complex logs in the complex-numbers option.
+The IB Mathematics guides are not on file, so no topic numbers are claimed here; the laws, log equations and the linearising models above are the same content wherever they are examined.
+
+### Where this is *not* examined
+
+Cambridge 0580 and OxAQA 9260 have no logarithm row: their exponential-growth questions are solved by calculator trial and improvement, which [[Exponential Growth and Decay]] records.
 
 ## Connections
 

@@ -32,6 +32,10 @@ tags:
 
 ## 中文锚点
 
+洗衣机怎么知道水够了，该停进水、开始转了？里面有个小电脑，一边读传感器，一边控制阀门和电机。你选“快洗”还是“羊毛”，它还是在替这台洗衣机管洗衣服这件事。这就是嵌入式系统：计算机住进另一件设备里，专门替它干活。它未必算得慢，也未必没有屏幕；关键是它在整件产品里负责什么，而不是长得像不像电脑。
+
+### Vocabulary
+
 | English | 中文 | one-line meaning |
 |---|---|---|
 | embedded system | 嵌入式系统 | a computer built *inside* a device, dedicated to one function |

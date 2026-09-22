@@ -57,7 +57,7 @@ A **progression** is a sequence that follows a *rule* for moving from one term t
 $$u_n = u_{n-1} + d \qquad \text{equivalently} \qquad u_n - u_{n-1} = d$$
 
 - **Geometric progression (GP)** 等比数列 — each term is a fixed multiple $r$ of the previous, called the **common ratio** (公比):
-$$u_n = r \cdot u_{n-1} \qquad \text{equivalently} \qquad \frac{u_n}{u_{n-1}} = r$$
+$$u_n = r \cdot u_{n-1} \qquad \text{and, if }u_{n-1}\ne0,\qquad \frac{u_n}{u_{n-1}} = r$$
 
 A **series** (级数) is the sum of a sequence: $S_n = u_1 + u_2 + \cdots + u_n$.
 
@@ -77,10 +77,9 @@ And for GPs there's a third, more profound question: **"What if I add up *all* o
 
 ### 中文锚点 (Chinese Anchor)
 
-等差数列：相邻两项的**差**恒定 → 公差 $d$。
-等比数列：相邻两项的**比**恒定 → 公比 $r$。
+假设你有一百元，两种攒钱办法任你选：每周固定多存十元，或者每周存入现有余额的十分之一。第一周看不出区别，都是多十元；第二周，后者就要存十一元了，因为它按已经变多的余额来算。等差数列每次加的是同样的一笔，等比数列每次乘的是同样的倍数。看清每一步在重复什么，才能看出后面的数会怎么变。
 
-中英术语对照：
+### 中英术语对照
 
 | 中文 | English | 符号 |
 |---|---|---|
@@ -90,8 +89,8 @@ And for GPs there's a third, more profound question: **"What if I add up *all* o
 | 通项公式 | $n$th term formula | $u_n$ |
 | 前 $n$ 项之和 | sum of first $n$ terms | $S_n$ |
 | 无穷级数 | infinite series | $S_\infty$ |
-| 收敛 | convergent | $\lvert r \rvert < 1$ |
-| 发散 | divergent | $\lvert r \rvert \geq 1$ |
+| 收敛 | convergent | for a GP with $a\ne0$: $\lvert r \rvert < 1$ |
+| 发散 | divergent | for a GP with $a\ne0$: $\lvert r \rvert \geq 1$ |
 
 > [!tip] 两个关键字
 > 等 (děng) = equal / same. 差 (chā) = difference. 比 (bǐ) = ratio.

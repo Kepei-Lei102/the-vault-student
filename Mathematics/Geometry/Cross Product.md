@@ -6,6 +6,7 @@ prerequisites:
   - "[[Trigonometric Ratios]]"
   - "[[Magnitude of a Vector (Vocab)]]"
 leads_to:
+  - "[[Vector Calculus]]"
   - "[[Lagrange's Identity]]"
   - "[[Planes in 3D]]"
   - "[[Torque]]"

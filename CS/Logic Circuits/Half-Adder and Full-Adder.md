@@ -49,6 +49,10 @@ Each column takes **three** inputs — the two number-bits and a **carry** comin
 
 ### 中文锚点
 
+竖式加法算到十位时，你不能只盯着十位上的两个数，还得看看个位有没有进上来一个 1。电脑做二进制加法也一样：半加器只管把两个比特相加，全加器还把右边传来的进位一起算上。二进制逢二进一，所以两个 1 相加，本位写 0，往左送一个 1。把这样的小电路一列列接起来，每列管好自己、把进位交给左邻居，一串很长的数就加起来了。
+
+### Vocabulary
+
 | English | 中文 | 一句话 |
 |---|---|---|
 | half adder | 半加器 (bàn jiāqì) | 加**两**个 1 位，无进位输入 |
@@ -56,8 +60,6 @@ Each column takes **three** inputs — the two number-bits and a **carry** comin
 | sum | 和 (hé) | 写在本列下面的那一位 |
 | carry-out | 进位 (jìnwèi) | 推给左边一列的那一位 |
 | ripple-carry adder | 串行进位加法器 | $n$ 个全加器串起来，进位一级级上传 |
-
-核心事实两句话：**和 = 异或**（本列有奇数个 1 就写 1），**进位 = 多数**（三个输入里至少两个是 1 就进位）。9618 §15.2 要求会画半加器、全加器，并**用两个半加器搭出一个全加器**。
 
 ---
 
@@ -109,7 +111,7 @@ $$\boxed{\;\text{Sum} = A \oplus B \oplus C_{in} \qquad C_{out} = AB + AC_{in} +
 
 ### Two half adders make a full adder
 
-You do not have to build the full adder from scratch — the 9618 favourite is to assemble it from **two half adders and one OR gate**:
+You do not have to build the full adder from scratch — one useful construction assembles it from **two half adders and one OR gate**:
 
 ![[full-adder-circuit.svg|620]]
 
@@ -172,30 +174,37 @@ The through-line of the whole [[Logic Gates|gates]] → [[Boolean Algebra|algebr
 
 ## Worked examples
 
-**1 — Trace a full-adder row.** Inputs $A=1, B=0, C_{in}=1$. Sum $= 1\oplus 0\oplus 1 = 0$; $C_{out} = $ majority$(1,0,1) = 1$ (two of the three are $1$). So $1 + 0 + 1 = 10_2$ — write $0$, carry $1$. Matches row six of the table. ✓
+**1 — Trace a full-adder row.** *Trigger: two bits plus carry-in → use the full-adder sum/parity and carry/majority rules.* Inputs $A=1, B=0, C_{in}=1$. Sum $= 1\oplus 0\oplus 1 = 0$; $C_{out} = $ majority$(1,0,1) = 1$ (two of the three are $1$). So $1 + 0 + 1 = 10_2$ — write $0$, carry $1$. Matches row six of the table. ✓
 
-**2 — Build a full adder, count the gates.** Two half adders (2 XOR + 2 AND) + one OR $= $ **2 XOR, 2 AND, 1 OR = five gates**. (A from-scratch DNF build of $C_{out}$ alone would use more; the two-half-adder route is the economical one — this is minimisation from [[Boolean Algebra]] paying off.)
+**2 — Build a full adder, count the gates.** *Trigger: build a three-input column from two-input modules → cascade two half adders, then combine their carries.* Two half adders (2 XOR + 2 AND) + one OR $= $ **2 XOR, 2 AND, 1 OR = five gates**. (A from-scratch DNF build of $C_{out}$ alone would use more; the two-half-adder route is the economical one — this is minimisation from [[Boolean Algebra]] paying off.)
 
-**3 — 4-bit subtraction $5 - 3$.** In 4-bit two's complement $5 = 0101$, $3 = 0011$, so $\overline{3} = 1100$. Set subtract $=1$: the adder computes $0101 + 1100 + 1 = 10010$. Drop the carry out of 4 bits → $0010 = 2$. And $5 - 3 = 2$. ✓ One adder, a flipped control line, no subtractor in sight.
+**3 — 4-bit subtraction $5 - 3$.** *Trigger: subtraction using an adder → use two’s-complement negation, keeping only four result bits.* In 4-bit two's complement $5 = 0101$, $3 = 0011$, so $\overline{3} = 1100$. Set subtract $=1$: the adder computes $0101 + 1100 + 1 = 10010$. Drop the carry out of 4 bits → $0010 = 2$. And $5 - 3 = 2$. ✓ One adder, a flipped control line, no subtractor in sight.
 
 ---
 
 ## Exam Notes
 
-### Cambridge 9618 (A Level, §15.2)
-Directly examined. You must be able to: (1) **draw a half adder** (XOR for sum, AND for carry) and give its truth table; (2) **draw a full adder** and its truth table; (3) **construct a full adder from two half adders and an OR gate** — the single most common adder question; (4) explain the roles of $C_{in}$ and $C_{out}$ and how full adders chain to add multi-bit numbers. Know that Sum is XOR (parity) and carry is AND / majority. Carry-lookahead and the ripple *delay* are enrichment, not required.
+### Cambridge 9618 — A Level §15.2
 
-### Cambridge 0478 (IGCSE)
-Not examined — IGCSE stops at gates and truth tables ([[Logic Gates]]). Adders are the A-Level step up.
+Produce truth tables for logic circuits including **half adders and full adders**. Derive sum and carry from binary addition, distinguish carry-in from carry-out, and trace a supplied circuit. The two-half-adders-plus-OR construction is a useful way to understand the full adder; the syllabus does not separately mandate that particular construction. Ripple-carry timing and carry-lookahead design are enrichment, not named requirements.
 
-### Other A-Level boards (AQA / OCR / Edexcel)
-All examine half and full adders, near-identically; some also want the ripple-carry chain and the adder/subtractor by name.
+### AQA 7517 — §4.6.4.1
 
-### AP
-Not covered — AP CSA is Java/OOP, AP CSP is concepts; neither builds arithmetic circuits. This is a Cambridge/UK-A-Level and first-year-university (digital logic) topic.
+Recognise and trace both adder circuits; **construct the half-adder circuit**. The specification distinguishes those demands: do not turn “trace a full adder” into an unsupported requirement to reproduce its construction from memory. [AQA specification](https://www.aqa.org.uk/subjects/computer-science/a-level/computer-science-7517/specification/subject-content/fundamentals-of-computer-systems).
 
-### IB Computer Science
-Not a named statement — A1.2's logic content stops at gates and truth tables, and no IB statement asks for adder circuits. That said, the half adder is the cleanest possible *instance* of A1.2's "logic gates processing encoded data" (two gates literally doing binary arithmetic), so it makes a strong worked example even where it isn't examined.
+### OCR H446 — §1.4.3(e)
+
+The logic associated with **half and full adders** is explicitly included. Practise deriving the output bits and tracing the gates, alongside Boolean algebra and truth tables. [OCR specification](https://www.ocr.org.uk/Images/170844-specification-accredited-a-level-gce-computer-science-h446.pdf).
+
+### IB Computer Science — first assessment 2027
+
+**A1.2.3–A1.2.5** cover gates, truth tables and logic diagrams, including Boolean algebra and simplification. They do not name an adder as a circuit to memorise. A supplied adder can still be a legitimate application of those assessed gate-and-table skills; “not named” does not mean a circuit using XOR and AND cannot appear.
+
+### Where it is not a named requirement
+
+**Cambridge 0478 §10** requires combinational gates, diagrams, expressions and truth tables, not half/full adders as named devices. **Pearson Edexcel IAL Computer Science (first teaching 2026), §5.3**, likewise specifies Boolean expressions and truth tables without naming adders. Do not confuse that qualification with a blanket claim about “Edexcel A Level”. [Pearson specification](https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/computer-science/2026/specification-and-sample-assessments/ial-computer-science-specification.pdf).
+
+**AP CSA** (2025–26 CED) and **AP CSP** (Fall 2023 CED) examine programming logic, not hardware adder design. Boolean expressions are still assessed; the circuit construction is enrichment.
 
 ---
 
@@ -203,7 +212,7 @@ Not a named statement — A1.2's logic content stops at gates and truth tables, 
 
 - **Parent:** [[Logic Gates]] — the XOR (sum) and AND (carry) the adder wires together; Logic Gates previews the half adder and hands off the full arithmetic story.
 - **The reused function:** [[Karnaugh Maps]] — the carry-out *is* the majority function minimised there; [[Boolean Algebra]] — the two-half-adder build is minimisation in action, and $C_{out}=AB+(A\oplus B)C_{in}$ is the algebra of majority.
-- **The number system:** [[Number Bases]] — binary and place value, the base-2 system the circuit adds in; [[Two's Complement]] — binary addition, and why one adder also subtracts (invert + carry-in $1$); [[Overflow and Underflow]] — the carry-out is the overflow signal.
+- **The number system:** [[Number Bases]] — binary and place value, the base-2 system the circuit adds in; [[Two's Complement]] — binary addition, and why one adder also subtracts (invert + carry-in $1$); [[Overflow and Underflow]] — final carry-out detects unsigned addition overflow; signed overflow compares the carry into and out of the sign bit.
 - **The application:** [[Arithmetic Logic Unit]] — the adder/subtractor is its arithmetic core; [[CPU Architecture and the Fetch-Execute Cycle]] — where the ALU sits in the datapath; [[Bitwise Operations]] — the logic block beside the adder in an ALU.
 - **History:** [[Stories/The Boolean-to-Silicon Bridge]] — Boole → Shannon → the circuits that made arithmetic physical.
 

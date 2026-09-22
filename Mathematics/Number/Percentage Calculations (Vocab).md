@@ -142,14 +142,14 @@ After a $-p\%$ change, divide by $(1 - p/100)$.
 
 Common 9260 commands: *calculate*, *find the percentage change*, *express as a percentage*, *find the original*. Reverse percentage is a regular Extension-paper item; students who attempt to "subtract the same percentage back" lose every mark in a 3–4 mark part.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.13 — percentages, including increase, decrease, and reverse percentage. Simple and compound interest live at the same syllabus code but are covered in [[Simple and Compound Interest (Vocab)|Simple and Compound Interest]]. Papers 2 and 4 both test percentage increase and reverse percentage, often in money, population, and measurement contexts.
+### Cambridge 0580 (Core and Extended)
+**Syllabus ref:** C1.13 and E1.13, Percentages. Both tiers require "calculate percentage increase or decrease", with the contexts listed in the syllabus: deposit, discount, profit and loss "as an amount or a percentage", earnings, and percentages over 100 %. **Extended only:** line 5, "calculate using reverse percentages", with the syllabus's own example, "find the cost price given the selling price and the percentage profit", and repeated percentage change. A Core candidate is not asked to reverse a percentage. Simple and compound interest share the code and are in [[Simple and Compound Interest (Vocab)|Simple and Compound Interest]]; "formulas are not given".
 
 ### Cambridge 0606
 Reverse percentage is assumed knowledge. It resurfaces inside exponential and logarithmic equations — e.g., a compound-interest-style problem ending in *"find $n$ such that..."* routes through [[Laws of Indices]] and logs.
 
-### A-Level
-Not a standalone topic, but percentage-change reasoning underpins financial maths, relative error in stats, and any applied modelling involving rates or growth.
+### Where this is *not* examined
+Cambridge 9709 and 9231 set no question on percentages as such; percentage-change reasoning appears inside exponential growth and decay and relative error, and is assumed.
 
 ## Connections
 

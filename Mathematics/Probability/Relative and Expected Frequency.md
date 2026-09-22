@@ -283,24 +283,19 @@ $$\text{Relative frequency} = \dfrac{f}{n} = \dfrac{24}{80} = 0.3$$
 
 ### OxAQA 9260
 
-- S10: estimate probabilities from equally likely outcomes (theoretical) or from relative frequency (experimental); calculate expected frequency
-- S11: compare experimental data with theoretical probabilities — students should be able to say whether results are "consistent" with a fair model
-- S12: understand that repeated experiments may give different outcomes — randomness produces variation
-- S13: understand that increasing sample size generally leads to better estimates of probability
-- Expect questions combining all four: "Here's data from 200 trials. Calculate the relative frequency. Is it consistent with a fair spinner? How would the estimate change with 2000 trials?"
+All four rows are **Core**: S10, "understand and use estimates or measures of probability from theoretical models (including equally likely outcomes), or from relative frequency" and "understand and use expected frequency"; S11, "compare experimental data and theoretical probabilities"; S12, "understand that if an experiment is repeated, this may – and usually will – result in different outcomes"; S13, "understand that increasing sample size generally leads to better estimates of probability and population characteristics". Expect a question that combines them: relative frequency from a table of trials, whether it is consistent with a fair model, and how the estimate would change with more trials.
 
-### Cambridge 0580
+### Cambridge 0580 (Core and Extended)
 
-- E8.2: estimate probabilities from relative frequency; calculate expected frequency from given probability
-- Expect combined questions: calculate relative frequency from a table, then use it to predict future outcomes
-- Both Paper 2 and Paper 4
+C8.2 and E8.2, Relative and expected frequencies, with identical wording on both tiers: "understand relative frequency as an estimate of probability" (the syllabus's example is a spinner) and "calculate expected frequencies" (its example, an expected value from a population). The row "includes understanding what is meant by fair, bias and random". Papers 1 and 2 are non-calculator.
 
-### AP / IB / A-Level
+### Cambridge 9231 (Further Probability and Statistics)
 
-- **AP Statistics:** law of large numbers formally stated; simulation and sampling distributions; the **central limit theorem** (CLT) — the sampling distribution of sample means is approximately normal for large $n$, regardless of the population shape
-- **IB Mathematics AA HL:** CLT and its applications; confidence intervals; experimental vs theoretical probability with convergence
-- **A-Level Further Mathematics (FS1):** CLT applied to approximate sample means from Geometric, Poisson, Binomial, and Negative Binomial distributions; chi-squared ($\chi^2$) test formalises the "is it biased?" question
-- The CLT explains *how fast* relative frequency converges: the standard deviation of the sample mean is $\dfrac{\sigma}{\sqrt{n}}$, which is why **quadrupling the sample size only halves the error**
+The formal follow-ons are here, not at IGCSE. The formula list states the Central Limit Theorem, $\bar X \sim N(\mu, \sigma^2/n)$, which says *how fast* relative frequency converges: the standard deviation of a sample mean is $\sigma/\sqrt n$, so quadrupling the sample size only halves the error. §4.3 sets the $\chi^2$ goodness-of-fit test, which makes "is the spinner fair?" a precise question, with the syllabus's rule that classes are combined so that each expected frequency is at least 5.
+
+### Not on file
+
+AP Statistics and the IB Mathematics guides are not held on file and are not summarised here.
 
 ### Beyond high school — University
 

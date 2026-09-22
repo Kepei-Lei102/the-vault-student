@@ -126,16 +126,16 @@ Simple interest plotted against time is a straight line; compound interest is an
 
 Common commands: *calculate*, *find the amount*, *find the interest*, *find the total value of the investment*. Read carefully — "total value" = amount $A$, "interest" = $A - P$.
 
-### Cambridge 0580 Extended
-**Syllabus ref:** E1.13 — simple and compound interest, including use of the formula $A = P(1 + r/100)^n$. Paper 4 often embeds compound interest in multi-part questions: one part asks for the amount after a fixed term, a later part asks for the term given a target amount. Students are not expected to use logs on 0580, so trial-and-improvement with the calculator is the accepted method.
+### Cambridge 0580 (Core and Extended)
+**Syllabus ref:** C1.13 and E1.13, *Percentages*, point 4: "Calculate with simple and compound interest." The Core column adds "Formulas are not given", so a Core candidate builds compound interest year by year or knows $A = P(1 + r/100)^n$ unprompted; the Extended column adds that problems may include repeated percentage change. Paper 4 often embeds compound interest in multi-part questions: one part asks for the amount after a fixed term, a later part asks for the term given a target amount. Students are not expected to use logs on 0580, so trial-and-improvement with the calculator is the accepted method.
 
 ### Cambridge 0606
 Compound interest resurfaces as the canonical example inside logarithmic equations. $P(1 + r/100)^n = T$ is rearranged for $n$ using logs:
 $$n \;=\; \frac{\ln(T/P)}{\ln(1 + r/100)}$$
 This is the 0606 route to solving the "how many years until the investment reaches $\$X$?" question cleanly, without trial-and-improvement.
 
-### A-Level
-Financial maths uses the continuous-growth limit $A = Pe^{rt}$. The nominal-rate-vs-effective-rate distinction (APR vs APY in US notation; nominal vs AER in UK) also lives here. Not on IGCSE but worth knowing as the college-level follow-on.
+### Cambridge 9709 and where this is *not* examined
+Cambridge 9709 has no interest or financial-mathematics row; the nearest content is the exponential modelling of [[Exponential Growth and Decay]], where $A = P(1 + r/100)^n$ becomes $y = Ab^t$ and, in the continuous limit, $Pe^{rt}$. The nominal-versus-effective-rate distinction (APR against APY, nominal against AER) is college-level financial mathematics, not on any Cambridge or OxAQA paper here. IB Mathematics: Applications and Interpretation is known to examine compound interest and annuities on a financial calculator, but its guide is not on file, so no row is claimed.
 
 > [!info] Beyond syllabus — the Rule of 72
 > At an annual compound rate of $r\%$, money roughly doubles every $\dfrac{72}{r}$ years. At $6\%$, doubling takes about $12$ years; at $9\%$, about $8$ years. Derivation: $(1 + r/100)^n = 2 \Rightarrow n = \ln 2 / \ln(1 + r/100) \approx 69/r$ for small $r$; the round number $72$ is chosen because it has many factors ($1, 2, 3, 4, 6, 8, 9, 12$) for easy mental arithmetic. Used daily by investors and anyone estimating inflation's bite — not on any syllabus, widely useful.

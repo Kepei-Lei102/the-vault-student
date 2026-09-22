@@ -313,13 +313,15 @@ Median $-$ $Q_1$ $= 18 - 12 = 6$. $Q_3$ $-$ Median $= 23 - 18 = 5$. These are si
 
 ### Cambridge 0580
 
-- Box plots are **not** part of the 0580 Extended syllabus. If you encounter them in practice, it's likely from a different specification (9260, IB, or AP).
+- Box plots are **not** in the 0580 syllabus: E9.6 is cumulative frequency diagrams with the median, percentiles, quartiles and interquartile range read from them, and no row names a box plot. If you meet one in practice it comes from 9260, 9709 or another specification.
 
-### AP / IB / A-Level
+### Cambridge 9709 (Paper 5, Probability and Statistics 1)
 
-- **AP Statistics:** box plots (called "boxplots" in AP style) are a core tool for exploratory data analysis. The $1.5 \times \text{IQR}$ rule for outliers is required. AP distinguishes between **standard box plots** (whiskers to min/max) and **modified box plots** (whiskers to fences, outliers plotted individually). The modified version is strongly preferred and the default on graphing calculators (TI-83/84).
-- **IB Mathematics AI SL/HL:** box-and-whisker diagrams are part of the descriptive statistics syllabus. Students are expected to use technology (GDC) to generate them and interpret them in context.
-- **A-Level Statistics:** box plots are used for comparing distributions and identifying outliers. The interquartile range and outlier identification using $Q_1 - 1.5 \times \text{IQR}$ / $Q_3 + 1.5 \times \text{IQR}$ fences are standard.
+- **§5.1 Representation of data:** "draw and interpret stem-and-leaf diagrams, box-and-whisker plots, histograms and cumulative frequency graphs" (with back-to-back stem-and-leaf diagrams named), and "understand and use different measures of central tendency (mean, median, mode) and variation (range, interquartile range, standard deviation)", the syllabus adding "e.g. in comparing and contrasting sets of data". So a 9709 box plot question is a comparison question: two plots, two statements, median and interquartile range in context. The outlier fences are not named in the syllabus; follow any definition the question gives.
+
+### AP Statistics and IB
+
+- The AP Statistics course description and the IB Mathematics guides are not on file, so no topic numbers are claimed. The **modified box plot**, whiskers stopping at the $1.5 \times \text{IQR}$ fences with outliers plotted individually, is the convention those courses and graphing calculators use, and it is worth knowing which convention a question expects.
 
 ### Beyond high school — University
 

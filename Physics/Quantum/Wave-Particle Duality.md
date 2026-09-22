@@ -67,8 +67,7 @@ A wave spreads its energy thinly over a whole wavefront; a particle carries it a
 
 ### 中文锚点
 
-光和电子都具有**波粒二象性**：传播时会出现干涉和衍射，探测时又表现为一次次局部的能量交换。双缝实验中，单个光子只留下一个点，许多光子的落点累积起来却形成条纹。光子的能量为 $E=hf$；在通常的单光子光电效应中，光子能量必须达到金属的逸出功，才能释放电子，超过阈值后最快电子的动能满足 $K_{\max}=hf-\Phi$。因此，在这个条件下，频率太低的光并不能靠增加亮度来替代足够的单个光子能量。电子也有德布罗意波长 $\lambda=h/p$。**电子显微镜**正利用这一点：加速后的电子波长比可见光短得多，这让电子显微镜有可能分辨远小于普通光学显微镜分辨极限的结构；实际能看多细，还受透镜、样品和像差等因素限制。所谓二象性，不是粒子随意切换身份，而是同一个量子对象的行为不能只靠经典的“波”或“粒子”之一来描述。
-
+手机拍很暗的照片时，得多等一会儿，让传感器收集到足够多的光。把光再调弱，实验里的探测器就能分辨出一次次单独的到达，每次只在某一个位置留下一个记录。奇妙的是：让这样的光经过双缝，少量落点看着杂乱，积累多了，却会显出明暗条纹。一次探测是一个点，许多落点攒起来的分布却遵循波的干涉规律——**波粒二象性**要我们同时承认这两件事。普通照片本身不展示双缝干涉，但“多等一会儿，图像才显出来”的经验，能帮助我们想象条纹怎样逐点长出来。
 
 ---
 
@@ -80,9 +79,9 @@ A wave spreads its energy thinly over a whole wavefront; a particle carries it a
 
 `wave-particle-duality-sim.py` reproduces the logic rather than the apparatus. It takes the two-slit intensity from [[Diffraction]], two slits of finite width, treats it as a **probability density**, and draws photons from it one at a time. Each photon lands at one point, as a particle must. After ten photons the dots are noise: their correlation with the interference pattern is $0.22$. After a hundred, $0.64$; after a thousand, $0.95$; after twenty thousand, $1.00$, and the fringes are exact. Cover one slit and the same twenty thousand photons land in a smooth single-slit blur, correlation $0.29$ with the two-slit pattern and $0.97$ with the one-slit envelope.
 
-That last line is the strange one, and worth slowing down for. Every photon in the two-slit run went through *a* slit, landed at *a* point, and never met another photon. Yet where it was allowed to land depended on whether the *other* slit was open. The wave is not a crowd effect; it belongs to each photon on its own. Each photon interferes with itself.
+That last line is the strange one, and worth slowing down for. Every photon in the two-slit run landed at one point without needing another photon in the apparatus. The observed pattern depends on both open paths; the interference experiment does not establish that each photon secretly took one definite slit. The wave is not a crowd effect; it belongs to each photon on its own. Each photon interferes with itself.
 
-**And if you watch which slit?** The natural next experiment is to put a detector at one slit, so that each photon's path is known, and keep both slits open. Do that and the fringes vanish: the dots fall in two overlapping single-slit blurs, as if the photons had been sent through one slit or the other and never both. This is measured fact, not folklore, and it is the sharpest statement of duality there is. The wave belongs to a photon whose path is *undetermined*; the moment the apparatus records a path, the photon has one, and a thing with one path cannot interfere with itself. It is not about a person looking, and not about disturbance in the ordinary sense: any physical record of the path does it, however gently, and erasing that record before the photon lands brings the fringes back (the "quantum eraser" experiments of the 1990s). [[Quantum Mechanics]] is where the rule behind this is written down; here it is enough to know that "which slit?" and "which fringe?" are questions the same photon cannot answer both of.
+**And if you record which slit?** A physical interaction can correlate each path with a distinguishable detector or environment state. For fully distinguishable path records, the unsorted screen counts lose the interference cross term and give a sum of single-path intensities. No conscious observer is required. Quantum-eraser arrangements can reveal complementary fringes in appropriately conditioned subsets, or restore coherence if the marking interaction is coherently undone; merely deleting a classical record does not restore the unsorted pattern. The correlations, not a person's knowledge, are doing the work. [A quantum-eraser experiment explaining the conditional counts](https://doi.org/10.1073/pnas.1213201110).
 
 ![[wave-particle-duality-manim.mp4]]
 

@@ -5,24 +5,24 @@ written for international curricula: Cambridge IGCSE and A-Level, IB, and AP.
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> **Edition** `student-2026-09-21` · built 2026-09-21 from commit `21b9356`  
-> 462 cards · 747 diagrams · 158 explainers · 157 illustrations
+> **Edition** `student-2026-09-22` · built 2026-09-22 from commit `898c063` + uncommitted changes  
+> 485 cards · 793 diagrams · 175 explainers · 162 illustrations
 
 ---
 
 ## What's inside
 
-**462 Markdown cards** across five collections, plus the figures that go with them —
-**747 SVG diagrams** (many animated), **158 MP4 explainers**, and
-**157 illustrations and comics**.
+**485 Markdown cards** across five collections, plus the figures that go with them —
+**793 SVG diagrams** (many animated), **175 MP4 explainers**, and
+**162 illustrations and comics**.
 
 | Folder | Cards | What it is |
 |---|---|---|
-| `Mathematics/` | 227 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
-| `Physics/` | 82 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
-| `CS/` | 76 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
-| `Stories/` | 57 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
-| `Meta/` | 20 | Methodology cards: how to *think* across domains. |
+| `Mathematics/` | 231 | Number, Algebra, Geometry, Trigonometry, Calculus, Statistics, Probability, Functions, Combinatorics, Linear Algebra, Coordinate Geometry, Measurement, Foundations, Problem Solving — plus formula-sheet references. |
+| `Physics/` | 86 | Mechanics, Foundations (measurement), Thermal, Fields, Electricity, Oscillations, Waves, Modern, Astronomy, Medical. |
+| `CS/` | 86 | Foundations, Logic Circuits, Algorithms, Data Representation, Hardware Systems, Systems Software, Data Structures. |
+| `Stories/` | 61 | Fun-first historical narratives — the human drama of mathematics and science as its own subject. |
+| `Meta/` | 21 | Methodology cards: how to *think* across domains. |
 
 Every concept appears in **both English and Chinese**, with key terminology anchored in each
 card's **中文锚点** section.

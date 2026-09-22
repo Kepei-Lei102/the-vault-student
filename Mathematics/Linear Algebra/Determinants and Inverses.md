@@ -6,6 +6,7 @@ prerequisites:
   - "[[Matrix Transformations]]"
   - "[[Laplace and Napoleon]]"
 leads_to:
+  - "[[Multiple Integrals]]"
   - "[[Invariant Points and Lines]]"
   - "[[Eigenvalues and Eigenvectors]]"
   - "[[Linear Systems in 3D]]"

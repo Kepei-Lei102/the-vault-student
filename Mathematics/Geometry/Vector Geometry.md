@@ -266,7 +266,7 @@ Students confuse which way a displacement points.
 
 ### OxAQA 9260
 
-Syllabus: **G22** (Core) — "solve simple geometrical problems in 2D using vector methods."
+Syllabus: **G22, Extension content** (the Core column of G22 is empty): "understand and use vector notation; calculate, and represent graphically the sum of two vectors, the difference of two vectors and a scalar multiple of a vector; understand and use the commutative and associative properties of vector addition; solve simple geometrical problems in 2D using vector methods."
 
 Typical question: "Given that $\vec{OA} = \mathbf{a}$ and $\vec{OC} = \mathbf{c}$, find $\vec{AC}$ in terms of $\mathbf{a}$ and $\mathbf{c}$. Given that $M$ is the midpoint of $AC$, find $\vec{OM}$. Show that $X$, $M$, $Y$ are collinear."
 
@@ -274,27 +274,23 @@ Strategy: apply the three-step vector proof strategy above. Each displacement ge
 
 ### Cambridge 0580 Extended
 
-Syllabus: **E7.4** — "position vectors; represent and use vectors to prove geometrical results (parallel, collinear, similar, ratio)."
+Syllabus: **E7.4 Vector geometry** (C7.4 is marked "Extended content only", so there is no Core row): represent vectors by directed line segments; use position vectors; use the sum and difference of two or more vectors to express given vectors in terms of two coplanar vectors; use vectors to reason and to solve geometric problems, with the syllabus's own examples "show that vectors are parallel", "show that 3 points are collinear", and "solve vector problems involving ratio and similarity".
 
 Classic question structure: a diagram with $\mathbf{a}$ and $\mathbf{b}$ marked, then parts (a)(i), (a)(ii), … asking for $\vec{AB}$, $\vec{AM}$, $\vec{OM}$, building towards "hence show that $X$, $Y$, $Z$ are collinear" or "hence find the ratio $AP : PB$." Mark allocation: 1 mark per vector expression, 2–3 marks for the concluding geometric claim.
 
 ### Cambridge 0606
 
-Syllabus: **13.2** (position vectors, unit vectors applied in geometry) and **13.4** (velocity vectors — composition, resolution, relative velocity).
+Syllabus: **§13 Vectors in two dimensions**: 13.1 vector notation in every form ($\begin{pmatrix} a \\ b \end{pmatrix}$, $\vec{AB}$, $\mathbf{p}$, $a\mathbf{i} - b\mathbf{j}$); 13.2 position vectors and unit vectors; 13.3 magnitude, addition, subtraction and scalar multiples, including equating like vectors; 13.4 compose and resolve velocities, determining a resultant by adding two or more vectors.
 
 Topic 13.4 is the distinctive 0606 content: vectors as physical velocities (boat in current, plane in wind), resolving into components along given directions, finding resultant speed and bearing. This is a direct hand-off to A-Level Mechanics.
 
-### A-Level
+### Cambridge 9709 (Paper 3)
 
-Vector geometry at A-Level extends to:
-- **Scalar (dot) product** $\mathbf{a} \cdot \mathbf{b} = \lvert \mathbf{a} \rvert \lvert \mathbf{b} \rvert \cos\theta$, giving the angle between two vectors
-- **Vector equations of lines** $\mathbf{r} = \mathbf{a} + t\mathbf{d}$
-- **3D geometry** — lines and planes in space
-- **Mechanics** — forces in equilibrium, resolving into components
+Syllabus **§3.7 Vectors**, in 2 or 3 dimensions: standard notations (column vectors, $x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$, $\vec{AB}$, $\mathbf{a}$); addition, subtraction and scalar multiplication interpreted geometrically, with the note that "the general form of the ratio theorem is not included, but understanding that the midpoint of $AB$ has position vector $\tfrac12(\vec{OA} + \vec{OB})$ is expected"; magnitude, unit, displacement and position vectors; the line $\mathbf{r} = \mathbf{a} + t\mathbf{b}$ and finding it from sufficient information; whether two lines are parallel, intersect or are skew, and the point of intersection; the scalar product, for the angle between lines and the foot of the perpendicular from a point to a line, with cuboids and tetrahedra as settings. The syllabus states that the shortest distance between skew lines, the common perpendicular, and the vector product are **not** required, and the current syllabus has no planes. [[3D Vectors and the Scalar Product]] and [[Vector Equations of Lines]] carry the Paper 3 material; Paper 4 (Mechanics) uses vectors for forces in equilibrium and resolution into components.
 
 ### IB AA / AI
 
-**Topic 3 — Geometry and trigonometry.** IB goes further than Cambridge: scalar product, angle between vectors, applications to geometry. AA HL extends to 3D lines and planes.
+The IB Mathematics guides are not on file, so no topic numbers are claimed. The scalar product, the angle between vectors and the vector equation of a line are the same content wherever they are examined.
 
 ## Connections
 

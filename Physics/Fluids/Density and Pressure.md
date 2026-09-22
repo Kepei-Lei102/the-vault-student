@@ -10,6 +10,7 @@ leads_to:
   - "[[Drag and Terminal Velocity]]"
   - "[[Braking Systems]]"
   - "[[Archimedes and the Soldier]]"
+  - "[[A Letter from the Kitchen]]"
   - "[[Sound]]"
   - "[[The Solar System]]"
 tags:
@@ -341,6 +342,8 @@ The viscous force on a slow sphere is Stokes' law, $F = 6\pi\eta r v$, so the ex
 ### Surface tension: the exception to Archimedes
 
 A steel needle laid gently on water floats, at $7\,900\ \text{kg m}^{-3}$, and a water strider walks on it. Neither is displacing its weight of water; both are held by **surface tension**, the energy cost of stretching the water's surface, which acts like a skin that can support a force of about $0.07$ N per metre of contact line. For anything larger than a few millimetres the skin is negligible against $\rho g V$ and Archimedes rules again.
+
+The surface can change when traces of other substances collect on it. [[A Letter from the Kitchen]] follows Agnes Pockels, who controlled a surface film’s area with a sliding strip and compared the force needed to detach a tiny disc.
 
 ### Lift, honestly
 

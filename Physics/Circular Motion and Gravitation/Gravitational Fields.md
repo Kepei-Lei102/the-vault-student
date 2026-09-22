@@ -9,6 +9,7 @@ prerequisites:
   - "[[Integration]]"
   - "[[Differentiation]]"
 leads_to:
+  - "[[General Relativity]]"
   - "[[Angular Momentum]]"
   - "[[Laplace and Napoleon]]"
   - "[[Stellar Evolution]]"

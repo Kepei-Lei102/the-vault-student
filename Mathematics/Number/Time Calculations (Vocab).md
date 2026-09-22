@@ -134,13 +134,17 @@ Two approaches.
 
 ## Exam Notes
 
-### Cambridge 0580
+### Cambridge 0580 (Core and Extended)
 
-**Syllabus ref:** E1.15 (Time) — calculate times in terms of the 24-hour and 12-hour clock; read clocks and timetables. Standard exam patterns:
+**Syllabus ref:** C1.15 and E1.15, Time, with identical wording on both tiers: calculate with seconds, minutes, hours, days, weeks, months and years (the syllabus fixes 1 year = 365 days); calculate in the 24-hour and 12-hour clock, written as 03 15 and 15 15; read clocks and timetables, which "includes problems involving time zones, local times and time differences". The calculator row next to it, C1.14 and E1.14, names the classic slip: a display of 3.25 hours means 3 hours 15 minutes, not 3 hours 25. Standard exam patterns:
 
 - "A bus leaves at $07:42$ and arrives at $09:15$. Find the journey time in hours and minutes."
 - "A film starts at $7:35$ pm and lasts $2$ hours $50$ minutes. At what time does it end?"
 - "A flight departs Hong Kong (UTC+8) at $23:30$ on $15$ March and arrives in San Francisco (UTC−7) after $13$ hours. What is the local arrival time and date?"
+
+### Where this is *not* examined
+
+OxfordAQA 9260 lists time only as one of the units to convert between, with no clock or timetable content. Cambridge 0606 and the A-Level syllabuses assume it.
 
 ---
 

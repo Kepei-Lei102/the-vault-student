@@ -2,10 +2,10 @@
   <style>
     text { font-family: system-ui, -apple-system, sans-serif; fill: #888; }
     .title { font-size: 14px; font-weight: 700; }
-    .bad { font-size: 13px; font-weight: 700; fill: #dc2626; }
-    .good { font-size: 13px; font-weight: 700; fill: #059669; }
+    .bad { font-size: 13px; font-weight: 700; fill: #888; }
+    .good { font-size: 13px; font-weight: 700; fill: #888; }
     .eq { font-size: 11px; }
-    .g { font-size: 10px; font-weight: 600; fill: #7c3aed; }
+    .g { font-size: 10px; font-weight: 600; fill: #888; }
   </style>
 
   <!-- ============ LEFT: one inverter, paradox ============ -->
@@ -25,13 +25,10 @@
   <!-- direction arrow on the bottom return wire -->
   <path d="M 170 163 L 158 168 L 170 173 Z" fill="#9ca3af"/>
 
-  <!-- oscillation squiggle at the output -->
-  <polyline points="196,78 204,78 204,68 212,68 212,78 220,78 220,68 228,68"
-            fill="none" stroke="#dc2626" stroke-width="1.6"/>
 
-  <text x="170" y="200" class="bad" text-anchor="middle">Q = NOT Q -- no value works</text>
-  <text x="170" y="219" class="eq" text-anchor="middle">the liar's sentence in silicon: it oscillates</text>
-  <text x="170" y="236" class="eq" text-anchor="middle">(odd loops = ring oscillators, used as on-chip clocks)</text>
+  <text x="170" y="200" class="bad" text-anchor="middle">Q = NOT Q -- no binary fixed point</text>
+  <text x="170" y="219" class="eq" text-anchor="middle">real voltages need an analogue model</text>
+  <text x="170" y="236" class="eq" text-anchor="middle">oscillation needs suitable gain and delay</text>
 
   <!-- divider -->
   <line x1="340" y1="30" x2="340" y2="230" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>

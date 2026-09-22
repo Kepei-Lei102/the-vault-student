@@ -243,23 +243,22 @@ The $R\sin$ trick also gives the **maximum** ($R$) and **minimum** ($-R$) of $a\
 
 ## Exam Notes
 
-### Cambridge 0606
+### Cambridge 0606 (Additional Mathematics)
 
-**Syllabus ref:** §10.5. Cambridge specifically lists the example types: $\sin^2 A = 1$, $\cos^2 A + \sin A = 1$, $\cos A = 2\sin A$ (which becomes $\tan A = 1/2$), $\sin^2 2A = 1/4$, $\cos 3A = 1/2$. Expect 4–6 mark questions, "*Solve … for $0° \le x \le 360°$*" or similar in radians. Always give *all* solutions in the stated interval; one missed solution typically costs one mark.
+**Syllabus ref:** §10.5, "Solve, for a given domain, trigonometric equations involving the six trigonometric functions", with the note "Includes the use of the relationships in 10.4" and the syllabus's own examples: $4\cot\theta = \tan\theta$, $2\sec^2\theta + \tan\theta - 3 = 0$, $5\sin\dfrac{\theta}{3} + 2\cos\dfrac{\theta}{3} = 0$, and $3\,\text{cosec}\!\left(2\theta - \dfrac{\pi}{12}\right) = 4$. So the reciprocal functions, a Pythagorean identity leading to a quadratic, a division to $\tan$, and a compound argument with a shifted domain are all fair game, in degrees or radians. Expect 4–6 marks, "solve for $0° \le x \le 360°$" or a radian interval; every solution in the interval is required, and one missed typically costs a mark. Sum, difference and double-angle formulae are not in 0606.
 
-**0606 does NOT require:** sum/difference formulas, double-angle formulas (so the "Family 4 cont." example with $\sin 2x = \sin x$ is technically beyond — but the technique uses only what 0606 gives you in §10.4, so a strong student can do it).
+### Cambridge 9709 (A Level)
 
-### A-Level / 9709
+- **Paper 1, §1.5:** "find all the solutions of simple trigonometrical equations lying in a specified interval (general forms of solution are not included)", with the syllabus's examples $3\sin 2x + 1 = 0$ for $-\pi < x < \pi$ and $3\sin^2\theta - 5\cos\theta - 1 = 0$ for $0° \le \theta \le 360°$: the interval-halving for $2x$ and the Pythagorean substitution to a quadratic are exactly this card's Families.
+- **Paper 2, §2.3 and Paper 3, §3.3:** "use trigonometrical identities for the simplification and exact evaluation of expressions, and in the course of solving equations", naming $\sec^2\theta \equiv 1 + \tan^2\theta$ and $\text{cosec}^2\theta \equiv 1 + \cot^2\theta$, the expansions of $\sin(A \pm B)$, $\cos(A \pm B)$, $\tan(A \pm B)$, the double-angle formulae, and $a\sin\theta + b\cos\theta$ as $R\sin(\theta \pm \alpha)$ or $R\cos(\theta \pm \alpha)$; the syllabus's examples are $\tan\theta + \cot\theta = 4$, $2\sec^2\theta - \tan\theta = 5$ and $3\cos\theta + 2\sin\theta = 1$. The template of this card still applies; these papers add the identity step before it.
 
-A-Level extends to: sum/difference and double-angle equations (P2, P3), $R\sin(x + \alpha)$ form, and equations involving inverse trig functions. The above template still applies, with these additional algebraic moves on top.
+### OxfordAQA 9660 (International AS/A Level)
 
-### IB AA HL & AP Calculus
+PP1.2 Trigonometry: "Solution of simple trigonometric equations in a given interval of degrees or radians", with the stated maximum difficulty $\sin\theta = -0.4$, $\sin(\theta - 20°) = 0.2$, $2\sin\theta - \cos\theta = 0$ and $2\sin^2\theta + 5\cos\theta = 4$. The A-level pure unit (P2.4: Trigonometry) extends this to "Solution of trigonometric equations in a given interval", e.g. $3\sin 2x = \cos x$ for $0 \le x \le 4\pi$ and $2\sin x + 3\cos x = 1.5$ for $-180° < x < 180°$.
 
-Same content as A-Level. AP also tests trig equations as part of *related rates* and *implicit differentiation* problems — the equation-solving step is just one stage of a longer problem.
+### Where this is *not* examined, and what is unverified
 
-### IB AA SL
-
-Pythagorean reductions, double-angle, and basic equations — essentially A-Level Pure 2 scope.
+Cambridge 0580 has no trigonometric-equation row: its trigonometry (C6/E6) is ratios, the sine and cosine rules and 3D work, and "solve" there means a triangle, not an equation. AP Calculus has no row; an equation such as $\cos x = \tfrac12$ appears there only as one step inside a related-rates or extremum problem. The IB Mathematics guides are not on file, so the IB Analysis placement recorded in this card's tags is not verified against a PDF here.
 
 ---
 

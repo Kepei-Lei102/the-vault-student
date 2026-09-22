@@ -11,6 +11,7 @@ prerequisites:
   - "[[The War of the Currents]]"
   - "[[Circular Motion]]"
 leads_to:
+  - "[[Particle Physics]]"
   - "[[Electromagnetic Induction]]"
   - "[[Maxwell's Equations]]"
   - "[[Stories/Franklin's Coin Flip]]"

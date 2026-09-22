@@ -41,7 +41,7 @@ The trade is always the same: trigonometric identities are hard currency, powers
 
 ### 中文锚点 (Chinese Anchor)
 
-棣莫弗定理本身只有一句话——$(\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta$——但考卷考的是**用它干活**，活儿分两类。**第一类：造恒等式。** 正着用：把 $(c + is)^5$ 按二项式定理展开，实部与虚部各归各位，$\cos 5\theta$、$\sin 5\theta$ 的展开式当场"现造"出来，不用背；反着用：把 $\cos\theta$ 写成 $\frac{1}{2}(z + \frac{1}{z})$（其中 $z = e^{i\theta}$），$\sin^6\theta$ 六次方一展开、同类项一配对，就得到只含 $\cos 2\theta, \cos 4\theta, \cos 6\theta$ 的**降幂公式**——高次幂的积分立刻变得可做。**第二类：求和。** 一列余弦或正弦的和（比如 $\sum \binom{n}{r}\sin r\theta$）直接求，求不动；把它看成复数级数 $\sum \binom{n}{r} z^r$ 的**虚部**（余弦和就看实部），先用二项式定理或等比数列求和公式把复数的和一口气算完，最后再取实部或虚部——这就是 **C+iS 方法**，名字的意思就是"把 $C$（余弦和）与 $iS$（正弦和）捆在一起算"。两个反复出现的小技巧要单独记：**提半角**，$1 + e^{i\theta} = 2\cos\frac{\theta}{2}\,e^{i\theta/2}$，把难看的和式变成一个模长乘一个方向；**乘共轭**，无穷级数的复数分母靠它化成实数。还有一句考场保命的话：无穷等比求和必须先说明 $\lvert z \rvert < 1$，否则整个求和不成立。
+只用三角公式把 $\cos 5\theta$ 用 $\cos\theta$ 表示出来，你会写满一整页。换个想法：复数相乘，角度相加。把 $\cos\theta + i\sin\theta$ 自乘五次，得到的是一个角度为 $5\theta$ 的箭头，这就是棣莫弗定理，一句话说完。再用二项式定理把五次方展开，实部就是 $\cos 5\theta$，虚部就是 $\sin 5\theta$，全都写成了 $\cos\theta$ 和 $\sin\theta$ 的幂，一个公式都不用背。反过来用，$\sin^6\theta$ 这样的高次幂会变成 $\cos 2\theta$、$\cos 4\theta$、$\cos 6\theta$ 的一个简短线性组合，积分一下就出来了。一长串正弦或余弦相加，也可以看成一串复数组成的等比数列的虚部或实部，一行就能求和。定理本身只是一句话；手艺在于知道：三角里对付不了的角度，到复平面上就是一次对付得了的乘法。
 
 ## Jig 1 — multiple angles forward, and the exam's two twists
 
